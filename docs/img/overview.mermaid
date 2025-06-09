@@ -1,0 +1,19 @@
+config:
+  theme: neutral
+  layout: elk
+  look: neo
+---
+flowchart TD
+    A["proto/*.proto"] -- protoc --> B["src/*.pb.cc"] & C["include/*.pb.h"]
+    B --> |build| D["libFutuProto.a"]
+    C --> |build| D
+    D --> |link| F["Trading Application"]
+    E["Trading Source Code"] --> |compile|F
+    F <--> |talk|G["Futu OpenD"]
+
+subgraph CppFutuProto
+  A
+  B
+  C
+  D
+end
