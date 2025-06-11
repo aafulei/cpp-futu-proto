@@ -2,7 +2,7 @@
 
 # CMake 3.10 was released on 2017-11-20
 cmake_minimum_required(VERSION 3.10)
-project(cpp_futu_proto LANGUAGES CXX)
+project(CppFutuProto LANGUAGES CXX)
 
 set(CMAKE_CXX_STANDARD 14)
 set(CMAKE_CXX_STANDARD_REQUIRED ON)
@@ -24,14 +24,14 @@ foreach(PROTO_FILENAME ${PROTO_FILES})
     list(APPEND HDR_FILES "${PROTO_HDR_DIR}/${PROTO_FILENAME_WE}.pb.h")
 endforeach()
 
-add_library(FutuProto STATIC)
-target_include_directories(FutuProto PUBLIC
+add_library(futuproto STATIC)
+target_include_directories(futuproto PUBLIC
     ${PROTO_HDR_DIR}
     ${CMAKE_SOURCE_DIR}/protobuf/src
 )
-target_compile_options(FutuProto PRIVATE -Wpedantic -Wall -Wextra)
-target_link_libraries(FutuProto PUBLIC protobuf)
-target_sources(FutuProto PRIVATE ${SRC_FILES})
+target_compile_options(futuproto PRIVATE -Wpedantic -Wall -Wextra)
+target_link_libraries(futuproto PUBLIC protobuf)
+target_sources(futuproto PRIVATE ${SRC_FILES})
 
 set(PROTOC "${CMAKE_SOURCE_DIR}/protobuf/src/protoc")
 if(NOT EXISTS "${PROTOC}")
@@ -56,7 +56,7 @@ add_custom_command(
     VERBATIM
 )
 add_custom_target(generate_pb_h ALL DEPENDS ${HDR_FILES})
-add_dependencies(FutuProto generate_pb_h)
+add_dependencies(futuproto generate_pb_h)
 
 message(STATUS "Found protoc at: ${PROTOC}")
 message(STATUS "Proto files: ${PROTO_FILES}")
