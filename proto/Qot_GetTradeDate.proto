@@ -1,7 +1,5 @@
 syntax = "proto2";
 package Qot_GetTradeDate;
-option java_package = "com.futu.openapi.pb";
-option go_package = "github.com/futuopen/ftapi4go/pb/qotgettradedate";
 
 import "Common.proto";
 import "Qot_Common.proto";
@@ -16,13 +14,11 @@ message C2S
 message TradeDate
 {
 	required string time = 1; //时间字符串
-	optional double timestamp = 2; //时间戳
-	optional int32 tradeDateType = 3; //Qot_Common.TradeDateType,交易时间类型
 }
 
 message S2C
 {
-	repeated TradeDate tradeDateList = 1; //交易日,注意该交易日是通过自然日去除周末以及节假日得到，不包括临时休市数据。
+	repeated TradeDate tradeDateList = 1; //交易日
 }
 
 message Request

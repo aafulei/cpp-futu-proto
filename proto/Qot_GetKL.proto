@@ -1,7 +1,5 @@
 syntax = "proto2";
 package Qot_GetKL;
-option java_package = "com.futu.openapi.pb";
-option go_package = "github.com/futuopen/ftapi4go/pb/qotgetkl";
 
 import "Common.proto";
 import "Qot_Common.proto";
@@ -17,7 +15,6 @@ message C2S
 message S2C
 {
 	required Qot_Common.Security security = 1; //股票
-	optional string name = 3; // 股票名称
 	repeated Qot_Common.KLine klList = 2; //k线点
 }
 

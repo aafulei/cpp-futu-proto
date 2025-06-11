@@ -1,7 +1,5 @@
 syntax = "proto2";
 package Qot_GetPlateSet;
-option java_package = "com.futu.openapi.pb";
-option go_package = "github.com/futuopen/ftapi4go/pb/qotgetplateset";
 
 import "Common.proto";
 import "Qot_Common.proto";
@@ -12,9 +10,15 @@ message C2S
 	required int32 plateSetType = 2; //Qot_Common.PlateSetType,板块集合的类型
 }
 
+message PlateInfo
+{
+	required Qot_Common.Security plate = 1; //板块
+	required string name = 2; //板块名字
+}
+
 message S2C
 {
-	repeated Qot_Common.PlateInfo plateInfoList = 1; //板块集合下的板块信息
+	repeated PlateInfo plateInfoList = 1; //板块集合下的板块信息
 }
 
 message Request
