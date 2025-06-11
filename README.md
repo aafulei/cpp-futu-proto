@@ -88,15 +88,14 @@ make -j
 
 - [`docs/`](./docs/) - Project documentation files
 - [`include/`](./include/) - C++ headers generated from `.proto` definitions
-- [`proto/`](./proto/) - `.proto` definitions for Futu API, version 9.2.5208, released on 2025-04-17
+- [`proto/`](./proto/) - `.proto` definitions for Futu API, an [early version](https://github.com/towerd/C-For-FutuOpenD/commit/6e2c0ab0882a5ec8df36d7b5cca67cf22b52b87a) released prior to 2018-08-01
 - [`protobuf/`](https://github.com/protocolbuffers/protobuf/tree/106ffc04be1abf3ff3399f54ccf149815b287dd9) - (submodule) Google's protobuf, version 3.5.1, released on 2017-12-20
 - [`src/`](./src/) - C++ source files generated from `.proto` definitions
 - [`CMakeLists.txt`](./CMakeLists.txt) - CMake configuration that generates Makefiles for Make to build project
 
 ## Versions
 
-- *Futu API* (as part of Futu OpenAPI) - version 9.2.5208, released on
-2025-04-17, which requires:
+- *Futu API* (as part of Futu OpenAPI) - an [early version](https://github.com/towerd/C-For-FutuOpenD/commit/6e2c0ab0882a5ec8df36d7b5cca67cf22b52b87a) released prior to 2018-08-01, which requires:
   - *Protobuf* - version 3.5.1, released on 2017-12-20
 - *CMake* - set to require version 3.10, released on 2017-11-20, or newer.
 Version 4.0, released on 2025-03-28, or newer is recommended.
