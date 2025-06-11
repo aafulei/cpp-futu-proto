@@ -140,11 +140,7 @@ const ::google::protobuf::uint32 TableStruct::offsets[] GOOGLE_PROTOBUF_ATTRIBUT
   ~0u,  // no _oneof_case_
   ~0u,  // no _weak_field_map_
   GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(::Trd_GetFunds::C2S, header_),
-  GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(::Trd_GetFunds::C2S, refreshcache_),
-  GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(::Trd_GetFunds::C2S, currency_),
   0,
-  1,
-  2,
   GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(::Trd_GetFunds::S2C, _has_bits_),
   GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(::Trd_GetFunds::S2C, _internal_metadata_),
   ~0u,  // no _extensions_
@@ -176,10 +172,10 @@ const ::google::protobuf::uint32 TableStruct::offsets[] GOOGLE_PROTOBUF_ATTRIBUT
   1,
 };
 static const ::google::protobuf::internal::MigrationSchema schemas[] GOOGLE_PROTOBUF_ATTRIBUTE_SECTION_VARIABLE(protodesc_cold) = {
-  { 0, 8, sizeof(::Trd_GetFunds::C2S)},
-  { 11, 18, sizeof(::Trd_GetFunds::S2C)},
-  { 20, 26, sizeof(::Trd_GetFunds::Request)},
-  { 27, 36, sizeof(::Trd_GetFunds::Response)},
+  { 0, 6, sizeof(::Trd_GetFunds::C2S)},
+  { 7, 14, sizeof(::Trd_GetFunds::S2C)},
+  { 16, 22, sizeof(::Trd_GetFunds::Request)},
+  { 23, 32, sizeof(::Trd_GetFunds::Response)},
 };
 
 static ::google::protobuf::Message const * const file_default_instances[] = {
@@ -212,20 +208,17 @@ void AddDescriptorsImpl() {
   InitDefaults();
   static const char descriptor[] GOOGLE_PROTOBUF_ATTRIBUTE_SECTION_VARIABLE(protodesc_cold) = {
       "\n\022Trd_GetFunds.proto\022\014Trd_GetFunds\032\014Comm"
-      "on.proto\032\020Trd_Common.proto\"T\n\003C2S\022%\n\006hea"
-      "der\030\001 \002(\0132\025.Trd_Common.TrdHeader\022\024\n\014refr"
-      "eshCache\030\002 \001(\010\022\020\n\010currency\030\003 \001(\005\"N\n\003S2C\022"
+      "on.proto\032\020Trd_Common.proto\",\n\003C2S\022%\n\006hea"
+      "der\030\001 \002(\0132\025.Trd_Common.TrdHeader\"N\n\003S2C\022"
       "%\n\006header\030\001 \002(\0132\025.Trd_Common.TrdHeader\022 "
       "\n\005funds\030\002 \001(\0132\021.Trd_Common.Funds\")\n\007Requ"
       "est\022\036\n\003c2s\030\001 \002(\0132\021.Trd_GetFunds.C2S\"b\n\010R"
       "esponse\022\025\n\007retType\030\001 \002(\005:\004-400\022\016\n\006retMsg"
       "\030\002 \001(\t\022\017\n\007errCode\030\003 \001(\005\022\036\n\003s2c\030\004 \001(\0132\021.T"
-      "rd_GetFunds.S2CBB\n\023com.futu.openapi.pbZ+"
-      "github.com/futuopen/ftapi4go/pb/trdgetfu"
-      "nds"
+      "rd_GetFunds.S2C"
   };
   ::google::protobuf::DescriptorPool::InternalAddGeneratedFile(
-      descriptor, 443);
+      descriptor, 335);
   ::google::protobuf::MessageFactory::InternalRegisterGeneratedFile(
     "Trd_GetFunds.proto", &protobuf_RegisterTypes);
   ::protobuf_Common_2eproto::AddDescriptors();
@@ -257,8 +250,6 @@ void C2S::clear_header() {
 }
 #if !defined(_MSC_VER) || _MSC_VER >= 1900
 const int C2S::kHeaderFieldNumber;
-const int C2S::kRefreshCacheFieldNumber;
-const int C2S::kCurrencyFieldNumber;
 #endif  // !defined(_MSC_VER) || _MSC_VER >= 1900
 
 C2S::C2S()
@@ -280,17 +271,12 @@ C2S::C2S(const C2S& from)
   } else {
     header_ = NULL;
   }
-  ::memcpy(&refreshcache_, &from.refreshcache_,
-    static_cast<size_t>(reinterpret_cast<char*>(&currency_) -
-    reinterpret_cast<char*>(&refreshcache_)) + sizeof(currency_));
   // @@protoc_insertion_point(copy_constructor:Trd_GetFunds.C2S)
 }
 
 void C2S::SharedCtor() {
   _cached_size_ = 0;
-  ::memset(&header_, 0, static_cast<size_t>(
-      reinterpret_cast<char*>(&currency_) -
-      reinterpret_cast<char*>(&header_)) + sizeof(currency_));
+  header_ = NULL;
 }
 
 C2S::~C2S() {
@@ -336,11 +322,6 @@ void C2S::Clear() {
     GOOGLE_DCHECK(header_ != NULL);
     header_->Clear();
   }
-  if (cached_has_bits & 6u) {
-    ::memset(&refreshcache_, 0, static_cast<size_t>(
-        reinterpret_cast<char*>(&currency_) -
-        reinterpret_cast<char*>(&refreshcache_)) + sizeof(currency_));
-  }
   _has_bits_.Clear();
   _internal_metadata_.Clear();
 }
@@ -361,34 +342,6 @@ bool C2S::MergePartialFromCodedStream(
             static_cast< ::google::protobuf::uint8>(10u /* 10 & 0xFF */)) {
           DO_(::google::protobuf::internal::WireFormatLite::ReadMessage(
                input, mutable_header()));
-        } else {
-          goto handle_unusual;
-        }
-        break;
-      }
-
-      // optional bool refreshCache = 2;
-      case 2: {
-        if (static_cast< ::google::protobuf::uint8>(tag) ==
-            static_cast< ::google::protobuf::uint8>(16u /* 16 & 0xFF */)) {
-          set_has_refreshcache();
-          DO_((::google::protobuf::internal::WireFormatLite::ReadPrimitive<
-                   bool, ::google::protobuf::internal::WireFormatLite::TYPE_BOOL>(
-                 input, &refreshcache_)));
-        } else {
-          goto handle_unusual;
-        }
-        break;
-      }
-
-      // optional int32 currency = 3;
-      case 3: {
-        if (static_cast< ::google::protobuf::uint8>(tag) ==
-            static_cast< ::google::protobuf::uint8>(24u /* 24 & 0xFF */)) {
-          set_has_currency();
-          DO_((::google::protobuf::internal::WireFormatLite::ReadPrimitive<
-                   ::google::protobuf::int32, ::google::protobuf::internal::WireFormatLite::TYPE_INT32>(
-                 input, &currency_)));
         } else {
           goto handle_unusual;
         }
@@ -428,16 +381,6 @@ void C2S::SerializeWithCachedSizes(
       1, *this->header_, output);
   }
 
-  // optional bool refreshCache = 2;
-  if (cached_has_bits & 0x00000002u) {
-    ::google::protobuf::internal::WireFormatLite::WriteBool(2, this->refreshcache(), output);
-  }
-
-  // optional int32 currency = 3;
-  if (cached_has_bits & 0x00000004u) {
-    ::google::protobuf::internal::WireFormatLite::WriteInt32(3, this->currency(), output);
-  }
-
   if (_internal_metadata_.have_unknown_fields()) {
     ::google::protobuf::internal::WireFormat::SerializeUnknownFields(
         _internal_metadata_.unknown_fields(), output);
@@ -458,16 +401,6 @@ void C2S::SerializeWithCachedSizes(
     target = ::google::protobuf::internal::WireFormatLite::
       InternalWriteMessageToArray(
         1, *this->header_, deterministic, target);
-  }
-
-  // optional bool refreshCache = 2;
-  if (cached_has_bits & 0x00000002u) {
-    target = ::google::protobuf::internal::WireFormatLite::WriteBoolToArray(2, this->refreshcache(), target);
-  }
-
-  // optional int32 currency = 3;
-  if (cached_has_bits & 0x00000004u) {
-    target = ::google::protobuf::internal::WireFormatLite::WriteInt32ToArray(3, this->currency(), target);
   }
 
   if (_internal_metadata_.have_unknown_fields()) {
@@ -492,20 +425,6 @@ size_t C2S::ByteSizeLong() const {
     total_size += 1 +
       ::google::protobuf::internal::WireFormatLite::MessageSize(
         *this->header_);
-  }
-  if (_has_bits_[0 / 32] & 6u) {
-    // optional bool refreshCache = 2;
-    if (has_refreshcache()) {
-      total_size += 1 + 1;
-    }
-
-    // optional int32 currency = 3;
-    if (has_currency()) {
-      total_size += 1 +
-        ::google::protobuf::internal::WireFormatLite::Int32Size(
-          this->currency());
-    }
-
   }
   int cached_size = ::google::protobuf::internal::ToCachedSize(total_size);
   GOOGLE_SAFE_CONCURRENT_WRITES_BEGIN();
@@ -536,18 +455,8 @@ void C2S::MergeFrom(const C2S& from) {
   ::google::protobuf::uint32 cached_has_bits = 0;
   (void) cached_has_bits;
 
-  cached_has_bits = from._has_bits_[0];
-  if (cached_has_bits & 7u) {
-    if (cached_has_bits & 0x00000001u) {
-      mutable_header()->::Trd_Common::TrdHeader::MergeFrom(from.header());
-    }
-    if (cached_has_bits & 0x00000002u) {
-      refreshcache_ = from.refreshcache_;
-    }
-    if (cached_has_bits & 0x00000004u) {
-      currency_ = from.currency_;
-    }
-    _has_bits_[0] |= cached_has_bits;
+  if (from.has_header()) {
+    mutable_header()->::Trd_Common::TrdHeader::MergeFrom(from.header());
   }
 }
 
@@ -580,8 +489,6 @@ void C2S::Swap(C2S* other) {
 void C2S::InternalSwap(C2S* other) {
   using std::swap;
   swap(header_, other->header_);
-  swap(refreshcache_, other->refreshcache_);
-  swap(currency_, other->currency_);
   swap(_has_bits_[0], other->_has_bits_[0]);
   _internal_metadata_.Swap(&other->_internal_metadata_);
   swap(_cached_size_, other->_cached_size_);

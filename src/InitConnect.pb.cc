@@ -139,15 +139,9 @@ const ::google::protobuf::uint32 TableStruct::offsets[] GOOGLE_PROTOBUF_ATTRIBUT
   GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(::InitConnect::C2S, clientver_),
   GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(::InitConnect::C2S, clientid_),
   GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(::InitConnect::C2S, recvnotify_),
-  GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(::InitConnect::C2S, packetencalgo_),
-  GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(::InitConnect::C2S, pushprotofmt_),
-  GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(::InitConnect::C2S, programminglanguage_),
-  2,
-  0,
-  3,
-  4,
-  5,
   1,
+  0,
+  2,
   GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(::InitConnect::S2C, _has_bits_),
   GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(::InitConnect::S2C, _internal_metadata_),
   ~0u,  // no _extensions_
@@ -158,15 +152,11 @@ const ::google::protobuf::uint32 TableStruct::offsets[] GOOGLE_PROTOBUF_ATTRIBUT
   GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(::InitConnect::S2C, connid_),
   GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(::InitConnect::S2C, connaeskey_),
   GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(::InitConnect::S2C, keepaliveinterval_),
-  GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(::InitConnect::S2C, aescbciv_),
-  GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(::InitConnect::S2C, userattribution_),
-  4,
-  2,
   3,
-  0,
-  5,
   1,
-  6,
+  2,
+  0,
+  4,
   GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(::InitConnect::Request, _has_bits_),
   GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(::InitConnect::Request, _internal_metadata_),
   ~0u,  // no _extensions_
@@ -189,10 +179,10 @@ const ::google::protobuf::uint32 TableStruct::offsets[] GOOGLE_PROTOBUF_ATTRIBUT
   1,
 };
 static const ::google::protobuf::internal::MigrationSchema schemas[] GOOGLE_PROTOBUF_ATTRIBUTE_SECTION_VARIABLE(protodesc_cold) = {
-  { 0, 11, sizeof(::InitConnect::C2S)},
-  { 17, 29, sizeof(::InitConnect::S2C)},
-  { 36, 42, sizeof(::InitConnect::Request)},
-  { 43, 52, sizeof(::InitConnect::Response)},
+  { 0, 8, sizeof(::InitConnect::C2S)},
+  { 11, 21, sizeof(::InitConnect::S2C)},
+  { 26, 32, sizeof(::InitConnect::Request)},
+  { 33, 42, sizeof(::InitConnect::Response)},
 };
 
 static ::google::protobuf::Message const * const file_default_instances[] = {
@@ -225,22 +215,18 @@ void AddDescriptorsImpl() {
   InitDefaults();
   static const char descriptor[] GOOGLE_PROTOBUF_ATTRIBUTE_SECTION_VARIABLE(protodesc_cold) = {
       "\n\021InitConnect.proto\022\013InitConnect\032\014Common"
-      ".proto\"\210\001\n\003C2S\022\021\n\tclientVer\030\001 \002(\005\022\020\n\010cli"
-      "entID\030\002 \002(\t\022\022\n\nrecvNotify\030\003 \001(\010\022\025\n\rpacke"
-      "tEncAlgo\030\004 \001(\005\022\024\n\014pushProtoFmt\030\005 \001(\005\022\033\n\023"
-      "programmingLanguage\030\006 \001(\t\"\227\001\n\003S2C\022\021\n\tser"
-      "verVer\030\001 \002(\005\022\023\n\013loginUserID\030\002 \002(\004\022\016\n\006con"
-      "nID\030\003 \002(\004\022\022\n\nconnAESKey\030\004 \002(\t\022\031\n\021keepAli"
-      "veInterval\030\005 \002(\005\022\020\n\010aesCBCiv\030\006 \001(\t\022\027\n\017us"
-      "erAttribution\030\007 \001(\005\"(\n\007Request\022\035\n\003c2s\030\001 "
-      "\002(\0132\020.InitConnect.C2S\"a\n\010Response\022\025\n\007ret"
-      "Type\030\001 \002(\005:\004-400\022\016\n\006retMsg\030\002 \001(\t\022\017\n\007errC"
-      "ode\030\003 \001(\005\022\035\n\003s2c\030\004 \001(\0132\020.InitConnect.S2C"
-      "BB\n\023com.futu.openapi.pbZ+github.com/futu"
-      "open/ftapi4go/pb/initconnect"
+      ".proto\">\n\003C2S\022\021\n\tclientVer\030\001 \002(\005\022\020\n\010clie"
+      "ntID\030\002 \002(\t\022\022\n\nrecvNotify\030\003 \001(\010\"l\n\003S2C\022\021\n"
+      "\tserverVer\030\001 \002(\005\022\023\n\013loginUserID\030\002 \002(\004\022\016\n"
+      "\006connID\030\003 \002(\004\022\022\n\nconnAESKey\030\004 \002(\t\022\031\n\021kee"
+      "pAliveInterval\030\005 \002(\005\"(\n\007Request\022\035\n\003c2s\030\001"
+      " \002(\0132\020.InitConnect.C2S\"a\n\010Response\022\025\n\007re"
+      "tType\030\001 \002(\005:\004-400\022\016\n\006retMsg\030\002 \001(\t\022\017\n\007err"
+      "Code\030\003 \001(\005\022\035\n\003s2c\030\004 \001(\0132\020.InitConnect.S2"
+      "C"
   };
   ::google::protobuf::DescriptorPool::InternalAddGeneratedFile(
-      descriptor, 548);
+      descriptor, 361);
   ::google::protobuf::MessageFactory::InternalRegisterGeneratedFile(
     "InitConnect.proto", &protobuf_RegisterTypes);
   ::protobuf_Common_2eproto::AddDescriptors();
@@ -267,9 +253,6 @@ void C2S::InitAsDefaultInstance() {
 const int C2S::kClientVerFieldNumber;
 const int C2S::kClientIDFieldNumber;
 const int C2S::kRecvNotifyFieldNumber;
-const int C2S::kPacketEncAlgoFieldNumber;
-const int C2S::kPushProtoFmtFieldNumber;
-const int C2S::kProgrammingLanguageFieldNumber;
 #endif  // !defined(_MSC_VER) || _MSC_VER >= 1900
 
 C2S::C2S()
@@ -290,23 +273,18 @@ C2S::C2S(const C2S& from)
   if (from.has_clientid()) {
     clientid_.AssignWithDefault(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), from.clientid_);
   }
-  programminglanguage_.UnsafeSetDefault(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
-  if (from.has_programminglanguage()) {
-    programminglanguage_.AssignWithDefault(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), from.programminglanguage_);
-  }
   ::memcpy(&clientver_, &from.clientver_,
-    static_cast<size_t>(reinterpret_cast<char*>(&pushprotofmt_) -
-    reinterpret_cast<char*>(&clientver_)) + sizeof(pushprotofmt_));
+    static_cast<size_t>(reinterpret_cast<char*>(&recvnotify_) -
+    reinterpret_cast<char*>(&clientver_)) + sizeof(recvnotify_));
   // @@protoc_insertion_point(copy_constructor:InitConnect.C2S)
 }
 
 void C2S::SharedCtor() {
   _cached_size_ = 0;
   clientid_.UnsafeSetDefault(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
-  programminglanguage_.UnsafeSetDefault(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
   ::memset(&clientver_, 0, static_cast<size_t>(
-      reinterpret_cast<char*>(&pushprotofmt_) -
-      reinterpret_cast<char*>(&clientver_)) + sizeof(pushprotofmt_));
+      reinterpret_cast<char*>(&recvnotify_) -
+      reinterpret_cast<char*>(&clientver_)) + sizeof(recvnotify_));
 }
 
 C2S::~C2S() {
@@ -316,7 +294,6 @@ C2S::~C2S() {
 
 void C2S::SharedDtor() {
   clientid_.DestroyNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
-  programminglanguage_.DestroyNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
 }
 
 void C2S::SetCachedSize(int size) const {
@@ -349,20 +326,14 @@ void C2S::Clear() {
   (void) cached_has_bits;
 
   cached_has_bits = _has_bits_[0];
-  if (cached_has_bits & 3u) {
-    if (cached_has_bits & 0x00000001u) {
-      GOOGLE_DCHECK(!clientid_.IsDefault(&::google::protobuf::internal::GetEmptyStringAlreadyInited()));
-      (*clientid_.UnsafeRawStringPointer())->clear();
-    }
-    if (cached_has_bits & 0x00000002u) {
-      GOOGLE_DCHECK(!programminglanguage_.IsDefault(&::google::protobuf::internal::GetEmptyStringAlreadyInited()));
-      (*programminglanguage_.UnsafeRawStringPointer())->clear();
-    }
+  if (cached_has_bits & 0x00000001u) {
+    GOOGLE_DCHECK(!clientid_.IsDefault(&::google::protobuf::internal::GetEmptyStringAlreadyInited()));
+    (*clientid_.UnsafeRawStringPointer())->clear();
   }
-  if (cached_has_bits & 60u) {
+  if (cached_has_bits & 6u) {
     ::memset(&clientver_, 0, static_cast<size_t>(
-        reinterpret_cast<char*>(&pushprotofmt_) -
-        reinterpret_cast<char*>(&clientver_)) + sizeof(pushprotofmt_));
+        reinterpret_cast<char*>(&recvnotify_) -
+        reinterpret_cast<char*>(&clientver_)) + sizeof(recvnotify_));
   }
   _has_bits_.Clear();
   _internal_metadata_.Clear();
@@ -422,50 +393,6 @@ bool C2S::MergePartialFromCodedStream(
         break;
       }
 
-      // optional int32 packetEncAlgo = 4;
-      case 4: {
-        if (static_cast< ::google::protobuf::uint8>(tag) ==
-            static_cast< ::google::protobuf::uint8>(32u /* 32 & 0xFF */)) {
-          set_has_packetencalgo();
-          DO_((::google::protobuf::internal::WireFormatLite::ReadPrimitive<
-                   ::google::protobuf::int32, ::google::protobuf::internal::WireFormatLite::TYPE_INT32>(
-                 input, &packetencalgo_)));
-        } else {
-          goto handle_unusual;
-        }
-        break;
-      }
-
-      // optional int32 pushProtoFmt = 5;
-      case 5: {
-        if (static_cast< ::google::protobuf::uint8>(tag) ==
-            static_cast< ::google::protobuf::uint8>(40u /* 40 & 0xFF */)) {
-          set_has_pushprotofmt();
-          DO_((::google::protobuf::internal::WireFormatLite::ReadPrimitive<
-                   ::google::protobuf::int32, ::google::protobuf::internal::WireFormatLite::TYPE_INT32>(
-                 input, &pushprotofmt_)));
-        } else {
-          goto handle_unusual;
-        }
-        break;
-      }
-
-      // optional string programmingLanguage = 6;
-      case 6: {
-        if (static_cast< ::google::protobuf::uint8>(tag) ==
-            static_cast< ::google::protobuf::uint8>(50u /* 50 & 0xFF */)) {
-          DO_(::google::protobuf::internal::WireFormatLite::ReadString(
-                input, this->mutable_programminglanguage()));
-          ::google::protobuf::internal::WireFormat::VerifyUTF8StringNamedField(
-            this->programminglanguage().data(), static_cast<int>(this->programminglanguage().length()),
-            ::google::protobuf::internal::WireFormat::PARSE,
-            "InitConnect.C2S.programmingLanguage");
-        } else {
-          goto handle_unusual;
-        }
-        break;
-      }
-
       default: {
       handle_unusual:
         if (tag == 0) {
@@ -494,7 +421,7 @@ void C2S::SerializeWithCachedSizes(
 
   cached_has_bits = _has_bits_[0];
   // required int32 clientVer = 1;
-  if (cached_has_bits & 0x00000004u) {
+  if (cached_has_bits & 0x00000002u) {
     ::google::protobuf::internal::WireFormatLite::WriteInt32(1, this->clientver(), output);
   }
 
@@ -509,28 +436,8 @@ void C2S::SerializeWithCachedSizes(
   }
 
   // optional bool recvNotify = 3;
-  if (cached_has_bits & 0x00000008u) {
+  if (cached_has_bits & 0x00000004u) {
     ::google::protobuf::internal::WireFormatLite::WriteBool(3, this->recvnotify(), output);
-  }
-
-  // optional int32 packetEncAlgo = 4;
-  if (cached_has_bits & 0x00000010u) {
-    ::google::protobuf::internal::WireFormatLite::WriteInt32(4, this->packetencalgo(), output);
-  }
-
-  // optional int32 pushProtoFmt = 5;
-  if (cached_has_bits & 0x00000020u) {
-    ::google::protobuf::internal::WireFormatLite::WriteInt32(5, this->pushprotofmt(), output);
-  }
-
-  // optional string programmingLanguage = 6;
-  if (cached_has_bits & 0x00000002u) {
-    ::google::protobuf::internal::WireFormat::VerifyUTF8StringNamedField(
-      this->programminglanguage().data(), static_cast<int>(this->programminglanguage().length()),
-      ::google::protobuf::internal::WireFormat::SERIALIZE,
-      "InitConnect.C2S.programmingLanguage");
-    ::google::protobuf::internal::WireFormatLite::WriteStringMaybeAliased(
-      6, this->programminglanguage(), output);
   }
 
   if (_internal_metadata_.have_unknown_fields()) {
@@ -549,7 +456,7 @@ void C2S::SerializeWithCachedSizes(
 
   cached_has_bits = _has_bits_[0];
   // required int32 clientVer = 1;
-  if (cached_has_bits & 0x00000004u) {
+  if (cached_has_bits & 0x00000002u) {
     target = ::google::protobuf::internal::WireFormatLite::WriteInt32ToArray(1, this->clientver(), target);
   }
 
@@ -565,29 +472,8 @@ void C2S::SerializeWithCachedSizes(
   }
 
   // optional bool recvNotify = 3;
-  if (cached_has_bits & 0x00000008u) {
+  if (cached_has_bits & 0x00000004u) {
     target = ::google::protobuf::internal::WireFormatLite::WriteBoolToArray(3, this->recvnotify(), target);
-  }
-
-  // optional int32 packetEncAlgo = 4;
-  if (cached_has_bits & 0x00000010u) {
-    target = ::google::protobuf::internal::WireFormatLite::WriteInt32ToArray(4, this->packetencalgo(), target);
-  }
-
-  // optional int32 pushProtoFmt = 5;
-  if (cached_has_bits & 0x00000020u) {
-    target = ::google::protobuf::internal::WireFormatLite::WriteInt32ToArray(5, this->pushprotofmt(), target);
-  }
-
-  // optional string programmingLanguage = 6;
-  if (cached_has_bits & 0x00000002u) {
-    ::google::protobuf::internal::WireFormat::VerifyUTF8StringNamedField(
-      this->programminglanguage().data(), static_cast<int>(this->programminglanguage().length()),
-      ::google::protobuf::internal::WireFormat::SERIALIZE,
-      "InitConnect.C2S.programmingLanguage");
-    target =
-      ::google::protobuf::internal::WireFormatLite::WriteStringToArray(
-        6, this->programminglanguage(), target);
   }
 
   if (_internal_metadata_.have_unknown_fields()) {
@@ -627,7 +513,7 @@ size_t C2S::ByteSizeLong() const {
       ::google::protobuf::internal::WireFormat::ComputeUnknownFieldsSize(
         _internal_metadata_.unknown_fields());
   }
-  if (((_has_bits_[0] & 0x00000005) ^ 0x00000005) == 0) {  // All required fields are present.
+  if (((_has_bits_[0] & 0x00000003) ^ 0x00000003) == 0) {  // All required fields are present.
     // required string clientID = 2;
     total_size += 1 +
       ::google::protobuf::internal::WireFormatLite::StringSize(
@@ -641,34 +527,11 @@ size_t C2S::ByteSizeLong() const {
   } else {
     total_size += RequiredFieldsByteSizeFallback();
   }
-  // optional string programmingLanguage = 6;
-  if (has_programminglanguage()) {
-    total_size += 1 +
-      ::google::protobuf::internal::WireFormatLite::StringSize(
-        this->programminglanguage());
+  // optional bool recvNotify = 3;
+  if (has_recvnotify()) {
+    total_size += 1 + 1;
   }
 
-  if (_has_bits_[0 / 32] & 56u) {
-    // optional bool recvNotify = 3;
-    if (has_recvnotify()) {
-      total_size += 1 + 1;
-    }
-
-    // optional int32 packetEncAlgo = 4;
-    if (has_packetencalgo()) {
-      total_size += 1 +
-        ::google::protobuf::internal::WireFormatLite::Int32Size(
-          this->packetencalgo());
-    }
-
-    // optional int32 pushProtoFmt = 5;
-    if (has_pushprotofmt()) {
-      total_size += 1 +
-        ::google::protobuf::internal::WireFormatLite::Int32Size(
-          this->pushprotofmt());
-    }
-
-  }
   int cached_size = ::google::protobuf::internal::ToCachedSize(total_size);
   GOOGLE_SAFE_CONCURRENT_WRITES_BEGIN();
   _cached_size_ = cached_size;
@@ -699,26 +562,16 @@ void C2S::MergeFrom(const C2S& from) {
   (void) cached_has_bits;
 
   cached_has_bits = from._has_bits_[0];
-  if (cached_has_bits & 63u) {
+  if (cached_has_bits & 7u) {
     if (cached_has_bits & 0x00000001u) {
       set_has_clientid();
       clientid_.AssignWithDefault(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), from.clientid_);
     }
     if (cached_has_bits & 0x00000002u) {
-      set_has_programminglanguage();
-      programminglanguage_.AssignWithDefault(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), from.programminglanguage_);
-    }
-    if (cached_has_bits & 0x00000004u) {
       clientver_ = from.clientver_;
     }
-    if (cached_has_bits & 0x00000008u) {
+    if (cached_has_bits & 0x00000004u) {
       recvnotify_ = from.recvnotify_;
-    }
-    if (cached_has_bits & 0x00000010u) {
-      packetencalgo_ = from.packetencalgo_;
-    }
-    if (cached_has_bits & 0x00000020u) {
-      pushprotofmt_ = from.pushprotofmt_;
     }
     _has_bits_[0] |= cached_has_bits;
   }
@@ -739,7 +592,7 @@ void C2S::CopyFrom(const C2S& from) {
 }
 
 bool C2S::IsInitialized() const {
-  if ((_has_bits_[0] & 0x00000005) != 0x00000005) return false;
+  if ((_has_bits_[0] & 0x00000003) != 0x00000003) return false;
   return true;
 }
 
@@ -750,11 +603,8 @@ void C2S::Swap(C2S* other) {
 void C2S::InternalSwap(C2S* other) {
   using std::swap;
   clientid_.Swap(&other->clientid_);
-  programminglanguage_.Swap(&other->programminglanguage_);
   swap(clientver_, other->clientver_);
   swap(recvnotify_, other->recvnotify_);
-  swap(packetencalgo_, other->packetencalgo_);
-  swap(pushprotofmt_, other->pushprotofmt_);
   swap(_has_bits_[0], other->_has_bits_[0]);
   _internal_metadata_.Swap(&other->_internal_metadata_);
   swap(_cached_size_, other->_cached_size_);
@@ -776,8 +626,6 @@ const int S2C::kLoginUserIDFieldNumber;
 const int S2C::kConnIDFieldNumber;
 const int S2C::kConnAESKeyFieldNumber;
 const int S2C::kKeepAliveIntervalFieldNumber;
-const int S2C::kAesCBCivFieldNumber;
-const int S2C::kUserAttributionFieldNumber;
 #endif  // !defined(_MSC_VER) || _MSC_VER >= 1900
 
 S2C::S2C()
@@ -798,23 +646,18 @@ S2C::S2C(const S2C& from)
   if (from.has_connaeskey()) {
     connaeskey_.AssignWithDefault(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), from.connaeskey_);
   }
-  aescbciv_.UnsafeSetDefault(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
-  if (from.has_aescbciv()) {
-    aescbciv_.AssignWithDefault(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), from.aescbciv_);
-  }
   ::memcpy(&loginuserid_, &from.loginuserid_,
-    static_cast<size_t>(reinterpret_cast<char*>(&userattribution_) -
-    reinterpret_cast<char*>(&loginuserid_)) + sizeof(userattribution_));
+    static_cast<size_t>(reinterpret_cast<char*>(&keepaliveinterval_) -
+    reinterpret_cast<char*>(&loginuserid_)) + sizeof(keepaliveinterval_));
   // @@protoc_insertion_point(copy_constructor:InitConnect.S2C)
 }
 
 void S2C::SharedCtor() {
   _cached_size_ = 0;
   connaeskey_.UnsafeSetDefault(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
-  aescbciv_.UnsafeSetDefault(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
   ::memset(&loginuserid_, 0, static_cast<size_t>(
-      reinterpret_cast<char*>(&userattribution_) -
-      reinterpret_cast<char*>(&loginuserid_)) + sizeof(userattribution_));
+      reinterpret_cast<char*>(&keepaliveinterval_) -
+      reinterpret_cast<char*>(&loginuserid_)) + sizeof(keepaliveinterval_));
 }
 
 S2C::~S2C() {
@@ -824,7 +667,6 @@ S2C::~S2C() {
 
 void S2C::SharedDtor() {
   connaeskey_.DestroyNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
-  aescbciv_.DestroyNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
 }
 
 void S2C::SetCachedSize(int size) const {
@@ -857,20 +699,14 @@ void S2C::Clear() {
   (void) cached_has_bits;
 
   cached_has_bits = _has_bits_[0];
-  if (cached_has_bits & 3u) {
-    if (cached_has_bits & 0x00000001u) {
-      GOOGLE_DCHECK(!connaeskey_.IsDefault(&::google::protobuf::internal::GetEmptyStringAlreadyInited()));
-      (*connaeskey_.UnsafeRawStringPointer())->clear();
-    }
-    if (cached_has_bits & 0x00000002u) {
-      GOOGLE_DCHECK(!aescbciv_.IsDefault(&::google::protobuf::internal::GetEmptyStringAlreadyInited()));
-      (*aescbciv_.UnsafeRawStringPointer())->clear();
-    }
+  if (cached_has_bits & 0x00000001u) {
+    GOOGLE_DCHECK(!connaeskey_.IsDefault(&::google::protobuf::internal::GetEmptyStringAlreadyInited()));
+    (*connaeskey_.UnsafeRawStringPointer())->clear();
   }
-  if (cached_has_bits & 124u) {
+  if (cached_has_bits & 30u) {
     ::memset(&loginuserid_, 0, static_cast<size_t>(
-        reinterpret_cast<char*>(&userattribution_) -
-        reinterpret_cast<char*>(&loginuserid_)) + sizeof(userattribution_));
+        reinterpret_cast<char*>(&keepaliveinterval_) -
+        reinterpret_cast<char*>(&loginuserid_)) + sizeof(keepaliveinterval_));
   }
   _has_bits_.Clear();
   _internal_metadata_.Clear();
@@ -958,36 +794,6 @@ bool S2C::MergePartialFromCodedStream(
         break;
       }
 
-      // optional string aesCBCiv = 6;
-      case 6: {
-        if (static_cast< ::google::protobuf::uint8>(tag) ==
-            static_cast< ::google::protobuf::uint8>(50u /* 50 & 0xFF */)) {
-          DO_(::google::protobuf::internal::WireFormatLite::ReadString(
-                input, this->mutable_aescbciv()));
-          ::google::protobuf::internal::WireFormat::VerifyUTF8StringNamedField(
-            this->aescbciv().data(), static_cast<int>(this->aescbciv().length()),
-            ::google::protobuf::internal::WireFormat::PARSE,
-            "InitConnect.S2C.aesCBCiv");
-        } else {
-          goto handle_unusual;
-        }
-        break;
-      }
-
-      // optional int32 userAttribution = 7;
-      case 7: {
-        if (static_cast< ::google::protobuf::uint8>(tag) ==
-            static_cast< ::google::protobuf::uint8>(56u /* 56 & 0xFF */)) {
-          set_has_userattribution();
-          DO_((::google::protobuf::internal::WireFormatLite::ReadPrimitive<
-                   ::google::protobuf::int32, ::google::protobuf::internal::WireFormatLite::TYPE_INT32>(
-                 input, &userattribution_)));
-        } else {
-          goto handle_unusual;
-        }
-        break;
-      }
-
       default: {
       handle_unusual:
         if (tag == 0) {
@@ -1016,17 +822,17 @@ void S2C::SerializeWithCachedSizes(
 
   cached_has_bits = _has_bits_[0];
   // required int32 serverVer = 1;
-  if (cached_has_bits & 0x00000010u) {
+  if (cached_has_bits & 0x00000008u) {
     ::google::protobuf::internal::WireFormatLite::WriteInt32(1, this->serverver(), output);
   }
 
   // required uint64 loginUserID = 2;
-  if (cached_has_bits & 0x00000004u) {
+  if (cached_has_bits & 0x00000002u) {
     ::google::protobuf::internal::WireFormatLite::WriteUInt64(2, this->loginuserid(), output);
   }
 
   // required uint64 connID = 3;
-  if (cached_has_bits & 0x00000008u) {
+  if (cached_has_bits & 0x00000004u) {
     ::google::protobuf::internal::WireFormatLite::WriteUInt64(3, this->connid(), output);
   }
 
@@ -1041,23 +847,8 @@ void S2C::SerializeWithCachedSizes(
   }
 
   // required int32 keepAliveInterval = 5;
-  if (cached_has_bits & 0x00000020u) {
+  if (cached_has_bits & 0x00000010u) {
     ::google::protobuf::internal::WireFormatLite::WriteInt32(5, this->keepaliveinterval(), output);
-  }
-
-  // optional string aesCBCiv = 6;
-  if (cached_has_bits & 0x00000002u) {
-    ::google::protobuf::internal::WireFormat::VerifyUTF8StringNamedField(
-      this->aescbciv().data(), static_cast<int>(this->aescbciv().length()),
-      ::google::protobuf::internal::WireFormat::SERIALIZE,
-      "InitConnect.S2C.aesCBCiv");
-    ::google::protobuf::internal::WireFormatLite::WriteStringMaybeAliased(
-      6, this->aescbciv(), output);
-  }
-
-  // optional int32 userAttribution = 7;
-  if (cached_has_bits & 0x00000040u) {
-    ::google::protobuf::internal::WireFormatLite::WriteInt32(7, this->userattribution(), output);
   }
 
   if (_internal_metadata_.have_unknown_fields()) {
@@ -1076,17 +867,17 @@ void S2C::SerializeWithCachedSizes(
 
   cached_has_bits = _has_bits_[0];
   // required int32 serverVer = 1;
-  if (cached_has_bits & 0x00000010u) {
+  if (cached_has_bits & 0x00000008u) {
     target = ::google::protobuf::internal::WireFormatLite::WriteInt32ToArray(1, this->serverver(), target);
   }
 
   // required uint64 loginUserID = 2;
-  if (cached_has_bits & 0x00000004u) {
+  if (cached_has_bits & 0x00000002u) {
     target = ::google::protobuf::internal::WireFormatLite::WriteUInt64ToArray(2, this->loginuserid(), target);
   }
 
   // required uint64 connID = 3;
-  if (cached_has_bits & 0x00000008u) {
+  if (cached_has_bits & 0x00000004u) {
     target = ::google::protobuf::internal::WireFormatLite::WriteUInt64ToArray(3, this->connid(), target);
   }
 
@@ -1102,24 +893,8 @@ void S2C::SerializeWithCachedSizes(
   }
 
   // required int32 keepAliveInterval = 5;
-  if (cached_has_bits & 0x00000020u) {
+  if (cached_has_bits & 0x00000010u) {
     target = ::google::protobuf::internal::WireFormatLite::WriteInt32ToArray(5, this->keepaliveinterval(), target);
-  }
-
-  // optional string aesCBCiv = 6;
-  if (cached_has_bits & 0x00000002u) {
-    ::google::protobuf::internal::WireFormat::VerifyUTF8StringNamedField(
-      this->aescbciv().data(), static_cast<int>(this->aescbciv().length()),
-      ::google::protobuf::internal::WireFormat::SERIALIZE,
-      "InitConnect.S2C.aesCBCiv");
-    target =
-      ::google::protobuf::internal::WireFormatLite::WriteStringToArray(
-        6, this->aescbciv(), target);
-  }
-
-  // optional int32 userAttribution = 7;
-  if (cached_has_bits & 0x00000040u) {
-    target = ::google::protobuf::internal::WireFormatLite::WriteInt32ToArray(7, this->userattribution(), target);
   }
 
   if (_internal_metadata_.have_unknown_fields()) {
@@ -1180,7 +955,7 @@ size_t S2C::ByteSizeLong() const {
       ::google::protobuf::internal::WireFormat::ComputeUnknownFieldsSize(
         _internal_metadata_.unknown_fields());
   }
-  if (((_has_bits_[0] & 0x0000003d) ^ 0x0000003d) == 0) {  // All required fields are present.
+  if (((_has_bits_[0] & 0x0000001f) ^ 0x0000001f) == 0) {  // All required fields are present.
     // required string connAESKey = 4;
     total_size += 1 +
       ::google::protobuf::internal::WireFormatLite::StringSize(
@@ -1209,20 +984,6 @@ size_t S2C::ByteSizeLong() const {
   } else {
     total_size += RequiredFieldsByteSizeFallback();
   }
-  // optional string aesCBCiv = 6;
-  if (has_aescbciv()) {
-    total_size += 1 +
-      ::google::protobuf::internal::WireFormatLite::StringSize(
-        this->aescbciv());
-  }
-
-  // optional int32 userAttribution = 7;
-  if (has_userattribution()) {
-    total_size += 1 +
-      ::google::protobuf::internal::WireFormatLite::Int32Size(
-        this->userattribution());
-  }
-
   int cached_size = ::google::protobuf::internal::ToCachedSize(total_size);
   GOOGLE_SAFE_CONCURRENT_WRITES_BEGIN();
   _cached_size_ = cached_size;
@@ -1253,29 +1014,22 @@ void S2C::MergeFrom(const S2C& from) {
   (void) cached_has_bits;
 
   cached_has_bits = from._has_bits_[0];
-  if (cached_has_bits & 127u) {
+  if (cached_has_bits & 31u) {
     if (cached_has_bits & 0x00000001u) {
       set_has_connaeskey();
       connaeskey_.AssignWithDefault(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), from.connaeskey_);
     }
     if (cached_has_bits & 0x00000002u) {
-      set_has_aescbciv();
-      aescbciv_.AssignWithDefault(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), from.aescbciv_);
-    }
-    if (cached_has_bits & 0x00000004u) {
       loginuserid_ = from.loginuserid_;
     }
-    if (cached_has_bits & 0x00000008u) {
+    if (cached_has_bits & 0x00000004u) {
       connid_ = from.connid_;
     }
-    if (cached_has_bits & 0x00000010u) {
+    if (cached_has_bits & 0x00000008u) {
       serverver_ = from.serverver_;
     }
-    if (cached_has_bits & 0x00000020u) {
+    if (cached_has_bits & 0x00000010u) {
       keepaliveinterval_ = from.keepaliveinterval_;
-    }
-    if (cached_has_bits & 0x00000040u) {
-      userattribution_ = from.userattribution_;
     }
     _has_bits_[0] |= cached_has_bits;
   }
@@ -1296,7 +1050,7 @@ void S2C::CopyFrom(const S2C& from) {
 }
 
 bool S2C::IsInitialized() const {
-  if ((_has_bits_[0] & 0x0000003d) != 0x0000003d) return false;
+  if ((_has_bits_[0] & 0x0000001f) != 0x0000001f) return false;
   return true;
 }
 
@@ -1307,12 +1061,10 @@ void S2C::Swap(S2C* other) {
 void S2C::InternalSwap(S2C* other) {
   using std::swap;
   connaeskey_.Swap(&other->connaeskey_);
-  aescbciv_.Swap(&other->aescbciv_);
   swap(loginuserid_, other->loginuserid_);
   swap(connid_, other->connid_);
   swap(serverver_, other->serverver_);
   swap(keepaliveinterval_, other->keepaliveinterval_);
-  swap(userattribution_, other->userattribution_);
   swap(_has_bits_[0], other->_has_bits_[0]);
   _internal_metadata_.Swap(&other->_internal_metadata_);
   swap(_cached_size_, other->_cached_size_);

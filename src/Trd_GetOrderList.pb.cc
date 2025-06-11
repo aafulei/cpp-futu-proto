@@ -143,11 +143,9 @@ const ::google::protobuf::uint32 TableStruct::offsets[] GOOGLE_PROTOBUF_ATTRIBUT
   GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(::Trd_GetOrderList::C2S, header_),
   GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(::Trd_GetOrderList::C2S, filterconditions_),
   GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(::Trd_GetOrderList::C2S, filterstatuslist_),
-  GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(::Trd_GetOrderList::C2S, refreshcache_),
   0,
   1,
   ~0u,
-  2,
   GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(::Trd_GetOrderList::S2C, _has_bits_),
   GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(::Trd_GetOrderList::S2C, _internal_metadata_),
   ~0u,  // no _extensions_
@@ -179,10 +177,10 @@ const ::google::protobuf::uint32 TableStruct::offsets[] GOOGLE_PROTOBUF_ATTRIBUT
   1,
 };
 static const ::google::protobuf::internal::MigrationSchema schemas[] GOOGLE_PROTOBUF_ATTRIBUTE_SECTION_VARIABLE(protodesc_cold) = {
-  { 0, 9, sizeof(::Trd_GetOrderList::C2S)},
-  { 13, 20, sizeof(::Trd_GetOrderList::S2C)},
-  { 22, 28, sizeof(::Trd_GetOrderList::Request)},
-  { 29, 38, sizeof(::Trd_GetOrderList::Response)},
+  { 0, 8, sizeof(::Trd_GetOrderList::C2S)},
+  { 11, 18, sizeof(::Trd_GetOrderList::S2C)},
+  { 20, 26, sizeof(::Trd_GetOrderList::Request)},
+  { 27, 36, sizeof(::Trd_GetOrderList::Response)},
 };
 
 static ::google::protobuf::Message const * const file_default_instances[] = {
@@ -215,22 +213,20 @@ void AddDescriptorsImpl() {
   InitDefaults();
   static const char descriptor[] GOOGLE_PROTOBUF_ATTRIBUTE_SECTION_VARIABLE(protodesc_cold) = {
       "\n\026Trd_GetOrderList.proto\022\020Trd_GetOrderLi"
-      "st\032\014Common.proto\032\020Trd_Common.proto\"\227\001\n\003C"
+      "st\032\014Common.proto\032\020Trd_Common.proto\"\201\001\n\003C"
       "2S\022%\n\006header\030\001 \002(\0132\025.Trd_Common.TrdHeade"
       "r\0229\n\020filterConditions\030\002 \001(\0132\037.Trd_Common"
       ".TrdFilterConditions\022\030\n\020filterStatusList"
-      "\030\003 \003(\005\022\024\n\014refreshCache\030\004 \001(\010\"R\n\003S2C\022%\n\006h"
-      "eader\030\001 \002(\0132\025.Trd_Common.TrdHeader\022$\n\tor"
-      "derList\030\002 \003(\0132\021.Trd_Common.Order\"-\n\007Requ"
-      "est\022\"\n\003c2s\030\001 \002(\0132\025.Trd_GetOrderList.C2S\""
-      "f\n\010Response\022\025\n\007retType\030\001 \002(\005:\004-400\022\016\n\006re"
-      "tMsg\030\002 \001(\t\022\017\n\007errCode\030\003 \001(\005\022\"\n\003s2c\030\004 \001(\013"
-      "2\025.Trd_GetOrderList.S2CBF\n\023com.futu.open"
-      "api.pbZ/github.com/futuopen/ftapi4go/pb/"
-      "trdgetorderlist"
+      "\030\003 \003(\005\"R\n\003S2C\022%\n\006header\030\001 \002(\0132\025.Trd_Comm"
+      "on.TrdHeader\022$\n\torderList\030\002 \003(\0132\021.Trd_Co"
+      "mmon.Order\"-\n\007Request\022\"\n\003c2s\030\001 \002(\0132\025.Trd"
+      "_GetOrderList.C2S\"f\n\010Response\022\025\n\007retType"
+      "\030\001 \002(\005:\004-400\022\016\n\006retMsg\030\002 \001(\t\022\017\n\007errCode\030"
+      "\003 \001(\005\022\"\n\003s2c\030\004 \001(\0132\025.Trd_GetOrderList.S2"
+      "C"
   };
   ::google::protobuf::DescriptorPool::InternalAddGeneratedFile(
-      descriptor, 535);
+      descriptor, 441);
   ::google::protobuf::MessageFactory::InternalRegisterGeneratedFile(
     "Trd_GetOrderList.proto", &protobuf_RegisterTypes);
   ::protobuf_Common_2eproto::AddDescriptors();
@@ -270,7 +266,6 @@ void C2S::clear_filterconditions() {
 const int C2S::kHeaderFieldNumber;
 const int C2S::kFilterConditionsFieldNumber;
 const int C2S::kFilterStatusListFieldNumber;
-const int C2S::kRefreshCacheFieldNumber;
 #endif  // !defined(_MSC_VER) || _MSC_VER >= 1900
 
 C2S::C2S()
@@ -298,15 +293,14 @@ C2S::C2S(const C2S& from)
   } else {
     filterconditions_ = NULL;
   }
-  refreshcache_ = from.refreshcache_;
   // @@protoc_insertion_point(copy_constructor:Trd_GetOrderList.C2S)
 }
 
 void C2S::SharedCtor() {
   _cached_size_ = 0;
   ::memset(&header_, 0, static_cast<size_t>(
-      reinterpret_cast<char*>(&refreshcache_) -
-      reinterpret_cast<char*>(&header_)) + sizeof(refreshcache_));
+      reinterpret_cast<char*>(&filterconditions_) -
+      reinterpret_cast<char*>(&header_)) + sizeof(filterconditions_));
 }
 
 C2S::~C2S() {
@@ -360,7 +354,6 @@ void C2S::Clear() {
       filterconditions_->Clear();
     }
   }
-  refreshcache_ = false;
   _has_bits_.Clear();
   _internal_metadata_.Clear();
 }
@@ -418,20 +411,6 @@ bool C2S::MergePartialFromCodedStream(
         break;
       }
 
-      // optional bool refreshCache = 4;
-      case 4: {
-        if (static_cast< ::google::protobuf::uint8>(tag) ==
-            static_cast< ::google::protobuf::uint8>(32u /* 32 & 0xFF */)) {
-          set_has_refreshcache();
-          DO_((::google::protobuf::internal::WireFormatLite::ReadPrimitive<
-                   bool, ::google::protobuf::internal::WireFormatLite::TYPE_BOOL>(
-                 input, &refreshcache_)));
-        } else {
-          goto handle_unusual;
-        }
-        break;
-      }
-
       default: {
       handle_unusual:
         if (tag == 0) {
@@ -477,11 +456,6 @@ void C2S::SerializeWithCachedSizes(
       3, this->filterstatuslist(i), output);
   }
 
-  // optional bool refreshCache = 4;
-  if (cached_has_bits & 0x00000004u) {
-    ::google::protobuf::internal::WireFormatLite::WriteBool(4, this->refreshcache(), output);
-  }
-
   if (_internal_metadata_.have_unknown_fields()) {
     ::google::protobuf::internal::WireFormat::SerializeUnknownFields(
         _internal_metadata_.unknown_fields(), output);
@@ -515,11 +489,6 @@ void C2S::SerializeWithCachedSizes(
   target = ::google::protobuf::internal::WireFormatLite::
     WriteInt32ToArray(3, this->filterstatuslist_, target);
 
-  // optional bool refreshCache = 4;
-  if (cached_has_bits & 0x00000004u) {
-    target = ::google::protobuf::internal::WireFormatLite::WriteBoolToArray(4, this->refreshcache(), target);
-  }
-
   if (_internal_metadata_.have_unknown_fields()) {
     target = ::google::protobuf::internal::WireFormat::SerializeUnknownFieldsToArray(
         _internal_metadata_.unknown_fields(), target);
@@ -552,20 +521,13 @@ size_t C2S::ByteSizeLong() const {
     total_size += data_size;
   }
 
-  if (_has_bits_[0 / 32] & 6u) {
-    // optional .Trd_Common.TrdFilterConditions filterConditions = 2;
-    if (has_filterconditions()) {
-      total_size += 1 +
-        ::google::protobuf::internal::WireFormatLite::MessageSize(
-          *this->filterconditions_);
-    }
-
-    // optional bool refreshCache = 4;
-    if (has_refreshcache()) {
-      total_size += 1 + 1;
-    }
-
+  // optional .Trd_Common.TrdFilterConditions filterConditions = 2;
+  if (has_filterconditions()) {
+    total_size += 1 +
+      ::google::protobuf::internal::WireFormatLite::MessageSize(
+        *this->filterconditions_);
   }
+
   int cached_size = ::google::protobuf::internal::ToCachedSize(total_size);
   GOOGLE_SAFE_CONCURRENT_WRITES_BEGIN();
   _cached_size_ = cached_size;
@@ -597,17 +559,13 @@ void C2S::MergeFrom(const C2S& from) {
 
   filterstatuslist_.MergeFrom(from.filterstatuslist_);
   cached_has_bits = from._has_bits_[0];
-  if (cached_has_bits & 7u) {
+  if (cached_has_bits & 3u) {
     if (cached_has_bits & 0x00000001u) {
       mutable_header()->::Trd_Common::TrdHeader::MergeFrom(from.header());
     }
     if (cached_has_bits & 0x00000002u) {
       mutable_filterconditions()->::Trd_Common::TrdFilterConditions::MergeFrom(from.filterconditions());
     }
-    if (cached_has_bits & 0x00000004u) {
-      refreshcache_ = from.refreshcache_;
-    }
-    _has_bits_[0] |= cached_has_bits;
   }
 }
 
@@ -642,7 +600,6 @@ void C2S::InternalSwap(C2S* other) {
   filterstatuslist_.InternalSwap(&other->filterstatuslist_);
   swap(header_, other->header_);
   swap(filterconditions_, other->filterconditions_);
-  swap(refreshcache_, other->refreshcache_);
   swap(_has_bits_[0], other->_has_bits_[0]);
   _internal_metadata_.Swap(&other->_internal_metadata_);
   swap(_cached_size_, other->_cached_size_);

@@ -38,7 +38,7 @@ namespace protobuf_Qot_5fGetSecuritySnapshot_2eproto {
 struct TableStruct {
   static const ::google::protobuf::internal::ParseTableField entries[];
   static const ::google::protobuf::internal::AuxillaryParseTableField aux[];
-  static const ::google::protobuf::internal::ParseTable schema[13];
+  static const ::google::protobuf::internal::ParseTable schema[8];
   static const ::google::protobuf::internal::FieldMetadata field_metadata[];
   static const ::google::protobuf::internal::SerializationTable serialization_table[];
   static const ::google::protobuf::uint32 offsets[];
@@ -50,16 +50,6 @@ void InitDefaultsEquitySnapshotExDataImpl();
 void InitDefaultsEquitySnapshotExData();
 void InitDefaultsWarrantSnapshotExDataImpl();
 void InitDefaultsWarrantSnapshotExData();
-void InitDefaultsOptionSnapshotExDataImpl();
-void InitDefaultsOptionSnapshotExData();
-void InitDefaultsIndexSnapshotExDataImpl();
-void InitDefaultsIndexSnapshotExData();
-void InitDefaultsPlateSnapshotExDataImpl();
-void InitDefaultsPlateSnapshotExData();
-void InitDefaultsFutureSnapshotExDataImpl();
-void InitDefaultsFutureSnapshotExData();
-void InitDefaultsTrustSnapshotExDataImpl();
-void InitDefaultsTrustSnapshotExData();
 void InitDefaultsSnapshotBasicDataImpl();
 void InitDefaultsSnapshotBasicData();
 void InitDefaultsSnapshotImpl();
@@ -74,11 +64,6 @@ inline void InitDefaults() {
   InitDefaultsC2S();
   InitDefaultsEquitySnapshotExData();
   InitDefaultsWarrantSnapshotExData();
-  InitDefaultsOptionSnapshotExData();
-  InitDefaultsIndexSnapshotExData();
-  InitDefaultsPlateSnapshotExData();
-  InitDefaultsFutureSnapshotExData();
-  InitDefaultsTrustSnapshotExData();
   InitDefaultsSnapshotBasicData();
   InitDefaultsSnapshot();
   InitDefaultsS2C();
@@ -93,18 +78,6 @@ extern C2SDefaultTypeInternal _C2S_default_instance_;
 class EquitySnapshotExData;
 class EquitySnapshotExDataDefaultTypeInternal;
 extern EquitySnapshotExDataDefaultTypeInternal _EquitySnapshotExData_default_instance_;
-class FutureSnapshotExData;
-class FutureSnapshotExDataDefaultTypeInternal;
-extern FutureSnapshotExDataDefaultTypeInternal _FutureSnapshotExData_default_instance_;
-class IndexSnapshotExData;
-class IndexSnapshotExDataDefaultTypeInternal;
-extern IndexSnapshotExDataDefaultTypeInternal _IndexSnapshotExData_default_instance_;
-class OptionSnapshotExData;
-class OptionSnapshotExDataDefaultTypeInternal;
-extern OptionSnapshotExDataDefaultTypeInternal _OptionSnapshotExData_default_instance_;
-class PlateSnapshotExData;
-class PlateSnapshotExDataDefaultTypeInternal;
-extern PlateSnapshotExDataDefaultTypeInternal _PlateSnapshotExData_default_instance_;
 class Request;
 class RequestDefaultTypeInternal;
 extern RequestDefaultTypeInternal _Request_default_instance_;
@@ -120,9 +93,6 @@ extern SnapshotDefaultTypeInternal _Snapshot_default_instance_;
 class SnapshotBasicData;
 class SnapshotBasicDataDefaultTypeInternal;
 extern SnapshotBasicDataDefaultTypeInternal _SnapshotBasicData_default_instance_;
-class TrustSnapshotExData;
-class TrustSnapshotExDataDefaultTypeInternal;
-extern TrustSnapshotExDataDefaultTypeInternal _TrustSnapshotExData_default_instance_;
 class WarrantSnapshotExData;
 class WarrantSnapshotExDataDefaultTypeInternal;
 extern WarrantSnapshotExDataDefaultTypeInternal _WarrantSnapshotExData_default_instance_;
@@ -410,41 +380,6 @@ class EquitySnapshotExData : public ::google::protobuf::Message /* @@protoc_inse
   double pbrate() const;
   void set_pbrate(double value);
 
-  // required double peTTMRate = 12;
-  bool has_pettmrate() const;
-  void clear_pettmrate();
-  static const int kPeTTMRateFieldNumber = 12;
-  double pettmrate() const;
-  void set_pettmrate(double value);
-
-  // optional double dividendTTM = 13;
-  bool has_dividendttm() const;
-  void clear_dividendttm();
-  static const int kDividendTTMFieldNumber = 13;
-  double dividendttm() const;
-  void set_dividendttm(double value);
-
-  // optional double dividendRatioTTM = 14;
-  bool has_dividendratiottm() const;
-  void clear_dividendratiottm();
-  static const int kDividendRatioTTMFieldNumber = 14;
-  double dividendratiottm() const;
-  void set_dividendratiottm(double value);
-
-  // optional double dividendLFY = 15;
-  bool has_dividendlfy() const;
-  void clear_dividendlfy();
-  static const int kDividendLFYFieldNumber = 15;
-  double dividendlfy() const;
-  void set_dividendlfy(double value);
-
-  // optional double dividendLFYRatio = 16;
-  bool has_dividendlfyratio() const;
-  void clear_dividendlfyratio();
-  static const int kDividendLFYRatioFieldNumber = 16;
-  double dividendlfyratio() const;
-  void set_dividendlfyratio(double value);
-
   // @@protoc_insertion_point(class_scope:Qot_GetSecuritySnapshot.EquitySnapshotExData)
  private:
   void set_has_issuedshares();
@@ -469,16 +404,6 @@ class EquitySnapshotExData : public ::google::protobuf::Message /* @@protoc_inse
   void clear_has_perate();
   void set_has_pbrate();
   void clear_has_pbrate();
-  void set_has_pettmrate();
-  void clear_has_pettmrate();
-  void set_has_dividendttm();
-  void clear_has_dividendttm();
-  void set_has_dividendratiottm();
-  void clear_has_dividendratiottm();
-  void set_has_dividendlfy();
-  void clear_has_dividendlfy();
-  void set_has_dividendlfyratio();
-  void clear_has_dividendlfyratio();
 
   // helper for ByteSizeLong()
   size_t RequiredFieldsByteSizeFallback() const;
@@ -497,11 +422,6 @@ class EquitySnapshotExData : public ::google::protobuf::Message /* @@protoc_inse
   double eyrate_;
   double perate_;
   double pbrate_;
-  double pettmrate_;
-  double dividendttm_;
-  double dividendratiottm_;
-  double dividendlfy_;
-  double dividendlfyratio_;
   friend struct ::protobuf_Qot_5fGetSecuritySnapshot_2eproto::TableStruct;
   friend void ::protobuf_Qot_5fGetSecuritySnapshot_2eproto::InitDefaultsEquitySnapshotExDataImpl();
 };
@@ -626,21 +546,6 @@ class WarrantSnapshotExData : public ::google::protobuf::Message /* @@protoc_ins
   ::std::string* release_endtradetime();
   void set_allocated_endtradetime(::std::string* endtradetime);
 
-  // optional string issuerCode = 25;
-  bool has_issuercode() const;
-  void clear_issuercode();
-  static const int kIssuerCodeFieldNumber = 25;
-  const ::std::string& issuercode() const;
-  void set_issuercode(const ::std::string& value);
-  #if LANG_CXX11
-  void set_issuercode(::std::string&& value);
-  #endif
-  void set_issuercode(const char* value);
-  void set_issuercode(const char* value, size_t size);
-  ::std::string* mutable_issuercode();
-  ::std::string* release_issuercode();
-  void set_allocated_issuercode(::std::string* issuercode);
-
   // required .Qot_Common.Security owner = 6;
   bool has_owner() const;
   void clear_owner();
@@ -720,83 +625,6 @@ class WarrantSnapshotExData : public ::google::protobuf::Message /* @@protoc_ins
   ::google::protobuf::int32 warranttype() const;
   void set_warranttype(::google::protobuf::int32 value);
 
-  // optional int32 inLinePriceStatus = 24;
-  bool has_inlinepricestatus() const;
-  void clear_inlinepricestatus();
-  static const int kInLinePriceStatusFieldNumber = 24;
-  ::google::protobuf::int32 inlinepricestatus() const;
-  void set_inlinepricestatus(::google::protobuf::int32 value);
-
-  // optional double maturityTimestamp = 14;
-  bool has_maturitytimestamp() const;
-  void clear_maturitytimestamp();
-  static const int kMaturityTimestampFieldNumber = 14;
-  double maturitytimestamp() const;
-  void set_maturitytimestamp(double value);
-
-  // optional double endTradeTimestamp = 15;
-  bool has_endtradetimestamp() const;
-  void clear_endtradetimestamp();
-  static const int kEndTradeTimestampFieldNumber = 15;
-  double endtradetimestamp() const;
-  void set_endtradetimestamp(double value);
-
-  // optional double leverage = 16;
-  bool has_leverage() const;
-  void clear_leverage();
-  static const int kLeverageFieldNumber = 16;
-  double leverage() const;
-  void set_leverage(double value);
-
-  // optional double ipop = 17;
-  bool has_ipop() const;
-  void clear_ipop();
-  static const int kIpopFieldNumber = 17;
-  double ipop() const;
-  void set_ipop(double value);
-
-  // optional double breakEvenPoint = 18;
-  bool has_breakevenpoint() const;
-  void clear_breakevenpoint();
-  static const int kBreakEvenPointFieldNumber = 18;
-  double breakevenpoint() const;
-  void set_breakevenpoint(double value);
-
-  // optional double conversionPrice = 19;
-  bool has_conversionprice() const;
-  void clear_conversionprice();
-  static const int kConversionPriceFieldNumber = 19;
-  double conversionprice() const;
-  void set_conversionprice(double value);
-
-  // optional double priceRecoveryRatio = 20;
-  bool has_pricerecoveryratio() const;
-  void clear_pricerecoveryratio();
-  static const int kPriceRecoveryRatioFieldNumber = 20;
-  double pricerecoveryratio() const;
-  void set_pricerecoveryratio(double value);
-
-  // optional double score = 21;
-  bool has_score() const;
-  void clear_score();
-  static const int kScoreFieldNumber = 21;
-  double score() const;
-  void set_score(double value);
-
-  // optional double upperStrikePrice = 22;
-  bool has_upperstrikeprice() const;
-  void clear_upperstrikeprice();
-  static const int kUpperStrikePriceFieldNumber = 22;
-  double upperstrikeprice() const;
-  void set_upperstrikeprice(double value);
-
-  // optional double lowerStrikePrice = 23;
-  bool has_lowerstrikeprice() const;
-  void clear_lowerstrikeprice();
-  static const int kLowerStrikePriceFieldNumber = 23;
-  double lowerstrikeprice() const;
-  void set_lowerstrikeprice(double value);
-
   // @@protoc_insertion_point(class_scope:Qot_GetSecuritySnapshot.WarrantSnapshotExData)
  private:
   void set_has_conversionrate();
@@ -825,30 +653,6 @@ class WarrantSnapshotExData : public ::google::protobuf::Message /* @@protoc_ins
   void clear_has_impliedvolatility();
   void set_has_premium();
   void clear_has_premium();
-  void set_has_maturitytimestamp();
-  void clear_has_maturitytimestamp();
-  void set_has_endtradetimestamp();
-  void clear_has_endtradetimestamp();
-  void set_has_leverage();
-  void clear_has_leverage();
-  void set_has_ipop();
-  void clear_has_ipop();
-  void set_has_breakevenpoint();
-  void clear_has_breakevenpoint();
-  void set_has_conversionprice();
-  void clear_has_conversionprice();
-  void set_has_pricerecoveryratio();
-  void clear_has_pricerecoveryratio();
-  void set_has_score();
-  void clear_has_score();
-  void set_has_upperstrikeprice();
-  void clear_has_upperstrikeprice();
-  void set_has_lowerstrikeprice();
-  void clear_has_lowerstrikeprice();
-  void set_has_inlinepricestatus();
-  void clear_has_inlinepricestatus();
-  void set_has_issuercode();
-  void clear_has_issuercode();
 
   // helper for ByteSizeLong()
   size_t RequiredFieldsByteSizeFallback() const;
@@ -858,7 +662,6 @@ class WarrantSnapshotExData : public ::google::protobuf::Message /* @@protoc_ins
   mutable int _cached_size_;
   ::google::protobuf::internal::ArenaStringPtr maturitytime_;
   ::google::protobuf::internal::ArenaStringPtr endtradetime_;
-  ::google::protobuf::internal::ArenaStringPtr issuercode_;
   ::Qot_Common::Security* owner_;
   double conversionrate_;
   double strikeprice_;
@@ -870,952 +673,8 @@ class WarrantSnapshotExData : public ::google::protobuf::Message /* @@protoc_ins
   double impliedvolatility_;
   double premium_;
   ::google::protobuf::int32 warranttype_;
-  ::google::protobuf::int32 inlinepricestatus_;
-  double maturitytimestamp_;
-  double endtradetimestamp_;
-  double leverage_;
-  double ipop_;
-  double breakevenpoint_;
-  double conversionprice_;
-  double pricerecoveryratio_;
-  double score_;
-  double upperstrikeprice_;
-  double lowerstrikeprice_;
   friend struct ::protobuf_Qot_5fGetSecuritySnapshot_2eproto::TableStruct;
   friend void ::protobuf_Qot_5fGetSecuritySnapshot_2eproto::InitDefaultsWarrantSnapshotExDataImpl();
-};
-// -------------------------------------------------------------------
-
-class OptionSnapshotExData : public ::google::protobuf::Message /* @@protoc_insertion_point(class_definition:Qot_GetSecuritySnapshot.OptionSnapshotExData) */ {
- public:
-  OptionSnapshotExData();
-  virtual ~OptionSnapshotExData();
-
-  OptionSnapshotExData(const OptionSnapshotExData& from);
-
-  inline OptionSnapshotExData& operator=(const OptionSnapshotExData& from) {
-    CopyFrom(from);
-    return *this;
-  }
-  #if LANG_CXX11
-  OptionSnapshotExData(OptionSnapshotExData&& from) noexcept
-    : OptionSnapshotExData() {
-    *this = ::std::move(from);
-  }
-
-  inline OptionSnapshotExData& operator=(OptionSnapshotExData&& from) noexcept {
-    if (GetArenaNoVirtual() == from.GetArenaNoVirtual()) {
-      if (this != &from) InternalSwap(&from);
-    } else {
-      CopyFrom(from);
-    }
-    return *this;
-  }
-  #endif
-  inline const ::google::protobuf::UnknownFieldSet& unknown_fields() const {
-    return _internal_metadata_.unknown_fields();
-  }
-  inline ::google::protobuf::UnknownFieldSet* mutable_unknown_fields() {
-    return _internal_metadata_.mutable_unknown_fields();
-  }
-
-  static const ::google::protobuf::Descriptor* descriptor();
-  static const OptionSnapshotExData& default_instance();
-
-  static void InitAsDefaultInstance();  // FOR INTERNAL USE ONLY
-  static inline const OptionSnapshotExData* internal_default_instance() {
-    return reinterpret_cast<const OptionSnapshotExData*>(
-               &_OptionSnapshotExData_default_instance_);
-  }
-  static PROTOBUF_CONSTEXPR int const kIndexInFileMessages =
-    3;
-
-  void Swap(OptionSnapshotExData* other);
-  friend void swap(OptionSnapshotExData& a, OptionSnapshotExData& b) {
-    a.Swap(&b);
-  }
-
-  // implements Message ----------------------------------------------
-
-  inline OptionSnapshotExData* New() const PROTOBUF_FINAL { return New(NULL); }
-
-  OptionSnapshotExData* New(::google::protobuf::Arena* arena) const PROTOBUF_FINAL;
-  void CopyFrom(const ::google::protobuf::Message& from) PROTOBUF_FINAL;
-  void MergeFrom(const ::google::protobuf::Message& from) PROTOBUF_FINAL;
-  void CopyFrom(const OptionSnapshotExData& from);
-  void MergeFrom(const OptionSnapshotExData& from);
-  void Clear() PROTOBUF_FINAL;
-  bool IsInitialized() const PROTOBUF_FINAL;
-
-  size_t ByteSizeLong() const PROTOBUF_FINAL;
-  bool MergePartialFromCodedStream(
-      ::google::protobuf::io::CodedInputStream* input) PROTOBUF_FINAL;
-  void SerializeWithCachedSizes(
-      ::google::protobuf::io::CodedOutputStream* output) const PROTOBUF_FINAL;
-  ::google::protobuf::uint8* InternalSerializeWithCachedSizesToArray(
-      bool deterministic, ::google::protobuf::uint8* target) const PROTOBUF_FINAL;
-  int GetCachedSize() const PROTOBUF_FINAL { return _cached_size_; }
-  private:
-  void SharedCtor();
-  void SharedDtor();
-  void SetCachedSize(int size) const PROTOBUF_FINAL;
-  void InternalSwap(OptionSnapshotExData* other);
-  private:
-  inline ::google::protobuf::Arena* GetArenaNoVirtual() const {
-    return NULL;
-  }
-  inline void* MaybeArenaPtr() const {
-    return NULL;
-  }
-  public:
-
-  ::google::protobuf::Metadata GetMetadata() const PROTOBUF_FINAL;
-
-  // nested types ----------------------------------------------------
-
-  // accessors -------------------------------------------------------
-
-  // required string strikeTime = 3;
-  bool has_striketime() const;
-  void clear_striketime();
-  static const int kStrikeTimeFieldNumber = 3;
-  const ::std::string& striketime() const;
-  void set_striketime(const ::std::string& value);
-  #if LANG_CXX11
-  void set_striketime(::std::string&& value);
-  #endif
-  void set_striketime(const char* value);
-  void set_striketime(const char* value, size_t size);
-  ::std::string* mutable_striketime();
-  ::std::string* release_striketime();
-  void set_allocated_striketime(::std::string* striketime);
-
-  // required .Qot_Common.Security owner = 2;
-  bool has_owner() const;
-  void clear_owner();
-  static const int kOwnerFieldNumber = 2;
-  const ::Qot_Common::Security& owner() const;
-  ::Qot_Common::Security* release_owner();
-  ::Qot_Common::Security* mutable_owner();
-  void set_allocated_owner(::Qot_Common::Security* owner);
-
-  // required int32 type = 1;
-  bool has_type() const;
-  void clear_type();
-  static const int kTypeFieldNumber = 1;
-  ::google::protobuf::int32 type() const;
-  void set_type(::google::protobuf::int32 value);
-
-  // required int32 contractSize = 5;
-  bool has_contractsize() const;
-  void clear_contractsize();
-  static const int kContractSizeFieldNumber = 5;
-  ::google::protobuf::int32 contractsize() const;
-  void set_contractsize(::google::protobuf::int32 value);
-
-  // required double strikePrice = 4;
-  bool has_strikeprice() const;
-  void clear_strikeprice();
-  static const int kStrikePriceFieldNumber = 4;
-  double strikeprice() const;
-  void set_strikeprice(double value);
-
-  // required double impliedVolatility = 7;
-  bool has_impliedvolatility() const;
-  void clear_impliedvolatility();
-  static const int kImpliedVolatilityFieldNumber = 7;
-  double impliedvolatility() const;
-  void set_impliedvolatility(double value);
-
-  // required double premium = 8;
-  bool has_premium() const;
-  void clear_premium();
-  static const int kPremiumFieldNumber = 8;
-  double premium() const;
-  void set_premium(double value);
-
-  // required double delta = 9;
-  bool has_delta() const;
-  void clear_delta();
-  static const int kDeltaFieldNumber = 9;
-  double delta() const;
-  void set_delta(double value);
-
-  // required double gamma = 10;
-  bool has_gamma() const;
-  void clear_gamma();
-  static const int kGammaFieldNumber = 10;
-  double gamma() const;
-  void set_gamma(double value);
-
-  // required int32 openInterest = 6;
-  bool has_openinterest() const;
-  void clear_openinterest();
-  static const int kOpenInterestFieldNumber = 6;
-  ::google::protobuf::int32 openinterest() const;
-  void set_openinterest(::google::protobuf::int32 value);
-
-  // optional int32 indexOptionType = 15;
-  bool has_indexoptiontype() const;
-  void clear_indexoptiontype();
-  static const int kIndexOptionTypeFieldNumber = 15;
-  ::google::protobuf::int32 indexoptiontype() const;
-  void set_indexoptiontype(::google::protobuf::int32 value);
-
-  // required double vega = 11;
-  bool has_vega() const;
-  void clear_vega();
-  static const int kVegaFieldNumber = 11;
-  double vega() const;
-  void set_vega(double value);
-
-  // required double theta = 12;
-  bool has_theta() const;
-  void clear_theta();
-  static const int kThetaFieldNumber = 12;
-  double theta() const;
-  void set_theta(double value);
-
-  // required double rho = 13;
-  bool has_rho() const;
-  void clear_rho();
-  static const int kRhoFieldNumber = 13;
-  double rho() const;
-  void set_rho(double value);
-
-  // optional double strikeTimestamp = 14;
-  bool has_striketimestamp() const;
-  void clear_striketimestamp();
-  static const int kStrikeTimestampFieldNumber = 14;
-  double striketimestamp() const;
-  void set_striketimestamp(double value);
-
-  // optional int32 netOpenInterest = 16;
-  bool has_netopeninterest() const;
-  void clear_netopeninterest();
-  static const int kNetOpenInterestFieldNumber = 16;
-  ::google::protobuf::int32 netopeninterest() const;
-  void set_netopeninterest(::google::protobuf::int32 value);
-
-  // optional int32 expiryDateDistance = 17;
-  bool has_expirydatedistance() const;
-  void clear_expirydatedistance();
-  static const int kExpiryDateDistanceFieldNumber = 17;
-  ::google::protobuf::int32 expirydatedistance() const;
-  void set_expirydatedistance(::google::protobuf::int32 value);
-
-  // optional double contractNominalValue = 18;
-  bool has_contractnominalvalue() const;
-  void clear_contractnominalvalue();
-  static const int kContractNominalValueFieldNumber = 18;
-  double contractnominalvalue() const;
-  void set_contractnominalvalue(double value);
-
-  // optional double ownerLotMultiplier = 19;
-  bool has_ownerlotmultiplier() const;
-  void clear_ownerlotmultiplier();
-  static const int kOwnerLotMultiplierFieldNumber = 19;
-  double ownerlotmultiplier() const;
-  void set_ownerlotmultiplier(double value);
-
-  // optional double contractMultiplier = 21;
-  bool has_contractmultiplier() const;
-  void clear_contractmultiplier();
-  static const int kContractMultiplierFieldNumber = 21;
-  double contractmultiplier() const;
-  void set_contractmultiplier(double value);
-
-  // optional double contractSizeFloat = 22;
-  bool has_contractsizefloat() const;
-  void clear_contractsizefloat();
-  static const int kContractSizeFloatFieldNumber = 22;
-  double contractsizefloat() const;
-  void set_contractsizefloat(double value);
-
-  // optional int32 optionAreaType = 20;
-  bool has_optionareatype() const;
-  void clear_optionareatype();
-  static const int kOptionAreaTypeFieldNumber = 20;
-  ::google::protobuf::int32 optionareatype() const;
-  void set_optionareatype(::google::protobuf::int32 value);
-
-  // @@protoc_insertion_point(class_scope:Qot_GetSecuritySnapshot.OptionSnapshotExData)
- private:
-  void set_has_type();
-  void clear_has_type();
-  void set_has_owner();
-  void clear_has_owner();
-  void set_has_striketime();
-  void clear_has_striketime();
-  void set_has_strikeprice();
-  void clear_has_strikeprice();
-  void set_has_contractsize();
-  void clear_has_contractsize();
-  void set_has_contractsizefloat();
-  void clear_has_contractsizefloat();
-  void set_has_openinterest();
-  void clear_has_openinterest();
-  void set_has_impliedvolatility();
-  void clear_has_impliedvolatility();
-  void set_has_premium();
-  void clear_has_premium();
-  void set_has_delta();
-  void clear_has_delta();
-  void set_has_gamma();
-  void clear_has_gamma();
-  void set_has_vega();
-  void clear_has_vega();
-  void set_has_theta();
-  void clear_has_theta();
-  void set_has_rho();
-  void clear_has_rho();
-  void set_has_striketimestamp();
-  void clear_has_striketimestamp();
-  void set_has_indexoptiontype();
-  void clear_has_indexoptiontype();
-  void set_has_netopeninterest();
-  void clear_has_netopeninterest();
-  void set_has_expirydatedistance();
-  void clear_has_expirydatedistance();
-  void set_has_contractnominalvalue();
-  void clear_has_contractnominalvalue();
-  void set_has_ownerlotmultiplier();
-  void clear_has_ownerlotmultiplier();
-  void set_has_optionareatype();
-  void clear_has_optionareatype();
-  void set_has_contractmultiplier();
-  void clear_has_contractmultiplier();
-
-  // helper for ByteSizeLong()
-  size_t RequiredFieldsByteSizeFallback() const;
-
-  ::google::protobuf::internal::InternalMetadataWithArena _internal_metadata_;
-  ::google::protobuf::internal::HasBits<1> _has_bits_;
-  mutable int _cached_size_;
-  ::google::protobuf::internal::ArenaStringPtr striketime_;
-  ::Qot_Common::Security* owner_;
-  ::google::protobuf::int32 type_;
-  ::google::protobuf::int32 contractsize_;
-  double strikeprice_;
-  double impliedvolatility_;
-  double premium_;
-  double delta_;
-  double gamma_;
-  ::google::protobuf::int32 openinterest_;
-  ::google::protobuf::int32 indexoptiontype_;
-  double vega_;
-  double theta_;
-  double rho_;
-  double striketimestamp_;
-  ::google::protobuf::int32 netopeninterest_;
-  ::google::protobuf::int32 expirydatedistance_;
-  double contractnominalvalue_;
-  double ownerlotmultiplier_;
-  double contractmultiplier_;
-  double contractsizefloat_;
-  ::google::protobuf::int32 optionareatype_;
-  friend struct ::protobuf_Qot_5fGetSecuritySnapshot_2eproto::TableStruct;
-  friend void ::protobuf_Qot_5fGetSecuritySnapshot_2eproto::InitDefaultsOptionSnapshotExDataImpl();
-};
-// -------------------------------------------------------------------
-
-class IndexSnapshotExData : public ::google::protobuf::Message /* @@protoc_insertion_point(class_definition:Qot_GetSecuritySnapshot.IndexSnapshotExData) */ {
- public:
-  IndexSnapshotExData();
-  virtual ~IndexSnapshotExData();
-
-  IndexSnapshotExData(const IndexSnapshotExData& from);
-
-  inline IndexSnapshotExData& operator=(const IndexSnapshotExData& from) {
-    CopyFrom(from);
-    return *this;
-  }
-  #if LANG_CXX11
-  IndexSnapshotExData(IndexSnapshotExData&& from) noexcept
-    : IndexSnapshotExData() {
-    *this = ::std::move(from);
-  }
-
-  inline IndexSnapshotExData& operator=(IndexSnapshotExData&& from) noexcept {
-    if (GetArenaNoVirtual() == from.GetArenaNoVirtual()) {
-      if (this != &from) InternalSwap(&from);
-    } else {
-      CopyFrom(from);
-    }
-    return *this;
-  }
-  #endif
-  inline const ::google::protobuf::UnknownFieldSet& unknown_fields() const {
-    return _internal_metadata_.unknown_fields();
-  }
-  inline ::google::protobuf::UnknownFieldSet* mutable_unknown_fields() {
-    return _internal_metadata_.mutable_unknown_fields();
-  }
-
-  static const ::google::protobuf::Descriptor* descriptor();
-  static const IndexSnapshotExData& default_instance();
-
-  static void InitAsDefaultInstance();  // FOR INTERNAL USE ONLY
-  static inline const IndexSnapshotExData* internal_default_instance() {
-    return reinterpret_cast<const IndexSnapshotExData*>(
-               &_IndexSnapshotExData_default_instance_);
-  }
-  static PROTOBUF_CONSTEXPR int const kIndexInFileMessages =
-    4;
-
-  void Swap(IndexSnapshotExData* other);
-  friend void swap(IndexSnapshotExData& a, IndexSnapshotExData& b) {
-    a.Swap(&b);
-  }
-
-  // implements Message ----------------------------------------------
-
-  inline IndexSnapshotExData* New() const PROTOBUF_FINAL { return New(NULL); }
-
-  IndexSnapshotExData* New(::google::protobuf::Arena* arena) const PROTOBUF_FINAL;
-  void CopyFrom(const ::google::protobuf::Message& from) PROTOBUF_FINAL;
-  void MergeFrom(const ::google::protobuf::Message& from) PROTOBUF_FINAL;
-  void CopyFrom(const IndexSnapshotExData& from);
-  void MergeFrom(const IndexSnapshotExData& from);
-  void Clear() PROTOBUF_FINAL;
-  bool IsInitialized() const PROTOBUF_FINAL;
-
-  size_t ByteSizeLong() const PROTOBUF_FINAL;
-  bool MergePartialFromCodedStream(
-      ::google::protobuf::io::CodedInputStream* input) PROTOBUF_FINAL;
-  void SerializeWithCachedSizes(
-      ::google::protobuf::io::CodedOutputStream* output) const PROTOBUF_FINAL;
-  ::google::protobuf::uint8* InternalSerializeWithCachedSizesToArray(
-      bool deterministic, ::google::protobuf::uint8* target) const PROTOBUF_FINAL;
-  int GetCachedSize() const PROTOBUF_FINAL { return _cached_size_; }
-  private:
-  void SharedCtor();
-  void SharedDtor();
-  void SetCachedSize(int size) const PROTOBUF_FINAL;
-  void InternalSwap(IndexSnapshotExData* other);
-  private:
-  inline ::google::protobuf::Arena* GetArenaNoVirtual() const {
-    return NULL;
-  }
-  inline void* MaybeArenaPtr() const {
-    return NULL;
-  }
-  public:
-
-  ::google::protobuf::Metadata GetMetadata() const PROTOBUF_FINAL;
-
-  // nested types ----------------------------------------------------
-
-  // accessors -------------------------------------------------------
-
-  // required int32 raiseCount = 1;
-  bool has_raisecount() const;
-  void clear_raisecount();
-  static const int kRaiseCountFieldNumber = 1;
-  ::google::protobuf::int32 raisecount() const;
-  void set_raisecount(::google::protobuf::int32 value);
-
-  // required int32 fallCount = 2;
-  bool has_fallcount() const;
-  void clear_fallcount();
-  static const int kFallCountFieldNumber = 2;
-  ::google::protobuf::int32 fallcount() const;
-  void set_fallcount(::google::protobuf::int32 value);
-
-  // required int32 equalCount = 3;
-  bool has_equalcount() const;
-  void clear_equalcount();
-  static const int kEqualCountFieldNumber = 3;
-  ::google::protobuf::int32 equalcount() const;
-  void set_equalcount(::google::protobuf::int32 value);
-
-  // @@protoc_insertion_point(class_scope:Qot_GetSecuritySnapshot.IndexSnapshotExData)
- private:
-  void set_has_raisecount();
-  void clear_has_raisecount();
-  void set_has_fallcount();
-  void clear_has_fallcount();
-  void set_has_equalcount();
-  void clear_has_equalcount();
-
-  // helper for ByteSizeLong()
-  size_t RequiredFieldsByteSizeFallback() const;
-
-  ::google::protobuf::internal::InternalMetadataWithArena _internal_metadata_;
-  ::google::protobuf::internal::HasBits<1> _has_bits_;
-  mutable int _cached_size_;
-  ::google::protobuf::int32 raisecount_;
-  ::google::protobuf::int32 fallcount_;
-  ::google::protobuf::int32 equalcount_;
-  friend struct ::protobuf_Qot_5fGetSecuritySnapshot_2eproto::TableStruct;
-  friend void ::protobuf_Qot_5fGetSecuritySnapshot_2eproto::InitDefaultsIndexSnapshotExDataImpl();
-};
-// -------------------------------------------------------------------
-
-class PlateSnapshotExData : public ::google::protobuf::Message /* @@protoc_insertion_point(class_definition:Qot_GetSecuritySnapshot.PlateSnapshotExData) */ {
- public:
-  PlateSnapshotExData();
-  virtual ~PlateSnapshotExData();
-
-  PlateSnapshotExData(const PlateSnapshotExData& from);
-
-  inline PlateSnapshotExData& operator=(const PlateSnapshotExData& from) {
-    CopyFrom(from);
-    return *this;
-  }
-  #if LANG_CXX11
-  PlateSnapshotExData(PlateSnapshotExData&& from) noexcept
-    : PlateSnapshotExData() {
-    *this = ::std::move(from);
-  }
-
-  inline PlateSnapshotExData& operator=(PlateSnapshotExData&& from) noexcept {
-    if (GetArenaNoVirtual() == from.GetArenaNoVirtual()) {
-      if (this != &from) InternalSwap(&from);
-    } else {
-      CopyFrom(from);
-    }
-    return *this;
-  }
-  #endif
-  inline const ::google::protobuf::UnknownFieldSet& unknown_fields() const {
-    return _internal_metadata_.unknown_fields();
-  }
-  inline ::google::protobuf::UnknownFieldSet* mutable_unknown_fields() {
-    return _internal_metadata_.mutable_unknown_fields();
-  }
-
-  static const ::google::protobuf::Descriptor* descriptor();
-  static const PlateSnapshotExData& default_instance();
-
-  static void InitAsDefaultInstance();  // FOR INTERNAL USE ONLY
-  static inline const PlateSnapshotExData* internal_default_instance() {
-    return reinterpret_cast<const PlateSnapshotExData*>(
-               &_PlateSnapshotExData_default_instance_);
-  }
-  static PROTOBUF_CONSTEXPR int const kIndexInFileMessages =
-    5;
-
-  void Swap(PlateSnapshotExData* other);
-  friend void swap(PlateSnapshotExData& a, PlateSnapshotExData& b) {
-    a.Swap(&b);
-  }
-
-  // implements Message ----------------------------------------------
-
-  inline PlateSnapshotExData* New() const PROTOBUF_FINAL { return New(NULL); }
-
-  PlateSnapshotExData* New(::google::protobuf::Arena* arena) const PROTOBUF_FINAL;
-  void CopyFrom(const ::google::protobuf::Message& from) PROTOBUF_FINAL;
-  void MergeFrom(const ::google::protobuf::Message& from) PROTOBUF_FINAL;
-  void CopyFrom(const PlateSnapshotExData& from);
-  void MergeFrom(const PlateSnapshotExData& from);
-  void Clear() PROTOBUF_FINAL;
-  bool IsInitialized() const PROTOBUF_FINAL;
-
-  size_t ByteSizeLong() const PROTOBUF_FINAL;
-  bool MergePartialFromCodedStream(
-      ::google::protobuf::io::CodedInputStream* input) PROTOBUF_FINAL;
-  void SerializeWithCachedSizes(
-      ::google::protobuf::io::CodedOutputStream* output) const PROTOBUF_FINAL;
-  ::google::protobuf::uint8* InternalSerializeWithCachedSizesToArray(
-      bool deterministic, ::google::protobuf::uint8* target) const PROTOBUF_FINAL;
-  int GetCachedSize() const PROTOBUF_FINAL { return _cached_size_; }
-  private:
-  void SharedCtor();
-  void SharedDtor();
-  void SetCachedSize(int size) const PROTOBUF_FINAL;
-  void InternalSwap(PlateSnapshotExData* other);
-  private:
-  inline ::google::protobuf::Arena* GetArenaNoVirtual() const {
-    return NULL;
-  }
-  inline void* MaybeArenaPtr() const {
-    return NULL;
-  }
-  public:
-
-  ::google::protobuf::Metadata GetMetadata() const PROTOBUF_FINAL;
-
-  // nested types ----------------------------------------------------
-
-  // accessors -------------------------------------------------------
-
-  // required int32 raiseCount = 1;
-  bool has_raisecount() const;
-  void clear_raisecount();
-  static const int kRaiseCountFieldNumber = 1;
-  ::google::protobuf::int32 raisecount() const;
-  void set_raisecount(::google::protobuf::int32 value);
-
-  // required int32 fallCount = 2;
-  bool has_fallcount() const;
-  void clear_fallcount();
-  static const int kFallCountFieldNumber = 2;
-  ::google::protobuf::int32 fallcount() const;
-  void set_fallcount(::google::protobuf::int32 value);
-
-  // required int32 equalCount = 3;
-  bool has_equalcount() const;
-  void clear_equalcount();
-  static const int kEqualCountFieldNumber = 3;
-  ::google::protobuf::int32 equalcount() const;
-  void set_equalcount(::google::protobuf::int32 value);
-
-  // @@protoc_insertion_point(class_scope:Qot_GetSecuritySnapshot.PlateSnapshotExData)
- private:
-  void set_has_raisecount();
-  void clear_has_raisecount();
-  void set_has_fallcount();
-  void clear_has_fallcount();
-  void set_has_equalcount();
-  void clear_has_equalcount();
-
-  // helper for ByteSizeLong()
-  size_t RequiredFieldsByteSizeFallback() const;
-
-  ::google::protobuf::internal::InternalMetadataWithArena _internal_metadata_;
-  ::google::protobuf::internal::HasBits<1> _has_bits_;
-  mutable int _cached_size_;
-  ::google::protobuf::int32 raisecount_;
-  ::google::protobuf::int32 fallcount_;
-  ::google::protobuf::int32 equalcount_;
-  friend struct ::protobuf_Qot_5fGetSecuritySnapshot_2eproto::TableStruct;
-  friend void ::protobuf_Qot_5fGetSecuritySnapshot_2eproto::InitDefaultsPlateSnapshotExDataImpl();
-};
-// -------------------------------------------------------------------
-
-class FutureSnapshotExData : public ::google::protobuf::Message /* @@protoc_insertion_point(class_definition:Qot_GetSecuritySnapshot.FutureSnapshotExData) */ {
- public:
-  FutureSnapshotExData();
-  virtual ~FutureSnapshotExData();
-
-  FutureSnapshotExData(const FutureSnapshotExData& from);
-
-  inline FutureSnapshotExData& operator=(const FutureSnapshotExData& from) {
-    CopyFrom(from);
-    return *this;
-  }
-  #if LANG_CXX11
-  FutureSnapshotExData(FutureSnapshotExData&& from) noexcept
-    : FutureSnapshotExData() {
-    *this = ::std::move(from);
-  }
-
-  inline FutureSnapshotExData& operator=(FutureSnapshotExData&& from) noexcept {
-    if (GetArenaNoVirtual() == from.GetArenaNoVirtual()) {
-      if (this != &from) InternalSwap(&from);
-    } else {
-      CopyFrom(from);
-    }
-    return *this;
-  }
-  #endif
-  inline const ::google::protobuf::UnknownFieldSet& unknown_fields() const {
-    return _internal_metadata_.unknown_fields();
-  }
-  inline ::google::protobuf::UnknownFieldSet* mutable_unknown_fields() {
-    return _internal_metadata_.mutable_unknown_fields();
-  }
-
-  static const ::google::protobuf::Descriptor* descriptor();
-  static const FutureSnapshotExData& default_instance();
-
-  static void InitAsDefaultInstance();  // FOR INTERNAL USE ONLY
-  static inline const FutureSnapshotExData* internal_default_instance() {
-    return reinterpret_cast<const FutureSnapshotExData*>(
-               &_FutureSnapshotExData_default_instance_);
-  }
-  static PROTOBUF_CONSTEXPR int const kIndexInFileMessages =
-    6;
-
-  void Swap(FutureSnapshotExData* other);
-  friend void swap(FutureSnapshotExData& a, FutureSnapshotExData& b) {
-    a.Swap(&b);
-  }
-
-  // implements Message ----------------------------------------------
-
-  inline FutureSnapshotExData* New() const PROTOBUF_FINAL { return New(NULL); }
-
-  FutureSnapshotExData* New(::google::protobuf::Arena* arena) const PROTOBUF_FINAL;
-  void CopyFrom(const ::google::protobuf::Message& from) PROTOBUF_FINAL;
-  void MergeFrom(const ::google::protobuf::Message& from) PROTOBUF_FINAL;
-  void CopyFrom(const FutureSnapshotExData& from);
-  void MergeFrom(const FutureSnapshotExData& from);
-  void Clear() PROTOBUF_FINAL;
-  bool IsInitialized() const PROTOBUF_FINAL;
-
-  size_t ByteSizeLong() const PROTOBUF_FINAL;
-  bool MergePartialFromCodedStream(
-      ::google::protobuf::io::CodedInputStream* input) PROTOBUF_FINAL;
-  void SerializeWithCachedSizes(
-      ::google::protobuf::io::CodedOutputStream* output) const PROTOBUF_FINAL;
-  ::google::protobuf::uint8* InternalSerializeWithCachedSizesToArray(
-      bool deterministic, ::google::protobuf::uint8* target) const PROTOBUF_FINAL;
-  int GetCachedSize() const PROTOBUF_FINAL { return _cached_size_; }
-  private:
-  void SharedCtor();
-  void SharedDtor();
-  void SetCachedSize(int size) const PROTOBUF_FINAL;
-  void InternalSwap(FutureSnapshotExData* other);
-  private:
-  inline ::google::protobuf::Arena* GetArenaNoVirtual() const {
-    return NULL;
-  }
-  inline void* MaybeArenaPtr() const {
-    return NULL;
-  }
-  public:
-
-  ::google::protobuf::Metadata GetMetadata() const PROTOBUF_FINAL;
-
-  // nested types ----------------------------------------------------
-
-  // accessors -------------------------------------------------------
-
-  // required string lastTradeTime = 4;
-  bool has_lasttradetime() const;
-  void clear_lasttradetime();
-  static const int kLastTradeTimeFieldNumber = 4;
-  const ::std::string& lasttradetime() const;
-  void set_lasttradetime(const ::std::string& value);
-  #if LANG_CXX11
-  void set_lasttradetime(::std::string&& value);
-  #endif
-  void set_lasttradetime(const char* value);
-  void set_lasttradetime(const char* value, size_t size);
-  ::std::string* mutable_lasttradetime();
-  ::std::string* release_lasttradetime();
-  void set_allocated_lasttradetime(::std::string* lasttradetime);
-
-  // required double lastSettlePrice = 1;
-  bool has_lastsettleprice() const;
-  void clear_lastsettleprice();
-  static const int kLastSettlePriceFieldNumber = 1;
-  double lastsettleprice() const;
-  void set_lastsettleprice(double value);
-
-  // required int32 position = 2;
-  bool has_position() const;
-  void clear_position();
-  static const int kPositionFieldNumber = 2;
-  ::google::protobuf::int32 position() const;
-  void set_position(::google::protobuf::int32 value);
-
-  // required int32 positionChange = 3;
-  bool has_positionchange() const;
-  void clear_positionchange();
-  static const int kPositionChangeFieldNumber = 3;
-  ::google::protobuf::int32 positionchange() const;
-  void set_positionchange(::google::protobuf::int32 value);
-
-  // optional double lastTradeTimestamp = 5;
-  bool has_lasttradetimestamp() const;
-  void clear_lasttradetimestamp();
-  static const int kLastTradeTimestampFieldNumber = 5;
-  double lasttradetimestamp() const;
-  void set_lasttradetimestamp(double value);
-
-  // required bool isMainContract = 6;
-  bool has_ismaincontract() const;
-  void clear_ismaincontract();
-  static const int kIsMainContractFieldNumber = 6;
-  bool ismaincontract() const;
-  void set_ismaincontract(bool value);
-
-  // @@protoc_insertion_point(class_scope:Qot_GetSecuritySnapshot.FutureSnapshotExData)
- private:
-  void set_has_lastsettleprice();
-  void clear_has_lastsettleprice();
-  void set_has_position();
-  void clear_has_position();
-  void set_has_positionchange();
-  void clear_has_positionchange();
-  void set_has_lasttradetime();
-  void clear_has_lasttradetime();
-  void set_has_lasttradetimestamp();
-  void clear_has_lasttradetimestamp();
-  void set_has_ismaincontract();
-  void clear_has_ismaincontract();
-
-  // helper for ByteSizeLong()
-  size_t RequiredFieldsByteSizeFallback() const;
-
-  ::google::protobuf::internal::InternalMetadataWithArena _internal_metadata_;
-  ::google::protobuf::internal::HasBits<1> _has_bits_;
-  mutable int _cached_size_;
-  ::google::protobuf::internal::ArenaStringPtr lasttradetime_;
-  double lastsettleprice_;
-  ::google::protobuf::int32 position_;
-  ::google::protobuf::int32 positionchange_;
-  double lasttradetimestamp_;
-  bool ismaincontract_;
-  friend struct ::protobuf_Qot_5fGetSecuritySnapshot_2eproto::TableStruct;
-  friend void ::protobuf_Qot_5fGetSecuritySnapshot_2eproto::InitDefaultsFutureSnapshotExDataImpl();
-};
-// -------------------------------------------------------------------
-
-class TrustSnapshotExData : public ::google::protobuf::Message /* @@protoc_insertion_point(class_definition:Qot_GetSecuritySnapshot.TrustSnapshotExData) */ {
- public:
-  TrustSnapshotExData();
-  virtual ~TrustSnapshotExData();
-
-  TrustSnapshotExData(const TrustSnapshotExData& from);
-
-  inline TrustSnapshotExData& operator=(const TrustSnapshotExData& from) {
-    CopyFrom(from);
-    return *this;
-  }
-  #if LANG_CXX11
-  TrustSnapshotExData(TrustSnapshotExData&& from) noexcept
-    : TrustSnapshotExData() {
-    *this = ::std::move(from);
-  }
-
-  inline TrustSnapshotExData& operator=(TrustSnapshotExData&& from) noexcept {
-    if (GetArenaNoVirtual() == from.GetArenaNoVirtual()) {
-      if (this != &from) InternalSwap(&from);
-    } else {
-      CopyFrom(from);
-    }
-    return *this;
-  }
-  #endif
-  inline const ::google::protobuf::UnknownFieldSet& unknown_fields() const {
-    return _internal_metadata_.unknown_fields();
-  }
-  inline ::google::protobuf::UnknownFieldSet* mutable_unknown_fields() {
-    return _internal_metadata_.mutable_unknown_fields();
-  }
-
-  static const ::google::protobuf::Descriptor* descriptor();
-  static const TrustSnapshotExData& default_instance();
-
-  static void InitAsDefaultInstance();  // FOR INTERNAL USE ONLY
-  static inline const TrustSnapshotExData* internal_default_instance() {
-    return reinterpret_cast<const TrustSnapshotExData*>(
-               &_TrustSnapshotExData_default_instance_);
-  }
-  static PROTOBUF_CONSTEXPR int const kIndexInFileMessages =
-    7;
-
-  void Swap(TrustSnapshotExData* other);
-  friend void swap(TrustSnapshotExData& a, TrustSnapshotExData& b) {
-    a.Swap(&b);
-  }
-
-  // implements Message ----------------------------------------------
-
-  inline TrustSnapshotExData* New() const PROTOBUF_FINAL { return New(NULL); }
-
-  TrustSnapshotExData* New(::google::protobuf::Arena* arena) const PROTOBUF_FINAL;
-  void CopyFrom(const ::google::protobuf::Message& from) PROTOBUF_FINAL;
-  void MergeFrom(const ::google::protobuf::Message& from) PROTOBUF_FINAL;
-  void CopyFrom(const TrustSnapshotExData& from);
-  void MergeFrom(const TrustSnapshotExData& from);
-  void Clear() PROTOBUF_FINAL;
-  bool IsInitialized() const PROTOBUF_FINAL;
-
-  size_t ByteSizeLong() const PROTOBUF_FINAL;
-  bool MergePartialFromCodedStream(
-      ::google::protobuf::io::CodedInputStream* input) PROTOBUF_FINAL;
-  void SerializeWithCachedSizes(
-      ::google::protobuf::io::CodedOutputStream* output) const PROTOBUF_FINAL;
-  ::google::protobuf::uint8* InternalSerializeWithCachedSizesToArray(
-      bool deterministic, ::google::protobuf::uint8* target) const PROTOBUF_FINAL;
-  int GetCachedSize() const PROTOBUF_FINAL { return _cached_size_; }
-  private:
-  void SharedCtor();
-  void SharedDtor();
-  void SetCachedSize(int size) const PROTOBUF_FINAL;
-  void InternalSwap(TrustSnapshotExData* other);
-  private:
-  inline ::google::protobuf::Arena* GetArenaNoVirtual() const {
-    return NULL;
-  }
-  inline void* MaybeArenaPtr() const {
-    return NULL;
-  }
-  public:
-
-  ::google::protobuf::Metadata GetMetadata() const PROTOBUF_FINAL;
-
-  // nested types ----------------------------------------------------
-
-  // accessors -------------------------------------------------------
-
-  // required double dividendYield = 1;
-  bool has_dividendyield() const;
-  void clear_dividendyield();
-  static const int kDividendYieldFieldNumber = 1;
-  double dividendyield() const;
-  void set_dividendyield(double value);
-
-  // required double aum = 2;
-  bool has_aum() const;
-  void clear_aum();
-  static const int kAumFieldNumber = 2;
-  double aum() const;
-  void set_aum(double value);
-
-  // required int64 outstandingUnits = 3;
-  bool has_outstandingunits() const;
-  void clear_outstandingunits();
-  static const int kOutstandingUnitsFieldNumber = 3;
-  ::google::protobuf::int64 outstandingunits() const;
-  void set_outstandingunits(::google::protobuf::int64 value);
-
-  // required double netAssetValue = 4;
-  bool has_netassetvalue() const;
-  void clear_netassetvalue();
-  static const int kNetAssetValueFieldNumber = 4;
-  double netassetvalue() const;
-  void set_netassetvalue(double value);
-
-  // required double premium = 5;
-  bool has_premium() const;
-  void clear_premium();
-  static const int kPremiumFieldNumber = 5;
-  double premium() const;
-  void set_premium(double value);
-
-  // required int32 assetClass = 6;
-  bool has_assetclass() const;
-  void clear_assetclass();
-  static const int kAssetClassFieldNumber = 6;
-  ::google::protobuf::int32 assetclass() const;
-  void set_assetclass(::google::protobuf::int32 value);
-
-  // @@protoc_insertion_point(class_scope:Qot_GetSecuritySnapshot.TrustSnapshotExData)
- private:
-  void set_has_dividendyield();
-  void clear_has_dividendyield();
-  void set_has_aum();
-  void clear_has_aum();
-  void set_has_outstandingunits();
-  void clear_has_outstandingunits();
-  void set_has_netassetvalue();
-  void clear_has_netassetvalue();
-  void set_has_premium();
-  void clear_has_premium();
-  void set_has_assetclass();
-  void clear_has_assetclass();
-
-  // helper for ByteSizeLong()
-  size_t RequiredFieldsByteSizeFallback() const;
-
-  ::google::protobuf::internal::InternalMetadataWithArena _internal_metadata_;
-  ::google::protobuf::internal::HasBits<1> _has_bits_;
-  mutable int _cached_size_;
-  double dividendyield_;
-  double aum_;
-  ::google::protobuf::int64 outstandingunits_;
-  double netassetvalue_;
-  double premium_;
-  ::google::protobuf::int32 assetclass_;
-  friend struct ::protobuf_Qot_5fGetSecuritySnapshot_2eproto::TableStruct;
-  friend void ::protobuf_Qot_5fGetSecuritySnapshot_2eproto::InitDefaultsTrustSnapshotExDataImpl();
 };
 // -------------------------------------------------------------------
 
@@ -1861,7 +720,7 @@ class SnapshotBasicData : public ::google::protobuf::Message /* @@protoc_inserti
                &_SnapshotBasicData_default_instance_);
   }
   static PROTOBUF_CONSTEXPR int const kIndexInFileMessages =
-    8;
+    3;
 
   void Swap(SnapshotBasicData* other);
   friend void swap(SnapshotBasicData& a, SnapshotBasicData& b) {
@@ -1938,21 +797,6 @@ class SnapshotBasicData : public ::google::protobuf::Message /* @@protoc_inserti
   ::std::string* release_updatetime();
   void set_allocated_updatetime(::std::string* updatetime);
 
-  // optional string name = 41;
-  bool has_name() const;
-  void clear_name();
-  static const int kNameFieldNumber = 41;
-  const ::std::string& name() const;
-  void set_name(const ::std::string& value);
-  #if LANG_CXX11
-  void set_name(::std::string&& value);
-  #endif
-  void set_name(const char* value);
-  void set_name(const char* value, size_t size);
-  ::std::string* mutable_name();
-  ::std::string* release_name();
-  void set_allocated_name(::std::string* name);
-
   // required .Qot_Common.Security security = 1;
   bool has_security() const;
   void clear_security();
@@ -1962,33 +806,6 @@ class SnapshotBasicData : public ::google::protobuf::Message /* @@protoc_inserti
   ::Qot_Common::Security* mutable_security();
   void set_allocated_security(::Qot_Common::Security* security);
 
-  // optional .Qot_Common.PreAfterMarketData preMarket = 37;
-  bool has_premarket() const;
-  void clear_premarket();
-  static const int kPreMarketFieldNumber = 37;
-  const ::Qot_Common::PreAfterMarketData& premarket() const;
-  ::Qot_Common::PreAfterMarketData* release_premarket();
-  ::Qot_Common::PreAfterMarketData* mutable_premarket();
-  void set_allocated_premarket(::Qot_Common::PreAfterMarketData* premarket);
-
-  // optional .Qot_Common.PreAfterMarketData afterMarket = 38;
-  bool has_aftermarket() const;
-  void clear_aftermarket();
-  static const int kAfterMarketFieldNumber = 38;
-  const ::Qot_Common::PreAfterMarketData& aftermarket() const;
-  ::Qot_Common::PreAfterMarketData* release_aftermarket();
-  ::Qot_Common::PreAfterMarketData* mutable_aftermarket();
-  void set_allocated_aftermarket(::Qot_Common::PreAfterMarketData* aftermarket);
-
-  // optional .Qot_Common.PreAfterMarketData overnight = 42;
-  bool has_overnight() const;
-  void clear_overnight();
-  static const int kOvernightFieldNumber = 42;
-  const ::Qot_Common::PreAfterMarketData& overnight() const;
-  ::Qot_Common::PreAfterMarketData* release_overnight();
-  ::Qot_Common::PreAfterMarketData* mutable_overnight();
-  void set_allocated_overnight(::Qot_Common::PreAfterMarketData* overnight);
-
   // required int32 type = 2;
   bool has_type() const;
   void clear_type();
@@ -1996,12 +813,12 @@ class SnapshotBasicData : public ::google::protobuf::Message /* @@protoc_inserti
   ::google::protobuf::int32 type() const;
   void set_type(::google::protobuf::int32 value);
 
-  // required int32 lotSize = 5;
-  bool has_lotsize() const;
-  void clear_lotsize();
-  static const int kLotSizeFieldNumber = 5;
-  ::google::protobuf::int32 lotsize() const;
-  void set_lotsize(::google::protobuf::int32 value);
+  // required bool isSuspend = 3;
+  bool has_issuspend() const;
+  void clear_issuspend();
+  static const int kIsSuspendFieldNumber = 3;
+  bool issuspend() const;
+  void set_issuspend(bool value);
 
   // required double priceSpread = 6;
   bool has_pricespread() const;
@@ -2066,180 +883,17 @@ class SnapshotBasicData : public ::google::protobuf::Message /* @@protoc_inserti
   double turnoverrate() const;
   void set_turnoverrate(double value);
 
-  // optional double listTimestamp = 16;
-  bool has_listtimestamp() const;
-  void clear_listtimestamp();
-  static const int kListTimestampFieldNumber = 16;
-  double listtimestamp() const;
-  void set_listtimestamp(double value);
-
-  // optional double updateTimestamp = 17;
-  bool has_updatetimestamp() const;
-  void clear_updatetimestamp();
-  static const int kUpdateTimestampFieldNumber = 17;
-  double updatetimestamp() const;
-  void set_updatetimestamp(double value);
-
-  // optional double askPrice = 18;
-  bool has_askprice() const;
-  void clear_askprice();
-  static const int kAskPriceFieldNumber = 18;
-  double askprice() const;
-  void set_askprice(double value);
-
-  // optional double bidPrice = 19;
-  bool has_bidprice() const;
-  void clear_bidprice();
-  static const int kBidPriceFieldNumber = 19;
-  double bidprice() const;
-  void set_bidprice(double value);
-
-  // optional int64 askVol = 20;
-  bool has_askvol() const;
-  void clear_askvol();
-  static const int kAskVolFieldNumber = 20;
-  ::google::protobuf::int64 askvol() const;
-  void set_askvol(::google::protobuf::int64 value);
-
-  // optional int64 bidVol = 21;
-  bool has_bidvol() const;
-  void clear_bidvol();
-  static const int kBidVolFieldNumber = 21;
-  ::google::protobuf::int64 bidvol() const;
-  void set_bidvol(::google::protobuf::int64 value);
-
-  // required bool isSuspend = 3;
-  bool has_issuspend() const;
-  void clear_issuspend();
-  static const int kIsSuspendFieldNumber = 3;
-  bool issuspend() const;
-  void set_issuspend(bool value);
-
-  // optional bool enableMargin = 22;
-  bool has_enablemargin() const;
-  void clear_enablemargin();
-  static const int kEnableMarginFieldNumber = 22;
-  bool enablemargin() const;
-  void set_enablemargin(bool value);
-
-  // optional bool enableShortSell = 25;
-  bool has_enableshortsell() const;
-  void clear_enableshortsell();
-  static const int kEnableShortSellFieldNumber = 25;
-  bool enableshortsell() const;
-  void set_enableshortsell(bool value);
-
-  // optional int32 secStatus = 39;
-  bool has_secstatus() const;
-  void clear_secstatus();
-  static const int kSecStatusFieldNumber = 39;
-  ::google::protobuf::int32 secstatus() const;
-  void set_secstatus(::google::protobuf::int32 value);
-
-  // optional double mortgageRatio = 23;
-  bool has_mortgageratio() const;
-  void clear_mortgageratio();
-  static const int kMortgageRatioFieldNumber = 23;
-  double mortgageratio() const;
-  void set_mortgageratio(double value);
-
-  // optional double longMarginInitialRatio = 24;
-  bool has_longmargininitialratio() const;
-  void clear_longmargininitialratio();
-  static const int kLongMarginInitialRatioFieldNumber = 24;
-  double longmargininitialratio() const;
-  void set_longmargininitialratio(double value);
-
-  // optional double shortSellRate = 26;
-  bool has_shortsellrate() const;
-  void clear_shortsellrate();
-  static const int kShortSellRateFieldNumber = 26;
-  double shortsellrate() const;
-  void set_shortsellrate(double value);
-
-  // optional int64 shortAvailableVolume = 27;
-  bool has_shortavailablevolume() const;
-  void clear_shortavailablevolume();
-  static const int kShortAvailableVolumeFieldNumber = 27;
-  ::google::protobuf::int64 shortavailablevolume() const;
-  void set_shortavailablevolume(::google::protobuf::int64 value);
-
-  // optional double shortMarginInitialRatio = 28;
-  bool has_shortmargininitialratio() const;
-  void clear_shortmargininitialratio();
-  static const int kShortMarginInitialRatioFieldNumber = 28;
-  double shortmargininitialratio() const;
-  void set_shortmargininitialratio(double value);
-
-  // optional double amplitude = 29;
-  bool has_amplitude() const;
-  void clear_amplitude();
-  static const int kAmplitudeFieldNumber = 29;
-  double amplitude() const;
-  void set_amplitude(double value);
-
-  // optional double avgPrice = 30;
-  bool has_avgprice() const;
-  void clear_avgprice();
-  static const int kAvgPriceFieldNumber = 30;
-  double avgprice() const;
-  void set_avgprice(double value);
-
-  // optional double bidAskRatio = 31;
-  bool has_bidaskratio() const;
-  void clear_bidaskratio();
-  static const int kBidAskRatioFieldNumber = 31;
-  double bidaskratio() const;
-  void set_bidaskratio(double value);
-
-  // optional double volumeRatio = 32;
-  bool has_volumeratio() const;
-  void clear_volumeratio();
-  static const int kVolumeRatioFieldNumber = 32;
-  double volumeratio() const;
-  void set_volumeratio(double value);
-
-  // optional double highest52WeeksPrice = 33;
-  bool has_highest52weeksprice() const;
-  void clear_highest52weeksprice();
-  static const int kHighest52WeeksPriceFieldNumber = 33;
-  double highest52weeksprice() const;
-  void set_highest52weeksprice(double value);
-
-  // optional double lowest52WeeksPrice = 34;
-  bool has_lowest52weeksprice() const;
-  void clear_lowest52weeksprice();
-  static const int kLowest52WeeksPriceFieldNumber = 34;
-  double lowest52weeksprice() const;
-  void set_lowest52weeksprice(double value);
-
-  // optional double highestHistoryPrice = 35;
-  bool has_highesthistoryprice() const;
-  void clear_highesthistoryprice();
-  static const int kHighestHistoryPriceFieldNumber = 35;
-  double highesthistoryprice() const;
-  void set_highesthistoryprice(double value);
-
-  // optional double lowestHistoryPrice = 36;
-  bool has_lowesthistoryprice() const;
-  void clear_lowesthistoryprice();
-  static const int kLowestHistoryPriceFieldNumber = 36;
-  double lowesthistoryprice() const;
-  void set_lowesthistoryprice(double value);
-
-  // optional double closePrice5Minute = 40;
-  bool has_closeprice5minute() const;
-  void clear_closeprice5minute();
-  static const int kClosePrice5MinuteFieldNumber = 40;
-  double closeprice5minute() const;
-  void set_closeprice5minute(double value);
+  // required int32 lotSize = 5;
+  bool has_lotsize() const;
+  void clear_lotsize();
+  static const int kLotSizeFieldNumber = 5;
+  ::google::protobuf::int32 lotsize() const;
+  void set_lotsize(::google::protobuf::int32 value);
 
   // @@protoc_insertion_point(class_scope:Qot_GetSecuritySnapshot.SnapshotBasicData)
  private:
   void set_has_security();
   void clear_has_security();
-  void set_has_name();
-  void clear_has_name();
   void set_has_type();
   void clear_has_type();
   void set_has_issuspend();
@@ -2268,73 +922,18 @@ class SnapshotBasicData : public ::google::protobuf::Message /* @@protoc_inserti
   void clear_has_turnover();
   void set_has_turnoverrate();
   void clear_has_turnoverrate();
-  void set_has_listtimestamp();
-  void clear_has_listtimestamp();
-  void set_has_updatetimestamp();
-  void clear_has_updatetimestamp();
-  void set_has_askprice();
-  void clear_has_askprice();
-  void set_has_bidprice();
-  void clear_has_bidprice();
-  void set_has_askvol();
-  void clear_has_askvol();
-  void set_has_bidvol();
-  void clear_has_bidvol();
-  void set_has_enablemargin();
-  void clear_has_enablemargin();
-  void set_has_mortgageratio();
-  void clear_has_mortgageratio();
-  void set_has_longmargininitialratio();
-  void clear_has_longmargininitialratio();
-  void set_has_enableshortsell();
-  void clear_has_enableshortsell();
-  void set_has_shortsellrate();
-  void clear_has_shortsellrate();
-  void set_has_shortavailablevolume();
-  void clear_has_shortavailablevolume();
-  void set_has_shortmargininitialratio();
-  void clear_has_shortmargininitialratio();
-  void set_has_amplitude();
-  void clear_has_amplitude();
-  void set_has_avgprice();
-  void clear_has_avgprice();
-  void set_has_bidaskratio();
-  void clear_has_bidaskratio();
-  void set_has_volumeratio();
-  void clear_has_volumeratio();
-  void set_has_highest52weeksprice();
-  void clear_has_highest52weeksprice();
-  void set_has_lowest52weeksprice();
-  void clear_has_lowest52weeksprice();
-  void set_has_highesthistoryprice();
-  void clear_has_highesthistoryprice();
-  void set_has_lowesthistoryprice();
-  void clear_has_lowesthistoryprice();
-  void set_has_premarket();
-  void clear_has_premarket();
-  void set_has_aftermarket();
-  void clear_has_aftermarket();
-  void set_has_secstatus();
-  void clear_has_secstatus();
-  void set_has_closeprice5minute();
-  void clear_has_closeprice5minute();
-  void set_has_overnight();
-  void clear_has_overnight();
 
   // helper for ByteSizeLong()
   size_t RequiredFieldsByteSizeFallback() const;
 
   ::google::protobuf::internal::InternalMetadataWithArena _internal_metadata_;
-  ::google::protobuf::internal::HasBits<2> _has_bits_;
+  ::google::protobuf::internal::HasBits<1> _has_bits_;
+  mutable int _cached_size_;
   ::google::protobuf::internal::ArenaStringPtr listtime_;
   ::google::protobuf::internal::ArenaStringPtr updatetime_;
-  ::google::protobuf::internal::ArenaStringPtr name_;
   ::Qot_Common::Security* security_;
-  ::Qot_Common::PreAfterMarketData* premarket_;
-  ::Qot_Common::PreAfterMarketData* aftermarket_;
-  ::Qot_Common::PreAfterMarketData* overnight_;
   ::google::protobuf::int32 type_;
-  ::google::protobuf::int32 lotsize_;
+  bool issuspend_;
   double pricespread_;
   double highprice_;
   double openprice_;
@@ -2344,31 +943,7 @@ class SnapshotBasicData : public ::google::protobuf::Message /* @@protoc_inserti
   ::google::protobuf::int64 volume_;
   double turnover_;
   double turnoverrate_;
-  double listtimestamp_;
-  double updatetimestamp_;
-  double askprice_;
-  double bidprice_;
-  ::google::protobuf::int64 askvol_;
-  ::google::protobuf::int64 bidvol_;
-  bool issuspend_;
-  bool enablemargin_;
-  bool enableshortsell_;
-  ::google::protobuf::int32 secstatus_;
-  double mortgageratio_;
-  double longmargininitialratio_;
-  double shortsellrate_;
-  ::google::protobuf::int64 shortavailablevolume_;
-  double shortmargininitialratio_;
-  double amplitude_;
-  double avgprice_;
-  double bidaskratio_;
-  double volumeratio_;
-  double highest52weeksprice_;
-  double lowest52weeksprice_;
-  double highesthistoryprice_;
-  double lowesthistoryprice_;
-  double closeprice5minute_;
-  mutable int _cached_size_;
+  ::google::protobuf::int32 lotsize_;
   friend struct ::protobuf_Qot_5fGetSecuritySnapshot_2eproto::TableStruct;
   friend void ::protobuf_Qot_5fGetSecuritySnapshot_2eproto::InitDefaultsSnapshotBasicDataImpl();
 };
@@ -2416,7 +991,7 @@ class Snapshot : public ::google::protobuf::Message /* @@protoc_insertion_point(
                &_Snapshot_default_instance_);
   }
   static PROTOBUF_CONSTEXPR int const kIndexInFileMessages =
-    9;
+    4;
 
   void Swap(Snapshot* other);
   friend void swap(Snapshot& a, Snapshot& b) {
@@ -2490,51 +1065,6 @@ class Snapshot : public ::google::protobuf::Message /* @@protoc_insertion_point(
   ::Qot_GetSecuritySnapshot::WarrantSnapshotExData* mutable_warrantexdata();
   void set_allocated_warrantexdata(::Qot_GetSecuritySnapshot::WarrantSnapshotExData* warrantexdata);
 
-  // optional .Qot_GetSecuritySnapshot.OptionSnapshotExData optionExData = 4;
-  bool has_optionexdata() const;
-  void clear_optionexdata();
-  static const int kOptionExDataFieldNumber = 4;
-  const ::Qot_GetSecuritySnapshot::OptionSnapshotExData& optionexdata() const;
-  ::Qot_GetSecuritySnapshot::OptionSnapshotExData* release_optionexdata();
-  ::Qot_GetSecuritySnapshot::OptionSnapshotExData* mutable_optionexdata();
-  void set_allocated_optionexdata(::Qot_GetSecuritySnapshot::OptionSnapshotExData* optionexdata);
-
-  // optional .Qot_GetSecuritySnapshot.IndexSnapshotExData indexExData = 5;
-  bool has_indexexdata() const;
-  void clear_indexexdata();
-  static const int kIndexExDataFieldNumber = 5;
-  const ::Qot_GetSecuritySnapshot::IndexSnapshotExData& indexexdata() const;
-  ::Qot_GetSecuritySnapshot::IndexSnapshotExData* release_indexexdata();
-  ::Qot_GetSecuritySnapshot::IndexSnapshotExData* mutable_indexexdata();
-  void set_allocated_indexexdata(::Qot_GetSecuritySnapshot::IndexSnapshotExData* indexexdata);
-
-  // optional .Qot_GetSecuritySnapshot.PlateSnapshotExData plateExData = 6;
-  bool has_plateexdata() const;
-  void clear_plateexdata();
-  static const int kPlateExDataFieldNumber = 6;
-  const ::Qot_GetSecuritySnapshot::PlateSnapshotExData& plateexdata() const;
-  ::Qot_GetSecuritySnapshot::PlateSnapshotExData* release_plateexdata();
-  ::Qot_GetSecuritySnapshot::PlateSnapshotExData* mutable_plateexdata();
-  void set_allocated_plateexdata(::Qot_GetSecuritySnapshot::PlateSnapshotExData* plateexdata);
-
-  // optional .Qot_GetSecuritySnapshot.FutureSnapshotExData futureExData = 7;
-  bool has_futureexdata() const;
-  void clear_futureexdata();
-  static const int kFutureExDataFieldNumber = 7;
-  const ::Qot_GetSecuritySnapshot::FutureSnapshotExData& futureexdata() const;
-  ::Qot_GetSecuritySnapshot::FutureSnapshotExData* release_futureexdata();
-  ::Qot_GetSecuritySnapshot::FutureSnapshotExData* mutable_futureexdata();
-  void set_allocated_futureexdata(::Qot_GetSecuritySnapshot::FutureSnapshotExData* futureexdata);
-
-  // optional .Qot_GetSecuritySnapshot.TrustSnapshotExData trustExData = 8;
-  bool has_trustexdata() const;
-  void clear_trustexdata();
-  static const int kTrustExDataFieldNumber = 8;
-  const ::Qot_GetSecuritySnapshot::TrustSnapshotExData& trustexdata() const;
-  ::Qot_GetSecuritySnapshot::TrustSnapshotExData* release_trustexdata();
-  ::Qot_GetSecuritySnapshot::TrustSnapshotExData* mutable_trustexdata();
-  void set_allocated_trustexdata(::Qot_GetSecuritySnapshot::TrustSnapshotExData* trustexdata);
-
   // @@protoc_insertion_point(class_scope:Qot_GetSecuritySnapshot.Snapshot)
  private:
   void set_has_basic();
@@ -2543,16 +1073,6 @@ class Snapshot : public ::google::protobuf::Message /* @@protoc_insertion_point(
   void clear_has_equityexdata();
   void set_has_warrantexdata();
   void clear_has_warrantexdata();
-  void set_has_optionexdata();
-  void clear_has_optionexdata();
-  void set_has_indexexdata();
-  void clear_has_indexexdata();
-  void set_has_plateexdata();
-  void clear_has_plateexdata();
-  void set_has_futureexdata();
-  void clear_has_futureexdata();
-  void set_has_trustexdata();
-  void clear_has_trustexdata();
 
   ::google::protobuf::internal::InternalMetadataWithArena _internal_metadata_;
   ::google::protobuf::internal::HasBits<1> _has_bits_;
@@ -2560,11 +1080,6 @@ class Snapshot : public ::google::protobuf::Message /* @@protoc_insertion_point(
   ::Qot_GetSecuritySnapshot::SnapshotBasicData* basic_;
   ::Qot_GetSecuritySnapshot::EquitySnapshotExData* equityexdata_;
   ::Qot_GetSecuritySnapshot::WarrantSnapshotExData* warrantexdata_;
-  ::Qot_GetSecuritySnapshot::OptionSnapshotExData* optionexdata_;
-  ::Qot_GetSecuritySnapshot::IndexSnapshotExData* indexexdata_;
-  ::Qot_GetSecuritySnapshot::PlateSnapshotExData* plateexdata_;
-  ::Qot_GetSecuritySnapshot::FutureSnapshotExData* futureexdata_;
-  ::Qot_GetSecuritySnapshot::TrustSnapshotExData* trustexdata_;
   friend struct ::protobuf_Qot_5fGetSecuritySnapshot_2eproto::TableStruct;
   friend void ::protobuf_Qot_5fGetSecuritySnapshot_2eproto::InitDefaultsSnapshotImpl();
 };
@@ -2612,7 +1127,7 @@ class S2C : public ::google::protobuf::Message /* @@protoc_insertion_point(class
                &_S2C_default_instance_);
   }
   static PROTOBUF_CONSTEXPR int const kIndexInFileMessages =
-    10;
+    5;
 
   void Swap(S2C* other);
   friend void swap(S2C& a, S2C& b) {
@@ -2725,7 +1240,7 @@ class Request : public ::google::protobuf::Message /* @@protoc_insertion_point(c
                &_Request_default_instance_);
   }
   static PROTOBUF_CONSTEXPR int const kIndexInFileMessages =
-    11;
+    6;
 
   void Swap(Request* other);
   friend void swap(Request& a, Request& b) {
@@ -2837,7 +1352,7 @@ class Response : public ::google::protobuf::Message /* @@protoc_insertion_point(
                &_Response_default_instance_);
   }
   static PROTOBUF_CONSTEXPR int const kIndexInFileMessages =
-    12;
+    7;
 
   void Swap(Response* other);
   friend void swap(Response& a, Response& b) {
@@ -3249,139 +1764,19 @@ inline void EquitySnapshotExData::set_pbrate(double value) {
   // @@protoc_insertion_point(field_set:Qot_GetSecuritySnapshot.EquitySnapshotExData.pbRate)
 }
 
-// required double peTTMRate = 12;
-inline bool EquitySnapshotExData::has_pettmrate() const {
-  return (_has_bits_[0] & 0x00000800u) != 0;
-}
-inline void EquitySnapshotExData::set_has_pettmrate() {
-  _has_bits_[0] |= 0x00000800u;
-}
-inline void EquitySnapshotExData::clear_has_pettmrate() {
-  _has_bits_[0] &= ~0x00000800u;
-}
-inline void EquitySnapshotExData::clear_pettmrate() {
-  pettmrate_ = 0;
-  clear_has_pettmrate();
-}
-inline double EquitySnapshotExData::pettmrate() const {
-  // @@protoc_insertion_point(field_get:Qot_GetSecuritySnapshot.EquitySnapshotExData.peTTMRate)
-  return pettmrate_;
-}
-inline void EquitySnapshotExData::set_pettmrate(double value) {
-  set_has_pettmrate();
-  pettmrate_ = value;
-  // @@protoc_insertion_point(field_set:Qot_GetSecuritySnapshot.EquitySnapshotExData.peTTMRate)
-}
-
-// optional double dividendTTM = 13;
-inline bool EquitySnapshotExData::has_dividendttm() const {
-  return (_has_bits_[0] & 0x00001000u) != 0;
-}
-inline void EquitySnapshotExData::set_has_dividendttm() {
-  _has_bits_[0] |= 0x00001000u;
-}
-inline void EquitySnapshotExData::clear_has_dividendttm() {
-  _has_bits_[0] &= ~0x00001000u;
-}
-inline void EquitySnapshotExData::clear_dividendttm() {
-  dividendttm_ = 0;
-  clear_has_dividendttm();
-}
-inline double EquitySnapshotExData::dividendttm() const {
-  // @@protoc_insertion_point(field_get:Qot_GetSecuritySnapshot.EquitySnapshotExData.dividendTTM)
-  return dividendttm_;
-}
-inline void EquitySnapshotExData::set_dividendttm(double value) {
-  set_has_dividendttm();
-  dividendttm_ = value;
-  // @@protoc_insertion_point(field_set:Qot_GetSecuritySnapshot.EquitySnapshotExData.dividendTTM)
-}
-
-// optional double dividendRatioTTM = 14;
-inline bool EquitySnapshotExData::has_dividendratiottm() const {
-  return (_has_bits_[0] & 0x00002000u) != 0;
-}
-inline void EquitySnapshotExData::set_has_dividendratiottm() {
-  _has_bits_[0] |= 0x00002000u;
-}
-inline void EquitySnapshotExData::clear_has_dividendratiottm() {
-  _has_bits_[0] &= ~0x00002000u;
-}
-inline void EquitySnapshotExData::clear_dividendratiottm() {
-  dividendratiottm_ = 0;
-  clear_has_dividendratiottm();
-}
-inline double EquitySnapshotExData::dividendratiottm() const {
-  // @@protoc_insertion_point(field_get:Qot_GetSecuritySnapshot.EquitySnapshotExData.dividendRatioTTM)
-  return dividendratiottm_;
-}
-inline void EquitySnapshotExData::set_dividendratiottm(double value) {
-  set_has_dividendratiottm();
-  dividendratiottm_ = value;
-  // @@protoc_insertion_point(field_set:Qot_GetSecuritySnapshot.EquitySnapshotExData.dividendRatioTTM)
-}
-
-// optional double dividendLFY = 15;
-inline bool EquitySnapshotExData::has_dividendlfy() const {
-  return (_has_bits_[0] & 0x00004000u) != 0;
-}
-inline void EquitySnapshotExData::set_has_dividendlfy() {
-  _has_bits_[0] |= 0x00004000u;
-}
-inline void EquitySnapshotExData::clear_has_dividendlfy() {
-  _has_bits_[0] &= ~0x00004000u;
-}
-inline void EquitySnapshotExData::clear_dividendlfy() {
-  dividendlfy_ = 0;
-  clear_has_dividendlfy();
-}
-inline double EquitySnapshotExData::dividendlfy() const {
-  // @@protoc_insertion_point(field_get:Qot_GetSecuritySnapshot.EquitySnapshotExData.dividendLFY)
-  return dividendlfy_;
-}
-inline void EquitySnapshotExData::set_dividendlfy(double value) {
-  set_has_dividendlfy();
-  dividendlfy_ = value;
-  // @@protoc_insertion_point(field_set:Qot_GetSecuritySnapshot.EquitySnapshotExData.dividendLFY)
-}
-
-// optional double dividendLFYRatio = 16;
-inline bool EquitySnapshotExData::has_dividendlfyratio() const {
-  return (_has_bits_[0] & 0x00008000u) != 0;
-}
-inline void EquitySnapshotExData::set_has_dividendlfyratio() {
-  _has_bits_[0] |= 0x00008000u;
-}
-inline void EquitySnapshotExData::clear_has_dividendlfyratio() {
-  _has_bits_[0] &= ~0x00008000u;
-}
-inline void EquitySnapshotExData::clear_dividendlfyratio() {
-  dividendlfyratio_ = 0;
-  clear_has_dividendlfyratio();
-}
-inline double EquitySnapshotExData::dividendlfyratio() const {
-  // @@protoc_insertion_point(field_get:Qot_GetSecuritySnapshot.EquitySnapshotExData.dividendLFYRatio)
-  return dividendlfyratio_;
-}
-inline void EquitySnapshotExData::set_dividendlfyratio(double value) {
-  set_has_dividendlfyratio();
-  dividendlfyratio_ = value;
-  // @@protoc_insertion_point(field_set:Qot_GetSecuritySnapshot.EquitySnapshotExData.dividendLFYRatio)
-}
-
 // -------------------------------------------------------------------
 
 // WarrantSnapshotExData
 
 // required double conversionRate = 1;
 inline bool WarrantSnapshotExData::has_conversionrate() const {
-  return (_has_bits_[0] & 0x00000010u) != 0;
+  return (_has_bits_[0] & 0x00000008u) != 0;
 }
 inline void WarrantSnapshotExData::set_has_conversionrate() {
-  _has_bits_[0] |= 0x00000010u;
+  _has_bits_[0] |= 0x00000008u;
 }
 inline void WarrantSnapshotExData::clear_has_conversionrate() {
-  _has_bits_[0] &= ~0x00000010u;
+  _has_bits_[0] &= ~0x00000008u;
 }
 inline void WarrantSnapshotExData::clear_conversionrate() {
   conversionrate_ = 0;
@@ -3399,13 +1794,13 @@ inline void WarrantSnapshotExData::set_conversionrate(double value) {
 
 // required int32 warrantType = 2;
 inline bool WarrantSnapshotExData::has_warranttype() const {
-  return (_has_bits_[0] & 0x00002000u) != 0;
+  return (_has_bits_[0] & 0x00001000u) != 0;
 }
 inline void WarrantSnapshotExData::set_has_warranttype() {
-  _has_bits_[0] |= 0x00002000u;
+  _has_bits_[0] |= 0x00001000u;
 }
 inline void WarrantSnapshotExData::clear_has_warranttype() {
-  _has_bits_[0] &= ~0x00002000u;
+  _has_bits_[0] &= ~0x00001000u;
 }
 inline void WarrantSnapshotExData::clear_warranttype() {
   warranttype_ = 0;
@@ -3423,13 +1818,13 @@ inline void WarrantSnapshotExData::set_warranttype(::google::protobuf::int32 val
 
 // required double strikePrice = 3;
 inline bool WarrantSnapshotExData::has_strikeprice() const {
-  return (_has_bits_[0] & 0x00000020u) != 0;
+  return (_has_bits_[0] & 0x00000010u) != 0;
 }
 inline void WarrantSnapshotExData::set_has_strikeprice() {
-  _has_bits_[0] |= 0x00000020u;
+  _has_bits_[0] |= 0x00000010u;
 }
 inline void WarrantSnapshotExData::clear_has_strikeprice() {
-  _has_bits_[0] &= ~0x00000020u;
+  _has_bits_[0] &= ~0x00000010u;
 }
 inline void WarrantSnapshotExData::clear_strikeprice() {
   strikeprice_ = 0;
@@ -3573,13 +1968,13 @@ inline void WarrantSnapshotExData::set_allocated_endtradetime(::std::string* end
 
 // required .Qot_Common.Security owner = 6;
 inline bool WarrantSnapshotExData::has_owner() const {
-  return (_has_bits_[0] & 0x00000008u) != 0;
+  return (_has_bits_[0] & 0x00000004u) != 0;
 }
 inline void WarrantSnapshotExData::set_has_owner() {
-  _has_bits_[0] |= 0x00000008u;
+  _has_bits_[0] |= 0x00000004u;
 }
 inline void WarrantSnapshotExData::clear_has_owner() {
-  _has_bits_[0] &= ~0x00000008u;
+  _has_bits_[0] &= ~0x00000004u;
 }
 inline const ::Qot_Common::Security& WarrantSnapshotExData::owner() const {
   const ::Qot_Common::Security* p = owner_;
@@ -3623,13 +2018,13 @@ inline void WarrantSnapshotExData::set_allocated_owner(::Qot_Common::Security* o
 
 // required double recoveryPrice = 7;
 inline bool WarrantSnapshotExData::has_recoveryprice() const {
-  return (_has_bits_[0] & 0x00000040u) != 0;
+  return (_has_bits_[0] & 0x00000020u) != 0;
 }
 inline void WarrantSnapshotExData::set_has_recoveryprice() {
-  _has_bits_[0] |= 0x00000040u;
+  _has_bits_[0] |= 0x00000020u;
 }
 inline void WarrantSnapshotExData::clear_has_recoveryprice() {
-  _has_bits_[0] &= ~0x00000040u;
+  _has_bits_[0] &= ~0x00000020u;
 }
 inline void WarrantSnapshotExData::clear_recoveryprice() {
   recoveryprice_ = 0;
@@ -3647,13 +2042,13 @@ inline void WarrantSnapshotExData::set_recoveryprice(double value) {
 
 // required int64 streetVolumn = 8;
 inline bool WarrantSnapshotExData::has_streetvolumn() const {
-  return (_has_bits_[0] & 0x00000080u) != 0;
+  return (_has_bits_[0] & 0x00000040u) != 0;
 }
 inline void WarrantSnapshotExData::set_has_streetvolumn() {
-  _has_bits_[0] |= 0x00000080u;
+  _has_bits_[0] |= 0x00000040u;
 }
 inline void WarrantSnapshotExData::clear_has_streetvolumn() {
-  _has_bits_[0] &= ~0x00000080u;
+  _has_bits_[0] &= ~0x00000040u;
 }
 inline void WarrantSnapshotExData::clear_streetvolumn() {
   streetvolumn_ = GOOGLE_LONGLONG(0);
@@ -3671,13 +2066,13 @@ inline void WarrantSnapshotExData::set_streetvolumn(::google::protobuf::int64 va
 
 // required int64 issueVolumn = 9;
 inline bool WarrantSnapshotExData::has_issuevolumn() const {
-  return (_has_bits_[0] & 0x00000100u) != 0;
+  return (_has_bits_[0] & 0x00000080u) != 0;
 }
 inline void WarrantSnapshotExData::set_has_issuevolumn() {
-  _has_bits_[0] |= 0x00000100u;
+  _has_bits_[0] |= 0x00000080u;
 }
 inline void WarrantSnapshotExData::clear_has_issuevolumn() {
-  _has_bits_[0] &= ~0x00000100u;
+  _has_bits_[0] &= ~0x00000080u;
 }
 inline void WarrantSnapshotExData::clear_issuevolumn() {
   issuevolumn_ = GOOGLE_LONGLONG(0);
@@ -3695,13 +2090,13 @@ inline void WarrantSnapshotExData::set_issuevolumn(::google::protobuf::int64 val
 
 // required double streetRate = 10;
 inline bool WarrantSnapshotExData::has_streetrate() const {
-  return (_has_bits_[0] & 0x00000200u) != 0;
+  return (_has_bits_[0] & 0x00000100u) != 0;
 }
 inline void WarrantSnapshotExData::set_has_streetrate() {
-  _has_bits_[0] |= 0x00000200u;
+  _has_bits_[0] |= 0x00000100u;
 }
 inline void WarrantSnapshotExData::clear_has_streetrate() {
-  _has_bits_[0] &= ~0x00000200u;
+  _has_bits_[0] &= ~0x00000100u;
 }
 inline void WarrantSnapshotExData::clear_streetrate() {
   streetrate_ = 0;
@@ -3719,13 +2114,13 @@ inline void WarrantSnapshotExData::set_streetrate(double value) {
 
 // required double delta = 11;
 inline bool WarrantSnapshotExData::has_delta() const {
-  return (_has_bits_[0] & 0x00000400u) != 0;
+  return (_has_bits_[0] & 0x00000200u) != 0;
 }
 inline void WarrantSnapshotExData::set_has_delta() {
-  _has_bits_[0] |= 0x00000400u;
+  _has_bits_[0] |= 0x00000200u;
 }
 inline void WarrantSnapshotExData::clear_has_delta() {
-  _has_bits_[0] &= ~0x00000400u;
+  _has_bits_[0] &= ~0x00000200u;
 }
 inline void WarrantSnapshotExData::clear_delta() {
   delta_ = 0;
@@ -3743,13 +2138,13 @@ inline void WarrantSnapshotExData::set_delta(double value) {
 
 // required double impliedVolatility = 12;
 inline bool WarrantSnapshotExData::has_impliedvolatility() const {
-  return (_has_bits_[0] & 0x00000800u) != 0;
+  return (_has_bits_[0] & 0x00000400u) != 0;
 }
 inline void WarrantSnapshotExData::set_has_impliedvolatility() {
-  _has_bits_[0] |= 0x00000800u;
+  _has_bits_[0] |= 0x00000400u;
 }
 inline void WarrantSnapshotExData::clear_has_impliedvolatility() {
-  _has_bits_[0] &= ~0x00000800u;
+  _has_bits_[0] &= ~0x00000400u;
 }
 inline void WarrantSnapshotExData::clear_impliedvolatility() {
   impliedvolatility_ = 0;
@@ -3767,13 +2162,13 @@ inline void WarrantSnapshotExData::set_impliedvolatility(double value) {
 
 // required double premium = 13;
 inline bool WarrantSnapshotExData::has_premium() const {
-  return (_has_bits_[0] & 0x00001000u) != 0;
+  return (_has_bits_[0] & 0x00000800u) != 0;
 }
 inline void WarrantSnapshotExData::set_has_premium() {
-  _has_bits_[0] |= 0x00001000u;
+  _has_bits_[0] |= 0x00000800u;
 }
 inline void WarrantSnapshotExData::clear_has_premium() {
-  _has_bits_[0] &= ~0x00001000u;
+  _has_bits_[0] &= ~0x00000800u;
 }
 inline void WarrantSnapshotExData::clear_premium() {
   premium_ = 0;
@@ -3789,1430 +2184,19 @@ inline void WarrantSnapshotExData::set_premium(double value) {
   // @@protoc_insertion_point(field_set:Qot_GetSecuritySnapshot.WarrantSnapshotExData.premium)
 }
 
-// optional double maturityTimestamp = 14;
-inline bool WarrantSnapshotExData::has_maturitytimestamp() const {
-  return (_has_bits_[0] & 0x00008000u) != 0;
-}
-inline void WarrantSnapshotExData::set_has_maturitytimestamp() {
-  _has_bits_[0] |= 0x00008000u;
-}
-inline void WarrantSnapshotExData::clear_has_maturitytimestamp() {
-  _has_bits_[0] &= ~0x00008000u;
-}
-inline void WarrantSnapshotExData::clear_maturitytimestamp() {
-  maturitytimestamp_ = 0;
-  clear_has_maturitytimestamp();
-}
-inline double WarrantSnapshotExData::maturitytimestamp() const {
-  // @@protoc_insertion_point(field_get:Qot_GetSecuritySnapshot.WarrantSnapshotExData.maturityTimestamp)
-  return maturitytimestamp_;
-}
-inline void WarrantSnapshotExData::set_maturitytimestamp(double value) {
-  set_has_maturitytimestamp();
-  maturitytimestamp_ = value;
-  // @@protoc_insertion_point(field_set:Qot_GetSecuritySnapshot.WarrantSnapshotExData.maturityTimestamp)
-}
-
-// optional double endTradeTimestamp = 15;
-inline bool WarrantSnapshotExData::has_endtradetimestamp() const {
-  return (_has_bits_[0] & 0x00010000u) != 0;
-}
-inline void WarrantSnapshotExData::set_has_endtradetimestamp() {
-  _has_bits_[0] |= 0x00010000u;
-}
-inline void WarrantSnapshotExData::clear_has_endtradetimestamp() {
-  _has_bits_[0] &= ~0x00010000u;
-}
-inline void WarrantSnapshotExData::clear_endtradetimestamp() {
-  endtradetimestamp_ = 0;
-  clear_has_endtradetimestamp();
-}
-inline double WarrantSnapshotExData::endtradetimestamp() const {
-  // @@protoc_insertion_point(field_get:Qot_GetSecuritySnapshot.WarrantSnapshotExData.endTradeTimestamp)
-  return endtradetimestamp_;
-}
-inline void WarrantSnapshotExData::set_endtradetimestamp(double value) {
-  set_has_endtradetimestamp();
-  endtradetimestamp_ = value;
-  // @@protoc_insertion_point(field_set:Qot_GetSecuritySnapshot.WarrantSnapshotExData.endTradeTimestamp)
-}
-
-// optional double leverage = 16;
-inline bool WarrantSnapshotExData::has_leverage() const {
-  return (_has_bits_[0] & 0x00020000u) != 0;
-}
-inline void WarrantSnapshotExData::set_has_leverage() {
-  _has_bits_[0] |= 0x00020000u;
-}
-inline void WarrantSnapshotExData::clear_has_leverage() {
-  _has_bits_[0] &= ~0x00020000u;
-}
-inline void WarrantSnapshotExData::clear_leverage() {
-  leverage_ = 0;
-  clear_has_leverage();
-}
-inline double WarrantSnapshotExData::leverage() const {
-  // @@protoc_insertion_point(field_get:Qot_GetSecuritySnapshot.WarrantSnapshotExData.leverage)
-  return leverage_;
-}
-inline void WarrantSnapshotExData::set_leverage(double value) {
-  set_has_leverage();
-  leverage_ = value;
-  // @@protoc_insertion_point(field_set:Qot_GetSecuritySnapshot.WarrantSnapshotExData.leverage)
-}
-
-// optional double ipop = 17;
-inline bool WarrantSnapshotExData::has_ipop() const {
-  return (_has_bits_[0] & 0x00040000u) != 0;
-}
-inline void WarrantSnapshotExData::set_has_ipop() {
-  _has_bits_[0] |= 0x00040000u;
-}
-inline void WarrantSnapshotExData::clear_has_ipop() {
-  _has_bits_[0] &= ~0x00040000u;
-}
-inline void WarrantSnapshotExData::clear_ipop() {
-  ipop_ = 0;
-  clear_has_ipop();
-}
-inline double WarrantSnapshotExData::ipop() const {
-  // @@protoc_insertion_point(field_get:Qot_GetSecuritySnapshot.WarrantSnapshotExData.ipop)
-  return ipop_;
-}
-inline void WarrantSnapshotExData::set_ipop(double value) {
-  set_has_ipop();
-  ipop_ = value;
-  // @@protoc_insertion_point(field_set:Qot_GetSecuritySnapshot.WarrantSnapshotExData.ipop)
-}
-
-// optional double breakEvenPoint = 18;
-inline bool WarrantSnapshotExData::has_breakevenpoint() const {
-  return (_has_bits_[0] & 0x00080000u) != 0;
-}
-inline void WarrantSnapshotExData::set_has_breakevenpoint() {
-  _has_bits_[0] |= 0x00080000u;
-}
-inline void WarrantSnapshotExData::clear_has_breakevenpoint() {
-  _has_bits_[0] &= ~0x00080000u;
-}
-inline void WarrantSnapshotExData::clear_breakevenpoint() {
-  breakevenpoint_ = 0;
-  clear_has_breakevenpoint();
-}
-inline double WarrantSnapshotExData::breakevenpoint() const {
-  // @@protoc_insertion_point(field_get:Qot_GetSecuritySnapshot.WarrantSnapshotExData.breakEvenPoint)
-  return breakevenpoint_;
-}
-inline void WarrantSnapshotExData::set_breakevenpoint(double value) {
-  set_has_breakevenpoint();
-  breakevenpoint_ = value;
-  // @@protoc_insertion_point(field_set:Qot_GetSecuritySnapshot.WarrantSnapshotExData.breakEvenPoint)
-}
-
-// optional double conversionPrice = 19;
-inline bool WarrantSnapshotExData::has_conversionprice() const {
-  return (_has_bits_[0] & 0x00100000u) != 0;
-}
-inline void WarrantSnapshotExData::set_has_conversionprice() {
-  _has_bits_[0] |= 0x00100000u;
-}
-inline void WarrantSnapshotExData::clear_has_conversionprice() {
-  _has_bits_[0] &= ~0x00100000u;
-}
-inline void WarrantSnapshotExData::clear_conversionprice() {
-  conversionprice_ = 0;
-  clear_has_conversionprice();
-}
-inline double WarrantSnapshotExData::conversionprice() const {
-  // @@protoc_insertion_point(field_get:Qot_GetSecuritySnapshot.WarrantSnapshotExData.conversionPrice)
-  return conversionprice_;
-}
-inline void WarrantSnapshotExData::set_conversionprice(double value) {
-  set_has_conversionprice();
-  conversionprice_ = value;
-  // @@protoc_insertion_point(field_set:Qot_GetSecuritySnapshot.WarrantSnapshotExData.conversionPrice)
-}
-
-// optional double priceRecoveryRatio = 20;
-inline bool WarrantSnapshotExData::has_pricerecoveryratio() const {
-  return (_has_bits_[0] & 0x00200000u) != 0;
-}
-inline void WarrantSnapshotExData::set_has_pricerecoveryratio() {
-  _has_bits_[0] |= 0x00200000u;
-}
-inline void WarrantSnapshotExData::clear_has_pricerecoveryratio() {
-  _has_bits_[0] &= ~0x00200000u;
-}
-inline void WarrantSnapshotExData::clear_pricerecoveryratio() {
-  pricerecoveryratio_ = 0;
-  clear_has_pricerecoveryratio();
-}
-inline double WarrantSnapshotExData::pricerecoveryratio() const {
-  // @@protoc_insertion_point(field_get:Qot_GetSecuritySnapshot.WarrantSnapshotExData.priceRecoveryRatio)
-  return pricerecoveryratio_;
-}
-inline void WarrantSnapshotExData::set_pricerecoveryratio(double value) {
-  set_has_pricerecoveryratio();
-  pricerecoveryratio_ = value;
-  // @@protoc_insertion_point(field_set:Qot_GetSecuritySnapshot.WarrantSnapshotExData.priceRecoveryRatio)
-}
-
-// optional double score = 21;
-inline bool WarrantSnapshotExData::has_score() const {
-  return (_has_bits_[0] & 0x00400000u) != 0;
-}
-inline void WarrantSnapshotExData::set_has_score() {
-  _has_bits_[0] |= 0x00400000u;
-}
-inline void WarrantSnapshotExData::clear_has_score() {
-  _has_bits_[0] &= ~0x00400000u;
-}
-inline void WarrantSnapshotExData::clear_score() {
-  score_ = 0;
-  clear_has_score();
-}
-inline double WarrantSnapshotExData::score() const {
-  // @@protoc_insertion_point(field_get:Qot_GetSecuritySnapshot.WarrantSnapshotExData.score)
-  return score_;
-}
-inline void WarrantSnapshotExData::set_score(double value) {
-  set_has_score();
-  score_ = value;
-  // @@protoc_insertion_point(field_set:Qot_GetSecuritySnapshot.WarrantSnapshotExData.score)
-}
-
-// optional double upperStrikePrice = 22;
-inline bool WarrantSnapshotExData::has_upperstrikeprice() const {
-  return (_has_bits_[0] & 0x00800000u) != 0;
-}
-inline void WarrantSnapshotExData::set_has_upperstrikeprice() {
-  _has_bits_[0] |= 0x00800000u;
-}
-inline void WarrantSnapshotExData::clear_has_upperstrikeprice() {
-  _has_bits_[0] &= ~0x00800000u;
-}
-inline void WarrantSnapshotExData::clear_upperstrikeprice() {
-  upperstrikeprice_ = 0;
-  clear_has_upperstrikeprice();
-}
-inline double WarrantSnapshotExData::upperstrikeprice() const {
-  // @@protoc_insertion_point(field_get:Qot_GetSecuritySnapshot.WarrantSnapshotExData.upperStrikePrice)
-  return upperstrikeprice_;
-}
-inline void WarrantSnapshotExData::set_upperstrikeprice(double value) {
-  set_has_upperstrikeprice();
-  upperstrikeprice_ = value;
-  // @@protoc_insertion_point(field_set:Qot_GetSecuritySnapshot.WarrantSnapshotExData.upperStrikePrice)
-}
-
-// optional double lowerStrikePrice = 23;
-inline bool WarrantSnapshotExData::has_lowerstrikeprice() const {
-  return (_has_bits_[0] & 0x01000000u) != 0;
-}
-inline void WarrantSnapshotExData::set_has_lowerstrikeprice() {
-  _has_bits_[0] |= 0x01000000u;
-}
-inline void WarrantSnapshotExData::clear_has_lowerstrikeprice() {
-  _has_bits_[0] &= ~0x01000000u;
-}
-inline void WarrantSnapshotExData::clear_lowerstrikeprice() {
-  lowerstrikeprice_ = 0;
-  clear_has_lowerstrikeprice();
-}
-inline double WarrantSnapshotExData::lowerstrikeprice() const {
-  // @@protoc_insertion_point(field_get:Qot_GetSecuritySnapshot.WarrantSnapshotExData.lowerStrikePrice)
-  return lowerstrikeprice_;
-}
-inline void WarrantSnapshotExData::set_lowerstrikeprice(double value) {
-  set_has_lowerstrikeprice();
-  lowerstrikeprice_ = value;
-  // @@protoc_insertion_point(field_set:Qot_GetSecuritySnapshot.WarrantSnapshotExData.lowerStrikePrice)
-}
-
-// optional int32 inLinePriceStatus = 24;
-inline bool WarrantSnapshotExData::has_inlinepricestatus() const {
-  return (_has_bits_[0] & 0x00004000u) != 0;
-}
-inline void WarrantSnapshotExData::set_has_inlinepricestatus() {
-  _has_bits_[0] |= 0x00004000u;
-}
-inline void WarrantSnapshotExData::clear_has_inlinepricestatus() {
-  _has_bits_[0] &= ~0x00004000u;
-}
-inline void WarrantSnapshotExData::clear_inlinepricestatus() {
-  inlinepricestatus_ = 0;
-  clear_has_inlinepricestatus();
-}
-inline ::google::protobuf::int32 WarrantSnapshotExData::inlinepricestatus() const {
-  // @@protoc_insertion_point(field_get:Qot_GetSecuritySnapshot.WarrantSnapshotExData.inLinePriceStatus)
-  return inlinepricestatus_;
-}
-inline void WarrantSnapshotExData::set_inlinepricestatus(::google::protobuf::int32 value) {
-  set_has_inlinepricestatus();
-  inlinepricestatus_ = value;
-  // @@protoc_insertion_point(field_set:Qot_GetSecuritySnapshot.WarrantSnapshotExData.inLinePriceStatus)
-}
-
-// optional string issuerCode = 25;
-inline bool WarrantSnapshotExData::has_issuercode() const {
-  return (_has_bits_[0] & 0x00000004u) != 0;
-}
-inline void WarrantSnapshotExData::set_has_issuercode() {
-  _has_bits_[0] |= 0x00000004u;
-}
-inline void WarrantSnapshotExData::clear_has_issuercode() {
-  _has_bits_[0] &= ~0x00000004u;
-}
-inline void WarrantSnapshotExData::clear_issuercode() {
-  issuercode_.ClearToEmptyNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
-  clear_has_issuercode();
-}
-inline const ::std::string& WarrantSnapshotExData::issuercode() const {
-  // @@protoc_insertion_point(field_get:Qot_GetSecuritySnapshot.WarrantSnapshotExData.issuerCode)
-  return issuercode_.GetNoArena();
-}
-inline void WarrantSnapshotExData::set_issuercode(const ::std::string& value) {
-  set_has_issuercode();
-  issuercode_.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), value);
-  // @@protoc_insertion_point(field_set:Qot_GetSecuritySnapshot.WarrantSnapshotExData.issuerCode)
-}
-#if LANG_CXX11
-inline void WarrantSnapshotExData::set_issuercode(::std::string&& value) {
-  set_has_issuercode();
-  issuercode_.SetNoArena(
-    &::google::protobuf::internal::GetEmptyStringAlreadyInited(), ::std::move(value));
-  // @@protoc_insertion_point(field_set_rvalue:Qot_GetSecuritySnapshot.WarrantSnapshotExData.issuerCode)
-}
-#endif
-inline void WarrantSnapshotExData::set_issuercode(const char* value) {
-  GOOGLE_DCHECK(value != NULL);
-  set_has_issuercode();
-  issuercode_.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), ::std::string(value));
-  // @@protoc_insertion_point(field_set_char:Qot_GetSecuritySnapshot.WarrantSnapshotExData.issuerCode)
-}
-inline void WarrantSnapshotExData::set_issuercode(const char* value, size_t size) {
-  set_has_issuercode();
-  issuercode_.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(),
-      ::std::string(reinterpret_cast<const char*>(value), size));
-  // @@protoc_insertion_point(field_set_pointer:Qot_GetSecuritySnapshot.WarrantSnapshotExData.issuerCode)
-}
-inline ::std::string* WarrantSnapshotExData::mutable_issuercode() {
-  set_has_issuercode();
-  // @@protoc_insertion_point(field_mutable:Qot_GetSecuritySnapshot.WarrantSnapshotExData.issuerCode)
-  return issuercode_.MutableNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
-}
-inline ::std::string* WarrantSnapshotExData::release_issuercode() {
-  // @@protoc_insertion_point(field_release:Qot_GetSecuritySnapshot.WarrantSnapshotExData.issuerCode)
-  clear_has_issuercode();
-  return issuercode_.ReleaseNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
-}
-inline void WarrantSnapshotExData::set_allocated_issuercode(::std::string* issuercode) {
-  if (issuercode != NULL) {
-    set_has_issuercode();
-  } else {
-    clear_has_issuercode();
-  }
-  issuercode_.SetAllocatedNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), issuercode);
-  // @@protoc_insertion_point(field_set_allocated:Qot_GetSecuritySnapshot.WarrantSnapshotExData.issuerCode)
-}
-
-// -------------------------------------------------------------------
-
-// OptionSnapshotExData
-
-// required int32 type = 1;
-inline bool OptionSnapshotExData::has_type() const {
-  return (_has_bits_[0] & 0x00000004u) != 0;
-}
-inline void OptionSnapshotExData::set_has_type() {
-  _has_bits_[0] |= 0x00000004u;
-}
-inline void OptionSnapshotExData::clear_has_type() {
-  _has_bits_[0] &= ~0x00000004u;
-}
-inline void OptionSnapshotExData::clear_type() {
-  type_ = 0;
-  clear_has_type();
-}
-inline ::google::protobuf::int32 OptionSnapshotExData::type() const {
-  // @@protoc_insertion_point(field_get:Qot_GetSecuritySnapshot.OptionSnapshotExData.type)
-  return type_;
-}
-inline void OptionSnapshotExData::set_type(::google::protobuf::int32 value) {
-  set_has_type();
-  type_ = value;
-  // @@protoc_insertion_point(field_set:Qot_GetSecuritySnapshot.OptionSnapshotExData.type)
-}
-
-// required .Qot_Common.Security owner = 2;
-inline bool OptionSnapshotExData::has_owner() const {
-  return (_has_bits_[0] & 0x00000002u) != 0;
-}
-inline void OptionSnapshotExData::set_has_owner() {
-  _has_bits_[0] |= 0x00000002u;
-}
-inline void OptionSnapshotExData::clear_has_owner() {
-  _has_bits_[0] &= ~0x00000002u;
-}
-inline const ::Qot_Common::Security& OptionSnapshotExData::owner() const {
-  const ::Qot_Common::Security* p = owner_;
-  // @@protoc_insertion_point(field_get:Qot_GetSecuritySnapshot.OptionSnapshotExData.owner)
-  return p != NULL ? *p : *reinterpret_cast<const ::Qot_Common::Security*>(
-      &::Qot_Common::_Security_default_instance_);
-}
-inline ::Qot_Common::Security* OptionSnapshotExData::release_owner() {
-  // @@protoc_insertion_point(field_release:Qot_GetSecuritySnapshot.OptionSnapshotExData.owner)
-  clear_has_owner();
-  ::Qot_Common::Security* temp = owner_;
-  owner_ = NULL;
-  return temp;
-}
-inline ::Qot_Common::Security* OptionSnapshotExData::mutable_owner() {
-  set_has_owner();
-  if (owner_ == NULL) {
-    owner_ = new ::Qot_Common::Security;
-  }
-  // @@protoc_insertion_point(field_mutable:Qot_GetSecuritySnapshot.OptionSnapshotExData.owner)
-  return owner_;
-}
-inline void OptionSnapshotExData::set_allocated_owner(::Qot_Common::Security* owner) {
-  ::google::protobuf::Arena* message_arena = GetArenaNoVirtual();
-  if (message_arena == NULL) {
-    delete reinterpret_cast< ::google::protobuf::MessageLite*>(owner_);
-  }
-  if (owner) {
-    ::google::protobuf::Arena* submessage_arena = NULL;
-    if (message_arena != submessage_arena) {
-      owner = ::google::protobuf::internal::GetOwnedMessage(
-          message_arena, owner, submessage_arena);
-    }
-    set_has_owner();
-  } else {
-    clear_has_owner();
-  }
-  owner_ = owner;
-  // @@protoc_insertion_point(field_set_allocated:Qot_GetSecuritySnapshot.OptionSnapshotExData.owner)
-}
-
-// required string strikeTime = 3;
-inline bool OptionSnapshotExData::has_striketime() const {
-  return (_has_bits_[0] & 0x00000001u) != 0;
-}
-inline void OptionSnapshotExData::set_has_striketime() {
-  _has_bits_[0] |= 0x00000001u;
-}
-inline void OptionSnapshotExData::clear_has_striketime() {
-  _has_bits_[0] &= ~0x00000001u;
-}
-inline void OptionSnapshotExData::clear_striketime() {
-  striketime_.ClearToEmptyNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
-  clear_has_striketime();
-}
-inline const ::std::string& OptionSnapshotExData::striketime() const {
-  // @@protoc_insertion_point(field_get:Qot_GetSecuritySnapshot.OptionSnapshotExData.strikeTime)
-  return striketime_.GetNoArena();
-}
-inline void OptionSnapshotExData::set_striketime(const ::std::string& value) {
-  set_has_striketime();
-  striketime_.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), value);
-  // @@protoc_insertion_point(field_set:Qot_GetSecuritySnapshot.OptionSnapshotExData.strikeTime)
-}
-#if LANG_CXX11
-inline void OptionSnapshotExData::set_striketime(::std::string&& value) {
-  set_has_striketime();
-  striketime_.SetNoArena(
-    &::google::protobuf::internal::GetEmptyStringAlreadyInited(), ::std::move(value));
-  // @@protoc_insertion_point(field_set_rvalue:Qot_GetSecuritySnapshot.OptionSnapshotExData.strikeTime)
-}
-#endif
-inline void OptionSnapshotExData::set_striketime(const char* value) {
-  GOOGLE_DCHECK(value != NULL);
-  set_has_striketime();
-  striketime_.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), ::std::string(value));
-  // @@protoc_insertion_point(field_set_char:Qot_GetSecuritySnapshot.OptionSnapshotExData.strikeTime)
-}
-inline void OptionSnapshotExData::set_striketime(const char* value, size_t size) {
-  set_has_striketime();
-  striketime_.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(),
-      ::std::string(reinterpret_cast<const char*>(value), size));
-  // @@protoc_insertion_point(field_set_pointer:Qot_GetSecuritySnapshot.OptionSnapshotExData.strikeTime)
-}
-inline ::std::string* OptionSnapshotExData::mutable_striketime() {
-  set_has_striketime();
-  // @@protoc_insertion_point(field_mutable:Qot_GetSecuritySnapshot.OptionSnapshotExData.strikeTime)
-  return striketime_.MutableNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
-}
-inline ::std::string* OptionSnapshotExData::release_striketime() {
-  // @@protoc_insertion_point(field_release:Qot_GetSecuritySnapshot.OptionSnapshotExData.strikeTime)
-  clear_has_striketime();
-  return striketime_.ReleaseNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
-}
-inline void OptionSnapshotExData::set_allocated_striketime(::std::string* striketime) {
-  if (striketime != NULL) {
-    set_has_striketime();
-  } else {
-    clear_has_striketime();
-  }
-  striketime_.SetAllocatedNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), striketime);
-  // @@protoc_insertion_point(field_set_allocated:Qot_GetSecuritySnapshot.OptionSnapshotExData.strikeTime)
-}
-
-// required double strikePrice = 4;
-inline bool OptionSnapshotExData::has_strikeprice() const {
-  return (_has_bits_[0] & 0x00000010u) != 0;
-}
-inline void OptionSnapshotExData::set_has_strikeprice() {
-  _has_bits_[0] |= 0x00000010u;
-}
-inline void OptionSnapshotExData::clear_has_strikeprice() {
-  _has_bits_[0] &= ~0x00000010u;
-}
-inline void OptionSnapshotExData::clear_strikeprice() {
-  strikeprice_ = 0;
-  clear_has_strikeprice();
-}
-inline double OptionSnapshotExData::strikeprice() const {
-  // @@protoc_insertion_point(field_get:Qot_GetSecuritySnapshot.OptionSnapshotExData.strikePrice)
-  return strikeprice_;
-}
-inline void OptionSnapshotExData::set_strikeprice(double value) {
-  set_has_strikeprice();
-  strikeprice_ = value;
-  // @@protoc_insertion_point(field_set:Qot_GetSecuritySnapshot.OptionSnapshotExData.strikePrice)
-}
-
-// required int32 contractSize = 5;
-inline bool OptionSnapshotExData::has_contractsize() const {
-  return (_has_bits_[0] & 0x00000008u) != 0;
-}
-inline void OptionSnapshotExData::set_has_contractsize() {
-  _has_bits_[0] |= 0x00000008u;
-}
-inline void OptionSnapshotExData::clear_has_contractsize() {
-  _has_bits_[0] &= ~0x00000008u;
-}
-inline void OptionSnapshotExData::clear_contractsize() {
-  contractsize_ = 0;
-  clear_has_contractsize();
-}
-inline ::google::protobuf::int32 OptionSnapshotExData::contractsize() const {
-  // @@protoc_insertion_point(field_get:Qot_GetSecuritySnapshot.OptionSnapshotExData.contractSize)
-  return contractsize_;
-}
-inline void OptionSnapshotExData::set_contractsize(::google::protobuf::int32 value) {
-  set_has_contractsize();
-  contractsize_ = value;
-  // @@protoc_insertion_point(field_set:Qot_GetSecuritySnapshot.OptionSnapshotExData.contractSize)
-}
-
-// optional double contractSizeFloat = 22;
-inline bool OptionSnapshotExData::has_contractsizefloat() const {
-  return (_has_bits_[0] & 0x00100000u) != 0;
-}
-inline void OptionSnapshotExData::set_has_contractsizefloat() {
-  _has_bits_[0] |= 0x00100000u;
-}
-inline void OptionSnapshotExData::clear_has_contractsizefloat() {
-  _has_bits_[0] &= ~0x00100000u;
-}
-inline void OptionSnapshotExData::clear_contractsizefloat() {
-  contractsizefloat_ = 0;
-  clear_has_contractsizefloat();
-}
-inline double OptionSnapshotExData::contractsizefloat() const {
-  // @@protoc_insertion_point(field_get:Qot_GetSecuritySnapshot.OptionSnapshotExData.contractSizeFloat)
-  return contractsizefloat_;
-}
-inline void OptionSnapshotExData::set_contractsizefloat(double value) {
-  set_has_contractsizefloat();
-  contractsizefloat_ = value;
-  // @@protoc_insertion_point(field_set:Qot_GetSecuritySnapshot.OptionSnapshotExData.contractSizeFloat)
-}
-
-// required int32 openInterest = 6;
-inline bool OptionSnapshotExData::has_openinterest() const {
-  return (_has_bits_[0] & 0x00000200u) != 0;
-}
-inline void OptionSnapshotExData::set_has_openinterest() {
-  _has_bits_[0] |= 0x00000200u;
-}
-inline void OptionSnapshotExData::clear_has_openinterest() {
-  _has_bits_[0] &= ~0x00000200u;
-}
-inline void OptionSnapshotExData::clear_openinterest() {
-  openinterest_ = 0;
-  clear_has_openinterest();
-}
-inline ::google::protobuf::int32 OptionSnapshotExData::openinterest() const {
-  // @@protoc_insertion_point(field_get:Qot_GetSecuritySnapshot.OptionSnapshotExData.openInterest)
-  return openinterest_;
-}
-inline void OptionSnapshotExData::set_openinterest(::google::protobuf::int32 value) {
-  set_has_openinterest();
-  openinterest_ = value;
-  // @@protoc_insertion_point(field_set:Qot_GetSecuritySnapshot.OptionSnapshotExData.openInterest)
-}
-
-// required double impliedVolatility = 7;
-inline bool OptionSnapshotExData::has_impliedvolatility() const {
-  return (_has_bits_[0] & 0x00000020u) != 0;
-}
-inline void OptionSnapshotExData::set_has_impliedvolatility() {
-  _has_bits_[0] |= 0x00000020u;
-}
-inline void OptionSnapshotExData::clear_has_impliedvolatility() {
-  _has_bits_[0] &= ~0x00000020u;
-}
-inline void OptionSnapshotExData::clear_impliedvolatility() {
-  impliedvolatility_ = 0;
-  clear_has_impliedvolatility();
-}
-inline double OptionSnapshotExData::impliedvolatility() const {
-  // @@protoc_insertion_point(field_get:Qot_GetSecuritySnapshot.OptionSnapshotExData.impliedVolatility)
-  return impliedvolatility_;
-}
-inline void OptionSnapshotExData::set_impliedvolatility(double value) {
-  set_has_impliedvolatility();
-  impliedvolatility_ = value;
-  // @@protoc_insertion_point(field_set:Qot_GetSecuritySnapshot.OptionSnapshotExData.impliedVolatility)
-}
-
-// required double premium = 8;
-inline bool OptionSnapshotExData::has_premium() const {
-  return (_has_bits_[0] & 0x00000040u) != 0;
-}
-inline void OptionSnapshotExData::set_has_premium() {
-  _has_bits_[0] |= 0x00000040u;
-}
-inline void OptionSnapshotExData::clear_has_premium() {
-  _has_bits_[0] &= ~0x00000040u;
-}
-inline void OptionSnapshotExData::clear_premium() {
-  premium_ = 0;
-  clear_has_premium();
-}
-inline double OptionSnapshotExData::premium() const {
-  // @@protoc_insertion_point(field_get:Qot_GetSecuritySnapshot.OptionSnapshotExData.premium)
-  return premium_;
-}
-inline void OptionSnapshotExData::set_premium(double value) {
-  set_has_premium();
-  premium_ = value;
-  // @@protoc_insertion_point(field_set:Qot_GetSecuritySnapshot.OptionSnapshotExData.premium)
-}
-
-// required double delta = 9;
-inline bool OptionSnapshotExData::has_delta() const {
-  return (_has_bits_[0] & 0x00000080u) != 0;
-}
-inline void OptionSnapshotExData::set_has_delta() {
-  _has_bits_[0] |= 0x00000080u;
-}
-inline void OptionSnapshotExData::clear_has_delta() {
-  _has_bits_[0] &= ~0x00000080u;
-}
-inline void OptionSnapshotExData::clear_delta() {
-  delta_ = 0;
-  clear_has_delta();
-}
-inline double OptionSnapshotExData::delta() const {
-  // @@protoc_insertion_point(field_get:Qot_GetSecuritySnapshot.OptionSnapshotExData.delta)
-  return delta_;
-}
-inline void OptionSnapshotExData::set_delta(double value) {
-  set_has_delta();
-  delta_ = value;
-  // @@protoc_insertion_point(field_set:Qot_GetSecuritySnapshot.OptionSnapshotExData.delta)
-}
-
-// required double gamma = 10;
-inline bool OptionSnapshotExData::has_gamma() const {
-  return (_has_bits_[0] & 0x00000100u) != 0;
-}
-inline void OptionSnapshotExData::set_has_gamma() {
-  _has_bits_[0] |= 0x00000100u;
-}
-inline void OptionSnapshotExData::clear_has_gamma() {
-  _has_bits_[0] &= ~0x00000100u;
-}
-inline void OptionSnapshotExData::clear_gamma() {
-  gamma_ = 0;
-  clear_has_gamma();
-}
-inline double OptionSnapshotExData::gamma() const {
-  // @@protoc_insertion_point(field_get:Qot_GetSecuritySnapshot.OptionSnapshotExData.gamma)
-  return gamma_;
-}
-inline void OptionSnapshotExData::set_gamma(double value) {
-  set_has_gamma();
-  gamma_ = value;
-  // @@protoc_insertion_point(field_set:Qot_GetSecuritySnapshot.OptionSnapshotExData.gamma)
-}
-
-// required double vega = 11;
-inline bool OptionSnapshotExData::has_vega() const {
-  return (_has_bits_[0] & 0x00000800u) != 0;
-}
-inline void OptionSnapshotExData::set_has_vega() {
-  _has_bits_[0] |= 0x00000800u;
-}
-inline void OptionSnapshotExData::clear_has_vega() {
-  _has_bits_[0] &= ~0x00000800u;
-}
-inline void OptionSnapshotExData::clear_vega() {
-  vega_ = 0;
-  clear_has_vega();
-}
-inline double OptionSnapshotExData::vega() const {
-  // @@protoc_insertion_point(field_get:Qot_GetSecuritySnapshot.OptionSnapshotExData.vega)
-  return vega_;
-}
-inline void OptionSnapshotExData::set_vega(double value) {
-  set_has_vega();
-  vega_ = value;
-  // @@protoc_insertion_point(field_set:Qot_GetSecuritySnapshot.OptionSnapshotExData.vega)
-}
-
-// required double theta = 12;
-inline bool OptionSnapshotExData::has_theta() const {
-  return (_has_bits_[0] & 0x00001000u) != 0;
-}
-inline void OptionSnapshotExData::set_has_theta() {
-  _has_bits_[0] |= 0x00001000u;
-}
-inline void OptionSnapshotExData::clear_has_theta() {
-  _has_bits_[0] &= ~0x00001000u;
-}
-inline void OptionSnapshotExData::clear_theta() {
-  theta_ = 0;
-  clear_has_theta();
-}
-inline double OptionSnapshotExData::theta() const {
-  // @@protoc_insertion_point(field_get:Qot_GetSecuritySnapshot.OptionSnapshotExData.theta)
-  return theta_;
-}
-inline void OptionSnapshotExData::set_theta(double value) {
-  set_has_theta();
-  theta_ = value;
-  // @@protoc_insertion_point(field_set:Qot_GetSecuritySnapshot.OptionSnapshotExData.theta)
-}
-
-// required double rho = 13;
-inline bool OptionSnapshotExData::has_rho() const {
-  return (_has_bits_[0] & 0x00002000u) != 0;
-}
-inline void OptionSnapshotExData::set_has_rho() {
-  _has_bits_[0] |= 0x00002000u;
-}
-inline void OptionSnapshotExData::clear_has_rho() {
-  _has_bits_[0] &= ~0x00002000u;
-}
-inline void OptionSnapshotExData::clear_rho() {
-  rho_ = 0;
-  clear_has_rho();
-}
-inline double OptionSnapshotExData::rho() const {
-  // @@protoc_insertion_point(field_get:Qot_GetSecuritySnapshot.OptionSnapshotExData.rho)
-  return rho_;
-}
-inline void OptionSnapshotExData::set_rho(double value) {
-  set_has_rho();
-  rho_ = value;
-  // @@protoc_insertion_point(field_set:Qot_GetSecuritySnapshot.OptionSnapshotExData.rho)
-}
-
-// optional double strikeTimestamp = 14;
-inline bool OptionSnapshotExData::has_striketimestamp() const {
-  return (_has_bits_[0] & 0x00004000u) != 0;
-}
-inline void OptionSnapshotExData::set_has_striketimestamp() {
-  _has_bits_[0] |= 0x00004000u;
-}
-inline void OptionSnapshotExData::clear_has_striketimestamp() {
-  _has_bits_[0] &= ~0x00004000u;
-}
-inline void OptionSnapshotExData::clear_striketimestamp() {
-  striketimestamp_ = 0;
-  clear_has_striketimestamp();
-}
-inline double OptionSnapshotExData::striketimestamp() const {
-  // @@protoc_insertion_point(field_get:Qot_GetSecuritySnapshot.OptionSnapshotExData.strikeTimestamp)
-  return striketimestamp_;
-}
-inline void OptionSnapshotExData::set_striketimestamp(double value) {
-  set_has_striketimestamp();
-  striketimestamp_ = value;
-  // @@protoc_insertion_point(field_set:Qot_GetSecuritySnapshot.OptionSnapshotExData.strikeTimestamp)
-}
-
-// optional int32 indexOptionType = 15;
-inline bool OptionSnapshotExData::has_indexoptiontype() const {
-  return (_has_bits_[0] & 0x00000400u) != 0;
-}
-inline void OptionSnapshotExData::set_has_indexoptiontype() {
-  _has_bits_[0] |= 0x00000400u;
-}
-inline void OptionSnapshotExData::clear_has_indexoptiontype() {
-  _has_bits_[0] &= ~0x00000400u;
-}
-inline void OptionSnapshotExData::clear_indexoptiontype() {
-  indexoptiontype_ = 0;
-  clear_has_indexoptiontype();
-}
-inline ::google::protobuf::int32 OptionSnapshotExData::indexoptiontype() const {
-  // @@protoc_insertion_point(field_get:Qot_GetSecuritySnapshot.OptionSnapshotExData.indexOptionType)
-  return indexoptiontype_;
-}
-inline void OptionSnapshotExData::set_indexoptiontype(::google::protobuf::int32 value) {
-  set_has_indexoptiontype();
-  indexoptiontype_ = value;
-  // @@protoc_insertion_point(field_set:Qot_GetSecuritySnapshot.OptionSnapshotExData.indexOptionType)
-}
-
-// optional int32 netOpenInterest = 16;
-inline bool OptionSnapshotExData::has_netopeninterest() const {
-  return (_has_bits_[0] & 0x00008000u) != 0;
-}
-inline void OptionSnapshotExData::set_has_netopeninterest() {
-  _has_bits_[0] |= 0x00008000u;
-}
-inline void OptionSnapshotExData::clear_has_netopeninterest() {
-  _has_bits_[0] &= ~0x00008000u;
-}
-inline void OptionSnapshotExData::clear_netopeninterest() {
-  netopeninterest_ = 0;
-  clear_has_netopeninterest();
-}
-inline ::google::protobuf::int32 OptionSnapshotExData::netopeninterest() const {
-  // @@protoc_insertion_point(field_get:Qot_GetSecuritySnapshot.OptionSnapshotExData.netOpenInterest)
-  return netopeninterest_;
-}
-inline void OptionSnapshotExData::set_netopeninterest(::google::protobuf::int32 value) {
-  set_has_netopeninterest();
-  netopeninterest_ = value;
-  // @@protoc_insertion_point(field_set:Qot_GetSecuritySnapshot.OptionSnapshotExData.netOpenInterest)
-}
-
-// optional int32 expiryDateDistance = 17;
-inline bool OptionSnapshotExData::has_expirydatedistance() const {
-  return (_has_bits_[0] & 0x00010000u) != 0;
-}
-inline void OptionSnapshotExData::set_has_expirydatedistance() {
-  _has_bits_[0] |= 0x00010000u;
-}
-inline void OptionSnapshotExData::clear_has_expirydatedistance() {
-  _has_bits_[0] &= ~0x00010000u;
-}
-inline void OptionSnapshotExData::clear_expirydatedistance() {
-  expirydatedistance_ = 0;
-  clear_has_expirydatedistance();
-}
-inline ::google::protobuf::int32 OptionSnapshotExData::expirydatedistance() const {
-  // @@protoc_insertion_point(field_get:Qot_GetSecuritySnapshot.OptionSnapshotExData.expiryDateDistance)
-  return expirydatedistance_;
-}
-inline void OptionSnapshotExData::set_expirydatedistance(::google::protobuf::int32 value) {
-  set_has_expirydatedistance();
-  expirydatedistance_ = value;
-  // @@protoc_insertion_point(field_set:Qot_GetSecuritySnapshot.OptionSnapshotExData.expiryDateDistance)
-}
-
-// optional double contractNominalValue = 18;
-inline bool OptionSnapshotExData::has_contractnominalvalue() const {
-  return (_has_bits_[0] & 0x00020000u) != 0;
-}
-inline void OptionSnapshotExData::set_has_contractnominalvalue() {
-  _has_bits_[0] |= 0x00020000u;
-}
-inline void OptionSnapshotExData::clear_has_contractnominalvalue() {
-  _has_bits_[0] &= ~0x00020000u;
-}
-inline void OptionSnapshotExData::clear_contractnominalvalue() {
-  contractnominalvalue_ = 0;
-  clear_has_contractnominalvalue();
-}
-inline double OptionSnapshotExData::contractnominalvalue() const {
-  // @@protoc_insertion_point(field_get:Qot_GetSecuritySnapshot.OptionSnapshotExData.contractNominalValue)
-  return contractnominalvalue_;
-}
-inline void OptionSnapshotExData::set_contractnominalvalue(double value) {
-  set_has_contractnominalvalue();
-  contractnominalvalue_ = value;
-  // @@protoc_insertion_point(field_set:Qot_GetSecuritySnapshot.OptionSnapshotExData.contractNominalValue)
-}
-
-// optional double ownerLotMultiplier = 19;
-inline bool OptionSnapshotExData::has_ownerlotmultiplier() const {
-  return (_has_bits_[0] & 0x00040000u) != 0;
-}
-inline void OptionSnapshotExData::set_has_ownerlotmultiplier() {
-  _has_bits_[0] |= 0x00040000u;
-}
-inline void OptionSnapshotExData::clear_has_ownerlotmultiplier() {
-  _has_bits_[0] &= ~0x00040000u;
-}
-inline void OptionSnapshotExData::clear_ownerlotmultiplier() {
-  ownerlotmultiplier_ = 0;
-  clear_has_ownerlotmultiplier();
-}
-inline double OptionSnapshotExData::ownerlotmultiplier() const {
-  // @@protoc_insertion_point(field_get:Qot_GetSecuritySnapshot.OptionSnapshotExData.ownerLotMultiplier)
-  return ownerlotmultiplier_;
-}
-inline void OptionSnapshotExData::set_ownerlotmultiplier(double value) {
-  set_has_ownerlotmultiplier();
-  ownerlotmultiplier_ = value;
-  // @@protoc_insertion_point(field_set:Qot_GetSecuritySnapshot.OptionSnapshotExData.ownerLotMultiplier)
-}
-
-// optional int32 optionAreaType = 20;
-inline bool OptionSnapshotExData::has_optionareatype() const {
-  return (_has_bits_[0] & 0x00200000u) != 0;
-}
-inline void OptionSnapshotExData::set_has_optionareatype() {
-  _has_bits_[0] |= 0x00200000u;
-}
-inline void OptionSnapshotExData::clear_has_optionareatype() {
-  _has_bits_[0] &= ~0x00200000u;
-}
-inline void OptionSnapshotExData::clear_optionareatype() {
-  optionareatype_ = 0;
-  clear_has_optionareatype();
-}
-inline ::google::protobuf::int32 OptionSnapshotExData::optionareatype() const {
-  // @@protoc_insertion_point(field_get:Qot_GetSecuritySnapshot.OptionSnapshotExData.optionAreaType)
-  return optionareatype_;
-}
-inline void OptionSnapshotExData::set_optionareatype(::google::protobuf::int32 value) {
-  set_has_optionareatype();
-  optionareatype_ = value;
-  // @@protoc_insertion_point(field_set:Qot_GetSecuritySnapshot.OptionSnapshotExData.optionAreaType)
-}
-
-// optional double contractMultiplier = 21;
-inline bool OptionSnapshotExData::has_contractmultiplier() const {
-  return (_has_bits_[0] & 0x00080000u) != 0;
-}
-inline void OptionSnapshotExData::set_has_contractmultiplier() {
-  _has_bits_[0] |= 0x00080000u;
-}
-inline void OptionSnapshotExData::clear_has_contractmultiplier() {
-  _has_bits_[0] &= ~0x00080000u;
-}
-inline void OptionSnapshotExData::clear_contractmultiplier() {
-  contractmultiplier_ = 0;
-  clear_has_contractmultiplier();
-}
-inline double OptionSnapshotExData::contractmultiplier() const {
-  // @@protoc_insertion_point(field_get:Qot_GetSecuritySnapshot.OptionSnapshotExData.contractMultiplier)
-  return contractmultiplier_;
-}
-inline void OptionSnapshotExData::set_contractmultiplier(double value) {
-  set_has_contractmultiplier();
-  contractmultiplier_ = value;
-  // @@protoc_insertion_point(field_set:Qot_GetSecuritySnapshot.OptionSnapshotExData.contractMultiplier)
-}
-
-// -------------------------------------------------------------------
-
-// IndexSnapshotExData
-
-// required int32 raiseCount = 1;
-inline bool IndexSnapshotExData::has_raisecount() const {
-  return (_has_bits_[0] & 0x00000001u) != 0;
-}
-inline void IndexSnapshotExData::set_has_raisecount() {
-  _has_bits_[0] |= 0x00000001u;
-}
-inline void IndexSnapshotExData::clear_has_raisecount() {
-  _has_bits_[0] &= ~0x00000001u;
-}
-inline void IndexSnapshotExData::clear_raisecount() {
-  raisecount_ = 0;
-  clear_has_raisecount();
-}
-inline ::google::protobuf::int32 IndexSnapshotExData::raisecount() const {
-  // @@protoc_insertion_point(field_get:Qot_GetSecuritySnapshot.IndexSnapshotExData.raiseCount)
-  return raisecount_;
-}
-inline void IndexSnapshotExData::set_raisecount(::google::protobuf::int32 value) {
-  set_has_raisecount();
-  raisecount_ = value;
-  // @@protoc_insertion_point(field_set:Qot_GetSecuritySnapshot.IndexSnapshotExData.raiseCount)
-}
-
-// required int32 fallCount = 2;
-inline bool IndexSnapshotExData::has_fallcount() const {
-  return (_has_bits_[0] & 0x00000002u) != 0;
-}
-inline void IndexSnapshotExData::set_has_fallcount() {
-  _has_bits_[0] |= 0x00000002u;
-}
-inline void IndexSnapshotExData::clear_has_fallcount() {
-  _has_bits_[0] &= ~0x00000002u;
-}
-inline void IndexSnapshotExData::clear_fallcount() {
-  fallcount_ = 0;
-  clear_has_fallcount();
-}
-inline ::google::protobuf::int32 IndexSnapshotExData::fallcount() const {
-  // @@protoc_insertion_point(field_get:Qot_GetSecuritySnapshot.IndexSnapshotExData.fallCount)
-  return fallcount_;
-}
-inline void IndexSnapshotExData::set_fallcount(::google::protobuf::int32 value) {
-  set_has_fallcount();
-  fallcount_ = value;
-  // @@protoc_insertion_point(field_set:Qot_GetSecuritySnapshot.IndexSnapshotExData.fallCount)
-}
-
-// required int32 equalCount = 3;
-inline bool IndexSnapshotExData::has_equalcount() const {
-  return (_has_bits_[0] & 0x00000004u) != 0;
-}
-inline void IndexSnapshotExData::set_has_equalcount() {
-  _has_bits_[0] |= 0x00000004u;
-}
-inline void IndexSnapshotExData::clear_has_equalcount() {
-  _has_bits_[0] &= ~0x00000004u;
-}
-inline void IndexSnapshotExData::clear_equalcount() {
-  equalcount_ = 0;
-  clear_has_equalcount();
-}
-inline ::google::protobuf::int32 IndexSnapshotExData::equalcount() const {
-  // @@protoc_insertion_point(field_get:Qot_GetSecuritySnapshot.IndexSnapshotExData.equalCount)
-  return equalcount_;
-}
-inline void IndexSnapshotExData::set_equalcount(::google::protobuf::int32 value) {
-  set_has_equalcount();
-  equalcount_ = value;
-  // @@protoc_insertion_point(field_set:Qot_GetSecuritySnapshot.IndexSnapshotExData.equalCount)
-}
-
-// -------------------------------------------------------------------
-
-// PlateSnapshotExData
-
-// required int32 raiseCount = 1;
-inline bool PlateSnapshotExData::has_raisecount() const {
-  return (_has_bits_[0] & 0x00000001u) != 0;
-}
-inline void PlateSnapshotExData::set_has_raisecount() {
-  _has_bits_[0] |= 0x00000001u;
-}
-inline void PlateSnapshotExData::clear_has_raisecount() {
-  _has_bits_[0] &= ~0x00000001u;
-}
-inline void PlateSnapshotExData::clear_raisecount() {
-  raisecount_ = 0;
-  clear_has_raisecount();
-}
-inline ::google::protobuf::int32 PlateSnapshotExData::raisecount() const {
-  // @@protoc_insertion_point(field_get:Qot_GetSecuritySnapshot.PlateSnapshotExData.raiseCount)
-  return raisecount_;
-}
-inline void PlateSnapshotExData::set_raisecount(::google::protobuf::int32 value) {
-  set_has_raisecount();
-  raisecount_ = value;
-  // @@protoc_insertion_point(field_set:Qot_GetSecuritySnapshot.PlateSnapshotExData.raiseCount)
-}
-
-// required int32 fallCount = 2;
-inline bool PlateSnapshotExData::has_fallcount() const {
-  return (_has_bits_[0] & 0x00000002u) != 0;
-}
-inline void PlateSnapshotExData::set_has_fallcount() {
-  _has_bits_[0] |= 0x00000002u;
-}
-inline void PlateSnapshotExData::clear_has_fallcount() {
-  _has_bits_[0] &= ~0x00000002u;
-}
-inline void PlateSnapshotExData::clear_fallcount() {
-  fallcount_ = 0;
-  clear_has_fallcount();
-}
-inline ::google::protobuf::int32 PlateSnapshotExData::fallcount() const {
-  // @@protoc_insertion_point(field_get:Qot_GetSecuritySnapshot.PlateSnapshotExData.fallCount)
-  return fallcount_;
-}
-inline void PlateSnapshotExData::set_fallcount(::google::protobuf::int32 value) {
-  set_has_fallcount();
-  fallcount_ = value;
-  // @@protoc_insertion_point(field_set:Qot_GetSecuritySnapshot.PlateSnapshotExData.fallCount)
-}
-
-// required int32 equalCount = 3;
-inline bool PlateSnapshotExData::has_equalcount() const {
-  return (_has_bits_[0] & 0x00000004u) != 0;
-}
-inline void PlateSnapshotExData::set_has_equalcount() {
-  _has_bits_[0] |= 0x00000004u;
-}
-inline void PlateSnapshotExData::clear_has_equalcount() {
-  _has_bits_[0] &= ~0x00000004u;
-}
-inline void PlateSnapshotExData::clear_equalcount() {
-  equalcount_ = 0;
-  clear_has_equalcount();
-}
-inline ::google::protobuf::int32 PlateSnapshotExData::equalcount() const {
-  // @@protoc_insertion_point(field_get:Qot_GetSecuritySnapshot.PlateSnapshotExData.equalCount)
-  return equalcount_;
-}
-inline void PlateSnapshotExData::set_equalcount(::google::protobuf::int32 value) {
-  set_has_equalcount();
-  equalcount_ = value;
-  // @@protoc_insertion_point(field_set:Qot_GetSecuritySnapshot.PlateSnapshotExData.equalCount)
-}
-
-// -------------------------------------------------------------------
-
-// FutureSnapshotExData
-
-// required double lastSettlePrice = 1;
-inline bool FutureSnapshotExData::has_lastsettleprice() const {
-  return (_has_bits_[0] & 0x00000002u) != 0;
-}
-inline void FutureSnapshotExData::set_has_lastsettleprice() {
-  _has_bits_[0] |= 0x00000002u;
-}
-inline void FutureSnapshotExData::clear_has_lastsettleprice() {
-  _has_bits_[0] &= ~0x00000002u;
-}
-inline void FutureSnapshotExData::clear_lastsettleprice() {
-  lastsettleprice_ = 0;
-  clear_has_lastsettleprice();
-}
-inline double FutureSnapshotExData::lastsettleprice() const {
-  // @@protoc_insertion_point(field_get:Qot_GetSecuritySnapshot.FutureSnapshotExData.lastSettlePrice)
-  return lastsettleprice_;
-}
-inline void FutureSnapshotExData::set_lastsettleprice(double value) {
-  set_has_lastsettleprice();
-  lastsettleprice_ = value;
-  // @@protoc_insertion_point(field_set:Qot_GetSecuritySnapshot.FutureSnapshotExData.lastSettlePrice)
-}
-
-// required int32 position = 2;
-inline bool FutureSnapshotExData::has_position() const {
-  return (_has_bits_[0] & 0x00000004u) != 0;
-}
-inline void FutureSnapshotExData::set_has_position() {
-  _has_bits_[0] |= 0x00000004u;
-}
-inline void FutureSnapshotExData::clear_has_position() {
-  _has_bits_[0] &= ~0x00000004u;
-}
-inline void FutureSnapshotExData::clear_position() {
-  position_ = 0;
-  clear_has_position();
-}
-inline ::google::protobuf::int32 FutureSnapshotExData::position() const {
-  // @@protoc_insertion_point(field_get:Qot_GetSecuritySnapshot.FutureSnapshotExData.position)
-  return position_;
-}
-inline void FutureSnapshotExData::set_position(::google::protobuf::int32 value) {
-  set_has_position();
-  position_ = value;
-  // @@protoc_insertion_point(field_set:Qot_GetSecuritySnapshot.FutureSnapshotExData.position)
-}
-
-// required int32 positionChange = 3;
-inline bool FutureSnapshotExData::has_positionchange() const {
-  return (_has_bits_[0] & 0x00000008u) != 0;
-}
-inline void FutureSnapshotExData::set_has_positionchange() {
-  _has_bits_[0] |= 0x00000008u;
-}
-inline void FutureSnapshotExData::clear_has_positionchange() {
-  _has_bits_[0] &= ~0x00000008u;
-}
-inline void FutureSnapshotExData::clear_positionchange() {
-  positionchange_ = 0;
-  clear_has_positionchange();
-}
-inline ::google::protobuf::int32 FutureSnapshotExData::positionchange() const {
-  // @@protoc_insertion_point(field_get:Qot_GetSecuritySnapshot.FutureSnapshotExData.positionChange)
-  return positionchange_;
-}
-inline void FutureSnapshotExData::set_positionchange(::google::protobuf::int32 value) {
-  set_has_positionchange();
-  positionchange_ = value;
-  // @@protoc_insertion_point(field_set:Qot_GetSecuritySnapshot.FutureSnapshotExData.positionChange)
-}
-
-// required string lastTradeTime = 4;
-inline bool FutureSnapshotExData::has_lasttradetime() const {
-  return (_has_bits_[0] & 0x00000001u) != 0;
-}
-inline void FutureSnapshotExData::set_has_lasttradetime() {
-  _has_bits_[0] |= 0x00000001u;
-}
-inline void FutureSnapshotExData::clear_has_lasttradetime() {
-  _has_bits_[0] &= ~0x00000001u;
-}
-inline void FutureSnapshotExData::clear_lasttradetime() {
-  lasttradetime_.ClearToEmptyNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
-  clear_has_lasttradetime();
-}
-inline const ::std::string& FutureSnapshotExData::lasttradetime() const {
-  // @@protoc_insertion_point(field_get:Qot_GetSecuritySnapshot.FutureSnapshotExData.lastTradeTime)
-  return lasttradetime_.GetNoArena();
-}
-inline void FutureSnapshotExData::set_lasttradetime(const ::std::string& value) {
-  set_has_lasttradetime();
-  lasttradetime_.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), value);
-  // @@protoc_insertion_point(field_set:Qot_GetSecuritySnapshot.FutureSnapshotExData.lastTradeTime)
-}
-#if LANG_CXX11
-inline void FutureSnapshotExData::set_lasttradetime(::std::string&& value) {
-  set_has_lasttradetime();
-  lasttradetime_.SetNoArena(
-    &::google::protobuf::internal::GetEmptyStringAlreadyInited(), ::std::move(value));
-  // @@protoc_insertion_point(field_set_rvalue:Qot_GetSecuritySnapshot.FutureSnapshotExData.lastTradeTime)
-}
-#endif
-inline void FutureSnapshotExData::set_lasttradetime(const char* value) {
-  GOOGLE_DCHECK(value != NULL);
-  set_has_lasttradetime();
-  lasttradetime_.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), ::std::string(value));
-  // @@protoc_insertion_point(field_set_char:Qot_GetSecuritySnapshot.FutureSnapshotExData.lastTradeTime)
-}
-inline void FutureSnapshotExData::set_lasttradetime(const char* value, size_t size) {
-  set_has_lasttradetime();
-  lasttradetime_.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(),
-      ::std::string(reinterpret_cast<const char*>(value), size));
-  // @@protoc_insertion_point(field_set_pointer:Qot_GetSecuritySnapshot.FutureSnapshotExData.lastTradeTime)
-}
-inline ::std::string* FutureSnapshotExData::mutable_lasttradetime() {
-  set_has_lasttradetime();
-  // @@protoc_insertion_point(field_mutable:Qot_GetSecuritySnapshot.FutureSnapshotExData.lastTradeTime)
-  return lasttradetime_.MutableNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
-}
-inline ::std::string* FutureSnapshotExData::release_lasttradetime() {
-  // @@protoc_insertion_point(field_release:Qot_GetSecuritySnapshot.FutureSnapshotExData.lastTradeTime)
-  clear_has_lasttradetime();
-  return lasttradetime_.ReleaseNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
-}
-inline void FutureSnapshotExData::set_allocated_lasttradetime(::std::string* lasttradetime) {
-  if (lasttradetime != NULL) {
-    set_has_lasttradetime();
-  } else {
-    clear_has_lasttradetime();
-  }
-  lasttradetime_.SetAllocatedNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), lasttradetime);
-  // @@protoc_insertion_point(field_set_allocated:Qot_GetSecuritySnapshot.FutureSnapshotExData.lastTradeTime)
-}
-
-// optional double lastTradeTimestamp = 5;
-inline bool FutureSnapshotExData::has_lasttradetimestamp() const {
-  return (_has_bits_[0] & 0x00000010u) != 0;
-}
-inline void FutureSnapshotExData::set_has_lasttradetimestamp() {
-  _has_bits_[0] |= 0x00000010u;
-}
-inline void FutureSnapshotExData::clear_has_lasttradetimestamp() {
-  _has_bits_[0] &= ~0x00000010u;
-}
-inline void FutureSnapshotExData::clear_lasttradetimestamp() {
-  lasttradetimestamp_ = 0;
-  clear_has_lasttradetimestamp();
-}
-inline double FutureSnapshotExData::lasttradetimestamp() const {
-  // @@protoc_insertion_point(field_get:Qot_GetSecuritySnapshot.FutureSnapshotExData.lastTradeTimestamp)
-  return lasttradetimestamp_;
-}
-inline void FutureSnapshotExData::set_lasttradetimestamp(double value) {
-  set_has_lasttradetimestamp();
-  lasttradetimestamp_ = value;
-  // @@protoc_insertion_point(field_set:Qot_GetSecuritySnapshot.FutureSnapshotExData.lastTradeTimestamp)
-}
-
-// required bool isMainContract = 6;
-inline bool FutureSnapshotExData::has_ismaincontract() const {
-  return (_has_bits_[0] & 0x00000020u) != 0;
-}
-inline void FutureSnapshotExData::set_has_ismaincontract() {
-  _has_bits_[0] |= 0x00000020u;
-}
-inline void FutureSnapshotExData::clear_has_ismaincontract() {
-  _has_bits_[0] &= ~0x00000020u;
-}
-inline void FutureSnapshotExData::clear_ismaincontract() {
-  ismaincontract_ = false;
-  clear_has_ismaincontract();
-}
-inline bool FutureSnapshotExData::ismaincontract() const {
-  // @@protoc_insertion_point(field_get:Qot_GetSecuritySnapshot.FutureSnapshotExData.isMainContract)
-  return ismaincontract_;
-}
-inline void FutureSnapshotExData::set_ismaincontract(bool value) {
-  set_has_ismaincontract();
-  ismaincontract_ = value;
-  // @@protoc_insertion_point(field_set:Qot_GetSecuritySnapshot.FutureSnapshotExData.isMainContract)
-}
-
-// -------------------------------------------------------------------
-
-// TrustSnapshotExData
-
-// required double dividendYield = 1;
-inline bool TrustSnapshotExData::has_dividendyield() const {
-  return (_has_bits_[0] & 0x00000001u) != 0;
-}
-inline void TrustSnapshotExData::set_has_dividendyield() {
-  _has_bits_[0] |= 0x00000001u;
-}
-inline void TrustSnapshotExData::clear_has_dividendyield() {
-  _has_bits_[0] &= ~0x00000001u;
-}
-inline void TrustSnapshotExData::clear_dividendyield() {
-  dividendyield_ = 0;
-  clear_has_dividendyield();
-}
-inline double TrustSnapshotExData::dividendyield() const {
-  // @@protoc_insertion_point(field_get:Qot_GetSecuritySnapshot.TrustSnapshotExData.dividendYield)
-  return dividendyield_;
-}
-inline void TrustSnapshotExData::set_dividendyield(double value) {
-  set_has_dividendyield();
-  dividendyield_ = value;
-  // @@protoc_insertion_point(field_set:Qot_GetSecuritySnapshot.TrustSnapshotExData.dividendYield)
-}
-
-// required double aum = 2;
-inline bool TrustSnapshotExData::has_aum() const {
-  return (_has_bits_[0] & 0x00000002u) != 0;
-}
-inline void TrustSnapshotExData::set_has_aum() {
-  _has_bits_[0] |= 0x00000002u;
-}
-inline void TrustSnapshotExData::clear_has_aum() {
-  _has_bits_[0] &= ~0x00000002u;
-}
-inline void TrustSnapshotExData::clear_aum() {
-  aum_ = 0;
-  clear_has_aum();
-}
-inline double TrustSnapshotExData::aum() const {
-  // @@protoc_insertion_point(field_get:Qot_GetSecuritySnapshot.TrustSnapshotExData.aum)
-  return aum_;
-}
-inline void TrustSnapshotExData::set_aum(double value) {
-  set_has_aum();
-  aum_ = value;
-  // @@protoc_insertion_point(field_set:Qot_GetSecuritySnapshot.TrustSnapshotExData.aum)
-}
-
-// required int64 outstandingUnits = 3;
-inline bool TrustSnapshotExData::has_outstandingunits() const {
-  return (_has_bits_[0] & 0x00000004u) != 0;
-}
-inline void TrustSnapshotExData::set_has_outstandingunits() {
-  _has_bits_[0] |= 0x00000004u;
-}
-inline void TrustSnapshotExData::clear_has_outstandingunits() {
-  _has_bits_[0] &= ~0x00000004u;
-}
-inline void TrustSnapshotExData::clear_outstandingunits() {
-  outstandingunits_ = GOOGLE_LONGLONG(0);
-  clear_has_outstandingunits();
-}
-inline ::google::protobuf::int64 TrustSnapshotExData::outstandingunits() const {
-  // @@protoc_insertion_point(field_get:Qot_GetSecuritySnapshot.TrustSnapshotExData.outstandingUnits)
-  return outstandingunits_;
-}
-inline void TrustSnapshotExData::set_outstandingunits(::google::protobuf::int64 value) {
-  set_has_outstandingunits();
-  outstandingunits_ = value;
-  // @@protoc_insertion_point(field_set:Qot_GetSecuritySnapshot.TrustSnapshotExData.outstandingUnits)
-}
-
-// required double netAssetValue = 4;
-inline bool TrustSnapshotExData::has_netassetvalue() const {
-  return (_has_bits_[0] & 0x00000008u) != 0;
-}
-inline void TrustSnapshotExData::set_has_netassetvalue() {
-  _has_bits_[0] |= 0x00000008u;
-}
-inline void TrustSnapshotExData::clear_has_netassetvalue() {
-  _has_bits_[0] &= ~0x00000008u;
-}
-inline void TrustSnapshotExData::clear_netassetvalue() {
-  netassetvalue_ = 0;
-  clear_has_netassetvalue();
-}
-inline double TrustSnapshotExData::netassetvalue() const {
-  // @@protoc_insertion_point(field_get:Qot_GetSecuritySnapshot.TrustSnapshotExData.netAssetValue)
-  return netassetvalue_;
-}
-inline void TrustSnapshotExData::set_netassetvalue(double value) {
-  set_has_netassetvalue();
-  netassetvalue_ = value;
-  // @@protoc_insertion_point(field_set:Qot_GetSecuritySnapshot.TrustSnapshotExData.netAssetValue)
-}
-
-// required double premium = 5;
-inline bool TrustSnapshotExData::has_premium() const {
-  return (_has_bits_[0] & 0x00000010u) != 0;
-}
-inline void TrustSnapshotExData::set_has_premium() {
-  _has_bits_[0] |= 0x00000010u;
-}
-inline void TrustSnapshotExData::clear_has_premium() {
-  _has_bits_[0] &= ~0x00000010u;
-}
-inline void TrustSnapshotExData::clear_premium() {
-  premium_ = 0;
-  clear_has_premium();
-}
-inline double TrustSnapshotExData::premium() const {
-  // @@protoc_insertion_point(field_get:Qot_GetSecuritySnapshot.TrustSnapshotExData.premium)
-  return premium_;
-}
-inline void TrustSnapshotExData::set_premium(double value) {
-  set_has_premium();
-  premium_ = value;
-  // @@protoc_insertion_point(field_set:Qot_GetSecuritySnapshot.TrustSnapshotExData.premium)
-}
-
-// required int32 assetClass = 6;
-inline bool TrustSnapshotExData::has_assetclass() const {
-  return (_has_bits_[0] & 0x00000020u) != 0;
-}
-inline void TrustSnapshotExData::set_has_assetclass() {
-  _has_bits_[0] |= 0x00000020u;
-}
-inline void TrustSnapshotExData::clear_has_assetclass() {
-  _has_bits_[0] &= ~0x00000020u;
-}
-inline void TrustSnapshotExData::clear_assetclass() {
-  assetclass_ = 0;
-  clear_has_assetclass();
-}
-inline ::google::protobuf::int32 TrustSnapshotExData::assetclass() const {
-  // @@protoc_insertion_point(field_get:Qot_GetSecuritySnapshot.TrustSnapshotExData.assetClass)
-  return assetclass_;
-}
-inline void TrustSnapshotExData::set_assetclass(::google::protobuf::int32 value) {
-  set_has_assetclass();
-  assetclass_ = value;
-  // @@protoc_insertion_point(field_set:Qot_GetSecuritySnapshot.TrustSnapshotExData.assetClass)
-}
-
 // -------------------------------------------------------------------
 
 // SnapshotBasicData
 
 // required .Qot_Common.Security security = 1;
 inline bool SnapshotBasicData::has_security() const {
-  return (_has_bits_[0] & 0x00000008u) != 0;
+  return (_has_bits_[0] & 0x00000004u) != 0;
 }
 inline void SnapshotBasicData::set_has_security() {
-  _has_bits_[0] |= 0x00000008u;
+  _has_bits_[0] |= 0x00000004u;
 }
 inline void SnapshotBasicData::clear_has_security() {
-  _has_bits_[0] &= ~0x00000008u;
+  _has_bits_[0] &= ~0x00000004u;
 }
 inline const ::Qot_Common::Security& SnapshotBasicData::security() const {
   const ::Qot_Common::Security* p = security_;
@@ -5254,78 +2238,15 @@ inline void SnapshotBasicData::set_allocated_security(::Qot_Common::Security* se
   // @@protoc_insertion_point(field_set_allocated:Qot_GetSecuritySnapshot.SnapshotBasicData.security)
 }
 
-// optional string name = 41;
-inline bool SnapshotBasicData::has_name() const {
-  return (_has_bits_[0] & 0x00000004u) != 0;
-}
-inline void SnapshotBasicData::set_has_name() {
-  _has_bits_[0] |= 0x00000004u;
-}
-inline void SnapshotBasicData::clear_has_name() {
-  _has_bits_[0] &= ~0x00000004u;
-}
-inline void SnapshotBasicData::clear_name() {
-  name_.ClearToEmptyNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
-  clear_has_name();
-}
-inline const ::std::string& SnapshotBasicData::name() const {
-  // @@protoc_insertion_point(field_get:Qot_GetSecuritySnapshot.SnapshotBasicData.name)
-  return name_.GetNoArena();
-}
-inline void SnapshotBasicData::set_name(const ::std::string& value) {
-  set_has_name();
-  name_.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), value);
-  // @@protoc_insertion_point(field_set:Qot_GetSecuritySnapshot.SnapshotBasicData.name)
-}
-#if LANG_CXX11
-inline void SnapshotBasicData::set_name(::std::string&& value) {
-  set_has_name();
-  name_.SetNoArena(
-    &::google::protobuf::internal::GetEmptyStringAlreadyInited(), ::std::move(value));
-  // @@protoc_insertion_point(field_set_rvalue:Qot_GetSecuritySnapshot.SnapshotBasicData.name)
-}
-#endif
-inline void SnapshotBasicData::set_name(const char* value) {
-  GOOGLE_DCHECK(value != NULL);
-  set_has_name();
-  name_.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), ::std::string(value));
-  // @@protoc_insertion_point(field_set_char:Qot_GetSecuritySnapshot.SnapshotBasicData.name)
-}
-inline void SnapshotBasicData::set_name(const char* value, size_t size) {
-  set_has_name();
-  name_.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(),
-      ::std::string(reinterpret_cast<const char*>(value), size));
-  // @@protoc_insertion_point(field_set_pointer:Qot_GetSecuritySnapshot.SnapshotBasicData.name)
-}
-inline ::std::string* SnapshotBasicData::mutable_name() {
-  set_has_name();
-  // @@protoc_insertion_point(field_mutable:Qot_GetSecuritySnapshot.SnapshotBasicData.name)
-  return name_.MutableNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
-}
-inline ::std::string* SnapshotBasicData::release_name() {
-  // @@protoc_insertion_point(field_release:Qot_GetSecuritySnapshot.SnapshotBasicData.name)
-  clear_has_name();
-  return name_.ReleaseNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
-}
-inline void SnapshotBasicData::set_allocated_name(::std::string* name) {
-  if (name != NULL) {
-    set_has_name();
-  } else {
-    clear_has_name();
-  }
-  name_.SetAllocatedNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), name);
-  // @@protoc_insertion_point(field_set_allocated:Qot_GetSecuritySnapshot.SnapshotBasicData.name)
-}
-
 // required int32 type = 2;
 inline bool SnapshotBasicData::has_type() const {
-  return (_has_bits_[0] & 0x00000080u) != 0;
+  return (_has_bits_[0] & 0x00000008u) != 0;
 }
 inline void SnapshotBasicData::set_has_type() {
-  _has_bits_[0] |= 0x00000080u;
+  _has_bits_[0] |= 0x00000008u;
 }
 inline void SnapshotBasicData::clear_has_type() {
-  _has_bits_[0] &= ~0x00000080u;
+  _has_bits_[0] &= ~0x00000008u;
 }
 inline void SnapshotBasicData::clear_type() {
   type_ = 0;
@@ -5343,13 +2264,13 @@ inline void SnapshotBasicData::set_type(::google::protobuf::int32 value) {
 
 // required bool isSuspend = 3;
 inline bool SnapshotBasicData::has_issuspend() const {
-  return (_has_bits_[0] & 0x01000000u) != 0;
+  return (_has_bits_[0] & 0x00000010u) != 0;
 }
 inline void SnapshotBasicData::set_has_issuspend() {
-  _has_bits_[0] |= 0x01000000u;
+  _has_bits_[0] |= 0x00000010u;
 }
 inline void SnapshotBasicData::clear_has_issuspend() {
-  _has_bits_[0] &= ~0x01000000u;
+  _has_bits_[0] &= ~0x00000010u;
 }
 inline void SnapshotBasicData::clear_issuspend() {
   issuspend_ = false;
@@ -5430,13 +2351,13 @@ inline void SnapshotBasicData::set_allocated_listtime(::std::string* listtime) {
 
 // required int32 lotSize = 5;
 inline bool SnapshotBasicData::has_lotsize() const {
-  return (_has_bits_[0] & 0x00000100u) != 0;
+  return (_has_bits_[0] & 0x00004000u) != 0;
 }
 inline void SnapshotBasicData::set_has_lotsize() {
-  _has_bits_[0] |= 0x00000100u;
+  _has_bits_[0] |= 0x00004000u;
 }
 inline void SnapshotBasicData::clear_has_lotsize() {
-  _has_bits_[0] &= ~0x00000100u;
+  _has_bits_[0] &= ~0x00004000u;
 }
 inline void SnapshotBasicData::clear_lotsize() {
   lotsize_ = 0;
@@ -5454,13 +2375,13 @@ inline void SnapshotBasicData::set_lotsize(::google::protobuf::int32 value) {
 
 // required double priceSpread = 6;
 inline bool SnapshotBasicData::has_pricespread() const {
-  return (_has_bits_[0] & 0x00000200u) != 0;
+  return (_has_bits_[0] & 0x00000020u) != 0;
 }
 inline void SnapshotBasicData::set_has_pricespread() {
-  _has_bits_[0] |= 0x00000200u;
+  _has_bits_[0] |= 0x00000020u;
 }
 inline void SnapshotBasicData::clear_has_pricespread() {
-  _has_bits_[0] &= ~0x00000200u;
+  _has_bits_[0] &= ~0x00000020u;
 }
 inline void SnapshotBasicData::clear_pricespread() {
   pricespread_ = 0;
@@ -5541,13 +2462,13 @@ inline void SnapshotBasicData::set_allocated_updatetime(::std::string* updatetim
 
 // required double highPrice = 8;
 inline bool SnapshotBasicData::has_highprice() const {
-  return (_has_bits_[0] & 0x00000400u) != 0;
+  return (_has_bits_[0] & 0x00000040u) != 0;
 }
 inline void SnapshotBasicData::set_has_highprice() {
-  _has_bits_[0] |= 0x00000400u;
+  _has_bits_[0] |= 0x00000040u;
 }
 inline void SnapshotBasicData::clear_has_highprice() {
-  _has_bits_[0] &= ~0x00000400u;
+  _has_bits_[0] &= ~0x00000040u;
 }
 inline void SnapshotBasicData::clear_highprice() {
   highprice_ = 0;
@@ -5565,13 +2486,13 @@ inline void SnapshotBasicData::set_highprice(double value) {
 
 // required double openPrice = 9;
 inline bool SnapshotBasicData::has_openprice() const {
-  return (_has_bits_[0] & 0x00000800u) != 0;
+  return (_has_bits_[0] & 0x00000080u) != 0;
 }
 inline void SnapshotBasicData::set_has_openprice() {
-  _has_bits_[0] |= 0x00000800u;
+  _has_bits_[0] |= 0x00000080u;
 }
 inline void SnapshotBasicData::clear_has_openprice() {
-  _has_bits_[0] &= ~0x00000800u;
+  _has_bits_[0] &= ~0x00000080u;
 }
 inline void SnapshotBasicData::clear_openprice() {
   openprice_ = 0;
@@ -5589,13 +2510,13 @@ inline void SnapshotBasicData::set_openprice(double value) {
 
 // required double lowPrice = 10;
 inline bool SnapshotBasicData::has_lowprice() const {
-  return (_has_bits_[0] & 0x00001000u) != 0;
+  return (_has_bits_[0] & 0x00000100u) != 0;
 }
 inline void SnapshotBasicData::set_has_lowprice() {
-  _has_bits_[0] |= 0x00001000u;
+  _has_bits_[0] |= 0x00000100u;
 }
 inline void SnapshotBasicData::clear_has_lowprice() {
-  _has_bits_[0] &= ~0x00001000u;
+  _has_bits_[0] &= ~0x00000100u;
 }
 inline void SnapshotBasicData::clear_lowprice() {
   lowprice_ = 0;
@@ -5613,13 +2534,13 @@ inline void SnapshotBasicData::set_lowprice(double value) {
 
 // required double lastClosePrice = 11;
 inline bool SnapshotBasicData::has_lastcloseprice() const {
-  return (_has_bits_[0] & 0x00002000u) != 0;
+  return (_has_bits_[0] & 0x00000200u) != 0;
 }
 inline void SnapshotBasicData::set_has_lastcloseprice() {
-  _has_bits_[0] |= 0x00002000u;
+  _has_bits_[0] |= 0x00000200u;
 }
 inline void SnapshotBasicData::clear_has_lastcloseprice() {
-  _has_bits_[0] &= ~0x00002000u;
+  _has_bits_[0] &= ~0x00000200u;
 }
 inline void SnapshotBasicData::clear_lastcloseprice() {
   lastcloseprice_ = 0;
@@ -5637,13 +2558,13 @@ inline void SnapshotBasicData::set_lastcloseprice(double value) {
 
 // required double curPrice = 12;
 inline bool SnapshotBasicData::has_curprice() const {
-  return (_has_bits_[0] & 0x00004000u) != 0;
+  return (_has_bits_[0] & 0x00000400u) != 0;
 }
 inline void SnapshotBasicData::set_has_curprice() {
-  _has_bits_[0] |= 0x00004000u;
+  _has_bits_[0] |= 0x00000400u;
 }
 inline void SnapshotBasicData::clear_has_curprice() {
-  _has_bits_[0] &= ~0x00004000u;
+  _has_bits_[0] &= ~0x00000400u;
 }
 inline void SnapshotBasicData::clear_curprice() {
   curprice_ = 0;
@@ -5661,13 +2582,13 @@ inline void SnapshotBasicData::set_curprice(double value) {
 
 // required int64 volume = 13;
 inline bool SnapshotBasicData::has_volume() const {
-  return (_has_bits_[0] & 0x00008000u) != 0;
+  return (_has_bits_[0] & 0x00000800u) != 0;
 }
 inline void SnapshotBasicData::set_has_volume() {
-  _has_bits_[0] |= 0x00008000u;
+  _has_bits_[0] |= 0x00000800u;
 }
 inline void SnapshotBasicData::clear_has_volume() {
-  _has_bits_[0] &= ~0x00008000u;
+  _has_bits_[0] &= ~0x00000800u;
 }
 inline void SnapshotBasicData::clear_volume() {
   volume_ = GOOGLE_LONGLONG(0);
@@ -5685,13 +2606,13 @@ inline void SnapshotBasicData::set_volume(::google::protobuf::int64 value) {
 
 // required double turnover = 14;
 inline bool SnapshotBasicData::has_turnover() const {
-  return (_has_bits_[0] & 0x00010000u) != 0;
+  return (_has_bits_[0] & 0x00001000u) != 0;
 }
 inline void SnapshotBasicData::set_has_turnover() {
-  _has_bits_[0] |= 0x00010000u;
+  _has_bits_[0] |= 0x00001000u;
 }
 inline void SnapshotBasicData::clear_has_turnover() {
-  _has_bits_[0] &= ~0x00010000u;
+  _has_bits_[0] &= ~0x00001000u;
 }
 inline void SnapshotBasicData::clear_turnover() {
   turnover_ = 0;
@@ -5709,13 +2630,13 @@ inline void SnapshotBasicData::set_turnover(double value) {
 
 // required double turnoverRate = 15;
 inline bool SnapshotBasicData::has_turnoverrate() const {
-  return (_has_bits_[0] & 0x00020000u) != 0;
+  return (_has_bits_[0] & 0x00002000u) != 0;
 }
 inline void SnapshotBasicData::set_has_turnoverrate() {
-  _has_bits_[0] |= 0x00020000u;
+  _has_bits_[0] |= 0x00002000u;
 }
 inline void SnapshotBasicData::clear_has_turnoverrate() {
-  _has_bits_[0] &= ~0x00020000u;
+  _has_bits_[0] &= ~0x00002000u;
 }
 inline void SnapshotBasicData::clear_turnoverrate() {
   turnoverrate_ = 0;
@@ -5729,708 +2650,6 @@ inline void SnapshotBasicData::set_turnoverrate(double value) {
   set_has_turnoverrate();
   turnoverrate_ = value;
   // @@protoc_insertion_point(field_set:Qot_GetSecuritySnapshot.SnapshotBasicData.turnoverRate)
-}
-
-// optional double listTimestamp = 16;
-inline bool SnapshotBasicData::has_listtimestamp() const {
-  return (_has_bits_[0] & 0x00040000u) != 0;
-}
-inline void SnapshotBasicData::set_has_listtimestamp() {
-  _has_bits_[0] |= 0x00040000u;
-}
-inline void SnapshotBasicData::clear_has_listtimestamp() {
-  _has_bits_[0] &= ~0x00040000u;
-}
-inline void SnapshotBasicData::clear_listtimestamp() {
-  listtimestamp_ = 0;
-  clear_has_listtimestamp();
-}
-inline double SnapshotBasicData::listtimestamp() const {
-  // @@protoc_insertion_point(field_get:Qot_GetSecuritySnapshot.SnapshotBasicData.listTimestamp)
-  return listtimestamp_;
-}
-inline void SnapshotBasicData::set_listtimestamp(double value) {
-  set_has_listtimestamp();
-  listtimestamp_ = value;
-  // @@protoc_insertion_point(field_set:Qot_GetSecuritySnapshot.SnapshotBasicData.listTimestamp)
-}
-
-// optional double updateTimestamp = 17;
-inline bool SnapshotBasicData::has_updatetimestamp() const {
-  return (_has_bits_[0] & 0x00080000u) != 0;
-}
-inline void SnapshotBasicData::set_has_updatetimestamp() {
-  _has_bits_[0] |= 0x00080000u;
-}
-inline void SnapshotBasicData::clear_has_updatetimestamp() {
-  _has_bits_[0] &= ~0x00080000u;
-}
-inline void SnapshotBasicData::clear_updatetimestamp() {
-  updatetimestamp_ = 0;
-  clear_has_updatetimestamp();
-}
-inline double SnapshotBasicData::updatetimestamp() const {
-  // @@protoc_insertion_point(field_get:Qot_GetSecuritySnapshot.SnapshotBasicData.updateTimestamp)
-  return updatetimestamp_;
-}
-inline void SnapshotBasicData::set_updatetimestamp(double value) {
-  set_has_updatetimestamp();
-  updatetimestamp_ = value;
-  // @@protoc_insertion_point(field_set:Qot_GetSecuritySnapshot.SnapshotBasicData.updateTimestamp)
-}
-
-// optional double askPrice = 18;
-inline bool SnapshotBasicData::has_askprice() const {
-  return (_has_bits_[0] & 0x00100000u) != 0;
-}
-inline void SnapshotBasicData::set_has_askprice() {
-  _has_bits_[0] |= 0x00100000u;
-}
-inline void SnapshotBasicData::clear_has_askprice() {
-  _has_bits_[0] &= ~0x00100000u;
-}
-inline void SnapshotBasicData::clear_askprice() {
-  askprice_ = 0;
-  clear_has_askprice();
-}
-inline double SnapshotBasicData::askprice() const {
-  // @@protoc_insertion_point(field_get:Qot_GetSecuritySnapshot.SnapshotBasicData.askPrice)
-  return askprice_;
-}
-inline void SnapshotBasicData::set_askprice(double value) {
-  set_has_askprice();
-  askprice_ = value;
-  // @@protoc_insertion_point(field_set:Qot_GetSecuritySnapshot.SnapshotBasicData.askPrice)
-}
-
-// optional double bidPrice = 19;
-inline bool SnapshotBasicData::has_bidprice() const {
-  return (_has_bits_[0] & 0x00200000u) != 0;
-}
-inline void SnapshotBasicData::set_has_bidprice() {
-  _has_bits_[0] |= 0x00200000u;
-}
-inline void SnapshotBasicData::clear_has_bidprice() {
-  _has_bits_[0] &= ~0x00200000u;
-}
-inline void SnapshotBasicData::clear_bidprice() {
-  bidprice_ = 0;
-  clear_has_bidprice();
-}
-inline double SnapshotBasicData::bidprice() const {
-  // @@protoc_insertion_point(field_get:Qot_GetSecuritySnapshot.SnapshotBasicData.bidPrice)
-  return bidprice_;
-}
-inline void SnapshotBasicData::set_bidprice(double value) {
-  set_has_bidprice();
-  bidprice_ = value;
-  // @@protoc_insertion_point(field_set:Qot_GetSecuritySnapshot.SnapshotBasicData.bidPrice)
-}
-
-// optional int64 askVol = 20;
-inline bool SnapshotBasicData::has_askvol() const {
-  return (_has_bits_[0] & 0x00400000u) != 0;
-}
-inline void SnapshotBasicData::set_has_askvol() {
-  _has_bits_[0] |= 0x00400000u;
-}
-inline void SnapshotBasicData::clear_has_askvol() {
-  _has_bits_[0] &= ~0x00400000u;
-}
-inline void SnapshotBasicData::clear_askvol() {
-  askvol_ = GOOGLE_LONGLONG(0);
-  clear_has_askvol();
-}
-inline ::google::protobuf::int64 SnapshotBasicData::askvol() const {
-  // @@protoc_insertion_point(field_get:Qot_GetSecuritySnapshot.SnapshotBasicData.askVol)
-  return askvol_;
-}
-inline void SnapshotBasicData::set_askvol(::google::protobuf::int64 value) {
-  set_has_askvol();
-  askvol_ = value;
-  // @@protoc_insertion_point(field_set:Qot_GetSecuritySnapshot.SnapshotBasicData.askVol)
-}
-
-// optional int64 bidVol = 21;
-inline bool SnapshotBasicData::has_bidvol() const {
-  return (_has_bits_[0] & 0x00800000u) != 0;
-}
-inline void SnapshotBasicData::set_has_bidvol() {
-  _has_bits_[0] |= 0x00800000u;
-}
-inline void SnapshotBasicData::clear_has_bidvol() {
-  _has_bits_[0] &= ~0x00800000u;
-}
-inline void SnapshotBasicData::clear_bidvol() {
-  bidvol_ = GOOGLE_LONGLONG(0);
-  clear_has_bidvol();
-}
-inline ::google::protobuf::int64 SnapshotBasicData::bidvol() const {
-  // @@protoc_insertion_point(field_get:Qot_GetSecuritySnapshot.SnapshotBasicData.bidVol)
-  return bidvol_;
-}
-inline void SnapshotBasicData::set_bidvol(::google::protobuf::int64 value) {
-  set_has_bidvol();
-  bidvol_ = value;
-  // @@protoc_insertion_point(field_set:Qot_GetSecuritySnapshot.SnapshotBasicData.bidVol)
-}
-
-// optional bool enableMargin = 22;
-inline bool SnapshotBasicData::has_enablemargin() const {
-  return (_has_bits_[0] & 0x02000000u) != 0;
-}
-inline void SnapshotBasicData::set_has_enablemargin() {
-  _has_bits_[0] |= 0x02000000u;
-}
-inline void SnapshotBasicData::clear_has_enablemargin() {
-  _has_bits_[0] &= ~0x02000000u;
-}
-inline void SnapshotBasicData::clear_enablemargin() {
-  enablemargin_ = false;
-  clear_has_enablemargin();
-}
-inline bool SnapshotBasicData::enablemargin() const {
-  // @@protoc_insertion_point(field_get:Qot_GetSecuritySnapshot.SnapshotBasicData.enableMargin)
-  return enablemargin_;
-}
-inline void SnapshotBasicData::set_enablemargin(bool value) {
-  set_has_enablemargin();
-  enablemargin_ = value;
-  // @@protoc_insertion_point(field_set:Qot_GetSecuritySnapshot.SnapshotBasicData.enableMargin)
-}
-
-// optional double mortgageRatio = 23;
-inline bool SnapshotBasicData::has_mortgageratio() const {
-  return (_has_bits_[0] & 0x10000000u) != 0;
-}
-inline void SnapshotBasicData::set_has_mortgageratio() {
-  _has_bits_[0] |= 0x10000000u;
-}
-inline void SnapshotBasicData::clear_has_mortgageratio() {
-  _has_bits_[0] &= ~0x10000000u;
-}
-inline void SnapshotBasicData::clear_mortgageratio() {
-  mortgageratio_ = 0;
-  clear_has_mortgageratio();
-}
-inline double SnapshotBasicData::mortgageratio() const {
-  // @@protoc_insertion_point(field_get:Qot_GetSecuritySnapshot.SnapshotBasicData.mortgageRatio)
-  return mortgageratio_;
-}
-inline void SnapshotBasicData::set_mortgageratio(double value) {
-  set_has_mortgageratio();
-  mortgageratio_ = value;
-  // @@protoc_insertion_point(field_set:Qot_GetSecuritySnapshot.SnapshotBasicData.mortgageRatio)
-}
-
-// optional double longMarginInitialRatio = 24;
-inline bool SnapshotBasicData::has_longmargininitialratio() const {
-  return (_has_bits_[0] & 0x20000000u) != 0;
-}
-inline void SnapshotBasicData::set_has_longmargininitialratio() {
-  _has_bits_[0] |= 0x20000000u;
-}
-inline void SnapshotBasicData::clear_has_longmargininitialratio() {
-  _has_bits_[0] &= ~0x20000000u;
-}
-inline void SnapshotBasicData::clear_longmargininitialratio() {
-  longmargininitialratio_ = 0;
-  clear_has_longmargininitialratio();
-}
-inline double SnapshotBasicData::longmargininitialratio() const {
-  // @@protoc_insertion_point(field_get:Qot_GetSecuritySnapshot.SnapshotBasicData.longMarginInitialRatio)
-  return longmargininitialratio_;
-}
-inline void SnapshotBasicData::set_longmargininitialratio(double value) {
-  set_has_longmargininitialratio();
-  longmargininitialratio_ = value;
-  // @@protoc_insertion_point(field_set:Qot_GetSecuritySnapshot.SnapshotBasicData.longMarginInitialRatio)
-}
-
-// optional bool enableShortSell = 25;
-inline bool SnapshotBasicData::has_enableshortsell() const {
-  return (_has_bits_[0] & 0x04000000u) != 0;
-}
-inline void SnapshotBasicData::set_has_enableshortsell() {
-  _has_bits_[0] |= 0x04000000u;
-}
-inline void SnapshotBasicData::clear_has_enableshortsell() {
-  _has_bits_[0] &= ~0x04000000u;
-}
-inline void SnapshotBasicData::clear_enableshortsell() {
-  enableshortsell_ = false;
-  clear_has_enableshortsell();
-}
-inline bool SnapshotBasicData::enableshortsell() const {
-  // @@protoc_insertion_point(field_get:Qot_GetSecuritySnapshot.SnapshotBasicData.enableShortSell)
-  return enableshortsell_;
-}
-inline void SnapshotBasicData::set_enableshortsell(bool value) {
-  set_has_enableshortsell();
-  enableshortsell_ = value;
-  // @@protoc_insertion_point(field_set:Qot_GetSecuritySnapshot.SnapshotBasicData.enableShortSell)
-}
-
-// optional double shortSellRate = 26;
-inline bool SnapshotBasicData::has_shortsellrate() const {
-  return (_has_bits_[0] & 0x40000000u) != 0;
-}
-inline void SnapshotBasicData::set_has_shortsellrate() {
-  _has_bits_[0] |= 0x40000000u;
-}
-inline void SnapshotBasicData::clear_has_shortsellrate() {
-  _has_bits_[0] &= ~0x40000000u;
-}
-inline void SnapshotBasicData::clear_shortsellrate() {
-  shortsellrate_ = 0;
-  clear_has_shortsellrate();
-}
-inline double SnapshotBasicData::shortsellrate() const {
-  // @@protoc_insertion_point(field_get:Qot_GetSecuritySnapshot.SnapshotBasicData.shortSellRate)
-  return shortsellrate_;
-}
-inline void SnapshotBasicData::set_shortsellrate(double value) {
-  set_has_shortsellrate();
-  shortsellrate_ = value;
-  // @@protoc_insertion_point(field_set:Qot_GetSecuritySnapshot.SnapshotBasicData.shortSellRate)
-}
-
-// optional int64 shortAvailableVolume = 27;
-inline bool SnapshotBasicData::has_shortavailablevolume() const {
-  return (_has_bits_[0] & 0x80000000u) != 0;
-}
-inline void SnapshotBasicData::set_has_shortavailablevolume() {
-  _has_bits_[0] |= 0x80000000u;
-}
-inline void SnapshotBasicData::clear_has_shortavailablevolume() {
-  _has_bits_[0] &= ~0x80000000u;
-}
-inline void SnapshotBasicData::clear_shortavailablevolume() {
-  shortavailablevolume_ = GOOGLE_LONGLONG(0);
-  clear_has_shortavailablevolume();
-}
-inline ::google::protobuf::int64 SnapshotBasicData::shortavailablevolume() const {
-  // @@protoc_insertion_point(field_get:Qot_GetSecuritySnapshot.SnapshotBasicData.shortAvailableVolume)
-  return shortavailablevolume_;
-}
-inline void SnapshotBasicData::set_shortavailablevolume(::google::protobuf::int64 value) {
-  set_has_shortavailablevolume();
-  shortavailablevolume_ = value;
-  // @@protoc_insertion_point(field_set:Qot_GetSecuritySnapshot.SnapshotBasicData.shortAvailableVolume)
-}
-
-// optional double shortMarginInitialRatio = 28;
-inline bool SnapshotBasicData::has_shortmargininitialratio() const {
-  return (_has_bits_[1] & 0x00000001u) != 0;
-}
-inline void SnapshotBasicData::set_has_shortmargininitialratio() {
-  _has_bits_[1] |= 0x00000001u;
-}
-inline void SnapshotBasicData::clear_has_shortmargininitialratio() {
-  _has_bits_[1] &= ~0x00000001u;
-}
-inline void SnapshotBasicData::clear_shortmargininitialratio() {
-  shortmargininitialratio_ = 0;
-  clear_has_shortmargininitialratio();
-}
-inline double SnapshotBasicData::shortmargininitialratio() const {
-  // @@protoc_insertion_point(field_get:Qot_GetSecuritySnapshot.SnapshotBasicData.shortMarginInitialRatio)
-  return shortmargininitialratio_;
-}
-inline void SnapshotBasicData::set_shortmargininitialratio(double value) {
-  set_has_shortmargininitialratio();
-  shortmargininitialratio_ = value;
-  // @@protoc_insertion_point(field_set:Qot_GetSecuritySnapshot.SnapshotBasicData.shortMarginInitialRatio)
-}
-
-// optional double amplitude = 29;
-inline bool SnapshotBasicData::has_amplitude() const {
-  return (_has_bits_[1] & 0x00000002u) != 0;
-}
-inline void SnapshotBasicData::set_has_amplitude() {
-  _has_bits_[1] |= 0x00000002u;
-}
-inline void SnapshotBasicData::clear_has_amplitude() {
-  _has_bits_[1] &= ~0x00000002u;
-}
-inline void SnapshotBasicData::clear_amplitude() {
-  amplitude_ = 0;
-  clear_has_amplitude();
-}
-inline double SnapshotBasicData::amplitude() const {
-  // @@protoc_insertion_point(field_get:Qot_GetSecuritySnapshot.SnapshotBasicData.amplitude)
-  return amplitude_;
-}
-inline void SnapshotBasicData::set_amplitude(double value) {
-  set_has_amplitude();
-  amplitude_ = value;
-  // @@protoc_insertion_point(field_set:Qot_GetSecuritySnapshot.SnapshotBasicData.amplitude)
-}
-
-// optional double avgPrice = 30;
-inline bool SnapshotBasicData::has_avgprice() const {
-  return (_has_bits_[1] & 0x00000004u) != 0;
-}
-inline void SnapshotBasicData::set_has_avgprice() {
-  _has_bits_[1] |= 0x00000004u;
-}
-inline void SnapshotBasicData::clear_has_avgprice() {
-  _has_bits_[1] &= ~0x00000004u;
-}
-inline void SnapshotBasicData::clear_avgprice() {
-  avgprice_ = 0;
-  clear_has_avgprice();
-}
-inline double SnapshotBasicData::avgprice() const {
-  // @@protoc_insertion_point(field_get:Qot_GetSecuritySnapshot.SnapshotBasicData.avgPrice)
-  return avgprice_;
-}
-inline void SnapshotBasicData::set_avgprice(double value) {
-  set_has_avgprice();
-  avgprice_ = value;
-  // @@protoc_insertion_point(field_set:Qot_GetSecuritySnapshot.SnapshotBasicData.avgPrice)
-}
-
-// optional double bidAskRatio = 31;
-inline bool SnapshotBasicData::has_bidaskratio() const {
-  return (_has_bits_[1] & 0x00000008u) != 0;
-}
-inline void SnapshotBasicData::set_has_bidaskratio() {
-  _has_bits_[1] |= 0x00000008u;
-}
-inline void SnapshotBasicData::clear_has_bidaskratio() {
-  _has_bits_[1] &= ~0x00000008u;
-}
-inline void SnapshotBasicData::clear_bidaskratio() {
-  bidaskratio_ = 0;
-  clear_has_bidaskratio();
-}
-inline double SnapshotBasicData::bidaskratio() const {
-  // @@protoc_insertion_point(field_get:Qot_GetSecuritySnapshot.SnapshotBasicData.bidAskRatio)
-  return bidaskratio_;
-}
-inline void SnapshotBasicData::set_bidaskratio(double value) {
-  set_has_bidaskratio();
-  bidaskratio_ = value;
-  // @@protoc_insertion_point(field_set:Qot_GetSecuritySnapshot.SnapshotBasicData.bidAskRatio)
-}
-
-// optional double volumeRatio = 32;
-inline bool SnapshotBasicData::has_volumeratio() const {
-  return (_has_bits_[1] & 0x00000010u) != 0;
-}
-inline void SnapshotBasicData::set_has_volumeratio() {
-  _has_bits_[1] |= 0x00000010u;
-}
-inline void SnapshotBasicData::clear_has_volumeratio() {
-  _has_bits_[1] &= ~0x00000010u;
-}
-inline void SnapshotBasicData::clear_volumeratio() {
-  volumeratio_ = 0;
-  clear_has_volumeratio();
-}
-inline double SnapshotBasicData::volumeratio() const {
-  // @@protoc_insertion_point(field_get:Qot_GetSecuritySnapshot.SnapshotBasicData.volumeRatio)
-  return volumeratio_;
-}
-inline void SnapshotBasicData::set_volumeratio(double value) {
-  set_has_volumeratio();
-  volumeratio_ = value;
-  // @@protoc_insertion_point(field_set:Qot_GetSecuritySnapshot.SnapshotBasicData.volumeRatio)
-}
-
-// optional double highest52WeeksPrice = 33;
-inline bool SnapshotBasicData::has_highest52weeksprice() const {
-  return (_has_bits_[1] & 0x00000020u) != 0;
-}
-inline void SnapshotBasicData::set_has_highest52weeksprice() {
-  _has_bits_[1] |= 0x00000020u;
-}
-inline void SnapshotBasicData::clear_has_highest52weeksprice() {
-  _has_bits_[1] &= ~0x00000020u;
-}
-inline void SnapshotBasicData::clear_highest52weeksprice() {
-  highest52weeksprice_ = 0;
-  clear_has_highest52weeksprice();
-}
-inline double SnapshotBasicData::highest52weeksprice() const {
-  // @@protoc_insertion_point(field_get:Qot_GetSecuritySnapshot.SnapshotBasicData.highest52WeeksPrice)
-  return highest52weeksprice_;
-}
-inline void SnapshotBasicData::set_highest52weeksprice(double value) {
-  set_has_highest52weeksprice();
-  highest52weeksprice_ = value;
-  // @@protoc_insertion_point(field_set:Qot_GetSecuritySnapshot.SnapshotBasicData.highest52WeeksPrice)
-}
-
-// optional double lowest52WeeksPrice = 34;
-inline bool SnapshotBasicData::has_lowest52weeksprice() const {
-  return (_has_bits_[1] & 0x00000040u) != 0;
-}
-inline void SnapshotBasicData::set_has_lowest52weeksprice() {
-  _has_bits_[1] |= 0x00000040u;
-}
-inline void SnapshotBasicData::clear_has_lowest52weeksprice() {
-  _has_bits_[1] &= ~0x00000040u;
-}
-inline void SnapshotBasicData::clear_lowest52weeksprice() {
-  lowest52weeksprice_ = 0;
-  clear_has_lowest52weeksprice();
-}
-inline double SnapshotBasicData::lowest52weeksprice() const {
-  // @@protoc_insertion_point(field_get:Qot_GetSecuritySnapshot.SnapshotBasicData.lowest52WeeksPrice)
-  return lowest52weeksprice_;
-}
-inline void SnapshotBasicData::set_lowest52weeksprice(double value) {
-  set_has_lowest52weeksprice();
-  lowest52weeksprice_ = value;
-  // @@protoc_insertion_point(field_set:Qot_GetSecuritySnapshot.SnapshotBasicData.lowest52WeeksPrice)
-}
-
-// optional double highestHistoryPrice = 35;
-inline bool SnapshotBasicData::has_highesthistoryprice() const {
-  return (_has_bits_[1] & 0x00000080u) != 0;
-}
-inline void SnapshotBasicData::set_has_highesthistoryprice() {
-  _has_bits_[1] |= 0x00000080u;
-}
-inline void SnapshotBasicData::clear_has_highesthistoryprice() {
-  _has_bits_[1] &= ~0x00000080u;
-}
-inline void SnapshotBasicData::clear_highesthistoryprice() {
-  highesthistoryprice_ = 0;
-  clear_has_highesthistoryprice();
-}
-inline double SnapshotBasicData::highesthistoryprice() const {
-  // @@protoc_insertion_point(field_get:Qot_GetSecuritySnapshot.SnapshotBasicData.highestHistoryPrice)
-  return highesthistoryprice_;
-}
-inline void SnapshotBasicData::set_highesthistoryprice(double value) {
-  set_has_highesthistoryprice();
-  highesthistoryprice_ = value;
-  // @@protoc_insertion_point(field_set:Qot_GetSecuritySnapshot.SnapshotBasicData.highestHistoryPrice)
-}
-
-// optional double lowestHistoryPrice = 36;
-inline bool SnapshotBasicData::has_lowesthistoryprice() const {
-  return (_has_bits_[1] & 0x00000100u) != 0;
-}
-inline void SnapshotBasicData::set_has_lowesthistoryprice() {
-  _has_bits_[1] |= 0x00000100u;
-}
-inline void SnapshotBasicData::clear_has_lowesthistoryprice() {
-  _has_bits_[1] &= ~0x00000100u;
-}
-inline void SnapshotBasicData::clear_lowesthistoryprice() {
-  lowesthistoryprice_ = 0;
-  clear_has_lowesthistoryprice();
-}
-inline double SnapshotBasicData::lowesthistoryprice() const {
-  // @@protoc_insertion_point(field_get:Qot_GetSecuritySnapshot.SnapshotBasicData.lowestHistoryPrice)
-  return lowesthistoryprice_;
-}
-inline void SnapshotBasicData::set_lowesthistoryprice(double value) {
-  set_has_lowesthistoryprice();
-  lowesthistoryprice_ = value;
-  // @@protoc_insertion_point(field_set:Qot_GetSecuritySnapshot.SnapshotBasicData.lowestHistoryPrice)
-}
-
-// optional .Qot_Common.PreAfterMarketData preMarket = 37;
-inline bool SnapshotBasicData::has_premarket() const {
-  return (_has_bits_[0] & 0x00000010u) != 0;
-}
-inline void SnapshotBasicData::set_has_premarket() {
-  _has_bits_[0] |= 0x00000010u;
-}
-inline void SnapshotBasicData::clear_has_premarket() {
-  _has_bits_[0] &= ~0x00000010u;
-}
-inline const ::Qot_Common::PreAfterMarketData& SnapshotBasicData::premarket() const {
-  const ::Qot_Common::PreAfterMarketData* p = premarket_;
-  // @@protoc_insertion_point(field_get:Qot_GetSecuritySnapshot.SnapshotBasicData.preMarket)
-  return p != NULL ? *p : *reinterpret_cast<const ::Qot_Common::PreAfterMarketData*>(
-      &::Qot_Common::_PreAfterMarketData_default_instance_);
-}
-inline ::Qot_Common::PreAfterMarketData* SnapshotBasicData::release_premarket() {
-  // @@protoc_insertion_point(field_release:Qot_GetSecuritySnapshot.SnapshotBasicData.preMarket)
-  clear_has_premarket();
-  ::Qot_Common::PreAfterMarketData* temp = premarket_;
-  premarket_ = NULL;
-  return temp;
-}
-inline ::Qot_Common::PreAfterMarketData* SnapshotBasicData::mutable_premarket() {
-  set_has_premarket();
-  if (premarket_ == NULL) {
-    premarket_ = new ::Qot_Common::PreAfterMarketData;
-  }
-  // @@protoc_insertion_point(field_mutable:Qot_GetSecuritySnapshot.SnapshotBasicData.preMarket)
-  return premarket_;
-}
-inline void SnapshotBasicData::set_allocated_premarket(::Qot_Common::PreAfterMarketData* premarket) {
-  ::google::protobuf::Arena* message_arena = GetArenaNoVirtual();
-  if (message_arena == NULL) {
-    delete reinterpret_cast< ::google::protobuf::MessageLite*>(premarket_);
-  }
-  if (premarket) {
-    ::google::protobuf::Arena* submessage_arena = NULL;
-    if (message_arena != submessage_arena) {
-      premarket = ::google::protobuf::internal::GetOwnedMessage(
-          message_arena, premarket, submessage_arena);
-    }
-    set_has_premarket();
-  } else {
-    clear_has_premarket();
-  }
-  premarket_ = premarket;
-  // @@protoc_insertion_point(field_set_allocated:Qot_GetSecuritySnapshot.SnapshotBasicData.preMarket)
-}
-
-// optional .Qot_Common.PreAfterMarketData afterMarket = 38;
-inline bool SnapshotBasicData::has_aftermarket() const {
-  return (_has_bits_[0] & 0x00000020u) != 0;
-}
-inline void SnapshotBasicData::set_has_aftermarket() {
-  _has_bits_[0] |= 0x00000020u;
-}
-inline void SnapshotBasicData::clear_has_aftermarket() {
-  _has_bits_[0] &= ~0x00000020u;
-}
-inline const ::Qot_Common::PreAfterMarketData& SnapshotBasicData::aftermarket() const {
-  const ::Qot_Common::PreAfterMarketData* p = aftermarket_;
-  // @@protoc_insertion_point(field_get:Qot_GetSecuritySnapshot.SnapshotBasicData.afterMarket)
-  return p != NULL ? *p : *reinterpret_cast<const ::Qot_Common::PreAfterMarketData*>(
-      &::Qot_Common::_PreAfterMarketData_default_instance_);
-}
-inline ::Qot_Common::PreAfterMarketData* SnapshotBasicData::release_aftermarket() {
-  // @@protoc_insertion_point(field_release:Qot_GetSecuritySnapshot.SnapshotBasicData.afterMarket)
-  clear_has_aftermarket();
-  ::Qot_Common::PreAfterMarketData* temp = aftermarket_;
-  aftermarket_ = NULL;
-  return temp;
-}
-inline ::Qot_Common::PreAfterMarketData* SnapshotBasicData::mutable_aftermarket() {
-  set_has_aftermarket();
-  if (aftermarket_ == NULL) {
-    aftermarket_ = new ::Qot_Common::PreAfterMarketData;
-  }
-  // @@protoc_insertion_point(field_mutable:Qot_GetSecuritySnapshot.SnapshotBasicData.afterMarket)
-  return aftermarket_;
-}
-inline void SnapshotBasicData::set_allocated_aftermarket(::Qot_Common::PreAfterMarketData* aftermarket) {
-  ::google::protobuf::Arena* message_arena = GetArenaNoVirtual();
-  if (message_arena == NULL) {
-    delete reinterpret_cast< ::google::protobuf::MessageLite*>(aftermarket_);
-  }
-  if (aftermarket) {
-    ::google::protobuf::Arena* submessage_arena = NULL;
-    if (message_arena != submessage_arena) {
-      aftermarket = ::google::protobuf::internal::GetOwnedMessage(
-          message_arena, aftermarket, submessage_arena);
-    }
-    set_has_aftermarket();
-  } else {
-    clear_has_aftermarket();
-  }
-  aftermarket_ = aftermarket;
-  // @@protoc_insertion_point(field_set_allocated:Qot_GetSecuritySnapshot.SnapshotBasicData.afterMarket)
-}
-
-// optional int32 secStatus = 39;
-inline bool SnapshotBasicData::has_secstatus() const {
-  return (_has_bits_[0] & 0x08000000u) != 0;
-}
-inline void SnapshotBasicData::set_has_secstatus() {
-  _has_bits_[0] |= 0x08000000u;
-}
-inline void SnapshotBasicData::clear_has_secstatus() {
-  _has_bits_[0] &= ~0x08000000u;
-}
-inline void SnapshotBasicData::clear_secstatus() {
-  secstatus_ = 0;
-  clear_has_secstatus();
-}
-inline ::google::protobuf::int32 SnapshotBasicData::secstatus() const {
-  // @@protoc_insertion_point(field_get:Qot_GetSecuritySnapshot.SnapshotBasicData.secStatus)
-  return secstatus_;
-}
-inline void SnapshotBasicData::set_secstatus(::google::protobuf::int32 value) {
-  set_has_secstatus();
-  secstatus_ = value;
-  // @@protoc_insertion_point(field_set:Qot_GetSecuritySnapshot.SnapshotBasicData.secStatus)
-}
-
-// optional double closePrice5Minute = 40;
-inline bool SnapshotBasicData::has_closeprice5minute() const {
-  return (_has_bits_[1] & 0x00000200u) != 0;
-}
-inline void SnapshotBasicData::set_has_closeprice5minute() {
-  _has_bits_[1] |= 0x00000200u;
-}
-inline void SnapshotBasicData::clear_has_closeprice5minute() {
-  _has_bits_[1] &= ~0x00000200u;
-}
-inline void SnapshotBasicData::clear_closeprice5minute() {
-  closeprice5minute_ = 0;
-  clear_has_closeprice5minute();
-}
-inline double SnapshotBasicData::closeprice5minute() const {
-  // @@protoc_insertion_point(field_get:Qot_GetSecuritySnapshot.SnapshotBasicData.closePrice5Minute)
-  return closeprice5minute_;
-}
-inline void SnapshotBasicData::set_closeprice5minute(double value) {
-  set_has_closeprice5minute();
-  closeprice5minute_ = value;
-  // @@protoc_insertion_point(field_set:Qot_GetSecuritySnapshot.SnapshotBasicData.closePrice5Minute)
-}
-
-// optional .Qot_Common.PreAfterMarketData overnight = 42;
-inline bool SnapshotBasicData::has_overnight() const {
-  return (_has_bits_[0] & 0x00000040u) != 0;
-}
-inline void SnapshotBasicData::set_has_overnight() {
-  _has_bits_[0] |= 0x00000040u;
-}
-inline void SnapshotBasicData::clear_has_overnight() {
-  _has_bits_[0] &= ~0x00000040u;
-}
-inline const ::Qot_Common::PreAfterMarketData& SnapshotBasicData::overnight() const {
-  const ::Qot_Common::PreAfterMarketData* p = overnight_;
-  // @@protoc_insertion_point(field_get:Qot_GetSecuritySnapshot.SnapshotBasicData.overnight)
-  return p != NULL ? *p : *reinterpret_cast<const ::Qot_Common::PreAfterMarketData*>(
-      &::Qot_Common::_PreAfterMarketData_default_instance_);
-}
-inline ::Qot_Common::PreAfterMarketData* SnapshotBasicData::release_overnight() {
-  // @@protoc_insertion_point(field_release:Qot_GetSecuritySnapshot.SnapshotBasicData.overnight)
-  clear_has_overnight();
-  ::Qot_Common::PreAfterMarketData* temp = overnight_;
-  overnight_ = NULL;
-  return temp;
-}
-inline ::Qot_Common::PreAfterMarketData* SnapshotBasicData::mutable_overnight() {
-  set_has_overnight();
-  if (overnight_ == NULL) {
-    overnight_ = new ::Qot_Common::PreAfterMarketData;
-  }
-  // @@protoc_insertion_point(field_mutable:Qot_GetSecuritySnapshot.SnapshotBasicData.overnight)
-  return overnight_;
-}
-inline void SnapshotBasicData::set_allocated_overnight(::Qot_Common::PreAfterMarketData* overnight) {
-  ::google::protobuf::Arena* message_arena = GetArenaNoVirtual();
-  if (message_arena == NULL) {
-    delete reinterpret_cast< ::google::protobuf::MessageLite*>(overnight_);
-  }
-  if (overnight) {
-    ::google::protobuf::Arena* submessage_arena = NULL;
-    if (message_arena != submessage_arena) {
-      overnight = ::google::protobuf::internal::GetOwnedMessage(
-          message_arena, overnight, submessage_arena);
-    }
-    set_has_overnight();
-  } else {
-    clear_has_overnight();
-  }
-  overnight_ = overnight;
-  // @@protoc_insertion_point(field_set_allocated:Qot_GetSecuritySnapshot.SnapshotBasicData.overnight)
 }
 
 // -------------------------------------------------------------------
@@ -6597,276 +2816,6 @@ inline void Snapshot::set_allocated_warrantexdata(::Qot_GetSecuritySnapshot::War
   }
   warrantexdata_ = warrantexdata;
   // @@protoc_insertion_point(field_set_allocated:Qot_GetSecuritySnapshot.Snapshot.warrantExData)
-}
-
-// optional .Qot_GetSecuritySnapshot.OptionSnapshotExData optionExData = 4;
-inline bool Snapshot::has_optionexdata() const {
-  return (_has_bits_[0] & 0x00000008u) != 0;
-}
-inline void Snapshot::set_has_optionexdata() {
-  _has_bits_[0] |= 0x00000008u;
-}
-inline void Snapshot::clear_has_optionexdata() {
-  _has_bits_[0] &= ~0x00000008u;
-}
-inline void Snapshot::clear_optionexdata() {
-  if (optionexdata_ != NULL) optionexdata_->Clear();
-  clear_has_optionexdata();
-}
-inline const ::Qot_GetSecuritySnapshot::OptionSnapshotExData& Snapshot::optionexdata() const {
-  const ::Qot_GetSecuritySnapshot::OptionSnapshotExData* p = optionexdata_;
-  // @@protoc_insertion_point(field_get:Qot_GetSecuritySnapshot.Snapshot.optionExData)
-  return p != NULL ? *p : *reinterpret_cast<const ::Qot_GetSecuritySnapshot::OptionSnapshotExData*>(
-      &::Qot_GetSecuritySnapshot::_OptionSnapshotExData_default_instance_);
-}
-inline ::Qot_GetSecuritySnapshot::OptionSnapshotExData* Snapshot::release_optionexdata() {
-  // @@protoc_insertion_point(field_release:Qot_GetSecuritySnapshot.Snapshot.optionExData)
-  clear_has_optionexdata();
-  ::Qot_GetSecuritySnapshot::OptionSnapshotExData* temp = optionexdata_;
-  optionexdata_ = NULL;
-  return temp;
-}
-inline ::Qot_GetSecuritySnapshot::OptionSnapshotExData* Snapshot::mutable_optionexdata() {
-  set_has_optionexdata();
-  if (optionexdata_ == NULL) {
-    optionexdata_ = new ::Qot_GetSecuritySnapshot::OptionSnapshotExData;
-  }
-  // @@protoc_insertion_point(field_mutable:Qot_GetSecuritySnapshot.Snapshot.optionExData)
-  return optionexdata_;
-}
-inline void Snapshot::set_allocated_optionexdata(::Qot_GetSecuritySnapshot::OptionSnapshotExData* optionexdata) {
-  ::google::protobuf::Arena* message_arena = GetArenaNoVirtual();
-  if (message_arena == NULL) {
-    delete optionexdata_;
-  }
-  if (optionexdata) {
-    ::google::protobuf::Arena* submessage_arena = NULL;
-    if (message_arena != submessage_arena) {
-      optionexdata = ::google::protobuf::internal::GetOwnedMessage(
-          message_arena, optionexdata, submessage_arena);
-    }
-    set_has_optionexdata();
-  } else {
-    clear_has_optionexdata();
-  }
-  optionexdata_ = optionexdata;
-  // @@protoc_insertion_point(field_set_allocated:Qot_GetSecuritySnapshot.Snapshot.optionExData)
-}
-
-// optional .Qot_GetSecuritySnapshot.IndexSnapshotExData indexExData = 5;
-inline bool Snapshot::has_indexexdata() const {
-  return (_has_bits_[0] & 0x00000010u) != 0;
-}
-inline void Snapshot::set_has_indexexdata() {
-  _has_bits_[0] |= 0x00000010u;
-}
-inline void Snapshot::clear_has_indexexdata() {
-  _has_bits_[0] &= ~0x00000010u;
-}
-inline void Snapshot::clear_indexexdata() {
-  if (indexexdata_ != NULL) indexexdata_->Clear();
-  clear_has_indexexdata();
-}
-inline const ::Qot_GetSecuritySnapshot::IndexSnapshotExData& Snapshot::indexexdata() const {
-  const ::Qot_GetSecuritySnapshot::IndexSnapshotExData* p = indexexdata_;
-  // @@protoc_insertion_point(field_get:Qot_GetSecuritySnapshot.Snapshot.indexExData)
-  return p != NULL ? *p : *reinterpret_cast<const ::Qot_GetSecuritySnapshot::IndexSnapshotExData*>(
-      &::Qot_GetSecuritySnapshot::_IndexSnapshotExData_default_instance_);
-}
-inline ::Qot_GetSecuritySnapshot::IndexSnapshotExData* Snapshot::release_indexexdata() {
-  // @@protoc_insertion_point(field_release:Qot_GetSecuritySnapshot.Snapshot.indexExData)
-  clear_has_indexexdata();
-  ::Qot_GetSecuritySnapshot::IndexSnapshotExData* temp = indexexdata_;
-  indexexdata_ = NULL;
-  return temp;
-}
-inline ::Qot_GetSecuritySnapshot::IndexSnapshotExData* Snapshot::mutable_indexexdata() {
-  set_has_indexexdata();
-  if (indexexdata_ == NULL) {
-    indexexdata_ = new ::Qot_GetSecuritySnapshot::IndexSnapshotExData;
-  }
-  // @@protoc_insertion_point(field_mutable:Qot_GetSecuritySnapshot.Snapshot.indexExData)
-  return indexexdata_;
-}
-inline void Snapshot::set_allocated_indexexdata(::Qot_GetSecuritySnapshot::IndexSnapshotExData* indexexdata) {
-  ::google::protobuf::Arena* message_arena = GetArenaNoVirtual();
-  if (message_arena == NULL) {
-    delete indexexdata_;
-  }
-  if (indexexdata) {
-    ::google::protobuf::Arena* submessage_arena = NULL;
-    if (message_arena != submessage_arena) {
-      indexexdata = ::google::protobuf::internal::GetOwnedMessage(
-          message_arena, indexexdata, submessage_arena);
-    }
-    set_has_indexexdata();
-  } else {
-    clear_has_indexexdata();
-  }
-  indexexdata_ = indexexdata;
-  // @@protoc_insertion_point(field_set_allocated:Qot_GetSecuritySnapshot.Snapshot.indexExData)
-}
-
-// optional .Qot_GetSecuritySnapshot.PlateSnapshotExData plateExData = 6;
-inline bool Snapshot::has_plateexdata() const {
-  return (_has_bits_[0] & 0x00000020u) != 0;
-}
-inline void Snapshot::set_has_plateexdata() {
-  _has_bits_[0] |= 0x00000020u;
-}
-inline void Snapshot::clear_has_plateexdata() {
-  _has_bits_[0] &= ~0x00000020u;
-}
-inline void Snapshot::clear_plateexdata() {
-  if (plateexdata_ != NULL) plateexdata_->Clear();
-  clear_has_plateexdata();
-}
-inline const ::Qot_GetSecuritySnapshot::PlateSnapshotExData& Snapshot::plateexdata() const {
-  const ::Qot_GetSecuritySnapshot::PlateSnapshotExData* p = plateexdata_;
-  // @@protoc_insertion_point(field_get:Qot_GetSecuritySnapshot.Snapshot.plateExData)
-  return p != NULL ? *p : *reinterpret_cast<const ::Qot_GetSecuritySnapshot::PlateSnapshotExData*>(
-      &::Qot_GetSecuritySnapshot::_PlateSnapshotExData_default_instance_);
-}
-inline ::Qot_GetSecuritySnapshot::PlateSnapshotExData* Snapshot::release_plateexdata() {
-  // @@protoc_insertion_point(field_release:Qot_GetSecuritySnapshot.Snapshot.plateExData)
-  clear_has_plateexdata();
-  ::Qot_GetSecuritySnapshot::PlateSnapshotExData* temp = plateexdata_;
-  plateexdata_ = NULL;
-  return temp;
-}
-inline ::Qot_GetSecuritySnapshot::PlateSnapshotExData* Snapshot::mutable_plateexdata() {
-  set_has_plateexdata();
-  if (plateexdata_ == NULL) {
-    plateexdata_ = new ::Qot_GetSecuritySnapshot::PlateSnapshotExData;
-  }
-  // @@protoc_insertion_point(field_mutable:Qot_GetSecuritySnapshot.Snapshot.plateExData)
-  return plateexdata_;
-}
-inline void Snapshot::set_allocated_plateexdata(::Qot_GetSecuritySnapshot::PlateSnapshotExData* plateexdata) {
-  ::google::protobuf::Arena* message_arena = GetArenaNoVirtual();
-  if (message_arena == NULL) {
-    delete plateexdata_;
-  }
-  if (plateexdata) {
-    ::google::protobuf::Arena* submessage_arena = NULL;
-    if (message_arena != submessage_arena) {
-      plateexdata = ::google::protobuf::internal::GetOwnedMessage(
-          message_arena, plateexdata, submessage_arena);
-    }
-    set_has_plateexdata();
-  } else {
-    clear_has_plateexdata();
-  }
-  plateexdata_ = plateexdata;
-  // @@protoc_insertion_point(field_set_allocated:Qot_GetSecuritySnapshot.Snapshot.plateExData)
-}
-
-// optional .Qot_GetSecuritySnapshot.FutureSnapshotExData futureExData = 7;
-inline bool Snapshot::has_futureexdata() const {
-  return (_has_bits_[0] & 0x00000040u) != 0;
-}
-inline void Snapshot::set_has_futureexdata() {
-  _has_bits_[0] |= 0x00000040u;
-}
-inline void Snapshot::clear_has_futureexdata() {
-  _has_bits_[0] &= ~0x00000040u;
-}
-inline void Snapshot::clear_futureexdata() {
-  if (futureexdata_ != NULL) futureexdata_->Clear();
-  clear_has_futureexdata();
-}
-inline const ::Qot_GetSecuritySnapshot::FutureSnapshotExData& Snapshot::futureexdata() const {
-  const ::Qot_GetSecuritySnapshot::FutureSnapshotExData* p = futureexdata_;
-  // @@protoc_insertion_point(field_get:Qot_GetSecuritySnapshot.Snapshot.futureExData)
-  return p != NULL ? *p : *reinterpret_cast<const ::Qot_GetSecuritySnapshot::FutureSnapshotExData*>(
-      &::Qot_GetSecuritySnapshot::_FutureSnapshotExData_default_instance_);
-}
-inline ::Qot_GetSecuritySnapshot::FutureSnapshotExData* Snapshot::release_futureexdata() {
-  // @@protoc_insertion_point(field_release:Qot_GetSecuritySnapshot.Snapshot.futureExData)
-  clear_has_futureexdata();
-  ::Qot_GetSecuritySnapshot::FutureSnapshotExData* temp = futureexdata_;
-  futureexdata_ = NULL;
-  return temp;
-}
-inline ::Qot_GetSecuritySnapshot::FutureSnapshotExData* Snapshot::mutable_futureexdata() {
-  set_has_futureexdata();
-  if (futureexdata_ == NULL) {
-    futureexdata_ = new ::Qot_GetSecuritySnapshot::FutureSnapshotExData;
-  }
-  // @@protoc_insertion_point(field_mutable:Qot_GetSecuritySnapshot.Snapshot.futureExData)
-  return futureexdata_;
-}
-inline void Snapshot::set_allocated_futureexdata(::Qot_GetSecuritySnapshot::FutureSnapshotExData* futureexdata) {
-  ::google::protobuf::Arena* message_arena = GetArenaNoVirtual();
-  if (message_arena == NULL) {
-    delete futureexdata_;
-  }
-  if (futureexdata) {
-    ::google::protobuf::Arena* submessage_arena = NULL;
-    if (message_arena != submessage_arena) {
-      futureexdata = ::google::protobuf::internal::GetOwnedMessage(
-          message_arena, futureexdata, submessage_arena);
-    }
-    set_has_futureexdata();
-  } else {
-    clear_has_futureexdata();
-  }
-  futureexdata_ = futureexdata;
-  // @@protoc_insertion_point(field_set_allocated:Qot_GetSecuritySnapshot.Snapshot.futureExData)
-}
-
-// optional .Qot_GetSecuritySnapshot.TrustSnapshotExData trustExData = 8;
-inline bool Snapshot::has_trustexdata() const {
-  return (_has_bits_[0] & 0x00000080u) != 0;
-}
-inline void Snapshot::set_has_trustexdata() {
-  _has_bits_[0] |= 0x00000080u;
-}
-inline void Snapshot::clear_has_trustexdata() {
-  _has_bits_[0] &= ~0x00000080u;
-}
-inline void Snapshot::clear_trustexdata() {
-  if (trustexdata_ != NULL) trustexdata_->Clear();
-  clear_has_trustexdata();
-}
-inline const ::Qot_GetSecuritySnapshot::TrustSnapshotExData& Snapshot::trustexdata() const {
-  const ::Qot_GetSecuritySnapshot::TrustSnapshotExData* p = trustexdata_;
-  // @@protoc_insertion_point(field_get:Qot_GetSecuritySnapshot.Snapshot.trustExData)
-  return p != NULL ? *p : *reinterpret_cast<const ::Qot_GetSecuritySnapshot::TrustSnapshotExData*>(
-      &::Qot_GetSecuritySnapshot::_TrustSnapshotExData_default_instance_);
-}
-inline ::Qot_GetSecuritySnapshot::TrustSnapshotExData* Snapshot::release_trustexdata() {
-  // @@protoc_insertion_point(field_release:Qot_GetSecuritySnapshot.Snapshot.trustExData)
-  clear_has_trustexdata();
-  ::Qot_GetSecuritySnapshot::TrustSnapshotExData* temp = trustexdata_;
-  trustexdata_ = NULL;
-  return temp;
-}
-inline ::Qot_GetSecuritySnapshot::TrustSnapshotExData* Snapshot::mutable_trustexdata() {
-  set_has_trustexdata();
-  if (trustexdata_ == NULL) {
-    trustexdata_ = new ::Qot_GetSecuritySnapshot::TrustSnapshotExData;
-  }
-  // @@protoc_insertion_point(field_mutable:Qot_GetSecuritySnapshot.Snapshot.trustExData)
-  return trustexdata_;
-}
-inline void Snapshot::set_allocated_trustexdata(::Qot_GetSecuritySnapshot::TrustSnapshotExData* trustexdata) {
-  ::google::protobuf::Arena* message_arena = GetArenaNoVirtual();
-  if (message_arena == NULL) {
-    delete trustexdata_;
-  }
-  if (trustexdata) {
-    ::google::protobuf::Arena* submessage_arena = NULL;
-    if (message_arena != submessage_arena) {
-      trustexdata = ::google::protobuf::internal::GetOwnedMessage(
-          message_arena, trustexdata, submessage_arena);
-    }
-    set_has_trustexdata();
-  } else {
-    clear_has_trustexdata();
-  }
-  trustexdata_ = trustexdata;
-  // @@protoc_insertion_point(field_set_allocated:Qot_GetSecuritySnapshot.Snapshot.trustExData)
 }
 
 // -------------------------------------------------------------------
@@ -7133,16 +3082,6 @@ inline void Response::set_allocated_s2c(::Qot_GetSecuritySnapshot::S2C* s2c) {
 #ifdef __GNUC__
   #pragma GCC diagnostic pop
 #endif  // __GNUC__
-// -------------------------------------------------------------------
-
-// -------------------------------------------------------------------
-
-// -------------------------------------------------------------------
-
-// -------------------------------------------------------------------
-
-// -------------------------------------------------------------------
-
 // -------------------------------------------------------------------
 
 // -------------------------------------------------------------------

@@ -187,28 +187,18 @@ class C2S : public ::google::protobuf::Message /* @@protoc_insertion_point(class
   bool unlock() const;
   void set_unlock(bool value);
 
-  // optional int32 securityFirm = 3;
-  bool has_securityfirm() const;
-  void clear_securityfirm();
-  static const int kSecurityFirmFieldNumber = 3;
-  ::google::protobuf::int32 securityfirm() const;
-  void set_securityfirm(::google::protobuf::int32 value);
-
   // @@protoc_insertion_point(class_scope:Trd_UnlockTrade.C2S)
  private:
   void set_has_unlock();
   void clear_has_unlock();
   void set_has_pwdmd5();
   void clear_has_pwdmd5();
-  void set_has_securityfirm();
-  void clear_has_securityfirm();
 
   ::google::protobuf::internal::InternalMetadataWithArena _internal_metadata_;
   ::google::protobuf::internal::HasBits<1> _has_bits_;
   mutable int _cached_size_;
   ::google::protobuf::internal::ArenaStringPtr pwdmd5_;
   bool unlock_;
-  ::google::protobuf::int32 securityfirm_;
   friend struct ::protobuf_Trd_5fUnlockTrade_2eproto::TableStruct;
   friend void ::protobuf_Trd_5fUnlockTrade_2eproto::InitDefaultsC2SImpl();
 };
@@ -670,30 +660,6 @@ inline void C2S::set_allocated_pwdmd5(::std::string* pwdmd5) {
   }
   pwdmd5_.SetAllocatedNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), pwdmd5);
   // @@protoc_insertion_point(field_set_allocated:Trd_UnlockTrade.C2S.pwdMD5)
-}
-
-// optional int32 securityFirm = 3;
-inline bool C2S::has_securityfirm() const {
-  return (_has_bits_[0] & 0x00000004u) != 0;
-}
-inline void C2S::set_has_securityfirm() {
-  _has_bits_[0] |= 0x00000004u;
-}
-inline void C2S::clear_has_securityfirm() {
-  _has_bits_[0] &= ~0x00000004u;
-}
-inline void C2S::clear_securityfirm() {
-  securityfirm_ = 0;
-  clear_has_securityfirm();
-}
-inline ::google::protobuf::int32 C2S::securityfirm() const {
-  // @@protoc_insertion_point(field_get:Trd_UnlockTrade.C2S.securityFirm)
-  return securityfirm_;
-}
-inline void C2S::set_securityfirm(::google::protobuf::int32 value) {
-  set_has_securityfirm();
-  securityfirm_ = value;
-  // @@protoc_insertion_point(field_set:Trd_UnlockTrade.C2S.securityFirm)
 }
 
 // -------------------------------------------------------------------

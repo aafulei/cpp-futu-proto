@@ -184,28 +184,18 @@ class C2S : public ::google::protobuf::Message /* @@protoc_insertion_point(class
   ::Trd_Common::TrdFilterConditions* mutable_filterconditions();
   void set_allocated_filterconditions(::Trd_Common::TrdFilterConditions* filterconditions);
 
-  // optional bool refreshCache = 3;
-  bool has_refreshcache() const;
-  void clear_refreshcache();
-  static const int kRefreshCacheFieldNumber = 3;
-  bool refreshcache() const;
-  void set_refreshcache(bool value);
-
   // @@protoc_insertion_point(class_scope:Trd_GetOrderFillList.C2S)
  private:
   void set_has_header();
   void clear_has_header();
   void set_has_filterconditions();
   void clear_has_filterconditions();
-  void set_has_refreshcache();
-  void clear_has_refreshcache();
 
   ::google::protobuf::internal::InternalMetadataWithArena _internal_metadata_;
   ::google::protobuf::internal::HasBits<1> _has_bits_;
   mutable int _cached_size_;
   ::Trd_Common::TrdHeader* header_;
   ::Trd_Common::TrdFilterConditions* filterconditions_;
-  bool refreshcache_;
   friend struct ::protobuf_Trd_5fGetOrderFillList_2eproto::TableStruct;
   friend void ::protobuf_Trd_5fGetOrderFillList_2eproto::InitDefaultsC2SImpl();
 };
@@ -705,30 +695,6 @@ inline void C2S::set_allocated_filterconditions(::Trd_Common::TrdFilterCondition
   }
   filterconditions_ = filterconditions;
   // @@protoc_insertion_point(field_set_allocated:Trd_GetOrderFillList.C2S.filterConditions)
-}
-
-// optional bool refreshCache = 3;
-inline bool C2S::has_refreshcache() const {
-  return (_has_bits_[0] & 0x00000004u) != 0;
-}
-inline void C2S::set_has_refreshcache() {
-  _has_bits_[0] |= 0x00000004u;
-}
-inline void C2S::clear_has_refreshcache() {
-  _has_bits_[0] &= ~0x00000004u;
-}
-inline void C2S::clear_refreshcache() {
-  refreshcache_ = false;
-  clear_has_refreshcache();
-}
-inline bool C2S::refreshcache() const {
-  // @@protoc_insertion_point(field_get:Trd_GetOrderFillList.C2S.refreshCache)
-  return refreshcache_;
-}
-inline void C2S::set_refreshcache(bool value) {
-  set_has_refreshcache();
-  refreshcache_ = value;
-  // @@protoc_insertion_point(field_set:Trd_GetOrderFillList.C2S.refreshCache)
 }
 
 // -------------------------------------------------------------------

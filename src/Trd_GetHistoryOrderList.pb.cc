@@ -223,12 +223,10 @@ void AddDescriptorsImpl() {
       "2s\030\001 \002(\0132\034.Trd_GetHistoryOrderList.C2S\"m"
       "\n\010Response\022\025\n\007retType\030\001 \002(\005:\004-400\022\016\n\006ret"
       "Msg\030\002 \001(\t\022\017\n\007errCode\030\003 \001(\005\022)\n\003s2c\030\004 \001(\0132"
-      "\034.Trd_GetHistoryOrderList.S2CBM\n\023com.fut"
-      "u.openapi.pbZ6github.com/futuopen/ftapi4"
-      "go/pb/trdgethistoryorderlist"
+      "\034.Trd_GetHistoryOrderList.S2C"
   };
   ::google::protobuf::DescriptorPool::InternalAddGeneratedFile(
-      descriptor, 548);
+      descriptor, 469);
   ::google::protobuf::MessageFactory::InternalRegisterGeneratedFile(
     "Trd_GetHistoryOrderList.proto", &protobuf_RegisterTypes);
   ::protobuf_Common_2eproto::AddDescriptors();

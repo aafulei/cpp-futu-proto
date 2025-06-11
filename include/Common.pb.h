@@ -37,7 +37,7 @@ namespace protobuf_Common_2eproto {
 struct TableStruct {
   static const ::google::protobuf::internal::ParseTableField entries[];
   static const ::google::protobuf::internal::AuxillaryParseTableField aux[];
-  static const ::google::protobuf::internal::ParseTable schema[2];
+  static const ::google::protobuf::internal::ParseTable schema[1];
   static const ::google::protobuf::internal::FieldMetadata field_metadata[];
   static const ::google::protobuf::internal::SerializationTable serialization_table[];
   static const ::google::protobuf::uint32 offsets[];
@@ -45,20 +45,14 @@ struct TableStruct {
 void AddDescriptors();
 void InitDefaultsPacketIDImpl();
 void InitDefaultsPacketID();
-void InitDefaultsProgramStatusImpl();
-void InitDefaultsProgramStatus();
 inline void InitDefaults() {
   InitDefaultsPacketID();
-  InitDefaultsProgramStatus();
 }
 }  // namespace protobuf_Common_2eproto
 namespace Common {
 class PacketID;
 class PacketIDDefaultTypeInternal;
 extern PacketIDDefaultTypeInternal _PacketID_default_instance_;
-class ProgramStatus;
-class ProgramStatusDefaultTypeInternal;
-extern ProgramStatusDefaultTypeInternal _ProgramStatus_default_instance_;
 }  // namespace Common
 namespace Common {
 
@@ -66,12 +60,10 @@ enum RetType {
   RetType_Succeed = 0,
   RetType_Failed = -1,
   RetType_TimeOut = -100,
-  RetType_DisConnect = -200,
-  RetType_Unknown = -400,
-  RetType_Invalid = -500
+  RetType_Unknown = -400
 };
 bool RetType_IsValid(int value);
-const RetType RetType_MIN = RetType_Invalid;
+const RetType RetType_MIN = RetType_Unknown;
 const RetType RetType_MAX = RetType_Succeed;
 const int RetType_ARRAYSIZE = RetType_MAX + 1;
 
@@ -84,122 +76,6 @@ inline bool RetType_Parse(
     const ::std::string& name, RetType* value) {
   return ::google::protobuf::internal::ParseNamedEnum<RetType>(
     RetType_descriptor(), name, value);
-}
-enum PacketEncAlgo {
-  PacketEncAlgo_FTAES_ECB = 0,
-  PacketEncAlgo_None = -1,
-  PacketEncAlgo_AES_ECB = 1,
-  PacketEncAlgo_AES_CBC = 2
-};
-bool PacketEncAlgo_IsValid(int value);
-const PacketEncAlgo PacketEncAlgo_MIN = PacketEncAlgo_None;
-const PacketEncAlgo PacketEncAlgo_MAX = PacketEncAlgo_AES_CBC;
-const int PacketEncAlgo_ARRAYSIZE = PacketEncAlgo_MAX + 1;
-
-const ::google::protobuf::EnumDescriptor* PacketEncAlgo_descriptor();
-inline const ::std::string& PacketEncAlgo_Name(PacketEncAlgo value) {
-  return ::google::protobuf::internal::NameOfEnum(
-    PacketEncAlgo_descriptor(), value);
-}
-inline bool PacketEncAlgo_Parse(
-    const ::std::string& name, PacketEncAlgo* value) {
-  return ::google::protobuf::internal::ParseNamedEnum<PacketEncAlgo>(
-    PacketEncAlgo_descriptor(), name, value);
-}
-enum ProtoFmt {
-  ProtoFmt_Protobuf = 0,
-  ProtoFmt_Json = 1
-};
-bool ProtoFmt_IsValid(int value);
-const ProtoFmt ProtoFmt_MIN = ProtoFmt_Protobuf;
-const ProtoFmt ProtoFmt_MAX = ProtoFmt_Json;
-const int ProtoFmt_ARRAYSIZE = ProtoFmt_MAX + 1;
-
-const ::google::protobuf::EnumDescriptor* ProtoFmt_descriptor();
-inline const ::std::string& ProtoFmt_Name(ProtoFmt value) {
-  return ::google::protobuf::internal::NameOfEnum(
-    ProtoFmt_descriptor(), value);
-}
-inline bool ProtoFmt_Parse(
-    const ::std::string& name, ProtoFmt* value) {
-  return ::google::protobuf::internal::ParseNamedEnum<ProtoFmt>(
-    ProtoFmt_descriptor(), name, value);
-}
-enum UserAttribution {
-  UserAttribution_Unknown = 0,
-  UserAttribution_NN = 1,
-  UserAttribution_MM = 2,
-  UserAttribution_SG = 3,
-  UserAttribution_AU = 4,
-  UserAttribution_JP = 5,
-  UserAttribution_HK = 6
-};
-bool UserAttribution_IsValid(int value);
-const UserAttribution UserAttribution_MIN = UserAttribution_Unknown;
-const UserAttribution UserAttribution_MAX = UserAttribution_HK;
-const int UserAttribution_ARRAYSIZE = UserAttribution_MAX + 1;
-
-const ::google::protobuf::EnumDescriptor* UserAttribution_descriptor();
-inline const ::std::string& UserAttribution_Name(UserAttribution value) {
-  return ::google::protobuf::internal::NameOfEnum(
-    UserAttribution_descriptor(), value);
-}
-inline bool UserAttribution_Parse(
-    const ::std::string& name, UserAttribution* value) {
-  return ::google::protobuf::internal::ParseNamedEnum<UserAttribution>(
-    UserAttribution_descriptor(), name, value);
-}
-enum ProgramStatusType {
-  ProgramStatusType_None = 0,
-  ProgramStatusType_Loaded = 1,
-  ProgramStatusType_Loging = 2,
-  ProgramStatusType_NeedPicVerifyCode = 3,
-  ProgramStatusType_NeedPhoneVerifyCode = 4,
-  ProgramStatusType_LoginFailed = 5,
-  ProgramStatusType_ForceUpdate = 6,
-  ProgramStatusType_NessaryDataPreparing = 7,
-  ProgramStatusType_NessaryDataMissing = 8,
-  ProgramStatusType_UnAgreeDisclaimer = 9,
-  ProgramStatusType_Ready = 10,
-  ProgramStatusType_ForceLogout = 11,
-  ProgramStatusType_DisclaimerPullFailed = 12
-};
-bool ProgramStatusType_IsValid(int value);
-const ProgramStatusType ProgramStatusType_MIN = ProgramStatusType_None;
-const ProgramStatusType ProgramStatusType_MAX = ProgramStatusType_DisclaimerPullFailed;
-const int ProgramStatusType_ARRAYSIZE = ProgramStatusType_MAX + 1;
-
-const ::google::protobuf::EnumDescriptor* ProgramStatusType_descriptor();
-inline const ::std::string& ProgramStatusType_Name(ProgramStatusType value) {
-  return ::google::protobuf::internal::NameOfEnum(
-    ProgramStatusType_descriptor(), value);
-}
-inline bool ProgramStatusType_Parse(
-    const ::std::string& name, ProgramStatusType* value) {
-  return ::google::protobuf::internal::ParseNamedEnum<ProgramStatusType>(
-    ProgramStatusType_descriptor(), name, value);
-}
-enum Session {
-  Session_NONE = 0,
-  Session_RTH = 1,
-  Session_ETH = 2,
-  Session_ALL = 3,
-  Session_OVERNIGHT = 4
-};
-bool Session_IsValid(int value);
-const Session Session_MIN = Session_NONE;
-const Session Session_MAX = Session_OVERNIGHT;
-const int Session_ARRAYSIZE = Session_MAX + 1;
-
-const ::google::protobuf::EnumDescriptor* Session_descriptor();
-inline const ::std::string& Session_Name(Session value) {
-  return ::google::protobuf::internal::NameOfEnum(
-    Session_descriptor(), value);
-}
-inline bool Session_Parse(
-    const ::std::string& name, Session* value) {
-  return ::google::protobuf::internal::ParseNamedEnum<Session>(
-    Session_descriptor(), name, value);
 }
 // ===================================================================
 
@@ -324,134 +200,6 @@ class PacketID : public ::google::protobuf::Message /* @@protoc_insertion_point(
   friend struct ::protobuf_Common_2eproto::TableStruct;
   friend void ::protobuf_Common_2eproto::InitDefaultsPacketIDImpl();
 };
-// -------------------------------------------------------------------
-
-class ProgramStatus : public ::google::protobuf::Message /* @@protoc_insertion_point(class_definition:Common.ProgramStatus) */ {
- public:
-  ProgramStatus();
-  virtual ~ProgramStatus();
-
-  ProgramStatus(const ProgramStatus& from);
-
-  inline ProgramStatus& operator=(const ProgramStatus& from) {
-    CopyFrom(from);
-    return *this;
-  }
-  #if LANG_CXX11
-  ProgramStatus(ProgramStatus&& from) noexcept
-    : ProgramStatus() {
-    *this = ::std::move(from);
-  }
-
-  inline ProgramStatus& operator=(ProgramStatus&& from) noexcept {
-    if (GetArenaNoVirtual() == from.GetArenaNoVirtual()) {
-      if (this != &from) InternalSwap(&from);
-    } else {
-      CopyFrom(from);
-    }
-    return *this;
-  }
-  #endif
-  inline const ::google::protobuf::UnknownFieldSet& unknown_fields() const {
-    return _internal_metadata_.unknown_fields();
-  }
-  inline ::google::protobuf::UnknownFieldSet* mutable_unknown_fields() {
-    return _internal_metadata_.mutable_unknown_fields();
-  }
-
-  static const ::google::protobuf::Descriptor* descriptor();
-  static const ProgramStatus& default_instance();
-
-  static void InitAsDefaultInstance();  // FOR INTERNAL USE ONLY
-  static inline const ProgramStatus* internal_default_instance() {
-    return reinterpret_cast<const ProgramStatus*>(
-               &_ProgramStatus_default_instance_);
-  }
-  static PROTOBUF_CONSTEXPR int const kIndexInFileMessages =
-    1;
-
-  void Swap(ProgramStatus* other);
-  friend void swap(ProgramStatus& a, ProgramStatus& b) {
-    a.Swap(&b);
-  }
-
-  // implements Message ----------------------------------------------
-
-  inline ProgramStatus* New() const PROTOBUF_FINAL { return New(NULL); }
-
-  ProgramStatus* New(::google::protobuf::Arena* arena) const PROTOBUF_FINAL;
-  void CopyFrom(const ::google::protobuf::Message& from) PROTOBUF_FINAL;
-  void MergeFrom(const ::google::protobuf::Message& from) PROTOBUF_FINAL;
-  void CopyFrom(const ProgramStatus& from);
-  void MergeFrom(const ProgramStatus& from);
-  void Clear() PROTOBUF_FINAL;
-  bool IsInitialized() const PROTOBUF_FINAL;
-
-  size_t ByteSizeLong() const PROTOBUF_FINAL;
-  bool MergePartialFromCodedStream(
-      ::google::protobuf::io::CodedInputStream* input) PROTOBUF_FINAL;
-  void SerializeWithCachedSizes(
-      ::google::protobuf::io::CodedOutputStream* output) const PROTOBUF_FINAL;
-  ::google::protobuf::uint8* InternalSerializeWithCachedSizesToArray(
-      bool deterministic, ::google::protobuf::uint8* target) const PROTOBUF_FINAL;
-  int GetCachedSize() const PROTOBUF_FINAL { return _cached_size_; }
-  private:
-  void SharedCtor();
-  void SharedDtor();
-  void SetCachedSize(int size) const PROTOBUF_FINAL;
-  void InternalSwap(ProgramStatus* other);
-  private:
-  inline ::google::protobuf::Arena* GetArenaNoVirtual() const {
-    return NULL;
-  }
-  inline void* MaybeArenaPtr() const {
-    return NULL;
-  }
-  public:
-
-  ::google::protobuf::Metadata GetMetadata() const PROTOBUF_FINAL;
-
-  // nested types ----------------------------------------------------
-
-  // accessors -------------------------------------------------------
-
-  // optional string strExtDesc = 2;
-  bool has_strextdesc() const;
-  void clear_strextdesc();
-  static const int kStrExtDescFieldNumber = 2;
-  const ::std::string& strextdesc() const;
-  void set_strextdesc(const ::std::string& value);
-  #if LANG_CXX11
-  void set_strextdesc(::std::string&& value);
-  #endif
-  void set_strextdesc(const char* value);
-  void set_strextdesc(const char* value, size_t size);
-  ::std::string* mutable_strextdesc();
-  ::std::string* release_strextdesc();
-  void set_allocated_strextdesc(::std::string* strextdesc);
-
-  // required .Common.ProgramStatusType type = 1;
-  bool has_type() const;
-  void clear_type();
-  static const int kTypeFieldNumber = 1;
-  ::Common::ProgramStatusType type() const;
-  void set_type(::Common::ProgramStatusType value);
-
-  // @@protoc_insertion_point(class_scope:Common.ProgramStatus)
- private:
-  void set_has_type();
-  void clear_has_type();
-  void set_has_strextdesc();
-  void clear_has_strextdesc();
-
-  ::google::protobuf::internal::InternalMetadataWithArena _internal_metadata_;
-  ::google::protobuf::internal::HasBits<1> _has_bits_;
-  mutable int _cached_size_;
-  ::google::protobuf::internal::ArenaStringPtr strextdesc_;
-  int type_;
-  friend struct ::protobuf_Common_2eproto::TableStruct;
-  friend void ::protobuf_Common_2eproto::InitDefaultsProgramStatusImpl();
-};
 // ===================================================================
 
 
@@ -511,103 +259,9 @@ inline void PacketID::set_serialno(::google::protobuf::uint32 value) {
   // @@protoc_insertion_point(field_set:Common.PacketID.serialNo)
 }
 
-// -------------------------------------------------------------------
-
-// ProgramStatus
-
-// required .Common.ProgramStatusType type = 1;
-inline bool ProgramStatus::has_type() const {
-  return (_has_bits_[0] & 0x00000002u) != 0;
-}
-inline void ProgramStatus::set_has_type() {
-  _has_bits_[0] |= 0x00000002u;
-}
-inline void ProgramStatus::clear_has_type() {
-  _has_bits_[0] &= ~0x00000002u;
-}
-inline void ProgramStatus::clear_type() {
-  type_ = 0;
-  clear_has_type();
-}
-inline ::Common::ProgramStatusType ProgramStatus::type() const {
-  // @@protoc_insertion_point(field_get:Common.ProgramStatus.type)
-  return static_cast< ::Common::ProgramStatusType >(type_);
-}
-inline void ProgramStatus::set_type(::Common::ProgramStatusType value) {
-  assert(::Common::ProgramStatusType_IsValid(value));
-  set_has_type();
-  type_ = value;
-  // @@protoc_insertion_point(field_set:Common.ProgramStatus.type)
-}
-
-// optional string strExtDesc = 2;
-inline bool ProgramStatus::has_strextdesc() const {
-  return (_has_bits_[0] & 0x00000001u) != 0;
-}
-inline void ProgramStatus::set_has_strextdesc() {
-  _has_bits_[0] |= 0x00000001u;
-}
-inline void ProgramStatus::clear_has_strextdesc() {
-  _has_bits_[0] &= ~0x00000001u;
-}
-inline void ProgramStatus::clear_strextdesc() {
-  strextdesc_.ClearToEmptyNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
-  clear_has_strextdesc();
-}
-inline const ::std::string& ProgramStatus::strextdesc() const {
-  // @@protoc_insertion_point(field_get:Common.ProgramStatus.strExtDesc)
-  return strextdesc_.GetNoArena();
-}
-inline void ProgramStatus::set_strextdesc(const ::std::string& value) {
-  set_has_strextdesc();
-  strextdesc_.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), value);
-  // @@protoc_insertion_point(field_set:Common.ProgramStatus.strExtDesc)
-}
-#if LANG_CXX11
-inline void ProgramStatus::set_strextdesc(::std::string&& value) {
-  set_has_strextdesc();
-  strextdesc_.SetNoArena(
-    &::google::protobuf::internal::GetEmptyStringAlreadyInited(), ::std::move(value));
-  // @@protoc_insertion_point(field_set_rvalue:Common.ProgramStatus.strExtDesc)
-}
-#endif
-inline void ProgramStatus::set_strextdesc(const char* value) {
-  GOOGLE_DCHECK(value != NULL);
-  set_has_strextdesc();
-  strextdesc_.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), ::std::string(value));
-  // @@protoc_insertion_point(field_set_char:Common.ProgramStatus.strExtDesc)
-}
-inline void ProgramStatus::set_strextdesc(const char* value, size_t size) {
-  set_has_strextdesc();
-  strextdesc_.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(),
-      ::std::string(reinterpret_cast<const char*>(value), size));
-  // @@protoc_insertion_point(field_set_pointer:Common.ProgramStatus.strExtDesc)
-}
-inline ::std::string* ProgramStatus::mutable_strextdesc() {
-  set_has_strextdesc();
-  // @@protoc_insertion_point(field_mutable:Common.ProgramStatus.strExtDesc)
-  return strextdesc_.MutableNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
-}
-inline ::std::string* ProgramStatus::release_strextdesc() {
-  // @@protoc_insertion_point(field_release:Common.ProgramStatus.strExtDesc)
-  clear_has_strextdesc();
-  return strextdesc_.ReleaseNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
-}
-inline void ProgramStatus::set_allocated_strextdesc(::std::string* strextdesc) {
-  if (strextdesc != NULL) {
-    set_has_strextdesc();
-  } else {
-    clear_has_strextdesc();
-  }
-  strextdesc_.SetAllocatedNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), strextdesc);
-  // @@protoc_insertion_point(field_set_allocated:Common.ProgramStatus.strExtDesc)
-}
-
 #ifdef __GNUC__
   #pragma GCC diagnostic pop
 #endif  // __GNUC__
-// -------------------------------------------------------------------
-
 
 // @@protoc_insertion_point(namespace_scope)
 
@@ -620,31 +274,6 @@ template <> struct is_proto_enum< ::Common::RetType> : ::google::protobuf::inter
 template <>
 inline const EnumDescriptor* GetEnumDescriptor< ::Common::RetType>() {
   return ::Common::RetType_descriptor();
-}
-template <> struct is_proto_enum< ::Common::PacketEncAlgo> : ::google::protobuf::internal::true_type {};
-template <>
-inline const EnumDescriptor* GetEnumDescriptor< ::Common::PacketEncAlgo>() {
-  return ::Common::PacketEncAlgo_descriptor();
-}
-template <> struct is_proto_enum< ::Common::ProtoFmt> : ::google::protobuf::internal::true_type {};
-template <>
-inline const EnumDescriptor* GetEnumDescriptor< ::Common::ProtoFmt>() {
-  return ::Common::ProtoFmt_descriptor();
-}
-template <> struct is_proto_enum< ::Common::UserAttribution> : ::google::protobuf::internal::true_type {};
-template <>
-inline const EnumDescriptor* GetEnumDescriptor< ::Common::UserAttribution>() {
-  return ::Common::UserAttribution_descriptor();
-}
-template <> struct is_proto_enum< ::Common::ProgramStatusType> : ::google::protobuf::internal::true_type {};
-template <>
-inline const EnumDescriptor* GetEnumDescriptor< ::Common::ProgramStatusType>() {
-  return ::Common::ProgramStatusType_descriptor();
-}
-template <> struct is_proto_enum< ::Common::Session> : ::google::protobuf::internal::true_type {};
-template <>
-inline const EnumDescriptor* GetEnumDescriptor< ::Common::Session>() {
-  return ::Common::Session_descriptor();
 }
 
 }  // namespace protobuf

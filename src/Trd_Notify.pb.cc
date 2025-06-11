@@ -139,12 +139,10 @@ void AddDescriptorsImpl() {
       "\001 \002(\0132\025.Trd_Common.TrdHeader\022\014\n\004type\030\002 \002"
       "(\005\"`\n\010Response\022\025\n\007retType\030\001 \002(\005:\004-400\022\016\n"
       "\006retMsg\030\002 \001(\t\022\017\n\007errCode\030\003 \001(\005\022\034\n\003s2c\030\004 "
-      "\001(\0132\017.Trd_Notify.S2CB@\n\023com.futu.openapi"
-      ".pbZ)github.com/futuopen/ftapi4go/pb/trd"
-      "notify"
+      "\001(\0132\017.Trd_Notify.S2C"
   };
   ::google::protobuf::DescriptorPool::InternalAddGeneratedFile(
-      descriptor, 286);
+      descriptor, 220);
   ::google::protobuf::MessageFactory::InternalRegisterGeneratedFile(
     "Trd_Notify.proto", &protobuf_RegisterTypes);
   ::protobuf_Common_2eproto::AddDescriptors();

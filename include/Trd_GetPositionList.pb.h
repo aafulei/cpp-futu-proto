@@ -198,13 +198,6 @@ class C2S : public ::google::protobuf::Message /* @@protoc_insertion_point(class
   double filterplratiomax() const;
   void set_filterplratiomax(double value);
 
-  // optional bool refreshCache = 5;
-  bool has_refreshcache() const;
-  void clear_refreshcache();
-  static const int kRefreshCacheFieldNumber = 5;
-  bool refreshcache() const;
-  void set_refreshcache(bool value);
-
   // @@protoc_insertion_point(class_scope:Trd_GetPositionList.C2S)
  private:
   void set_has_header();
@@ -215,8 +208,6 @@ class C2S : public ::google::protobuf::Message /* @@protoc_insertion_point(class
   void clear_has_filterplratiomin();
   void set_has_filterplratiomax();
   void clear_has_filterplratiomax();
-  void set_has_refreshcache();
-  void clear_has_refreshcache();
 
   ::google::protobuf::internal::InternalMetadataWithArena _internal_metadata_;
   ::google::protobuf::internal::HasBits<1> _has_bits_;
@@ -225,7 +216,6 @@ class C2S : public ::google::protobuf::Message /* @@protoc_insertion_point(class
   ::Trd_Common::TrdFilterConditions* filterconditions_;
   double filterplratiomin_;
   double filterplratiomax_;
-  bool refreshcache_;
   friend struct ::protobuf_Trd_5fGetPositionList_2eproto::TableStruct;
   friend void ::protobuf_Trd_5fGetPositionList_2eproto::InitDefaultsC2SImpl();
 };
@@ -773,30 +763,6 @@ inline void C2S::set_filterplratiomax(double value) {
   set_has_filterplratiomax();
   filterplratiomax_ = value;
   // @@protoc_insertion_point(field_set:Trd_GetPositionList.C2S.filterPLRatioMax)
-}
-
-// optional bool refreshCache = 5;
-inline bool C2S::has_refreshcache() const {
-  return (_has_bits_[0] & 0x00000010u) != 0;
-}
-inline void C2S::set_has_refreshcache() {
-  _has_bits_[0] |= 0x00000010u;
-}
-inline void C2S::clear_has_refreshcache() {
-  _has_bits_[0] &= ~0x00000010u;
-}
-inline void C2S::clear_refreshcache() {
-  refreshcache_ = false;
-  clear_has_refreshcache();
-}
-inline bool C2S::refreshcache() const {
-  // @@protoc_insertion_point(field_get:Trd_GetPositionList.C2S.refreshCache)
-  return refreshcache_;
-}
-inline void C2S::set_refreshcache(bool value) {
-  set_has_refreshcache();
-  refreshcache_ = value;
-  // @@protoc_insertion_point(field_set:Trd_GetPositionList.C2S.refreshCache)
 }
 
 // -------------------------------------------------------------------

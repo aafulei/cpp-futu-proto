@@ -175,35 +175,15 @@ class C2S : public ::google::protobuf::Message /* @@protoc_insertion_point(class
   ::Trd_Common::TrdHeader* mutable_header();
   void set_allocated_header(::Trd_Common::TrdHeader* header);
 
-  // optional bool refreshCache = 2;
-  bool has_refreshcache() const;
-  void clear_refreshcache();
-  static const int kRefreshCacheFieldNumber = 2;
-  bool refreshcache() const;
-  void set_refreshcache(bool value);
-
-  // optional int32 currency = 3;
-  bool has_currency() const;
-  void clear_currency();
-  static const int kCurrencyFieldNumber = 3;
-  ::google::protobuf::int32 currency() const;
-  void set_currency(::google::protobuf::int32 value);
-
   // @@protoc_insertion_point(class_scope:Trd_GetFunds.C2S)
  private:
   void set_has_header();
   void clear_has_header();
-  void set_has_refreshcache();
-  void clear_has_refreshcache();
-  void set_has_currency();
-  void clear_has_currency();
 
   ::google::protobuf::internal::InternalMetadataWithArena _internal_metadata_;
   ::google::protobuf::internal::HasBits<1> _has_bits_;
   mutable int _cached_size_;
   ::Trd_Common::TrdHeader* header_;
-  bool refreshcache_;
-  ::google::protobuf::int32 currency_;
   friend struct ::protobuf_Trd_5fGetFunds_2eproto::TableStruct;
   friend void ::protobuf_Trd_5fGetFunds_2eproto::InitDefaultsC2SImpl();
 };
@@ -652,54 +632,6 @@ inline void C2S::set_allocated_header(::Trd_Common::TrdHeader* header) {
   }
   header_ = header;
   // @@protoc_insertion_point(field_set_allocated:Trd_GetFunds.C2S.header)
-}
-
-// optional bool refreshCache = 2;
-inline bool C2S::has_refreshcache() const {
-  return (_has_bits_[0] & 0x00000002u) != 0;
-}
-inline void C2S::set_has_refreshcache() {
-  _has_bits_[0] |= 0x00000002u;
-}
-inline void C2S::clear_has_refreshcache() {
-  _has_bits_[0] &= ~0x00000002u;
-}
-inline void C2S::clear_refreshcache() {
-  refreshcache_ = false;
-  clear_has_refreshcache();
-}
-inline bool C2S::refreshcache() const {
-  // @@protoc_insertion_point(field_get:Trd_GetFunds.C2S.refreshCache)
-  return refreshcache_;
-}
-inline void C2S::set_refreshcache(bool value) {
-  set_has_refreshcache();
-  refreshcache_ = value;
-  // @@protoc_insertion_point(field_set:Trd_GetFunds.C2S.refreshCache)
-}
-
-// optional int32 currency = 3;
-inline bool C2S::has_currency() const {
-  return (_has_bits_[0] & 0x00000004u) != 0;
-}
-inline void C2S::set_has_currency() {
-  _has_bits_[0] |= 0x00000004u;
-}
-inline void C2S::clear_has_currency() {
-  _has_bits_[0] &= ~0x00000004u;
-}
-inline void C2S::clear_currency() {
-  currency_ = 0;
-  clear_has_currency();
-}
-inline ::google::protobuf::int32 C2S::currency() const {
-  // @@protoc_insertion_point(field_get:Trd_GetFunds.C2S.currency)
-  return currency_;
-}
-inline void C2S::set_currency(::google::protobuf::int32 value) {
-  set_has_currency();
-  currency_ = value;
-  // @@protoc_insertion_point(field_set:Trd_GetFunds.C2S.currency)
 }
 
 // -------------------------------------------------------------------

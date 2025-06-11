@@ -86,9 +86,7 @@ const ::google::protobuf::uint32 TableStruct::offsets[] GOOGLE_PROTOBUF_ATTRIBUT
   ~0u,  // no _oneof_case_
   ~0u,  // no _weak_field_map_
   GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(::Qot_UpdateRT::S2C, security_),
-  GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(::Qot_UpdateRT::S2C, name_),
   GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(::Qot_UpdateRT::S2C, rtlist_),
-  1,
   0,
   ~0u,
   GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(::Qot_UpdateRT::Response, _has_bits_),
@@ -106,8 +104,8 @@ const ::google::protobuf::uint32 TableStruct::offsets[] GOOGLE_PROTOBUF_ATTRIBUT
   1,
 };
 static const ::google::protobuf::internal::MigrationSchema schemas[] GOOGLE_PROTOBUF_ATTRIBUTE_SECTION_VARIABLE(protodesc_cold) = {
-  { 0, 8, sizeof(::Qot_UpdateRT::S2C)},
-  { 11, 20, sizeof(::Qot_UpdateRT::Response)},
+  { 0, 7, sizeof(::Qot_UpdateRT::S2C)},
+  { 9, 18, sizeof(::Qot_UpdateRT::Response)},
 };
 
 static ::google::protobuf::Message const * const file_default_instances[] = {
@@ -138,17 +136,15 @@ void AddDescriptorsImpl() {
   InitDefaults();
   static const char descriptor[] GOOGLE_PROTOBUF_ATTRIBUTE_SECTION_VARIABLE(protodesc_cold) = {
       "\n\022Qot_UpdateRT.proto\022\014Qot_UpdateRT\032\014Comm"
-      "on.proto\032\020Qot_Common.proto\"b\n\003S2C\022&\n\010sec"
-      "urity\030\001 \002(\0132\024.Qot_Common.Security\022\014\n\004nam"
-      "e\030\003 \001(\t\022%\n\006rtList\030\002 \003(\0132\025.Qot_Common.Tim"
-      "eShare\"b\n\010Response\022\025\n\007retType\030\001 \002(\005:\004-40"
-      "0\022\016\n\006retMsg\030\002 \001(\t\022\017\n\007errCode\030\003 \001(\005\022\036\n\003s2"
-      "c\030\004 \001(\0132\021.Qot_UpdateRT.S2CBB\n\023com.futu.o"
-      "penapi.pbZ+github.com/futuopen/ftapi4go/"
-      "pb/qotupdatert"
+      "on.proto\032\020Qot_Common.proto\"T\n\003S2C\022&\n\010sec"
+      "urity\030\001 \002(\0132\024.Qot_Common.Security\022%\n\006rtL"
+      "ist\030\002 \003(\0132\025.Qot_Common.TimeShare\"b\n\010Resp"
+      "onse\022\025\n\007retType\030\001 \002(\005:\004-400\022\016\n\006retMsg\030\002 "
+      "\001(\t\022\017\n\007errCode\030\003 \001(\005\022\036\n\003s2c\030\004 \001(\0132\021.Qot_"
+      "UpdateRT.S2C"
   };
   ::google::protobuf::DescriptorPool::InternalAddGeneratedFile(
-      descriptor, 334);
+      descriptor, 252);
   ::google::protobuf::MessageFactory::InternalRegisterGeneratedFile(
     "Qot_UpdateRT.proto", &protobuf_RegisterTypes);
   ::protobuf_Common_2eproto::AddDescriptors();
@@ -183,7 +179,6 @@ void S2C::clear_rtlist() {
 }
 #if !defined(_MSC_VER) || _MSC_VER >= 1900
 const int S2C::kSecurityFieldNumber;
-const int S2C::kNameFieldNumber;
 const int S2C::kRtListFieldNumber;
 #endif  // !defined(_MSC_VER) || _MSC_VER >= 1900
 
@@ -202,10 +197,6 @@ S2C::S2C(const S2C& from)
       _cached_size_(0),
       rtlist_(from.rtlist_) {
   _internal_metadata_.MergeFrom(from._internal_metadata_);
-  name_.UnsafeSetDefault(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
-  if (from.has_name()) {
-    name_.AssignWithDefault(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), from.name_);
-  }
   if (from.has_security()) {
     security_ = new ::Qot_Common::Security(*from.security_);
   } else {
@@ -216,7 +207,6 @@ S2C::S2C(const S2C& from)
 
 void S2C::SharedCtor() {
   _cached_size_ = 0;
-  name_.UnsafeSetDefault(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
   security_ = NULL;
 }
 
@@ -226,7 +216,6 @@ S2C::~S2C() {
 }
 
 void S2C::SharedDtor() {
-  name_.DestroyNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
   if (this != internal_default_instance()) delete security_;
 }
 
@@ -261,15 +250,9 @@ void S2C::Clear() {
 
   rtlist_.Clear();
   cached_has_bits = _has_bits_[0];
-  if (cached_has_bits & 3u) {
-    if (cached_has_bits & 0x00000001u) {
-      GOOGLE_DCHECK(!name_.IsDefault(&::google::protobuf::internal::GetEmptyStringAlreadyInited()));
-      (*name_.UnsafeRawStringPointer())->clear();
-    }
-    if (cached_has_bits & 0x00000002u) {
-      GOOGLE_DCHECK(security_ != NULL);
-      security_->Clear();
-    }
+  if (cached_has_bits & 0x00000001u) {
+    GOOGLE_DCHECK(security_ != NULL);
+    security_->Clear();
   }
   _has_bits_.Clear();
   _internal_metadata_.Clear();
@@ -308,22 +291,6 @@ bool S2C::MergePartialFromCodedStream(
         break;
       }
 
-      // optional string name = 3;
-      case 3: {
-        if (static_cast< ::google::protobuf::uint8>(tag) ==
-            static_cast< ::google::protobuf::uint8>(26u /* 26 & 0xFF */)) {
-          DO_(::google::protobuf::internal::WireFormatLite::ReadString(
-                input, this->mutable_name()));
-          ::google::protobuf::internal::WireFormat::VerifyUTF8StringNamedField(
-            this->name().data(), static_cast<int>(this->name().length()),
-            ::google::protobuf::internal::WireFormat::PARSE,
-            "Qot_UpdateRT.S2C.name");
-        } else {
-          goto handle_unusual;
-        }
-        break;
-      }
-
       default: {
       handle_unusual:
         if (tag == 0) {
@@ -352,7 +319,7 @@ void S2C::SerializeWithCachedSizes(
 
   cached_has_bits = _has_bits_[0];
   // required .Qot_Common.Security security = 1;
-  if (cached_has_bits & 0x00000002u) {
+  if (cached_has_bits & 0x00000001u) {
     ::google::protobuf::internal::WireFormatLite::WriteMessageMaybeToArray(
       1, *this->security_, output);
   }
@@ -362,16 +329,6 @@ void S2C::SerializeWithCachedSizes(
       n = static_cast<unsigned int>(this->rtlist_size()); i < n; i++) {
     ::google::protobuf::internal::WireFormatLite::WriteMessageMaybeToArray(
       2, this->rtlist(static_cast<int>(i)), output);
-  }
-
-  // optional string name = 3;
-  if (cached_has_bits & 0x00000001u) {
-    ::google::protobuf::internal::WireFormat::VerifyUTF8StringNamedField(
-      this->name().data(), static_cast<int>(this->name().length()),
-      ::google::protobuf::internal::WireFormat::SERIALIZE,
-      "Qot_UpdateRT.S2C.name");
-    ::google::protobuf::internal::WireFormatLite::WriteStringMaybeAliased(
-      3, this->name(), output);
   }
 
   if (_internal_metadata_.have_unknown_fields()) {
@@ -390,7 +347,7 @@ void S2C::SerializeWithCachedSizes(
 
   cached_has_bits = _has_bits_[0];
   // required .Qot_Common.Security security = 1;
-  if (cached_has_bits & 0x00000002u) {
+  if (cached_has_bits & 0x00000001u) {
     target = ::google::protobuf::internal::WireFormatLite::
       InternalWriteMessageToArray(
         1, *this->security_, deterministic, target);
@@ -402,17 +359,6 @@ void S2C::SerializeWithCachedSizes(
     target = ::google::protobuf::internal::WireFormatLite::
       InternalWriteMessageToArray(
         2, this->rtlist(static_cast<int>(i)), deterministic, target);
-  }
-
-  // optional string name = 3;
-  if (cached_has_bits & 0x00000001u) {
-    ::google::protobuf::internal::WireFormat::VerifyUTF8StringNamedField(
-      this->name().data(), static_cast<int>(this->name().length()),
-      ::google::protobuf::internal::WireFormat::SERIALIZE,
-      "Qot_UpdateRT.S2C.name");
-    target =
-      ::google::protobuf::internal::WireFormatLite::WriteStringToArray(
-        3, this->name(), target);
   }
 
   if (_internal_metadata_.have_unknown_fields()) {
@@ -449,13 +395,6 @@ size_t S2C::ByteSizeLong() const {
     }
   }
 
-  // optional string name = 3;
-  if (has_name()) {
-    total_size += 1 +
-      ::google::protobuf::internal::WireFormatLite::StringSize(
-        this->name());
-  }
-
   int cached_size = ::google::protobuf::internal::ToCachedSize(total_size);
   GOOGLE_SAFE_CONCURRENT_WRITES_BEGIN();
   _cached_size_ = cached_size;
@@ -486,15 +425,8 @@ void S2C::MergeFrom(const S2C& from) {
   (void) cached_has_bits;
 
   rtlist_.MergeFrom(from.rtlist_);
-  cached_has_bits = from._has_bits_[0];
-  if (cached_has_bits & 3u) {
-    if (cached_has_bits & 0x00000001u) {
-      set_has_name();
-      name_.AssignWithDefault(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), from.name_);
-    }
-    if (cached_has_bits & 0x00000002u) {
-      mutable_security()->::Qot_Common::Security::MergeFrom(from.security());
-    }
+  if (from.has_security()) {
+    mutable_security()->::Qot_Common::Security::MergeFrom(from.security());
   }
 }
 
@@ -513,7 +445,7 @@ void S2C::CopyFrom(const S2C& from) {
 }
 
 bool S2C::IsInitialized() const {
-  if ((_has_bits_[0] & 0x00000002) != 0x00000002) return false;
+  if ((_has_bits_[0] & 0x00000001) != 0x00000001) return false;
   if (!::google::protobuf::internal::AllAreInitialized(this->rtlist())) return false;
   if (has_security()) {
     if (!this->security_->IsInitialized()) return false;
@@ -528,7 +460,6 @@ void S2C::Swap(S2C* other) {
 void S2C::InternalSwap(S2C* other) {
   using std::swap;
   rtlist_.InternalSwap(&other->rtlist_);
-  name_.Swap(&other->name_);
   swap(security_, other->security_);
   swap(_has_bits_[0], other->_has_bits_[0]);
   _internal_metadata_.Swap(&other->_internal_metadata_);

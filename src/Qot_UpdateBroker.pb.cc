@@ -86,10 +86,8 @@ const ::google::protobuf::uint32 TableStruct::offsets[] GOOGLE_PROTOBUF_ATTRIBUT
   ~0u,  // no _oneof_case_
   ~0u,  // no _weak_field_map_
   GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(::Qot_UpdateBroker::S2C, security_),
-  GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(::Qot_UpdateBroker::S2C, name_),
   GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(::Qot_UpdateBroker::S2C, brokerasklist_),
   GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(::Qot_UpdateBroker::S2C, brokerbidlist_),
-  1,
   0,
   ~0u,
   ~0u,
@@ -108,8 +106,8 @@ const ::google::protobuf::uint32 TableStruct::offsets[] GOOGLE_PROTOBUF_ATTRIBUT
   1,
 };
 static const ::google::protobuf::internal::MigrationSchema schemas[] GOOGLE_PROTOBUF_ATTRIBUTE_SECTION_VARIABLE(protodesc_cold) = {
-  { 0, 9, sizeof(::Qot_UpdateBroker::S2C)},
-  { 13, 22, sizeof(::Qot_UpdateBroker::Response)},
+  { 0, 8, sizeof(::Qot_UpdateBroker::S2C)},
+  { 11, 20, sizeof(::Qot_UpdateBroker::Response)},
 };
 
 static ::google::protobuf::Message const * const file_default_instances[] = {
@@ -140,18 +138,16 @@ void AddDescriptorsImpl() {
   InitDefaults();
   static const char descriptor[] GOOGLE_PROTOBUF_ATTRIBUTE_SECTION_VARIABLE(protodesc_cold) = {
       "\n\026Qot_UpdateBroker.proto\022\020Qot_UpdateBrok"
-      "er\032\014Common.proto\032\020Qot_Common.proto\"\221\001\n\003S"
+      "er\032\014Common.proto\032\020Qot_Common.proto\"\203\001\n\003S"
       "2C\022&\n\010security\030\001 \002(\0132\024.Qot_Common.Securi"
-      "ty\022\014\n\004name\030\004 \001(\t\022)\n\rbrokerAskList\030\002 \003(\0132"
-      "\022.Qot_Common.Broker\022)\n\rbrokerBidList\030\003 \003"
-      "(\0132\022.Qot_Common.Broker\"f\n\010Response\022\025\n\007re"
-      "tType\030\001 \002(\005:\004-400\022\016\n\006retMsg\030\002 \001(\t\022\017\n\007err"
-      "Code\030\003 \001(\005\022\"\n\003s2c\030\004 \001(\0132\025.Qot_UpdateBrok"
-      "er.S2CBF\n\023com.futu.openapi.pbZ/github.co"
-      "m/futuopen/ftapi4go/pb/qotupdatebroker"
+      "ty\022)\n\rbrokerAskList\030\002 \003(\0132\022.Qot_Common.B"
+      "roker\022)\n\rbrokerBidList\030\003 \003(\0132\022.Qot_Commo"
+      "n.Broker\"f\n\010Response\022\025\n\007retType\030\001 \002(\005:\004-"
+      "400\022\016\n\006retMsg\030\002 \001(\t\022\017\n\007errCode\030\003 \001(\005\022\"\n\003"
+      "s2c\030\004 \001(\0132\025.Qot_UpdateBroker.S2C"
   };
   ::google::protobuf::DescriptorPool::InternalAddGeneratedFile(
-      descriptor, 398);
+      descriptor, 312);
   ::google::protobuf::MessageFactory::InternalRegisterGeneratedFile(
     "Qot_UpdateBroker.proto", &protobuf_RegisterTypes);
   ::protobuf_Common_2eproto::AddDescriptors();
@@ -189,7 +185,6 @@ void S2C::clear_brokerbidlist() {
 }
 #if !defined(_MSC_VER) || _MSC_VER >= 1900
 const int S2C::kSecurityFieldNumber;
-const int S2C::kNameFieldNumber;
 const int S2C::kBrokerAskListFieldNumber;
 const int S2C::kBrokerBidListFieldNumber;
 #endif  // !defined(_MSC_VER) || _MSC_VER >= 1900
@@ -210,10 +205,6 @@ S2C::S2C(const S2C& from)
       brokerasklist_(from.brokerasklist_),
       brokerbidlist_(from.brokerbidlist_) {
   _internal_metadata_.MergeFrom(from._internal_metadata_);
-  name_.UnsafeSetDefault(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
-  if (from.has_name()) {
-    name_.AssignWithDefault(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), from.name_);
-  }
   if (from.has_security()) {
     security_ = new ::Qot_Common::Security(*from.security_);
   } else {
@@ -224,7 +215,6 @@ S2C::S2C(const S2C& from)
 
 void S2C::SharedCtor() {
   _cached_size_ = 0;
-  name_.UnsafeSetDefault(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
   security_ = NULL;
 }
 
@@ -234,7 +224,6 @@ S2C::~S2C() {
 }
 
 void S2C::SharedDtor() {
-  name_.DestroyNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
   if (this != internal_default_instance()) delete security_;
 }
 
@@ -270,15 +259,9 @@ void S2C::Clear() {
   brokerasklist_.Clear();
   brokerbidlist_.Clear();
   cached_has_bits = _has_bits_[0];
-  if (cached_has_bits & 3u) {
-    if (cached_has_bits & 0x00000001u) {
-      GOOGLE_DCHECK(!name_.IsDefault(&::google::protobuf::internal::GetEmptyStringAlreadyInited()));
-      (*name_.UnsafeRawStringPointer())->clear();
-    }
-    if (cached_has_bits & 0x00000002u) {
-      GOOGLE_DCHECK(security_ != NULL);
-      security_->Clear();
-    }
+  if (cached_has_bits & 0x00000001u) {
+    GOOGLE_DCHECK(security_ != NULL);
+    security_->Clear();
   }
   _has_bits_.Clear();
   _internal_metadata_.Clear();
@@ -328,22 +311,6 @@ bool S2C::MergePartialFromCodedStream(
         break;
       }
 
-      // optional string name = 4;
-      case 4: {
-        if (static_cast< ::google::protobuf::uint8>(tag) ==
-            static_cast< ::google::protobuf::uint8>(34u /* 34 & 0xFF */)) {
-          DO_(::google::protobuf::internal::WireFormatLite::ReadString(
-                input, this->mutable_name()));
-          ::google::protobuf::internal::WireFormat::VerifyUTF8StringNamedField(
-            this->name().data(), static_cast<int>(this->name().length()),
-            ::google::protobuf::internal::WireFormat::PARSE,
-            "Qot_UpdateBroker.S2C.name");
-        } else {
-          goto handle_unusual;
-        }
-        break;
-      }
-
       default: {
       handle_unusual:
         if (tag == 0) {
@@ -372,7 +339,7 @@ void S2C::SerializeWithCachedSizes(
 
   cached_has_bits = _has_bits_[0];
   // required .Qot_Common.Security security = 1;
-  if (cached_has_bits & 0x00000002u) {
+  if (cached_has_bits & 0x00000001u) {
     ::google::protobuf::internal::WireFormatLite::WriteMessageMaybeToArray(
       1, *this->security_, output);
   }
@@ -391,16 +358,6 @@ void S2C::SerializeWithCachedSizes(
       3, this->brokerbidlist(static_cast<int>(i)), output);
   }
 
-  // optional string name = 4;
-  if (cached_has_bits & 0x00000001u) {
-    ::google::protobuf::internal::WireFormat::VerifyUTF8StringNamedField(
-      this->name().data(), static_cast<int>(this->name().length()),
-      ::google::protobuf::internal::WireFormat::SERIALIZE,
-      "Qot_UpdateBroker.S2C.name");
-    ::google::protobuf::internal::WireFormatLite::WriteStringMaybeAliased(
-      4, this->name(), output);
-  }
-
   if (_internal_metadata_.have_unknown_fields()) {
     ::google::protobuf::internal::WireFormat::SerializeUnknownFields(
         _internal_metadata_.unknown_fields(), output);
@@ -417,7 +374,7 @@ void S2C::SerializeWithCachedSizes(
 
   cached_has_bits = _has_bits_[0];
   // required .Qot_Common.Security security = 1;
-  if (cached_has_bits & 0x00000002u) {
+  if (cached_has_bits & 0x00000001u) {
     target = ::google::protobuf::internal::WireFormatLite::
       InternalWriteMessageToArray(
         1, *this->security_, deterministic, target);
@@ -437,17 +394,6 @@ void S2C::SerializeWithCachedSizes(
     target = ::google::protobuf::internal::WireFormatLite::
       InternalWriteMessageToArray(
         3, this->brokerbidlist(static_cast<int>(i)), deterministic, target);
-  }
-
-  // optional string name = 4;
-  if (cached_has_bits & 0x00000001u) {
-    ::google::protobuf::internal::WireFormat::VerifyUTF8StringNamedField(
-      this->name().data(), static_cast<int>(this->name().length()),
-      ::google::protobuf::internal::WireFormat::SERIALIZE,
-      "Qot_UpdateBroker.S2C.name");
-    target =
-      ::google::protobuf::internal::WireFormatLite::WriteStringToArray(
-        4, this->name(), target);
   }
 
   if (_internal_metadata_.have_unknown_fields()) {
@@ -495,13 +441,6 @@ size_t S2C::ByteSizeLong() const {
     }
   }
 
-  // optional string name = 4;
-  if (has_name()) {
-    total_size += 1 +
-      ::google::protobuf::internal::WireFormatLite::StringSize(
-        this->name());
-  }
-
   int cached_size = ::google::protobuf::internal::ToCachedSize(total_size);
   GOOGLE_SAFE_CONCURRENT_WRITES_BEGIN();
   _cached_size_ = cached_size;
@@ -533,15 +472,8 @@ void S2C::MergeFrom(const S2C& from) {
 
   brokerasklist_.MergeFrom(from.brokerasklist_);
   brokerbidlist_.MergeFrom(from.brokerbidlist_);
-  cached_has_bits = from._has_bits_[0];
-  if (cached_has_bits & 3u) {
-    if (cached_has_bits & 0x00000001u) {
-      set_has_name();
-      name_.AssignWithDefault(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), from.name_);
-    }
-    if (cached_has_bits & 0x00000002u) {
-      mutable_security()->::Qot_Common::Security::MergeFrom(from.security());
-    }
+  if (from.has_security()) {
+    mutable_security()->::Qot_Common::Security::MergeFrom(from.security());
   }
 }
 
@@ -560,7 +492,7 @@ void S2C::CopyFrom(const S2C& from) {
 }
 
 bool S2C::IsInitialized() const {
-  if ((_has_bits_[0] & 0x00000002) != 0x00000002) return false;
+  if ((_has_bits_[0] & 0x00000001) != 0x00000001) return false;
   if (!::google::protobuf::internal::AllAreInitialized(this->brokerasklist())) return false;
   if (!::google::protobuf::internal::AllAreInitialized(this->brokerbidlist())) return false;
   if (has_security()) {
@@ -577,7 +509,6 @@ void S2C::InternalSwap(S2C* other) {
   using std::swap;
   brokerasklist_.InternalSwap(&other->brokerasklist_);
   brokerbidlist_.InternalSwap(&other->brokerbidlist_);
-  name_.Swap(&other->name_);
   swap(security_, other->security_);
   swap(_has_bits_[0], other->_has_bits_[0]);
   _internal_metadata_.Swap(&other->_internal_metadata_);

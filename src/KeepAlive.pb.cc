@@ -207,12 +207,10 @@ void AddDescriptorsImpl() {
       " \002(\003\"&\n\007Request\022\033\n\003c2s\030\001 \002(\0132\016.KeepAlive"
       ".C2S\"_\n\010Response\022\025\n\007retType\030\001 \002(\005:\004-400\022"
       "\016\n\006retMsg\030\002 \001(\t\022\017\n\007errCode\030\003 \001(\005\022\033\n\003s2c\030"
-      "\004 \001(\0132\016.KeepAlive.S2CB@\n\023com.futu.openap"
-      "i.pbZ)github.com/futuopen/ftapi4go/pb/ke"
-      "epalive"
+      "\004 \001(\0132\016.KeepAlive.S2C"
   };
   ::google::protobuf::DescriptorPool::InternalAddGeneratedFile(
-      descriptor, 287);
+      descriptor, 221);
   ::google::protobuf::MessageFactory::InternalRegisterGeneratedFile(
     "KeepAlive.proto", &protobuf_RegisterTypes);
   ::protobuf_Common_2eproto::AddDescriptors();

@@ -139,11 +139,7 @@ const ::google::protobuf::uint32 TableStruct::offsets[] GOOGLE_PROTOBUF_ATTRIBUT
   ~0u,  // no _oneof_case_
   ~0u,  // no _weak_field_map_
   GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(::Qot_GetPlateSecurity::C2S, plate_),
-  GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(::Qot_GetPlateSecurity::C2S, sortfield_),
-  GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(::Qot_GetPlateSecurity::C2S, ascend_),
   0,
-  1,
-  2,
   GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(::Qot_GetPlateSecurity::S2C, _has_bits_),
   GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(::Qot_GetPlateSecurity::S2C, _internal_metadata_),
   ~0u,  // no _extensions_
@@ -173,10 +169,10 @@ const ::google::protobuf::uint32 TableStruct::offsets[] GOOGLE_PROTOBUF_ATTRIBUT
   1,
 };
 static const ::google::protobuf::internal::MigrationSchema schemas[] GOOGLE_PROTOBUF_ATTRIBUTE_SECTION_VARIABLE(protodesc_cold) = {
-  { 0, 8, sizeof(::Qot_GetPlateSecurity::C2S)},
-  { 11, 17, sizeof(::Qot_GetPlateSecurity::S2C)},
-  { 18, 24, sizeof(::Qot_GetPlateSecurity::Request)},
-  { 25, 34, sizeof(::Qot_GetPlateSecurity::Response)},
+  { 0, 6, sizeof(::Qot_GetPlateSecurity::C2S)},
+  { 7, 13, sizeof(::Qot_GetPlateSecurity::S2C)},
+  { 14, 20, sizeof(::Qot_GetPlateSecurity::Request)},
+  { 21, 30, sizeof(::Qot_GetPlateSecurity::Response)},
 };
 
 static ::google::protobuf::Message const * const file_default_instances[] = {
@@ -210,19 +206,16 @@ void AddDescriptorsImpl() {
   static const char descriptor[] GOOGLE_PROTOBUF_ATTRIBUTE_SECTION_VARIABLE(protodesc_cold) = {
       "\n\032Qot_GetPlateSecurity.proto\022\024Qot_GetPla"
       "teSecurity\032\014Common.proto\032\020Qot_Common.pro"
-      "to\"M\n\003C2S\022#\n\005plate\030\001 \002(\0132\024.Qot_Common.Se"
-      "curity\022\021\n\tsortField\030\002 \001(\005\022\016\n\006ascend\030\003 \001("
-      "\010\"=\n\003S2C\0226\n\016staticInfoList\030\001 \003(\0132\036.Qot_C"
-      "ommon.SecurityStaticInfo\"1\n\007Request\022&\n\003c"
-      "2s\030\001 \002(\0132\031.Qot_GetPlateSecurity.C2S\"j\n\010R"
-      "esponse\022\025\n\007retType\030\001 \002(\005:\004-400\022\016\n\006retMsg"
-      "\030\002 \001(\t\022\017\n\007errCode\030\003 \001(\005\022&\n\003s2c\030\004 \001(\0132\031.Q"
-      "ot_GetPlateSecurity.S2CBJ\n\023com.futu.open"
-      "api.pbZ3github.com/futuopen/ftapi4go/pb/"
-      "qotgetplatesecurity"
+      "to\"*\n\003C2S\022#\n\005plate\030\001 \002(\0132\024.Qot_Common.Se"
+      "curity\"=\n\003S2C\0226\n\016staticInfoList\030\001 \003(\0132\036."
+      "Qot_Common.SecurityStaticInfo\"1\n\007Request"
+      "\022&\n\003c2s\030\001 \002(\0132\031.Qot_GetPlateSecurity.C2S"
+      "\"j\n\010Response\022\025\n\007retType\030\001 \002(\005:\004-400\022\016\n\006r"
+      "etMsg\030\002 \001(\t\022\017\n\007errCode\030\003 \001(\005\022&\n\003s2c\030\004 \001("
+      "\0132\031.Qot_GetPlateSecurity.S2C"
   };
   ::google::protobuf::DescriptorPool::InternalAddGeneratedFile(
-      descriptor, 459);
+      descriptor, 348);
   ::google::protobuf::MessageFactory::InternalRegisterGeneratedFile(
     "Qot_GetPlateSecurity.proto", &protobuf_RegisterTypes);
   ::protobuf_Common_2eproto::AddDescriptors();
@@ -254,8 +247,6 @@ void C2S::clear_plate() {
 }
 #if !defined(_MSC_VER) || _MSC_VER >= 1900
 const int C2S::kPlateFieldNumber;
-const int C2S::kSortFieldFieldNumber;
-const int C2S::kAscendFieldNumber;
 #endif  // !defined(_MSC_VER) || _MSC_VER >= 1900
 
 C2S::C2S()
@@ -277,17 +268,12 @@ C2S::C2S(const C2S& from)
   } else {
     plate_ = NULL;
   }
-  ::memcpy(&sortfield_, &from.sortfield_,
-    static_cast<size_t>(reinterpret_cast<char*>(&ascend_) -
-    reinterpret_cast<char*>(&sortfield_)) + sizeof(ascend_));
   // @@protoc_insertion_point(copy_constructor:Qot_GetPlateSecurity.C2S)
 }
 
 void C2S::SharedCtor() {
   _cached_size_ = 0;
-  ::memset(&plate_, 0, static_cast<size_t>(
-      reinterpret_cast<char*>(&ascend_) -
-      reinterpret_cast<char*>(&plate_)) + sizeof(ascend_));
+  plate_ = NULL;
 }
 
 C2S::~C2S() {
@@ -333,11 +319,6 @@ void C2S::Clear() {
     GOOGLE_DCHECK(plate_ != NULL);
     plate_->Clear();
   }
-  if (cached_has_bits & 6u) {
-    ::memset(&sortfield_, 0, static_cast<size_t>(
-        reinterpret_cast<char*>(&ascend_) -
-        reinterpret_cast<char*>(&sortfield_)) + sizeof(ascend_));
-  }
   _has_bits_.Clear();
   _internal_metadata_.Clear();
 }
@@ -358,34 +339,6 @@ bool C2S::MergePartialFromCodedStream(
             static_cast< ::google::protobuf::uint8>(10u /* 10 & 0xFF */)) {
           DO_(::google::protobuf::internal::WireFormatLite::ReadMessage(
                input, mutable_plate()));
-        } else {
-          goto handle_unusual;
-        }
-        break;
-      }
-
-      // optional int32 sortField = 2;
-      case 2: {
-        if (static_cast< ::google::protobuf::uint8>(tag) ==
-            static_cast< ::google::protobuf::uint8>(16u /* 16 & 0xFF */)) {
-          set_has_sortfield();
-          DO_((::google::protobuf::internal::WireFormatLite::ReadPrimitive<
-                   ::google::protobuf::int32, ::google::protobuf::internal::WireFormatLite::TYPE_INT32>(
-                 input, &sortfield_)));
-        } else {
-          goto handle_unusual;
-        }
-        break;
-      }
-
-      // optional bool ascend = 3;
-      case 3: {
-        if (static_cast< ::google::protobuf::uint8>(tag) ==
-            static_cast< ::google::protobuf::uint8>(24u /* 24 & 0xFF */)) {
-          set_has_ascend();
-          DO_((::google::protobuf::internal::WireFormatLite::ReadPrimitive<
-                   bool, ::google::protobuf::internal::WireFormatLite::TYPE_BOOL>(
-                 input, &ascend_)));
         } else {
           goto handle_unusual;
         }
@@ -425,16 +378,6 @@ void C2S::SerializeWithCachedSizes(
       1, *this->plate_, output);
   }
 
-  // optional int32 sortField = 2;
-  if (cached_has_bits & 0x00000002u) {
-    ::google::protobuf::internal::WireFormatLite::WriteInt32(2, this->sortfield(), output);
-  }
-
-  // optional bool ascend = 3;
-  if (cached_has_bits & 0x00000004u) {
-    ::google::protobuf::internal::WireFormatLite::WriteBool(3, this->ascend(), output);
-  }
-
   if (_internal_metadata_.have_unknown_fields()) {
     ::google::protobuf::internal::WireFormat::SerializeUnknownFields(
         _internal_metadata_.unknown_fields(), output);
@@ -455,16 +398,6 @@ void C2S::SerializeWithCachedSizes(
     target = ::google::protobuf::internal::WireFormatLite::
       InternalWriteMessageToArray(
         1, *this->plate_, deterministic, target);
-  }
-
-  // optional int32 sortField = 2;
-  if (cached_has_bits & 0x00000002u) {
-    target = ::google::protobuf::internal::WireFormatLite::WriteInt32ToArray(2, this->sortfield(), target);
-  }
-
-  // optional bool ascend = 3;
-  if (cached_has_bits & 0x00000004u) {
-    target = ::google::protobuf::internal::WireFormatLite::WriteBoolToArray(3, this->ascend(), target);
   }
 
   if (_internal_metadata_.have_unknown_fields()) {
@@ -489,20 +422,6 @@ size_t C2S::ByteSizeLong() const {
     total_size += 1 +
       ::google::protobuf::internal::WireFormatLite::MessageSize(
         *this->plate_);
-  }
-  if (_has_bits_[0 / 32] & 6u) {
-    // optional int32 sortField = 2;
-    if (has_sortfield()) {
-      total_size += 1 +
-        ::google::protobuf::internal::WireFormatLite::Int32Size(
-          this->sortfield());
-    }
-
-    // optional bool ascend = 3;
-    if (has_ascend()) {
-      total_size += 1 + 1;
-    }
-
   }
   int cached_size = ::google::protobuf::internal::ToCachedSize(total_size);
   GOOGLE_SAFE_CONCURRENT_WRITES_BEGIN();
@@ -533,18 +452,8 @@ void C2S::MergeFrom(const C2S& from) {
   ::google::protobuf::uint32 cached_has_bits = 0;
   (void) cached_has_bits;
 
-  cached_has_bits = from._has_bits_[0];
-  if (cached_has_bits & 7u) {
-    if (cached_has_bits & 0x00000001u) {
-      mutable_plate()->::Qot_Common::Security::MergeFrom(from.plate());
-    }
-    if (cached_has_bits & 0x00000002u) {
-      sortfield_ = from.sortfield_;
-    }
-    if (cached_has_bits & 0x00000004u) {
-      ascend_ = from.ascend_;
-    }
-    _has_bits_[0] |= cached_has_bits;
+  if (from.has_plate()) {
+    mutable_plate()->::Qot_Common::Security::MergeFrom(from.plate());
   }
 }
 
@@ -577,8 +486,6 @@ void C2S::Swap(C2S* other) {
 void C2S::InternalSwap(C2S* other) {
   using std::swap;
   swap(plate_, other->plate_);
-  swap(sortfield_, other->sortfield_);
-  swap(ascend_, other->ascend_);
   swap(_has_bits_[0], other->_has_bits_[0]);
   _internal_metadata_.Swap(&other->_internal_metadata_);
   swap(_cached_size_, other->_cached_size_);

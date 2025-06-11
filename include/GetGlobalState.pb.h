@@ -276,45 +276,6 @@ class S2C : public ::google::protobuf::Message /* @@protoc_insertion_point(class
 
   // accessors -------------------------------------------------------
 
-  // optional string qotSvrIpAddr = 13;
-  bool has_qotsvripaddr() const;
-  void clear_qotsvripaddr();
-  static const int kQotSvrIpAddrFieldNumber = 13;
-  const ::std::string& qotsvripaddr() const;
-  void set_qotsvripaddr(const ::std::string& value);
-  #if LANG_CXX11
-  void set_qotsvripaddr(::std::string&& value);
-  #endif
-  void set_qotsvripaddr(const char* value);
-  void set_qotsvripaddr(const char* value, size_t size);
-  ::std::string* mutable_qotsvripaddr();
-  ::std::string* release_qotsvripaddr();
-  void set_allocated_qotsvripaddr(::std::string* qotsvripaddr);
-
-  // optional string trdSvrIpAddr = 14;
-  bool has_trdsvripaddr() const;
-  void clear_trdsvripaddr();
-  static const int kTrdSvrIpAddrFieldNumber = 14;
-  const ::std::string& trdsvripaddr() const;
-  void set_trdsvripaddr(const ::std::string& value);
-  #if LANG_CXX11
-  void set_trdsvripaddr(::std::string&& value);
-  #endif
-  void set_trdsvripaddr(const char* value);
-  void set_trdsvripaddr(const char* value, size_t size);
-  ::std::string* mutable_trdsvripaddr();
-  ::std::string* release_trdsvripaddr();
-  void set_allocated_trdsvripaddr(::std::string* trdsvripaddr);
-
-  // optional .Common.ProgramStatus programStatus = 12;
-  bool has_programstatus() const;
-  void clear_programstatus();
-  static const int kProgramStatusFieldNumber = 12;
-  const ::Common::ProgramStatus& programstatus() const;
-  ::Common::ProgramStatus* release_programstatus();
-  ::Common::ProgramStatus* mutable_programstatus();
-  void set_allocated_programstatus(::Common::ProgramStatus* programstatus);
-
   // required int32 marketHK = 1;
   bool has_markethk() const;
   void clear_markethk();
@@ -392,34 +353,6 @@ class S2C : public ::google::protobuf::Message /* @@protoc_insertion_point(class
   double localtime() const;
   void set_localtime(double value);
 
-  // optional uint64 connID = 16;
-  bool has_connid() const;
-  void clear_connid();
-  static const int kConnIDFieldNumber = 16;
-  ::google::protobuf::uint64 connid() const;
-  void set_connid(::google::protobuf::uint64 value);
-
-  // optional int32 marketUSFuture = 15;
-  bool has_marketusfuture() const;
-  void clear_marketusfuture();
-  static const int kMarketUSFutureFieldNumber = 15;
-  ::google::protobuf::int32 marketusfuture() const;
-  void set_marketusfuture(::google::protobuf::int32 value);
-
-  // optional int32 marketSGFuture = 17;
-  bool has_marketsgfuture() const;
-  void clear_marketsgfuture();
-  static const int kMarketSGFutureFieldNumber = 17;
-  ::google::protobuf::int32 marketsgfuture() const;
-  void set_marketsgfuture(::google::protobuf::int32 value);
-
-  // optional int32 marketJPFuture = 18;
-  bool has_marketjpfuture() const;
-  void clear_marketjpfuture();
-  static const int kMarketJPFutureFieldNumber = 18;
-  ::google::protobuf::int32 marketjpfuture() const;
-  void set_marketjpfuture(::google::protobuf::int32 value);
-
   // @@protoc_insertion_point(class_scope:GetGlobalState.S2C)
  private:
   void set_has_markethk();
@@ -432,12 +365,6 @@ class S2C : public ::google::protobuf::Message /* @@protoc_insertion_point(class
   void clear_has_marketsz();
   void set_has_markethkfuture();
   void clear_has_markethkfuture();
-  void set_has_marketusfuture();
-  void clear_has_marketusfuture();
-  void set_has_marketsgfuture();
-  void clear_has_marketsgfuture();
-  void set_has_marketjpfuture();
-  void clear_has_marketjpfuture();
   void set_has_qotlogined();
   void clear_has_qotlogined();
   void set_has_trdlogined();
@@ -450,14 +377,6 @@ class S2C : public ::google::protobuf::Message /* @@protoc_insertion_point(class
   void clear_has_time();
   void set_has_localtime();
   void clear_has_localtime();
-  void set_has_programstatus();
-  void clear_has_programstatus();
-  void set_has_qotsvripaddr();
-  void clear_has_qotsvripaddr();
-  void set_has_trdsvripaddr();
-  void clear_has_trdsvripaddr();
-  void set_has_connid();
-  void clear_has_connid();
 
   // helper for ByteSizeLong()
   size_t RequiredFieldsByteSizeFallback() const;
@@ -465,9 +384,6 @@ class S2C : public ::google::protobuf::Message /* @@protoc_insertion_point(class
   ::google::protobuf::internal::InternalMetadataWithArena _internal_metadata_;
   ::google::protobuf::internal::HasBits<1> _has_bits_;
   mutable int _cached_size_;
-  ::google::protobuf::internal::ArenaStringPtr qotsvripaddr_;
-  ::google::protobuf::internal::ArenaStringPtr trdsvripaddr_;
-  ::Common::ProgramStatus* programstatus_;
   ::google::protobuf::int32 markethk_;
   ::google::protobuf::int32 marketus_;
   ::google::protobuf::int32 marketsh_;
@@ -479,10 +395,6 @@ class S2C : public ::google::protobuf::Message /* @@protoc_insertion_point(class
   ::google::protobuf::int32 serverbuildno_;
   ::google::protobuf::int64 time_;
   double localtime_;
-  ::google::protobuf::uint64 connid_;
-  ::google::protobuf::int32 marketusfuture_;
-  ::google::protobuf::int32 marketsgfuture_;
-  ::google::protobuf::int32 marketjpfuture_;
   friend struct ::protobuf_GetGlobalState_2eproto::TableStruct;
   friend void ::protobuf_GetGlobalState_2eproto::InitDefaultsS2CImpl();
 };
@@ -789,13 +701,13 @@ inline void C2S::set_userid(::google::protobuf::uint64 value) {
 
 // required int32 marketHK = 1;
 inline bool S2C::has_markethk() const {
-  return (_has_bits_[0] & 0x00000008u) != 0;
+  return (_has_bits_[0] & 0x00000001u) != 0;
 }
 inline void S2C::set_has_markethk() {
-  _has_bits_[0] |= 0x00000008u;
+  _has_bits_[0] |= 0x00000001u;
 }
 inline void S2C::clear_has_markethk() {
-  _has_bits_[0] &= ~0x00000008u;
+  _has_bits_[0] &= ~0x00000001u;
 }
 inline void S2C::clear_markethk() {
   markethk_ = 0;
@@ -813,13 +725,13 @@ inline void S2C::set_markethk(::google::protobuf::int32 value) {
 
 // required int32 marketUS = 2;
 inline bool S2C::has_marketus() const {
-  return (_has_bits_[0] & 0x00000010u) != 0;
+  return (_has_bits_[0] & 0x00000002u) != 0;
 }
 inline void S2C::set_has_marketus() {
-  _has_bits_[0] |= 0x00000010u;
+  _has_bits_[0] |= 0x00000002u;
 }
 inline void S2C::clear_has_marketus() {
-  _has_bits_[0] &= ~0x00000010u;
+  _has_bits_[0] &= ~0x00000002u;
 }
 inline void S2C::clear_marketus() {
   marketus_ = 0;
@@ -837,13 +749,13 @@ inline void S2C::set_marketus(::google::protobuf::int32 value) {
 
 // required int32 marketSH = 3;
 inline bool S2C::has_marketsh() const {
-  return (_has_bits_[0] & 0x00000020u) != 0;
+  return (_has_bits_[0] & 0x00000004u) != 0;
 }
 inline void S2C::set_has_marketsh() {
-  _has_bits_[0] |= 0x00000020u;
+  _has_bits_[0] |= 0x00000004u;
 }
 inline void S2C::clear_has_marketsh() {
-  _has_bits_[0] &= ~0x00000020u;
+  _has_bits_[0] &= ~0x00000004u;
 }
 inline void S2C::clear_marketsh() {
   marketsh_ = 0;
@@ -861,13 +773,13 @@ inline void S2C::set_marketsh(::google::protobuf::int32 value) {
 
 // required int32 marketSZ = 4;
 inline bool S2C::has_marketsz() const {
-  return (_has_bits_[0] & 0x00000040u) != 0;
+  return (_has_bits_[0] & 0x00000008u) != 0;
 }
 inline void S2C::set_has_marketsz() {
-  _has_bits_[0] |= 0x00000040u;
+  _has_bits_[0] |= 0x00000008u;
 }
 inline void S2C::clear_has_marketsz() {
-  _has_bits_[0] &= ~0x00000040u;
+  _has_bits_[0] &= ~0x00000008u;
 }
 inline void S2C::clear_marketsz() {
   marketsz_ = 0;
@@ -885,13 +797,13 @@ inline void S2C::set_marketsz(::google::protobuf::int32 value) {
 
 // required int32 marketHKFuture = 5;
 inline bool S2C::has_markethkfuture() const {
-  return (_has_bits_[0] & 0x00000080u) != 0;
+  return (_has_bits_[0] & 0x00000010u) != 0;
 }
 inline void S2C::set_has_markethkfuture() {
-  _has_bits_[0] |= 0x00000080u;
+  _has_bits_[0] |= 0x00000010u;
 }
 inline void S2C::clear_has_markethkfuture() {
-  _has_bits_[0] &= ~0x00000080u;
+  _has_bits_[0] &= ~0x00000010u;
 }
 inline void S2C::clear_markethkfuture() {
   markethkfuture_ = 0;
@@ -907,87 +819,15 @@ inline void S2C::set_markethkfuture(::google::protobuf::int32 value) {
   // @@protoc_insertion_point(field_set:GetGlobalState.S2C.marketHKFuture)
 }
 
-// optional int32 marketUSFuture = 15;
-inline bool S2C::has_marketusfuture() const {
-  return (_has_bits_[0] & 0x00008000u) != 0;
-}
-inline void S2C::set_has_marketusfuture() {
-  _has_bits_[0] |= 0x00008000u;
-}
-inline void S2C::clear_has_marketusfuture() {
-  _has_bits_[0] &= ~0x00008000u;
-}
-inline void S2C::clear_marketusfuture() {
-  marketusfuture_ = 0;
-  clear_has_marketusfuture();
-}
-inline ::google::protobuf::int32 S2C::marketusfuture() const {
-  // @@protoc_insertion_point(field_get:GetGlobalState.S2C.marketUSFuture)
-  return marketusfuture_;
-}
-inline void S2C::set_marketusfuture(::google::protobuf::int32 value) {
-  set_has_marketusfuture();
-  marketusfuture_ = value;
-  // @@protoc_insertion_point(field_set:GetGlobalState.S2C.marketUSFuture)
-}
-
-// optional int32 marketSGFuture = 17;
-inline bool S2C::has_marketsgfuture() const {
-  return (_has_bits_[0] & 0x00010000u) != 0;
-}
-inline void S2C::set_has_marketsgfuture() {
-  _has_bits_[0] |= 0x00010000u;
-}
-inline void S2C::clear_has_marketsgfuture() {
-  _has_bits_[0] &= ~0x00010000u;
-}
-inline void S2C::clear_marketsgfuture() {
-  marketsgfuture_ = 0;
-  clear_has_marketsgfuture();
-}
-inline ::google::protobuf::int32 S2C::marketsgfuture() const {
-  // @@protoc_insertion_point(field_get:GetGlobalState.S2C.marketSGFuture)
-  return marketsgfuture_;
-}
-inline void S2C::set_marketsgfuture(::google::protobuf::int32 value) {
-  set_has_marketsgfuture();
-  marketsgfuture_ = value;
-  // @@protoc_insertion_point(field_set:GetGlobalState.S2C.marketSGFuture)
-}
-
-// optional int32 marketJPFuture = 18;
-inline bool S2C::has_marketjpfuture() const {
-  return (_has_bits_[0] & 0x00020000u) != 0;
-}
-inline void S2C::set_has_marketjpfuture() {
-  _has_bits_[0] |= 0x00020000u;
-}
-inline void S2C::clear_has_marketjpfuture() {
-  _has_bits_[0] &= ~0x00020000u;
-}
-inline void S2C::clear_marketjpfuture() {
-  marketjpfuture_ = 0;
-  clear_has_marketjpfuture();
-}
-inline ::google::protobuf::int32 S2C::marketjpfuture() const {
-  // @@protoc_insertion_point(field_get:GetGlobalState.S2C.marketJPFuture)
-  return marketjpfuture_;
-}
-inline void S2C::set_marketjpfuture(::google::protobuf::int32 value) {
-  set_has_marketjpfuture();
-  marketjpfuture_ = value;
-  // @@protoc_insertion_point(field_set:GetGlobalState.S2C.marketJPFuture)
-}
-
 // required bool qotLogined = 6;
 inline bool S2C::has_qotlogined() const {
-  return (_has_bits_[0] & 0x00000100u) != 0;
+  return (_has_bits_[0] & 0x00000020u) != 0;
 }
 inline void S2C::set_has_qotlogined() {
-  _has_bits_[0] |= 0x00000100u;
+  _has_bits_[0] |= 0x00000020u;
 }
 inline void S2C::clear_has_qotlogined() {
-  _has_bits_[0] &= ~0x00000100u;
+  _has_bits_[0] &= ~0x00000020u;
 }
 inline void S2C::clear_qotlogined() {
   qotlogined_ = false;
@@ -1005,13 +845,13 @@ inline void S2C::set_qotlogined(bool value) {
 
 // required bool trdLogined = 7;
 inline bool S2C::has_trdlogined() const {
-  return (_has_bits_[0] & 0x00000200u) != 0;
+  return (_has_bits_[0] & 0x00000040u) != 0;
 }
 inline void S2C::set_has_trdlogined() {
-  _has_bits_[0] |= 0x00000200u;
+  _has_bits_[0] |= 0x00000040u;
 }
 inline void S2C::clear_has_trdlogined() {
-  _has_bits_[0] &= ~0x00000200u;
+  _has_bits_[0] &= ~0x00000040u;
 }
 inline void S2C::clear_trdlogined() {
   trdlogined_ = false;
@@ -1029,13 +869,13 @@ inline void S2C::set_trdlogined(bool value) {
 
 // required int32 serverVer = 8;
 inline bool S2C::has_serverver() const {
-  return (_has_bits_[0] & 0x00000400u) != 0;
+  return (_has_bits_[0] & 0x00000080u) != 0;
 }
 inline void S2C::set_has_serverver() {
-  _has_bits_[0] |= 0x00000400u;
+  _has_bits_[0] |= 0x00000080u;
 }
 inline void S2C::clear_has_serverver() {
-  _has_bits_[0] &= ~0x00000400u;
+  _has_bits_[0] &= ~0x00000080u;
 }
 inline void S2C::clear_serverver() {
   serverver_ = 0;
@@ -1053,13 +893,13 @@ inline void S2C::set_serverver(::google::protobuf::int32 value) {
 
 // required int32 serverBuildNo = 9;
 inline bool S2C::has_serverbuildno() const {
-  return (_has_bits_[0] & 0x00000800u) != 0;
+  return (_has_bits_[0] & 0x00000100u) != 0;
 }
 inline void S2C::set_has_serverbuildno() {
-  _has_bits_[0] |= 0x00000800u;
+  _has_bits_[0] |= 0x00000100u;
 }
 inline void S2C::clear_has_serverbuildno() {
-  _has_bits_[0] &= ~0x00000800u;
+  _has_bits_[0] &= ~0x00000100u;
 }
 inline void S2C::clear_serverbuildno() {
   serverbuildno_ = 0;
@@ -1077,13 +917,13 @@ inline void S2C::set_serverbuildno(::google::protobuf::int32 value) {
 
 // required int64 time = 10;
 inline bool S2C::has_time() const {
-  return (_has_bits_[0] & 0x00001000u) != 0;
+  return (_has_bits_[0] & 0x00000200u) != 0;
 }
 inline void S2C::set_has_time() {
-  _has_bits_[0] |= 0x00001000u;
+  _has_bits_[0] |= 0x00000200u;
 }
 inline void S2C::clear_has_time() {
-  _has_bits_[0] &= ~0x00001000u;
+  _has_bits_[0] &= ~0x00000200u;
 }
 inline void S2C::clear_time() {
   time_ = GOOGLE_LONGLONG(0);
@@ -1101,13 +941,13 @@ inline void S2C::set_time(::google::protobuf::int64 value) {
 
 // optional double localTime = 11;
 inline bool S2C::has_localtime() const {
-  return (_has_bits_[0] & 0x00002000u) != 0;
+  return (_has_bits_[0] & 0x00000400u) != 0;
 }
 inline void S2C::set_has_localtime() {
-  _has_bits_[0] |= 0x00002000u;
+  _has_bits_[0] |= 0x00000400u;
 }
 inline void S2C::clear_has_localtime() {
-  _has_bits_[0] &= ~0x00002000u;
+  _has_bits_[0] &= ~0x00000400u;
 }
 inline void S2C::clear_localtime() {
   localtime_ = 0;
@@ -1121,206 +961,6 @@ inline void S2C::set_localtime(double value) {
   set_has_localtime();
   localtime_ = value;
   // @@protoc_insertion_point(field_set:GetGlobalState.S2C.localTime)
-}
-
-// optional .Common.ProgramStatus programStatus = 12;
-inline bool S2C::has_programstatus() const {
-  return (_has_bits_[0] & 0x00000004u) != 0;
-}
-inline void S2C::set_has_programstatus() {
-  _has_bits_[0] |= 0x00000004u;
-}
-inline void S2C::clear_has_programstatus() {
-  _has_bits_[0] &= ~0x00000004u;
-}
-inline const ::Common::ProgramStatus& S2C::programstatus() const {
-  const ::Common::ProgramStatus* p = programstatus_;
-  // @@protoc_insertion_point(field_get:GetGlobalState.S2C.programStatus)
-  return p != NULL ? *p : *reinterpret_cast<const ::Common::ProgramStatus*>(
-      &::Common::_ProgramStatus_default_instance_);
-}
-inline ::Common::ProgramStatus* S2C::release_programstatus() {
-  // @@protoc_insertion_point(field_release:GetGlobalState.S2C.programStatus)
-  clear_has_programstatus();
-  ::Common::ProgramStatus* temp = programstatus_;
-  programstatus_ = NULL;
-  return temp;
-}
-inline ::Common::ProgramStatus* S2C::mutable_programstatus() {
-  set_has_programstatus();
-  if (programstatus_ == NULL) {
-    programstatus_ = new ::Common::ProgramStatus;
-  }
-  // @@protoc_insertion_point(field_mutable:GetGlobalState.S2C.programStatus)
-  return programstatus_;
-}
-inline void S2C::set_allocated_programstatus(::Common::ProgramStatus* programstatus) {
-  ::google::protobuf::Arena* message_arena = GetArenaNoVirtual();
-  if (message_arena == NULL) {
-    delete reinterpret_cast< ::google::protobuf::MessageLite*>(programstatus_);
-  }
-  if (programstatus) {
-    ::google::protobuf::Arena* submessage_arena = NULL;
-    if (message_arena != submessage_arena) {
-      programstatus = ::google::protobuf::internal::GetOwnedMessage(
-          message_arena, programstatus, submessage_arena);
-    }
-    set_has_programstatus();
-  } else {
-    clear_has_programstatus();
-  }
-  programstatus_ = programstatus;
-  // @@protoc_insertion_point(field_set_allocated:GetGlobalState.S2C.programStatus)
-}
-
-// optional string qotSvrIpAddr = 13;
-inline bool S2C::has_qotsvripaddr() const {
-  return (_has_bits_[0] & 0x00000001u) != 0;
-}
-inline void S2C::set_has_qotsvripaddr() {
-  _has_bits_[0] |= 0x00000001u;
-}
-inline void S2C::clear_has_qotsvripaddr() {
-  _has_bits_[0] &= ~0x00000001u;
-}
-inline void S2C::clear_qotsvripaddr() {
-  qotsvripaddr_.ClearToEmptyNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
-  clear_has_qotsvripaddr();
-}
-inline const ::std::string& S2C::qotsvripaddr() const {
-  // @@protoc_insertion_point(field_get:GetGlobalState.S2C.qotSvrIpAddr)
-  return qotsvripaddr_.GetNoArena();
-}
-inline void S2C::set_qotsvripaddr(const ::std::string& value) {
-  set_has_qotsvripaddr();
-  qotsvripaddr_.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), value);
-  // @@protoc_insertion_point(field_set:GetGlobalState.S2C.qotSvrIpAddr)
-}
-#if LANG_CXX11
-inline void S2C::set_qotsvripaddr(::std::string&& value) {
-  set_has_qotsvripaddr();
-  qotsvripaddr_.SetNoArena(
-    &::google::protobuf::internal::GetEmptyStringAlreadyInited(), ::std::move(value));
-  // @@protoc_insertion_point(field_set_rvalue:GetGlobalState.S2C.qotSvrIpAddr)
-}
-#endif
-inline void S2C::set_qotsvripaddr(const char* value) {
-  GOOGLE_DCHECK(value != NULL);
-  set_has_qotsvripaddr();
-  qotsvripaddr_.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), ::std::string(value));
-  // @@protoc_insertion_point(field_set_char:GetGlobalState.S2C.qotSvrIpAddr)
-}
-inline void S2C::set_qotsvripaddr(const char* value, size_t size) {
-  set_has_qotsvripaddr();
-  qotsvripaddr_.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(),
-      ::std::string(reinterpret_cast<const char*>(value), size));
-  // @@protoc_insertion_point(field_set_pointer:GetGlobalState.S2C.qotSvrIpAddr)
-}
-inline ::std::string* S2C::mutable_qotsvripaddr() {
-  set_has_qotsvripaddr();
-  // @@protoc_insertion_point(field_mutable:GetGlobalState.S2C.qotSvrIpAddr)
-  return qotsvripaddr_.MutableNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
-}
-inline ::std::string* S2C::release_qotsvripaddr() {
-  // @@protoc_insertion_point(field_release:GetGlobalState.S2C.qotSvrIpAddr)
-  clear_has_qotsvripaddr();
-  return qotsvripaddr_.ReleaseNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
-}
-inline void S2C::set_allocated_qotsvripaddr(::std::string* qotsvripaddr) {
-  if (qotsvripaddr != NULL) {
-    set_has_qotsvripaddr();
-  } else {
-    clear_has_qotsvripaddr();
-  }
-  qotsvripaddr_.SetAllocatedNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), qotsvripaddr);
-  // @@protoc_insertion_point(field_set_allocated:GetGlobalState.S2C.qotSvrIpAddr)
-}
-
-// optional string trdSvrIpAddr = 14;
-inline bool S2C::has_trdsvripaddr() const {
-  return (_has_bits_[0] & 0x00000002u) != 0;
-}
-inline void S2C::set_has_trdsvripaddr() {
-  _has_bits_[0] |= 0x00000002u;
-}
-inline void S2C::clear_has_trdsvripaddr() {
-  _has_bits_[0] &= ~0x00000002u;
-}
-inline void S2C::clear_trdsvripaddr() {
-  trdsvripaddr_.ClearToEmptyNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
-  clear_has_trdsvripaddr();
-}
-inline const ::std::string& S2C::trdsvripaddr() const {
-  // @@protoc_insertion_point(field_get:GetGlobalState.S2C.trdSvrIpAddr)
-  return trdsvripaddr_.GetNoArena();
-}
-inline void S2C::set_trdsvripaddr(const ::std::string& value) {
-  set_has_trdsvripaddr();
-  trdsvripaddr_.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), value);
-  // @@protoc_insertion_point(field_set:GetGlobalState.S2C.trdSvrIpAddr)
-}
-#if LANG_CXX11
-inline void S2C::set_trdsvripaddr(::std::string&& value) {
-  set_has_trdsvripaddr();
-  trdsvripaddr_.SetNoArena(
-    &::google::protobuf::internal::GetEmptyStringAlreadyInited(), ::std::move(value));
-  // @@protoc_insertion_point(field_set_rvalue:GetGlobalState.S2C.trdSvrIpAddr)
-}
-#endif
-inline void S2C::set_trdsvripaddr(const char* value) {
-  GOOGLE_DCHECK(value != NULL);
-  set_has_trdsvripaddr();
-  trdsvripaddr_.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), ::std::string(value));
-  // @@protoc_insertion_point(field_set_char:GetGlobalState.S2C.trdSvrIpAddr)
-}
-inline void S2C::set_trdsvripaddr(const char* value, size_t size) {
-  set_has_trdsvripaddr();
-  trdsvripaddr_.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(),
-      ::std::string(reinterpret_cast<const char*>(value), size));
-  // @@protoc_insertion_point(field_set_pointer:GetGlobalState.S2C.trdSvrIpAddr)
-}
-inline ::std::string* S2C::mutable_trdsvripaddr() {
-  set_has_trdsvripaddr();
-  // @@protoc_insertion_point(field_mutable:GetGlobalState.S2C.trdSvrIpAddr)
-  return trdsvripaddr_.MutableNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
-}
-inline ::std::string* S2C::release_trdsvripaddr() {
-  // @@protoc_insertion_point(field_release:GetGlobalState.S2C.trdSvrIpAddr)
-  clear_has_trdsvripaddr();
-  return trdsvripaddr_.ReleaseNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
-}
-inline void S2C::set_allocated_trdsvripaddr(::std::string* trdsvripaddr) {
-  if (trdsvripaddr != NULL) {
-    set_has_trdsvripaddr();
-  } else {
-    clear_has_trdsvripaddr();
-  }
-  trdsvripaddr_.SetAllocatedNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), trdsvripaddr);
-  // @@protoc_insertion_point(field_set_allocated:GetGlobalState.S2C.trdSvrIpAddr)
-}
-
-// optional uint64 connID = 16;
-inline bool S2C::has_connid() const {
-  return (_has_bits_[0] & 0x00004000u) != 0;
-}
-inline void S2C::set_has_connid() {
-  _has_bits_[0] |= 0x00004000u;
-}
-inline void S2C::clear_has_connid() {
-  _has_bits_[0] &= ~0x00004000u;
-}
-inline void S2C::clear_connid() {
-  connid_ = GOOGLE_ULONGLONG(0);
-  clear_has_connid();
-}
-inline ::google::protobuf::uint64 S2C::connid() const {
-  // @@protoc_insertion_point(field_get:GetGlobalState.S2C.connID)
-  return connid_;
-}
-inline void S2C::set_connid(::google::protobuf::uint64 value) {
-  set_has_connid();
-  connid_ = value;
-  // @@protoc_insertion_point(field_set:GetGlobalState.S2C.connID)
 }
 
 // -------------------------------------------------------------------

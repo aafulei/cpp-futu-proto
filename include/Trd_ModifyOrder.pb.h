@@ -166,21 +166,6 @@ class C2S : public ::google::protobuf::Message /* @@protoc_insertion_point(class
 
   // accessors -------------------------------------------------------
 
-  // optional string orderIDEx = 16;
-  bool has_orderidex() const;
-  void clear_orderidex();
-  static const int kOrderIDExFieldNumber = 16;
-  const ::std::string& orderidex() const;
-  void set_orderidex(const ::std::string& value);
-  #if LANG_CXX11
-  void set_orderidex(::std::string&& value);
-  #endif
-  void set_orderidex(const char* value);
-  void set_orderidex(const char* value, size_t size);
-  ::std::string* mutable_orderidex();
-  ::std::string* release_orderidex();
-  void set_allocated_orderidex(::std::string* orderidex);
-
   // required .Common.PacketID packetID = 1;
   bool has_packetid() const;
   void clear_packetid();
@@ -213,12 +198,19 @@ class C2S : public ::google::protobuf::Message /* @@protoc_insertion_point(class
   ::google::protobuf::int32 modifyorderop() const;
   void set_modifyorderop(::google::protobuf::int32 value);
 
-  // optional int32 trdMarket = 6;
-  bool has_trdmarket() const;
-  void clear_trdmarket();
-  static const int kTrdMarketFieldNumber = 6;
-  ::google::protobuf::int32 trdmarket() const;
-  void set_trdmarket(::google::protobuf::int32 value);
+  // optional bool forAll = 5;
+  bool has_forall() const;
+  void clear_forall();
+  static const int kForAllFieldNumber = 5;
+  bool forall() const;
+  void set_forall(bool value);
+
+  // optional bool adjustPrice = 10;
+  bool has_adjustprice() const;
+  void clear_adjustprice();
+  static const int kAdjustPriceFieldNumber = 10;
+  bool adjustprice() const;
+  void set_adjustprice(bool value);
 
   // optional double qty = 8;
   bool has_qty() const;
@@ -234,54 +226,12 @@ class C2S : public ::google::protobuf::Message /* @@protoc_insertion_point(class
   double price() const;
   void set_price(double value);
 
-  // optional bool forAll = 5;
-  bool has_forall() const;
-  void clear_forall();
-  static const int kForAllFieldNumber = 5;
-  bool forall() const;
-  void set_forall(bool value);
-
-  // optional bool adjustPrice = 10;
-  bool has_adjustprice() const;
-  void clear_adjustprice();
-  static const int kAdjustPriceFieldNumber = 10;
-  bool adjustprice() const;
-  void set_adjustprice(bool value);
-
-  // optional int32 trailType = 13;
-  bool has_trailtype() const;
-  void clear_trailtype();
-  static const int kTrailTypeFieldNumber = 13;
-  ::google::protobuf::int32 trailtype() const;
-  void set_trailtype(::google::protobuf::int32 value);
-
   // optional double adjustSideAndLimit = 11;
   bool has_adjustsideandlimit() const;
   void clear_adjustsideandlimit();
   static const int kAdjustSideAndLimitFieldNumber = 11;
   double adjustsideandlimit() const;
   void set_adjustsideandlimit(double value);
-
-  // optional double auxPrice = 12;
-  bool has_auxprice() const;
-  void clear_auxprice();
-  static const int kAuxPriceFieldNumber = 12;
-  double auxprice() const;
-  void set_auxprice(double value);
-
-  // optional double trailValue = 14;
-  bool has_trailvalue() const;
-  void clear_trailvalue();
-  static const int kTrailValueFieldNumber = 14;
-  double trailvalue() const;
-  void set_trailvalue(double value);
-
-  // optional double trailSpread = 15;
-  bool has_trailspread() const;
-  void clear_trailspread();
-  static const int kTrailSpreadFieldNumber = 15;
-  double trailspread() const;
-  void set_trailspread(double value);
 
   // @@protoc_insertion_point(class_scope:Trd_ModifyOrder.C2S)
  private:
@@ -295,8 +245,6 @@ class C2S : public ::google::protobuf::Message /* @@protoc_insertion_point(class
   void clear_has_modifyorderop();
   void set_has_forall();
   void clear_has_forall();
-  void set_has_trdmarket();
-  void clear_has_trdmarket();
   void set_has_qty();
   void clear_has_qty();
   void set_has_price();
@@ -305,16 +253,6 @@ class C2S : public ::google::protobuf::Message /* @@protoc_insertion_point(class
   void clear_has_adjustprice();
   void set_has_adjustsideandlimit();
   void clear_has_adjustsideandlimit();
-  void set_has_auxprice();
-  void clear_has_auxprice();
-  void set_has_trailtype();
-  void clear_has_trailtype();
-  void set_has_trailvalue();
-  void clear_has_trailvalue();
-  void set_has_trailspread();
-  void clear_has_trailspread();
-  void set_has_orderidex();
-  void clear_has_orderidex();
 
   // helper for ByteSizeLong()
   size_t RequiredFieldsByteSizeFallback() const;
@@ -322,21 +260,15 @@ class C2S : public ::google::protobuf::Message /* @@protoc_insertion_point(class
   ::google::protobuf::internal::InternalMetadataWithArena _internal_metadata_;
   ::google::protobuf::internal::HasBits<1> _has_bits_;
   mutable int _cached_size_;
-  ::google::protobuf::internal::ArenaStringPtr orderidex_;
   ::Common::PacketID* packetid_;
   ::Trd_Common::TrdHeader* header_;
   ::google::protobuf::uint64 orderid_;
   ::google::protobuf::int32 modifyorderop_;
-  ::google::protobuf::int32 trdmarket_;
-  double qty_;
-  double price_;
   bool forall_;
   bool adjustprice_;
-  ::google::protobuf::int32 trailtype_;
+  double qty_;
+  double price_;
   double adjustsideandlimit_;
-  double auxprice_;
-  double trailvalue_;
-  double trailspread_;
   friend struct ::protobuf_Trd_5fModifyOrder_2eproto::TableStruct;
   friend void ::protobuf_Trd_5fModifyOrder_2eproto::InitDefaultsC2SImpl();
 };
@@ -431,21 +363,6 @@ class S2C : public ::google::protobuf::Message /* @@protoc_insertion_point(class
 
   // accessors -------------------------------------------------------
 
-  // optional string orderIDEx = 3;
-  bool has_orderidex() const;
-  void clear_orderidex();
-  static const int kOrderIDExFieldNumber = 3;
-  const ::std::string& orderidex() const;
-  void set_orderidex(const ::std::string& value);
-  #if LANG_CXX11
-  void set_orderidex(::std::string&& value);
-  #endif
-  void set_orderidex(const char* value);
-  void set_orderidex(const char* value, size_t size);
-  ::std::string* mutable_orderidex();
-  ::std::string* release_orderidex();
-  void set_allocated_orderidex(::std::string* orderidex);
-
   // required .Trd_Common.TrdHeader header = 1;
   bool has_header() const;
   void clear_header();
@@ -468,8 +385,6 @@ class S2C : public ::google::protobuf::Message /* @@protoc_insertion_point(class
   void clear_has_header();
   void set_has_orderid();
   void clear_has_orderid();
-  void set_has_orderidex();
-  void clear_has_orderidex();
 
   // helper for ByteSizeLong()
   size_t RequiredFieldsByteSizeFallback() const;
@@ -477,7 +392,6 @@ class S2C : public ::google::protobuf::Message /* @@protoc_insertion_point(class
   ::google::protobuf::internal::InternalMetadataWithArena _internal_metadata_;
   ::google::protobuf::internal::HasBits<1> _has_bits_;
   mutable int _cached_size_;
-  ::google::protobuf::internal::ArenaStringPtr orderidex_;
   ::Trd_Common::TrdHeader* header_;
   ::google::protobuf::uint64 orderid_;
   friend struct ::protobuf_Trd_5fModifyOrder_2eproto::TableStruct;
@@ -758,13 +672,13 @@ class Response : public ::google::protobuf::Message /* @@protoc_insertion_point(
 
 // required .Common.PacketID packetID = 1;
 inline bool C2S::has_packetid() const {
-  return (_has_bits_[0] & 0x00000002u) != 0;
+  return (_has_bits_[0] & 0x00000001u) != 0;
 }
 inline void C2S::set_has_packetid() {
-  _has_bits_[0] |= 0x00000002u;
+  _has_bits_[0] |= 0x00000001u;
 }
 inline void C2S::clear_has_packetid() {
-  _has_bits_[0] &= ~0x00000002u;
+  _has_bits_[0] &= ~0x00000001u;
 }
 inline const ::Common::PacketID& C2S::packetid() const {
   const ::Common::PacketID* p = packetid_;
@@ -808,13 +722,13 @@ inline void C2S::set_allocated_packetid(::Common::PacketID* packetid) {
 
 // required .Trd_Common.TrdHeader header = 2;
 inline bool C2S::has_header() const {
-  return (_has_bits_[0] & 0x00000004u) != 0;
+  return (_has_bits_[0] & 0x00000002u) != 0;
 }
 inline void C2S::set_has_header() {
-  _has_bits_[0] |= 0x00000004u;
+  _has_bits_[0] |= 0x00000002u;
 }
 inline void C2S::clear_has_header() {
-  _has_bits_[0] &= ~0x00000004u;
+  _has_bits_[0] &= ~0x00000002u;
 }
 inline const ::Trd_Common::TrdHeader& C2S::header() const {
   const ::Trd_Common::TrdHeader* p = header_;
@@ -858,13 +772,13 @@ inline void C2S::set_allocated_header(::Trd_Common::TrdHeader* header) {
 
 // required uint64 orderID = 3;
 inline bool C2S::has_orderid() const {
-  return (_has_bits_[0] & 0x00000008u) != 0;
+  return (_has_bits_[0] & 0x00000004u) != 0;
 }
 inline void C2S::set_has_orderid() {
-  _has_bits_[0] |= 0x00000008u;
+  _has_bits_[0] |= 0x00000004u;
 }
 inline void C2S::clear_has_orderid() {
-  _has_bits_[0] &= ~0x00000008u;
+  _has_bits_[0] &= ~0x00000004u;
 }
 inline void C2S::clear_orderid() {
   orderid_ = GOOGLE_ULONGLONG(0);
@@ -882,13 +796,13 @@ inline void C2S::set_orderid(::google::protobuf::uint64 value) {
 
 // required int32 modifyOrderOp = 4;
 inline bool C2S::has_modifyorderop() const {
-  return (_has_bits_[0] & 0x00000010u) != 0;
+  return (_has_bits_[0] & 0x00000008u) != 0;
 }
 inline void C2S::set_has_modifyorderop() {
-  _has_bits_[0] |= 0x00000010u;
+  _has_bits_[0] |= 0x00000008u;
 }
 inline void C2S::clear_has_modifyorderop() {
-  _has_bits_[0] &= ~0x00000010u;
+  _has_bits_[0] &= ~0x00000008u;
 }
 inline void C2S::clear_modifyorderop() {
   modifyorderop_ = 0;
@@ -906,13 +820,13 @@ inline void C2S::set_modifyorderop(::google::protobuf::int32 value) {
 
 // optional bool forAll = 5;
 inline bool C2S::has_forall() const {
-  return (_has_bits_[0] & 0x00000100u) != 0;
+  return (_has_bits_[0] & 0x00000010u) != 0;
 }
 inline void C2S::set_has_forall() {
-  _has_bits_[0] |= 0x00000100u;
+  _has_bits_[0] |= 0x00000010u;
 }
 inline void C2S::clear_has_forall() {
-  _has_bits_[0] &= ~0x00000100u;
+  _has_bits_[0] &= ~0x00000010u;
 }
 inline void C2S::clear_forall() {
   forall_ = false;
@@ -926,30 +840,6 @@ inline void C2S::set_forall(bool value) {
   set_has_forall();
   forall_ = value;
   // @@protoc_insertion_point(field_set:Trd_ModifyOrder.C2S.forAll)
-}
-
-// optional int32 trdMarket = 6;
-inline bool C2S::has_trdmarket() const {
-  return (_has_bits_[0] & 0x00000020u) != 0;
-}
-inline void C2S::set_has_trdmarket() {
-  _has_bits_[0] |= 0x00000020u;
-}
-inline void C2S::clear_has_trdmarket() {
-  _has_bits_[0] &= ~0x00000020u;
-}
-inline void C2S::clear_trdmarket() {
-  trdmarket_ = 0;
-  clear_has_trdmarket();
-}
-inline ::google::protobuf::int32 C2S::trdmarket() const {
-  // @@protoc_insertion_point(field_get:Trd_ModifyOrder.C2S.trdMarket)
-  return trdmarket_;
-}
-inline void C2S::set_trdmarket(::google::protobuf::int32 value) {
-  set_has_trdmarket();
-  trdmarket_ = value;
-  // @@protoc_insertion_point(field_set:Trd_ModifyOrder.C2S.trdMarket)
 }
 
 // optional double qty = 8;
@@ -1002,13 +892,13 @@ inline void C2S::set_price(double value) {
 
 // optional bool adjustPrice = 10;
 inline bool C2S::has_adjustprice() const {
-  return (_has_bits_[0] & 0x00000200u) != 0;
+  return (_has_bits_[0] & 0x00000020u) != 0;
 }
 inline void C2S::set_has_adjustprice() {
-  _has_bits_[0] |= 0x00000200u;
+  _has_bits_[0] |= 0x00000020u;
 }
 inline void C2S::clear_has_adjustprice() {
-  _has_bits_[0] &= ~0x00000200u;
+  _has_bits_[0] &= ~0x00000020u;
 }
 inline void C2S::clear_adjustprice() {
   adjustprice_ = false;
@@ -1026,13 +916,13 @@ inline void C2S::set_adjustprice(bool value) {
 
 // optional double adjustSideAndLimit = 11;
 inline bool C2S::has_adjustsideandlimit() const {
-  return (_has_bits_[0] & 0x00000800u) != 0;
+  return (_has_bits_[0] & 0x00000100u) != 0;
 }
 inline void C2S::set_has_adjustsideandlimit() {
-  _has_bits_[0] |= 0x00000800u;
+  _has_bits_[0] |= 0x00000100u;
 }
 inline void C2S::clear_has_adjustsideandlimit() {
-  _has_bits_[0] &= ~0x00000800u;
+  _has_bits_[0] &= ~0x00000100u;
 }
 inline void C2S::clear_adjustsideandlimit() {
   adjustsideandlimit_ = 0;
@@ -1048,178 +938,19 @@ inline void C2S::set_adjustsideandlimit(double value) {
   // @@protoc_insertion_point(field_set:Trd_ModifyOrder.C2S.adjustSideAndLimit)
 }
 
-// optional double auxPrice = 12;
-inline bool C2S::has_auxprice() const {
-  return (_has_bits_[0] & 0x00001000u) != 0;
-}
-inline void C2S::set_has_auxprice() {
-  _has_bits_[0] |= 0x00001000u;
-}
-inline void C2S::clear_has_auxprice() {
-  _has_bits_[0] &= ~0x00001000u;
-}
-inline void C2S::clear_auxprice() {
-  auxprice_ = 0;
-  clear_has_auxprice();
-}
-inline double C2S::auxprice() const {
-  // @@protoc_insertion_point(field_get:Trd_ModifyOrder.C2S.auxPrice)
-  return auxprice_;
-}
-inline void C2S::set_auxprice(double value) {
-  set_has_auxprice();
-  auxprice_ = value;
-  // @@protoc_insertion_point(field_set:Trd_ModifyOrder.C2S.auxPrice)
-}
-
-// optional int32 trailType = 13;
-inline bool C2S::has_trailtype() const {
-  return (_has_bits_[0] & 0x00000400u) != 0;
-}
-inline void C2S::set_has_trailtype() {
-  _has_bits_[0] |= 0x00000400u;
-}
-inline void C2S::clear_has_trailtype() {
-  _has_bits_[0] &= ~0x00000400u;
-}
-inline void C2S::clear_trailtype() {
-  trailtype_ = 0;
-  clear_has_trailtype();
-}
-inline ::google::protobuf::int32 C2S::trailtype() const {
-  // @@protoc_insertion_point(field_get:Trd_ModifyOrder.C2S.trailType)
-  return trailtype_;
-}
-inline void C2S::set_trailtype(::google::protobuf::int32 value) {
-  set_has_trailtype();
-  trailtype_ = value;
-  // @@protoc_insertion_point(field_set:Trd_ModifyOrder.C2S.trailType)
-}
-
-// optional double trailValue = 14;
-inline bool C2S::has_trailvalue() const {
-  return (_has_bits_[0] & 0x00002000u) != 0;
-}
-inline void C2S::set_has_trailvalue() {
-  _has_bits_[0] |= 0x00002000u;
-}
-inline void C2S::clear_has_trailvalue() {
-  _has_bits_[0] &= ~0x00002000u;
-}
-inline void C2S::clear_trailvalue() {
-  trailvalue_ = 0;
-  clear_has_trailvalue();
-}
-inline double C2S::trailvalue() const {
-  // @@protoc_insertion_point(field_get:Trd_ModifyOrder.C2S.trailValue)
-  return trailvalue_;
-}
-inline void C2S::set_trailvalue(double value) {
-  set_has_trailvalue();
-  trailvalue_ = value;
-  // @@protoc_insertion_point(field_set:Trd_ModifyOrder.C2S.trailValue)
-}
-
-// optional double trailSpread = 15;
-inline bool C2S::has_trailspread() const {
-  return (_has_bits_[0] & 0x00004000u) != 0;
-}
-inline void C2S::set_has_trailspread() {
-  _has_bits_[0] |= 0x00004000u;
-}
-inline void C2S::clear_has_trailspread() {
-  _has_bits_[0] &= ~0x00004000u;
-}
-inline void C2S::clear_trailspread() {
-  trailspread_ = 0;
-  clear_has_trailspread();
-}
-inline double C2S::trailspread() const {
-  // @@protoc_insertion_point(field_get:Trd_ModifyOrder.C2S.trailSpread)
-  return trailspread_;
-}
-inline void C2S::set_trailspread(double value) {
-  set_has_trailspread();
-  trailspread_ = value;
-  // @@protoc_insertion_point(field_set:Trd_ModifyOrder.C2S.trailSpread)
-}
-
-// optional string orderIDEx = 16;
-inline bool C2S::has_orderidex() const {
-  return (_has_bits_[0] & 0x00000001u) != 0;
-}
-inline void C2S::set_has_orderidex() {
-  _has_bits_[0] |= 0x00000001u;
-}
-inline void C2S::clear_has_orderidex() {
-  _has_bits_[0] &= ~0x00000001u;
-}
-inline void C2S::clear_orderidex() {
-  orderidex_.ClearToEmptyNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
-  clear_has_orderidex();
-}
-inline const ::std::string& C2S::orderidex() const {
-  // @@protoc_insertion_point(field_get:Trd_ModifyOrder.C2S.orderIDEx)
-  return orderidex_.GetNoArena();
-}
-inline void C2S::set_orderidex(const ::std::string& value) {
-  set_has_orderidex();
-  orderidex_.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), value);
-  // @@protoc_insertion_point(field_set:Trd_ModifyOrder.C2S.orderIDEx)
-}
-#if LANG_CXX11
-inline void C2S::set_orderidex(::std::string&& value) {
-  set_has_orderidex();
-  orderidex_.SetNoArena(
-    &::google::protobuf::internal::GetEmptyStringAlreadyInited(), ::std::move(value));
-  // @@protoc_insertion_point(field_set_rvalue:Trd_ModifyOrder.C2S.orderIDEx)
-}
-#endif
-inline void C2S::set_orderidex(const char* value) {
-  GOOGLE_DCHECK(value != NULL);
-  set_has_orderidex();
-  orderidex_.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), ::std::string(value));
-  // @@protoc_insertion_point(field_set_char:Trd_ModifyOrder.C2S.orderIDEx)
-}
-inline void C2S::set_orderidex(const char* value, size_t size) {
-  set_has_orderidex();
-  orderidex_.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(),
-      ::std::string(reinterpret_cast<const char*>(value), size));
-  // @@protoc_insertion_point(field_set_pointer:Trd_ModifyOrder.C2S.orderIDEx)
-}
-inline ::std::string* C2S::mutable_orderidex() {
-  set_has_orderidex();
-  // @@protoc_insertion_point(field_mutable:Trd_ModifyOrder.C2S.orderIDEx)
-  return orderidex_.MutableNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
-}
-inline ::std::string* C2S::release_orderidex() {
-  // @@protoc_insertion_point(field_release:Trd_ModifyOrder.C2S.orderIDEx)
-  clear_has_orderidex();
-  return orderidex_.ReleaseNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
-}
-inline void C2S::set_allocated_orderidex(::std::string* orderidex) {
-  if (orderidex != NULL) {
-    set_has_orderidex();
-  } else {
-    clear_has_orderidex();
-  }
-  orderidex_.SetAllocatedNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), orderidex);
-  // @@protoc_insertion_point(field_set_allocated:Trd_ModifyOrder.C2S.orderIDEx)
-}
-
 // -------------------------------------------------------------------
 
 // S2C
 
 // required .Trd_Common.TrdHeader header = 1;
 inline bool S2C::has_header() const {
-  return (_has_bits_[0] & 0x00000002u) != 0;
+  return (_has_bits_[0] & 0x00000001u) != 0;
 }
 inline void S2C::set_has_header() {
-  _has_bits_[0] |= 0x00000002u;
+  _has_bits_[0] |= 0x00000001u;
 }
 inline void S2C::clear_has_header() {
-  _has_bits_[0] &= ~0x00000002u;
+  _has_bits_[0] &= ~0x00000001u;
 }
 inline const ::Trd_Common::TrdHeader& S2C::header() const {
   const ::Trd_Common::TrdHeader* p = header_;
@@ -1263,13 +994,13 @@ inline void S2C::set_allocated_header(::Trd_Common::TrdHeader* header) {
 
 // required uint64 orderID = 2;
 inline bool S2C::has_orderid() const {
-  return (_has_bits_[0] & 0x00000004u) != 0;
+  return (_has_bits_[0] & 0x00000002u) != 0;
 }
 inline void S2C::set_has_orderid() {
-  _has_bits_[0] |= 0x00000004u;
+  _has_bits_[0] |= 0x00000002u;
 }
 inline void S2C::clear_has_orderid() {
-  _has_bits_[0] &= ~0x00000004u;
+  _has_bits_[0] &= ~0x00000002u;
 }
 inline void S2C::clear_orderid() {
   orderid_ = GOOGLE_ULONGLONG(0);
@@ -1283,69 +1014,6 @@ inline void S2C::set_orderid(::google::protobuf::uint64 value) {
   set_has_orderid();
   orderid_ = value;
   // @@protoc_insertion_point(field_set:Trd_ModifyOrder.S2C.orderID)
-}
-
-// optional string orderIDEx = 3;
-inline bool S2C::has_orderidex() const {
-  return (_has_bits_[0] & 0x00000001u) != 0;
-}
-inline void S2C::set_has_orderidex() {
-  _has_bits_[0] |= 0x00000001u;
-}
-inline void S2C::clear_has_orderidex() {
-  _has_bits_[0] &= ~0x00000001u;
-}
-inline void S2C::clear_orderidex() {
-  orderidex_.ClearToEmptyNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
-  clear_has_orderidex();
-}
-inline const ::std::string& S2C::orderidex() const {
-  // @@protoc_insertion_point(field_get:Trd_ModifyOrder.S2C.orderIDEx)
-  return orderidex_.GetNoArena();
-}
-inline void S2C::set_orderidex(const ::std::string& value) {
-  set_has_orderidex();
-  orderidex_.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), value);
-  // @@protoc_insertion_point(field_set:Trd_ModifyOrder.S2C.orderIDEx)
-}
-#if LANG_CXX11
-inline void S2C::set_orderidex(::std::string&& value) {
-  set_has_orderidex();
-  orderidex_.SetNoArena(
-    &::google::protobuf::internal::GetEmptyStringAlreadyInited(), ::std::move(value));
-  // @@protoc_insertion_point(field_set_rvalue:Trd_ModifyOrder.S2C.orderIDEx)
-}
-#endif
-inline void S2C::set_orderidex(const char* value) {
-  GOOGLE_DCHECK(value != NULL);
-  set_has_orderidex();
-  orderidex_.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), ::std::string(value));
-  // @@protoc_insertion_point(field_set_char:Trd_ModifyOrder.S2C.orderIDEx)
-}
-inline void S2C::set_orderidex(const char* value, size_t size) {
-  set_has_orderidex();
-  orderidex_.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(),
-      ::std::string(reinterpret_cast<const char*>(value), size));
-  // @@protoc_insertion_point(field_set_pointer:Trd_ModifyOrder.S2C.orderIDEx)
-}
-inline ::std::string* S2C::mutable_orderidex() {
-  set_has_orderidex();
-  // @@protoc_insertion_point(field_mutable:Trd_ModifyOrder.S2C.orderIDEx)
-  return orderidex_.MutableNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
-}
-inline ::std::string* S2C::release_orderidex() {
-  // @@protoc_insertion_point(field_release:Trd_ModifyOrder.S2C.orderIDEx)
-  clear_has_orderidex();
-  return orderidex_.ReleaseNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
-}
-inline void S2C::set_allocated_orderidex(::std::string* orderidex) {
-  if (orderidex != NULL) {
-    set_has_orderidex();
-  } else {
-    clear_has_orderidex();
-  }
-  orderidex_.SetAllocatedNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), orderidex);
-  // @@protoc_insertion_point(field_set_allocated:Trd_ModifyOrder.S2C.orderIDEx)
 }
 
 // -------------------------------------------------------------------

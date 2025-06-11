@@ -180,21 +180,6 @@ class C2S : public ::google::protobuf::Message /* @@protoc_insertion_point(class
   ::std::string* release_clientid();
   void set_allocated_clientid(::std::string* clientid);
 
-  // optional string programmingLanguage = 6;
-  bool has_programminglanguage() const;
-  void clear_programminglanguage();
-  static const int kProgrammingLanguageFieldNumber = 6;
-  const ::std::string& programminglanguage() const;
-  void set_programminglanguage(const ::std::string& value);
-  #if LANG_CXX11
-  void set_programminglanguage(::std::string&& value);
-  #endif
-  void set_programminglanguage(const char* value);
-  void set_programminglanguage(const char* value, size_t size);
-  ::std::string* mutable_programminglanguage();
-  ::std::string* release_programminglanguage();
-  void set_allocated_programminglanguage(::std::string* programminglanguage);
-
   // required int32 clientVer = 1;
   bool has_clientver() const;
   void clear_clientver();
@@ -209,20 +194,6 @@ class C2S : public ::google::protobuf::Message /* @@protoc_insertion_point(class
   bool recvnotify() const;
   void set_recvnotify(bool value);
 
-  // optional int32 packetEncAlgo = 4;
-  bool has_packetencalgo() const;
-  void clear_packetencalgo();
-  static const int kPacketEncAlgoFieldNumber = 4;
-  ::google::protobuf::int32 packetencalgo() const;
-  void set_packetencalgo(::google::protobuf::int32 value);
-
-  // optional int32 pushProtoFmt = 5;
-  bool has_pushprotofmt() const;
-  void clear_pushprotofmt();
-  static const int kPushProtoFmtFieldNumber = 5;
-  ::google::protobuf::int32 pushprotofmt() const;
-  void set_pushprotofmt(::google::protobuf::int32 value);
-
   // @@protoc_insertion_point(class_scope:InitConnect.C2S)
  private:
   void set_has_clientver();
@@ -231,12 +202,6 @@ class C2S : public ::google::protobuf::Message /* @@protoc_insertion_point(class
   void clear_has_clientid();
   void set_has_recvnotify();
   void clear_has_recvnotify();
-  void set_has_packetencalgo();
-  void clear_has_packetencalgo();
-  void set_has_pushprotofmt();
-  void clear_has_pushprotofmt();
-  void set_has_programminglanguage();
-  void clear_has_programminglanguage();
 
   // helper for ByteSizeLong()
   size_t RequiredFieldsByteSizeFallback() const;
@@ -245,11 +210,8 @@ class C2S : public ::google::protobuf::Message /* @@protoc_insertion_point(class
   ::google::protobuf::internal::HasBits<1> _has_bits_;
   mutable int _cached_size_;
   ::google::protobuf::internal::ArenaStringPtr clientid_;
-  ::google::protobuf::internal::ArenaStringPtr programminglanguage_;
   ::google::protobuf::int32 clientver_;
   bool recvnotify_;
-  ::google::protobuf::int32 packetencalgo_;
-  ::google::protobuf::int32 pushprotofmt_;
   friend struct ::protobuf_InitConnect_2eproto::TableStruct;
   friend void ::protobuf_InitConnect_2eproto::InitDefaultsC2SImpl();
 };
@@ -359,21 +321,6 @@ class S2C : public ::google::protobuf::Message /* @@protoc_insertion_point(class
   ::std::string* release_connaeskey();
   void set_allocated_connaeskey(::std::string* connaeskey);
 
-  // optional string aesCBCiv = 6;
-  bool has_aescbciv() const;
-  void clear_aescbciv();
-  static const int kAesCBCivFieldNumber = 6;
-  const ::std::string& aescbciv() const;
-  void set_aescbciv(const ::std::string& value);
-  #if LANG_CXX11
-  void set_aescbciv(::std::string&& value);
-  #endif
-  void set_aescbciv(const char* value);
-  void set_aescbciv(const char* value, size_t size);
-  ::std::string* mutable_aescbciv();
-  ::std::string* release_aescbciv();
-  void set_allocated_aescbciv(::std::string* aescbciv);
-
   // required uint64 loginUserID = 2;
   bool has_loginuserid() const;
   void clear_loginuserid();
@@ -402,13 +349,6 @@ class S2C : public ::google::protobuf::Message /* @@protoc_insertion_point(class
   ::google::protobuf::int32 keepaliveinterval() const;
   void set_keepaliveinterval(::google::protobuf::int32 value);
 
-  // optional int32 userAttribution = 7;
-  bool has_userattribution() const;
-  void clear_userattribution();
-  static const int kUserAttributionFieldNumber = 7;
-  ::google::protobuf::int32 userattribution() const;
-  void set_userattribution(::google::protobuf::int32 value);
-
   // @@protoc_insertion_point(class_scope:InitConnect.S2C)
  private:
   void set_has_serverver();
@@ -421,10 +361,6 @@ class S2C : public ::google::protobuf::Message /* @@protoc_insertion_point(class
   void clear_has_connaeskey();
   void set_has_keepaliveinterval();
   void clear_has_keepaliveinterval();
-  void set_has_aescbciv();
-  void clear_has_aescbciv();
-  void set_has_userattribution();
-  void clear_has_userattribution();
 
   // helper for ByteSizeLong()
   size_t RequiredFieldsByteSizeFallback() const;
@@ -433,12 +369,10 @@ class S2C : public ::google::protobuf::Message /* @@protoc_insertion_point(class
   ::google::protobuf::internal::HasBits<1> _has_bits_;
   mutable int _cached_size_;
   ::google::protobuf::internal::ArenaStringPtr connaeskey_;
-  ::google::protobuf::internal::ArenaStringPtr aescbciv_;
   ::google::protobuf::uint64 loginuserid_;
   ::google::protobuf::uint64 connid_;
   ::google::protobuf::int32 serverver_;
   ::google::protobuf::int32 keepaliveinterval_;
-  ::google::protobuf::int32 userattribution_;
   friend struct ::protobuf_InitConnect_2eproto::TableStruct;
   friend void ::protobuf_InitConnect_2eproto::InitDefaultsS2CImpl();
 };
@@ -717,13 +651,13 @@ class Response : public ::google::protobuf::Message /* @@protoc_insertion_point(
 
 // required int32 clientVer = 1;
 inline bool C2S::has_clientver() const {
-  return (_has_bits_[0] & 0x00000004u) != 0;
+  return (_has_bits_[0] & 0x00000002u) != 0;
 }
 inline void C2S::set_has_clientver() {
-  _has_bits_[0] |= 0x00000004u;
+  _has_bits_[0] |= 0x00000002u;
 }
 inline void C2S::clear_has_clientver() {
-  _has_bits_[0] &= ~0x00000004u;
+  _has_bits_[0] &= ~0x00000002u;
 }
 inline void C2S::clear_clientver() {
   clientver_ = 0;
@@ -804,13 +738,13 @@ inline void C2S::set_allocated_clientid(::std::string* clientid) {
 
 // optional bool recvNotify = 3;
 inline bool C2S::has_recvnotify() const {
-  return (_has_bits_[0] & 0x00000008u) != 0;
+  return (_has_bits_[0] & 0x00000004u) != 0;
 }
 inline void C2S::set_has_recvnotify() {
-  _has_bits_[0] |= 0x00000008u;
+  _has_bits_[0] |= 0x00000004u;
 }
 inline void C2S::clear_has_recvnotify() {
-  _has_bits_[0] &= ~0x00000008u;
+  _has_bits_[0] &= ~0x00000004u;
 }
 inline void C2S::clear_recvnotify() {
   recvnotify_ = false;
@@ -826,130 +760,19 @@ inline void C2S::set_recvnotify(bool value) {
   // @@protoc_insertion_point(field_set:InitConnect.C2S.recvNotify)
 }
 
-// optional int32 packetEncAlgo = 4;
-inline bool C2S::has_packetencalgo() const {
-  return (_has_bits_[0] & 0x00000010u) != 0;
-}
-inline void C2S::set_has_packetencalgo() {
-  _has_bits_[0] |= 0x00000010u;
-}
-inline void C2S::clear_has_packetencalgo() {
-  _has_bits_[0] &= ~0x00000010u;
-}
-inline void C2S::clear_packetencalgo() {
-  packetencalgo_ = 0;
-  clear_has_packetencalgo();
-}
-inline ::google::protobuf::int32 C2S::packetencalgo() const {
-  // @@protoc_insertion_point(field_get:InitConnect.C2S.packetEncAlgo)
-  return packetencalgo_;
-}
-inline void C2S::set_packetencalgo(::google::protobuf::int32 value) {
-  set_has_packetencalgo();
-  packetencalgo_ = value;
-  // @@protoc_insertion_point(field_set:InitConnect.C2S.packetEncAlgo)
-}
-
-// optional int32 pushProtoFmt = 5;
-inline bool C2S::has_pushprotofmt() const {
-  return (_has_bits_[0] & 0x00000020u) != 0;
-}
-inline void C2S::set_has_pushprotofmt() {
-  _has_bits_[0] |= 0x00000020u;
-}
-inline void C2S::clear_has_pushprotofmt() {
-  _has_bits_[0] &= ~0x00000020u;
-}
-inline void C2S::clear_pushprotofmt() {
-  pushprotofmt_ = 0;
-  clear_has_pushprotofmt();
-}
-inline ::google::protobuf::int32 C2S::pushprotofmt() const {
-  // @@protoc_insertion_point(field_get:InitConnect.C2S.pushProtoFmt)
-  return pushprotofmt_;
-}
-inline void C2S::set_pushprotofmt(::google::protobuf::int32 value) {
-  set_has_pushprotofmt();
-  pushprotofmt_ = value;
-  // @@protoc_insertion_point(field_set:InitConnect.C2S.pushProtoFmt)
-}
-
-// optional string programmingLanguage = 6;
-inline bool C2S::has_programminglanguage() const {
-  return (_has_bits_[0] & 0x00000002u) != 0;
-}
-inline void C2S::set_has_programminglanguage() {
-  _has_bits_[0] |= 0x00000002u;
-}
-inline void C2S::clear_has_programminglanguage() {
-  _has_bits_[0] &= ~0x00000002u;
-}
-inline void C2S::clear_programminglanguage() {
-  programminglanguage_.ClearToEmptyNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
-  clear_has_programminglanguage();
-}
-inline const ::std::string& C2S::programminglanguage() const {
-  // @@protoc_insertion_point(field_get:InitConnect.C2S.programmingLanguage)
-  return programminglanguage_.GetNoArena();
-}
-inline void C2S::set_programminglanguage(const ::std::string& value) {
-  set_has_programminglanguage();
-  programminglanguage_.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), value);
-  // @@protoc_insertion_point(field_set:InitConnect.C2S.programmingLanguage)
-}
-#if LANG_CXX11
-inline void C2S::set_programminglanguage(::std::string&& value) {
-  set_has_programminglanguage();
-  programminglanguage_.SetNoArena(
-    &::google::protobuf::internal::GetEmptyStringAlreadyInited(), ::std::move(value));
-  // @@protoc_insertion_point(field_set_rvalue:InitConnect.C2S.programmingLanguage)
-}
-#endif
-inline void C2S::set_programminglanguage(const char* value) {
-  GOOGLE_DCHECK(value != NULL);
-  set_has_programminglanguage();
-  programminglanguage_.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), ::std::string(value));
-  // @@protoc_insertion_point(field_set_char:InitConnect.C2S.programmingLanguage)
-}
-inline void C2S::set_programminglanguage(const char* value, size_t size) {
-  set_has_programminglanguage();
-  programminglanguage_.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(),
-      ::std::string(reinterpret_cast<const char*>(value), size));
-  // @@protoc_insertion_point(field_set_pointer:InitConnect.C2S.programmingLanguage)
-}
-inline ::std::string* C2S::mutable_programminglanguage() {
-  set_has_programminglanguage();
-  // @@protoc_insertion_point(field_mutable:InitConnect.C2S.programmingLanguage)
-  return programminglanguage_.MutableNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
-}
-inline ::std::string* C2S::release_programminglanguage() {
-  // @@protoc_insertion_point(field_release:InitConnect.C2S.programmingLanguage)
-  clear_has_programminglanguage();
-  return programminglanguage_.ReleaseNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
-}
-inline void C2S::set_allocated_programminglanguage(::std::string* programminglanguage) {
-  if (programminglanguage != NULL) {
-    set_has_programminglanguage();
-  } else {
-    clear_has_programminglanguage();
-  }
-  programminglanguage_.SetAllocatedNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), programminglanguage);
-  // @@protoc_insertion_point(field_set_allocated:InitConnect.C2S.programmingLanguage)
-}
-
 // -------------------------------------------------------------------
 
 // S2C
 
 // required int32 serverVer = 1;
 inline bool S2C::has_serverver() const {
-  return (_has_bits_[0] & 0x00000010u) != 0;
+  return (_has_bits_[0] & 0x00000008u) != 0;
 }
 inline void S2C::set_has_serverver() {
-  _has_bits_[0] |= 0x00000010u;
+  _has_bits_[0] |= 0x00000008u;
 }
 inline void S2C::clear_has_serverver() {
-  _has_bits_[0] &= ~0x00000010u;
+  _has_bits_[0] &= ~0x00000008u;
 }
 inline void S2C::clear_serverver() {
   serverver_ = 0;
@@ -967,13 +790,13 @@ inline void S2C::set_serverver(::google::protobuf::int32 value) {
 
 // required uint64 loginUserID = 2;
 inline bool S2C::has_loginuserid() const {
-  return (_has_bits_[0] & 0x00000004u) != 0;
+  return (_has_bits_[0] & 0x00000002u) != 0;
 }
 inline void S2C::set_has_loginuserid() {
-  _has_bits_[0] |= 0x00000004u;
+  _has_bits_[0] |= 0x00000002u;
 }
 inline void S2C::clear_has_loginuserid() {
-  _has_bits_[0] &= ~0x00000004u;
+  _has_bits_[0] &= ~0x00000002u;
 }
 inline void S2C::clear_loginuserid() {
   loginuserid_ = GOOGLE_ULONGLONG(0);
@@ -991,13 +814,13 @@ inline void S2C::set_loginuserid(::google::protobuf::uint64 value) {
 
 // required uint64 connID = 3;
 inline bool S2C::has_connid() const {
-  return (_has_bits_[0] & 0x00000008u) != 0;
+  return (_has_bits_[0] & 0x00000004u) != 0;
 }
 inline void S2C::set_has_connid() {
-  _has_bits_[0] |= 0x00000008u;
+  _has_bits_[0] |= 0x00000004u;
 }
 inline void S2C::clear_has_connid() {
-  _has_bits_[0] &= ~0x00000008u;
+  _has_bits_[0] &= ~0x00000004u;
 }
 inline void S2C::clear_connid() {
   connid_ = GOOGLE_ULONGLONG(0);
@@ -1078,13 +901,13 @@ inline void S2C::set_allocated_connaeskey(::std::string* connaeskey) {
 
 // required int32 keepAliveInterval = 5;
 inline bool S2C::has_keepaliveinterval() const {
-  return (_has_bits_[0] & 0x00000020u) != 0;
+  return (_has_bits_[0] & 0x00000010u) != 0;
 }
 inline void S2C::set_has_keepaliveinterval() {
-  _has_bits_[0] |= 0x00000020u;
+  _has_bits_[0] |= 0x00000010u;
 }
 inline void S2C::clear_has_keepaliveinterval() {
-  _has_bits_[0] &= ~0x00000020u;
+  _has_bits_[0] &= ~0x00000010u;
 }
 inline void S2C::clear_keepaliveinterval() {
   keepaliveinterval_ = 0;
@@ -1098,93 +921,6 @@ inline void S2C::set_keepaliveinterval(::google::protobuf::int32 value) {
   set_has_keepaliveinterval();
   keepaliveinterval_ = value;
   // @@protoc_insertion_point(field_set:InitConnect.S2C.keepAliveInterval)
-}
-
-// optional string aesCBCiv = 6;
-inline bool S2C::has_aescbciv() const {
-  return (_has_bits_[0] & 0x00000002u) != 0;
-}
-inline void S2C::set_has_aescbciv() {
-  _has_bits_[0] |= 0x00000002u;
-}
-inline void S2C::clear_has_aescbciv() {
-  _has_bits_[0] &= ~0x00000002u;
-}
-inline void S2C::clear_aescbciv() {
-  aescbciv_.ClearToEmptyNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
-  clear_has_aescbciv();
-}
-inline const ::std::string& S2C::aescbciv() const {
-  // @@protoc_insertion_point(field_get:InitConnect.S2C.aesCBCiv)
-  return aescbciv_.GetNoArena();
-}
-inline void S2C::set_aescbciv(const ::std::string& value) {
-  set_has_aescbciv();
-  aescbciv_.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), value);
-  // @@protoc_insertion_point(field_set:InitConnect.S2C.aesCBCiv)
-}
-#if LANG_CXX11
-inline void S2C::set_aescbciv(::std::string&& value) {
-  set_has_aescbciv();
-  aescbciv_.SetNoArena(
-    &::google::protobuf::internal::GetEmptyStringAlreadyInited(), ::std::move(value));
-  // @@protoc_insertion_point(field_set_rvalue:InitConnect.S2C.aesCBCiv)
-}
-#endif
-inline void S2C::set_aescbciv(const char* value) {
-  GOOGLE_DCHECK(value != NULL);
-  set_has_aescbciv();
-  aescbciv_.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), ::std::string(value));
-  // @@protoc_insertion_point(field_set_char:InitConnect.S2C.aesCBCiv)
-}
-inline void S2C::set_aescbciv(const char* value, size_t size) {
-  set_has_aescbciv();
-  aescbciv_.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(),
-      ::std::string(reinterpret_cast<const char*>(value), size));
-  // @@protoc_insertion_point(field_set_pointer:InitConnect.S2C.aesCBCiv)
-}
-inline ::std::string* S2C::mutable_aescbciv() {
-  set_has_aescbciv();
-  // @@protoc_insertion_point(field_mutable:InitConnect.S2C.aesCBCiv)
-  return aescbciv_.MutableNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
-}
-inline ::std::string* S2C::release_aescbciv() {
-  // @@protoc_insertion_point(field_release:InitConnect.S2C.aesCBCiv)
-  clear_has_aescbciv();
-  return aescbciv_.ReleaseNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
-}
-inline void S2C::set_allocated_aescbciv(::std::string* aescbciv) {
-  if (aescbciv != NULL) {
-    set_has_aescbciv();
-  } else {
-    clear_has_aescbciv();
-  }
-  aescbciv_.SetAllocatedNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), aescbciv);
-  // @@protoc_insertion_point(field_set_allocated:InitConnect.S2C.aesCBCiv)
-}
-
-// optional int32 userAttribution = 7;
-inline bool S2C::has_userattribution() const {
-  return (_has_bits_[0] & 0x00000040u) != 0;
-}
-inline void S2C::set_has_userattribution() {
-  _has_bits_[0] |= 0x00000040u;
-}
-inline void S2C::clear_has_userattribution() {
-  _has_bits_[0] &= ~0x00000040u;
-}
-inline void S2C::clear_userattribution() {
-  userattribution_ = 0;
-  clear_has_userattribution();
-}
-inline ::google::protobuf::int32 S2C::userattribution() const {
-  // @@protoc_insertion_point(field_get:InitConnect.S2C.userAttribution)
-  return userattribution_;
-}
-inline void S2C::set_userattribution(::google::protobuf::int32 value) {
-  set_has_userattribution();
-  userattribution_ = value;
-  // @@protoc_insertion_point(field_set:InitConnect.S2C.userAttribution)
 }
 
 // -------------------------------------------------------------------

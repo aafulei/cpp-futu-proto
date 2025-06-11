@@ -30,26 +30,6 @@ class KLineDefaultTypeInternal {
   ::google::protobuf::internal::ExplicitlyConstructed<KLine>
       _instance;
 } _KLine_default_instance_;
-class OptionBasicQotExDataDefaultTypeInternal {
- public:
-  ::google::protobuf::internal::ExplicitlyConstructed<OptionBasicQotExData>
-      _instance;
-} _OptionBasicQotExData_default_instance_;
-class PreAfterMarketDataDefaultTypeInternal {
- public:
-  ::google::protobuf::internal::ExplicitlyConstructed<PreAfterMarketData>
-      _instance;
-} _PreAfterMarketData_default_instance_;
-class FutureBasicQotExDataDefaultTypeInternal {
- public:
-  ::google::protobuf::internal::ExplicitlyConstructed<FutureBasicQotExData>
-      _instance;
-} _FutureBasicQotExData_default_instance_;
-class WarrantBasicQotExDataDefaultTypeInternal {
- public:
-  ::google::protobuf::internal::ExplicitlyConstructed<WarrantBasicQotExData>
-      _instance;
-} _WarrantBasicQotExData_default_instance_;
 class BasicQotDefaultTypeInternal {
  public:
   ::google::protobuf::internal::ExplicitlyConstructed<BasicQot>
@@ -70,16 +50,6 @@ class WarrantStaticExDataDefaultTypeInternal {
   ::google::protobuf::internal::ExplicitlyConstructed<WarrantStaticExData>
       _instance;
 } _WarrantStaticExData_default_instance_;
-class OptionStaticExDataDefaultTypeInternal {
- public:
-  ::google::protobuf::internal::ExplicitlyConstructed<OptionStaticExData>
-      _instance;
-} _OptionStaticExData_default_instance_;
-class FutureStaticExDataDefaultTypeInternal {
- public:
-  ::google::protobuf::internal::ExplicitlyConstructed<FutureStaticExData>
-      _instance;
-} _FutureStaticExData_default_instance_;
 class SecurityStaticInfoDefaultTypeInternal {
  public:
   ::google::protobuf::internal::ExplicitlyConstructed<SecurityStaticInfo>
@@ -95,21 +65,11 @@ class TickerDefaultTypeInternal {
   ::google::protobuf::internal::ExplicitlyConstructed<Ticker>
       _instance;
 } _Ticker_default_instance_;
-class OrderBookDetailDefaultTypeInternal {
- public:
-  ::google::protobuf::internal::ExplicitlyConstructed<OrderBookDetail>
-      _instance;
-} _OrderBookDetail_default_instance_;
 class OrderBookDefaultTypeInternal {
  public:
   ::google::protobuf::internal::ExplicitlyConstructed<OrderBook>
       _instance;
 } _OrderBook_default_instance_;
-class ShareHoldingChangeDefaultTypeInternal {
- public:
-  ::google::protobuf::internal::ExplicitlyConstructed<ShareHoldingChange>
-      _instance;
-} _ShareHoldingChange_default_instance_;
 class SubInfoDefaultTypeInternal {
  public:
   ::google::protobuf::internal::ExplicitlyConstructed<SubInfo>
@@ -120,16 +80,6 @@ class ConnSubInfoDefaultTypeInternal {
   ::google::protobuf::internal::ExplicitlyConstructed<ConnSubInfo>
       _instance;
 } _ConnSubInfo_default_instance_;
-class PlateInfoDefaultTypeInternal {
- public:
-  ::google::protobuf::internal::ExplicitlyConstructed<PlateInfo>
-      _instance;
-} _PlateInfo_default_instance_;
-class RehabDefaultTypeInternal {
- public:
-  ::google::protobuf::internal::ExplicitlyConstructed<Rehab>
-      _instance;
-} _Rehab_default_instance_;
 }  // namespace Qot_Common
 namespace protobuf_Qot_5fCommon_2eproto {
 void InitDefaultsSecurityImpl() {
@@ -174,90 +124,6 @@ void InitDefaultsKLine() {
   ::google::protobuf::GoogleOnceInit(&once, &InitDefaultsKLineImpl);
 }
 
-void InitDefaultsOptionBasicQotExDataImpl() {
-  GOOGLE_PROTOBUF_VERIFY_VERSION;
-
-#ifdef GOOGLE_PROTOBUF_ENFORCE_UNIQUENESS
-  ::google::protobuf::internal::InitProtobufDefaultsForceUnique();
-#else
-  ::google::protobuf::internal::InitProtobufDefaults();
-#endif  // GOOGLE_PROTOBUF_ENFORCE_UNIQUENESS
-  {
-    void* ptr = &::Qot_Common::_OptionBasicQotExData_default_instance_;
-    new (ptr) ::Qot_Common::OptionBasicQotExData();
-    ::google::protobuf::internal::OnShutdownDestroyMessage(ptr);
-  }
-  ::Qot_Common::OptionBasicQotExData::InitAsDefaultInstance();
-}
-
-void InitDefaultsOptionBasicQotExData() {
-  static GOOGLE_PROTOBUF_DECLARE_ONCE(once);
-  ::google::protobuf::GoogleOnceInit(&once, &InitDefaultsOptionBasicQotExDataImpl);
-}
-
-void InitDefaultsPreAfterMarketDataImpl() {
-  GOOGLE_PROTOBUF_VERIFY_VERSION;
-
-#ifdef GOOGLE_PROTOBUF_ENFORCE_UNIQUENESS
-  ::google::protobuf::internal::InitProtobufDefaultsForceUnique();
-#else
-  ::google::protobuf::internal::InitProtobufDefaults();
-#endif  // GOOGLE_PROTOBUF_ENFORCE_UNIQUENESS
-  {
-    void* ptr = &::Qot_Common::_PreAfterMarketData_default_instance_;
-    new (ptr) ::Qot_Common::PreAfterMarketData();
-    ::google::protobuf::internal::OnShutdownDestroyMessage(ptr);
-  }
-  ::Qot_Common::PreAfterMarketData::InitAsDefaultInstance();
-}
-
-void InitDefaultsPreAfterMarketData() {
-  static GOOGLE_PROTOBUF_DECLARE_ONCE(once);
-  ::google::protobuf::GoogleOnceInit(&once, &InitDefaultsPreAfterMarketDataImpl);
-}
-
-void InitDefaultsFutureBasicQotExDataImpl() {
-  GOOGLE_PROTOBUF_VERIFY_VERSION;
-
-#ifdef GOOGLE_PROTOBUF_ENFORCE_UNIQUENESS
-  ::google::protobuf::internal::InitProtobufDefaultsForceUnique();
-#else
-  ::google::protobuf::internal::InitProtobufDefaults();
-#endif  // GOOGLE_PROTOBUF_ENFORCE_UNIQUENESS
-  {
-    void* ptr = &::Qot_Common::_FutureBasicQotExData_default_instance_;
-    new (ptr) ::Qot_Common::FutureBasicQotExData();
-    ::google::protobuf::internal::OnShutdownDestroyMessage(ptr);
-  }
-  ::Qot_Common::FutureBasicQotExData::InitAsDefaultInstance();
-}
-
-void InitDefaultsFutureBasicQotExData() {
-  static GOOGLE_PROTOBUF_DECLARE_ONCE(once);
-  ::google::protobuf::GoogleOnceInit(&once, &InitDefaultsFutureBasicQotExDataImpl);
-}
-
-void InitDefaultsWarrantBasicQotExDataImpl() {
-  GOOGLE_PROTOBUF_VERIFY_VERSION;
-
-#ifdef GOOGLE_PROTOBUF_ENFORCE_UNIQUENESS
-  ::google::protobuf::internal::InitProtobufDefaultsForceUnique();
-#else
-  ::google::protobuf::internal::InitProtobufDefaults();
-#endif  // GOOGLE_PROTOBUF_ENFORCE_UNIQUENESS
-  {
-    void* ptr = &::Qot_Common::_WarrantBasicQotExData_default_instance_;
-    new (ptr) ::Qot_Common::WarrantBasicQotExData();
-    ::google::protobuf::internal::OnShutdownDestroyMessage(ptr);
-  }
-  ::Qot_Common::WarrantBasicQotExData::InitAsDefaultInstance();
-}
-
-void InitDefaultsWarrantBasicQotExData() {
-  static GOOGLE_PROTOBUF_DECLARE_ONCE(once);
-  ::google::protobuf::GoogleOnceInit(&once, &InitDefaultsWarrantBasicQotExDataImpl);
-}
-
 void InitDefaultsBasicQotImpl() {
   GOOGLE_PROTOBUF_VERIFY_VERSION;
 
@@ -267,10 +133,6 @@ void InitDefaultsBasicQotImpl() {
   ::google::protobuf::internal::InitProtobufDefaults();
 #endif  // GOOGLE_PROTOBUF_ENFORCE_UNIQUENESS
   protobuf_Qot_5fCommon_2eproto::InitDefaultsSecurity();
-  protobuf_Qot_5fCommon_2eproto::InitDefaultsOptionBasicQotExData();
-  protobuf_Qot_5fCommon_2eproto::InitDefaultsPreAfterMarketData();
-  protobuf_Qot_5fCommon_2eproto::InitDefaultsFutureBasicQotExData();
-  protobuf_Qot_5fCommon_2eproto::InitDefaultsWarrantBasicQotExData();
   {
     void* ptr = &::Qot_Common::_BasicQot_default_instance_;
     new (ptr) ::Qot_Common::BasicQot();
@@ -349,49 +211,6 @@ void InitDefaultsWarrantStaticExData() {
   ::google::protobuf::GoogleOnceInit(&once, &InitDefaultsWarrantStaticExDataImpl);
 }
 
-void InitDefaultsOptionStaticExDataImpl() {
-  GOOGLE_PROTOBUF_VERIFY_VERSION;
-
-#ifdef GOOGLE_PROTOBUF_ENFORCE_UNIQUENESS
-  ::google::protobuf::internal::InitProtobufDefaultsForceUnique();
-#else
-  ::google::protobuf::internal::InitProtobufDefaults();
-#endif  // GOOGLE_PROTOBUF_ENFORCE_UNIQUENESS
-  protobuf_Qot_5fCommon_2eproto::InitDefaultsSecurity();
-  {
-    void* ptr = &::Qot_Common::_OptionStaticExData_default_instance_;
-    new (ptr) ::Qot_Common::OptionStaticExData();
-    ::google::protobuf::internal::OnShutdownDestroyMessage(ptr);
-  }
-  ::Qot_Common::OptionStaticExData::InitAsDefaultInstance();
-}
-
-void InitDefaultsOptionStaticExData() {
-  static GOOGLE_PROTOBUF_DECLARE_ONCE(once);
-  ::google::protobuf::GoogleOnceInit(&once, &InitDefaultsOptionStaticExDataImpl);
-}
-
-void InitDefaultsFutureStaticExDataImpl() {
-  GOOGLE_PROTOBUF_VERIFY_VERSION;
-
-#ifdef GOOGLE_PROTOBUF_ENFORCE_UNIQUENESS
-  ::google::protobuf::internal::InitProtobufDefaultsForceUnique();
-#else
-  ::google::protobuf::internal::InitProtobufDefaults();
-#endif  // GOOGLE_PROTOBUF_ENFORCE_UNIQUENESS
-  {
-    void* ptr = &::Qot_Common::_FutureStaticExData_default_instance_;
-    new (ptr) ::Qot_Common::FutureStaticExData();
-    ::google::protobuf::internal::OnShutdownDestroyMessage(ptr);
-  }
-  ::Qot_Common::FutureStaticExData::InitAsDefaultInstance();
-}
-
-void InitDefaultsFutureStaticExData() {
-  static GOOGLE_PROTOBUF_DECLARE_ONCE(once);
-  ::google::protobuf::GoogleOnceInit(&once, &InitDefaultsFutureStaticExDataImpl);
-}
-
 void InitDefaultsSecurityStaticInfoImpl() {
   GOOGLE_PROTOBUF_VERIFY_VERSION;
 
@@ -402,8 +221,6 @@ void InitDefaultsSecurityStaticInfoImpl() {
 #endif  // GOOGLE_PROTOBUF_ENFORCE_UNIQUENESS
   protobuf_Qot_5fCommon_2eproto::InitDefaultsSecurityStaticBasic();
   protobuf_Qot_5fCommon_2eproto::InitDefaultsWarrantStaticExData();
-  protobuf_Qot_5fCommon_2eproto::InitDefaultsOptionStaticExData();
-  protobuf_Qot_5fCommon_2eproto::InitDefaultsFutureStaticExData();
   {
     void* ptr = &::Qot_Common::_SecurityStaticInfo_default_instance_;
     new (ptr) ::Qot_Common::SecurityStaticInfo();
@@ -459,27 +276,6 @@ void InitDefaultsTicker() {
   ::google::protobuf::GoogleOnceInit(&once, &InitDefaultsTickerImpl);
 }
 
-void InitDefaultsOrderBookDetailImpl() {
-  GOOGLE_PROTOBUF_VERIFY_VERSION;
-
-#ifdef GOOGLE_PROTOBUF_ENFORCE_UNIQUENESS
-  ::google::protobuf::internal::InitProtobufDefaultsForceUnique();
-#else
-  ::google::protobuf::internal::InitProtobufDefaults();
-#endif  // GOOGLE_PROTOBUF_ENFORCE_UNIQUENESS
-  {
-    void* ptr = &::Qot_Common::_OrderBookDetail_default_instance_;
-    new (ptr) ::Qot_Common::OrderBookDetail();
-    ::google::protobuf::internal::OnShutdownDestroyMessage(ptr);
-  }
-  ::Qot_Common::OrderBookDetail::InitAsDefaultInstance();
-}
-
-void InitDefaultsOrderBookDetail() {
-  static GOOGLE_PROTOBUF_DECLARE_ONCE(once);
-  ::google::protobuf::GoogleOnceInit(&once, &InitDefaultsOrderBookDetailImpl);
-}
-
 void InitDefaultsOrderBookImpl() {
   GOOGLE_PROTOBUF_VERIFY_VERSION;
 
@@ -488,7 +284,6 @@ void InitDefaultsOrderBookImpl() {
 #else
   ::google::protobuf::internal::InitProtobufDefaults();
 #endif  // GOOGLE_PROTOBUF_ENFORCE_UNIQUENESS
-  protobuf_Qot_5fCommon_2eproto::InitDefaultsOrderBookDetail();
   {
     void* ptr = &::Qot_Common::_OrderBook_default_instance_;
     new (ptr) ::Qot_Common::OrderBook();
@@ -500,27 +295,6 @@ void InitDefaultsOrderBookImpl() {
 void InitDefaultsOrderBook() {
   static GOOGLE_PROTOBUF_DECLARE_ONCE(once);
   ::google::protobuf::GoogleOnceInit(&once, &InitDefaultsOrderBookImpl);
-}
-
-void InitDefaultsShareHoldingChangeImpl() {
-  GOOGLE_PROTOBUF_VERIFY_VERSION;
-
-#ifdef GOOGLE_PROTOBUF_ENFORCE_UNIQUENESS
-  ::google::protobuf::internal::InitProtobufDefaultsForceUnique();
-#else
-  ::google::protobuf::internal::InitProtobufDefaults();
-#endif  // GOOGLE_PROTOBUF_ENFORCE_UNIQUENESS
-  {
-    void* ptr = &::Qot_Common::_ShareHoldingChange_default_instance_;
-    new (ptr) ::Qot_Common::ShareHoldingChange();
-    ::google::protobuf::internal::OnShutdownDestroyMessage(ptr);
-  }
-  ::Qot_Common::ShareHoldingChange::InitAsDefaultInstance();
-}
-
-void InitDefaultsShareHoldingChange() {
-  static GOOGLE_PROTOBUF_DECLARE_ONCE(once);
-  ::google::protobuf::GoogleOnceInit(&once, &InitDefaultsShareHoldingChangeImpl);
 }
 
 void InitDefaultsSubInfoImpl() {
@@ -567,51 +341,8 @@ void InitDefaultsConnSubInfo() {
   ::google::protobuf::GoogleOnceInit(&once, &InitDefaultsConnSubInfoImpl);
 }
 
-void InitDefaultsPlateInfoImpl() {
-  GOOGLE_PROTOBUF_VERIFY_VERSION;
-
-#ifdef GOOGLE_PROTOBUF_ENFORCE_UNIQUENESS
-  ::google::protobuf::internal::InitProtobufDefaultsForceUnique();
-#else
-  ::google::protobuf::internal::InitProtobufDefaults();
-#endif  // GOOGLE_PROTOBUF_ENFORCE_UNIQUENESS
-  protobuf_Qot_5fCommon_2eproto::InitDefaultsSecurity();
-  {
-    void* ptr = &::Qot_Common::_PlateInfo_default_instance_;
-    new (ptr) ::Qot_Common::PlateInfo();
-    ::google::protobuf::internal::OnShutdownDestroyMessage(ptr);
-  }
-  ::Qot_Common::PlateInfo::InitAsDefaultInstance();
-}
-
-void InitDefaultsPlateInfo() {
-  static GOOGLE_PROTOBUF_DECLARE_ONCE(once);
-  ::google::protobuf::GoogleOnceInit(&once, &InitDefaultsPlateInfoImpl);
-}
-
-void InitDefaultsRehabImpl() {
-  GOOGLE_PROTOBUF_VERIFY_VERSION;
-
-#ifdef GOOGLE_PROTOBUF_ENFORCE_UNIQUENESS
-  ::google::protobuf::internal::InitProtobufDefaultsForceUnique();
-#else
-  ::google::protobuf::internal::InitProtobufDefaults();
-#endif  // GOOGLE_PROTOBUF_ENFORCE_UNIQUENESS
-  {
-    void* ptr = &::Qot_Common::_Rehab_default_instance_;
-    new (ptr) ::Qot_Common::Rehab();
-    ::google::protobuf::internal::OnShutdownDestroyMessage(ptr);
-  }
-  ::Qot_Common::Rehab::InitAsDefaultInstance();
-}
-
-void InitDefaultsRehab() {
-  static GOOGLE_PROTOBUF_DECLARE_ONCE(once);
-  ::google::protobuf::GoogleOnceInit(&once, &InitDefaultsRehabImpl);
-}
-
-::google::protobuf::Metadata file_level_metadata[22];
-const ::google::protobuf::EnumDescriptor* file_level_enum_descriptors[36];
+::google::protobuf::Metadata file_level_metadata[12];
+const ::google::protobuf::EnumDescriptor* file_level_enum_descriptors[12];
 
 const ::google::protobuf::uint32 TableStruct::offsets[] GOOGLE_PROTOBUF_ATTRIBUTE_SECTION_VARIABLE(protodesc_cold) = {
   GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(::Qot_Common::Security, _has_bits_),
@@ -640,9 +371,8 @@ const ::google::protobuf::uint32 TableStruct::offsets[] GOOGLE_PROTOBUF_ATTRIBUT
   GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(::Qot_Common::KLine, turnoverrate_),
   GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(::Qot_Common::KLine, pe_),
   GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(::Qot_Common::KLine, changerate_),
-  GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(::Qot_Common::KLine, timestamp_),
   0,
-  12,
+  11,
   1,
   2,
   3,
@@ -653,100 +383,12 @@ const ::google::protobuf::uint32 TableStruct::offsets[] GOOGLE_PROTOBUF_ATTRIBUT
   8,
   9,
   10,
-  11,
-  GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(::Qot_Common::OptionBasicQotExData, _has_bits_),
-  GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(::Qot_Common::OptionBasicQotExData, _internal_metadata_),
-  ~0u,  // no _extensions_
-  ~0u,  // no _oneof_case_
-  ~0u,  // no _weak_field_map_
-  GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(::Qot_Common::OptionBasicQotExData, strikeprice_),
-  GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(::Qot_Common::OptionBasicQotExData, contractsize_),
-  GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(::Qot_Common::OptionBasicQotExData, contractsizefloat_),
-  GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(::Qot_Common::OptionBasicQotExData, openinterest_),
-  GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(::Qot_Common::OptionBasicQotExData, impliedvolatility_),
-  GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(::Qot_Common::OptionBasicQotExData, premium_),
-  GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(::Qot_Common::OptionBasicQotExData, delta_),
-  GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(::Qot_Common::OptionBasicQotExData, gamma_),
-  GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(::Qot_Common::OptionBasicQotExData, vega_),
-  GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(::Qot_Common::OptionBasicQotExData, theta_),
-  GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(::Qot_Common::OptionBasicQotExData, rho_),
-  GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(::Qot_Common::OptionBasicQotExData, netopeninterest_),
-  GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(::Qot_Common::OptionBasicQotExData, expirydatedistance_),
-  GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(::Qot_Common::OptionBasicQotExData, contractnominalvalue_),
-  GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(::Qot_Common::OptionBasicQotExData, ownerlotmultiplier_),
-  GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(::Qot_Common::OptionBasicQotExData, optionareatype_),
-  GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(::Qot_Common::OptionBasicQotExData, contractmultiplier_),
-  GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(::Qot_Common::OptionBasicQotExData, indexoptiontype_),
-  0,
-  1,
-  17,
-  2,
-  3,
-  4,
-  5,
-  6,
-  7,
-  8,
-  9,
-  10,
-  11,
-  12,
-  13,
-  15,
-  14,
-  16,
-  GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(::Qot_Common::PreAfterMarketData, _has_bits_),
-  GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(::Qot_Common::PreAfterMarketData, _internal_metadata_),
-  ~0u,  // no _extensions_
-  ~0u,  // no _oneof_case_
-  ~0u,  // no _weak_field_map_
-  GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(::Qot_Common::PreAfterMarketData, price_),
-  GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(::Qot_Common::PreAfterMarketData, highprice_),
-  GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(::Qot_Common::PreAfterMarketData, lowprice_),
-  GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(::Qot_Common::PreAfterMarketData, volume_),
-  GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(::Qot_Common::PreAfterMarketData, turnover_),
-  GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(::Qot_Common::PreAfterMarketData, changeval_),
-  GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(::Qot_Common::PreAfterMarketData, changerate_),
-  GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(::Qot_Common::PreAfterMarketData, amplitude_),
-  0,
-  1,
-  2,
-  3,
-  4,
-  5,
-  6,
-  7,
-  GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(::Qot_Common::FutureBasicQotExData, _has_bits_),
-  GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(::Qot_Common::FutureBasicQotExData, _internal_metadata_),
-  ~0u,  // no _extensions_
-  ~0u,  // no _oneof_case_
-  ~0u,  // no _weak_field_map_
-  GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(::Qot_Common::FutureBasicQotExData, lastsettleprice_),
-  GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(::Qot_Common::FutureBasicQotExData, position_),
-  GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(::Qot_Common::FutureBasicQotExData, positionchange_),
-  GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(::Qot_Common::FutureBasicQotExData, expirydatedistance_),
-  0,
-  1,
-  2,
-  3,
-  GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(::Qot_Common::WarrantBasicQotExData, _has_bits_),
-  GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(::Qot_Common::WarrantBasicQotExData, _internal_metadata_),
-  ~0u,  // no _extensions_
-  ~0u,  // no _oneof_case_
-  ~0u,  // no _weak_field_map_
-  GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(::Qot_Common::WarrantBasicQotExData, delta_),
-  GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(::Qot_Common::WarrantBasicQotExData, impliedvolatility_),
-  GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(::Qot_Common::WarrantBasicQotExData, premium_),
-  0,
-  1,
-  2,
   GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(::Qot_Common::BasicQot, _has_bits_),
   GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(::Qot_Common::BasicQot, _internal_metadata_),
   ~0u,  // no _extensions_
   ~0u,  // no _oneof_case_
   ~0u,  // no _weak_field_map_
   GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(::Qot_Common::BasicQot, security_),
-  GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(::Qot_Common::BasicQot, name_),
   GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(::Qot_Common::BasicQot, issuspended_),
   GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(::Qot_Common::BasicQot, listtime_),
   GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(::Qot_Common::BasicQot, pricespread_),
@@ -761,40 +403,21 @@ const ::google::protobuf::uint32 TableStruct::offsets[] GOOGLE_PROTOBUF_ATTRIBUT
   GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(::Qot_Common::BasicQot, turnoverrate_),
   GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(::Qot_Common::BasicQot, amplitude_),
   GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(::Qot_Common::BasicQot, darkstatus_),
-  GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(::Qot_Common::BasicQot, optionexdata_),
-  GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(::Qot_Common::BasicQot, listtimestamp_),
-  GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(::Qot_Common::BasicQot, updatetimestamp_),
-  GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(::Qot_Common::BasicQot, premarket_),
-  GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(::Qot_Common::BasicQot, aftermarket_),
-  GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(::Qot_Common::BasicQot, secstatus_),
-  GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(::Qot_Common::BasicQot, futureexdata_),
-  GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(::Qot_Common::BasicQot, warrantexdata_),
-  GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(::Qot_Common::BasicQot, overnight_),
-  3,
   2,
-  14,
+  7,
   0,
-  10,
+  3,
   1,
+  4,
+  5,
+  6,
+  9,
+  10,
   11,
   12,
   13,
-  16,
-  17,
-  18,
-  19,
-  20,
-  21,
-  15,
-  4,
-  22,
-  23,
-  5,
-  6,
-  24,
-  7,
+  14,
   8,
-  9,
   GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(::Qot_Common::TimeShare, _has_bits_),
   GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(::Qot_Common::TimeShare, _internal_metadata_),
   ~0u,  // no _extensions_
@@ -808,7 +431,6 @@ const ::google::protobuf::uint32 TableStruct::offsets[] GOOGLE_PROTOBUF_ATTRIBUT
   GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(::Qot_Common::TimeShare, avgprice_),
   GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(::Qot_Common::TimeShare, volume_),
   GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(::Qot_Common::TimeShare, turnover_),
-  GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(::Qot_Common::TimeShare, timestamp_),
   0,
   1,
   2,
@@ -817,7 +439,6 @@ const ::google::protobuf::uint32 TableStruct::offsets[] GOOGLE_PROTOBUF_ATTRIBUT
   5,
   6,
   7,
-  8,
   GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(::Qot_Common::SecurityStaticBasic, _has_bits_),
   GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(::Qot_Common::SecurityStaticBasic, _internal_metadata_),
   ~0u,  // no _extensions_
@@ -829,18 +450,12 @@ const ::google::protobuf::uint32 TableStruct::offsets[] GOOGLE_PROTOBUF_ATTRIBUT
   GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(::Qot_Common::SecurityStaticBasic, sectype_),
   GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(::Qot_Common::SecurityStaticBasic, name_),
   GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(::Qot_Common::SecurityStaticBasic, listtime_),
-  GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(::Qot_Common::SecurityStaticBasic, delisting_),
-  GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(::Qot_Common::SecurityStaticBasic, listtimestamp_),
-  GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(::Qot_Common::SecurityStaticBasic, exchtype_),
   2,
   3,
   4,
   5,
   0,
   1,
-  7,
-  6,
-  8,
   GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(::Qot_Common::WarrantStaticExData, _has_bits_),
   GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(::Qot_Common::WarrantStaticExData, _internal_metadata_),
   ~0u,  // no _extensions_
@@ -850,44 +465,6 @@ const ::google::protobuf::uint32 TableStruct::offsets[] GOOGLE_PROTOBUF_ATTRIBUT
   GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(::Qot_Common::WarrantStaticExData, owner_),
   1,
   0,
-  GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(::Qot_Common::OptionStaticExData, _has_bits_),
-  GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(::Qot_Common::OptionStaticExData, _internal_metadata_),
-  ~0u,  // no _extensions_
-  ~0u,  // no _oneof_case_
-  ~0u,  // no _weak_field_map_
-  GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(::Qot_Common::OptionStaticExData, type_),
-  GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(::Qot_Common::OptionStaticExData, owner_),
-  GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(::Qot_Common::OptionStaticExData, striketime_),
-  GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(::Qot_Common::OptionStaticExData, strikeprice_),
-  GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(::Qot_Common::OptionStaticExData, suspend_),
-  GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(::Qot_Common::OptionStaticExData, market_),
-  GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(::Qot_Common::OptionStaticExData, striketimestamp_),
-  GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(::Qot_Common::OptionStaticExData, indexoptiontype_),
-  GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(::Qot_Common::OptionStaticExData, expirationcycle_),
-  GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(::Qot_Common::OptionStaticExData, optionstandardtype_),
-  GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(::Qot_Common::OptionStaticExData, optionsettlementmode_),
-  3,
-  2,
-  0,
-  5,
-  4,
-  1,
-  6,
-  7,
-  8,
-  9,
-  10,
-  GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(::Qot_Common::FutureStaticExData, _has_bits_),
-  GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(::Qot_Common::FutureStaticExData, _internal_metadata_),
-  ~0u,  // no _extensions_
-  ~0u,  // no _oneof_case_
-  ~0u,  // no _weak_field_map_
-  GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(::Qot_Common::FutureStaticExData, lasttradetime_),
-  GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(::Qot_Common::FutureStaticExData, lasttradetimestamp_),
-  GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(::Qot_Common::FutureStaticExData, ismaincontract_),
-  0,
-  1,
-  2,
   GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(::Qot_Common::SecurityStaticInfo, _has_bits_),
   GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(::Qot_Common::SecurityStaticInfo, _internal_metadata_),
   ~0u,  // no _extensions_
@@ -895,12 +472,8 @@ const ::google::protobuf::uint32 TableStruct::offsets[] GOOGLE_PROTOBUF_ATTRIBUT
   ~0u,  // no _weak_field_map_
   GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(::Qot_Common::SecurityStaticInfo, basic_),
   GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(::Qot_Common::SecurityStaticInfo, warrantexdata_),
-  GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(::Qot_Common::SecurityStaticInfo, optionexdata_),
-  GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(::Qot_Common::SecurityStaticInfo, futureexdata_),
   0,
   1,
-  2,
-  3,
   GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(::Qot_Common::Broker, _has_bits_),
   GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(::Qot_Common::Broker, _internal_metadata_),
   ~0u,  // no _extensions_
@@ -909,13 +482,9 @@ const ::google::protobuf::uint32 TableStruct::offsets[] GOOGLE_PROTOBUF_ATTRIBUT
   GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(::Qot_Common::Broker, id_),
   GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(::Qot_Common::Broker, name_),
   GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(::Qot_Common::Broker, pos_),
-  GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(::Qot_Common::Broker, orderid_),
-  GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(::Qot_Common::Broker, volume_),
   1,
   0,
-  4,
   2,
-  3,
   GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(::Qot_Common::Ticker, _has_bits_),
   GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(::Qot_Common::Ticker, _internal_metadata_),
   ~0u,  // no _extensions_
@@ -930,8 +499,6 @@ const ::google::protobuf::uint32 TableStruct::offsets[] GOOGLE_PROTOBUF_ATTRIBUT
   GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(::Qot_Common::Ticker, recvtime_),
   GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(::Qot_Common::Ticker, type_),
   GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(::Qot_Common::Ticker, typesign_),
-  GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(::Qot_Common::Ticker, pushdatatype_),
-  GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(::Qot_Common::Ticker, timestamp_),
   0,
   1,
   4,
@@ -941,17 +508,6 @@ const ::google::protobuf::uint32 TableStruct::offsets[] GOOGLE_PROTOBUF_ATTRIBUT
   7,
   5,
   8,
-  9,
-  10,
-  GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(::Qot_Common::OrderBookDetail, _has_bits_),
-  GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(::Qot_Common::OrderBookDetail, _internal_metadata_),
-  ~0u,  // no _extensions_
-  ~0u,  // no _oneof_case_
-  ~0u,  // no _weak_field_map_
-  GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(::Qot_Common::OrderBookDetail, orderid_),
-  GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(::Qot_Common::OrderBookDetail, volume_),
-  0,
-  1,
   GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(::Qot_Common::OrderBook, _has_bits_),
   GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(::Qot_Common::OrderBook, _internal_metadata_),
   ~0u,  // no _extensions_
@@ -960,30 +516,9 @@ const ::google::protobuf::uint32 TableStruct::offsets[] GOOGLE_PROTOBUF_ATTRIBUT
   GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(::Qot_Common::OrderBook, price_),
   GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(::Qot_Common::OrderBook, volume_),
   GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(::Qot_Common::OrderBook, oredercount_),
-  GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(::Qot_Common::OrderBook, detaillist_),
   0,
   1,
   2,
-  ~0u,
-  GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(::Qot_Common::ShareHoldingChange, _has_bits_),
-  GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(::Qot_Common::ShareHoldingChange, _internal_metadata_),
-  ~0u,  // no _extensions_
-  ~0u,  // no _oneof_case_
-  ~0u,  // no _weak_field_map_
-  GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(::Qot_Common::ShareHoldingChange, holdername_),
-  GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(::Qot_Common::ShareHoldingChange, holdingqty_),
-  GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(::Qot_Common::ShareHoldingChange, holdingratio_),
-  GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(::Qot_Common::ShareHoldingChange, changeqty_),
-  GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(::Qot_Common::ShareHoldingChange, changeratio_),
-  GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(::Qot_Common::ShareHoldingChange, time_),
-  GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(::Qot_Common::ShareHoldingChange, timestamp_),
-  0,
-  2,
-  3,
-  4,
-  5,
-  1,
-  6,
   GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(::Qot_Common::SubInfo, _has_bits_),
   GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(::Qot_Common::SubInfo, _internal_metadata_),
   ~0u,  // no _extensions_
@@ -1004,117 +539,35 @@ const ::google::protobuf::uint32 TableStruct::offsets[] GOOGLE_PROTOBUF_ATTRIBUT
   ~0u,
   0,
   1,
-  GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(::Qot_Common::PlateInfo, _has_bits_),
-  GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(::Qot_Common::PlateInfo, _internal_metadata_),
-  ~0u,  // no _extensions_
-  ~0u,  // no _oneof_case_
-  ~0u,  // no _weak_field_map_
-  GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(::Qot_Common::PlateInfo, plate_),
-  GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(::Qot_Common::PlateInfo, name_),
-  GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(::Qot_Common::PlateInfo, platetype_),
-  1,
-  0,
-  2,
-  GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(::Qot_Common::Rehab, _has_bits_),
-  GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(::Qot_Common::Rehab, _internal_metadata_),
-  ~0u,  // no _extensions_
-  ~0u,  // no _oneof_case_
-  ~0u,  // no _weak_field_map_
-  GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(::Qot_Common::Rehab, time_),
-  GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(::Qot_Common::Rehab, companyactflag_),
-  GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(::Qot_Common::Rehab, fwdfactora_),
-  GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(::Qot_Common::Rehab, fwdfactorb_),
-  GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(::Qot_Common::Rehab, bwdfactora_),
-  GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(::Qot_Common::Rehab, bwdfactorb_),
-  GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(::Qot_Common::Rehab, splitbase_),
-  GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(::Qot_Common::Rehab, splitert_),
-  GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(::Qot_Common::Rehab, joinbase_),
-  GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(::Qot_Common::Rehab, joinert_),
-  GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(::Qot_Common::Rehab, bonusbase_),
-  GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(::Qot_Common::Rehab, bonusert_),
-  GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(::Qot_Common::Rehab, transferbase_),
-  GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(::Qot_Common::Rehab, transferert_),
-  GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(::Qot_Common::Rehab, allotbase_),
-  GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(::Qot_Common::Rehab, allotert_),
-  GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(::Qot_Common::Rehab, allotprice_),
-  GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(::Qot_Common::Rehab, addbase_),
-  GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(::Qot_Common::Rehab, addert_),
-  GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(::Qot_Common::Rehab, addprice_),
-  GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(::Qot_Common::Rehab, dividend_),
-  GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(::Qot_Common::Rehab, spdividend_),
-  GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(::Qot_Common::Rehab, timestamp_),
-  0,
-  1,
-  2,
-  3,
-  4,
-  5,
-  6,
-  7,
-  8,
-  9,
-  10,
-  11,
-  12,
-  13,
-  14,
-  15,
-  16,
-  17,
-  18,
-  19,
-  20,
-  21,
-  22,
 };
 static const ::google::protobuf::internal::MigrationSchema schemas[] GOOGLE_PROTOBUF_ATTRIBUTE_SECTION_VARIABLE(protodesc_cold) = {
   { 0, 7, sizeof(::Qot_Common::Security)},
-  { 9, 27, sizeof(::Qot_Common::KLine)},
-  { 40, 63, sizeof(::Qot_Common::OptionBasicQotExData)},
-  { 81, 94, sizeof(::Qot_Common::PreAfterMarketData)},
-  { 102, 111, sizeof(::Qot_Common::FutureBasicQotExData)},
-  { 115, 123, sizeof(::Qot_Common::WarrantBasicQotExData)},
-  { 126, 156, sizeof(::Qot_Common::BasicQot)},
-  { 181, 195, sizeof(::Qot_Common::TimeShare)},
-  { 204, 218, sizeof(::Qot_Common::SecurityStaticBasic)},
-  { 227, 234, sizeof(::Qot_Common::WarrantStaticExData)},
-  { 236, 252, sizeof(::Qot_Common::OptionStaticExData)},
-  { 263, 271, sizeof(::Qot_Common::FutureStaticExData)},
-  { 274, 283, sizeof(::Qot_Common::SecurityStaticInfo)},
-  { 287, 297, sizeof(::Qot_Common::Broker)},
-  { 302, 318, sizeof(::Qot_Common::Ticker)},
-  { 329, 336, sizeof(::Qot_Common::OrderBookDetail)},
-  { 338, 347, sizeof(::Qot_Common::OrderBook)},
-  { 351, 363, sizeof(::Qot_Common::ShareHoldingChange)},
-  { 370, 377, sizeof(::Qot_Common::SubInfo)},
-  { 379, 387, sizeof(::Qot_Common::ConnSubInfo)},
-  { 390, 398, sizeof(::Qot_Common::PlateInfo)},
-  { 401, 429, sizeof(::Qot_Common::Rehab)},
+  { 9, 26, sizeof(::Qot_Common::KLine)},
+  { 38, 58, sizeof(::Qot_Common::BasicQot)},
+  { 73, 86, sizeof(::Qot_Common::TimeShare)},
+  { 94, 105, sizeof(::Qot_Common::SecurityStaticBasic)},
+  { 111, 118, sizeof(::Qot_Common::WarrantStaticExData)},
+  { 120, 127, sizeof(::Qot_Common::SecurityStaticInfo)},
+  { 129, 137, sizeof(::Qot_Common::Broker)},
+  { 140, 154, sizeof(::Qot_Common::Ticker)},
+  { 163, 171, sizeof(::Qot_Common::OrderBook)},
+  { 174, 181, sizeof(::Qot_Common::SubInfo)},
+  { 183, 191, sizeof(::Qot_Common::ConnSubInfo)},
 };
 
 static ::google::protobuf::Message const * const file_default_instances[] = {
   reinterpret_cast<const ::google::protobuf::Message*>(&::Qot_Common::_Security_default_instance_),
   reinterpret_cast<const ::google::protobuf::Message*>(&::Qot_Common::_KLine_default_instance_),
-  reinterpret_cast<const ::google::protobuf::Message*>(&::Qot_Common::_OptionBasicQotExData_default_instance_),
-  reinterpret_cast<const ::google::protobuf::Message*>(&::Qot_Common::_PreAfterMarketData_default_instance_),
-  reinterpret_cast<const ::google::protobuf::Message*>(&::Qot_Common::_FutureBasicQotExData_default_instance_),
-  reinterpret_cast<const ::google::protobuf::Message*>(&::Qot_Common::_WarrantBasicQotExData_default_instance_),
   reinterpret_cast<const ::google::protobuf::Message*>(&::Qot_Common::_BasicQot_default_instance_),
   reinterpret_cast<const ::google::protobuf::Message*>(&::Qot_Common::_TimeShare_default_instance_),
   reinterpret_cast<const ::google::protobuf::Message*>(&::Qot_Common::_SecurityStaticBasic_default_instance_),
   reinterpret_cast<const ::google::protobuf::Message*>(&::Qot_Common::_WarrantStaticExData_default_instance_),
-  reinterpret_cast<const ::google::protobuf::Message*>(&::Qot_Common::_OptionStaticExData_default_instance_),
-  reinterpret_cast<const ::google::protobuf::Message*>(&::Qot_Common::_FutureStaticExData_default_instance_),
   reinterpret_cast<const ::google::protobuf::Message*>(&::Qot_Common::_SecurityStaticInfo_default_instance_),
   reinterpret_cast<const ::google::protobuf::Message*>(&::Qot_Common::_Broker_default_instance_),
   reinterpret_cast<const ::google::protobuf::Message*>(&::Qot_Common::_Ticker_default_instance_),
-  reinterpret_cast<const ::google::protobuf::Message*>(&::Qot_Common::_OrderBookDetail_default_instance_),
   reinterpret_cast<const ::google::protobuf::Message*>(&::Qot_Common::_OrderBook_default_instance_),
-  reinterpret_cast<const ::google::protobuf::Message*>(&::Qot_Common::_ShareHoldingChange_default_instance_),
   reinterpret_cast<const ::google::protobuf::Message*>(&::Qot_Common::_SubInfo_default_instance_),
   reinterpret_cast<const ::google::protobuf::Message*>(&::Qot_Common::_ConnSubInfo_default_instance_),
-  reinterpret_cast<const ::google::protobuf::Message*>(&::Qot_Common::_PlateInfo_default_instance_),
-  reinterpret_cast<const ::google::protobuf::Message*>(&::Qot_Common::_Rehab_default_instance_),
 };
 
 void protobuf_AssignDescriptors() {
@@ -1133,7 +586,7 @@ void protobuf_AssignDescriptorsOnce() {
 void protobuf_RegisterTypes(const ::std::string&) GOOGLE_PROTOBUF_ATTRIBUTE_COLD;
 void protobuf_RegisterTypes(const ::std::string&) {
   protobuf_AssignDescriptorsOnce();
-  ::google::protobuf::internal::RegisterAllTypes(file_level_metadata, 22);
+  ::google::protobuf::internal::RegisterAllTypes(file_level_metadata, 12);
 }
 
 void AddDescriptorsImpl() {
@@ -1141,382 +594,130 @@ void AddDescriptorsImpl() {
   static const char descriptor[] GOOGLE_PROTOBUF_ATTRIBUTE_SECTION_VARIABLE(protodesc_cold) = {
       "\n\020Qot_Common.proto\022\nQot_Common\032\014Common.p"
       "roto\"(\n\010Security\022\016\n\006market\030\001 \002(\005\022\014\n\004code"
-      "\030\002 \002(\t\"\365\001\n\005KLine\022\014\n\004time\030\001 \002(\t\022\017\n\007isBlan"
+      "\030\002 \002(\t\"\342\001\n\005KLine\022\014\n\004time\030\001 \002(\t\022\017\n\007isBlan"
       "k\030\002 \002(\010\022\021\n\thighPrice\030\003 \001(\001\022\021\n\topenPrice\030"
       "\004 \001(\001\022\020\n\010lowPrice\030\005 \001(\001\022\022\n\nclosePrice\030\006 "
       "\001(\001\022\026\n\016lastClosePrice\030\007 \001(\001\022\016\n\006volume\030\010 "
       "\001(\003\022\020\n\010turnover\030\t \001(\001\022\024\n\014turnoverRate\030\n "
-      "\001(\001\022\n\n\002pe\030\013 \001(\001\022\022\n\nchangeRate\030\014 \001(\001\022\021\n\tt"
-      "imestamp\030\r \001(\001\"\242\003\n\024OptionBasicQotExData\022"
-      "\023\n\013strikePrice\030\001 \002(\001\022\024\n\014contractSize\030\002 \002"
-      "(\005\022\031\n\021contractSizeFloat\030\021 \001(\001\022\024\n\014openInt"
-      "erest\030\003 \002(\005\022\031\n\021impliedVolatility\030\004 \002(\001\022\017"
-      "\n\007premium\030\005 \002(\001\022\r\n\005delta\030\006 \002(\001\022\r\n\005gamma\030"
-      "\007 \002(\001\022\014\n\004vega\030\010 \002(\001\022\r\n\005theta\030\t \002(\001\022\013\n\003rh"
-      "o\030\n \002(\001\022\027\n\017netOpenInterest\030\013 \001(\005\022\032\n\022expi"
-      "ryDateDistance\030\014 \001(\005\022\034\n\024contractNominalV"
-      "alue\030\r \001(\001\022\032\n\022ownerLotMultiplier\030\016 \001(\001\022\026"
-      "\n\016optionAreaType\030\017 \001(\005\022\032\n\022contractMultip"
-      "lier\030\020 \001(\001\022\027\n\017indexOptionType\030\022 \001(\005\"\244\001\n\022"
-      "PreAfterMarketData\022\r\n\005price\030\001 \001(\001\022\021\n\thig"
-      "hPrice\030\002 \001(\001\022\020\n\010lowPrice\030\003 \001(\001\022\016\n\006volume"
-      "\030\004 \001(\003\022\020\n\010turnover\030\005 \001(\001\022\021\n\tchangeVal\030\006 "
-      "\001(\001\022\022\n\nchangeRate\030\007 \001(\001\022\021\n\tamplitude\030\010 \001"
-      "(\001\"u\n\024FutureBasicQotExData\022\027\n\017lastSettle"
-      "Price\030\001 \002(\001\022\020\n\010position\030\002 \002(\005\022\026\n\016positio"
-      "nChange\030\003 \002(\005\022\032\n\022expiryDateDistance\030\004 \001("
-      "\005\"R\n\025WarrantBasicQotExData\022\r\n\005delta\030\001 \001("
-      "\001\022\031\n\021impliedVolatility\030\002 \001(\001\022\017\n\007premium\030"
-      "\003 \002(\001\"\331\005\n\010BasicQot\022&\n\010security\030\001 \002(\0132\024.Q"
-      "ot_Common.Security\022\014\n\004name\030\030 \001(\t\022\023\n\013isSu"
-      "spended\030\002 \002(\010\022\020\n\010listTime\030\003 \002(\t\022\023\n\013price"
-      "Spread\030\004 \002(\001\022\022\n\nupdateTime\030\005 \002(\t\022\021\n\thigh"
-      "Price\030\006 \002(\001\022\021\n\topenPrice\030\007 \002(\001\022\020\n\010lowPri"
-      "ce\030\010 \002(\001\022\020\n\010curPrice\030\t \002(\001\022\026\n\016lastCloseP"
-      "rice\030\n \002(\001\022\016\n\006volume\030\013 \002(\003\022\020\n\010turnover\030\014"
-      " \002(\001\022\024\n\014turnoverRate\030\r \002(\001\022\021\n\tamplitude\030"
-      "\016 \002(\001\022\022\n\ndarkStatus\030\017 \001(\005\0226\n\014optionExDat"
-      "a\030\020 \001(\0132 .Qot_Common.OptionBasicQotExDat"
-      "a\022\025\n\rlistTimestamp\030\021 \001(\001\022\027\n\017updateTimest"
-      "amp\030\022 \001(\001\0221\n\tpreMarket\030\023 \001(\0132\036.Qot_Commo"
-      "n.PreAfterMarketData\0223\n\013afterMarket\030\024 \001("
-      "\0132\036.Qot_Common.PreAfterMarketData\022\021\n\tsec"
-      "Status\030\025 \001(\005\0226\n\014futureExData\030\026 \001(\0132 .Qot"
-      "_Common.FutureBasicQotExData\0228\n\rwarrantE"
-      "xData\030\027 \001(\0132!.Qot_Common.WarrantBasicQot"
-      "ExData\0221\n\tovernight\030\031 \001(\0132\036.Qot_Common.P"
-      "reAfterMarketData\"\250\001\n\tTimeShare\022\014\n\004time\030"
-      "\001 \002(\t\022\016\n\006minute\030\002 \002(\005\022\017\n\007isBlank\030\003 \002(\010\022\r"
-      "\n\005price\030\004 \001(\001\022\026\n\016lastClosePrice\030\005 \001(\001\022\020\n"
-      "\010avgPrice\030\006 \001(\001\022\016\n\006volume\030\007 \001(\003\022\020\n\010turno"
-      "ver\030\010 \001(\001\022\021\n\ttimestamp\030\t \001(\001\"\307\001\n\023Securit"
-      "yStaticBasic\022&\n\010security\030\001 \002(\0132\024.Qot_Com"
-      "mon.Security\022\n\n\002id\030\002 \002(\003\022\017\n\007lotSize\030\003 \002("
-      "\005\022\017\n\007secType\030\004 \002(\005\022\014\n\004name\030\005 \002(\t\022\020\n\010list"
-      "Time\030\006 \002(\t\022\021\n\tdelisting\030\007 \001(\010\022\025\n\rlistTim"
-      "estamp\030\010 \001(\001\022\020\n\010exchType\030\t \001(\005\"H\n\023Warran"
-      "tStaticExData\022\014\n\004type\030\001 \002(\005\022#\n\005owner\030\002 \002"
-      "(\0132\024.Qot_Common.Security\"\226\002\n\022OptionStati"
-      "cExData\022\014\n\004type\030\001 \002(\005\022#\n\005owner\030\002 \002(\0132\024.Q"
-      "ot_Common.Security\022\022\n\nstrikeTime\030\003 \002(\t\022\023"
-      "\n\013strikePrice\030\004 \002(\001\022\017\n\007suspend\030\005 \002(\010\022\016\n\006"
-      "market\030\006 \002(\t\022\027\n\017strikeTimestamp\030\007 \001(\001\022\027\n"
-      "\017indexOptionType\030\010 \001(\005\022\027\n\017expirationCycl"
-      "e\030\t \001(\005\022\032\n\022optionStandardType\030\n \001(\005\022\034\n\024o"
-      "ptionSettlementMode\030\013 \001(\005\"_\n\022FutureStati"
-      "cExData\022\025\n\rlastTradeTime\030\001 \002(\t\022\032\n\022lastTr"
-      "adeTimestamp\030\002 \001(\001\022\026\n\016isMainContract\030\003 \002"
-      "(\010\"\350\001\n\022SecurityStaticInfo\022.\n\005basic\030\001 \002(\013"
-      "2\037.Qot_Common.SecurityStaticBasic\0226\n\rwar"
-      "rantExData\030\002 \001(\0132\037.Qot_Common.WarrantSta"
-      "ticExData\0224\n\014optionExData\030\003 \001(\0132\036.Qot_Co"
-      "mmon.OptionStaticExData\0224\n\014futureExData\030"
-      "\004 \001(\0132\036.Qot_Common.FutureStaticExData\"P\n"
-      "\006Broker\022\n\n\002id\030\001 \002(\003\022\014\n\004name\030\002 \002(\t\022\013\n\003pos"
-      "\030\003 \002(\005\022\017\n\007orderID\030\004 \001(\003\022\016\n\006volume\030\005 \001(\003\""
-      "\301\001\n\006Ticker\022\014\n\004time\030\001 \002(\t\022\020\n\010sequence\030\002 \002"
-      "(\003\022\013\n\003dir\030\003 \002(\005\022\r\n\005price\030\004 \002(\001\022\016\n\006volume"
-      "\030\005 \002(\003\022\020\n\010turnover\030\006 \002(\001\022\020\n\010recvTime\030\007 \001"
-      "(\001\022\014\n\004type\030\010 \001(\005\022\020\n\010typeSign\030\t \001(\005\022\024\n\014pu"
-      "shDataType\030\n \001(\005\022\021\n\ttimestamp\030\013 \001(\001\"2\n\017O"
-      "rderBookDetail\022\017\n\007orderID\030\001 \002(\003\022\016\n\006volum"
-      "e\030\002 \002(\003\"p\n\tOrderBook\022\r\n\005price\030\001 \002(\001\022\016\n\006v"
-      "olume\030\002 \002(\003\022\023\n\013orederCount\030\003 \002(\005\022/\n\ndeta"
-      "ilList\030\004 \003(\0132\033.Qot_Common.OrderBookDetai"
-      "l\"\233\001\n\022ShareHoldingChange\022\022\n\nholderName\030\001"
-      " \002(\t\022\022\n\nholdingQty\030\002 \002(\001\022\024\n\014holdingRatio"
-      "\030\003 \002(\001\022\021\n\tchangeQty\030\004 \002(\001\022\023\n\013changeRatio"
-      "\030\005 \002(\001\022\014\n\004time\030\006 \002(\t\022\021\n\ttimestamp\030\007 \001(\001\""
-      "F\n\007SubInfo\022\017\n\007subType\030\001 \002(\005\022*\n\014securityL"
-      "ist\030\002 \003(\0132\024.Qot_Common.Security\"a\n\013ConnS"
-      "ubInfo\022(\n\013subInfoList\030\001 \003(\0132\023.Qot_Common"
-      ".SubInfo\022\021\n\tusedQuota\030\002 \002(\005\022\025\n\risOwnConn"
-      "Data\030\003 \002(\010\"Q\n\tPlateInfo\022#\n\005plate\030\001 \002(\0132\024"
-      ".Qot_Common.Security\022\014\n\004name\030\002 \002(\t\022\021\n\tpl"
-      "ateType\030\003 \001(\005\"\272\003\n\005Rehab\022\014\n\004time\030\001 \002(\t\022\026\n"
-      "\016companyActFlag\030\002 \002(\003\022\022\n\nfwdFactorA\030\003 \002("
-      "\001\022\022\n\nfwdFactorB\030\004 \002(\001\022\022\n\nbwdFactorA\030\005 \002("
-      "\001\022\022\n\nbwdFactorB\030\006 \002(\001\022\021\n\tsplitBase\030\007 \001(\005"
-      "\022\020\n\010splitErt\030\010 \001(\005\022\020\n\010joinBase\030\t \001(\005\022\017\n\007"
-      "joinErt\030\n \001(\005\022\021\n\tbonusBase\030\013 \001(\005\022\020\n\010bonu"
-      "sErt\030\014 \001(\005\022\024\n\014transferBase\030\r \001(\005\022\023\n\013tran"
-      "sferErt\030\016 \001(\005\022\021\n\tallotBase\030\017 \001(\005\022\020\n\010allo"
-      "tErt\030\020 \001(\005\022\022\n\nallotPrice\030\021 \001(\001\022\017\n\007addBas"
-      "e\030\022 \001(\005\022\016\n\006addErt\030\023 \001(\005\022\020\n\010addPrice\030\024 \001("
-      "\001\022\020\n\010dividend\030\025 \001(\001\022\022\n\nspDividend\030\026 \001(\001\022"
-      "\021\n\ttimestamp\030\027 \001(\001*\315\002\n\tQotMarket\022\025\n\021QotM"
-      "arket_Unknown\020\000\022\031\n\025QotMarket_HK_Security"
-      "\020\001\022\027\n\023QotMarket_HK_Future\020\002\022\031\n\025QotMarket"
-      "_US_Security\020\013\022\033\n\027QotMarket_CNSH_Securit"
-      "y\020\025\022\033\n\027QotMarket_CNSZ_Security\020\026\022\031\n\025QotM"
-      "arket_SG_Security\020\037\022\031\n\025QotMarket_JP_Secu"
-      "rity\020)\022\031\n\025QotMarket_AU_Security\0203\022\031\n\025Qot"
-      "Market_MY_Security\020=\022\031\n\025QotMarket_CA_Sec"
-      "urity\020G\022\031\n\025QotMarket_FX_Security\020Q*\232\002\n\014S"
-      "ecurityType\022\030\n\024SecurityType_Unknown\020\000\022\025\n"
-      "\021SecurityType_Bond\020\001\022\025\n\021SecurityType_Bwr"
-      "t\020\002\022\025\n\021SecurityType_Eqty\020\003\022\026\n\022SecurityTy"
-      "pe_Trust\020\004\022\030\n\024SecurityType_Warrant\020\005\022\026\n\022"
-      "SecurityType_Index\020\006\022\026\n\022SecurityType_Pla"
-      "te\020\007\022\025\n\021SecurityType_Drvt\020\010\022\031\n\025SecurityT"
-      "ype_PlateSet\020\t\022\027\n\023SecurityType_Future\020\n*"
-      "\212\001\n\014PlateSetType\022\024\n\020PlateSetType_All\020\000\022\031"
-      "\n\025PlateSetType_Industry\020\001\022\027\n\023PlateSetTyp"
-      "e_Region\020\002\022\030\n\024PlateSetType_Concept\020\003\022\026\n\022"
-      "PlateSetType_Other\020\004*\225\001\n\013WarrantType\022\027\n\023"
-      "WarrantType_Unknown\020\000\022\023\n\017WarrantType_Buy"
-      "\020\001\022\024\n\020WarrantType_Sell\020\002\022\024\n\020WarrantType_"
-      "Bull\020\003\022\024\n\020WarrantType_Bear\020\004\022\026\n\022WarrantT"
-      "ype_InLine\020\005*M\n\nOptionType\022\026\n\022OptionType"
-      "_Unknown\020\000\022\023\n\017OptionType_Call\020\001\022\022\n\016Optio"
-      "nType_Put\020\002*e\n\017IndexOptionType\022\033\n\027IndexO"
-      "ptionType_Unknown\020\000\022\032\n\026IndexOptionType_N"
-      "ormal\020\001\022\031\n\025IndexOptionType_Small\020\002*\202\001\n\016O"
-      "ptionAreaType\022\032\n\026OptionAreaType_Unknown\020"
-      "\000\022\033\n\027OptionAreaType_American\020\001\022\033\n\027Option"
-      "AreaType_European\020\002\022\032\n\026OptionAreaType_Be"
-      "rmuda\020\003*\323\t\n\016QotMarketState\022\027\n\023QotMarketS"
-      "tate_None\020\000\022\032\n\026QotMarketState_Auction\020\001\022"
-      "\036\n\032QotMarketState_WaitingOpen\020\002\022\032\n\026QotMa"
-      "rketState_Morning\020\003\022\027\n\023QotMarketState_Re"
-      "st\020\004\022\034\n\030QotMarketState_Afternoon\020\005\022\031\n\025Qo"
-      "tMarketState_Closed\020\006\022!\n\035QotMarketState_"
-      "PreMarketBegin\020\010\022\037\n\033QotMarketState_PreMa"
-      "rketEnd\020\t\022\"\n\036QotMarketState_AfterHoursBe"
-      "gin\020\n\022 \n\034QotMarketState_AfterHoursEnd\020\013\022"
-      "#\n\037QotMarketState_FUTU_SWITCH_DATE\020\014\022\034\n\030"
-      "QotMarketState_NightOpen\020\r\022\033\n\027QotMarketS"
-      "tate_NightEnd\020\016\022 \n\034QotMarketState_Future"
-      "DayOpen\020\017\022!\n\035QotMarketState_FutureDayBre"
-      "ak\020\020\022!\n\035QotMarketState_FutureDayClose\020\021\022"
-      "\'\n#QotMarketState_FutureDayWaitForOpen\020\022"
-      "\022\030\n\024QotMarketState_HkCas\020\023\022\"\n\036QotMarketS"
-      "tate_FutureNightWait\020\024\022\"\n\036QotMarketState"
-      "_FutureAfternoon\020\025\022#\n\037QotMarketState_Fut"
-      "ureSwitchDate\020\026\022\035\n\031QotMarketState_Future"
-      "Open\020\027\022\036\n\032QotMarketState_FutureBreak\020\030\022\""
-      "\n\036QotMarketState_FutureBreakOver\020\031\022\036\n\032Qo"
-      "tMarketState_FutureClose\020\032\022%\n!QotMarketS"
-      "tate_StibAfterHoursWait\020\033\022&\n\"QotMarketSt"
-      "ate_StibAfterHoursBegin\020\034\022$\n QotMarketSt"
-      "ate_StibAfterHoursEnd\020\035\022 \n\034QotMarketStat"
-      "e_CLOSE_AUCTION\020\036\022 \n\034QotMarketState_AFTE"
-      "RNOON_END\020\037\022\030\n\024QotMarketState_NIGHT\020 \022\"\n"
-      "\036QotMarketState_OVERNIGHT_BEGIN\020!\022 \n\034Qot"
-      "MarketState_OVERNIGHT_END\020\"\022 \n\034QotMarket"
-      "State_TRADE_AT_LAST\020#\022 \n\034QotMarketState_"
-      "TRADE_AUCTION\020$\022\034\n\030QotMarketState_OVERNI"
-      "GHT\020%*\344\001\n\017TradeDateMarket\022\033\n\027TradeDateMa"
-      "rket_Unknown\020\000\022\026\n\022TradeDateMarket_HK\020\001\022\026"
-      "\n\022TradeDateMarket_US\020\002\022\026\n\022TradeDateMarke"
-      "t_CN\020\003\022\026\n\022TradeDateMarket_NT\020\004\022\026\n\022TradeD"
-      "ateMarket_ST\020\005\022\035\n\031TradeDateMarket_JP_Fut"
-      "ure\020\006\022\035\n\031TradeDateMarket_SG_Future\020\007*`\n\r"
-      "TradeDateType\022\027\n\023TradeDateType_Whole\020\000\022\031"
-      "\n\025TradeDateType_Morning\020\001\022\033\n\027TradeDateTy"
-      "pe_Afternoon\020\002*N\n\tRehabType\022\022\n\016RehabType"
-      "_None\020\000\022\025\n\021RehabType_Forward\020\001\022\026\n\022RehabT"
-      "ype_Backward\020\002*\335\001\n\006KLType\022\022\n\016KLType_Unkn"
-      "own\020\000\022\017\n\013KLType_1Min\020\001\022\016\n\nKLType_Day\020\002\022\017"
-      "\n\013KLType_Week\020\003\022\020\n\014KLType_Month\020\004\022\017\n\013KLT"
-      "ype_Year\020\005\022\017\n\013KLType_5Min\020\006\022\020\n\014KLType_15"
-      "Min\020\007\022\020\n\014KLType_30Min\020\010\022\020\n\014KLType_60Min\020"
-      "\t\022\017\n\013KLType_3Min\020\n\022\022\n\016KLType_Quarter\020\013*\365"
-      "\001\n\010KLFields\022\021\n\rKLFields_None\020\000\022\021\n\rKLFiel"
-      "ds_High\020\001\022\021\n\rKLFields_Open\020\002\022\020\n\014KLFields"
-      "_Low\020\004\022\022\n\016KLFields_Close\020\010\022\026\n\022KLFields_L"
-      "astClose\020\020\022\023\n\017KLFields_Volume\020 \022\025\n\021KLFie"
-      "lds_Turnover\020@\022\032\n\025KLFields_TurnoverRate\020"
-      "\200\001\022\020\n\013KLFields_PE\020\200\002\022\030\n\023KLFields_ChangeR"
-      "ate\020\200\004*\352\002\n\007SubType\022\020\n\014SubType_None\020\000\022\021\n\r"
-      "SubType_Basic\020\001\022\025\n\021SubType_OrderBook\020\002\022\022"
-      "\n\016SubType_Ticker\020\004\022\016\n\nSubType_RT\020\005\022\022\n\016Su"
-      "bType_KL_Day\020\006\022\023\n\017SubType_KL_5Min\020\007\022\024\n\020S"
-      "ubType_KL_15Min\020\010\022\024\n\020SubType_KL_30Min\020\t\022"
-      "\024\n\020SubType_KL_60Min\020\n\022\023\n\017SubType_KL_1Min"
-      "\020\013\022\023\n\017SubType_KL_Week\020\014\022\024\n\020SubType_KL_Mo"
-      "nth\020\r\022\022\n\016SubType_Broker\020\016\022\026\n\022SubType_KL_"
-      "Qurater\020\017\022\023\n\017SubType_KL_Year\020\020\022\023\n\017SubTyp"
-      "e_KL_3Min\020\021*}\n\017TickerDirection\022\033\n\027Ticker"
-      "Direction_Unknown\020\000\022\027\n\023TickerDirection_B"
-      "id\020\001\022\027\n\023TickerDirection_Ask\020\002\022\033\n\027TickerD"
-      "irection_Neutral\020\003*\234\007\n\nTickerType\022\026\n\022Tic"
-      "kerType_Unknown\020\000\022\030\n\024TickerType_Automatc"
-      "h\020\001\022\023\n\017TickerType_Late\020\002\022\034\n\030TickerType_N"
-      "oneAutomatch\020\003\022\035\n\031TickerType_InterAutoma"
-      "tch\020\004\022!\n\035TickerType_InterNoneAutomatch\020\005"
-      "\022\025\n\021TickerType_OddLot\020\006\022\026\n\022TickerType_Au"
-      "ction\020\007\022\023\n\017TickerType_Bulk\020\010\022\024\n\020TickerTy"
-      "pe_Crash\020\t\022\032\n\026TickerType_CrossMarket\020\n\022\027"
-      "\n\023TickerType_BulkSold\020\013\022\032\n\026TickerType_Fr"
-      "eeOnBoard\020\014\022\033\n\027TickerType_Rule127Or155\020\r"
-      "\022\024\n\020TickerType_Delay\020\016\022%\n!TickerType_Mar"
-      "ketCenterClosePrice\020\017\022\026\n\022TickerType_Next"
-      "Day\020\020\022\"\n\036TickerType_MarketCenterOpening\020"
-      "\021\022\"\n\036TickerType_PriorReferencePrice\020\022\022$\n"
-      " TickerType_MarketCenterOpenPrice\020\023\022\025\n\021T"
-      "ickerType_Seller\020\024\022\020\n\014TickerType_T\020\025\022#\n\037"
-      "TickerType_ExtendedTradingHours\020\026\022\031\n\025Tic"
-      "kerType_Contingent\020\027\022\027\n\023TickerType_AvgPr"
-      "ice\020\030\022\026\n\022TickerType_OTCSold\020\031\022 \n\034TickerT"
-      "ype_OddLotCrossMarket\020\032\022!\n\035TickerType_De"
-      "rivativelyPriced\020\033\022\036\n\032TickerType_ReOpeni"
-      "ngPriced\020\034\022\034\n\030TickerType_ClosingPriced\020\035"
-      "\022&\n\"TickerType_ComprehensiveDelayPrice\020\036"
-      "\022\027\n\023TickerType_Overseas\020\037*M\n\nDarkStatus\022"
-      "\023\n\017DarkStatus_None\020\000\022\026\n\022DarkStatus_Tradi"
-      "ng\020\001\022\022\n\016DarkStatus_End\020\002*\224\006\n\016SecuritySta"
-      "tus\022\032\n\026SecurityStatus_Unknown\020\000\022\031\n\025Secur"
-      "ityStatus_Normal\020\001\022\032\n\026SecurityStatus_Lis"
-      "ting\020\002\022\035\n\031SecurityStatus_Purchasing\020\003\022\036\n"
-      "\032SecurityStatus_Subscribing\020\004\022)\n%Securit"
-      "yStatus_BeforeDrakTradeOpening\020\005\022\036\n\032Secu"
-      "rityStatus_DrakTrading\020\006\022\037\n\033SecurityStat"
-      "us_DrakTradeEnd\020\007\022\033\n\027SecurityStatus_ToBe"
-      "Open\020\010\022\034\n\030SecurityStatus_Suspended\020\t\022\031\n\025"
-      "SecurityStatus_Called\020\n\022)\n%SecurityStatu"
-      "s_ExpiredLastTradingDate\020\013\022\032\n\026SecuritySt"
-      "atus_Expired\020\014\022\033\n\027SecurityStatus_Deliste"
-      "d\020\r\022(\n$SecurityStatus_ChangeToTemporaryC"
-      "ode\020\016\022(\n$SecurityStatus_TemporaryCodeTra"
-      "deEnd\020\017\022\'\n#SecurityStatus_ChangedPlateTr"
-      "adeEnd\020\020\022&\n\"SecurityStatus_ChangedCodeTr"
-      "adeEnd\020\021\022,\n(SecurityStatus_RecoverableCi"
-      "rcuitBreaker\020\022\022.\n*SecurityStatus_UnRecov"
-      "erableCircuitBreaker\020\023\022#\n\037SecurityStatus"
-      "_AfterCombination\020\024\022\"\n\036SecurityStatus_Af"
-      "terTransation\020\025*\201\001\n\016HolderCategory\022\031\n\025Ho"
-      "lderCategory_Unknow\020\000\022\031\n\025HolderCategory_"
-      "Agency\020\001\022\027\n\023HolderCategory_Fund\020\002\022 \n\034Hol"
-      "derCategory_SeniorManager\020\003*v\n\014PushDataT"
-      "ype\022\027\n\023PushDataType_Unknow\020\000\022\031\n\025PushData"
-      "Type_Realtime\020\001\022\032\n\026PushDataType_ByDisCon"
-      "n\020\002\022\026\n\022PushDataType_Cache\020\003*\323\n\n\tSortFiel"
-      "d\022\024\n\020SortField_Unknow\020\000\022\022\n\016SortField_Cod"
-      "e\020\001\022\026\n\022SortField_CurPrice\020\002\022\034\n\030SortField"
-      "_PriceChangeVal\020\003\022\030\n\024SortField_ChangeRat"
-      "e\020\004\022\024\n\020SortField_Status\020\005\022\026\n\022SortField_B"
-      "idPrice\020\006\022\026\n\022SortField_AskPrice\020\007\022\024\n\020Sor"
-      "tField_BidVol\020\010\022\024\n\020SortField_AskVol\020\t\022\024\n"
-      "\020SortField_Volume\020\n\022\026\n\022SortField_Turnove"
-      "r\020\013\022\027\n\023SortField_Amplitude\020\036\022\023\n\017SortFiel"
-      "d_Score\020\014\022\025\n\021SortField_Premium\020\r\022\037\n\033Sort"
-      "Field_EffectiveLeverage\020\016\022\023\n\017SortField_D"
-      "elta\020\017\022\037\n\033SortField_ImpliedVolatility\020\020\022"
-      "\022\n\016SortField_Type\020\021\022\031\n\025SortField_StrikeP"
-      "rice\020\022\022\034\n\030SortField_BreakEvenPoint\020\023\022\032\n\026"
-      "SortField_MaturityTime\020\024\022\026\n\022SortField_Li"
-      "stTime\020\025\022\033\n\027SortField_LastTradeTime\020\026\022\026\n"
-      "\022SortField_Leverage\020\027\022\030\n\024SortField_InOut"
-      "Money\020\030\022\033\n\027SortField_RecoveryPrice\020\031\022\031\n\025"
-      "SortField_ChangePrice\020\032\022\024\n\020SortField_Cha"
-      "nge\020\033\022\030\n\024SortField_StreetRate\020\034\022\027\n\023SortF"
-      "ield_StreetVol\020\035\022\031\n\025SortField_WarrantNam"
-      "e\020\037\022\024\n\020SortField_Issuer\020 \022\025\n\021SortField_L"
-      "otSize\020!\022\027\n\023SortField_IssueSize\020\"\022\036\n\032Sor"
-      "tField_UpperStrikePrice\020-\022\036\n\032SortField_L"
-      "owerStrikePrice\020.\022\037\n\033SortField_InLinePri"
-      "ceStatus\020/\022\031\n\025SortField_PreCurPrice\020#\022\033\n"
-      "\027SortField_AfterCurPrice\020$\022\037\n\033SortField_"
-      "PrePriceChangeVal\020%\022!\n\035SortField_AfterPr"
-      "iceChangeVal\020&\022\033\n\027SortField_PreChangeRat"
-      "e\020\'\022\035\n\031SortField_AfterChangeRate\020(\022\032\n\026So"
-      "rtField_PreAmplitude\020)\022\034\n\030SortField_Afte"
-      "rAmplitude\020*\022\031\n\025SortField_PreTurnover\020+\022"
-      "\033\n\027SortField_AfterTurnover\020,\022\035\n\031SortFiel"
-      "d_LastSettlePrice\0200\022\026\n\022SortField_Positio"
-      "n\0201\022\034\n\030SortField_PositionChange\0202*\277\003\n\006Is"
-      "suer\022\021\n\rIssuer_Unknow\020\000\022\r\n\tIssuer_SG\020\001\022\r"
-      "\n\tIssuer_BP\020\002\022\r\n\tIssuer_CS\020\003\022\r\n\tIssuer_C"
-      "T\020\004\022\r\n\tIssuer_EA\020\005\022\r\n\tIssuer_GS\020\006\022\r\n\tIss"
-      "uer_HS\020\007\022\r\n\tIssuer_JP\020\010\022\r\n\tIssuer_MB\020\t\022\r"
-      "\n\tIssuer_SC\020\n\022\r\n\tIssuer_UB\020\013\022\r\n\tIssuer_B"
-      "I\020\014\022\r\n\tIssuer_DB\020\r\022\r\n\tIssuer_DC\020\016\022\r\n\tIss"
-      "uer_ML\020\017\022\r\n\tIssuer_NM\020\020\022\r\n\tIssuer_RB\020\021\022\r"
-      "\n\tIssuer_RS\020\022\022\r\n\tIssuer_BC\020\023\022\r\n\tIssuer_H"
-      "T\020\024\022\r\n\tIssuer_VT\020\025\022\r\n\tIssuer_KC\020\026\022\r\n\tIss"
-      "uer_MS\020\027\022\r\n\tIssuer_GJ\020\030\022\r\n\tIssuer_XZ\020\031\022\r"
-      "\n\tIssuer_HU\020\032\022\r\n\tIssuer_KS\020\033\022\r\n\tIssuer_C"
-      "I\020\034*\227\001\n\tIpoPeriod\022\024\n\020IpoPeriod_Unknow\020\000\022"
-      "\023\n\017IpoPeriod_Today\020\001\022\026\n\022IpoPeriod_Tomorr"
-      "ow\020\002\022\026\n\022IpoPeriod_Nextweek\020\003\022\026\n\022IpoPerio"
-      "d_Lastweek\020\004\022\027\n\023IpoPeriod_Lastmonth\020\005*N\n"
-      "\tPriceType\022\024\n\020PriceType_Unknow\020\000\022\025\n\021Pric"
-      "eType_Outside\020\001\022\024\n\020PriceType_WithIn\020\002*\235\001"
-      "\n\rWarrantStatus\022\030\n\024WarrantStatus_Unknow\020"
-      "\000\022\030\n\024WarrantStatus_Normal\020\001\022\031\n\025WarrantSt"
-      "atus_Suspend\020\002\022\033\n\027WarrantStatus_StopTrad"
-      "e\020\003\022 \n\034WarrantStatus_PendingListing\020\004*\332\001"
-      "\n\nCompanyAct\022\023\n\017CompanyAct_None\020\000\022\024\n\020Com"
-      "panyAct_Split\020\001\022\023\n\017CompanyAct_Join\020\002\022\024\n\020"
-      "CompanyAct_Bonus\020\004\022\027\n\023CompanyAct_Transfe"
-      "r\020\010\022\024\n\020CompanyAct_Allot\020\020\022\022\n\016CompanyAct_"
-      "Add\020 \022\027\n\023CompanyAct_Dividend\020@\022\032\n\025Compan"
-      "yAct_SPDividend\020\200\001*}\n\010QotRight\022\023\n\017QotRig"
-      "ht_Unknow\020\000\022\020\n\014QotRight_Bmp\020\001\022\023\n\017QotRigh"
-      "t_Level1\020\002\022\023\n\017QotRight_Level2\020\003\022\017\n\013QotRi"
-      "ght_SF\020\004\022\017\n\013QotRight_No\020\005*\316\004\n\021PriceRemin"
-      "derType\022\035\n\031PriceReminderType_Unknown\020\000\022\035"
-      "\n\031PriceReminderType_PriceUp\020\001\022\037\n\033PriceRe"
-      "minderType_PriceDown\020\002\022\"\n\036PriceReminderT"
-      "ype_ChangeRateUp\020\003\022$\n PriceReminderType_"
-      "ChangeRateDown\020\004\022&\n\"PriceReminderType_5M"
-      "inChangeRateUp\020\005\022(\n$PriceReminderType_5M"
-      "inChangeRateDown\020\006\022\036\n\032PriceReminderType_"
-      "VolumeUp\020\007\022 \n\034PriceReminderType_Turnover"
-      "Up\020\010\022$\n PriceReminderType_TurnoverRateUp"
-      "\020\t\022 \n\034PriceReminderType_BidPriceUp\020\n\022\"\n\036"
-      "PriceReminderType_AskPriceDown\020\013\022\036\n\032Pric"
-      "eReminderType_BidVolUp\020\014\022\036\n\032PriceReminde"
-      "rType_AskVolUp\020\r\022&\n\"PriceReminderType_3M"
-      "inChangeRateUp\020\016\022(\n$PriceReminderType_3M"
-      "inChangeRateDown\020\017*\220\001\n\021PriceReminderFreq"
-      "\022\035\n\031PriceReminderFreq_Unknown\020\000\022\034\n\030Price"
-      "ReminderFreq_Always\020\001\022\036\n\032PriceReminderFr"
-      "eq_OnceADay\020\002\022\036\n\032PriceReminderFreq_OnlyO"
-      "nce\020\003*\263\001\n\nAssetClass\022\025\n\021AssetClass_Unkno"
-      "w\020\000\022\024\n\020AssetClass_Stock\020\001\022\023\n\017AssetClass_"
-      "Bond\020\002\022\030\n\024AssetClass_Commodity\020\003\022\035\n\031Asse"
-      "tClass_CurrencyMarket\020\004\022\025\n\021AssetClass_Fu"
-      "ture\020\005\022\023\n\017AssetClass_Swap\020\006*\257\002\n\017Expirati"
-      "onCycle\022\033\n\027ExpirationCycle_Unknown\020\000\022\030\n\024"
-      "ExpirationCycle_Week\020\001\022\031\n\025ExpirationCycl"
-      "e_Month\020\002\022\034\n\030ExpirationCycle_MonthEnd\020\003\022"
-      "\033\n\027ExpirationCycle_Quarter\020\004\022\033\n\027Expirati"
-      "onCycle_WeekMon\020\013\022\033\n\027ExpirationCycle_Wee"
-      "kTue\020\014\022\033\n\027ExpirationCycle_WeekWed\020\r\022\033\n\027E"
-      "xpirationCycle_WeekThu\020\016\022\033\n\027ExpirationCy"
-      "cle_WeekFri\020\017*y\n\022OptionStandardType\022\036\n\032O"
-      "ptionStandardType_Unknown\020\000\022\037\n\033OptionSta"
-      "ndardType_Standard\020\001\022\"\n\036OptionStandardTy"
-      "pe_NonStandard\020\002*r\n\024OptionSettlementMode"
-      "\022 \n\034OptionSettlementMode_Unknown\020\000\022\033\n\027Op"
-      "tionSettlementMode_AM\020\001\022\033\n\027OptionSettlem"
-      "entMode_PM\020\002*\264\003\n\010ExchType\022\024\n\020ExchType_Un"
-      "known\020\000\022\031\n\025ExchType_HK_MainBoard\020\001\022\030\n\024Ex"
-      "chType_HK_GEMBoard\020\002\022\024\n\020ExchType_HK_HKEX"
-      "\020\003\022\024\n\020ExchType_US_NYSE\020\004\022\026\n\022ExchType_US_"
-      "Nasdaq\020\005\022\024\n\020ExchType_US_Pink\020\006\022\024\n\020ExchTy"
-      "pe_US_AMEX\020\007\022\026\n\022ExchType_US_Option\020\010\022\025\n\021"
-      "ExchType_US_NYMEX\020\t\022\025\n\021ExchType_US_COMEX"
-      "\020\n\022\024\n\020ExchType_US_CBOT\020\013\022\023\n\017ExchType_US_"
-      "CME\020\014\022\024\n\020ExchType_US_CBOE\020\r\022\022\n\016ExchType_"
-      "CN_SH\020\016\022\022\n\016ExchType_CN_SZ\020\017\022\024\n\020ExchType_"
-      "CN_STIB\020\020\022\023\n\017ExchType_SG_SGX\020\021\022\023\n\017ExchTy"
-      "pe_JP_OSE\020\022*|\n\nPeriodType\022\026\n\022PeriodType_"
-      "Unknown\020\000\022\027\n\023PeriodType_INTRADAY\020\001\022\022\n\016Pe"
-      "riodType_DAY\020\002\022\023\n\017PeriodType_WEEK\020\003\022\024\n\020P"
-      "eriodType_MONTH\020\004*\334\001\n\031PriceReminderMarke"
-      "tStatus\022$\n PriceReminderMarketStatus_Unk"
-      "now\020\000\022\"\n\036PriceReminderMarketStatus_Open\020"
-      "\001\022#\n\037PriceReminderMarketStatus_USPre\020\002\022%"
-      "\n!PriceReminderMarketStatus_USAfter\020\003\022)\n"
-      "%PriceReminderMarketStatus_USOverNight\020\004"
-      "B@\n\023com.futu.openapi.pbZ)github.com/futu"
-      "open/ftapi4go/pb/qotcommon"
+      "\001(\001\022\n\n\002pe\030\013 \001(\001\022\022\n\nchangeRate\030\014 \001(\001\"\303\002\n\010"
+      "BasicQot\022&\n\010security\030\001 \002(\0132\024.Qot_Common."
+      "Security\022\023\n\013isSuspended\030\002 \002(\010\022\020\n\010listTim"
+      "e\030\003 \002(\t\022\023\n\013priceSpread\030\004 \002(\001\022\022\n\nupdateTi"
+      "me\030\005 \002(\t\022\021\n\thighPrice\030\006 \002(\001\022\021\n\topenPrice"
+      "\030\007 \002(\001\022\020\n\010lowPrice\030\010 \002(\001\022\020\n\010curPrice\030\t \002"
+      "(\001\022\026\n\016lastClosePrice\030\n \002(\001\022\016\n\006volume\030\013 \002"
+      "(\003\022\020\n\010turnover\030\014 \002(\001\022\024\n\014turnoverRate\030\r \002"
+      "(\001\022\021\n\tamplitude\030\016 \002(\001\022\022\n\ndarkStatus\030\017 \001("
+      "\005\"\225\001\n\tTimeShare\022\014\n\004time\030\001 \002(\t\022\016\n\006minute\030"
+      "\002 \002(\005\022\017\n\007isBlank\030\003 \002(\010\022\r\n\005price\030\004 \001(\001\022\026\n"
+      "\016lastClosePrice\030\005 \001(\001\022\020\n\010avgPrice\030\006 \001(\001\022"
+      "\016\n\006volume\030\007 \001(\003\022\020\n\010turnover\030\010 \001(\001\"\213\001\n\023Se"
+      "curityStaticBasic\022&\n\010security\030\001 \002(\0132\024.Qo"
+      "t_Common.Security\022\n\n\002id\030\002 \002(\003\022\017\n\007lotSize"
+      "\030\003 \002(\005\022\017\n\007secType\030\004 \002(\005\022\014\n\004name\030\005 \002(\t\022\020\n"
+      "\010listTime\030\006 \002(\t\"H\n\023WarrantStaticExData\022\014"
+      "\n\004type\030\001 \002(\005\022#\n\005owner\030\002 \002(\0132\024.Qot_Common"
+      ".Security\"|\n\022SecurityStaticInfo\022.\n\005basic"
+      "\030\001 \002(\0132\037.Qot_Common.SecurityStaticBasic\022"
+      "6\n\rwarrantExData\030\002 \001(\0132\037.Qot_Common.Warr"
+      "antStaticExData\"/\n\006Broker\022\n\n\002id\030\001 \002(\003\022\014\n"
+      "\004name\030\002 \002(\t\022\013\n\003pos\030\003 \002(\005\"\230\001\n\006Ticker\022\014\n\004t"
+      "ime\030\001 \002(\t\022\020\n\010sequence\030\002 \002(\003\022\013\n\003dir\030\003 \002(\005"
+      "\022\r\n\005price\030\004 \002(\001\022\016\n\006volume\030\005 \002(\003\022\020\n\010turno"
+      "ver\030\006 \002(\001\022\020\n\010recvTime\030\007 \001(\001\022\014\n\004type\030\010 \001("
+      "\005\022\020\n\010typeSign\030\t \001(\005\"\?\n\tOrderBook\022\r\n\005pric"
+      "e\030\001 \002(\001\022\016\n\006volume\030\002 \002(\003\022\023\n\013orederCount\030\003"
+      " \002(\005\"F\n\007SubInfo\022\017\n\007subType\030\001 \002(\005\022*\n\014secu"
+      "rityList\030\002 \003(\0132\024.Qot_Common.Security\"a\n\013"
+      "ConnSubInfo\022(\n\013subInfoList\030\001 \003(\0132\023.Qot_C"
+      "ommon.SubInfo\022\021\n\tusedQuota\030\002 \002(\005\022\025\n\risOw"
+      "nConnData\030\003 \002(\010*\304\001\n\tQotMarket\022\025\n\021QotMark"
+      "et_Unknown\020\000\022\031\n\025QotMarket_HK_Security\020\001\022"
+      "\027\n\023QotMarket_HK_Future\020\002\022\031\n\025QotMarket_US"
+      "_Security\020\013\022\027\n\023QotMarket_US_Option\020\014\022\033\n\027"
+      "QotMarket_CNSH_Security\020\025\022\033\n\027QotMarket_C"
+      "NSZ_Security\020\026*\201\002\n\014SecurityType\022\030\n\024Secur"
+      "ityType_Unknown\020\000\022\025\n\021SecurityType_Bond\020\001"
+      "\022\025\n\021SecurityType_Bwrt\020\002\022\025\n\021SecurityType_"
+      "Eqty\020\003\022\026\n\022SecurityType_Trust\020\004\022\030\n\024Securi"
+      "tyType_Warrant\020\005\022\026\n\022SecurityType_Index\020\006"
+      "\022\026\n\022SecurityType_Plate\020\007\022\025\n\021SecurityType"
+      "_Drvt\020\010\022\031\n\025SecurityType_PlateSet\020\t*r\n\014Pl"
+      "ateSetType\022\024\n\020PlateSetType_All\020\000\022\031\n\025Plat"
+      "eSetType_Industry\020\001\022\027\n\023PlateSetType_Regi"
+      "on\020\002\022\030\n\024PlateSetType_Concept\020\003*}\n\013Warran"
+      "tType\022\027\n\023WarrantType_Unknown\020\000\022\023\n\017Warran"
+      "tType_Buy\020\001\022\024\n\020WarrantType_Sell\020\002\022\024\n\020War"
+      "rantType_Bull\020\003\022\024\n\020WarrantType_Bear\020\004*\303\004"
+      "\n\016QotMarketState\022\027\n\023QotMarketState_None\020"
+      "\000\022\032\n\026QotMarketState_Auction\020\001\022\036\n\032QotMark"
+      "etState_WaitingOpen\020\002\022\032\n\026QotMarketState_"
+      "Morning\020\003\022\027\n\023QotMarketState_Rest\020\004\022\034\n\030Qo"
+      "tMarketState_Afternoon\020\005\022\031\n\025QotMarketSta"
+      "te_Closed\020\006\022!\n\035QotMarketState_PreMarketB"
+      "egin\020\010\022\037\n\033QotMarketState_PreMarketEnd\020\t\022"
+      "\"\n\036QotMarketState_AfterHoursBegin\020\n\022 \n\034Q"
+      "otMarketState_AfterHoursEnd\020\013\022\034\n\030QotMark"
+      "etState_NightOpen\020\r\022\033\n\027QotMarketState_Ni"
+      "ghtEnd\020\016\022 \n\034QotMarketState_FutureDayOpen"
+      "\020\017\022!\n\035QotMarketState_FutureDayBreak\020\020\022!\n"
+      "\035QotMarketState_FutureDayClose\020\021\022\'\n#QotM"
+      "arketState_FutureDayWaitForOpen\020\022\022\030\n\024Qot"
+      "MarketState_HkCas\020\023*N\n\tRehabType\022\022\n\016Reha"
+      "bType_None\020\000\022\025\n\021RehabType_Forward\020\001\022\026\n\022R"
+      "ehabType_Backward\020\002*\335\001\n\006KLType\022\022\n\016KLType"
+      "_Unknown\020\000\022\017\n\013KLType_1Min\020\001\022\016\n\nKLType_Da"
+      "y\020\002\022\017\n\013KLType_Week\020\003\022\020\n\014KLType_Month\020\004\022\017"
+      "\n\013KLType_Year\020\005\022\017\n\013KLType_5Min\020\006\022\020\n\014KLTy"
+      "pe_15Min\020\007\022\020\n\014KLType_30Min\020\010\022\020\n\014KLType_6"
+      "0Min\020\t\022\017\n\013KLType_3Min\020\n\022\022\n\016KLType_Quarte"
+      "r\020\013*\365\001\n\010KLFields\022\021\n\rKLFields_None\020\000\022\021\n\rK"
+      "LFields_High\020\001\022\021\n\rKLFields_Open\020\002\022\020\n\014KLF"
+      "ields_Low\020\004\022\022\n\016KLFields_Close\020\010\022\026\n\022KLFie"
+      "lds_LastClose\020\020\022\023\n\017KLFields_Volume\020 \022\025\n\021"
+      "KLFields_Turnover\020@\022\032\n\025KLFields_Turnover"
+      "Rate\020\200\001\022\020\n\013KLFields_PE\020\200\002\022\030\n\023KLFields_Ch"
+      "angeRate\020\200\004*\352\002\n\007SubType\022\020\n\014SubType_None\020"
+      "\000\022\021\n\rSubType_Basic\020\001\022\025\n\021SubType_OrderBoo"
+      "k\020\002\022\022\n\016SubType_Ticker\020\004\022\016\n\nSubType_RT\020\005\022"
+      "\022\n\016SubType_KL_Day\020\006\022\023\n\017SubType_KL_5Min\020\007"
+      "\022\024\n\020SubType_KL_15Min\020\010\022\024\n\020SubType_KL_30M"
+      "in\020\t\022\024\n\020SubType_KL_60Min\020\n\022\023\n\017SubType_KL"
+      "_1Min\020\013\022\023\n\017SubType_KL_Week\020\014\022\024\n\020SubType_"
+      "KL_Month\020\r\022\022\n\016SubType_Broker\020\016\022\026\n\022SubTyp"
+      "e_KL_Qurater\020\017\022\023\n\017SubType_KL_Year\020\020\022\023\n\017S"
+      "ubType_KL_3Min\020\021*}\n\017TickerDirection\022\033\n\027T"
+      "ickerDirection_Unknown\020\000\022\027\n\023TickerDirect"
+      "ion_Bid\020\001\022\027\n\023TickerDirection_Ask\020\002\022\033\n\027Ti"
+      "ckerDirection_Neutral\020\003*\207\007\n\nTickerType\022\026"
+      "\n\022TickerType_Unknown\020\000\022\030\n\024TickerType_Aut"
+      "omatch\020\001\022\023\n\017TickerType_Late\020\002\022\034\n\030TickerT"
+      "ype_NoneAutomatch\020\003\022\035\n\031TickerType_InterA"
+      "utomatch\020\004\022!\n\035TickerType_InterNoneAutoma"
+      "tch\020\005\022\025\n\021TickerType_OddLot\020\006\022\026\n\022TickerTy"
+      "pe_Auction\020\007\022\023\n\017TickerType_Bulk\020\010\022\024\n\020Tic"
+      "kerType_Crash\020\t\022\032\n\026TickerType_CrossMarke"
+      "t\020\n\022\027\n\023TickerType_BulkSold\020\013\022\032\n\026TickerTy"
+      "pe_FreeOnBoard\020\014\022\033\n\027TickerType_Rule127Or"
+      "155\020\r\022\024\n\020TickerType_Delay\020\016\022%\n!TickerTyp"
+      "e_MarketCenterClosePrice\020\017\022\026\n\022TickerType"
+      "_NextDay\020\020\022\"\n\036TickerType_MarketCenterOpe"
+      "ning\020\021\022\"\n\036TickerType_PriorReferencePrice"
+      "\020\022\022$\n TickerType_MarketCenterOpenPrice\020\023"
+      "\022\025\n\021TickerType_Seller\020\024\022\020\n\014TickerType_T\020"
+      "\025\022#\n\037TickerType_ExtendedTradingHours\020\026\022\031"
+      "\n\025TickerType_Contingent\020\027\022\033\n\027TickerType_"
+      "AveragePrice\020\030\022\026\n\022TickerType_OTCSold\020\031\022 "
+      "\n\034TickerType_OddLotCrossMarket\020\032\022!\n\035Tick"
+      "erType_DerivativelyPriced\020\033\022\036\n\032TickerTyp"
+      "e_ReOpeningPriced\020\034\022\034\n\030TickerType_Closin"
+      "gPriced\020\035\022&\n\"TickerType_ComprehensiveDel"
+      "ayPrice\020\036*M\n\nDarkStatus\022\023\n\017DarkStatus_No"
+      "ne\020\000\022\026\n\022DarkStatus_Trading\020\001\022\022\n\016DarkStat"
+      "us_End\020\002"
   };
   ::google::protobuf::DescriptorPool::InternalAddGeneratedFile(
-      descriptor, 14986);
+      descriptor, 4888);
   ::google::protobuf::MessageFactory::InternalRegisterGeneratedFile(
     "Qot_Common.proto", &protobuf_RegisterTypes);
   ::protobuf_Common_2eproto::AddDescriptors();
@@ -1544,14 +745,9 @@ bool QotMarket_IsValid(int value) {
     case 1:
     case 2:
     case 11:
+    case 12:
     case 21:
     case 22:
-    case 31:
-    case 41:
-    case 51:
-    case 61:
-    case 71:
-    case 81:
       return true;
     default:
       return false;
@@ -1574,7 +770,6 @@ bool SecurityType_IsValid(int value) {
     case 7:
     case 8:
     case 9:
-    case 10:
       return true;
     default:
       return false;
@@ -1591,7 +786,6 @@ bool PlateSetType_IsValid(int value) {
     case 1:
     case 2:
     case 3:
-    case 4:
       return true;
     default:
       return false;
@@ -1609,53 +803,6 @@ bool WarrantType_IsValid(int value) {
     case 2:
     case 3:
     case 4:
-    case 5:
-      return true;
-    default:
-      return false;
-  }
-}
-
-const ::google::protobuf::EnumDescriptor* OptionType_descriptor() {
-  protobuf_Qot_5fCommon_2eproto::protobuf_AssignDescriptorsOnce();
-  return protobuf_Qot_5fCommon_2eproto::file_level_enum_descriptors[4];
-}
-bool OptionType_IsValid(int value) {
-  switch (value) {
-    case 0:
-    case 1:
-    case 2:
-      return true;
-    default:
-      return false;
-  }
-}
-
-const ::google::protobuf::EnumDescriptor* IndexOptionType_descriptor() {
-  protobuf_Qot_5fCommon_2eproto::protobuf_AssignDescriptorsOnce();
-  return protobuf_Qot_5fCommon_2eproto::file_level_enum_descriptors[5];
-}
-bool IndexOptionType_IsValid(int value) {
-  switch (value) {
-    case 0:
-    case 1:
-    case 2:
-      return true;
-    default:
-      return false;
-  }
-}
-
-const ::google::protobuf::EnumDescriptor* OptionAreaType_descriptor() {
-  protobuf_Qot_5fCommon_2eproto::protobuf_AssignDescriptorsOnce();
-  return protobuf_Qot_5fCommon_2eproto::file_level_enum_descriptors[6];
-}
-bool OptionAreaType_IsValid(int value) {
-  switch (value) {
-    case 0:
-    case 1:
-    case 2:
-    case 3:
       return true;
     default:
       return false;
@@ -1664,7 +811,7 @@ bool OptionAreaType_IsValid(int value) {
 
 const ::google::protobuf::EnumDescriptor* QotMarketState_descriptor() {
   protobuf_Qot_5fCommon_2eproto::protobuf_AssignDescriptorsOnce();
-  return protobuf_Qot_5fCommon_2eproto::file_level_enum_descriptors[7];
+  return protobuf_Qot_5fCommon_2eproto::file_level_enum_descriptors[4];
 }
 bool QotMarketState_IsValid(int value) {
   switch (value) {
@@ -1679,7 +826,6 @@ bool QotMarketState_IsValid(int value) {
     case 9:
     case 10:
     case 11:
-    case 12:
     case 13:
     case 14:
     case 15:
@@ -1687,59 +833,6 @@ bool QotMarketState_IsValid(int value) {
     case 17:
     case 18:
     case 19:
-    case 20:
-    case 21:
-    case 22:
-    case 23:
-    case 24:
-    case 25:
-    case 26:
-    case 27:
-    case 28:
-    case 29:
-    case 30:
-    case 31:
-    case 32:
-    case 33:
-    case 34:
-    case 35:
-    case 36:
-    case 37:
-      return true;
-    default:
-      return false;
-  }
-}
-
-const ::google::protobuf::EnumDescriptor* TradeDateMarket_descriptor() {
-  protobuf_Qot_5fCommon_2eproto::protobuf_AssignDescriptorsOnce();
-  return protobuf_Qot_5fCommon_2eproto::file_level_enum_descriptors[8];
-}
-bool TradeDateMarket_IsValid(int value) {
-  switch (value) {
-    case 0:
-    case 1:
-    case 2:
-    case 3:
-    case 4:
-    case 5:
-    case 6:
-    case 7:
-      return true;
-    default:
-      return false;
-  }
-}
-
-const ::google::protobuf::EnumDescriptor* TradeDateType_descriptor() {
-  protobuf_Qot_5fCommon_2eproto::protobuf_AssignDescriptorsOnce();
-  return protobuf_Qot_5fCommon_2eproto::file_level_enum_descriptors[9];
-}
-bool TradeDateType_IsValid(int value) {
-  switch (value) {
-    case 0:
-    case 1:
-    case 2:
       return true;
     default:
       return false;
@@ -1748,7 +841,7 @@ bool TradeDateType_IsValid(int value) {
 
 const ::google::protobuf::EnumDescriptor* RehabType_descriptor() {
   protobuf_Qot_5fCommon_2eproto::protobuf_AssignDescriptorsOnce();
-  return protobuf_Qot_5fCommon_2eproto::file_level_enum_descriptors[10];
+  return protobuf_Qot_5fCommon_2eproto::file_level_enum_descriptors[5];
 }
 bool RehabType_IsValid(int value) {
   switch (value) {
@@ -1763,7 +856,7 @@ bool RehabType_IsValid(int value) {
 
 const ::google::protobuf::EnumDescriptor* KLType_descriptor() {
   protobuf_Qot_5fCommon_2eproto::protobuf_AssignDescriptorsOnce();
-  return protobuf_Qot_5fCommon_2eproto::file_level_enum_descriptors[11];
+  return protobuf_Qot_5fCommon_2eproto::file_level_enum_descriptors[6];
 }
 bool KLType_IsValid(int value) {
   switch (value) {
@@ -1787,7 +880,7 @@ bool KLType_IsValid(int value) {
 
 const ::google::protobuf::EnumDescriptor* KLFields_descriptor() {
   protobuf_Qot_5fCommon_2eproto::protobuf_AssignDescriptorsOnce();
-  return protobuf_Qot_5fCommon_2eproto::file_level_enum_descriptors[12];
+  return protobuf_Qot_5fCommon_2eproto::file_level_enum_descriptors[7];
 }
 bool KLFields_IsValid(int value) {
   switch (value) {
@@ -1810,7 +903,7 @@ bool KLFields_IsValid(int value) {
 
 const ::google::protobuf::EnumDescriptor* SubType_descriptor() {
   protobuf_Qot_5fCommon_2eproto::protobuf_AssignDescriptorsOnce();
-  return protobuf_Qot_5fCommon_2eproto::file_level_enum_descriptors[13];
+  return protobuf_Qot_5fCommon_2eproto::file_level_enum_descriptors[8];
 }
 bool SubType_IsValid(int value) {
   switch (value) {
@@ -1839,7 +932,7 @@ bool SubType_IsValid(int value) {
 
 const ::google::protobuf::EnumDescriptor* TickerDirection_descriptor() {
   protobuf_Qot_5fCommon_2eproto::protobuf_AssignDescriptorsOnce();
-  return protobuf_Qot_5fCommon_2eproto::file_level_enum_descriptors[14];
+  return protobuf_Qot_5fCommon_2eproto::file_level_enum_descriptors[9];
 }
 bool TickerDirection_IsValid(int value) {
   switch (value) {
@@ -1855,7 +948,7 @@ bool TickerDirection_IsValid(int value) {
 
 const ::google::protobuf::EnumDescriptor* TickerType_descriptor() {
   protobuf_Qot_5fCommon_2eproto::protobuf_AssignDescriptorsOnce();
-  return protobuf_Qot_5fCommon_2eproto::file_level_enum_descriptors[15];
+  return protobuf_Qot_5fCommon_2eproto::file_level_enum_descriptors[10];
 }
 bool TickerType_IsValid(int value) {
   switch (value) {
@@ -1890,7 +983,6 @@ bool TickerType_IsValid(int value) {
     case 28:
     case 29:
     case 30:
-    case 31:
       return true;
     default:
       return false;
@@ -1899,452 +991,13 @@ bool TickerType_IsValid(int value) {
 
 const ::google::protobuf::EnumDescriptor* DarkStatus_descriptor() {
   protobuf_Qot_5fCommon_2eproto::protobuf_AssignDescriptorsOnce();
-  return protobuf_Qot_5fCommon_2eproto::file_level_enum_descriptors[16];
+  return protobuf_Qot_5fCommon_2eproto::file_level_enum_descriptors[11];
 }
 bool DarkStatus_IsValid(int value) {
   switch (value) {
     case 0:
     case 1:
     case 2:
-      return true;
-    default:
-      return false;
-  }
-}
-
-const ::google::protobuf::EnumDescriptor* SecurityStatus_descriptor() {
-  protobuf_Qot_5fCommon_2eproto::protobuf_AssignDescriptorsOnce();
-  return protobuf_Qot_5fCommon_2eproto::file_level_enum_descriptors[17];
-}
-bool SecurityStatus_IsValid(int value) {
-  switch (value) {
-    case 0:
-    case 1:
-    case 2:
-    case 3:
-    case 4:
-    case 5:
-    case 6:
-    case 7:
-    case 8:
-    case 9:
-    case 10:
-    case 11:
-    case 12:
-    case 13:
-    case 14:
-    case 15:
-    case 16:
-    case 17:
-    case 18:
-    case 19:
-    case 20:
-    case 21:
-      return true;
-    default:
-      return false;
-  }
-}
-
-const ::google::protobuf::EnumDescriptor* HolderCategory_descriptor() {
-  protobuf_Qot_5fCommon_2eproto::protobuf_AssignDescriptorsOnce();
-  return protobuf_Qot_5fCommon_2eproto::file_level_enum_descriptors[18];
-}
-bool HolderCategory_IsValid(int value) {
-  switch (value) {
-    case 0:
-    case 1:
-    case 2:
-    case 3:
-      return true;
-    default:
-      return false;
-  }
-}
-
-const ::google::protobuf::EnumDescriptor* PushDataType_descriptor() {
-  protobuf_Qot_5fCommon_2eproto::protobuf_AssignDescriptorsOnce();
-  return protobuf_Qot_5fCommon_2eproto::file_level_enum_descriptors[19];
-}
-bool PushDataType_IsValid(int value) {
-  switch (value) {
-    case 0:
-    case 1:
-    case 2:
-    case 3:
-      return true;
-    default:
-      return false;
-  }
-}
-
-const ::google::protobuf::EnumDescriptor* SortField_descriptor() {
-  protobuf_Qot_5fCommon_2eproto::protobuf_AssignDescriptorsOnce();
-  return protobuf_Qot_5fCommon_2eproto::file_level_enum_descriptors[20];
-}
-bool SortField_IsValid(int value) {
-  switch (value) {
-    case 0:
-    case 1:
-    case 2:
-    case 3:
-    case 4:
-    case 5:
-    case 6:
-    case 7:
-    case 8:
-    case 9:
-    case 10:
-    case 11:
-    case 12:
-    case 13:
-    case 14:
-    case 15:
-    case 16:
-    case 17:
-    case 18:
-    case 19:
-    case 20:
-    case 21:
-    case 22:
-    case 23:
-    case 24:
-    case 25:
-    case 26:
-    case 27:
-    case 28:
-    case 29:
-    case 30:
-    case 31:
-    case 32:
-    case 33:
-    case 34:
-    case 35:
-    case 36:
-    case 37:
-    case 38:
-    case 39:
-    case 40:
-    case 41:
-    case 42:
-    case 43:
-    case 44:
-    case 45:
-    case 46:
-    case 47:
-    case 48:
-    case 49:
-    case 50:
-      return true;
-    default:
-      return false;
-  }
-}
-
-const ::google::protobuf::EnumDescriptor* Issuer_descriptor() {
-  protobuf_Qot_5fCommon_2eproto::protobuf_AssignDescriptorsOnce();
-  return protobuf_Qot_5fCommon_2eproto::file_level_enum_descriptors[21];
-}
-bool Issuer_IsValid(int value) {
-  switch (value) {
-    case 0:
-    case 1:
-    case 2:
-    case 3:
-    case 4:
-    case 5:
-    case 6:
-    case 7:
-    case 8:
-    case 9:
-    case 10:
-    case 11:
-    case 12:
-    case 13:
-    case 14:
-    case 15:
-    case 16:
-    case 17:
-    case 18:
-    case 19:
-    case 20:
-    case 21:
-    case 22:
-    case 23:
-    case 24:
-    case 25:
-    case 26:
-    case 27:
-    case 28:
-      return true;
-    default:
-      return false;
-  }
-}
-
-const ::google::protobuf::EnumDescriptor* IpoPeriod_descriptor() {
-  protobuf_Qot_5fCommon_2eproto::protobuf_AssignDescriptorsOnce();
-  return protobuf_Qot_5fCommon_2eproto::file_level_enum_descriptors[22];
-}
-bool IpoPeriod_IsValid(int value) {
-  switch (value) {
-    case 0:
-    case 1:
-    case 2:
-    case 3:
-    case 4:
-    case 5:
-      return true;
-    default:
-      return false;
-  }
-}
-
-const ::google::protobuf::EnumDescriptor* PriceType_descriptor() {
-  protobuf_Qot_5fCommon_2eproto::protobuf_AssignDescriptorsOnce();
-  return protobuf_Qot_5fCommon_2eproto::file_level_enum_descriptors[23];
-}
-bool PriceType_IsValid(int value) {
-  switch (value) {
-    case 0:
-    case 1:
-    case 2:
-      return true;
-    default:
-      return false;
-  }
-}
-
-const ::google::protobuf::EnumDescriptor* WarrantStatus_descriptor() {
-  protobuf_Qot_5fCommon_2eproto::protobuf_AssignDescriptorsOnce();
-  return protobuf_Qot_5fCommon_2eproto::file_level_enum_descriptors[24];
-}
-bool WarrantStatus_IsValid(int value) {
-  switch (value) {
-    case 0:
-    case 1:
-    case 2:
-    case 3:
-    case 4:
-      return true;
-    default:
-      return false;
-  }
-}
-
-const ::google::protobuf::EnumDescriptor* CompanyAct_descriptor() {
-  protobuf_Qot_5fCommon_2eproto::protobuf_AssignDescriptorsOnce();
-  return protobuf_Qot_5fCommon_2eproto::file_level_enum_descriptors[25];
-}
-bool CompanyAct_IsValid(int value) {
-  switch (value) {
-    case 0:
-    case 1:
-    case 2:
-    case 4:
-    case 8:
-    case 16:
-    case 32:
-    case 64:
-    case 128:
-      return true;
-    default:
-      return false;
-  }
-}
-
-const ::google::protobuf::EnumDescriptor* QotRight_descriptor() {
-  protobuf_Qot_5fCommon_2eproto::protobuf_AssignDescriptorsOnce();
-  return protobuf_Qot_5fCommon_2eproto::file_level_enum_descriptors[26];
-}
-bool QotRight_IsValid(int value) {
-  switch (value) {
-    case 0:
-    case 1:
-    case 2:
-    case 3:
-    case 4:
-    case 5:
-      return true;
-    default:
-      return false;
-  }
-}
-
-const ::google::protobuf::EnumDescriptor* PriceReminderType_descriptor() {
-  protobuf_Qot_5fCommon_2eproto::protobuf_AssignDescriptorsOnce();
-  return protobuf_Qot_5fCommon_2eproto::file_level_enum_descriptors[27];
-}
-bool PriceReminderType_IsValid(int value) {
-  switch (value) {
-    case 0:
-    case 1:
-    case 2:
-    case 3:
-    case 4:
-    case 5:
-    case 6:
-    case 7:
-    case 8:
-    case 9:
-    case 10:
-    case 11:
-    case 12:
-    case 13:
-    case 14:
-    case 15:
-      return true;
-    default:
-      return false;
-  }
-}
-
-const ::google::protobuf::EnumDescriptor* PriceReminderFreq_descriptor() {
-  protobuf_Qot_5fCommon_2eproto::protobuf_AssignDescriptorsOnce();
-  return protobuf_Qot_5fCommon_2eproto::file_level_enum_descriptors[28];
-}
-bool PriceReminderFreq_IsValid(int value) {
-  switch (value) {
-    case 0:
-    case 1:
-    case 2:
-    case 3:
-      return true;
-    default:
-      return false;
-  }
-}
-
-const ::google::protobuf::EnumDescriptor* AssetClass_descriptor() {
-  protobuf_Qot_5fCommon_2eproto::protobuf_AssignDescriptorsOnce();
-  return protobuf_Qot_5fCommon_2eproto::file_level_enum_descriptors[29];
-}
-bool AssetClass_IsValid(int value) {
-  switch (value) {
-    case 0:
-    case 1:
-    case 2:
-    case 3:
-    case 4:
-    case 5:
-    case 6:
-      return true;
-    default:
-      return false;
-  }
-}
-
-const ::google::protobuf::EnumDescriptor* ExpirationCycle_descriptor() {
-  protobuf_Qot_5fCommon_2eproto::protobuf_AssignDescriptorsOnce();
-  return protobuf_Qot_5fCommon_2eproto::file_level_enum_descriptors[30];
-}
-bool ExpirationCycle_IsValid(int value) {
-  switch (value) {
-    case 0:
-    case 1:
-    case 2:
-    case 3:
-    case 4:
-    case 11:
-    case 12:
-    case 13:
-    case 14:
-    case 15:
-      return true;
-    default:
-      return false;
-  }
-}
-
-const ::google::protobuf::EnumDescriptor* OptionStandardType_descriptor() {
-  protobuf_Qot_5fCommon_2eproto::protobuf_AssignDescriptorsOnce();
-  return protobuf_Qot_5fCommon_2eproto::file_level_enum_descriptors[31];
-}
-bool OptionStandardType_IsValid(int value) {
-  switch (value) {
-    case 0:
-    case 1:
-    case 2:
-      return true;
-    default:
-      return false;
-  }
-}
-
-const ::google::protobuf::EnumDescriptor* OptionSettlementMode_descriptor() {
-  protobuf_Qot_5fCommon_2eproto::protobuf_AssignDescriptorsOnce();
-  return protobuf_Qot_5fCommon_2eproto::file_level_enum_descriptors[32];
-}
-bool OptionSettlementMode_IsValid(int value) {
-  switch (value) {
-    case 0:
-    case 1:
-    case 2:
-      return true;
-    default:
-      return false;
-  }
-}
-
-const ::google::protobuf::EnumDescriptor* ExchType_descriptor() {
-  protobuf_Qot_5fCommon_2eproto::protobuf_AssignDescriptorsOnce();
-  return protobuf_Qot_5fCommon_2eproto::file_level_enum_descriptors[33];
-}
-bool ExchType_IsValid(int value) {
-  switch (value) {
-    case 0:
-    case 1:
-    case 2:
-    case 3:
-    case 4:
-    case 5:
-    case 6:
-    case 7:
-    case 8:
-    case 9:
-    case 10:
-    case 11:
-    case 12:
-    case 13:
-    case 14:
-    case 15:
-    case 16:
-    case 17:
-    case 18:
-      return true;
-    default:
-      return false;
-  }
-}
-
-const ::google::protobuf::EnumDescriptor* PeriodType_descriptor() {
-  protobuf_Qot_5fCommon_2eproto::protobuf_AssignDescriptorsOnce();
-  return protobuf_Qot_5fCommon_2eproto::file_level_enum_descriptors[34];
-}
-bool PeriodType_IsValid(int value) {
-  switch (value) {
-    case 0:
-    case 1:
-    case 2:
-    case 3:
-    case 4:
-      return true;
-    default:
-      return false;
-  }
-}
-
-const ::google::protobuf::EnumDescriptor* PriceReminderMarketStatus_descriptor() {
-  protobuf_Qot_5fCommon_2eproto::protobuf_AssignDescriptorsOnce();
-  return protobuf_Qot_5fCommon_2eproto::file_level_enum_descriptors[35];
-}
-bool PriceReminderMarketStatus_IsValid(int value) {
-  switch (value) {
-    case 0:
-    case 1:
-    case 2:
-    case 3:
-    case 4:
       return true;
     default:
       return false;
@@ -2698,7 +1351,6 @@ const int KLine::kTurnoverFieldNumber;
 const int KLine::kTurnoverRateFieldNumber;
 const int KLine::kPeFieldNumber;
 const int KLine::kChangeRateFieldNumber;
-const int KLine::kTimestampFieldNumber;
 #endif  // !defined(_MSC_VER) || _MSC_VER >= 1900
 
 KLine::KLine()
@@ -2781,7 +1433,7 @@ void KLine::Clear() {
         reinterpret_cast<char*>(&turnover_) -
         reinterpret_cast<char*>(&highprice_)) + sizeof(turnover_));
   }
-  if (cached_has_bits & 7936u) {
+  if (cached_has_bits & 3840u) {
     ::memset(&turnoverrate_, 0, static_cast<size_t>(
         reinterpret_cast<char*>(&isblank_) -
         reinterpret_cast<char*>(&turnoverrate_)) + sizeof(isblank_));
@@ -2970,20 +1622,6 @@ bool KLine::MergePartialFromCodedStream(
         break;
       }
 
-      // optional double timestamp = 13;
-      case 13: {
-        if (static_cast< ::google::protobuf::uint8>(tag) ==
-            static_cast< ::google::protobuf::uint8>(105u /* 105 & 0xFF */)) {
-          set_has_timestamp();
-          DO_((::google::protobuf::internal::WireFormatLite::ReadPrimitive<
-                   double, ::google::protobuf::internal::WireFormatLite::TYPE_DOUBLE>(
-                 input, &timestamp_)));
-        } else {
-          goto handle_unusual;
-        }
-        break;
-      }
-
       default: {
       handle_unusual:
         if (tag == 0) {
@@ -3022,7 +1660,7 @@ void KLine::SerializeWithCachedSizes(
   }
 
   // required bool isBlank = 2;
-  if (cached_has_bits & 0x00001000u) {
+  if (cached_has_bits & 0x00000800u) {
     ::google::protobuf::internal::WireFormatLite::WriteBool(2, this->isblank(), output);
   }
 
@@ -3076,11 +1714,6 @@ void KLine::SerializeWithCachedSizes(
     ::google::protobuf::internal::WireFormatLite::WriteDouble(12, this->changerate(), output);
   }
 
-  // optional double timestamp = 13;
-  if (cached_has_bits & 0x00000800u) {
-    ::google::protobuf::internal::WireFormatLite::WriteDouble(13, this->timestamp(), output);
-  }
-
   if (_internal_metadata_.have_unknown_fields()) {
     ::google::protobuf::internal::WireFormat::SerializeUnknownFields(
         _internal_metadata_.unknown_fields(), output);
@@ -3108,7 +1741,7 @@ void KLine::SerializeWithCachedSizes(
   }
 
   // required bool isBlank = 2;
-  if (cached_has_bits & 0x00001000u) {
+  if (cached_has_bits & 0x00000800u) {
     target = ::google::protobuf::internal::WireFormatLite::WriteBoolToArray(2, this->isblank(), target);
   }
 
@@ -3162,11 +1795,6 @@ void KLine::SerializeWithCachedSizes(
     target = ::google::protobuf::internal::WireFormatLite::WriteDoubleToArray(12, this->changerate(), target);
   }
 
-  // optional double timestamp = 13;
-  if (cached_has_bits & 0x00000800u) {
-    target = ::google::protobuf::internal::WireFormatLite::WriteDoubleToArray(13, this->timestamp(), target);
-  }
-
   if (_internal_metadata_.have_unknown_fields()) {
     target = ::google::protobuf::internal::WireFormat::SerializeUnknownFieldsToArray(
         _internal_metadata_.unknown_fields(), target);
@@ -3202,7 +1830,7 @@ size_t KLine::ByteSizeLong() const {
       ::google::protobuf::internal::WireFormat::ComputeUnknownFieldsSize(
         _internal_metadata_.unknown_fields());
   }
-  if (((_has_bits_[0] & 0x00001001) ^ 0x00001001) == 0) {  // All required fields are present.
+  if (((_has_bits_[0] & 0x00000801) ^ 0x00000801) == 0) {  // All required fields are present.
     // required string time = 1;
     total_size += 1 +
       ::google::protobuf::internal::WireFormatLite::StringSize(
@@ -3253,7 +1881,7 @@ size_t KLine::ByteSizeLong() const {
     }
 
   }
-  if (_has_bits_[8 / 32] & 3840u) {
+  if (_has_bits_[8 / 32] & 1792u) {
     // optional double turnoverRate = 10;
     if (has_turnoverrate()) {
       total_size += 1 + 8;
@@ -3266,11 +1894,6 @@ size_t KLine::ByteSizeLong() const {
 
     // optional double changeRate = 12;
     if (has_changerate()) {
-      total_size += 1 + 8;
-    }
-
-    // optional double timestamp = 13;
-    if (has_timestamp()) {
       total_size += 1 + 8;
     }
 
@@ -3333,7 +1956,7 @@ void KLine::MergeFrom(const KLine& from) {
     }
     _has_bits_[0] |= cached_has_bits;
   }
-  if (cached_has_bits & 7936u) {
+  if (cached_has_bits & 3840u) {
     if (cached_has_bits & 0x00000100u) {
       turnoverrate_ = from.turnoverrate_;
     }
@@ -3344,9 +1967,6 @@ void KLine::MergeFrom(const KLine& from) {
       changerate_ = from.changerate_;
     }
     if (cached_has_bits & 0x00000800u) {
-      timestamp_ = from.timestamp_;
-    }
-    if (cached_has_bits & 0x00001000u) {
       isblank_ = from.isblank_;
     }
     _has_bits_[0] |= cached_has_bits;
@@ -3368,7 +1988,7 @@ void KLine::CopyFrom(const KLine& from) {
 }
 
 bool KLine::IsInitialized() const {
-  if ((_has_bits_[0] & 0x00001001) != 0x00001001) return false;
+  if ((_has_bits_[0] & 0x00000801) != 0x00000801) return false;
   return true;
 }
 
@@ -3389,7 +2009,6 @@ void KLine::InternalSwap(KLine* other) {
   swap(turnoverrate_, other->turnoverrate_);
   swap(pe_, other->pe_);
   swap(changerate_, other->changerate_);
-  swap(timestamp_, other->timestamp_);
   swap(isblank_, other->isblank_);
   swap(_has_bits_[0], other->_has_bits_[0]);
   _internal_metadata_.Swap(&other->_internal_metadata_);
@@ -3404,2140 +2023,12 @@ void KLine::InternalSwap(KLine* other) {
 
 // ===================================================================
 
-void OptionBasicQotExData::InitAsDefaultInstance() {
-}
-#if !defined(_MSC_VER) || _MSC_VER >= 1900
-const int OptionBasicQotExData::kStrikePriceFieldNumber;
-const int OptionBasicQotExData::kContractSizeFieldNumber;
-const int OptionBasicQotExData::kContractSizeFloatFieldNumber;
-const int OptionBasicQotExData::kOpenInterestFieldNumber;
-const int OptionBasicQotExData::kImpliedVolatilityFieldNumber;
-const int OptionBasicQotExData::kPremiumFieldNumber;
-const int OptionBasicQotExData::kDeltaFieldNumber;
-const int OptionBasicQotExData::kGammaFieldNumber;
-const int OptionBasicQotExData::kVegaFieldNumber;
-const int OptionBasicQotExData::kThetaFieldNumber;
-const int OptionBasicQotExData::kRhoFieldNumber;
-const int OptionBasicQotExData::kNetOpenInterestFieldNumber;
-const int OptionBasicQotExData::kExpiryDateDistanceFieldNumber;
-const int OptionBasicQotExData::kContractNominalValueFieldNumber;
-const int OptionBasicQotExData::kOwnerLotMultiplierFieldNumber;
-const int OptionBasicQotExData::kOptionAreaTypeFieldNumber;
-const int OptionBasicQotExData::kContractMultiplierFieldNumber;
-const int OptionBasicQotExData::kIndexOptionTypeFieldNumber;
-#endif  // !defined(_MSC_VER) || _MSC_VER >= 1900
-
-OptionBasicQotExData::OptionBasicQotExData()
-  : ::google::protobuf::Message(), _internal_metadata_(NULL) {
-  if (GOOGLE_PREDICT_TRUE(this != internal_default_instance())) {
-    ::protobuf_Qot_5fCommon_2eproto::InitDefaultsOptionBasicQotExData();
-  }
-  SharedCtor();
-  // @@protoc_insertion_point(constructor:Qot_Common.OptionBasicQotExData)
-}
-OptionBasicQotExData::OptionBasicQotExData(const OptionBasicQotExData& from)
-  : ::google::protobuf::Message(),
-      _internal_metadata_(NULL),
-      _has_bits_(from._has_bits_),
-      _cached_size_(0) {
-  _internal_metadata_.MergeFrom(from._internal_metadata_);
-  ::memcpy(&strikeprice_, &from.strikeprice_,
-    static_cast<size_t>(reinterpret_cast<char*>(&contractsizefloat_) -
-    reinterpret_cast<char*>(&strikeprice_)) + sizeof(contractsizefloat_));
-  // @@protoc_insertion_point(copy_constructor:Qot_Common.OptionBasicQotExData)
-}
-
-void OptionBasicQotExData::SharedCtor() {
-  _cached_size_ = 0;
-  ::memset(&strikeprice_, 0, static_cast<size_t>(
-      reinterpret_cast<char*>(&contractsizefloat_) -
-      reinterpret_cast<char*>(&strikeprice_)) + sizeof(contractsizefloat_));
-}
-
-OptionBasicQotExData::~OptionBasicQotExData() {
-  // @@protoc_insertion_point(destructor:Qot_Common.OptionBasicQotExData)
-  SharedDtor();
-}
-
-void OptionBasicQotExData::SharedDtor() {
-}
-
-void OptionBasicQotExData::SetCachedSize(int size) const {
-  GOOGLE_SAFE_CONCURRENT_WRITES_BEGIN();
-  _cached_size_ = size;
-  GOOGLE_SAFE_CONCURRENT_WRITES_END();
-}
-const ::google::protobuf::Descriptor* OptionBasicQotExData::descriptor() {
-  ::protobuf_Qot_5fCommon_2eproto::protobuf_AssignDescriptorsOnce();
-  return ::protobuf_Qot_5fCommon_2eproto::file_level_metadata[kIndexInFileMessages].descriptor;
-}
-
-const OptionBasicQotExData& OptionBasicQotExData::default_instance() {
-  ::protobuf_Qot_5fCommon_2eproto::InitDefaultsOptionBasicQotExData();
-  return *internal_default_instance();
-}
-
-OptionBasicQotExData* OptionBasicQotExData::New(::google::protobuf::Arena* arena) const {
-  OptionBasicQotExData* n = new OptionBasicQotExData;
-  if (arena != NULL) {
-    arena->Own(n);
-  }
-  return n;
-}
-
-void OptionBasicQotExData::Clear() {
-// @@protoc_insertion_point(message_clear_start:Qot_Common.OptionBasicQotExData)
-  ::google::protobuf::uint32 cached_has_bits = 0;
-  // Prevent compiler warnings about cached_has_bits being unused
-  (void) cached_has_bits;
-
-  cached_has_bits = _has_bits_[0];
-  if (cached_has_bits & 255u) {
-    ::memset(&strikeprice_, 0, static_cast<size_t>(
-        reinterpret_cast<char*>(&vega_) -
-        reinterpret_cast<char*>(&strikeprice_)) + sizeof(vega_));
-  }
-  if (cached_has_bits & 65280u) {
-    ::memset(&theta_, 0, static_cast<size_t>(
-        reinterpret_cast<char*>(&optionareatype_) -
-        reinterpret_cast<char*>(&theta_)) + sizeof(optionareatype_));
-  }
-  if (cached_has_bits & 196608u) {
-    ::memset(&indexoptiontype_, 0, static_cast<size_t>(
-        reinterpret_cast<char*>(&contractsizefloat_) -
-        reinterpret_cast<char*>(&indexoptiontype_)) + sizeof(contractsizefloat_));
-  }
-  _has_bits_.Clear();
-  _internal_metadata_.Clear();
-}
-
-bool OptionBasicQotExData::MergePartialFromCodedStream(
-    ::google::protobuf::io::CodedInputStream* input) {
-#define DO_(EXPRESSION) if (!GOOGLE_PREDICT_TRUE(EXPRESSION)) goto failure
-  ::google::protobuf::uint32 tag;
-  // @@protoc_insertion_point(parse_start:Qot_Common.OptionBasicQotExData)
-  for (;;) {
-    ::std::pair< ::google::protobuf::uint32, bool> p = input->ReadTagWithCutoffNoLastTag(16383u);
-    tag = p.first;
-    if (!p.second) goto handle_unusual;
-    switch (::google::protobuf::internal::WireFormatLite::GetTagFieldNumber(tag)) {
-      // required double strikePrice = 1;
-      case 1: {
-        if (static_cast< ::google::protobuf::uint8>(tag) ==
-            static_cast< ::google::protobuf::uint8>(9u /* 9 & 0xFF */)) {
-          set_has_strikeprice();
-          DO_((::google::protobuf::internal::WireFormatLite::ReadPrimitive<
-                   double, ::google::protobuf::internal::WireFormatLite::TYPE_DOUBLE>(
-                 input, &strikeprice_)));
-        } else {
-          goto handle_unusual;
-        }
-        break;
-      }
-
-      // required int32 contractSize = 2;
-      case 2: {
-        if (static_cast< ::google::protobuf::uint8>(tag) ==
-            static_cast< ::google::protobuf::uint8>(16u /* 16 & 0xFF */)) {
-          set_has_contractsize();
-          DO_((::google::protobuf::internal::WireFormatLite::ReadPrimitive<
-                   ::google::protobuf::int32, ::google::protobuf::internal::WireFormatLite::TYPE_INT32>(
-                 input, &contractsize_)));
-        } else {
-          goto handle_unusual;
-        }
-        break;
-      }
-
-      // required int32 openInterest = 3;
-      case 3: {
-        if (static_cast< ::google::protobuf::uint8>(tag) ==
-            static_cast< ::google::protobuf::uint8>(24u /* 24 & 0xFF */)) {
-          set_has_openinterest();
-          DO_((::google::protobuf::internal::WireFormatLite::ReadPrimitive<
-                   ::google::protobuf::int32, ::google::protobuf::internal::WireFormatLite::TYPE_INT32>(
-                 input, &openinterest_)));
-        } else {
-          goto handle_unusual;
-        }
-        break;
-      }
-
-      // required double impliedVolatility = 4;
-      case 4: {
-        if (static_cast< ::google::protobuf::uint8>(tag) ==
-            static_cast< ::google::protobuf::uint8>(33u /* 33 & 0xFF */)) {
-          set_has_impliedvolatility();
-          DO_((::google::protobuf::internal::WireFormatLite::ReadPrimitive<
-                   double, ::google::protobuf::internal::WireFormatLite::TYPE_DOUBLE>(
-                 input, &impliedvolatility_)));
-        } else {
-          goto handle_unusual;
-        }
-        break;
-      }
-
-      // required double premium = 5;
-      case 5: {
-        if (static_cast< ::google::protobuf::uint8>(tag) ==
-            static_cast< ::google::protobuf::uint8>(41u /* 41 & 0xFF */)) {
-          set_has_premium();
-          DO_((::google::protobuf::internal::WireFormatLite::ReadPrimitive<
-                   double, ::google::protobuf::internal::WireFormatLite::TYPE_DOUBLE>(
-                 input, &premium_)));
-        } else {
-          goto handle_unusual;
-        }
-        break;
-      }
-
-      // required double delta = 6;
-      case 6: {
-        if (static_cast< ::google::protobuf::uint8>(tag) ==
-            static_cast< ::google::protobuf::uint8>(49u /* 49 & 0xFF */)) {
-          set_has_delta();
-          DO_((::google::protobuf::internal::WireFormatLite::ReadPrimitive<
-                   double, ::google::protobuf::internal::WireFormatLite::TYPE_DOUBLE>(
-                 input, &delta_)));
-        } else {
-          goto handle_unusual;
-        }
-        break;
-      }
-
-      // required double gamma = 7;
-      case 7: {
-        if (static_cast< ::google::protobuf::uint8>(tag) ==
-            static_cast< ::google::protobuf::uint8>(57u /* 57 & 0xFF */)) {
-          set_has_gamma();
-          DO_((::google::protobuf::internal::WireFormatLite::ReadPrimitive<
-                   double, ::google::protobuf::internal::WireFormatLite::TYPE_DOUBLE>(
-                 input, &gamma_)));
-        } else {
-          goto handle_unusual;
-        }
-        break;
-      }
-
-      // required double vega = 8;
-      case 8: {
-        if (static_cast< ::google::protobuf::uint8>(tag) ==
-            static_cast< ::google::protobuf::uint8>(65u /* 65 & 0xFF */)) {
-          set_has_vega();
-          DO_((::google::protobuf::internal::WireFormatLite::ReadPrimitive<
-                   double, ::google::protobuf::internal::WireFormatLite::TYPE_DOUBLE>(
-                 input, &vega_)));
-        } else {
-          goto handle_unusual;
-        }
-        break;
-      }
-
-      // required double theta = 9;
-      case 9: {
-        if (static_cast< ::google::protobuf::uint8>(tag) ==
-            static_cast< ::google::protobuf::uint8>(73u /* 73 & 0xFF */)) {
-          set_has_theta();
-          DO_((::google::protobuf::internal::WireFormatLite::ReadPrimitive<
-                   double, ::google::protobuf::internal::WireFormatLite::TYPE_DOUBLE>(
-                 input, &theta_)));
-        } else {
-          goto handle_unusual;
-        }
-        break;
-      }
-
-      // required double rho = 10;
-      case 10: {
-        if (static_cast< ::google::protobuf::uint8>(tag) ==
-            static_cast< ::google::protobuf::uint8>(81u /* 81 & 0xFF */)) {
-          set_has_rho();
-          DO_((::google::protobuf::internal::WireFormatLite::ReadPrimitive<
-                   double, ::google::protobuf::internal::WireFormatLite::TYPE_DOUBLE>(
-                 input, &rho_)));
-        } else {
-          goto handle_unusual;
-        }
-        break;
-      }
-
-      // optional int32 netOpenInterest = 11;
-      case 11: {
-        if (static_cast< ::google::protobuf::uint8>(tag) ==
-            static_cast< ::google::protobuf::uint8>(88u /* 88 & 0xFF */)) {
-          set_has_netopeninterest();
-          DO_((::google::protobuf::internal::WireFormatLite::ReadPrimitive<
-                   ::google::protobuf::int32, ::google::protobuf::internal::WireFormatLite::TYPE_INT32>(
-                 input, &netopeninterest_)));
-        } else {
-          goto handle_unusual;
-        }
-        break;
-      }
-
-      // optional int32 expiryDateDistance = 12;
-      case 12: {
-        if (static_cast< ::google::protobuf::uint8>(tag) ==
-            static_cast< ::google::protobuf::uint8>(96u /* 96 & 0xFF */)) {
-          set_has_expirydatedistance();
-          DO_((::google::protobuf::internal::WireFormatLite::ReadPrimitive<
-                   ::google::protobuf::int32, ::google::protobuf::internal::WireFormatLite::TYPE_INT32>(
-                 input, &expirydatedistance_)));
-        } else {
-          goto handle_unusual;
-        }
-        break;
-      }
-
-      // optional double contractNominalValue = 13;
-      case 13: {
-        if (static_cast< ::google::protobuf::uint8>(tag) ==
-            static_cast< ::google::protobuf::uint8>(105u /* 105 & 0xFF */)) {
-          set_has_contractnominalvalue();
-          DO_((::google::protobuf::internal::WireFormatLite::ReadPrimitive<
-                   double, ::google::protobuf::internal::WireFormatLite::TYPE_DOUBLE>(
-                 input, &contractnominalvalue_)));
-        } else {
-          goto handle_unusual;
-        }
-        break;
-      }
-
-      // optional double ownerLotMultiplier = 14;
-      case 14: {
-        if (static_cast< ::google::protobuf::uint8>(tag) ==
-            static_cast< ::google::protobuf::uint8>(113u /* 113 & 0xFF */)) {
-          set_has_ownerlotmultiplier();
-          DO_((::google::protobuf::internal::WireFormatLite::ReadPrimitive<
-                   double, ::google::protobuf::internal::WireFormatLite::TYPE_DOUBLE>(
-                 input, &ownerlotmultiplier_)));
-        } else {
-          goto handle_unusual;
-        }
-        break;
-      }
-
-      // optional int32 optionAreaType = 15;
-      case 15: {
-        if (static_cast< ::google::protobuf::uint8>(tag) ==
-            static_cast< ::google::protobuf::uint8>(120u /* 120 & 0xFF */)) {
-          set_has_optionareatype();
-          DO_((::google::protobuf::internal::WireFormatLite::ReadPrimitive<
-                   ::google::protobuf::int32, ::google::protobuf::internal::WireFormatLite::TYPE_INT32>(
-                 input, &optionareatype_)));
-        } else {
-          goto handle_unusual;
-        }
-        break;
-      }
-
-      // optional double contractMultiplier = 16;
-      case 16: {
-        if (static_cast< ::google::protobuf::uint8>(tag) ==
-            static_cast< ::google::protobuf::uint8>(129u /* 129 & 0xFF */)) {
-          set_has_contractmultiplier();
-          DO_((::google::protobuf::internal::WireFormatLite::ReadPrimitive<
-                   double, ::google::protobuf::internal::WireFormatLite::TYPE_DOUBLE>(
-                 input, &contractmultiplier_)));
-        } else {
-          goto handle_unusual;
-        }
-        break;
-      }
-
-      // optional double contractSizeFloat = 17;
-      case 17: {
-        if (static_cast< ::google::protobuf::uint8>(tag) ==
-            static_cast< ::google::protobuf::uint8>(137u /* 137 & 0xFF */)) {
-          set_has_contractsizefloat();
-          DO_((::google::protobuf::internal::WireFormatLite::ReadPrimitive<
-                   double, ::google::protobuf::internal::WireFormatLite::TYPE_DOUBLE>(
-                 input, &contractsizefloat_)));
-        } else {
-          goto handle_unusual;
-        }
-        break;
-      }
-
-      // optional int32 indexOptionType = 18;
-      case 18: {
-        if (static_cast< ::google::protobuf::uint8>(tag) ==
-            static_cast< ::google::protobuf::uint8>(144u /* 144 & 0xFF */)) {
-          set_has_indexoptiontype();
-          DO_((::google::protobuf::internal::WireFormatLite::ReadPrimitive<
-                   ::google::protobuf::int32, ::google::protobuf::internal::WireFormatLite::TYPE_INT32>(
-                 input, &indexoptiontype_)));
-        } else {
-          goto handle_unusual;
-        }
-        break;
-      }
-
-      default: {
-      handle_unusual:
-        if (tag == 0) {
-          goto success;
-        }
-        DO_(::google::protobuf::internal::WireFormat::SkipField(
-              input, tag, _internal_metadata_.mutable_unknown_fields()));
-        break;
-      }
-    }
-  }
-success:
-  // @@protoc_insertion_point(parse_success:Qot_Common.OptionBasicQotExData)
-  return true;
-failure:
-  // @@protoc_insertion_point(parse_failure:Qot_Common.OptionBasicQotExData)
-  return false;
-#undef DO_
-}
-
-void OptionBasicQotExData::SerializeWithCachedSizes(
-    ::google::protobuf::io::CodedOutputStream* output) const {
-  // @@protoc_insertion_point(serialize_start:Qot_Common.OptionBasicQotExData)
-  ::google::protobuf::uint32 cached_has_bits = 0;
-  (void) cached_has_bits;
-
-  cached_has_bits = _has_bits_[0];
-  // required double strikePrice = 1;
-  if (cached_has_bits & 0x00000001u) {
-    ::google::protobuf::internal::WireFormatLite::WriteDouble(1, this->strikeprice(), output);
-  }
-
-  // required int32 contractSize = 2;
-  if (cached_has_bits & 0x00000002u) {
-    ::google::protobuf::internal::WireFormatLite::WriteInt32(2, this->contractsize(), output);
-  }
-
-  // required int32 openInterest = 3;
-  if (cached_has_bits & 0x00000004u) {
-    ::google::protobuf::internal::WireFormatLite::WriteInt32(3, this->openinterest(), output);
-  }
-
-  // required double impliedVolatility = 4;
-  if (cached_has_bits & 0x00000008u) {
-    ::google::protobuf::internal::WireFormatLite::WriteDouble(4, this->impliedvolatility(), output);
-  }
-
-  // required double premium = 5;
-  if (cached_has_bits & 0x00000010u) {
-    ::google::protobuf::internal::WireFormatLite::WriteDouble(5, this->premium(), output);
-  }
-
-  // required double delta = 6;
-  if (cached_has_bits & 0x00000020u) {
-    ::google::protobuf::internal::WireFormatLite::WriteDouble(6, this->delta(), output);
-  }
-
-  // required double gamma = 7;
-  if (cached_has_bits & 0x00000040u) {
-    ::google::protobuf::internal::WireFormatLite::WriteDouble(7, this->gamma(), output);
-  }
-
-  // required double vega = 8;
-  if (cached_has_bits & 0x00000080u) {
-    ::google::protobuf::internal::WireFormatLite::WriteDouble(8, this->vega(), output);
-  }
-
-  // required double theta = 9;
-  if (cached_has_bits & 0x00000100u) {
-    ::google::protobuf::internal::WireFormatLite::WriteDouble(9, this->theta(), output);
-  }
-
-  // required double rho = 10;
-  if (cached_has_bits & 0x00000200u) {
-    ::google::protobuf::internal::WireFormatLite::WriteDouble(10, this->rho(), output);
-  }
-
-  // optional int32 netOpenInterest = 11;
-  if (cached_has_bits & 0x00000400u) {
-    ::google::protobuf::internal::WireFormatLite::WriteInt32(11, this->netopeninterest(), output);
-  }
-
-  // optional int32 expiryDateDistance = 12;
-  if (cached_has_bits & 0x00000800u) {
-    ::google::protobuf::internal::WireFormatLite::WriteInt32(12, this->expirydatedistance(), output);
-  }
-
-  // optional double contractNominalValue = 13;
-  if (cached_has_bits & 0x00001000u) {
-    ::google::protobuf::internal::WireFormatLite::WriteDouble(13, this->contractnominalvalue(), output);
-  }
-
-  // optional double ownerLotMultiplier = 14;
-  if (cached_has_bits & 0x00002000u) {
-    ::google::protobuf::internal::WireFormatLite::WriteDouble(14, this->ownerlotmultiplier(), output);
-  }
-
-  // optional int32 optionAreaType = 15;
-  if (cached_has_bits & 0x00008000u) {
-    ::google::protobuf::internal::WireFormatLite::WriteInt32(15, this->optionareatype(), output);
-  }
-
-  // optional double contractMultiplier = 16;
-  if (cached_has_bits & 0x00004000u) {
-    ::google::protobuf::internal::WireFormatLite::WriteDouble(16, this->contractmultiplier(), output);
-  }
-
-  // optional double contractSizeFloat = 17;
-  if (cached_has_bits & 0x00020000u) {
-    ::google::protobuf::internal::WireFormatLite::WriteDouble(17, this->contractsizefloat(), output);
-  }
-
-  // optional int32 indexOptionType = 18;
-  if (cached_has_bits & 0x00010000u) {
-    ::google::protobuf::internal::WireFormatLite::WriteInt32(18, this->indexoptiontype(), output);
-  }
-
-  if (_internal_metadata_.have_unknown_fields()) {
-    ::google::protobuf::internal::WireFormat::SerializeUnknownFields(
-        _internal_metadata_.unknown_fields(), output);
-  }
-  // @@protoc_insertion_point(serialize_end:Qot_Common.OptionBasicQotExData)
-}
-
-::google::protobuf::uint8* OptionBasicQotExData::InternalSerializeWithCachedSizesToArray(
-    bool deterministic, ::google::protobuf::uint8* target) const {
-  (void)deterministic; // Unused
-  // @@protoc_insertion_point(serialize_to_array_start:Qot_Common.OptionBasicQotExData)
-  ::google::protobuf::uint32 cached_has_bits = 0;
-  (void) cached_has_bits;
-
-  cached_has_bits = _has_bits_[0];
-  // required double strikePrice = 1;
-  if (cached_has_bits & 0x00000001u) {
-    target = ::google::protobuf::internal::WireFormatLite::WriteDoubleToArray(1, this->strikeprice(), target);
-  }
-
-  // required int32 contractSize = 2;
-  if (cached_has_bits & 0x00000002u) {
-    target = ::google::protobuf::internal::WireFormatLite::WriteInt32ToArray(2, this->contractsize(), target);
-  }
-
-  // required int32 openInterest = 3;
-  if (cached_has_bits & 0x00000004u) {
-    target = ::google::protobuf::internal::WireFormatLite::WriteInt32ToArray(3, this->openinterest(), target);
-  }
-
-  // required double impliedVolatility = 4;
-  if (cached_has_bits & 0x00000008u) {
-    target = ::google::protobuf::internal::WireFormatLite::WriteDoubleToArray(4, this->impliedvolatility(), target);
-  }
-
-  // required double premium = 5;
-  if (cached_has_bits & 0x00000010u) {
-    target = ::google::protobuf::internal::WireFormatLite::WriteDoubleToArray(5, this->premium(), target);
-  }
-
-  // required double delta = 6;
-  if (cached_has_bits & 0x00000020u) {
-    target = ::google::protobuf::internal::WireFormatLite::WriteDoubleToArray(6, this->delta(), target);
-  }
-
-  // required double gamma = 7;
-  if (cached_has_bits & 0x00000040u) {
-    target = ::google::protobuf::internal::WireFormatLite::WriteDoubleToArray(7, this->gamma(), target);
-  }
-
-  // required double vega = 8;
-  if (cached_has_bits & 0x00000080u) {
-    target = ::google::protobuf::internal::WireFormatLite::WriteDoubleToArray(8, this->vega(), target);
-  }
-
-  // required double theta = 9;
-  if (cached_has_bits & 0x00000100u) {
-    target = ::google::protobuf::internal::WireFormatLite::WriteDoubleToArray(9, this->theta(), target);
-  }
-
-  // required double rho = 10;
-  if (cached_has_bits & 0x00000200u) {
-    target = ::google::protobuf::internal::WireFormatLite::WriteDoubleToArray(10, this->rho(), target);
-  }
-
-  // optional int32 netOpenInterest = 11;
-  if (cached_has_bits & 0x00000400u) {
-    target = ::google::protobuf::internal::WireFormatLite::WriteInt32ToArray(11, this->netopeninterest(), target);
-  }
-
-  // optional int32 expiryDateDistance = 12;
-  if (cached_has_bits & 0x00000800u) {
-    target = ::google::protobuf::internal::WireFormatLite::WriteInt32ToArray(12, this->expirydatedistance(), target);
-  }
-
-  // optional double contractNominalValue = 13;
-  if (cached_has_bits & 0x00001000u) {
-    target = ::google::protobuf::internal::WireFormatLite::WriteDoubleToArray(13, this->contractnominalvalue(), target);
-  }
-
-  // optional double ownerLotMultiplier = 14;
-  if (cached_has_bits & 0x00002000u) {
-    target = ::google::protobuf::internal::WireFormatLite::WriteDoubleToArray(14, this->ownerlotmultiplier(), target);
-  }
-
-  // optional int32 optionAreaType = 15;
-  if (cached_has_bits & 0x00008000u) {
-    target = ::google::protobuf::internal::WireFormatLite::WriteInt32ToArray(15, this->optionareatype(), target);
-  }
-
-  // optional double contractMultiplier = 16;
-  if (cached_has_bits & 0x00004000u) {
-    target = ::google::protobuf::internal::WireFormatLite::WriteDoubleToArray(16, this->contractmultiplier(), target);
-  }
-
-  // optional double contractSizeFloat = 17;
-  if (cached_has_bits & 0x00020000u) {
-    target = ::google::protobuf::internal::WireFormatLite::WriteDoubleToArray(17, this->contractsizefloat(), target);
-  }
-
-  // optional int32 indexOptionType = 18;
-  if (cached_has_bits & 0x00010000u) {
-    target = ::google::protobuf::internal::WireFormatLite::WriteInt32ToArray(18, this->indexoptiontype(), target);
-  }
-
-  if (_internal_metadata_.have_unknown_fields()) {
-    target = ::google::protobuf::internal::WireFormat::SerializeUnknownFieldsToArray(
-        _internal_metadata_.unknown_fields(), target);
-  }
-  // @@protoc_insertion_point(serialize_to_array_end:Qot_Common.OptionBasicQotExData)
-  return target;
-}
-
-size_t OptionBasicQotExData::RequiredFieldsByteSizeFallback() const {
-// @@protoc_insertion_point(required_fields_byte_size_fallback_start:Qot_Common.OptionBasicQotExData)
-  size_t total_size = 0;
-
-  if (has_strikeprice()) {
-    // required double strikePrice = 1;
-    total_size += 1 + 8;
-  }
-
-  if (has_contractsize()) {
-    // required int32 contractSize = 2;
-    total_size += 1 +
-      ::google::protobuf::internal::WireFormatLite::Int32Size(
-        this->contractsize());
-  }
-
-  if (has_openinterest()) {
-    // required int32 openInterest = 3;
-    total_size += 1 +
-      ::google::protobuf::internal::WireFormatLite::Int32Size(
-        this->openinterest());
-  }
-
-  if (has_impliedvolatility()) {
-    // required double impliedVolatility = 4;
-    total_size += 1 + 8;
-  }
-
-  if (has_premium()) {
-    // required double premium = 5;
-    total_size += 1 + 8;
-  }
-
-  if (has_delta()) {
-    // required double delta = 6;
-    total_size += 1 + 8;
-  }
-
-  if (has_gamma()) {
-    // required double gamma = 7;
-    total_size += 1 + 8;
-  }
-
-  if (has_vega()) {
-    // required double vega = 8;
-    total_size += 1 + 8;
-  }
-
-  if (has_theta()) {
-    // required double theta = 9;
-    total_size += 1 + 8;
-  }
-
-  if (has_rho()) {
-    // required double rho = 10;
-    total_size += 1 + 8;
-  }
-
-  return total_size;
-}
-size_t OptionBasicQotExData::ByteSizeLong() const {
-// @@protoc_insertion_point(message_byte_size_start:Qot_Common.OptionBasicQotExData)
-  size_t total_size = 0;
-
-  if (_internal_metadata_.have_unknown_fields()) {
-    total_size +=
-      ::google::protobuf::internal::WireFormat::ComputeUnknownFieldsSize(
-        _internal_metadata_.unknown_fields());
-  }
-  if (((_has_bits_[0] & 0x000003ff) ^ 0x000003ff) == 0) {  // All required fields are present.
-    // required double strikePrice = 1;
-    total_size += 1 + 8;
-
-    // required int32 contractSize = 2;
-    total_size += 1 +
-      ::google::protobuf::internal::WireFormatLite::Int32Size(
-        this->contractsize());
-
-    // required int32 openInterest = 3;
-    total_size += 1 +
-      ::google::protobuf::internal::WireFormatLite::Int32Size(
-        this->openinterest());
-
-    // required double impliedVolatility = 4;
-    total_size += 1 + 8;
-
-    // required double premium = 5;
-    total_size += 1 + 8;
-
-    // required double delta = 6;
-    total_size += 1 + 8;
-
-    // required double gamma = 7;
-    total_size += 1 + 8;
-
-    // required double vega = 8;
-    total_size += 1 + 8;
-
-    // required double theta = 9;
-    total_size += 1 + 8;
-
-    // required double rho = 10;
-    total_size += 1 + 8;
-
-  } else {
-    total_size += RequiredFieldsByteSizeFallback();
-  }
-  if (_has_bits_[8 / 32] & 64512u) {
-    // optional int32 netOpenInterest = 11;
-    if (has_netopeninterest()) {
-      total_size += 1 +
-        ::google::protobuf::internal::WireFormatLite::Int32Size(
-          this->netopeninterest());
-    }
-
-    // optional int32 expiryDateDistance = 12;
-    if (has_expirydatedistance()) {
-      total_size += 1 +
-        ::google::protobuf::internal::WireFormatLite::Int32Size(
-          this->expirydatedistance());
-    }
-
-    // optional double contractNominalValue = 13;
-    if (has_contractnominalvalue()) {
-      total_size += 1 + 8;
-    }
-
-    // optional double ownerLotMultiplier = 14;
-    if (has_ownerlotmultiplier()) {
-      total_size += 1 + 8;
-    }
-
-    // optional double contractMultiplier = 16;
-    if (has_contractmultiplier()) {
-      total_size += 2 + 8;
-    }
-
-    // optional int32 optionAreaType = 15;
-    if (has_optionareatype()) {
-      total_size += 1 +
-        ::google::protobuf::internal::WireFormatLite::Int32Size(
-          this->optionareatype());
-    }
-
-  }
-  if (_has_bits_[16 / 32] & 196608u) {
-    // optional int32 indexOptionType = 18;
-    if (has_indexoptiontype()) {
-      total_size += 2 +
-        ::google::protobuf::internal::WireFormatLite::Int32Size(
-          this->indexoptiontype());
-    }
-
-    // optional double contractSizeFloat = 17;
-    if (has_contractsizefloat()) {
-      total_size += 2 + 8;
-    }
-
-  }
-  int cached_size = ::google::protobuf::internal::ToCachedSize(total_size);
-  GOOGLE_SAFE_CONCURRENT_WRITES_BEGIN();
-  _cached_size_ = cached_size;
-  GOOGLE_SAFE_CONCURRENT_WRITES_END();
-  return total_size;
-}
-
-void OptionBasicQotExData::MergeFrom(const ::google::protobuf::Message& from) {
-// @@protoc_insertion_point(generalized_merge_from_start:Qot_Common.OptionBasicQotExData)
-  GOOGLE_DCHECK_NE(&from, this);
-  const OptionBasicQotExData* source =
-      ::google::protobuf::internal::DynamicCastToGenerated<const OptionBasicQotExData>(
-          &from);
-  if (source == NULL) {
-  // @@protoc_insertion_point(generalized_merge_from_cast_fail:Qot_Common.OptionBasicQotExData)
-    ::google::protobuf::internal::ReflectionOps::Merge(from, this);
-  } else {
-  // @@protoc_insertion_point(generalized_merge_from_cast_success:Qot_Common.OptionBasicQotExData)
-    MergeFrom(*source);
-  }
-}
-
-void OptionBasicQotExData::MergeFrom(const OptionBasicQotExData& from) {
-// @@protoc_insertion_point(class_specific_merge_from_start:Qot_Common.OptionBasicQotExData)
-  GOOGLE_DCHECK_NE(&from, this);
-  _internal_metadata_.MergeFrom(from._internal_metadata_);
-  ::google::protobuf::uint32 cached_has_bits = 0;
-  (void) cached_has_bits;
-
-  cached_has_bits = from._has_bits_[0];
-  if (cached_has_bits & 255u) {
-    if (cached_has_bits & 0x00000001u) {
-      strikeprice_ = from.strikeprice_;
-    }
-    if (cached_has_bits & 0x00000002u) {
-      contractsize_ = from.contractsize_;
-    }
-    if (cached_has_bits & 0x00000004u) {
-      openinterest_ = from.openinterest_;
-    }
-    if (cached_has_bits & 0x00000008u) {
-      impliedvolatility_ = from.impliedvolatility_;
-    }
-    if (cached_has_bits & 0x00000010u) {
-      premium_ = from.premium_;
-    }
-    if (cached_has_bits & 0x00000020u) {
-      delta_ = from.delta_;
-    }
-    if (cached_has_bits & 0x00000040u) {
-      gamma_ = from.gamma_;
-    }
-    if (cached_has_bits & 0x00000080u) {
-      vega_ = from.vega_;
-    }
-    _has_bits_[0] |= cached_has_bits;
-  }
-  if (cached_has_bits & 65280u) {
-    if (cached_has_bits & 0x00000100u) {
-      theta_ = from.theta_;
-    }
-    if (cached_has_bits & 0x00000200u) {
-      rho_ = from.rho_;
-    }
-    if (cached_has_bits & 0x00000400u) {
-      netopeninterest_ = from.netopeninterest_;
-    }
-    if (cached_has_bits & 0x00000800u) {
-      expirydatedistance_ = from.expirydatedistance_;
-    }
-    if (cached_has_bits & 0x00001000u) {
-      contractnominalvalue_ = from.contractnominalvalue_;
-    }
-    if (cached_has_bits & 0x00002000u) {
-      ownerlotmultiplier_ = from.ownerlotmultiplier_;
-    }
-    if (cached_has_bits & 0x00004000u) {
-      contractmultiplier_ = from.contractmultiplier_;
-    }
-    if (cached_has_bits & 0x00008000u) {
-      optionareatype_ = from.optionareatype_;
-    }
-    _has_bits_[0] |= cached_has_bits;
-  }
-  if (cached_has_bits & 196608u) {
-    if (cached_has_bits & 0x00010000u) {
-      indexoptiontype_ = from.indexoptiontype_;
-    }
-    if (cached_has_bits & 0x00020000u) {
-      contractsizefloat_ = from.contractsizefloat_;
-    }
-    _has_bits_[0] |= cached_has_bits;
-  }
-}
-
-void OptionBasicQotExData::CopyFrom(const ::google::protobuf::Message& from) {
-// @@protoc_insertion_point(generalized_copy_from_start:Qot_Common.OptionBasicQotExData)
-  if (&from == this) return;
-  Clear();
-  MergeFrom(from);
-}
-
-void OptionBasicQotExData::CopyFrom(const OptionBasicQotExData& from) {
-// @@protoc_insertion_point(class_specific_copy_from_start:Qot_Common.OptionBasicQotExData)
-  if (&from == this) return;
-  Clear();
-  MergeFrom(from);
-}
-
-bool OptionBasicQotExData::IsInitialized() const {
-  if ((_has_bits_[0] & 0x000003ff) != 0x000003ff) return false;
-  return true;
-}
-
-void OptionBasicQotExData::Swap(OptionBasicQotExData* other) {
-  if (other == this) return;
-  InternalSwap(other);
-}
-void OptionBasicQotExData::InternalSwap(OptionBasicQotExData* other) {
-  using std::swap;
-  swap(strikeprice_, other->strikeprice_);
-  swap(contractsize_, other->contractsize_);
-  swap(openinterest_, other->openinterest_);
-  swap(impliedvolatility_, other->impliedvolatility_);
-  swap(premium_, other->premium_);
-  swap(delta_, other->delta_);
-  swap(gamma_, other->gamma_);
-  swap(vega_, other->vega_);
-  swap(theta_, other->theta_);
-  swap(rho_, other->rho_);
-  swap(netopeninterest_, other->netopeninterest_);
-  swap(expirydatedistance_, other->expirydatedistance_);
-  swap(contractnominalvalue_, other->contractnominalvalue_);
-  swap(ownerlotmultiplier_, other->ownerlotmultiplier_);
-  swap(contractmultiplier_, other->contractmultiplier_);
-  swap(optionareatype_, other->optionareatype_);
-  swap(indexoptiontype_, other->indexoptiontype_);
-  swap(contractsizefloat_, other->contractsizefloat_);
-  swap(_has_bits_[0], other->_has_bits_[0]);
-  _internal_metadata_.Swap(&other->_internal_metadata_);
-  swap(_cached_size_, other->_cached_size_);
-}
-
-::google::protobuf::Metadata OptionBasicQotExData::GetMetadata() const {
-  protobuf_Qot_5fCommon_2eproto::protobuf_AssignDescriptorsOnce();
-  return ::protobuf_Qot_5fCommon_2eproto::file_level_metadata[kIndexInFileMessages];
-}
-
-
-// ===================================================================
-
-void PreAfterMarketData::InitAsDefaultInstance() {
-}
-#if !defined(_MSC_VER) || _MSC_VER >= 1900
-const int PreAfterMarketData::kPriceFieldNumber;
-const int PreAfterMarketData::kHighPriceFieldNumber;
-const int PreAfterMarketData::kLowPriceFieldNumber;
-const int PreAfterMarketData::kVolumeFieldNumber;
-const int PreAfterMarketData::kTurnoverFieldNumber;
-const int PreAfterMarketData::kChangeValFieldNumber;
-const int PreAfterMarketData::kChangeRateFieldNumber;
-const int PreAfterMarketData::kAmplitudeFieldNumber;
-#endif  // !defined(_MSC_VER) || _MSC_VER >= 1900
-
-PreAfterMarketData::PreAfterMarketData()
-  : ::google::protobuf::Message(), _internal_metadata_(NULL) {
-  if (GOOGLE_PREDICT_TRUE(this != internal_default_instance())) {
-    ::protobuf_Qot_5fCommon_2eproto::InitDefaultsPreAfterMarketData();
-  }
-  SharedCtor();
-  // @@protoc_insertion_point(constructor:Qot_Common.PreAfterMarketData)
-}
-PreAfterMarketData::PreAfterMarketData(const PreAfterMarketData& from)
-  : ::google::protobuf::Message(),
-      _internal_metadata_(NULL),
-      _has_bits_(from._has_bits_),
-      _cached_size_(0) {
-  _internal_metadata_.MergeFrom(from._internal_metadata_);
-  ::memcpy(&price_, &from.price_,
-    static_cast<size_t>(reinterpret_cast<char*>(&amplitude_) -
-    reinterpret_cast<char*>(&price_)) + sizeof(amplitude_));
-  // @@protoc_insertion_point(copy_constructor:Qot_Common.PreAfterMarketData)
-}
-
-void PreAfterMarketData::SharedCtor() {
-  _cached_size_ = 0;
-  ::memset(&price_, 0, static_cast<size_t>(
-      reinterpret_cast<char*>(&amplitude_) -
-      reinterpret_cast<char*>(&price_)) + sizeof(amplitude_));
-}
-
-PreAfterMarketData::~PreAfterMarketData() {
-  // @@protoc_insertion_point(destructor:Qot_Common.PreAfterMarketData)
-  SharedDtor();
-}
-
-void PreAfterMarketData::SharedDtor() {
-}
-
-void PreAfterMarketData::SetCachedSize(int size) const {
-  GOOGLE_SAFE_CONCURRENT_WRITES_BEGIN();
-  _cached_size_ = size;
-  GOOGLE_SAFE_CONCURRENT_WRITES_END();
-}
-const ::google::protobuf::Descriptor* PreAfterMarketData::descriptor() {
-  ::protobuf_Qot_5fCommon_2eproto::protobuf_AssignDescriptorsOnce();
-  return ::protobuf_Qot_5fCommon_2eproto::file_level_metadata[kIndexInFileMessages].descriptor;
-}
-
-const PreAfterMarketData& PreAfterMarketData::default_instance() {
-  ::protobuf_Qot_5fCommon_2eproto::InitDefaultsPreAfterMarketData();
-  return *internal_default_instance();
-}
-
-PreAfterMarketData* PreAfterMarketData::New(::google::protobuf::Arena* arena) const {
-  PreAfterMarketData* n = new PreAfterMarketData;
-  if (arena != NULL) {
-    arena->Own(n);
-  }
-  return n;
-}
-
-void PreAfterMarketData::Clear() {
-// @@protoc_insertion_point(message_clear_start:Qot_Common.PreAfterMarketData)
-  ::google::protobuf::uint32 cached_has_bits = 0;
-  // Prevent compiler warnings about cached_has_bits being unused
-  (void) cached_has_bits;
-
-  cached_has_bits = _has_bits_[0];
-  if (cached_has_bits & 255u) {
-    ::memset(&price_, 0, static_cast<size_t>(
-        reinterpret_cast<char*>(&amplitude_) -
-        reinterpret_cast<char*>(&price_)) + sizeof(amplitude_));
-  }
-  _has_bits_.Clear();
-  _internal_metadata_.Clear();
-}
-
-bool PreAfterMarketData::MergePartialFromCodedStream(
-    ::google::protobuf::io::CodedInputStream* input) {
-#define DO_(EXPRESSION) if (!GOOGLE_PREDICT_TRUE(EXPRESSION)) goto failure
-  ::google::protobuf::uint32 tag;
-  // @@protoc_insertion_point(parse_start:Qot_Common.PreAfterMarketData)
-  for (;;) {
-    ::std::pair< ::google::protobuf::uint32, bool> p = input->ReadTagWithCutoffNoLastTag(127u);
-    tag = p.first;
-    if (!p.second) goto handle_unusual;
-    switch (::google::protobuf::internal::WireFormatLite::GetTagFieldNumber(tag)) {
-      // optional double price = 1;
-      case 1: {
-        if (static_cast< ::google::protobuf::uint8>(tag) ==
-            static_cast< ::google::protobuf::uint8>(9u /* 9 & 0xFF */)) {
-          set_has_price();
-          DO_((::google::protobuf::internal::WireFormatLite::ReadPrimitive<
-                   double, ::google::protobuf::internal::WireFormatLite::TYPE_DOUBLE>(
-                 input, &price_)));
-        } else {
-          goto handle_unusual;
-        }
-        break;
-      }
-
-      // optional double highPrice = 2;
-      case 2: {
-        if (static_cast< ::google::protobuf::uint8>(tag) ==
-            static_cast< ::google::protobuf::uint8>(17u /* 17 & 0xFF */)) {
-          set_has_highprice();
-          DO_((::google::protobuf::internal::WireFormatLite::ReadPrimitive<
-                   double, ::google::protobuf::internal::WireFormatLite::TYPE_DOUBLE>(
-                 input, &highprice_)));
-        } else {
-          goto handle_unusual;
-        }
-        break;
-      }
-
-      // optional double lowPrice = 3;
-      case 3: {
-        if (static_cast< ::google::protobuf::uint8>(tag) ==
-            static_cast< ::google::protobuf::uint8>(25u /* 25 & 0xFF */)) {
-          set_has_lowprice();
-          DO_((::google::protobuf::internal::WireFormatLite::ReadPrimitive<
-                   double, ::google::protobuf::internal::WireFormatLite::TYPE_DOUBLE>(
-                 input, &lowprice_)));
-        } else {
-          goto handle_unusual;
-        }
-        break;
-      }
-
-      // optional int64 volume = 4;
-      case 4: {
-        if (static_cast< ::google::protobuf::uint8>(tag) ==
-            static_cast< ::google::protobuf::uint8>(32u /* 32 & 0xFF */)) {
-          set_has_volume();
-          DO_((::google::protobuf::internal::WireFormatLite::ReadPrimitive<
-                   ::google::protobuf::int64, ::google::protobuf::internal::WireFormatLite::TYPE_INT64>(
-                 input, &volume_)));
-        } else {
-          goto handle_unusual;
-        }
-        break;
-      }
-
-      // optional double turnover = 5;
-      case 5: {
-        if (static_cast< ::google::protobuf::uint8>(tag) ==
-            static_cast< ::google::protobuf::uint8>(41u /* 41 & 0xFF */)) {
-          set_has_turnover();
-          DO_((::google::protobuf::internal::WireFormatLite::ReadPrimitive<
-                   double, ::google::protobuf::internal::WireFormatLite::TYPE_DOUBLE>(
-                 input, &turnover_)));
-        } else {
-          goto handle_unusual;
-        }
-        break;
-      }
-
-      // optional double changeVal = 6;
-      case 6: {
-        if (static_cast< ::google::protobuf::uint8>(tag) ==
-            static_cast< ::google::protobuf::uint8>(49u /* 49 & 0xFF */)) {
-          set_has_changeval();
-          DO_((::google::protobuf::internal::WireFormatLite::ReadPrimitive<
-                   double, ::google::protobuf::internal::WireFormatLite::TYPE_DOUBLE>(
-                 input, &changeval_)));
-        } else {
-          goto handle_unusual;
-        }
-        break;
-      }
-
-      // optional double changeRate = 7;
-      case 7: {
-        if (static_cast< ::google::protobuf::uint8>(tag) ==
-            static_cast< ::google::protobuf::uint8>(57u /* 57 & 0xFF */)) {
-          set_has_changerate();
-          DO_((::google::protobuf::internal::WireFormatLite::ReadPrimitive<
-                   double, ::google::protobuf::internal::WireFormatLite::TYPE_DOUBLE>(
-                 input, &changerate_)));
-        } else {
-          goto handle_unusual;
-        }
-        break;
-      }
-
-      // optional double amplitude = 8;
-      case 8: {
-        if (static_cast< ::google::protobuf::uint8>(tag) ==
-            static_cast< ::google::protobuf::uint8>(65u /* 65 & 0xFF */)) {
-          set_has_amplitude();
-          DO_((::google::protobuf::internal::WireFormatLite::ReadPrimitive<
-                   double, ::google::protobuf::internal::WireFormatLite::TYPE_DOUBLE>(
-                 input, &amplitude_)));
-        } else {
-          goto handle_unusual;
-        }
-        break;
-      }
-
-      default: {
-      handle_unusual:
-        if (tag == 0) {
-          goto success;
-        }
-        DO_(::google::protobuf::internal::WireFormat::SkipField(
-              input, tag, _internal_metadata_.mutable_unknown_fields()));
-        break;
-      }
-    }
-  }
-success:
-  // @@protoc_insertion_point(parse_success:Qot_Common.PreAfterMarketData)
-  return true;
-failure:
-  // @@protoc_insertion_point(parse_failure:Qot_Common.PreAfterMarketData)
-  return false;
-#undef DO_
-}
-
-void PreAfterMarketData::SerializeWithCachedSizes(
-    ::google::protobuf::io::CodedOutputStream* output) const {
-  // @@protoc_insertion_point(serialize_start:Qot_Common.PreAfterMarketData)
-  ::google::protobuf::uint32 cached_has_bits = 0;
-  (void) cached_has_bits;
-
-  cached_has_bits = _has_bits_[0];
-  // optional double price = 1;
-  if (cached_has_bits & 0x00000001u) {
-    ::google::protobuf::internal::WireFormatLite::WriteDouble(1, this->price(), output);
-  }
-
-  // optional double highPrice = 2;
-  if (cached_has_bits & 0x00000002u) {
-    ::google::protobuf::internal::WireFormatLite::WriteDouble(2, this->highprice(), output);
-  }
-
-  // optional double lowPrice = 3;
-  if (cached_has_bits & 0x00000004u) {
-    ::google::protobuf::internal::WireFormatLite::WriteDouble(3, this->lowprice(), output);
-  }
-
-  // optional int64 volume = 4;
-  if (cached_has_bits & 0x00000008u) {
-    ::google::protobuf::internal::WireFormatLite::WriteInt64(4, this->volume(), output);
-  }
-
-  // optional double turnover = 5;
-  if (cached_has_bits & 0x00000010u) {
-    ::google::protobuf::internal::WireFormatLite::WriteDouble(5, this->turnover(), output);
-  }
-
-  // optional double changeVal = 6;
-  if (cached_has_bits & 0x00000020u) {
-    ::google::protobuf::internal::WireFormatLite::WriteDouble(6, this->changeval(), output);
-  }
-
-  // optional double changeRate = 7;
-  if (cached_has_bits & 0x00000040u) {
-    ::google::protobuf::internal::WireFormatLite::WriteDouble(7, this->changerate(), output);
-  }
-
-  // optional double amplitude = 8;
-  if (cached_has_bits & 0x00000080u) {
-    ::google::protobuf::internal::WireFormatLite::WriteDouble(8, this->amplitude(), output);
-  }
-
-  if (_internal_metadata_.have_unknown_fields()) {
-    ::google::protobuf::internal::WireFormat::SerializeUnknownFields(
-        _internal_metadata_.unknown_fields(), output);
-  }
-  // @@protoc_insertion_point(serialize_end:Qot_Common.PreAfterMarketData)
-}
-
-::google::protobuf::uint8* PreAfterMarketData::InternalSerializeWithCachedSizesToArray(
-    bool deterministic, ::google::protobuf::uint8* target) const {
-  (void)deterministic; // Unused
-  // @@protoc_insertion_point(serialize_to_array_start:Qot_Common.PreAfterMarketData)
-  ::google::protobuf::uint32 cached_has_bits = 0;
-  (void) cached_has_bits;
-
-  cached_has_bits = _has_bits_[0];
-  // optional double price = 1;
-  if (cached_has_bits & 0x00000001u) {
-    target = ::google::protobuf::internal::WireFormatLite::WriteDoubleToArray(1, this->price(), target);
-  }
-
-  // optional double highPrice = 2;
-  if (cached_has_bits & 0x00000002u) {
-    target = ::google::protobuf::internal::WireFormatLite::WriteDoubleToArray(2, this->highprice(), target);
-  }
-
-  // optional double lowPrice = 3;
-  if (cached_has_bits & 0x00000004u) {
-    target = ::google::protobuf::internal::WireFormatLite::WriteDoubleToArray(3, this->lowprice(), target);
-  }
-
-  // optional int64 volume = 4;
-  if (cached_has_bits & 0x00000008u) {
-    target = ::google::protobuf::internal::WireFormatLite::WriteInt64ToArray(4, this->volume(), target);
-  }
-
-  // optional double turnover = 5;
-  if (cached_has_bits & 0x00000010u) {
-    target = ::google::protobuf::internal::WireFormatLite::WriteDoubleToArray(5, this->turnover(), target);
-  }
-
-  // optional double changeVal = 6;
-  if (cached_has_bits & 0x00000020u) {
-    target = ::google::protobuf::internal::WireFormatLite::WriteDoubleToArray(6, this->changeval(), target);
-  }
-
-  // optional double changeRate = 7;
-  if (cached_has_bits & 0x00000040u) {
-    target = ::google::protobuf::internal::WireFormatLite::WriteDoubleToArray(7, this->changerate(), target);
-  }
-
-  // optional double amplitude = 8;
-  if (cached_has_bits & 0x00000080u) {
-    target = ::google::protobuf::internal::WireFormatLite::WriteDoubleToArray(8, this->amplitude(), target);
-  }
-
-  if (_internal_metadata_.have_unknown_fields()) {
-    target = ::google::protobuf::internal::WireFormat::SerializeUnknownFieldsToArray(
-        _internal_metadata_.unknown_fields(), target);
-  }
-  // @@protoc_insertion_point(serialize_to_array_end:Qot_Common.PreAfterMarketData)
-  return target;
-}
-
-size_t PreAfterMarketData::ByteSizeLong() const {
-// @@protoc_insertion_point(message_byte_size_start:Qot_Common.PreAfterMarketData)
-  size_t total_size = 0;
-
-  if (_internal_metadata_.have_unknown_fields()) {
-    total_size +=
-      ::google::protobuf::internal::WireFormat::ComputeUnknownFieldsSize(
-        _internal_metadata_.unknown_fields());
-  }
-  if (_has_bits_[0 / 32] & 255u) {
-    // optional double price = 1;
-    if (has_price()) {
-      total_size += 1 + 8;
-    }
-
-    // optional double highPrice = 2;
-    if (has_highprice()) {
-      total_size += 1 + 8;
-    }
-
-    // optional double lowPrice = 3;
-    if (has_lowprice()) {
-      total_size += 1 + 8;
-    }
-
-    // optional int64 volume = 4;
-    if (has_volume()) {
-      total_size += 1 +
-        ::google::protobuf::internal::WireFormatLite::Int64Size(
-          this->volume());
-    }
-
-    // optional double turnover = 5;
-    if (has_turnover()) {
-      total_size += 1 + 8;
-    }
-
-    // optional double changeVal = 6;
-    if (has_changeval()) {
-      total_size += 1 + 8;
-    }
-
-    // optional double changeRate = 7;
-    if (has_changerate()) {
-      total_size += 1 + 8;
-    }
-
-    // optional double amplitude = 8;
-    if (has_amplitude()) {
-      total_size += 1 + 8;
-    }
-
-  }
-  int cached_size = ::google::protobuf::internal::ToCachedSize(total_size);
-  GOOGLE_SAFE_CONCURRENT_WRITES_BEGIN();
-  _cached_size_ = cached_size;
-  GOOGLE_SAFE_CONCURRENT_WRITES_END();
-  return total_size;
-}
-
-void PreAfterMarketData::MergeFrom(const ::google::protobuf::Message& from) {
-// @@protoc_insertion_point(generalized_merge_from_start:Qot_Common.PreAfterMarketData)
-  GOOGLE_DCHECK_NE(&from, this);
-  const PreAfterMarketData* source =
-      ::google::protobuf::internal::DynamicCastToGenerated<const PreAfterMarketData>(
-          &from);
-  if (source == NULL) {
-  // @@protoc_insertion_point(generalized_merge_from_cast_fail:Qot_Common.PreAfterMarketData)
-    ::google::protobuf::internal::ReflectionOps::Merge(from, this);
-  } else {
-  // @@protoc_insertion_point(generalized_merge_from_cast_success:Qot_Common.PreAfterMarketData)
-    MergeFrom(*source);
-  }
-}
-
-void PreAfterMarketData::MergeFrom(const PreAfterMarketData& from) {
-// @@protoc_insertion_point(class_specific_merge_from_start:Qot_Common.PreAfterMarketData)
-  GOOGLE_DCHECK_NE(&from, this);
-  _internal_metadata_.MergeFrom(from._internal_metadata_);
-  ::google::protobuf::uint32 cached_has_bits = 0;
-  (void) cached_has_bits;
-
-  cached_has_bits = from._has_bits_[0];
-  if (cached_has_bits & 255u) {
-    if (cached_has_bits & 0x00000001u) {
-      price_ = from.price_;
-    }
-    if (cached_has_bits & 0x00000002u) {
-      highprice_ = from.highprice_;
-    }
-    if (cached_has_bits & 0x00000004u) {
-      lowprice_ = from.lowprice_;
-    }
-    if (cached_has_bits & 0x00000008u) {
-      volume_ = from.volume_;
-    }
-    if (cached_has_bits & 0x00000010u) {
-      turnover_ = from.turnover_;
-    }
-    if (cached_has_bits & 0x00000020u) {
-      changeval_ = from.changeval_;
-    }
-    if (cached_has_bits & 0x00000040u) {
-      changerate_ = from.changerate_;
-    }
-    if (cached_has_bits & 0x00000080u) {
-      amplitude_ = from.amplitude_;
-    }
-    _has_bits_[0] |= cached_has_bits;
-  }
-}
-
-void PreAfterMarketData::CopyFrom(const ::google::protobuf::Message& from) {
-// @@protoc_insertion_point(generalized_copy_from_start:Qot_Common.PreAfterMarketData)
-  if (&from == this) return;
-  Clear();
-  MergeFrom(from);
-}
-
-void PreAfterMarketData::CopyFrom(const PreAfterMarketData& from) {
-// @@protoc_insertion_point(class_specific_copy_from_start:Qot_Common.PreAfterMarketData)
-  if (&from == this) return;
-  Clear();
-  MergeFrom(from);
-}
-
-bool PreAfterMarketData::IsInitialized() const {
-  return true;
-}
-
-void PreAfterMarketData::Swap(PreAfterMarketData* other) {
-  if (other == this) return;
-  InternalSwap(other);
-}
-void PreAfterMarketData::InternalSwap(PreAfterMarketData* other) {
-  using std::swap;
-  swap(price_, other->price_);
-  swap(highprice_, other->highprice_);
-  swap(lowprice_, other->lowprice_);
-  swap(volume_, other->volume_);
-  swap(turnover_, other->turnover_);
-  swap(changeval_, other->changeval_);
-  swap(changerate_, other->changerate_);
-  swap(amplitude_, other->amplitude_);
-  swap(_has_bits_[0], other->_has_bits_[0]);
-  _internal_metadata_.Swap(&other->_internal_metadata_);
-  swap(_cached_size_, other->_cached_size_);
-}
-
-::google::protobuf::Metadata PreAfterMarketData::GetMetadata() const {
-  protobuf_Qot_5fCommon_2eproto::protobuf_AssignDescriptorsOnce();
-  return ::protobuf_Qot_5fCommon_2eproto::file_level_metadata[kIndexInFileMessages];
-}
-
-
-// ===================================================================
-
-void FutureBasicQotExData::InitAsDefaultInstance() {
-}
-#if !defined(_MSC_VER) || _MSC_VER >= 1900
-const int FutureBasicQotExData::kLastSettlePriceFieldNumber;
-const int FutureBasicQotExData::kPositionFieldNumber;
-const int FutureBasicQotExData::kPositionChangeFieldNumber;
-const int FutureBasicQotExData::kExpiryDateDistanceFieldNumber;
-#endif  // !defined(_MSC_VER) || _MSC_VER >= 1900
-
-FutureBasicQotExData::FutureBasicQotExData()
-  : ::google::protobuf::Message(), _internal_metadata_(NULL) {
-  if (GOOGLE_PREDICT_TRUE(this != internal_default_instance())) {
-    ::protobuf_Qot_5fCommon_2eproto::InitDefaultsFutureBasicQotExData();
-  }
-  SharedCtor();
-  // @@protoc_insertion_point(constructor:Qot_Common.FutureBasicQotExData)
-}
-FutureBasicQotExData::FutureBasicQotExData(const FutureBasicQotExData& from)
-  : ::google::protobuf::Message(),
-      _internal_metadata_(NULL),
-      _has_bits_(from._has_bits_),
-      _cached_size_(0) {
-  _internal_metadata_.MergeFrom(from._internal_metadata_);
-  ::memcpy(&lastsettleprice_, &from.lastsettleprice_,
-    static_cast<size_t>(reinterpret_cast<char*>(&expirydatedistance_) -
-    reinterpret_cast<char*>(&lastsettleprice_)) + sizeof(expirydatedistance_));
-  // @@protoc_insertion_point(copy_constructor:Qot_Common.FutureBasicQotExData)
-}
-
-void FutureBasicQotExData::SharedCtor() {
-  _cached_size_ = 0;
-  ::memset(&lastsettleprice_, 0, static_cast<size_t>(
-      reinterpret_cast<char*>(&expirydatedistance_) -
-      reinterpret_cast<char*>(&lastsettleprice_)) + sizeof(expirydatedistance_));
-}
-
-FutureBasicQotExData::~FutureBasicQotExData() {
-  // @@protoc_insertion_point(destructor:Qot_Common.FutureBasicQotExData)
-  SharedDtor();
-}
-
-void FutureBasicQotExData::SharedDtor() {
-}
-
-void FutureBasicQotExData::SetCachedSize(int size) const {
-  GOOGLE_SAFE_CONCURRENT_WRITES_BEGIN();
-  _cached_size_ = size;
-  GOOGLE_SAFE_CONCURRENT_WRITES_END();
-}
-const ::google::protobuf::Descriptor* FutureBasicQotExData::descriptor() {
-  ::protobuf_Qot_5fCommon_2eproto::protobuf_AssignDescriptorsOnce();
-  return ::protobuf_Qot_5fCommon_2eproto::file_level_metadata[kIndexInFileMessages].descriptor;
-}
-
-const FutureBasicQotExData& FutureBasicQotExData::default_instance() {
-  ::protobuf_Qot_5fCommon_2eproto::InitDefaultsFutureBasicQotExData();
-  return *internal_default_instance();
-}
-
-FutureBasicQotExData* FutureBasicQotExData::New(::google::protobuf::Arena* arena) const {
-  FutureBasicQotExData* n = new FutureBasicQotExData;
-  if (arena != NULL) {
-    arena->Own(n);
-  }
-  return n;
-}
-
-void FutureBasicQotExData::Clear() {
-// @@protoc_insertion_point(message_clear_start:Qot_Common.FutureBasicQotExData)
-  ::google::protobuf::uint32 cached_has_bits = 0;
-  // Prevent compiler warnings about cached_has_bits being unused
-  (void) cached_has_bits;
-
-  cached_has_bits = _has_bits_[0];
-  if (cached_has_bits & 15u) {
-    ::memset(&lastsettleprice_, 0, static_cast<size_t>(
-        reinterpret_cast<char*>(&expirydatedistance_) -
-        reinterpret_cast<char*>(&lastsettleprice_)) + sizeof(expirydatedistance_));
-  }
-  _has_bits_.Clear();
-  _internal_metadata_.Clear();
-}
-
-bool FutureBasicQotExData::MergePartialFromCodedStream(
-    ::google::protobuf::io::CodedInputStream* input) {
-#define DO_(EXPRESSION) if (!GOOGLE_PREDICT_TRUE(EXPRESSION)) goto failure
-  ::google::protobuf::uint32 tag;
-  // @@protoc_insertion_point(parse_start:Qot_Common.FutureBasicQotExData)
-  for (;;) {
-    ::std::pair< ::google::protobuf::uint32, bool> p = input->ReadTagWithCutoffNoLastTag(127u);
-    tag = p.first;
-    if (!p.second) goto handle_unusual;
-    switch (::google::protobuf::internal::WireFormatLite::GetTagFieldNumber(tag)) {
-      // required double lastSettlePrice = 1;
-      case 1: {
-        if (static_cast< ::google::protobuf::uint8>(tag) ==
-            static_cast< ::google::protobuf::uint8>(9u /* 9 & 0xFF */)) {
-          set_has_lastsettleprice();
-          DO_((::google::protobuf::internal::WireFormatLite::ReadPrimitive<
-                   double, ::google::protobuf::internal::WireFormatLite::TYPE_DOUBLE>(
-                 input, &lastsettleprice_)));
-        } else {
-          goto handle_unusual;
-        }
-        break;
-      }
-
-      // required int32 position = 2;
-      case 2: {
-        if (static_cast< ::google::protobuf::uint8>(tag) ==
-            static_cast< ::google::protobuf::uint8>(16u /* 16 & 0xFF */)) {
-          set_has_position();
-          DO_((::google::protobuf::internal::WireFormatLite::ReadPrimitive<
-                   ::google::protobuf::int32, ::google::protobuf::internal::WireFormatLite::TYPE_INT32>(
-                 input, &position_)));
-        } else {
-          goto handle_unusual;
-        }
-        break;
-      }
-
-      // required int32 positionChange = 3;
-      case 3: {
-        if (static_cast< ::google::protobuf::uint8>(tag) ==
-            static_cast< ::google::protobuf::uint8>(24u /* 24 & 0xFF */)) {
-          set_has_positionchange();
-          DO_((::google::protobuf::internal::WireFormatLite::ReadPrimitive<
-                   ::google::protobuf::int32, ::google::protobuf::internal::WireFormatLite::TYPE_INT32>(
-                 input, &positionchange_)));
-        } else {
-          goto handle_unusual;
-        }
-        break;
-      }
-
-      // optional int32 expiryDateDistance = 4;
-      case 4: {
-        if (static_cast< ::google::protobuf::uint8>(tag) ==
-            static_cast< ::google::protobuf::uint8>(32u /* 32 & 0xFF */)) {
-          set_has_expirydatedistance();
-          DO_((::google::protobuf::internal::WireFormatLite::ReadPrimitive<
-                   ::google::protobuf::int32, ::google::protobuf::internal::WireFormatLite::TYPE_INT32>(
-                 input, &expirydatedistance_)));
-        } else {
-          goto handle_unusual;
-        }
-        break;
-      }
-
-      default: {
-      handle_unusual:
-        if (tag == 0) {
-          goto success;
-        }
-        DO_(::google::protobuf::internal::WireFormat::SkipField(
-              input, tag, _internal_metadata_.mutable_unknown_fields()));
-        break;
-      }
-    }
-  }
-success:
-  // @@protoc_insertion_point(parse_success:Qot_Common.FutureBasicQotExData)
-  return true;
-failure:
-  // @@protoc_insertion_point(parse_failure:Qot_Common.FutureBasicQotExData)
-  return false;
-#undef DO_
-}
-
-void FutureBasicQotExData::SerializeWithCachedSizes(
-    ::google::protobuf::io::CodedOutputStream* output) const {
-  // @@protoc_insertion_point(serialize_start:Qot_Common.FutureBasicQotExData)
-  ::google::protobuf::uint32 cached_has_bits = 0;
-  (void) cached_has_bits;
-
-  cached_has_bits = _has_bits_[0];
-  // required double lastSettlePrice = 1;
-  if (cached_has_bits & 0x00000001u) {
-    ::google::protobuf::internal::WireFormatLite::WriteDouble(1, this->lastsettleprice(), output);
-  }
-
-  // required int32 position = 2;
-  if (cached_has_bits & 0x00000002u) {
-    ::google::protobuf::internal::WireFormatLite::WriteInt32(2, this->position(), output);
-  }
-
-  // required int32 positionChange = 3;
-  if (cached_has_bits & 0x00000004u) {
-    ::google::protobuf::internal::WireFormatLite::WriteInt32(3, this->positionchange(), output);
-  }
-
-  // optional int32 expiryDateDistance = 4;
-  if (cached_has_bits & 0x00000008u) {
-    ::google::protobuf::internal::WireFormatLite::WriteInt32(4, this->expirydatedistance(), output);
-  }
-
-  if (_internal_metadata_.have_unknown_fields()) {
-    ::google::protobuf::internal::WireFormat::SerializeUnknownFields(
-        _internal_metadata_.unknown_fields(), output);
-  }
-  // @@protoc_insertion_point(serialize_end:Qot_Common.FutureBasicQotExData)
-}
-
-::google::protobuf::uint8* FutureBasicQotExData::InternalSerializeWithCachedSizesToArray(
-    bool deterministic, ::google::protobuf::uint8* target) const {
-  (void)deterministic; // Unused
-  // @@protoc_insertion_point(serialize_to_array_start:Qot_Common.FutureBasicQotExData)
-  ::google::protobuf::uint32 cached_has_bits = 0;
-  (void) cached_has_bits;
-
-  cached_has_bits = _has_bits_[0];
-  // required double lastSettlePrice = 1;
-  if (cached_has_bits & 0x00000001u) {
-    target = ::google::protobuf::internal::WireFormatLite::WriteDoubleToArray(1, this->lastsettleprice(), target);
-  }
-
-  // required int32 position = 2;
-  if (cached_has_bits & 0x00000002u) {
-    target = ::google::protobuf::internal::WireFormatLite::WriteInt32ToArray(2, this->position(), target);
-  }
-
-  // required int32 positionChange = 3;
-  if (cached_has_bits & 0x00000004u) {
-    target = ::google::protobuf::internal::WireFormatLite::WriteInt32ToArray(3, this->positionchange(), target);
-  }
-
-  // optional int32 expiryDateDistance = 4;
-  if (cached_has_bits & 0x00000008u) {
-    target = ::google::protobuf::internal::WireFormatLite::WriteInt32ToArray(4, this->expirydatedistance(), target);
-  }
-
-  if (_internal_metadata_.have_unknown_fields()) {
-    target = ::google::protobuf::internal::WireFormat::SerializeUnknownFieldsToArray(
-        _internal_metadata_.unknown_fields(), target);
-  }
-  // @@protoc_insertion_point(serialize_to_array_end:Qot_Common.FutureBasicQotExData)
-  return target;
-}
-
-size_t FutureBasicQotExData::RequiredFieldsByteSizeFallback() const {
-// @@protoc_insertion_point(required_fields_byte_size_fallback_start:Qot_Common.FutureBasicQotExData)
-  size_t total_size = 0;
-
-  if (has_lastsettleprice()) {
-    // required double lastSettlePrice = 1;
-    total_size += 1 + 8;
-  }
-
-  if (has_position()) {
-    // required int32 position = 2;
-    total_size += 1 +
-      ::google::protobuf::internal::WireFormatLite::Int32Size(
-        this->position());
-  }
-
-  if (has_positionchange()) {
-    // required int32 positionChange = 3;
-    total_size += 1 +
-      ::google::protobuf::internal::WireFormatLite::Int32Size(
-        this->positionchange());
-  }
-
-  return total_size;
-}
-size_t FutureBasicQotExData::ByteSizeLong() const {
-// @@protoc_insertion_point(message_byte_size_start:Qot_Common.FutureBasicQotExData)
-  size_t total_size = 0;
-
-  if (_internal_metadata_.have_unknown_fields()) {
-    total_size +=
-      ::google::protobuf::internal::WireFormat::ComputeUnknownFieldsSize(
-        _internal_metadata_.unknown_fields());
-  }
-  if (((_has_bits_[0] & 0x00000007) ^ 0x00000007) == 0) {  // All required fields are present.
-    // required double lastSettlePrice = 1;
-    total_size += 1 + 8;
-
-    // required int32 position = 2;
-    total_size += 1 +
-      ::google::protobuf::internal::WireFormatLite::Int32Size(
-        this->position());
-
-    // required int32 positionChange = 3;
-    total_size += 1 +
-      ::google::protobuf::internal::WireFormatLite::Int32Size(
-        this->positionchange());
-
-  } else {
-    total_size += RequiredFieldsByteSizeFallback();
-  }
-  // optional int32 expiryDateDistance = 4;
-  if (has_expirydatedistance()) {
-    total_size += 1 +
-      ::google::protobuf::internal::WireFormatLite::Int32Size(
-        this->expirydatedistance());
-  }
-
-  int cached_size = ::google::protobuf::internal::ToCachedSize(total_size);
-  GOOGLE_SAFE_CONCURRENT_WRITES_BEGIN();
-  _cached_size_ = cached_size;
-  GOOGLE_SAFE_CONCURRENT_WRITES_END();
-  return total_size;
-}
-
-void FutureBasicQotExData::MergeFrom(const ::google::protobuf::Message& from) {
-// @@protoc_insertion_point(generalized_merge_from_start:Qot_Common.FutureBasicQotExData)
-  GOOGLE_DCHECK_NE(&from, this);
-  const FutureBasicQotExData* source =
-      ::google::protobuf::internal::DynamicCastToGenerated<const FutureBasicQotExData>(
-          &from);
-  if (source == NULL) {
-  // @@protoc_insertion_point(generalized_merge_from_cast_fail:Qot_Common.FutureBasicQotExData)
-    ::google::protobuf::internal::ReflectionOps::Merge(from, this);
-  } else {
-  // @@protoc_insertion_point(generalized_merge_from_cast_success:Qot_Common.FutureBasicQotExData)
-    MergeFrom(*source);
-  }
-}
-
-void FutureBasicQotExData::MergeFrom(const FutureBasicQotExData& from) {
-// @@protoc_insertion_point(class_specific_merge_from_start:Qot_Common.FutureBasicQotExData)
-  GOOGLE_DCHECK_NE(&from, this);
-  _internal_metadata_.MergeFrom(from._internal_metadata_);
-  ::google::protobuf::uint32 cached_has_bits = 0;
-  (void) cached_has_bits;
-
-  cached_has_bits = from._has_bits_[0];
-  if (cached_has_bits & 15u) {
-    if (cached_has_bits & 0x00000001u) {
-      lastsettleprice_ = from.lastsettleprice_;
-    }
-    if (cached_has_bits & 0x00000002u) {
-      position_ = from.position_;
-    }
-    if (cached_has_bits & 0x00000004u) {
-      positionchange_ = from.positionchange_;
-    }
-    if (cached_has_bits & 0x00000008u) {
-      expirydatedistance_ = from.expirydatedistance_;
-    }
-    _has_bits_[0] |= cached_has_bits;
-  }
-}
-
-void FutureBasicQotExData::CopyFrom(const ::google::protobuf::Message& from) {
-// @@protoc_insertion_point(generalized_copy_from_start:Qot_Common.FutureBasicQotExData)
-  if (&from == this) return;
-  Clear();
-  MergeFrom(from);
-}
-
-void FutureBasicQotExData::CopyFrom(const FutureBasicQotExData& from) {
-// @@protoc_insertion_point(class_specific_copy_from_start:Qot_Common.FutureBasicQotExData)
-  if (&from == this) return;
-  Clear();
-  MergeFrom(from);
-}
-
-bool FutureBasicQotExData::IsInitialized() const {
-  if ((_has_bits_[0] & 0x00000007) != 0x00000007) return false;
-  return true;
-}
-
-void FutureBasicQotExData::Swap(FutureBasicQotExData* other) {
-  if (other == this) return;
-  InternalSwap(other);
-}
-void FutureBasicQotExData::InternalSwap(FutureBasicQotExData* other) {
-  using std::swap;
-  swap(lastsettleprice_, other->lastsettleprice_);
-  swap(position_, other->position_);
-  swap(positionchange_, other->positionchange_);
-  swap(expirydatedistance_, other->expirydatedistance_);
-  swap(_has_bits_[0], other->_has_bits_[0]);
-  _internal_metadata_.Swap(&other->_internal_metadata_);
-  swap(_cached_size_, other->_cached_size_);
-}
-
-::google::protobuf::Metadata FutureBasicQotExData::GetMetadata() const {
-  protobuf_Qot_5fCommon_2eproto::protobuf_AssignDescriptorsOnce();
-  return ::protobuf_Qot_5fCommon_2eproto::file_level_metadata[kIndexInFileMessages];
-}
-
-
-// ===================================================================
-
-void WarrantBasicQotExData::InitAsDefaultInstance() {
-}
-#if !defined(_MSC_VER) || _MSC_VER >= 1900
-const int WarrantBasicQotExData::kDeltaFieldNumber;
-const int WarrantBasicQotExData::kImpliedVolatilityFieldNumber;
-const int WarrantBasicQotExData::kPremiumFieldNumber;
-#endif  // !defined(_MSC_VER) || _MSC_VER >= 1900
-
-WarrantBasicQotExData::WarrantBasicQotExData()
-  : ::google::protobuf::Message(), _internal_metadata_(NULL) {
-  if (GOOGLE_PREDICT_TRUE(this != internal_default_instance())) {
-    ::protobuf_Qot_5fCommon_2eproto::InitDefaultsWarrantBasicQotExData();
-  }
-  SharedCtor();
-  // @@protoc_insertion_point(constructor:Qot_Common.WarrantBasicQotExData)
-}
-WarrantBasicQotExData::WarrantBasicQotExData(const WarrantBasicQotExData& from)
-  : ::google::protobuf::Message(),
-      _internal_metadata_(NULL),
-      _has_bits_(from._has_bits_),
-      _cached_size_(0) {
-  _internal_metadata_.MergeFrom(from._internal_metadata_);
-  ::memcpy(&delta_, &from.delta_,
-    static_cast<size_t>(reinterpret_cast<char*>(&premium_) -
-    reinterpret_cast<char*>(&delta_)) + sizeof(premium_));
-  // @@protoc_insertion_point(copy_constructor:Qot_Common.WarrantBasicQotExData)
-}
-
-void WarrantBasicQotExData::SharedCtor() {
-  _cached_size_ = 0;
-  ::memset(&delta_, 0, static_cast<size_t>(
-      reinterpret_cast<char*>(&premium_) -
-      reinterpret_cast<char*>(&delta_)) + sizeof(premium_));
-}
-
-WarrantBasicQotExData::~WarrantBasicQotExData() {
-  // @@protoc_insertion_point(destructor:Qot_Common.WarrantBasicQotExData)
-  SharedDtor();
-}
-
-void WarrantBasicQotExData::SharedDtor() {
-}
-
-void WarrantBasicQotExData::SetCachedSize(int size) const {
-  GOOGLE_SAFE_CONCURRENT_WRITES_BEGIN();
-  _cached_size_ = size;
-  GOOGLE_SAFE_CONCURRENT_WRITES_END();
-}
-const ::google::protobuf::Descriptor* WarrantBasicQotExData::descriptor() {
-  ::protobuf_Qot_5fCommon_2eproto::protobuf_AssignDescriptorsOnce();
-  return ::protobuf_Qot_5fCommon_2eproto::file_level_metadata[kIndexInFileMessages].descriptor;
-}
-
-const WarrantBasicQotExData& WarrantBasicQotExData::default_instance() {
-  ::protobuf_Qot_5fCommon_2eproto::InitDefaultsWarrantBasicQotExData();
-  return *internal_default_instance();
-}
-
-WarrantBasicQotExData* WarrantBasicQotExData::New(::google::protobuf::Arena* arena) const {
-  WarrantBasicQotExData* n = new WarrantBasicQotExData;
-  if (arena != NULL) {
-    arena->Own(n);
-  }
-  return n;
-}
-
-void WarrantBasicQotExData::Clear() {
-// @@protoc_insertion_point(message_clear_start:Qot_Common.WarrantBasicQotExData)
-  ::google::protobuf::uint32 cached_has_bits = 0;
-  // Prevent compiler warnings about cached_has_bits being unused
-  (void) cached_has_bits;
-
-  cached_has_bits = _has_bits_[0];
-  if (cached_has_bits & 7u) {
-    ::memset(&delta_, 0, static_cast<size_t>(
-        reinterpret_cast<char*>(&premium_) -
-        reinterpret_cast<char*>(&delta_)) + sizeof(premium_));
-  }
-  _has_bits_.Clear();
-  _internal_metadata_.Clear();
-}
-
-bool WarrantBasicQotExData::MergePartialFromCodedStream(
-    ::google::protobuf::io::CodedInputStream* input) {
-#define DO_(EXPRESSION) if (!GOOGLE_PREDICT_TRUE(EXPRESSION)) goto failure
-  ::google::protobuf::uint32 tag;
-  // @@protoc_insertion_point(parse_start:Qot_Common.WarrantBasicQotExData)
-  for (;;) {
-    ::std::pair< ::google::protobuf::uint32, bool> p = input->ReadTagWithCutoffNoLastTag(127u);
-    tag = p.first;
-    if (!p.second) goto handle_unusual;
-    switch (::google::protobuf::internal::WireFormatLite::GetTagFieldNumber(tag)) {
-      // optional double delta = 1;
-      case 1: {
-        if (static_cast< ::google::protobuf::uint8>(tag) ==
-            static_cast< ::google::protobuf::uint8>(9u /* 9 & 0xFF */)) {
-          set_has_delta();
-          DO_((::google::protobuf::internal::WireFormatLite::ReadPrimitive<
-                   double, ::google::protobuf::internal::WireFormatLite::TYPE_DOUBLE>(
-                 input, &delta_)));
-        } else {
-          goto handle_unusual;
-        }
-        break;
-      }
-
-      // optional double impliedVolatility = 2;
-      case 2: {
-        if (static_cast< ::google::protobuf::uint8>(tag) ==
-            static_cast< ::google::protobuf::uint8>(17u /* 17 & 0xFF */)) {
-          set_has_impliedvolatility();
-          DO_((::google::protobuf::internal::WireFormatLite::ReadPrimitive<
-                   double, ::google::protobuf::internal::WireFormatLite::TYPE_DOUBLE>(
-                 input, &impliedvolatility_)));
-        } else {
-          goto handle_unusual;
-        }
-        break;
-      }
-
-      // required double premium = 3;
-      case 3: {
-        if (static_cast< ::google::protobuf::uint8>(tag) ==
-            static_cast< ::google::protobuf::uint8>(25u /* 25 & 0xFF */)) {
-          set_has_premium();
-          DO_((::google::protobuf::internal::WireFormatLite::ReadPrimitive<
-                   double, ::google::protobuf::internal::WireFormatLite::TYPE_DOUBLE>(
-                 input, &premium_)));
-        } else {
-          goto handle_unusual;
-        }
-        break;
-      }
-
-      default: {
-      handle_unusual:
-        if (tag == 0) {
-          goto success;
-        }
-        DO_(::google::protobuf::internal::WireFormat::SkipField(
-              input, tag, _internal_metadata_.mutable_unknown_fields()));
-        break;
-      }
-    }
-  }
-success:
-  // @@protoc_insertion_point(parse_success:Qot_Common.WarrantBasicQotExData)
-  return true;
-failure:
-  // @@protoc_insertion_point(parse_failure:Qot_Common.WarrantBasicQotExData)
-  return false;
-#undef DO_
-}
-
-void WarrantBasicQotExData::SerializeWithCachedSizes(
-    ::google::protobuf::io::CodedOutputStream* output) const {
-  // @@protoc_insertion_point(serialize_start:Qot_Common.WarrantBasicQotExData)
-  ::google::protobuf::uint32 cached_has_bits = 0;
-  (void) cached_has_bits;
-
-  cached_has_bits = _has_bits_[0];
-  // optional double delta = 1;
-  if (cached_has_bits & 0x00000001u) {
-    ::google::protobuf::internal::WireFormatLite::WriteDouble(1, this->delta(), output);
-  }
-
-  // optional double impliedVolatility = 2;
-  if (cached_has_bits & 0x00000002u) {
-    ::google::protobuf::internal::WireFormatLite::WriteDouble(2, this->impliedvolatility(), output);
-  }
-
-  // required double premium = 3;
-  if (cached_has_bits & 0x00000004u) {
-    ::google::protobuf::internal::WireFormatLite::WriteDouble(3, this->premium(), output);
-  }
-
-  if (_internal_metadata_.have_unknown_fields()) {
-    ::google::protobuf::internal::WireFormat::SerializeUnknownFields(
-        _internal_metadata_.unknown_fields(), output);
-  }
-  // @@protoc_insertion_point(serialize_end:Qot_Common.WarrantBasicQotExData)
-}
-
-::google::protobuf::uint8* WarrantBasicQotExData::InternalSerializeWithCachedSizesToArray(
-    bool deterministic, ::google::protobuf::uint8* target) const {
-  (void)deterministic; // Unused
-  // @@protoc_insertion_point(serialize_to_array_start:Qot_Common.WarrantBasicQotExData)
-  ::google::protobuf::uint32 cached_has_bits = 0;
-  (void) cached_has_bits;
-
-  cached_has_bits = _has_bits_[0];
-  // optional double delta = 1;
-  if (cached_has_bits & 0x00000001u) {
-    target = ::google::protobuf::internal::WireFormatLite::WriteDoubleToArray(1, this->delta(), target);
-  }
-
-  // optional double impliedVolatility = 2;
-  if (cached_has_bits & 0x00000002u) {
-    target = ::google::protobuf::internal::WireFormatLite::WriteDoubleToArray(2, this->impliedvolatility(), target);
-  }
-
-  // required double premium = 3;
-  if (cached_has_bits & 0x00000004u) {
-    target = ::google::protobuf::internal::WireFormatLite::WriteDoubleToArray(3, this->premium(), target);
-  }
-
-  if (_internal_metadata_.have_unknown_fields()) {
-    target = ::google::protobuf::internal::WireFormat::SerializeUnknownFieldsToArray(
-        _internal_metadata_.unknown_fields(), target);
-  }
-  // @@protoc_insertion_point(serialize_to_array_end:Qot_Common.WarrantBasicQotExData)
-  return target;
-}
-
-size_t WarrantBasicQotExData::ByteSizeLong() const {
-// @@protoc_insertion_point(message_byte_size_start:Qot_Common.WarrantBasicQotExData)
-  size_t total_size = 0;
-
-  if (_internal_metadata_.have_unknown_fields()) {
-    total_size +=
-      ::google::protobuf::internal::WireFormat::ComputeUnknownFieldsSize(
-        _internal_metadata_.unknown_fields());
-  }
-  // required double premium = 3;
-  if (has_premium()) {
-    total_size += 1 + 8;
-  }
-  if (_has_bits_[0 / 32] & 3u) {
-    // optional double delta = 1;
-    if (has_delta()) {
-      total_size += 1 + 8;
-    }
-
-    // optional double impliedVolatility = 2;
-    if (has_impliedvolatility()) {
-      total_size += 1 + 8;
-    }
-
-  }
-  int cached_size = ::google::protobuf::internal::ToCachedSize(total_size);
-  GOOGLE_SAFE_CONCURRENT_WRITES_BEGIN();
-  _cached_size_ = cached_size;
-  GOOGLE_SAFE_CONCURRENT_WRITES_END();
-  return total_size;
-}
-
-void WarrantBasicQotExData::MergeFrom(const ::google::protobuf::Message& from) {
-// @@protoc_insertion_point(generalized_merge_from_start:Qot_Common.WarrantBasicQotExData)
-  GOOGLE_DCHECK_NE(&from, this);
-  const WarrantBasicQotExData* source =
-      ::google::protobuf::internal::DynamicCastToGenerated<const WarrantBasicQotExData>(
-          &from);
-  if (source == NULL) {
-  // @@protoc_insertion_point(generalized_merge_from_cast_fail:Qot_Common.WarrantBasicQotExData)
-    ::google::protobuf::internal::ReflectionOps::Merge(from, this);
-  } else {
-  // @@protoc_insertion_point(generalized_merge_from_cast_success:Qot_Common.WarrantBasicQotExData)
-    MergeFrom(*source);
-  }
-}
-
-void WarrantBasicQotExData::MergeFrom(const WarrantBasicQotExData& from) {
-// @@protoc_insertion_point(class_specific_merge_from_start:Qot_Common.WarrantBasicQotExData)
-  GOOGLE_DCHECK_NE(&from, this);
-  _internal_metadata_.MergeFrom(from._internal_metadata_);
-  ::google::protobuf::uint32 cached_has_bits = 0;
-  (void) cached_has_bits;
-
-  cached_has_bits = from._has_bits_[0];
-  if (cached_has_bits & 7u) {
-    if (cached_has_bits & 0x00000001u) {
-      delta_ = from.delta_;
-    }
-    if (cached_has_bits & 0x00000002u) {
-      impliedvolatility_ = from.impliedvolatility_;
-    }
-    if (cached_has_bits & 0x00000004u) {
-      premium_ = from.premium_;
-    }
-    _has_bits_[0] |= cached_has_bits;
-  }
-}
-
-void WarrantBasicQotExData::CopyFrom(const ::google::protobuf::Message& from) {
-// @@protoc_insertion_point(generalized_copy_from_start:Qot_Common.WarrantBasicQotExData)
-  if (&from == this) return;
-  Clear();
-  MergeFrom(from);
-}
-
-void WarrantBasicQotExData::CopyFrom(const WarrantBasicQotExData& from) {
-// @@protoc_insertion_point(class_specific_copy_from_start:Qot_Common.WarrantBasicQotExData)
-  if (&from == this) return;
-  Clear();
-  MergeFrom(from);
-}
-
-bool WarrantBasicQotExData::IsInitialized() const {
-  if ((_has_bits_[0] & 0x00000004) != 0x00000004) return false;
-  return true;
-}
-
-void WarrantBasicQotExData::Swap(WarrantBasicQotExData* other) {
-  if (other == this) return;
-  InternalSwap(other);
-}
-void WarrantBasicQotExData::InternalSwap(WarrantBasicQotExData* other) {
-  using std::swap;
-  swap(delta_, other->delta_);
-  swap(impliedvolatility_, other->impliedvolatility_);
-  swap(premium_, other->premium_);
-  swap(_has_bits_[0], other->_has_bits_[0]);
-  _internal_metadata_.Swap(&other->_internal_metadata_);
-  swap(_cached_size_, other->_cached_size_);
-}
-
-::google::protobuf::Metadata WarrantBasicQotExData::GetMetadata() const {
-  protobuf_Qot_5fCommon_2eproto::protobuf_AssignDescriptorsOnce();
-  return ::protobuf_Qot_5fCommon_2eproto::file_level_metadata[kIndexInFileMessages];
-}
-
-
-// ===================================================================
-
 void BasicQot::InitAsDefaultInstance() {
   ::Qot_Common::_BasicQot_default_instance_._instance.get_mutable()->security_ = const_cast< ::Qot_Common::Security*>(
       ::Qot_Common::Security::internal_default_instance());
-  ::Qot_Common::_BasicQot_default_instance_._instance.get_mutable()->optionexdata_ = const_cast< ::Qot_Common::OptionBasicQotExData*>(
-      ::Qot_Common::OptionBasicQotExData::internal_default_instance());
-  ::Qot_Common::_BasicQot_default_instance_._instance.get_mutable()->premarket_ = const_cast< ::Qot_Common::PreAfterMarketData*>(
-      ::Qot_Common::PreAfterMarketData::internal_default_instance());
-  ::Qot_Common::_BasicQot_default_instance_._instance.get_mutable()->aftermarket_ = const_cast< ::Qot_Common::PreAfterMarketData*>(
-      ::Qot_Common::PreAfterMarketData::internal_default_instance());
-  ::Qot_Common::_BasicQot_default_instance_._instance.get_mutable()->futureexdata_ = const_cast< ::Qot_Common::FutureBasicQotExData*>(
-      ::Qot_Common::FutureBasicQotExData::internal_default_instance());
-  ::Qot_Common::_BasicQot_default_instance_._instance.get_mutable()->warrantexdata_ = const_cast< ::Qot_Common::WarrantBasicQotExData*>(
-      ::Qot_Common::WarrantBasicQotExData::internal_default_instance());
-  ::Qot_Common::_BasicQot_default_instance_._instance.get_mutable()->overnight_ = const_cast< ::Qot_Common::PreAfterMarketData*>(
-      ::Qot_Common::PreAfterMarketData::internal_default_instance());
 }
 #if !defined(_MSC_VER) || _MSC_VER >= 1900
 const int BasicQot::kSecurityFieldNumber;
-const int BasicQot::kNameFieldNumber;
 const int BasicQot::kIsSuspendedFieldNumber;
 const int BasicQot::kListTimeFieldNumber;
 const int BasicQot::kPriceSpreadFieldNumber;
@@ -5552,15 +2043,6 @@ const int BasicQot::kTurnoverFieldNumber;
 const int BasicQot::kTurnoverRateFieldNumber;
 const int BasicQot::kAmplitudeFieldNumber;
 const int BasicQot::kDarkStatusFieldNumber;
-const int BasicQot::kOptionExDataFieldNumber;
-const int BasicQot::kListTimestampFieldNumber;
-const int BasicQot::kUpdateTimestampFieldNumber;
-const int BasicQot::kPreMarketFieldNumber;
-const int BasicQot::kAfterMarketFieldNumber;
-const int BasicQot::kSecStatusFieldNumber;
-const int BasicQot::kFutureExDataFieldNumber;
-const int BasicQot::kWarrantExDataFieldNumber;
-const int BasicQot::kOvernightFieldNumber;
 #endif  // !defined(_MSC_VER) || _MSC_VER >= 1900
 
 BasicQot::BasicQot()
@@ -5585,48 +2067,14 @@ BasicQot::BasicQot(const BasicQot& from)
   if (from.has_updatetime()) {
     updatetime_.AssignWithDefault(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), from.updatetime_);
   }
-  name_.UnsafeSetDefault(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
-  if (from.has_name()) {
-    name_.AssignWithDefault(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), from.name_);
-  }
   if (from.has_security()) {
     security_ = new ::Qot_Common::Security(*from.security_);
   } else {
     security_ = NULL;
   }
-  if (from.has_optionexdata()) {
-    optionexdata_ = new ::Qot_Common::OptionBasicQotExData(*from.optionexdata_);
-  } else {
-    optionexdata_ = NULL;
-  }
-  if (from.has_premarket()) {
-    premarket_ = new ::Qot_Common::PreAfterMarketData(*from.premarket_);
-  } else {
-    premarket_ = NULL;
-  }
-  if (from.has_aftermarket()) {
-    aftermarket_ = new ::Qot_Common::PreAfterMarketData(*from.aftermarket_);
-  } else {
-    aftermarket_ = NULL;
-  }
-  if (from.has_futureexdata()) {
-    futureexdata_ = new ::Qot_Common::FutureBasicQotExData(*from.futureexdata_);
-  } else {
-    futureexdata_ = NULL;
-  }
-  if (from.has_warrantexdata()) {
-    warrantexdata_ = new ::Qot_Common::WarrantBasicQotExData(*from.warrantexdata_);
-  } else {
-    warrantexdata_ = NULL;
-  }
-  if (from.has_overnight()) {
-    overnight_ = new ::Qot_Common::PreAfterMarketData(*from.overnight_);
-  } else {
-    overnight_ = NULL;
-  }
   ::memcpy(&pricespread_, &from.pricespread_,
-    static_cast<size_t>(reinterpret_cast<char*>(&secstatus_) -
-    reinterpret_cast<char*>(&pricespread_)) + sizeof(secstatus_));
+    static_cast<size_t>(reinterpret_cast<char*>(&amplitude_) -
+    reinterpret_cast<char*>(&pricespread_)) + sizeof(amplitude_));
   // @@protoc_insertion_point(copy_constructor:Qot_Common.BasicQot)
 }
 
@@ -5634,10 +2082,9 @@ void BasicQot::SharedCtor() {
   _cached_size_ = 0;
   listtime_.UnsafeSetDefault(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
   updatetime_.UnsafeSetDefault(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
-  name_.UnsafeSetDefault(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
   ::memset(&security_, 0, static_cast<size_t>(
-      reinterpret_cast<char*>(&secstatus_) -
-      reinterpret_cast<char*>(&security_)) + sizeof(secstatus_));
+      reinterpret_cast<char*>(&amplitude_) -
+      reinterpret_cast<char*>(&security_)) + sizeof(amplitude_));
 }
 
 BasicQot::~BasicQot() {
@@ -5648,14 +2095,7 @@ BasicQot::~BasicQot() {
 void BasicQot::SharedDtor() {
   listtime_.DestroyNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
   updatetime_.DestroyNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
-  name_.DestroyNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
   if (this != internal_default_instance()) delete security_;
-  if (this != internal_default_instance()) delete optionexdata_;
-  if (this != internal_default_instance()) delete premarket_;
-  if (this != internal_default_instance()) delete aftermarket_;
-  if (this != internal_default_instance()) delete futureexdata_;
-  if (this != internal_default_instance()) delete warrantexdata_;
-  if (this != internal_default_instance()) delete overnight_;
 }
 
 void BasicQot::SetCachedSize(int size) const {
@@ -5688,7 +2128,7 @@ void BasicQot::Clear() {
   (void) cached_has_bits;
 
   cached_has_bits = _has_bits_[0];
-  if (cached_has_bits & 255u) {
+  if (cached_has_bits & 7u) {
     if (cached_has_bits & 0x00000001u) {
       GOOGLE_DCHECK(!listtime_.IsDefault(&::google::protobuf::internal::GetEmptyStringAlreadyInited()));
       (*listtime_.UnsafeRawStringPointer())->clear();
@@ -5698,51 +2138,20 @@ void BasicQot::Clear() {
       (*updatetime_.UnsafeRawStringPointer())->clear();
     }
     if (cached_has_bits & 0x00000004u) {
-      GOOGLE_DCHECK(!name_.IsDefault(&::google::protobuf::internal::GetEmptyStringAlreadyInited()));
-      (*name_.UnsafeRawStringPointer())->clear();
-    }
-    if (cached_has_bits & 0x00000008u) {
       GOOGLE_DCHECK(security_ != NULL);
       security_->Clear();
     }
-    if (cached_has_bits & 0x00000010u) {
-      GOOGLE_DCHECK(optionexdata_ != NULL);
-      optionexdata_->Clear();
-    }
-    if (cached_has_bits & 0x00000020u) {
-      GOOGLE_DCHECK(premarket_ != NULL);
-      premarket_->Clear();
-    }
-    if (cached_has_bits & 0x00000040u) {
-      GOOGLE_DCHECK(aftermarket_ != NULL);
-      aftermarket_->Clear();
-    }
-    if (cached_has_bits & 0x00000080u) {
-      GOOGLE_DCHECK(futureexdata_ != NULL);
-      futureexdata_->Clear();
-    }
   }
-  if (cached_has_bits & 768u) {
-    if (cached_has_bits & 0x00000100u) {
-      GOOGLE_DCHECK(warrantexdata_ != NULL);
-      warrantexdata_->Clear();
-    }
-    if (cached_has_bits & 0x00000200u) {
-      GOOGLE_DCHECK(overnight_ != NULL);
-      overnight_->Clear();
-    }
-  }
-  if (cached_has_bits & 64512u) {
+  if (cached_has_bits & 248u) {
     ::memset(&pricespread_, 0, static_cast<size_t>(
-        reinterpret_cast<char*>(&darkstatus_) -
-        reinterpret_cast<char*>(&pricespread_)) + sizeof(darkstatus_));
+        reinterpret_cast<char*>(&issuspended_) -
+        reinterpret_cast<char*>(&pricespread_)) + sizeof(issuspended_));
   }
-  if (cached_has_bits & 16711680u) {
-    ::memset(&curprice_, 0, static_cast<size_t>(
-        reinterpret_cast<char*>(&updatetimestamp_) -
-        reinterpret_cast<char*>(&curprice_)) + sizeof(updatetimestamp_));
+  if (cached_has_bits & 32512u) {
+    ::memset(&darkstatus_, 0, static_cast<size_t>(
+        reinterpret_cast<char*>(&amplitude_) -
+        reinterpret_cast<char*>(&darkstatus_)) + sizeof(amplitude_));
   }
-  secstatus_ = 0;
   _has_bits_.Clear();
   _internal_metadata_.Clear();
 }
@@ -5753,7 +2162,7 @@ bool BasicQot::MergePartialFromCodedStream(
   ::google::protobuf::uint32 tag;
   // @@protoc_insertion_point(parse_start:Qot_Common.BasicQot)
   for (;;) {
-    ::std::pair< ::google::protobuf::uint32, bool> p = input->ReadTagWithCutoffNoLastTag(16383u);
+    ::std::pair< ::google::protobuf::uint32, bool> p = input->ReadTagWithCutoffNoLastTag(127u);
     tag = p.first;
     if (!p.second) goto handle_unusual;
     switch (::google::protobuf::internal::WireFormatLite::GetTagFieldNumber(tag)) {
@@ -5969,136 +2378,6 @@ bool BasicQot::MergePartialFromCodedStream(
         break;
       }
 
-      // optional .Qot_Common.OptionBasicQotExData optionExData = 16;
-      case 16: {
-        if (static_cast< ::google::protobuf::uint8>(tag) ==
-            static_cast< ::google::protobuf::uint8>(130u /* 130 & 0xFF */)) {
-          DO_(::google::protobuf::internal::WireFormatLite::ReadMessage(
-               input, mutable_optionexdata()));
-        } else {
-          goto handle_unusual;
-        }
-        break;
-      }
-
-      // optional double listTimestamp = 17;
-      case 17: {
-        if (static_cast< ::google::protobuf::uint8>(tag) ==
-            static_cast< ::google::protobuf::uint8>(137u /* 137 & 0xFF */)) {
-          set_has_listtimestamp();
-          DO_((::google::protobuf::internal::WireFormatLite::ReadPrimitive<
-                   double, ::google::protobuf::internal::WireFormatLite::TYPE_DOUBLE>(
-                 input, &listtimestamp_)));
-        } else {
-          goto handle_unusual;
-        }
-        break;
-      }
-
-      // optional double updateTimestamp = 18;
-      case 18: {
-        if (static_cast< ::google::protobuf::uint8>(tag) ==
-            static_cast< ::google::protobuf::uint8>(145u /* 145 & 0xFF */)) {
-          set_has_updatetimestamp();
-          DO_((::google::protobuf::internal::WireFormatLite::ReadPrimitive<
-                   double, ::google::protobuf::internal::WireFormatLite::TYPE_DOUBLE>(
-                 input, &updatetimestamp_)));
-        } else {
-          goto handle_unusual;
-        }
-        break;
-      }
-
-      // optional .Qot_Common.PreAfterMarketData preMarket = 19;
-      case 19: {
-        if (static_cast< ::google::protobuf::uint8>(tag) ==
-            static_cast< ::google::protobuf::uint8>(154u /* 154 & 0xFF */)) {
-          DO_(::google::protobuf::internal::WireFormatLite::ReadMessage(
-               input, mutable_premarket()));
-        } else {
-          goto handle_unusual;
-        }
-        break;
-      }
-
-      // optional .Qot_Common.PreAfterMarketData afterMarket = 20;
-      case 20: {
-        if (static_cast< ::google::protobuf::uint8>(tag) ==
-            static_cast< ::google::protobuf::uint8>(162u /* 162 & 0xFF */)) {
-          DO_(::google::protobuf::internal::WireFormatLite::ReadMessage(
-               input, mutable_aftermarket()));
-        } else {
-          goto handle_unusual;
-        }
-        break;
-      }
-
-      // optional int32 secStatus = 21;
-      case 21: {
-        if (static_cast< ::google::protobuf::uint8>(tag) ==
-            static_cast< ::google::protobuf::uint8>(168u /* 168 & 0xFF */)) {
-          set_has_secstatus();
-          DO_((::google::protobuf::internal::WireFormatLite::ReadPrimitive<
-                   ::google::protobuf::int32, ::google::protobuf::internal::WireFormatLite::TYPE_INT32>(
-                 input, &secstatus_)));
-        } else {
-          goto handle_unusual;
-        }
-        break;
-      }
-
-      // optional .Qot_Common.FutureBasicQotExData futureExData = 22;
-      case 22: {
-        if (static_cast< ::google::protobuf::uint8>(tag) ==
-            static_cast< ::google::protobuf::uint8>(178u /* 178 & 0xFF */)) {
-          DO_(::google::protobuf::internal::WireFormatLite::ReadMessage(
-               input, mutable_futureexdata()));
-        } else {
-          goto handle_unusual;
-        }
-        break;
-      }
-
-      // optional .Qot_Common.WarrantBasicQotExData warrantExData = 23;
-      case 23: {
-        if (static_cast< ::google::protobuf::uint8>(tag) ==
-            static_cast< ::google::protobuf::uint8>(186u /* 186 & 0xFF */)) {
-          DO_(::google::protobuf::internal::WireFormatLite::ReadMessage(
-               input, mutable_warrantexdata()));
-        } else {
-          goto handle_unusual;
-        }
-        break;
-      }
-
-      // optional string name = 24;
-      case 24: {
-        if (static_cast< ::google::protobuf::uint8>(tag) ==
-            static_cast< ::google::protobuf::uint8>(194u /* 194 & 0xFF */)) {
-          DO_(::google::protobuf::internal::WireFormatLite::ReadString(
-                input, this->mutable_name()));
-          ::google::protobuf::internal::WireFormat::VerifyUTF8StringNamedField(
-            this->name().data(), static_cast<int>(this->name().length()),
-            ::google::protobuf::internal::WireFormat::PARSE,
-            "Qot_Common.BasicQot.name");
-        } else {
-          goto handle_unusual;
-        }
-        break;
-      }
-
-      // optional .Qot_Common.PreAfterMarketData overnight = 25;
-      case 25: {
-        if (static_cast< ::google::protobuf::uint8>(tag) ==
-            static_cast< ::google::protobuf::uint8>(202u /* 202 & 0xFF */)) {
-          DO_(::google::protobuf::internal::WireFormatLite::ReadMessage(
-               input, mutable_overnight()));
-        } else {
-          goto handle_unusual;
-        }
-        break;
-      }
-
       default: {
       handle_unusual:
         if (tag == 0) {
@@ -6127,13 +2406,13 @@ void BasicQot::SerializeWithCachedSizes(
 
   cached_has_bits = _has_bits_[0];
   // required .Qot_Common.Security security = 1;
-  if (cached_has_bits & 0x00000008u) {
+  if (cached_has_bits & 0x00000004u) {
     ::google::protobuf::internal::WireFormatLite::WriteMessageMaybeToArray(
       1, *this->security_, output);
   }
 
   // required bool isSuspended = 2;
-  if (cached_has_bits & 0x00004000u) {
+  if (cached_has_bits & 0x00000080u) {
     ::google::protobuf::internal::WireFormatLite::WriteBool(2, this->issuspended(), output);
   }
 
@@ -6148,7 +2427,7 @@ void BasicQot::SerializeWithCachedSizes(
   }
 
   // required double priceSpread = 4;
-  if (cached_has_bits & 0x00000400u) {
+  if (cached_has_bits & 0x00000008u) {
     ::google::protobuf::internal::WireFormatLite::WriteDouble(4, this->pricespread(), output);
   }
 
@@ -6163,114 +2442,53 @@ void BasicQot::SerializeWithCachedSizes(
   }
 
   // required double highPrice = 6;
-  if (cached_has_bits & 0x00000800u) {
+  if (cached_has_bits & 0x00000010u) {
     ::google::protobuf::internal::WireFormatLite::WriteDouble(6, this->highprice(), output);
   }
 
   // required double openPrice = 7;
-  if (cached_has_bits & 0x00001000u) {
+  if (cached_has_bits & 0x00000020u) {
     ::google::protobuf::internal::WireFormatLite::WriteDouble(7, this->openprice(), output);
   }
 
   // required double lowPrice = 8;
-  if (cached_has_bits & 0x00002000u) {
+  if (cached_has_bits & 0x00000040u) {
     ::google::protobuf::internal::WireFormatLite::WriteDouble(8, this->lowprice(), output);
   }
 
   // required double curPrice = 9;
-  if (cached_has_bits & 0x00010000u) {
+  if (cached_has_bits & 0x00000200u) {
     ::google::protobuf::internal::WireFormatLite::WriteDouble(9, this->curprice(), output);
   }
 
   // required double lastClosePrice = 10;
-  if (cached_has_bits & 0x00020000u) {
+  if (cached_has_bits & 0x00000400u) {
     ::google::protobuf::internal::WireFormatLite::WriteDouble(10, this->lastcloseprice(), output);
   }
 
   // required int64 volume = 11;
-  if (cached_has_bits & 0x00040000u) {
+  if (cached_has_bits & 0x00000800u) {
     ::google::protobuf::internal::WireFormatLite::WriteInt64(11, this->volume(), output);
   }
 
   // required double turnover = 12;
-  if (cached_has_bits & 0x00080000u) {
+  if (cached_has_bits & 0x00001000u) {
     ::google::protobuf::internal::WireFormatLite::WriteDouble(12, this->turnover(), output);
   }
 
   // required double turnoverRate = 13;
-  if (cached_has_bits & 0x00100000u) {
+  if (cached_has_bits & 0x00002000u) {
     ::google::protobuf::internal::WireFormatLite::WriteDouble(13, this->turnoverrate(), output);
   }
 
   // required double amplitude = 14;
-  if (cached_has_bits & 0x00200000u) {
+  if (cached_has_bits & 0x00004000u) {
     ::google::protobuf::internal::WireFormatLite::WriteDouble(14, this->amplitude(), output);
   }
 
   // optional int32 darkStatus = 15;
-  if (cached_has_bits & 0x00008000u) {
-    ::google::protobuf::internal::WireFormatLite::WriteInt32(15, this->darkstatus(), output);
-  }
-
-  // optional .Qot_Common.OptionBasicQotExData optionExData = 16;
-  if (cached_has_bits & 0x00000010u) {
-    ::google::protobuf::internal::WireFormatLite::WriteMessageMaybeToArray(
-      16, *this->optionexdata_, output);
-  }
-
-  // optional double listTimestamp = 17;
-  if (cached_has_bits & 0x00400000u) {
-    ::google::protobuf::internal::WireFormatLite::WriteDouble(17, this->listtimestamp(), output);
-  }
-
-  // optional double updateTimestamp = 18;
-  if (cached_has_bits & 0x00800000u) {
-    ::google::protobuf::internal::WireFormatLite::WriteDouble(18, this->updatetimestamp(), output);
-  }
-
-  // optional .Qot_Common.PreAfterMarketData preMarket = 19;
-  if (cached_has_bits & 0x00000020u) {
-    ::google::protobuf::internal::WireFormatLite::WriteMessageMaybeToArray(
-      19, *this->premarket_, output);
-  }
-
-  // optional .Qot_Common.PreAfterMarketData afterMarket = 20;
-  if (cached_has_bits & 0x00000040u) {
-    ::google::protobuf::internal::WireFormatLite::WriteMessageMaybeToArray(
-      20, *this->aftermarket_, output);
-  }
-
-  // optional int32 secStatus = 21;
-  if (cached_has_bits & 0x01000000u) {
-    ::google::protobuf::internal::WireFormatLite::WriteInt32(21, this->secstatus(), output);
-  }
-
-  // optional .Qot_Common.FutureBasicQotExData futureExData = 22;
-  if (cached_has_bits & 0x00000080u) {
-    ::google::protobuf::internal::WireFormatLite::WriteMessageMaybeToArray(
-      22, *this->futureexdata_, output);
-  }
-
-  // optional .Qot_Common.WarrantBasicQotExData warrantExData = 23;
   if (cached_has_bits & 0x00000100u) {
-    ::google::protobuf::internal::WireFormatLite::WriteMessageMaybeToArray(
-      23, *this->warrantexdata_, output);
-  }
-
-  // optional string name = 24;
-  if (cached_has_bits & 0x00000004u) {
-    ::google::protobuf::internal::WireFormat::VerifyUTF8StringNamedField(
-      this->name().data(), static_cast<int>(this->name().length()),
-      ::google::protobuf::internal::WireFormat::SERIALIZE,
-      "Qot_Common.BasicQot.name");
-    ::google::protobuf::internal::WireFormatLite::WriteStringMaybeAliased(
-      24, this->name(), output);
-  }
-
-  // optional .Qot_Common.PreAfterMarketData overnight = 25;
-  if (cached_has_bits & 0x00000200u) {
-    ::google::protobuf::internal::WireFormatLite::WriteMessageMaybeToArray(
-      25, *this->overnight_, output);
+    ::google::protobuf::internal::WireFormatLite::WriteInt32(15, this->darkstatus(), output);
   }
 
   if (_internal_metadata_.have_unknown_fields()) {
@@ -6289,14 +2507,14 @@ void BasicQot::SerializeWithCachedSizes(
 
   cached_has_bits = _has_bits_[0];
   // required .Qot_Common.Security security = 1;
-  if (cached_has_bits & 0x00000008u) {
+  if (cached_has_bits & 0x00000004u) {
     target = ::google::protobuf::internal::WireFormatLite::
       InternalWriteMessageToArray(
         1, *this->security_, deterministic, target);
   }
 
   // required bool isSuspended = 2;
-  if (cached_has_bits & 0x00004000u) {
+  if (cached_has_bits & 0x00000080u) {
     target = ::google::protobuf::internal::WireFormatLite::WriteBoolToArray(2, this->issuspended(), target);
   }
 
@@ -6312,7 +2530,7 @@ void BasicQot::SerializeWithCachedSizes(
   }
 
   // required double priceSpread = 4;
-  if (cached_has_bits & 0x00000400u) {
+  if (cached_has_bits & 0x00000008u) {
     target = ::google::protobuf::internal::WireFormatLite::WriteDoubleToArray(4, this->pricespread(), target);
   }
 
@@ -6328,121 +2546,53 @@ void BasicQot::SerializeWithCachedSizes(
   }
 
   // required double highPrice = 6;
-  if (cached_has_bits & 0x00000800u) {
+  if (cached_has_bits & 0x00000010u) {
     target = ::google::protobuf::internal::WireFormatLite::WriteDoubleToArray(6, this->highprice(), target);
   }
 
   // required double openPrice = 7;
-  if (cached_has_bits & 0x00001000u) {
+  if (cached_has_bits & 0x00000020u) {
     target = ::google::protobuf::internal::WireFormatLite::WriteDoubleToArray(7, this->openprice(), target);
   }
 
   // required double lowPrice = 8;
-  if (cached_has_bits & 0x00002000u) {
+  if (cached_has_bits & 0x00000040u) {
     target = ::google::protobuf::internal::WireFormatLite::WriteDoubleToArray(8, this->lowprice(), target);
   }
 
   // required double curPrice = 9;
-  if (cached_has_bits & 0x00010000u) {
+  if (cached_has_bits & 0x00000200u) {
     target = ::google::protobuf::internal::WireFormatLite::WriteDoubleToArray(9, this->curprice(), target);
   }
 
   // required double lastClosePrice = 10;
-  if (cached_has_bits & 0x00020000u) {
+  if (cached_has_bits & 0x00000400u) {
     target = ::google::protobuf::internal::WireFormatLite::WriteDoubleToArray(10, this->lastcloseprice(), target);
   }
 
   // required int64 volume = 11;
-  if (cached_has_bits & 0x00040000u) {
+  if (cached_has_bits & 0x00000800u) {
     target = ::google::protobuf::internal::WireFormatLite::WriteInt64ToArray(11, this->volume(), target);
   }
 
   // required double turnover = 12;
-  if (cached_has_bits & 0x00080000u) {
+  if (cached_has_bits & 0x00001000u) {
     target = ::google::protobuf::internal::WireFormatLite::WriteDoubleToArray(12, this->turnover(), target);
   }
 
   // required double turnoverRate = 13;
-  if (cached_has_bits & 0x00100000u) {
+  if (cached_has_bits & 0x00002000u) {
     target = ::google::protobuf::internal::WireFormatLite::WriteDoubleToArray(13, this->turnoverrate(), target);
   }
 
   // required double amplitude = 14;
-  if (cached_has_bits & 0x00200000u) {
+  if (cached_has_bits & 0x00004000u) {
     target = ::google::protobuf::internal::WireFormatLite::WriteDoubleToArray(14, this->amplitude(), target);
   }
 
   // optional int32 darkStatus = 15;
-  if (cached_has_bits & 0x00008000u) {
-    target = ::google::protobuf::internal::WireFormatLite::WriteInt32ToArray(15, this->darkstatus(), target);
-  }
-
-  // optional .Qot_Common.OptionBasicQotExData optionExData = 16;
-  if (cached_has_bits & 0x00000010u) {
-    target = ::google::protobuf::internal::WireFormatLite::
-      InternalWriteMessageToArray(
-        16, *this->optionexdata_, deterministic, target);
-  }
-
-  // optional double listTimestamp = 17;
-  if (cached_has_bits & 0x00400000u) {
-    target = ::google::protobuf::internal::WireFormatLite::WriteDoubleToArray(17, this->listtimestamp(), target);
-  }
-
-  // optional double updateTimestamp = 18;
-  if (cached_has_bits & 0x00800000u) {
-    target = ::google::protobuf::internal::WireFormatLite::WriteDoubleToArray(18, this->updatetimestamp(), target);
-  }
-
-  // optional .Qot_Common.PreAfterMarketData preMarket = 19;
-  if (cached_has_bits & 0x00000020u) {
-    target = ::google::protobuf::internal::WireFormatLite::
-      InternalWriteMessageToArray(
-        19, *this->premarket_, deterministic, target);
-  }
-
-  // optional .Qot_Common.PreAfterMarketData afterMarket = 20;
-  if (cached_has_bits & 0x00000040u) {
-    target = ::google::protobuf::internal::WireFormatLite::
-      InternalWriteMessageToArray(
-        20, *this->aftermarket_, deterministic, target);
-  }
-
-  // optional int32 secStatus = 21;
-  if (cached_has_bits & 0x01000000u) {
-    target = ::google::protobuf::internal::WireFormatLite::WriteInt32ToArray(21, this->secstatus(), target);
-  }
-
-  // optional .Qot_Common.FutureBasicQotExData futureExData = 22;
-  if (cached_has_bits & 0x00000080u) {
-    target = ::google::protobuf::internal::WireFormatLite::
-      InternalWriteMessageToArray(
-        22, *this->futureexdata_, deterministic, target);
-  }
-
-  // optional .Qot_Common.WarrantBasicQotExData warrantExData = 23;
   if (cached_has_bits & 0x00000100u) {
-    target = ::google::protobuf::internal::WireFormatLite::
-      InternalWriteMessageToArray(
-        23, *this->warrantexdata_, deterministic, target);
-  }
-
-  // optional string name = 24;
-  if (cached_has_bits & 0x00000004u) {
-    ::google::protobuf::internal::WireFormat::VerifyUTF8StringNamedField(
-      this->name().data(), static_cast<int>(this->name().length()),
-      ::google::protobuf::internal::WireFormat::SERIALIZE,
-      "Qot_Common.BasicQot.name");
-    target =
-      ::google::protobuf::internal::WireFormatLite::WriteStringToArray(
-        24, this->name(), target);
-  }
-
-  // optional .Qot_Common.PreAfterMarketData overnight = 25;
-  if (cached_has_bits & 0x00000200u) {
-    target = ::google::protobuf::internal::WireFormatLite::
-      InternalWriteMessageToArray(
-        25, *this->overnight_, deterministic, target);
+    target = ::google::protobuf::internal::WireFormatLite::WriteInt32ToArray(15, this->darkstatus(), target);
   }
 
   if (_internal_metadata_.have_unknown_fields()) {
@@ -6546,7 +2696,7 @@ size_t BasicQot::ByteSizeLong() const {
       ::google::protobuf::internal::WireFormat::ComputeUnknownFieldsSize(
         _internal_metadata_.unknown_fields());
   }
-  if (((_has_bits_[0] & 0x003f7c0b) ^ 0x003f7c0b) == 0) {  // All required fields are present.
+  if (((_has_bits_[0] & 0x00007eff) ^ 0x00007eff) == 0) {  // All required fields are present.
     // required string listTime = 3;
     total_size += 1 +
       ::google::protobuf::internal::WireFormatLite::StringSize(
@@ -6600,83 +2750,11 @@ size_t BasicQot::ByteSizeLong() const {
   } else {
     total_size += RequiredFieldsByteSizeFallback();
   }
-  // optional string name = 24;
-  if (has_name()) {
-    total_size += 2 +
-      ::google::protobuf::internal::WireFormatLite::StringSize(
-        this->name());
-  }
-
-  if (_has_bits_[0 / 32] & 240u) {
-    // optional .Qot_Common.OptionBasicQotExData optionExData = 16;
-    if (has_optionexdata()) {
-      total_size += 2 +
-        ::google::protobuf::internal::WireFormatLite::MessageSize(
-          *this->optionexdata_);
-    }
-
-    // optional .Qot_Common.PreAfterMarketData preMarket = 19;
-    if (has_premarket()) {
-      total_size += 2 +
-        ::google::protobuf::internal::WireFormatLite::MessageSize(
-          *this->premarket_);
-    }
-
-    // optional .Qot_Common.PreAfterMarketData afterMarket = 20;
-    if (has_aftermarket()) {
-      total_size += 2 +
-        ::google::protobuf::internal::WireFormatLite::MessageSize(
-          *this->aftermarket_);
-    }
-
-    // optional .Qot_Common.FutureBasicQotExData futureExData = 22;
-    if (has_futureexdata()) {
-      total_size += 2 +
-        ::google::protobuf::internal::WireFormatLite::MessageSize(
-          *this->futureexdata_);
-    }
-
-  }
-  if (_has_bits_[8 / 32] & 768u) {
-    // optional .Qot_Common.WarrantBasicQotExData warrantExData = 23;
-    if (has_warrantexdata()) {
-      total_size += 2 +
-        ::google::protobuf::internal::WireFormatLite::MessageSize(
-          *this->warrantexdata_);
-    }
-
-    // optional .Qot_Common.PreAfterMarketData overnight = 25;
-    if (has_overnight()) {
-      total_size += 2 +
-        ::google::protobuf::internal::WireFormatLite::MessageSize(
-          *this->overnight_);
-    }
-
-  }
   // optional int32 darkStatus = 15;
   if (has_darkstatus()) {
     total_size += 1 +
       ::google::protobuf::internal::WireFormatLite::Int32Size(
         this->darkstatus());
-  }
-
-  if (_has_bits_[16 / 32] & 12582912u) {
-    // optional double listTimestamp = 17;
-    if (has_listtimestamp()) {
-      total_size += 2 + 8;
-    }
-
-    // optional double updateTimestamp = 18;
-    if (has_updatetimestamp()) {
-      total_size += 2 + 8;
-    }
-
-  }
-  // optional int32 secStatus = 21;
-  if (has_secstatus()) {
-    total_size += 2 +
-      ::google::protobuf::internal::WireFormatLite::Int32Size(
-        this->secstatus());
   }
 
   int cached_size = ::google::protobuf::internal::ToCachedSize(total_size);
@@ -6719,81 +2797,48 @@ void BasicQot::MergeFrom(const BasicQot& from) {
       updatetime_.AssignWithDefault(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), from.updatetime_);
     }
     if (cached_has_bits & 0x00000004u) {
-      set_has_name();
-      name_.AssignWithDefault(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), from.name_);
-    }
-    if (cached_has_bits & 0x00000008u) {
       mutable_security()->::Qot_Common::Security::MergeFrom(from.security());
     }
-    if (cached_has_bits & 0x00000010u) {
-      mutable_optionexdata()->::Qot_Common::OptionBasicQotExData::MergeFrom(from.optionexdata());
-    }
-    if (cached_has_bits & 0x00000020u) {
-      mutable_premarket()->::Qot_Common::PreAfterMarketData::MergeFrom(from.premarket());
-    }
-    if (cached_has_bits & 0x00000040u) {
-      mutable_aftermarket()->::Qot_Common::PreAfterMarketData::MergeFrom(from.aftermarket());
-    }
-    if (cached_has_bits & 0x00000080u) {
-      mutable_futureexdata()->::Qot_Common::FutureBasicQotExData::MergeFrom(from.futureexdata());
-    }
-  }
-  if (cached_has_bits & 65280u) {
-    if (cached_has_bits & 0x00000100u) {
-      mutable_warrantexdata()->::Qot_Common::WarrantBasicQotExData::MergeFrom(from.warrantexdata());
-    }
-    if (cached_has_bits & 0x00000200u) {
-      mutable_overnight()->::Qot_Common::PreAfterMarketData::MergeFrom(from.overnight());
-    }
-    if (cached_has_bits & 0x00000400u) {
+    if (cached_has_bits & 0x00000008u) {
       pricespread_ = from.pricespread_;
     }
-    if (cached_has_bits & 0x00000800u) {
+    if (cached_has_bits & 0x00000010u) {
       highprice_ = from.highprice_;
     }
-    if (cached_has_bits & 0x00001000u) {
+    if (cached_has_bits & 0x00000020u) {
       openprice_ = from.openprice_;
     }
-    if (cached_has_bits & 0x00002000u) {
+    if (cached_has_bits & 0x00000040u) {
       lowprice_ = from.lowprice_;
     }
-    if (cached_has_bits & 0x00004000u) {
+    if (cached_has_bits & 0x00000080u) {
       issuspended_ = from.issuspended_;
     }
-    if (cached_has_bits & 0x00008000u) {
+    _has_bits_[0] |= cached_has_bits;
+  }
+  if (cached_has_bits & 32512u) {
+    if (cached_has_bits & 0x00000100u) {
       darkstatus_ = from.darkstatus_;
     }
-    _has_bits_[0] |= cached_has_bits;
-  }
-  if (cached_has_bits & 16711680u) {
-    if (cached_has_bits & 0x00010000u) {
+    if (cached_has_bits & 0x00000200u) {
       curprice_ = from.curprice_;
     }
-    if (cached_has_bits & 0x00020000u) {
+    if (cached_has_bits & 0x00000400u) {
       lastcloseprice_ = from.lastcloseprice_;
     }
-    if (cached_has_bits & 0x00040000u) {
+    if (cached_has_bits & 0x00000800u) {
       volume_ = from.volume_;
     }
-    if (cached_has_bits & 0x00080000u) {
+    if (cached_has_bits & 0x00001000u) {
       turnover_ = from.turnover_;
     }
-    if (cached_has_bits & 0x00100000u) {
+    if (cached_has_bits & 0x00002000u) {
       turnoverrate_ = from.turnoverrate_;
     }
-    if (cached_has_bits & 0x00200000u) {
+    if (cached_has_bits & 0x00004000u) {
       amplitude_ = from.amplitude_;
     }
-    if (cached_has_bits & 0x00400000u) {
-      listtimestamp_ = from.listtimestamp_;
-    }
-    if (cached_has_bits & 0x00800000u) {
-      updatetimestamp_ = from.updatetimestamp_;
-    }
     _has_bits_[0] |= cached_has_bits;
-  }
-  if (cached_has_bits & 0x01000000u) {
-    set_secstatus(from.secstatus());
   }
 }
 
@@ -6812,18 +2857,9 @@ void BasicQot::CopyFrom(const BasicQot& from) {
 }
 
 bool BasicQot::IsInitialized() const {
-  if ((_has_bits_[0] & 0x003f7c0b) != 0x003f7c0b) return false;
+  if ((_has_bits_[0] & 0x00007eff) != 0x00007eff) return false;
   if (has_security()) {
     if (!this->security_->IsInitialized()) return false;
-  }
-  if (has_optionexdata()) {
-    if (!this->optionexdata_->IsInitialized()) return false;
-  }
-  if (has_futureexdata()) {
-    if (!this->futureexdata_->IsInitialized()) return false;
-  }
-  if (has_warrantexdata()) {
-    if (!this->warrantexdata_->IsInitialized()) return false;
   }
   return true;
 }
@@ -6836,14 +2872,7 @@ void BasicQot::InternalSwap(BasicQot* other) {
   using std::swap;
   listtime_.Swap(&other->listtime_);
   updatetime_.Swap(&other->updatetime_);
-  name_.Swap(&other->name_);
   swap(security_, other->security_);
-  swap(optionexdata_, other->optionexdata_);
-  swap(premarket_, other->premarket_);
-  swap(aftermarket_, other->aftermarket_);
-  swap(futureexdata_, other->futureexdata_);
-  swap(warrantexdata_, other->warrantexdata_);
-  swap(overnight_, other->overnight_);
   swap(pricespread_, other->pricespread_);
   swap(highprice_, other->highprice_);
   swap(openprice_, other->openprice_);
@@ -6856,9 +2885,6 @@ void BasicQot::InternalSwap(BasicQot* other) {
   swap(turnover_, other->turnover_);
   swap(turnoverrate_, other->turnoverrate_);
   swap(amplitude_, other->amplitude_);
-  swap(listtimestamp_, other->listtimestamp_);
-  swap(updatetimestamp_, other->updatetimestamp_);
-  swap(secstatus_, other->secstatus_);
   swap(_has_bits_[0], other->_has_bits_[0]);
   _internal_metadata_.Swap(&other->_internal_metadata_);
   swap(_cached_size_, other->_cached_size_);
@@ -6883,7 +2909,6 @@ const int TimeShare::kLastClosePriceFieldNumber;
 const int TimeShare::kAvgPriceFieldNumber;
 const int TimeShare::kVolumeFieldNumber;
 const int TimeShare::kTurnoverFieldNumber;
-const int TimeShare::kTimestampFieldNumber;
 #endif  // !defined(_MSC_VER) || _MSC_VER >= 1900
 
 TimeShare::TimeShare()
@@ -6905,8 +2930,8 @@ TimeShare::TimeShare(const TimeShare& from)
     time_.AssignWithDefault(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), from.time_);
   }
   ::memcpy(&minute_, &from.minute_,
-    static_cast<size_t>(reinterpret_cast<char*>(&timestamp_) -
-    reinterpret_cast<char*>(&minute_)) + sizeof(timestamp_));
+    static_cast<size_t>(reinterpret_cast<char*>(&turnover_) -
+    reinterpret_cast<char*>(&minute_)) + sizeof(turnover_));
   // @@protoc_insertion_point(copy_constructor:Qot_Common.TimeShare)
 }
 
@@ -6914,8 +2939,8 @@ void TimeShare::SharedCtor() {
   _cached_size_ = 0;
   time_.UnsafeSetDefault(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
   ::memset(&minute_, 0, static_cast<size_t>(
-      reinterpret_cast<char*>(&timestamp_) -
-      reinterpret_cast<char*>(&minute_)) + sizeof(timestamp_));
+      reinterpret_cast<char*>(&turnover_) -
+      reinterpret_cast<char*>(&minute_)) + sizeof(turnover_));
 }
 
 TimeShare::~TimeShare() {
@@ -6966,7 +2991,6 @@ void TimeShare::Clear() {
         reinterpret_cast<char*>(&turnover_) -
         reinterpret_cast<char*>(&minute_)) + sizeof(turnover_));
   }
-  timestamp_ = 0;
   _has_bits_.Clear();
   _internal_metadata_.Clear();
 }
@@ -7095,20 +3119,6 @@ bool TimeShare::MergePartialFromCodedStream(
         break;
       }
 
-      // optional double timestamp = 9;
-      case 9: {
-        if (static_cast< ::google::protobuf::uint8>(tag) ==
-            static_cast< ::google::protobuf::uint8>(73u /* 73 & 0xFF */)) {
-          set_has_timestamp();
-          DO_((::google::protobuf::internal::WireFormatLite::ReadPrimitive<
-                   double, ::google::protobuf::internal::WireFormatLite::TYPE_DOUBLE>(
-                 input, &timestamp_)));
-        } else {
-          goto handle_unusual;
-        }
-        break;
-      }
-
       default: {
       handle_unusual:
         if (tag == 0) {
@@ -7181,11 +3191,6 @@ void TimeShare::SerializeWithCachedSizes(
     ::google::protobuf::internal::WireFormatLite::WriteDouble(8, this->turnover(), output);
   }
 
-  // optional double timestamp = 9;
-  if (cached_has_bits & 0x00000100u) {
-    ::google::protobuf::internal::WireFormatLite::WriteDouble(9, this->timestamp(), output);
-  }
-
   if (_internal_metadata_.have_unknown_fields()) {
     ::google::protobuf::internal::WireFormat::SerializeUnknownFields(
         _internal_metadata_.unknown_fields(), output);
@@ -7245,11 +3250,6 @@ void TimeShare::SerializeWithCachedSizes(
   // optional double turnover = 8;
   if (cached_has_bits & 0x00000080u) {
     target = ::google::protobuf::internal::WireFormatLite::WriteDoubleToArray(8, this->turnover(), target);
-  }
-
-  // optional double timestamp = 9;
-  if (cached_has_bits & 0x00000100u) {
-    target = ::google::protobuf::internal::WireFormatLite::WriteDoubleToArray(9, this->timestamp(), target);
   }
 
   if (_internal_metadata_.have_unknown_fields()) {
@@ -7340,11 +3340,6 @@ size_t TimeShare::ByteSizeLong() const {
     }
 
   }
-  // optional double timestamp = 9;
-  if (has_timestamp()) {
-    total_size += 1 + 8;
-  }
-
   int cached_size = ::google::protobuf::internal::ToCachedSize(total_size);
   GOOGLE_SAFE_CONCURRENT_WRITES_BEGIN();
   _cached_size_ = cached_size;
@@ -7403,9 +3398,6 @@ void TimeShare::MergeFrom(const TimeShare& from) {
     }
     _has_bits_[0] |= cached_has_bits;
   }
-  if (cached_has_bits & 0x00000100u) {
-    set_timestamp(from.timestamp());
-  }
 }
 
 void TimeShare::CopyFrom(const ::google::protobuf::Message& from) {
@@ -7441,7 +3433,6 @@ void TimeShare::InternalSwap(TimeShare* other) {
   swap(avgprice_, other->avgprice_);
   swap(volume_, other->volume_);
   swap(turnover_, other->turnover_);
-  swap(timestamp_, other->timestamp_);
   swap(_has_bits_[0], other->_has_bits_[0]);
   _internal_metadata_.Swap(&other->_internal_metadata_);
   swap(_cached_size_, other->_cached_size_);
@@ -7466,9 +3457,6 @@ const int SecurityStaticBasic::kLotSizeFieldNumber;
 const int SecurityStaticBasic::kSecTypeFieldNumber;
 const int SecurityStaticBasic::kNameFieldNumber;
 const int SecurityStaticBasic::kListTimeFieldNumber;
-const int SecurityStaticBasic::kDelistingFieldNumber;
-const int SecurityStaticBasic::kListTimestampFieldNumber;
-const int SecurityStaticBasic::kExchTypeFieldNumber;
 #endif  // !defined(_MSC_VER) || _MSC_VER >= 1900
 
 SecurityStaticBasic::SecurityStaticBasic()
@@ -7499,8 +3487,8 @@ SecurityStaticBasic::SecurityStaticBasic(const SecurityStaticBasic& from)
     security_ = NULL;
   }
   ::memcpy(&id_, &from.id_,
-    static_cast<size_t>(reinterpret_cast<char*>(&exchtype_) -
-    reinterpret_cast<char*>(&id_)) + sizeof(exchtype_));
+    static_cast<size_t>(reinterpret_cast<char*>(&sectype_) -
+    reinterpret_cast<char*>(&id_)) + sizeof(sectype_));
   // @@protoc_insertion_point(copy_constructor:Qot_Common.SecurityStaticBasic)
 }
 
@@ -7509,8 +3497,8 @@ void SecurityStaticBasic::SharedCtor() {
   name_.UnsafeSetDefault(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
   listtime_.UnsafeSetDefault(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
   ::memset(&security_, 0, static_cast<size_t>(
-      reinterpret_cast<char*>(&exchtype_) -
-      reinterpret_cast<char*>(&security_)) + sizeof(exchtype_));
+      reinterpret_cast<char*>(&sectype_) -
+      reinterpret_cast<char*>(&security_)) + sizeof(sectype_));
 }
 
 SecurityStaticBasic::~SecurityStaticBasic() {
@@ -7568,12 +3556,11 @@ void SecurityStaticBasic::Clear() {
       security_->Clear();
     }
   }
-  if (cached_has_bits & 248u) {
+  if (cached_has_bits & 56u) {
     ::memset(&id_, 0, static_cast<size_t>(
-        reinterpret_cast<char*>(&delisting_) -
-        reinterpret_cast<char*>(&id_)) + sizeof(delisting_));
+        reinterpret_cast<char*>(&sectype_) -
+        reinterpret_cast<char*>(&id_)) + sizeof(sectype_));
   }
-  exchtype_ = 0;
   _has_bits_.Clear();
   _internal_metadata_.Clear();
 }
@@ -7674,48 +3661,6 @@ bool SecurityStaticBasic::MergePartialFromCodedStream(
         break;
       }
 
-      // optional bool delisting = 7;
-      case 7: {
-        if (static_cast< ::google::protobuf::uint8>(tag) ==
-            static_cast< ::google::protobuf::uint8>(56u /* 56 & 0xFF */)) {
-          set_has_delisting();
-          DO_((::google::protobuf::internal::WireFormatLite::ReadPrimitive<
-                   bool, ::google::protobuf::internal::WireFormatLite::TYPE_BOOL>(
-                 input, &delisting_)));
-        } else {
-          goto handle_unusual;
-        }
-        break;
-      }
-
-      // optional double listTimestamp = 8;
-      case 8: {
-        if (static_cast< ::google::protobuf::uint8>(tag) ==
-            static_cast< ::google::protobuf::uint8>(65u /* 65 & 0xFF */)) {
-          set_has_listtimestamp();
-          DO_((::google::protobuf::internal::WireFormatLite::ReadPrimitive<
-                   double, ::google::protobuf::internal::WireFormatLite::TYPE_DOUBLE>(
-                 input, &listtimestamp_)));
-        } else {
-          goto handle_unusual;
-        }
-        break;
-      }
-
-      // optional int32 exchType = 9;
-      case 9: {
-        if (static_cast< ::google::protobuf::uint8>(tag) ==
-            static_cast< ::google::protobuf::uint8>(72u /* 72 & 0xFF */)) {
-          set_has_exchtype();
-          DO_((::google::protobuf::internal::WireFormatLite::ReadPrimitive<
-                   ::google::protobuf::int32, ::google::protobuf::internal::WireFormatLite::TYPE_INT32>(
-                 input, &exchtype_)));
-        } else {
-          goto handle_unusual;
-        }
-        break;
-      }
-
       default: {
       handle_unusual:
         if (tag == 0) {
@@ -7784,21 +3729,6 @@ void SecurityStaticBasic::SerializeWithCachedSizes(
       6, this->listtime(), output);
   }
 
-  // optional bool delisting = 7;
-  if (cached_has_bits & 0x00000080u) {
-    ::google::protobuf::internal::WireFormatLite::WriteBool(7, this->delisting(), output);
-  }
-
-  // optional double listTimestamp = 8;
-  if (cached_has_bits & 0x00000040u) {
-    ::google::protobuf::internal::WireFormatLite::WriteDouble(8, this->listtimestamp(), output);
-  }
-
-  // optional int32 exchType = 9;
-  if (cached_has_bits & 0x00000100u) {
-    ::google::protobuf::internal::WireFormatLite::WriteInt32(9, this->exchtype(), output);
-  }
-
   if (_internal_metadata_.have_unknown_fields()) {
     ::google::protobuf::internal::WireFormat::SerializeUnknownFields(
         _internal_metadata_.unknown_fields(), output);
@@ -7856,21 +3786,6 @@ void SecurityStaticBasic::SerializeWithCachedSizes(
     target =
       ::google::protobuf::internal::WireFormatLite::WriteStringToArray(
         6, this->listtime(), target);
-  }
-
-  // optional bool delisting = 7;
-  if (cached_has_bits & 0x00000080u) {
-    target = ::google::protobuf::internal::WireFormatLite::WriteBoolToArray(7, this->delisting(), target);
-  }
-
-  // optional double listTimestamp = 8;
-  if (cached_has_bits & 0x00000040u) {
-    target = ::google::protobuf::internal::WireFormatLite::WriteDoubleToArray(8, this->listtimestamp(), target);
-  }
-
-  // optional int32 exchType = 9;
-  if (cached_has_bits & 0x00000100u) {
-    target = ::google::protobuf::internal::WireFormatLite::WriteInt32ToArray(9, this->exchtype(), target);
   }
 
   if (_internal_metadata_.have_unknown_fields()) {
@@ -7972,25 +3887,6 @@ size_t SecurityStaticBasic::ByteSizeLong() const {
   } else {
     total_size += RequiredFieldsByteSizeFallback();
   }
-  if (_has_bits_[0 / 32] & 192u) {
-    // optional double listTimestamp = 8;
-    if (has_listtimestamp()) {
-      total_size += 1 + 8;
-    }
-
-    // optional bool delisting = 7;
-    if (has_delisting()) {
-      total_size += 1 + 1;
-    }
-
-  }
-  // optional int32 exchType = 9;
-  if (has_exchtype()) {
-    total_size += 1 +
-      ::google::protobuf::internal::WireFormatLite::Int32Size(
-        this->exchtype());
-  }
-
   int cached_size = ::google::protobuf::internal::ToCachedSize(total_size);
   GOOGLE_SAFE_CONCURRENT_WRITES_BEGIN();
   _cached_size_ = cached_size;
@@ -8021,7 +3917,7 @@ void SecurityStaticBasic::MergeFrom(const SecurityStaticBasic& from) {
   (void) cached_has_bits;
 
   cached_has_bits = from._has_bits_[0];
-  if (cached_has_bits & 255u) {
+  if (cached_has_bits & 63u) {
     if (cached_has_bits & 0x00000001u) {
       set_has_name();
       name_.AssignWithDefault(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), from.name_);
@@ -8042,16 +3938,7 @@ void SecurityStaticBasic::MergeFrom(const SecurityStaticBasic& from) {
     if (cached_has_bits & 0x00000020u) {
       sectype_ = from.sectype_;
     }
-    if (cached_has_bits & 0x00000040u) {
-      listtimestamp_ = from.listtimestamp_;
-    }
-    if (cached_has_bits & 0x00000080u) {
-      delisting_ = from.delisting_;
-    }
     _has_bits_[0] |= cached_has_bits;
-  }
-  if (cached_has_bits & 0x00000100u) {
-    set_exchtype(from.exchtype());
   }
 }
 
@@ -8089,9 +3976,6 @@ void SecurityStaticBasic::InternalSwap(SecurityStaticBasic* other) {
   swap(id_, other->id_);
   swap(lotsize_, other->lotsize_);
   swap(sectype_, other->sectype_);
-  swap(listtimestamp_, other->listtimestamp_);
-  swap(delisting_, other->delisting_);
-  swap(exchtype_, other->exchtype_);
   swap(_has_bits_[0], other->_has_bits_[0]);
   _internal_metadata_.Swap(&other->_internal_metadata_);
   swap(_cached_size_, other->_cached_size_);
@@ -8428,1113 +4312,15 @@ void WarrantStaticExData::InternalSwap(WarrantStaticExData* other) {
 
 // ===================================================================
 
-void OptionStaticExData::InitAsDefaultInstance() {
-  ::Qot_Common::_OptionStaticExData_default_instance_._instance.get_mutable()->owner_ = const_cast< ::Qot_Common::Security*>(
-      ::Qot_Common::Security::internal_default_instance());
-}
-#if !defined(_MSC_VER) || _MSC_VER >= 1900
-const int OptionStaticExData::kTypeFieldNumber;
-const int OptionStaticExData::kOwnerFieldNumber;
-const int OptionStaticExData::kStrikeTimeFieldNumber;
-const int OptionStaticExData::kStrikePriceFieldNumber;
-const int OptionStaticExData::kSuspendFieldNumber;
-const int OptionStaticExData::kMarketFieldNumber;
-const int OptionStaticExData::kStrikeTimestampFieldNumber;
-const int OptionStaticExData::kIndexOptionTypeFieldNumber;
-const int OptionStaticExData::kExpirationCycleFieldNumber;
-const int OptionStaticExData::kOptionStandardTypeFieldNumber;
-const int OptionStaticExData::kOptionSettlementModeFieldNumber;
-#endif  // !defined(_MSC_VER) || _MSC_VER >= 1900
-
-OptionStaticExData::OptionStaticExData()
-  : ::google::protobuf::Message(), _internal_metadata_(NULL) {
-  if (GOOGLE_PREDICT_TRUE(this != internal_default_instance())) {
-    ::protobuf_Qot_5fCommon_2eproto::InitDefaultsOptionStaticExData();
-  }
-  SharedCtor();
-  // @@protoc_insertion_point(constructor:Qot_Common.OptionStaticExData)
-}
-OptionStaticExData::OptionStaticExData(const OptionStaticExData& from)
-  : ::google::protobuf::Message(),
-      _internal_metadata_(NULL),
-      _has_bits_(from._has_bits_),
-      _cached_size_(0) {
-  _internal_metadata_.MergeFrom(from._internal_metadata_);
-  striketime_.UnsafeSetDefault(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
-  if (from.has_striketime()) {
-    striketime_.AssignWithDefault(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), from.striketime_);
-  }
-  market_.UnsafeSetDefault(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
-  if (from.has_market()) {
-    market_.AssignWithDefault(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), from.market_);
-  }
-  if (from.has_owner()) {
-    owner_ = new ::Qot_Common::Security(*from.owner_);
-  } else {
-    owner_ = NULL;
-  }
-  ::memcpy(&type_, &from.type_,
-    static_cast<size_t>(reinterpret_cast<char*>(&optionsettlementmode_) -
-    reinterpret_cast<char*>(&type_)) + sizeof(optionsettlementmode_));
-  // @@protoc_insertion_point(copy_constructor:Qot_Common.OptionStaticExData)
-}
-
-void OptionStaticExData::SharedCtor() {
-  _cached_size_ = 0;
-  striketime_.UnsafeSetDefault(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
-  market_.UnsafeSetDefault(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
-  ::memset(&owner_, 0, static_cast<size_t>(
-      reinterpret_cast<char*>(&optionsettlementmode_) -
-      reinterpret_cast<char*>(&owner_)) + sizeof(optionsettlementmode_));
-}
-
-OptionStaticExData::~OptionStaticExData() {
-  // @@protoc_insertion_point(destructor:Qot_Common.OptionStaticExData)
-  SharedDtor();
-}
-
-void OptionStaticExData::SharedDtor() {
-  striketime_.DestroyNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
-  market_.DestroyNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
-  if (this != internal_default_instance()) delete owner_;
-}
-
-void OptionStaticExData::SetCachedSize(int size) const {
-  GOOGLE_SAFE_CONCURRENT_WRITES_BEGIN();
-  _cached_size_ = size;
-  GOOGLE_SAFE_CONCURRENT_WRITES_END();
-}
-const ::google::protobuf::Descriptor* OptionStaticExData::descriptor() {
-  ::protobuf_Qot_5fCommon_2eproto::protobuf_AssignDescriptorsOnce();
-  return ::protobuf_Qot_5fCommon_2eproto::file_level_metadata[kIndexInFileMessages].descriptor;
-}
-
-const OptionStaticExData& OptionStaticExData::default_instance() {
-  ::protobuf_Qot_5fCommon_2eproto::InitDefaultsOptionStaticExData();
-  return *internal_default_instance();
-}
-
-OptionStaticExData* OptionStaticExData::New(::google::protobuf::Arena* arena) const {
-  OptionStaticExData* n = new OptionStaticExData;
-  if (arena != NULL) {
-    arena->Own(n);
-  }
-  return n;
-}
-
-void OptionStaticExData::Clear() {
-// @@protoc_insertion_point(message_clear_start:Qot_Common.OptionStaticExData)
-  ::google::protobuf::uint32 cached_has_bits = 0;
-  // Prevent compiler warnings about cached_has_bits being unused
-  (void) cached_has_bits;
-
-  cached_has_bits = _has_bits_[0];
-  if (cached_has_bits & 7u) {
-    if (cached_has_bits & 0x00000001u) {
-      GOOGLE_DCHECK(!striketime_.IsDefault(&::google::protobuf::internal::GetEmptyStringAlreadyInited()));
-      (*striketime_.UnsafeRawStringPointer())->clear();
-    }
-    if (cached_has_bits & 0x00000002u) {
-      GOOGLE_DCHECK(!market_.IsDefault(&::google::protobuf::internal::GetEmptyStringAlreadyInited()));
-      (*market_.UnsafeRawStringPointer())->clear();
-    }
-    if (cached_has_bits & 0x00000004u) {
-      GOOGLE_DCHECK(owner_ != NULL);
-      owner_->Clear();
-    }
-  }
-  if (cached_has_bits & 248u) {
-    ::memset(&type_, 0, static_cast<size_t>(
-        reinterpret_cast<char*>(&indexoptiontype_) -
-        reinterpret_cast<char*>(&type_)) + sizeof(indexoptiontype_));
-  }
-  if (cached_has_bits & 1792u) {
-    ::memset(&expirationcycle_, 0, static_cast<size_t>(
-        reinterpret_cast<char*>(&optionsettlementmode_) -
-        reinterpret_cast<char*>(&expirationcycle_)) + sizeof(optionsettlementmode_));
-  }
-  _has_bits_.Clear();
-  _internal_metadata_.Clear();
-}
-
-bool OptionStaticExData::MergePartialFromCodedStream(
-    ::google::protobuf::io::CodedInputStream* input) {
-#define DO_(EXPRESSION) if (!GOOGLE_PREDICT_TRUE(EXPRESSION)) goto failure
-  ::google::protobuf::uint32 tag;
-  // @@protoc_insertion_point(parse_start:Qot_Common.OptionStaticExData)
-  for (;;) {
-    ::std::pair< ::google::protobuf::uint32, bool> p = input->ReadTagWithCutoffNoLastTag(127u);
-    tag = p.first;
-    if (!p.second) goto handle_unusual;
-    switch (::google::protobuf::internal::WireFormatLite::GetTagFieldNumber(tag)) {
-      // required int32 type = 1;
-      case 1: {
-        if (static_cast< ::google::protobuf::uint8>(tag) ==
-            static_cast< ::google::protobuf::uint8>(8u /* 8 & 0xFF */)) {
-          set_has_type();
-          DO_((::google::protobuf::internal::WireFormatLite::ReadPrimitive<
-                   ::google::protobuf::int32, ::google::protobuf::internal::WireFormatLite::TYPE_INT32>(
-                 input, &type_)));
-        } else {
-          goto handle_unusual;
-        }
-        break;
-      }
-
-      // required .Qot_Common.Security owner = 2;
-      case 2: {
-        if (static_cast< ::google::protobuf::uint8>(tag) ==
-            static_cast< ::google::protobuf::uint8>(18u /* 18 & 0xFF */)) {
-          DO_(::google::protobuf::internal::WireFormatLite::ReadMessage(
-               input, mutable_owner()));
-        } else {
-          goto handle_unusual;
-        }
-        break;
-      }
-
-      // required string strikeTime = 3;
-      case 3: {
-        if (static_cast< ::google::protobuf::uint8>(tag) ==
-            static_cast< ::google::protobuf::uint8>(26u /* 26 & 0xFF */)) {
-          DO_(::google::protobuf::internal::WireFormatLite::ReadString(
-                input, this->mutable_striketime()));
-          ::google::protobuf::internal::WireFormat::VerifyUTF8StringNamedField(
-            this->striketime().data(), static_cast<int>(this->striketime().length()),
-            ::google::protobuf::internal::WireFormat::PARSE,
-            "Qot_Common.OptionStaticExData.strikeTime");
-        } else {
-          goto handle_unusual;
-        }
-        break;
-      }
-
-      // required double strikePrice = 4;
-      case 4: {
-        if (static_cast< ::google::protobuf::uint8>(tag) ==
-            static_cast< ::google::protobuf::uint8>(33u /* 33 & 0xFF */)) {
-          set_has_strikeprice();
-          DO_((::google::protobuf::internal::WireFormatLite::ReadPrimitive<
-                   double, ::google::protobuf::internal::WireFormatLite::TYPE_DOUBLE>(
-                 input, &strikeprice_)));
-        } else {
-          goto handle_unusual;
-        }
-        break;
-      }
-
-      // required bool suspend = 5;
-      case 5: {
-        if (static_cast< ::google::protobuf::uint8>(tag) ==
-            static_cast< ::google::protobuf::uint8>(40u /* 40 & 0xFF */)) {
-          set_has_suspend();
-          DO_((::google::protobuf::internal::WireFormatLite::ReadPrimitive<
-                   bool, ::google::protobuf::internal::WireFormatLite::TYPE_BOOL>(
-                 input, &suspend_)));
-        } else {
-          goto handle_unusual;
-        }
-        break;
-      }
-
-      // required string market = 6;
-      case 6: {
-        if (static_cast< ::google::protobuf::uint8>(tag) ==
-            static_cast< ::google::protobuf::uint8>(50u /* 50 & 0xFF */)) {
-          DO_(::google::protobuf::internal::WireFormatLite::ReadString(
-                input, this->mutable_market()));
-          ::google::protobuf::internal::WireFormat::VerifyUTF8StringNamedField(
-            this->market().data(), static_cast<int>(this->market().length()),
-            ::google::protobuf::internal::WireFormat::PARSE,
-            "Qot_Common.OptionStaticExData.market");
-        } else {
-          goto handle_unusual;
-        }
-        break;
-      }
-
-      // optional double strikeTimestamp = 7;
-      case 7: {
-        if (static_cast< ::google::protobuf::uint8>(tag) ==
-            static_cast< ::google::protobuf::uint8>(57u /* 57 & 0xFF */)) {
-          set_has_striketimestamp();
-          DO_((::google::protobuf::internal::WireFormatLite::ReadPrimitive<
-                   double, ::google::protobuf::internal::WireFormatLite::TYPE_DOUBLE>(
-                 input, &striketimestamp_)));
-        } else {
-          goto handle_unusual;
-        }
-        break;
-      }
-
-      // optional int32 indexOptionType = 8;
-      case 8: {
-        if (static_cast< ::google::protobuf::uint8>(tag) ==
-            static_cast< ::google::protobuf::uint8>(64u /* 64 & 0xFF */)) {
-          set_has_indexoptiontype();
-          DO_((::google::protobuf::internal::WireFormatLite::ReadPrimitive<
-                   ::google::protobuf::int32, ::google::protobuf::internal::WireFormatLite::TYPE_INT32>(
-                 input, &indexoptiontype_)));
-        } else {
-          goto handle_unusual;
-        }
-        break;
-      }
-
-      // optional int32 expirationCycle = 9;
-      case 9: {
-        if (static_cast< ::google::protobuf::uint8>(tag) ==
-            static_cast< ::google::protobuf::uint8>(72u /* 72 & 0xFF */)) {
-          set_has_expirationcycle();
-          DO_((::google::protobuf::internal::WireFormatLite::ReadPrimitive<
-                   ::google::protobuf::int32, ::google::protobuf::internal::WireFormatLite::TYPE_INT32>(
-                 input, &expirationcycle_)));
-        } else {
-          goto handle_unusual;
-        }
-        break;
-      }
-
-      // optional int32 optionStandardType = 10;
-      case 10: {
-        if (static_cast< ::google::protobuf::uint8>(tag) ==
-            static_cast< ::google::protobuf::uint8>(80u /* 80 & 0xFF */)) {
-          set_has_optionstandardtype();
-          DO_((::google::protobuf::internal::WireFormatLite::ReadPrimitive<
-                   ::google::protobuf::int32, ::google::protobuf::internal::WireFormatLite::TYPE_INT32>(
-                 input, &optionstandardtype_)));
-        } else {
-          goto handle_unusual;
-        }
-        break;
-      }
-
-      // optional int32 optionSettlementMode = 11;
-      case 11: {
-        if (static_cast< ::google::protobuf::uint8>(tag) ==
-            static_cast< ::google::protobuf::uint8>(88u /* 88 & 0xFF */)) {
-          set_has_optionsettlementmode();
-          DO_((::google::protobuf::internal::WireFormatLite::ReadPrimitive<
-                   ::google::protobuf::int32, ::google::protobuf::internal::WireFormatLite::TYPE_INT32>(
-                 input, &optionsettlementmode_)));
-        } else {
-          goto handle_unusual;
-        }
-        break;
-      }
-
-      default: {
-      handle_unusual:
-        if (tag == 0) {
-          goto success;
-        }
-        DO_(::google::protobuf::internal::WireFormat::SkipField(
-              input, tag, _internal_metadata_.mutable_unknown_fields()));
-        break;
-      }
-    }
-  }
-success:
-  // @@protoc_insertion_point(parse_success:Qot_Common.OptionStaticExData)
-  return true;
-failure:
-  // @@protoc_insertion_point(parse_failure:Qot_Common.OptionStaticExData)
-  return false;
-#undef DO_
-}
-
-void OptionStaticExData::SerializeWithCachedSizes(
-    ::google::protobuf::io::CodedOutputStream* output) const {
-  // @@protoc_insertion_point(serialize_start:Qot_Common.OptionStaticExData)
-  ::google::protobuf::uint32 cached_has_bits = 0;
-  (void) cached_has_bits;
-
-  cached_has_bits = _has_bits_[0];
-  // required int32 type = 1;
-  if (cached_has_bits & 0x00000008u) {
-    ::google::protobuf::internal::WireFormatLite::WriteInt32(1, this->type(), output);
-  }
-
-  // required .Qot_Common.Security owner = 2;
-  if (cached_has_bits & 0x00000004u) {
-    ::google::protobuf::internal::WireFormatLite::WriteMessageMaybeToArray(
-      2, *this->owner_, output);
-  }
-
-  // required string strikeTime = 3;
-  if (cached_has_bits & 0x00000001u) {
-    ::google::protobuf::internal::WireFormat::VerifyUTF8StringNamedField(
-      this->striketime().data(), static_cast<int>(this->striketime().length()),
-      ::google::protobuf::internal::WireFormat::SERIALIZE,
-      "Qot_Common.OptionStaticExData.strikeTime");
-    ::google::protobuf::internal::WireFormatLite::WriteStringMaybeAliased(
-      3, this->striketime(), output);
-  }
-
-  // required double strikePrice = 4;
-  if (cached_has_bits & 0x00000020u) {
-    ::google::protobuf::internal::WireFormatLite::WriteDouble(4, this->strikeprice(), output);
-  }
-
-  // required bool suspend = 5;
-  if (cached_has_bits & 0x00000010u) {
-    ::google::protobuf::internal::WireFormatLite::WriteBool(5, this->suspend(), output);
-  }
-
-  // required string market = 6;
-  if (cached_has_bits & 0x00000002u) {
-    ::google::protobuf::internal::WireFormat::VerifyUTF8StringNamedField(
-      this->market().data(), static_cast<int>(this->market().length()),
-      ::google::protobuf::internal::WireFormat::SERIALIZE,
-      "Qot_Common.OptionStaticExData.market");
-    ::google::protobuf::internal::WireFormatLite::WriteStringMaybeAliased(
-      6, this->market(), output);
-  }
-
-  // optional double strikeTimestamp = 7;
-  if (cached_has_bits & 0x00000040u) {
-    ::google::protobuf::internal::WireFormatLite::WriteDouble(7, this->striketimestamp(), output);
-  }
-
-  // optional int32 indexOptionType = 8;
-  if (cached_has_bits & 0x00000080u) {
-    ::google::protobuf::internal::WireFormatLite::WriteInt32(8, this->indexoptiontype(), output);
-  }
-
-  // optional int32 expirationCycle = 9;
-  if (cached_has_bits & 0x00000100u) {
-    ::google::protobuf::internal::WireFormatLite::WriteInt32(9, this->expirationcycle(), output);
-  }
-
-  // optional int32 optionStandardType = 10;
-  if (cached_has_bits & 0x00000200u) {
-    ::google::protobuf::internal::WireFormatLite::WriteInt32(10, this->optionstandardtype(), output);
-  }
-
-  // optional int32 optionSettlementMode = 11;
-  if (cached_has_bits & 0x00000400u) {
-    ::google::protobuf::internal::WireFormatLite::WriteInt32(11, this->optionsettlementmode(), output);
-  }
-
-  if (_internal_metadata_.have_unknown_fields()) {
-    ::google::protobuf::internal::WireFormat::SerializeUnknownFields(
-        _internal_metadata_.unknown_fields(), output);
-  }
-  // @@protoc_insertion_point(serialize_end:Qot_Common.OptionStaticExData)
-}
-
-::google::protobuf::uint8* OptionStaticExData::InternalSerializeWithCachedSizesToArray(
-    bool deterministic, ::google::protobuf::uint8* target) const {
-  (void)deterministic; // Unused
-  // @@protoc_insertion_point(serialize_to_array_start:Qot_Common.OptionStaticExData)
-  ::google::protobuf::uint32 cached_has_bits = 0;
-  (void) cached_has_bits;
-
-  cached_has_bits = _has_bits_[0];
-  // required int32 type = 1;
-  if (cached_has_bits & 0x00000008u) {
-    target = ::google::protobuf::internal::WireFormatLite::WriteInt32ToArray(1, this->type(), target);
-  }
-
-  // required .Qot_Common.Security owner = 2;
-  if (cached_has_bits & 0x00000004u) {
-    target = ::google::protobuf::internal::WireFormatLite::
-      InternalWriteMessageToArray(
-        2, *this->owner_, deterministic, target);
-  }
-
-  // required string strikeTime = 3;
-  if (cached_has_bits & 0x00000001u) {
-    ::google::protobuf::internal::WireFormat::VerifyUTF8StringNamedField(
-      this->striketime().data(), static_cast<int>(this->striketime().length()),
-      ::google::protobuf::internal::WireFormat::SERIALIZE,
-      "Qot_Common.OptionStaticExData.strikeTime");
-    target =
-      ::google::protobuf::internal::WireFormatLite::WriteStringToArray(
-        3, this->striketime(), target);
-  }
-
-  // required double strikePrice = 4;
-  if (cached_has_bits & 0x00000020u) {
-    target = ::google::protobuf::internal::WireFormatLite::WriteDoubleToArray(4, this->strikeprice(), target);
-  }
-
-  // required bool suspend = 5;
-  if (cached_has_bits & 0x00000010u) {
-    target = ::google::protobuf::internal::WireFormatLite::WriteBoolToArray(5, this->suspend(), target);
-  }
-
-  // required string market = 6;
-  if (cached_has_bits & 0x00000002u) {
-    ::google::protobuf::internal::WireFormat::VerifyUTF8StringNamedField(
-      this->market().data(), static_cast<int>(this->market().length()),
-      ::google::protobuf::internal::WireFormat::SERIALIZE,
-      "Qot_Common.OptionStaticExData.market");
-    target =
-      ::google::protobuf::internal::WireFormatLite::WriteStringToArray(
-        6, this->market(), target);
-  }
-
-  // optional double strikeTimestamp = 7;
-  if (cached_has_bits & 0x00000040u) {
-    target = ::google::protobuf::internal::WireFormatLite::WriteDoubleToArray(7, this->striketimestamp(), target);
-  }
-
-  // optional int32 indexOptionType = 8;
-  if (cached_has_bits & 0x00000080u) {
-    target = ::google::protobuf::internal::WireFormatLite::WriteInt32ToArray(8, this->indexoptiontype(), target);
-  }
-
-  // optional int32 expirationCycle = 9;
-  if (cached_has_bits & 0x00000100u) {
-    target = ::google::protobuf::internal::WireFormatLite::WriteInt32ToArray(9, this->expirationcycle(), target);
-  }
-
-  // optional int32 optionStandardType = 10;
-  if (cached_has_bits & 0x00000200u) {
-    target = ::google::protobuf::internal::WireFormatLite::WriteInt32ToArray(10, this->optionstandardtype(), target);
-  }
-
-  // optional int32 optionSettlementMode = 11;
-  if (cached_has_bits & 0x00000400u) {
-    target = ::google::protobuf::internal::WireFormatLite::WriteInt32ToArray(11, this->optionsettlementmode(), target);
-  }
-
-  if (_internal_metadata_.have_unknown_fields()) {
-    target = ::google::protobuf::internal::WireFormat::SerializeUnknownFieldsToArray(
-        _internal_metadata_.unknown_fields(), target);
-  }
-  // @@protoc_insertion_point(serialize_to_array_end:Qot_Common.OptionStaticExData)
-  return target;
-}
-
-size_t OptionStaticExData::RequiredFieldsByteSizeFallback() const {
-// @@protoc_insertion_point(required_fields_byte_size_fallback_start:Qot_Common.OptionStaticExData)
-  size_t total_size = 0;
-
-  if (has_striketime()) {
-    // required string strikeTime = 3;
-    total_size += 1 +
-      ::google::protobuf::internal::WireFormatLite::StringSize(
-        this->striketime());
-  }
-
-  if (has_market()) {
-    // required string market = 6;
-    total_size += 1 +
-      ::google::protobuf::internal::WireFormatLite::StringSize(
-        this->market());
-  }
-
-  if (has_owner()) {
-    // required .Qot_Common.Security owner = 2;
-    total_size += 1 +
-      ::google::protobuf::internal::WireFormatLite::MessageSize(
-        *this->owner_);
-  }
-
-  if (has_type()) {
-    // required int32 type = 1;
-    total_size += 1 +
-      ::google::protobuf::internal::WireFormatLite::Int32Size(
-        this->type());
-  }
-
-  if (has_suspend()) {
-    // required bool suspend = 5;
-    total_size += 1 + 1;
-  }
-
-  if (has_strikeprice()) {
-    // required double strikePrice = 4;
-    total_size += 1 + 8;
-  }
-
-  return total_size;
-}
-size_t OptionStaticExData::ByteSizeLong() const {
-// @@protoc_insertion_point(message_byte_size_start:Qot_Common.OptionStaticExData)
-  size_t total_size = 0;
-
-  if (_internal_metadata_.have_unknown_fields()) {
-    total_size +=
-      ::google::protobuf::internal::WireFormat::ComputeUnknownFieldsSize(
-        _internal_metadata_.unknown_fields());
-  }
-  if (((_has_bits_[0] & 0x0000003f) ^ 0x0000003f) == 0) {  // All required fields are present.
-    // required string strikeTime = 3;
-    total_size += 1 +
-      ::google::protobuf::internal::WireFormatLite::StringSize(
-        this->striketime());
-
-    // required string market = 6;
-    total_size += 1 +
-      ::google::protobuf::internal::WireFormatLite::StringSize(
-        this->market());
-
-    // required .Qot_Common.Security owner = 2;
-    total_size += 1 +
-      ::google::protobuf::internal::WireFormatLite::MessageSize(
-        *this->owner_);
-
-    // required int32 type = 1;
-    total_size += 1 +
-      ::google::protobuf::internal::WireFormatLite::Int32Size(
-        this->type());
-
-    // required bool suspend = 5;
-    total_size += 1 + 1;
-
-    // required double strikePrice = 4;
-    total_size += 1 + 8;
-
-  } else {
-    total_size += RequiredFieldsByteSizeFallback();
-  }
-  if (_has_bits_[0 / 32] & 192u) {
-    // optional double strikeTimestamp = 7;
-    if (has_striketimestamp()) {
-      total_size += 1 + 8;
-    }
-
-    // optional int32 indexOptionType = 8;
-    if (has_indexoptiontype()) {
-      total_size += 1 +
-        ::google::protobuf::internal::WireFormatLite::Int32Size(
-          this->indexoptiontype());
-    }
-
-  }
-  if (_has_bits_[8 / 32] & 1792u) {
-    // optional int32 expirationCycle = 9;
-    if (has_expirationcycle()) {
-      total_size += 1 +
-        ::google::protobuf::internal::WireFormatLite::Int32Size(
-          this->expirationcycle());
-    }
-
-    // optional int32 optionStandardType = 10;
-    if (has_optionstandardtype()) {
-      total_size += 1 +
-        ::google::protobuf::internal::WireFormatLite::Int32Size(
-          this->optionstandardtype());
-    }
-
-    // optional int32 optionSettlementMode = 11;
-    if (has_optionsettlementmode()) {
-      total_size += 1 +
-        ::google::protobuf::internal::WireFormatLite::Int32Size(
-          this->optionsettlementmode());
-    }
-
-  }
-  int cached_size = ::google::protobuf::internal::ToCachedSize(total_size);
-  GOOGLE_SAFE_CONCURRENT_WRITES_BEGIN();
-  _cached_size_ = cached_size;
-  GOOGLE_SAFE_CONCURRENT_WRITES_END();
-  return total_size;
-}
-
-void OptionStaticExData::MergeFrom(const ::google::protobuf::Message& from) {
-// @@protoc_insertion_point(generalized_merge_from_start:Qot_Common.OptionStaticExData)
-  GOOGLE_DCHECK_NE(&from, this);
-  const OptionStaticExData* source =
-      ::google::protobuf::internal::DynamicCastToGenerated<const OptionStaticExData>(
-          &from);
-  if (source == NULL) {
-  // @@protoc_insertion_point(generalized_merge_from_cast_fail:Qot_Common.OptionStaticExData)
-    ::google::protobuf::internal::ReflectionOps::Merge(from, this);
-  } else {
-  // @@protoc_insertion_point(generalized_merge_from_cast_success:Qot_Common.OptionStaticExData)
-    MergeFrom(*source);
-  }
-}
-
-void OptionStaticExData::MergeFrom(const OptionStaticExData& from) {
-// @@protoc_insertion_point(class_specific_merge_from_start:Qot_Common.OptionStaticExData)
-  GOOGLE_DCHECK_NE(&from, this);
-  _internal_metadata_.MergeFrom(from._internal_metadata_);
-  ::google::protobuf::uint32 cached_has_bits = 0;
-  (void) cached_has_bits;
-
-  cached_has_bits = from._has_bits_[0];
-  if (cached_has_bits & 255u) {
-    if (cached_has_bits & 0x00000001u) {
-      set_has_striketime();
-      striketime_.AssignWithDefault(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), from.striketime_);
-    }
-    if (cached_has_bits & 0x00000002u) {
-      set_has_market();
-      market_.AssignWithDefault(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), from.market_);
-    }
-    if (cached_has_bits & 0x00000004u) {
-      mutable_owner()->::Qot_Common::Security::MergeFrom(from.owner());
-    }
-    if (cached_has_bits & 0x00000008u) {
-      type_ = from.type_;
-    }
-    if (cached_has_bits & 0x00000010u) {
-      suspend_ = from.suspend_;
-    }
-    if (cached_has_bits & 0x00000020u) {
-      strikeprice_ = from.strikeprice_;
-    }
-    if (cached_has_bits & 0x00000040u) {
-      striketimestamp_ = from.striketimestamp_;
-    }
-    if (cached_has_bits & 0x00000080u) {
-      indexoptiontype_ = from.indexoptiontype_;
-    }
-    _has_bits_[0] |= cached_has_bits;
-  }
-  if (cached_has_bits & 1792u) {
-    if (cached_has_bits & 0x00000100u) {
-      expirationcycle_ = from.expirationcycle_;
-    }
-    if (cached_has_bits & 0x00000200u) {
-      optionstandardtype_ = from.optionstandardtype_;
-    }
-    if (cached_has_bits & 0x00000400u) {
-      optionsettlementmode_ = from.optionsettlementmode_;
-    }
-    _has_bits_[0] |= cached_has_bits;
-  }
-}
-
-void OptionStaticExData::CopyFrom(const ::google::protobuf::Message& from) {
-// @@protoc_insertion_point(generalized_copy_from_start:Qot_Common.OptionStaticExData)
-  if (&from == this) return;
-  Clear();
-  MergeFrom(from);
-}
-
-void OptionStaticExData::CopyFrom(const OptionStaticExData& from) {
-// @@protoc_insertion_point(class_specific_copy_from_start:Qot_Common.OptionStaticExData)
-  if (&from == this) return;
-  Clear();
-  MergeFrom(from);
-}
-
-bool OptionStaticExData::IsInitialized() const {
-  if ((_has_bits_[0] & 0x0000003f) != 0x0000003f) return false;
-  if (has_owner()) {
-    if (!this->owner_->IsInitialized()) return false;
-  }
-  return true;
-}
-
-void OptionStaticExData::Swap(OptionStaticExData* other) {
-  if (other == this) return;
-  InternalSwap(other);
-}
-void OptionStaticExData::InternalSwap(OptionStaticExData* other) {
-  using std::swap;
-  striketime_.Swap(&other->striketime_);
-  market_.Swap(&other->market_);
-  swap(owner_, other->owner_);
-  swap(type_, other->type_);
-  swap(suspend_, other->suspend_);
-  swap(strikeprice_, other->strikeprice_);
-  swap(striketimestamp_, other->striketimestamp_);
-  swap(indexoptiontype_, other->indexoptiontype_);
-  swap(expirationcycle_, other->expirationcycle_);
-  swap(optionstandardtype_, other->optionstandardtype_);
-  swap(optionsettlementmode_, other->optionsettlementmode_);
-  swap(_has_bits_[0], other->_has_bits_[0]);
-  _internal_metadata_.Swap(&other->_internal_metadata_);
-  swap(_cached_size_, other->_cached_size_);
-}
-
-::google::protobuf::Metadata OptionStaticExData::GetMetadata() const {
-  protobuf_Qot_5fCommon_2eproto::protobuf_AssignDescriptorsOnce();
-  return ::protobuf_Qot_5fCommon_2eproto::file_level_metadata[kIndexInFileMessages];
-}
-
-
-// ===================================================================
-
-void FutureStaticExData::InitAsDefaultInstance() {
-}
-#if !defined(_MSC_VER) || _MSC_VER >= 1900
-const int FutureStaticExData::kLastTradeTimeFieldNumber;
-const int FutureStaticExData::kLastTradeTimestampFieldNumber;
-const int FutureStaticExData::kIsMainContractFieldNumber;
-#endif  // !defined(_MSC_VER) || _MSC_VER >= 1900
-
-FutureStaticExData::FutureStaticExData()
-  : ::google::protobuf::Message(), _internal_metadata_(NULL) {
-  if (GOOGLE_PREDICT_TRUE(this != internal_default_instance())) {
-    ::protobuf_Qot_5fCommon_2eproto::InitDefaultsFutureStaticExData();
-  }
-  SharedCtor();
-  // @@protoc_insertion_point(constructor:Qot_Common.FutureStaticExData)
-}
-FutureStaticExData::FutureStaticExData(const FutureStaticExData& from)
-  : ::google::protobuf::Message(),
-      _internal_metadata_(NULL),
-      _has_bits_(from._has_bits_),
-      _cached_size_(0) {
-  _internal_metadata_.MergeFrom(from._internal_metadata_);
-  lasttradetime_.UnsafeSetDefault(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
-  if (from.has_lasttradetime()) {
-    lasttradetime_.AssignWithDefault(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), from.lasttradetime_);
-  }
-  ::memcpy(&lasttradetimestamp_, &from.lasttradetimestamp_,
-    static_cast<size_t>(reinterpret_cast<char*>(&ismaincontract_) -
-    reinterpret_cast<char*>(&lasttradetimestamp_)) + sizeof(ismaincontract_));
-  // @@protoc_insertion_point(copy_constructor:Qot_Common.FutureStaticExData)
-}
-
-void FutureStaticExData::SharedCtor() {
-  _cached_size_ = 0;
-  lasttradetime_.UnsafeSetDefault(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
-  ::memset(&lasttradetimestamp_, 0, static_cast<size_t>(
-      reinterpret_cast<char*>(&ismaincontract_) -
-      reinterpret_cast<char*>(&lasttradetimestamp_)) + sizeof(ismaincontract_));
-}
-
-FutureStaticExData::~FutureStaticExData() {
-  // @@protoc_insertion_point(destructor:Qot_Common.FutureStaticExData)
-  SharedDtor();
-}
-
-void FutureStaticExData::SharedDtor() {
-  lasttradetime_.DestroyNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
-}
-
-void FutureStaticExData::SetCachedSize(int size) const {
-  GOOGLE_SAFE_CONCURRENT_WRITES_BEGIN();
-  _cached_size_ = size;
-  GOOGLE_SAFE_CONCURRENT_WRITES_END();
-}
-const ::google::protobuf::Descriptor* FutureStaticExData::descriptor() {
-  ::protobuf_Qot_5fCommon_2eproto::protobuf_AssignDescriptorsOnce();
-  return ::protobuf_Qot_5fCommon_2eproto::file_level_metadata[kIndexInFileMessages].descriptor;
-}
-
-const FutureStaticExData& FutureStaticExData::default_instance() {
-  ::protobuf_Qot_5fCommon_2eproto::InitDefaultsFutureStaticExData();
-  return *internal_default_instance();
-}
-
-FutureStaticExData* FutureStaticExData::New(::google::protobuf::Arena* arena) const {
-  FutureStaticExData* n = new FutureStaticExData;
-  if (arena != NULL) {
-    arena->Own(n);
-  }
-  return n;
-}
-
-void FutureStaticExData::Clear() {
-// @@protoc_insertion_point(message_clear_start:Qot_Common.FutureStaticExData)
-  ::google::protobuf::uint32 cached_has_bits = 0;
-  // Prevent compiler warnings about cached_has_bits being unused
-  (void) cached_has_bits;
-
-  cached_has_bits = _has_bits_[0];
-  if (cached_has_bits & 0x00000001u) {
-    GOOGLE_DCHECK(!lasttradetime_.IsDefault(&::google::protobuf::internal::GetEmptyStringAlreadyInited()));
-    (*lasttradetime_.UnsafeRawStringPointer())->clear();
-  }
-  if (cached_has_bits & 6u) {
-    ::memset(&lasttradetimestamp_, 0, static_cast<size_t>(
-        reinterpret_cast<char*>(&ismaincontract_) -
-        reinterpret_cast<char*>(&lasttradetimestamp_)) + sizeof(ismaincontract_));
-  }
-  _has_bits_.Clear();
-  _internal_metadata_.Clear();
-}
-
-bool FutureStaticExData::MergePartialFromCodedStream(
-    ::google::protobuf::io::CodedInputStream* input) {
-#define DO_(EXPRESSION) if (!GOOGLE_PREDICT_TRUE(EXPRESSION)) goto failure
-  ::google::protobuf::uint32 tag;
-  // @@protoc_insertion_point(parse_start:Qot_Common.FutureStaticExData)
-  for (;;) {
-    ::std::pair< ::google::protobuf::uint32, bool> p = input->ReadTagWithCutoffNoLastTag(127u);
-    tag = p.first;
-    if (!p.second) goto handle_unusual;
-    switch (::google::protobuf::internal::WireFormatLite::GetTagFieldNumber(tag)) {
-      // required string lastTradeTime = 1;
-      case 1: {
-        if (static_cast< ::google::protobuf::uint8>(tag) ==
-            static_cast< ::google::protobuf::uint8>(10u /* 10 & 0xFF */)) {
-          DO_(::google::protobuf::internal::WireFormatLite::ReadString(
-                input, this->mutable_lasttradetime()));
-          ::google::protobuf::internal::WireFormat::VerifyUTF8StringNamedField(
-            this->lasttradetime().data(), static_cast<int>(this->lasttradetime().length()),
-            ::google::protobuf::internal::WireFormat::PARSE,
-            "Qot_Common.FutureStaticExData.lastTradeTime");
-        } else {
-          goto handle_unusual;
-        }
-        break;
-      }
-
-      // optional double lastTradeTimestamp = 2;
-      case 2: {
-        if (static_cast< ::google::protobuf::uint8>(tag) ==
-            static_cast< ::google::protobuf::uint8>(17u /* 17 & 0xFF */)) {
-          set_has_lasttradetimestamp();
-          DO_((::google::protobuf::internal::WireFormatLite::ReadPrimitive<
-                   double, ::google::protobuf::internal::WireFormatLite::TYPE_DOUBLE>(
-                 input, &lasttradetimestamp_)));
-        } else {
-          goto handle_unusual;
-        }
-        break;
-      }
-
-      // required bool isMainContract = 3;
-      case 3: {
-        if (static_cast< ::google::protobuf::uint8>(tag) ==
-            static_cast< ::google::protobuf::uint8>(24u /* 24 & 0xFF */)) {
-          set_has_ismaincontract();
-          DO_((::google::protobuf::internal::WireFormatLite::ReadPrimitive<
-                   bool, ::google::protobuf::internal::WireFormatLite::TYPE_BOOL>(
-                 input, &ismaincontract_)));
-        } else {
-          goto handle_unusual;
-        }
-        break;
-      }
-
-      default: {
-      handle_unusual:
-        if (tag == 0) {
-          goto success;
-        }
-        DO_(::google::protobuf::internal::WireFormat::SkipField(
-              input, tag, _internal_metadata_.mutable_unknown_fields()));
-        break;
-      }
-    }
-  }
-success:
-  // @@protoc_insertion_point(parse_success:Qot_Common.FutureStaticExData)
-  return true;
-failure:
-  // @@protoc_insertion_point(parse_failure:Qot_Common.FutureStaticExData)
-  return false;
-#undef DO_
-}
-
-void FutureStaticExData::SerializeWithCachedSizes(
-    ::google::protobuf::io::CodedOutputStream* output) const {
-  // @@protoc_insertion_point(serialize_start:Qot_Common.FutureStaticExData)
-  ::google::protobuf::uint32 cached_has_bits = 0;
-  (void) cached_has_bits;
-
-  cached_has_bits = _has_bits_[0];
-  // required string lastTradeTime = 1;
-  if (cached_has_bits & 0x00000001u) {
-    ::google::protobuf::internal::WireFormat::VerifyUTF8StringNamedField(
-      this->lasttradetime().data(), static_cast<int>(this->lasttradetime().length()),
-      ::google::protobuf::internal::WireFormat::SERIALIZE,
-      "Qot_Common.FutureStaticExData.lastTradeTime");
-    ::google::protobuf::internal::WireFormatLite::WriteStringMaybeAliased(
-      1, this->lasttradetime(), output);
-  }
-
-  // optional double lastTradeTimestamp = 2;
-  if (cached_has_bits & 0x00000002u) {
-    ::google::protobuf::internal::WireFormatLite::WriteDouble(2, this->lasttradetimestamp(), output);
-  }
-
-  // required bool isMainContract = 3;
-  if (cached_has_bits & 0x00000004u) {
-    ::google::protobuf::internal::WireFormatLite::WriteBool(3, this->ismaincontract(), output);
-  }
-
-  if (_internal_metadata_.have_unknown_fields()) {
-    ::google::protobuf::internal::WireFormat::SerializeUnknownFields(
-        _internal_metadata_.unknown_fields(), output);
-  }
-  // @@protoc_insertion_point(serialize_end:Qot_Common.FutureStaticExData)
-}
-
-::google::protobuf::uint8* FutureStaticExData::InternalSerializeWithCachedSizesToArray(
-    bool deterministic, ::google::protobuf::uint8* target) const {
-  (void)deterministic; // Unused
-  // @@protoc_insertion_point(serialize_to_array_start:Qot_Common.FutureStaticExData)
-  ::google::protobuf::uint32 cached_has_bits = 0;
-  (void) cached_has_bits;
-
-  cached_has_bits = _has_bits_[0];
-  // required string lastTradeTime = 1;
-  if (cached_has_bits & 0x00000001u) {
-    ::google::protobuf::internal::WireFormat::VerifyUTF8StringNamedField(
-      this->lasttradetime().data(), static_cast<int>(this->lasttradetime().length()),
-      ::google::protobuf::internal::WireFormat::SERIALIZE,
-      "Qot_Common.FutureStaticExData.lastTradeTime");
-    target =
-      ::google::protobuf::internal::WireFormatLite::WriteStringToArray(
-        1, this->lasttradetime(), target);
-  }
-
-  // optional double lastTradeTimestamp = 2;
-  if (cached_has_bits & 0x00000002u) {
-    target = ::google::protobuf::internal::WireFormatLite::WriteDoubleToArray(2, this->lasttradetimestamp(), target);
-  }
-
-  // required bool isMainContract = 3;
-  if (cached_has_bits & 0x00000004u) {
-    target = ::google::protobuf::internal::WireFormatLite::WriteBoolToArray(3, this->ismaincontract(), target);
-  }
-
-  if (_internal_metadata_.have_unknown_fields()) {
-    target = ::google::protobuf::internal::WireFormat::SerializeUnknownFieldsToArray(
-        _internal_metadata_.unknown_fields(), target);
-  }
-  // @@protoc_insertion_point(serialize_to_array_end:Qot_Common.FutureStaticExData)
-  return target;
-}
-
-size_t FutureStaticExData::RequiredFieldsByteSizeFallback() const {
-// @@protoc_insertion_point(required_fields_byte_size_fallback_start:Qot_Common.FutureStaticExData)
-  size_t total_size = 0;
-
-  if (has_lasttradetime()) {
-    // required string lastTradeTime = 1;
-    total_size += 1 +
-      ::google::protobuf::internal::WireFormatLite::StringSize(
-        this->lasttradetime());
-  }
-
-  if (has_ismaincontract()) {
-    // required bool isMainContract = 3;
-    total_size += 1 + 1;
-  }
-
-  return total_size;
-}
-size_t FutureStaticExData::ByteSizeLong() const {
-// @@protoc_insertion_point(message_byte_size_start:Qot_Common.FutureStaticExData)
-  size_t total_size = 0;
-
-  if (_internal_metadata_.have_unknown_fields()) {
-    total_size +=
-      ::google::protobuf::internal::WireFormat::ComputeUnknownFieldsSize(
-        _internal_metadata_.unknown_fields());
-  }
-  if (((_has_bits_[0] & 0x00000005) ^ 0x00000005) == 0) {  // All required fields are present.
-    // required string lastTradeTime = 1;
-    total_size += 1 +
-      ::google::protobuf::internal::WireFormatLite::StringSize(
-        this->lasttradetime());
-
-    // required bool isMainContract = 3;
-    total_size += 1 + 1;
-
-  } else {
-    total_size += RequiredFieldsByteSizeFallback();
-  }
-  // optional double lastTradeTimestamp = 2;
-  if (has_lasttradetimestamp()) {
-    total_size += 1 + 8;
-  }
-
-  int cached_size = ::google::protobuf::internal::ToCachedSize(total_size);
-  GOOGLE_SAFE_CONCURRENT_WRITES_BEGIN();
-  _cached_size_ = cached_size;
-  GOOGLE_SAFE_CONCURRENT_WRITES_END();
-  return total_size;
-}
-
-void FutureStaticExData::MergeFrom(const ::google::protobuf::Message& from) {
-// @@protoc_insertion_point(generalized_merge_from_start:Qot_Common.FutureStaticExData)
-  GOOGLE_DCHECK_NE(&from, this);
-  const FutureStaticExData* source =
-      ::google::protobuf::internal::DynamicCastToGenerated<const FutureStaticExData>(
-          &from);
-  if (source == NULL) {
-  // @@protoc_insertion_point(generalized_merge_from_cast_fail:Qot_Common.FutureStaticExData)
-    ::google::protobuf::internal::ReflectionOps::Merge(from, this);
-  } else {
-  // @@protoc_insertion_point(generalized_merge_from_cast_success:Qot_Common.FutureStaticExData)
-    MergeFrom(*source);
-  }
-}
-
-void FutureStaticExData::MergeFrom(const FutureStaticExData& from) {
-// @@protoc_insertion_point(class_specific_merge_from_start:Qot_Common.FutureStaticExData)
-  GOOGLE_DCHECK_NE(&from, this);
-  _internal_metadata_.MergeFrom(from._internal_metadata_);
-  ::google::protobuf::uint32 cached_has_bits = 0;
-  (void) cached_has_bits;
-
-  cached_has_bits = from._has_bits_[0];
-  if (cached_has_bits & 7u) {
-    if (cached_has_bits & 0x00000001u) {
-      set_has_lasttradetime();
-      lasttradetime_.AssignWithDefault(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), from.lasttradetime_);
-    }
-    if (cached_has_bits & 0x00000002u) {
-      lasttradetimestamp_ = from.lasttradetimestamp_;
-    }
-    if (cached_has_bits & 0x00000004u) {
-      ismaincontract_ = from.ismaincontract_;
-    }
-    _has_bits_[0] |= cached_has_bits;
-  }
-}
-
-void FutureStaticExData::CopyFrom(const ::google::protobuf::Message& from) {
-// @@protoc_insertion_point(generalized_copy_from_start:Qot_Common.FutureStaticExData)
-  if (&from == this) return;
-  Clear();
-  MergeFrom(from);
-}
-
-void FutureStaticExData::CopyFrom(const FutureStaticExData& from) {
-// @@protoc_insertion_point(class_specific_copy_from_start:Qot_Common.FutureStaticExData)
-  if (&from == this) return;
-  Clear();
-  MergeFrom(from);
-}
-
-bool FutureStaticExData::IsInitialized() const {
-  if ((_has_bits_[0] & 0x00000005) != 0x00000005) return false;
-  return true;
-}
-
-void FutureStaticExData::Swap(FutureStaticExData* other) {
-  if (other == this) return;
-  InternalSwap(other);
-}
-void FutureStaticExData::InternalSwap(FutureStaticExData* other) {
-  using std::swap;
-  lasttradetime_.Swap(&other->lasttradetime_);
-  swap(lasttradetimestamp_, other->lasttradetimestamp_);
-  swap(ismaincontract_, other->ismaincontract_);
-  swap(_has_bits_[0], other->_has_bits_[0]);
-  _internal_metadata_.Swap(&other->_internal_metadata_);
-  swap(_cached_size_, other->_cached_size_);
-}
-
-::google::protobuf::Metadata FutureStaticExData::GetMetadata() const {
-  protobuf_Qot_5fCommon_2eproto::protobuf_AssignDescriptorsOnce();
-  return ::protobuf_Qot_5fCommon_2eproto::file_level_metadata[kIndexInFileMessages];
-}
-
-
-// ===================================================================
-
 void SecurityStaticInfo::InitAsDefaultInstance() {
   ::Qot_Common::_SecurityStaticInfo_default_instance_._instance.get_mutable()->basic_ = const_cast< ::Qot_Common::SecurityStaticBasic*>(
       ::Qot_Common::SecurityStaticBasic::internal_default_instance());
   ::Qot_Common::_SecurityStaticInfo_default_instance_._instance.get_mutable()->warrantexdata_ = const_cast< ::Qot_Common::WarrantStaticExData*>(
       ::Qot_Common::WarrantStaticExData::internal_default_instance());
-  ::Qot_Common::_SecurityStaticInfo_default_instance_._instance.get_mutable()->optionexdata_ = const_cast< ::Qot_Common::OptionStaticExData*>(
-      ::Qot_Common::OptionStaticExData::internal_default_instance());
-  ::Qot_Common::_SecurityStaticInfo_default_instance_._instance.get_mutable()->futureexdata_ = const_cast< ::Qot_Common::FutureStaticExData*>(
-      ::Qot_Common::FutureStaticExData::internal_default_instance());
 }
 #if !defined(_MSC_VER) || _MSC_VER >= 1900
 const int SecurityStaticInfo::kBasicFieldNumber;
 const int SecurityStaticInfo::kWarrantExDataFieldNumber;
-const int SecurityStaticInfo::kOptionExDataFieldNumber;
-const int SecurityStaticInfo::kFutureExDataFieldNumber;
 #endif  // !defined(_MSC_VER) || _MSC_VER >= 1900
 
 SecurityStaticInfo::SecurityStaticInfo()
@@ -9561,24 +4347,14 @@ SecurityStaticInfo::SecurityStaticInfo(const SecurityStaticInfo& from)
   } else {
     warrantexdata_ = NULL;
   }
-  if (from.has_optionexdata()) {
-    optionexdata_ = new ::Qot_Common::OptionStaticExData(*from.optionexdata_);
-  } else {
-    optionexdata_ = NULL;
-  }
-  if (from.has_futureexdata()) {
-    futureexdata_ = new ::Qot_Common::FutureStaticExData(*from.futureexdata_);
-  } else {
-    futureexdata_ = NULL;
-  }
   // @@protoc_insertion_point(copy_constructor:Qot_Common.SecurityStaticInfo)
 }
 
 void SecurityStaticInfo::SharedCtor() {
   _cached_size_ = 0;
   ::memset(&basic_, 0, static_cast<size_t>(
-      reinterpret_cast<char*>(&futureexdata_) -
-      reinterpret_cast<char*>(&basic_)) + sizeof(futureexdata_));
+      reinterpret_cast<char*>(&warrantexdata_) -
+      reinterpret_cast<char*>(&basic_)) + sizeof(warrantexdata_));
 }
 
 SecurityStaticInfo::~SecurityStaticInfo() {
@@ -9589,8 +4365,6 @@ SecurityStaticInfo::~SecurityStaticInfo() {
 void SecurityStaticInfo::SharedDtor() {
   if (this != internal_default_instance()) delete basic_;
   if (this != internal_default_instance()) delete warrantexdata_;
-  if (this != internal_default_instance()) delete optionexdata_;
-  if (this != internal_default_instance()) delete futureexdata_;
 }
 
 void SecurityStaticInfo::SetCachedSize(int size) const {
@@ -9623,7 +4397,7 @@ void SecurityStaticInfo::Clear() {
   (void) cached_has_bits;
 
   cached_has_bits = _has_bits_[0];
-  if (cached_has_bits & 15u) {
+  if (cached_has_bits & 3u) {
     if (cached_has_bits & 0x00000001u) {
       GOOGLE_DCHECK(basic_ != NULL);
       basic_->Clear();
@@ -9631,14 +4405,6 @@ void SecurityStaticInfo::Clear() {
     if (cached_has_bits & 0x00000002u) {
       GOOGLE_DCHECK(warrantexdata_ != NULL);
       warrantexdata_->Clear();
-    }
-    if (cached_has_bits & 0x00000004u) {
-      GOOGLE_DCHECK(optionexdata_ != NULL);
-      optionexdata_->Clear();
-    }
-    if (cached_has_bits & 0x00000008u) {
-      GOOGLE_DCHECK(futureexdata_ != NULL);
-      futureexdata_->Clear();
     }
   }
   _has_bits_.Clear();
@@ -9673,30 +4439,6 @@ bool SecurityStaticInfo::MergePartialFromCodedStream(
             static_cast< ::google::protobuf::uint8>(18u /* 18 & 0xFF */)) {
           DO_(::google::protobuf::internal::WireFormatLite::ReadMessage(
                input, mutable_warrantexdata()));
-        } else {
-          goto handle_unusual;
-        }
-        break;
-      }
-
-      // optional .Qot_Common.OptionStaticExData optionExData = 3;
-      case 3: {
-        if (static_cast< ::google::protobuf::uint8>(tag) ==
-            static_cast< ::google::protobuf::uint8>(26u /* 26 & 0xFF */)) {
-          DO_(::google::protobuf::internal::WireFormatLite::ReadMessage(
-               input, mutable_optionexdata()));
-        } else {
-          goto handle_unusual;
-        }
-        break;
-      }
-
-      // optional .Qot_Common.FutureStaticExData futureExData = 4;
-      case 4: {
-        if (static_cast< ::google::protobuf::uint8>(tag) ==
-            static_cast< ::google::protobuf::uint8>(34u /* 34 & 0xFF */)) {
-          DO_(::google::protobuf::internal::WireFormatLite::ReadMessage(
-               input, mutable_futureexdata()));
         } else {
           goto handle_unusual;
         }
@@ -9742,18 +4484,6 @@ void SecurityStaticInfo::SerializeWithCachedSizes(
       2, *this->warrantexdata_, output);
   }
 
-  // optional .Qot_Common.OptionStaticExData optionExData = 3;
-  if (cached_has_bits & 0x00000004u) {
-    ::google::protobuf::internal::WireFormatLite::WriteMessageMaybeToArray(
-      3, *this->optionexdata_, output);
-  }
-
-  // optional .Qot_Common.FutureStaticExData futureExData = 4;
-  if (cached_has_bits & 0x00000008u) {
-    ::google::protobuf::internal::WireFormatLite::WriteMessageMaybeToArray(
-      4, *this->futureexdata_, output);
-  }
-
   if (_internal_metadata_.have_unknown_fields()) {
     ::google::protobuf::internal::WireFormat::SerializeUnknownFields(
         _internal_metadata_.unknown_fields(), output);
@@ -9783,20 +4513,6 @@ void SecurityStaticInfo::SerializeWithCachedSizes(
         2, *this->warrantexdata_, deterministic, target);
   }
 
-  // optional .Qot_Common.OptionStaticExData optionExData = 3;
-  if (cached_has_bits & 0x00000004u) {
-    target = ::google::protobuf::internal::WireFormatLite::
-      InternalWriteMessageToArray(
-        3, *this->optionexdata_, deterministic, target);
-  }
-
-  // optional .Qot_Common.FutureStaticExData futureExData = 4;
-  if (cached_has_bits & 0x00000008u) {
-    target = ::google::protobuf::internal::WireFormatLite::
-      InternalWriteMessageToArray(
-        4, *this->futureexdata_, deterministic, target);
-  }
-
   if (_internal_metadata_.have_unknown_fields()) {
     target = ::google::protobuf::internal::WireFormat::SerializeUnknownFieldsToArray(
         _internal_metadata_.unknown_fields(), target);
@@ -9820,29 +4536,13 @@ size_t SecurityStaticInfo::ByteSizeLong() const {
       ::google::protobuf::internal::WireFormatLite::MessageSize(
         *this->basic_);
   }
-  if (_has_bits_[0 / 32] & 14u) {
-    // optional .Qot_Common.WarrantStaticExData warrantExData = 2;
-    if (has_warrantexdata()) {
-      total_size += 1 +
-        ::google::protobuf::internal::WireFormatLite::MessageSize(
-          *this->warrantexdata_);
-    }
-
-    // optional .Qot_Common.OptionStaticExData optionExData = 3;
-    if (has_optionexdata()) {
-      total_size += 1 +
-        ::google::protobuf::internal::WireFormatLite::MessageSize(
-          *this->optionexdata_);
-    }
-
-    // optional .Qot_Common.FutureStaticExData futureExData = 4;
-    if (has_futureexdata()) {
-      total_size += 1 +
-        ::google::protobuf::internal::WireFormatLite::MessageSize(
-          *this->futureexdata_);
-    }
-
+  // optional .Qot_Common.WarrantStaticExData warrantExData = 2;
+  if (has_warrantexdata()) {
+    total_size += 1 +
+      ::google::protobuf::internal::WireFormatLite::MessageSize(
+        *this->warrantexdata_);
   }
+
   int cached_size = ::google::protobuf::internal::ToCachedSize(total_size);
   GOOGLE_SAFE_CONCURRENT_WRITES_BEGIN();
   _cached_size_ = cached_size;
@@ -9873,18 +4573,12 @@ void SecurityStaticInfo::MergeFrom(const SecurityStaticInfo& from) {
   (void) cached_has_bits;
 
   cached_has_bits = from._has_bits_[0];
-  if (cached_has_bits & 15u) {
+  if (cached_has_bits & 3u) {
     if (cached_has_bits & 0x00000001u) {
       mutable_basic()->::Qot_Common::SecurityStaticBasic::MergeFrom(from.basic());
     }
     if (cached_has_bits & 0x00000002u) {
       mutable_warrantexdata()->::Qot_Common::WarrantStaticExData::MergeFrom(from.warrantexdata());
-    }
-    if (cached_has_bits & 0x00000004u) {
-      mutable_optionexdata()->::Qot_Common::OptionStaticExData::MergeFrom(from.optionexdata());
-    }
-    if (cached_has_bits & 0x00000008u) {
-      mutable_futureexdata()->::Qot_Common::FutureStaticExData::MergeFrom(from.futureexdata());
     }
   }
 }
@@ -9911,12 +4605,6 @@ bool SecurityStaticInfo::IsInitialized() const {
   if (has_warrantexdata()) {
     if (!this->warrantexdata_->IsInitialized()) return false;
   }
-  if (has_optionexdata()) {
-    if (!this->optionexdata_->IsInitialized()) return false;
-  }
-  if (has_futureexdata()) {
-    if (!this->futureexdata_->IsInitialized()) return false;
-  }
   return true;
 }
 
@@ -9928,8 +4616,6 @@ void SecurityStaticInfo::InternalSwap(SecurityStaticInfo* other) {
   using std::swap;
   swap(basic_, other->basic_);
   swap(warrantexdata_, other->warrantexdata_);
-  swap(optionexdata_, other->optionexdata_);
-  swap(futureexdata_, other->futureexdata_);
   swap(_has_bits_[0], other->_has_bits_[0]);
   _internal_metadata_.Swap(&other->_internal_metadata_);
   swap(_cached_size_, other->_cached_size_);
@@ -9949,8 +4635,6 @@ void Broker::InitAsDefaultInstance() {
 const int Broker::kIdFieldNumber;
 const int Broker::kNameFieldNumber;
 const int Broker::kPosFieldNumber;
-const int Broker::kOrderIDFieldNumber;
-const int Broker::kVolumeFieldNumber;
 #endif  // !defined(_MSC_VER) || _MSC_VER >= 1900
 
 Broker::Broker()
@@ -10028,7 +4712,7 @@ void Broker::Clear() {
     GOOGLE_DCHECK(!name_.IsDefault(&::google::protobuf::internal::GetEmptyStringAlreadyInited()));
     (*name_.UnsafeRawStringPointer())->clear();
   }
-  if (cached_has_bits & 30u) {
+  if (cached_has_bits & 6u) {
     ::memset(&id_, 0, static_cast<size_t>(
         reinterpret_cast<char*>(&pos_) -
         reinterpret_cast<char*>(&id_)) + sizeof(pos_));
@@ -10091,34 +4775,6 @@ bool Broker::MergePartialFromCodedStream(
         break;
       }
 
-      // optional int64 orderID = 4;
-      case 4: {
-        if (static_cast< ::google::protobuf::uint8>(tag) ==
-            static_cast< ::google::protobuf::uint8>(32u /* 32 & 0xFF */)) {
-          set_has_orderid();
-          DO_((::google::protobuf::internal::WireFormatLite::ReadPrimitive<
-                   ::google::protobuf::int64, ::google::protobuf::internal::WireFormatLite::TYPE_INT64>(
-                 input, &orderid_)));
-        } else {
-          goto handle_unusual;
-        }
-        break;
-      }
-
-      // optional int64 volume = 5;
-      case 5: {
-        if (static_cast< ::google::protobuf::uint8>(tag) ==
-            static_cast< ::google::protobuf::uint8>(40u /* 40 & 0xFF */)) {
-          set_has_volume();
-          DO_((::google::protobuf::internal::WireFormatLite::ReadPrimitive<
-                   ::google::protobuf::int64, ::google::protobuf::internal::WireFormatLite::TYPE_INT64>(
-                 input, &volume_)));
-        } else {
-          goto handle_unusual;
-        }
-        break;
-      }
-
       default: {
       handle_unusual:
         if (tag == 0) {
@@ -10162,18 +4818,8 @@ void Broker::SerializeWithCachedSizes(
   }
 
   // required int32 pos = 3;
-  if (cached_has_bits & 0x00000010u) {
-    ::google::protobuf::internal::WireFormatLite::WriteInt32(3, this->pos(), output);
-  }
-
-  // optional int64 orderID = 4;
   if (cached_has_bits & 0x00000004u) {
-    ::google::protobuf::internal::WireFormatLite::WriteInt64(4, this->orderid(), output);
-  }
-
-  // optional int64 volume = 5;
-  if (cached_has_bits & 0x00000008u) {
-    ::google::protobuf::internal::WireFormatLite::WriteInt64(5, this->volume(), output);
+    ::google::protobuf::internal::WireFormatLite::WriteInt32(3, this->pos(), output);
   }
 
   if (_internal_metadata_.have_unknown_fields()) {
@@ -10208,18 +4854,8 @@ void Broker::SerializeWithCachedSizes(
   }
 
   // required int32 pos = 3;
-  if (cached_has_bits & 0x00000010u) {
-    target = ::google::protobuf::internal::WireFormatLite::WriteInt32ToArray(3, this->pos(), target);
-  }
-
-  // optional int64 orderID = 4;
   if (cached_has_bits & 0x00000004u) {
-    target = ::google::protobuf::internal::WireFormatLite::WriteInt64ToArray(4, this->orderid(), target);
-  }
-
-  // optional int64 volume = 5;
-  if (cached_has_bits & 0x00000008u) {
-    target = ::google::protobuf::internal::WireFormatLite::WriteInt64ToArray(5, this->volume(), target);
+    target = ::google::protobuf::internal::WireFormatLite::WriteInt32ToArray(3, this->pos(), target);
   }
 
   if (_internal_metadata_.have_unknown_fields()) {
@@ -10266,7 +4902,7 @@ size_t Broker::ByteSizeLong() const {
       ::google::protobuf::internal::WireFormat::ComputeUnknownFieldsSize(
         _internal_metadata_.unknown_fields());
   }
-  if (((_has_bits_[0] & 0x00000013) ^ 0x00000013) == 0) {  // All required fields are present.
+  if (((_has_bits_[0] & 0x00000007) ^ 0x00000007) == 0) {  // All required fields are present.
     // required string name = 2;
     total_size += 1 +
       ::google::protobuf::internal::WireFormatLite::StringSize(
@@ -10284,22 +4920,6 @@ size_t Broker::ByteSizeLong() const {
 
   } else {
     total_size += RequiredFieldsByteSizeFallback();
-  }
-  if (_has_bits_[0 / 32] & 12u) {
-    // optional int64 orderID = 4;
-    if (has_orderid()) {
-      total_size += 1 +
-        ::google::protobuf::internal::WireFormatLite::Int64Size(
-          this->orderid());
-    }
-
-    // optional int64 volume = 5;
-    if (has_volume()) {
-      total_size += 1 +
-        ::google::protobuf::internal::WireFormatLite::Int64Size(
-          this->volume());
-    }
-
   }
   int cached_size = ::google::protobuf::internal::ToCachedSize(total_size);
   GOOGLE_SAFE_CONCURRENT_WRITES_BEGIN();
@@ -10331,7 +4951,7 @@ void Broker::MergeFrom(const Broker& from) {
   (void) cached_has_bits;
 
   cached_has_bits = from._has_bits_[0];
-  if (cached_has_bits & 31u) {
+  if (cached_has_bits & 7u) {
     if (cached_has_bits & 0x00000001u) {
       set_has_name();
       name_.AssignWithDefault(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), from.name_);
@@ -10340,12 +4960,6 @@ void Broker::MergeFrom(const Broker& from) {
       id_ = from.id_;
     }
     if (cached_has_bits & 0x00000004u) {
-      orderid_ = from.orderid_;
-    }
-    if (cached_has_bits & 0x00000008u) {
-      volume_ = from.volume_;
-    }
-    if (cached_has_bits & 0x00000010u) {
       pos_ = from.pos_;
     }
     _has_bits_[0] |= cached_has_bits;
@@ -10367,7 +4981,7 @@ void Broker::CopyFrom(const Broker& from) {
 }
 
 bool Broker::IsInitialized() const {
-  if ((_has_bits_[0] & 0x00000013) != 0x00000013) return false;
+  if ((_has_bits_[0] & 0x00000007) != 0x00000007) return false;
   return true;
 }
 
@@ -10379,8 +4993,6 @@ void Broker::InternalSwap(Broker* other) {
   using std::swap;
   name_.Swap(&other->name_);
   swap(id_, other->id_);
-  swap(orderid_, other->orderid_);
-  swap(volume_, other->volume_);
   swap(pos_, other->pos_);
   swap(_has_bits_[0], other->_has_bits_[0]);
   _internal_metadata_.Swap(&other->_internal_metadata_);
@@ -10407,8 +5019,6 @@ const int Ticker::kTurnoverFieldNumber;
 const int Ticker::kRecvTimeFieldNumber;
 const int Ticker::kTypeFieldNumber;
 const int Ticker::kTypeSignFieldNumber;
-const int Ticker::kPushDataTypeFieldNumber;
-const int Ticker::kTimestampFieldNumber;
 #endif  // !defined(_MSC_VER) || _MSC_VER >= 1900
 
 Ticker::Ticker()
@@ -10430,8 +5040,8 @@ Ticker::Ticker(const Ticker& from)
     time_.AssignWithDefault(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), from.time_);
   }
   ::memcpy(&sequence_, &from.sequence_,
-    static_cast<size_t>(reinterpret_cast<char*>(&timestamp_) -
-    reinterpret_cast<char*>(&sequence_)) + sizeof(timestamp_));
+    static_cast<size_t>(reinterpret_cast<char*>(&typesign_) -
+    reinterpret_cast<char*>(&sequence_)) + sizeof(typesign_));
   // @@protoc_insertion_point(copy_constructor:Qot_Common.Ticker)
 }
 
@@ -10439,8 +5049,8 @@ void Ticker::SharedCtor() {
   _cached_size_ = 0;
   time_.UnsafeSetDefault(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
   ::memset(&sequence_, 0, static_cast<size_t>(
-      reinterpret_cast<char*>(&timestamp_) -
-      reinterpret_cast<char*>(&sequence_)) + sizeof(timestamp_));
+      reinterpret_cast<char*>(&typesign_) -
+      reinterpret_cast<char*>(&sequence_)) + sizeof(typesign_));
 }
 
 Ticker::~Ticker() {
@@ -10491,11 +5101,7 @@ void Ticker::Clear() {
         reinterpret_cast<char*>(&recvtime_) -
         reinterpret_cast<char*>(&sequence_)) + sizeof(recvtime_));
   }
-  if (cached_has_bits & 1792u) {
-    ::memset(&typesign_, 0, static_cast<size_t>(
-        reinterpret_cast<char*>(&timestamp_) -
-        reinterpret_cast<char*>(&typesign_)) + sizeof(timestamp_));
-  }
+  typesign_ = 0;
   _has_bits_.Clear();
   _internal_metadata_.Clear();
 }
@@ -10638,34 +5244,6 @@ bool Ticker::MergePartialFromCodedStream(
         break;
       }
 
-      // optional int32 pushDataType = 10;
-      case 10: {
-        if (static_cast< ::google::protobuf::uint8>(tag) ==
-            static_cast< ::google::protobuf::uint8>(80u /* 80 & 0xFF */)) {
-          set_has_pushdatatype();
-          DO_((::google::protobuf::internal::WireFormatLite::ReadPrimitive<
-                   ::google::protobuf::int32, ::google::protobuf::internal::WireFormatLite::TYPE_INT32>(
-                 input, &pushdatatype_)));
-        } else {
-          goto handle_unusual;
-        }
-        break;
-      }
-
-      // optional double timestamp = 11;
-      case 11: {
-        if (static_cast< ::google::protobuf::uint8>(tag) ==
-            static_cast< ::google::protobuf::uint8>(89u /* 89 & 0xFF */)) {
-          set_has_timestamp();
-          DO_((::google::protobuf::internal::WireFormatLite::ReadPrimitive<
-                   double, ::google::protobuf::internal::WireFormatLite::TYPE_DOUBLE>(
-                 input, &timestamp_)));
-        } else {
-          goto handle_unusual;
-        }
-        break;
-      }
-
       default: {
       handle_unusual:
         if (tag == 0) {
@@ -10743,16 +5321,6 @@ void Ticker::SerializeWithCachedSizes(
     ::google::protobuf::internal::WireFormatLite::WriteInt32(9, this->typesign(), output);
   }
 
-  // optional int32 pushDataType = 10;
-  if (cached_has_bits & 0x00000200u) {
-    ::google::protobuf::internal::WireFormatLite::WriteInt32(10, this->pushdatatype(), output);
-  }
-
-  // optional double timestamp = 11;
-  if (cached_has_bits & 0x00000400u) {
-    ::google::protobuf::internal::WireFormatLite::WriteDouble(11, this->timestamp(), output);
-  }
-
   if (_internal_metadata_.have_unknown_fields()) {
     ::google::protobuf::internal::WireFormat::SerializeUnknownFields(
         _internal_metadata_.unknown_fields(), output);
@@ -10817,16 +5385,6 @@ void Ticker::SerializeWithCachedSizes(
   // optional int32 typeSign = 9;
   if (cached_has_bits & 0x00000100u) {
     target = ::google::protobuf::internal::WireFormatLite::WriteInt32ToArray(9, this->typesign(), target);
-  }
-
-  // optional int32 pushDataType = 10;
-  if (cached_has_bits & 0x00000200u) {
-    target = ::google::protobuf::internal::WireFormatLite::WriteInt32ToArray(10, this->pushdatatype(), target);
-  }
-
-  // optional double timestamp = 11;
-  if (cached_has_bits & 0x00000400u) {
-    target = ::google::protobuf::internal::WireFormatLite::WriteDoubleToArray(11, this->timestamp(), target);
   }
 
   if (_internal_metadata_.have_unknown_fields()) {
@@ -10932,27 +5490,13 @@ size_t Ticker::ByteSizeLong() const {
     total_size += 1 + 8;
   }
 
-  if (_has_bits_[8 / 32] & 1792u) {
-    // optional int32 typeSign = 9;
-    if (has_typesign()) {
-      total_size += 1 +
-        ::google::protobuf::internal::WireFormatLite::Int32Size(
-          this->typesign());
-    }
-
-    // optional int32 pushDataType = 10;
-    if (has_pushdatatype()) {
-      total_size += 1 +
-        ::google::protobuf::internal::WireFormatLite::Int32Size(
-          this->pushdatatype());
-    }
-
-    // optional double timestamp = 11;
-    if (has_timestamp()) {
-      total_size += 1 + 8;
-    }
-
+  // optional int32 typeSign = 9;
+  if (has_typesign()) {
+    total_size += 1 +
+      ::google::protobuf::internal::WireFormatLite::Int32Size(
+        this->typesign());
   }
+
   int cached_size = ::google::protobuf::internal::ToCachedSize(total_size);
   GOOGLE_SAFE_CONCURRENT_WRITES_BEGIN();
   _cached_size_ = cached_size;
@@ -11011,17 +5555,8 @@ void Ticker::MergeFrom(const Ticker& from) {
     }
     _has_bits_[0] |= cached_has_bits;
   }
-  if (cached_has_bits & 1792u) {
-    if (cached_has_bits & 0x00000100u) {
-      typesign_ = from.typesign_;
-    }
-    if (cached_has_bits & 0x00000200u) {
-      pushdatatype_ = from.pushdatatype_;
-    }
-    if (cached_has_bits & 0x00000400u) {
-      timestamp_ = from.timestamp_;
-    }
-    _has_bits_[0] |= cached_has_bits;
+  if (cached_has_bits & 0x00000100u) {
+    set_typesign(from.typesign());
   }
 }
 
@@ -11059,8 +5594,6 @@ void Ticker::InternalSwap(Ticker* other) {
   swap(turnover_, other->turnover_);
   swap(recvtime_, other->recvtime_);
   swap(typesign_, other->typesign_);
-  swap(pushdatatype_, other->pushdatatype_);
-  swap(timestamp_, other->timestamp_);
   swap(_has_bits_[0], other->_has_bits_[0]);
   _internal_metadata_.Swap(&other->_internal_metadata_);
   swap(_cached_size_, other->_cached_size_);
@@ -11074,326 +5607,12 @@ void Ticker::InternalSwap(Ticker* other) {
 
 // ===================================================================
 
-void OrderBookDetail::InitAsDefaultInstance() {
-}
-#if !defined(_MSC_VER) || _MSC_VER >= 1900
-const int OrderBookDetail::kOrderIDFieldNumber;
-const int OrderBookDetail::kVolumeFieldNumber;
-#endif  // !defined(_MSC_VER) || _MSC_VER >= 1900
-
-OrderBookDetail::OrderBookDetail()
-  : ::google::protobuf::Message(), _internal_metadata_(NULL) {
-  if (GOOGLE_PREDICT_TRUE(this != internal_default_instance())) {
-    ::protobuf_Qot_5fCommon_2eproto::InitDefaultsOrderBookDetail();
-  }
-  SharedCtor();
-  // @@protoc_insertion_point(constructor:Qot_Common.OrderBookDetail)
-}
-OrderBookDetail::OrderBookDetail(const OrderBookDetail& from)
-  : ::google::protobuf::Message(),
-      _internal_metadata_(NULL),
-      _has_bits_(from._has_bits_),
-      _cached_size_(0) {
-  _internal_metadata_.MergeFrom(from._internal_metadata_);
-  ::memcpy(&orderid_, &from.orderid_,
-    static_cast<size_t>(reinterpret_cast<char*>(&volume_) -
-    reinterpret_cast<char*>(&orderid_)) + sizeof(volume_));
-  // @@protoc_insertion_point(copy_constructor:Qot_Common.OrderBookDetail)
-}
-
-void OrderBookDetail::SharedCtor() {
-  _cached_size_ = 0;
-  ::memset(&orderid_, 0, static_cast<size_t>(
-      reinterpret_cast<char*>(&volume_) -
-      reinterpret_cast<char*>(&orderid_)) + sizeof(volume_));
-}
-
-OrderBookDetail::~OrderBookDetail() {
-  // @@protoc_insertion_point(destructor:Qot_Common.OrderBookDetail)
-  SharedDtor();
-}
-
-void OrderBookDetail::SharedDtor() {
-}
-
-void OrderBookDetail::SetCachedSize(int size) const {
-  GOOGLE_SAFE_CONCURRENT_WRITES_BEGIN();
-  _cached_size_ = size;
-  GOOGLE_SAFE_CONCURRENT_WRITES_END();
-}
-const ::google::protobuf::Descriptor* OrderBookDetail::descriptor() {
-  ::protobuf_Qot_5fCommon_2eproto::protobuf_AssignDescriptorsOnce();
-  return ::protobuf_Qot_5fCommon_2eproto::file_level_metadata[kIndexInFileMessages].descriptor;
-}
-
-const OrderBookDetail& OrderBookDetail::default_instance() {
-  ::protobuf_Qot_5fCommon_2eproto::InitDefaultsOrderBookDetail();
-  return *internal_default_instance();
-}
-
-OrderBookDetail* OrderBookDetail::New(::google::protobuf::Arena* arena) const {
-  OrderBookDetail* n = new OrderBookDetail;
-  if (arena != NULL) {
-    arena->Own(n);
-  }
-  return n;
-}
-
-void OrderBookDetail::Clear() {
-// @@protoc_insertion_point(message_clear_start:Qot_Common.OrderBookDetail)
-  ::google::protobuf::uint32 cached_has_bits = 0;
-  // Prevent compiler warnings about cached_has_bits being unused
-  (void) cached_has_bits;
-
-  cached_has_bits = _has_bits_[0];
-  if (cached_has_bits & 3u) {
-    ::memset(&orderid_, 0, static_cast<size_t>(
-        reinterpret_cast<char*>(&volume_) -
-        reinterpret_cast<char*>(&orderid_)) + sizeof(volume_));
-  }
-  _has_bits_.Clear();
-  _internal_metadata_.Clear();
-}
-
-bool OrderBookDetail::MergePartialFromCodedStream(
-    ::google::protobuf::io::CodedInputStream* input) {
-#define DO_(EXPRESSION) if (!GOOGLE_PREDICT_TRUE(EXPRESSION)) goto failure
-  ::google::protobuf::uint32 tag;
-  // @@protoc_insertion_point(parse_start:Qot_Common.OrderBookDetail)
-  for (;;) {
-    ::std::pair< ::google::protobuf::uint32, bool> p = input->ReadTagWithCutoffNoLastTag(127u);
-    tag = p.first;
-    if (!p.second) goto handle_unusual;
-    switch (::google::protobuf::internal::WireFormatLite::GetTagFieldNumber(tag)) {
-      // required int64 orderID = 1;
-      case 1: {
-        if (static_cast< ::google::protobuf::uint8>(tag) ==
-            static_cast< ::google::protobuf::uint8>(8u /* 8 & 0xFF */)) {
-          set_has_orderid();
-          DO_((::google::protobuf::internal::WireFormatLite::ReadPrimitive<
-                   ::google::protobuf::int64, ::google::protobuf::internal::WireFormatLite::TYPE_INT64>(
-                 input, &orderid_)));
-        } else {
-          goto handle_unusual;
-        }
-        break;
-      }
-
-      // required int64 volume = 2;
-      case 2: {
-        if (static_cast< ::google::protobuf::uint8>(tag) ==
-            static_cast< ::google::protobuf::uint8>(16u /* 16 & 0xFF */)) {
-          set_has_volume();
-          DO_((::google::protobuf::internal::WireFormatLite::ReadPrimitive<
-                   ::google::protobuf::int64, ::google::protobuf::internal::WireFormatLite::TYPE_INT64>(
-                 input, &volume_)));
-        } else {
-          goto handle_unusual;
-        }
-        break;
-      }
-
-      default: {
-      handle_unusual:
-        if (tag == 0) {
-          goto success;
-        }
-        DO_(::google::protobuf::internal::WireFormat::SkipField(
-              input, tag, _internal_metadata_.mutable_unknown_fields()));
-        break;
-      }
-    }
-  }
-success:
-  // @@protoc_insertion_point(parse_success:Qot_Common.OrderBookDetail)
-  return true;
-failure:
-  // @@protoc_insertion_point(parse_failure:Qot_Common.OrderBookDetail)
-  return false;
-#undef DO_
-}
-
-void OrderBookDetail::SerializeWithCachedSizes(
-    ::google::protobuf::io::CodedOutputStream* output) const {
-  // @@protoc_insertion_point(serialize_start:Qot_Common.OrderBookDetail)
-  ::google::protobuf::uint32 cached_has_bits = 0;
-  (void) cached_has_bits;
-
-  cached_has_bits = _has_bits_[0];
-  // required int64 orderID = 1;
-  if (cached_has_bits & 0x00000001u) {
-    ::google::protobuf::internal::WireFormatLite::WriteInt64(1, this->orderid(), output);
-  }
-
-  // required int64 volume = 2;
-  if (cached_has_bits & 0x00000002u) {
-    ::google::protobuf::internal::WireFormatLite::WriteInt64(2, this->volume(), output);
-  }
-
-  if (_internal_metadata_.have_unknown_fields()) {
-    ::google::protobuf::internal::WireFormat::SerializeUnknownFields(
-        _internal_metadata_.unknown_fields(), output);
-  }
-  // @@protoc_insertion_point(serialize_end:Qot_Common.OrderBookDetail)
-}
-
-::google::protobuf::uint8* OrderBookDetail::InternalSerializeWithCachedSizesToArray(
-    bool deterministic, ::google::protobuf::uint8* target) const {
-  (void)deterministic; // Unused
-  // @@protoc_insertion_point(serialize_to_array_start:Qot_Common.OrderBookDetail)
-  ::google::protobuf::uint32 cached_has_bits = 0;
-  (void) cached_has_bits;
-
-  cached_has_bits = _has_bits_[0];
-  // required int64 orderID = 1;
-  if (cached_has_bits & 0x00000001u) {
-    target = ::google::protobuf::internal::WireFormatLite::WriteInt64ToArray(1, this->orderid(), target);
-  }
-
-  // required int64 volume = 2;
-  if (cached_has_bits & 0x00000002u) {
-    target = ::google::protobuf::internal::WireFormatLite::WriteInt64ToArray(2, this->volume(), target);
-  }
-
-  if (_internal_metadata_.have_unknown_fields()) {
-    target = ::google::protobuf::internal::WireFormat::SerializeUnknownFieldsToArray(
-        _internal_metadata_.unknown_fields(), target);
-  }
-  // @@protoc_insertion_point(serialize_to_array_end:Qot_Common.OrderBookDetail)
-  return target;
-}
-
-size_t OrderBookDetail::RequiredFieldsByteSizeFallback() const {
-// @@protoc_insertion_point(required_fields_byte_size_fallback_start:Qot_Common.OrderBookDetail)
-  size_t total_size = 0;
-
-  if (has_orderid()) {
-    // required int64 orderID = 1;
-    total_size += 1 +
-      ::google::protobuf::internal::WireFormatLite::Int64Size(
-        this->orderid());
-  }
-
-  if (has_volume()) {
-    // required int64 volume = 2;
-    total_size += 1 +
-      ::google::protobuf::internal::WireFormatLite::Int64Size(
-        this->volume());
-  }
-
-  return total_size;
-}
-size_t OrderBookDetail::ByteSizeLong() const {
-// @@protoc_insertion_point(message_byte_size_start:Qot_Common.OrderBookDetail)
-  size_t total_size = 0;
-
-  if (_internal_metadata_.have_unknown_fields()) {
-    total_size +=
-      ::google::protobuf::internal::WireFormat::ComputeUnknownFieldsSize(
-        _internal_metadata_.unknown_fields());
-  }
-  if (((_has_bits_[0] & 0x00000003) ^ 0x00000003) == 0) {  // All required fields are present.
-    // required int64 orderID = 1;
-    total_size += 1 +
-      ::google::protobuf::internal::WireFormatLite::Int64Size(
-        this->orderid());
-
-    // required int64 volume = 2;
-    total_size += 1 +
-      ::google::protobuf::internal::WireFormatLite::Int64Size(
-        this->volume());
-
-  } else {
-    total_size += RequiredFieldsByteSizeFallback();
-  }
-  int cached_size = ::google::protobuf::internal::ToCachedSize(total_size);
-  GOOGLE_SAFE_CONCURRENT_WRITES_BEGIN();
-  _cached_size_ = cached_size;
-  GOOGLE_SAFE_CONCURRENT_WRITES_END();
-  return total_size;
-}
-
-void OrderBookDetail::MergeFrom(const ::google::protobuf::Message& from) {
-// @@protoc_insertion_point(generalized_merge_from_start:Qot_Common.OrderBookDetail)
-  GOOGLE_DCHECK_NE(&from, this);
-  const OrderBookDetail* source =
-      ::google::protobuf::internal::DynamicCastToGenerated<const OrderBookDetail>(
-          &from);
-  if (source == NULL) {
-  // @@protoc_insertion_point(generalized_merge_from_cast_fail:Qot_Common.OrderBookDetail)
-    ::google::protobuf::internal::ReflectionOps::Merge(from, this);
-  } else {
-  // @@protoc_insertion_point(generalized_merge_from_cast_success:Qot_Common.OrderBookDetail)
-    MergeFrom(*source);
-  }
-}
-
-void OrderBookDetail::MergeFrom(const OrderBookDetail& from) {
-// @@protoc_insertion_point(class_specific_merge_from_start:Qot_Common.OrderBookDetail)
-  GOOGLE_DCHECK_NE(&from, this);
-  _internal_metadata_.MergeFrom(from._internal_metadata_);
-  ::google::protobuf::uint32 cached_has_bits = 0;
-  (void) cached_has_bits;
-
-  cached_has_bits = from._has_bits_[0];
-  if (cached_has_bits & 3u) {
-    if (cached_has_bits & 0x00000001u) {
-      orderid_ = from.orderid_;
-    }
-    if (cached_has_bits & 0x00000002u) {
-      volume_ = from.volume_;
-    }
-    _has_bits_[0] |= cached_has_bits;
-  }
-}
-
-void OrderBookDetail::CopyFrom(const ::google::protobuf::Message& from) {
-// @@protoc_insertion_point(generalized_copy_from_start:Qot_Common.OrderBookDetail)
-  if (&from == this) return;
-  Clear();
-  MergeFrom(from);
-}
-
-void OrderBookDetail::CopyFrom(const OrderBookDetail& from) {
-// @@protoc_insertion_point(class_specific_copy_from_start:Qot_Common.OrderBookDetail)
-  if (&from == this) return;
-  Clear();
-  MergeFrom(from);
-}
-
-bool OrderBookDetail::IsInitialized() const {
-  if ((_has_bits_[0] & 0x00000003) != 0x00000003) return false;
-  return true;
-}
-
-void OrderBookDetail::Swap(OrderBookDetail* other) {
-  if (other == this) return;
-  InternalSwap(other);
-}
-void OrderBookDetail::InternalSwap(OrderBookDetail* other) {
-  using std::swap;
-  swap(orderid_, other->orderid_);
-  swap(volume_, other->volume_);
-  swap(_has_bits_[0], other->_has_bits_[0]);
-  _internal_metadata_.Swap(&other->_internal_metadata_);
-  swap(_cached_size_, other->_cached_size_);
-}
-
-::google::protobuf::Metadata OrderBookDetail::GetMetadata() const {
-  protobuf_Qot_5fCommon_2eproto::protobuf_AssignDescriptorsOnce();
-  return ::protobuf_Qot_5fCommon_2eproto::file_level_metadata[kIndexInFileMessages];
-}
-
-
-// ===================================================================
-
 void OrderBook::InitAsDefaultInstance() {
 }
 #if !defined(_MSC_VER) || _MSC_VER >= 1900
 const int OrderBook::kPriceFieldNumber;
 const int OrderBook::kVolumeFieldNumber;
 const int OrderBook::kOrederCountFieldNumber;
-const int OrderBook::kDetailListFieldNumber;
 #endif  // !defined(_MSC_VER) || _MSC_VER >= 1900
 
 OrderBook::OrderBook()
@@ -11408,8 +5627,7 @@ OrderBook::OrderBook(const OrderBook& from)
   : ::google::protobuf::Message(),
       _internal_metadata_(NULL),
       _has_bits_(from._has_bits_),
-      _cached_size_(0),
-      detaillist_(from.detaillist_) {
+      _cached_size_(0) {
   _internal_metadata_.MergeFrom(from._internal_metadata_);
   ::memcpy(&price_, &from.price_,
     static_cast<size_t>(reinterpret_cast<char*>(&oredercount_) -
@@ -11461,7 +5679,6 @@ void OrderBook::Clear() {
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
 
-  detaillist_.Clear();
   cached_has_bits = _has_bits_[0];
   if (cached_has_bits & 7u) {
     ::memset(&price_, 0, static_cast<size_t>(
@@ -11524,17 +5741,6 @@ bool OrderBook::MergePartialFromCodedStream(
         break;
       }
 
-      // repeated .Qot_Common.OrderBookDetail detailList = 4;
-      case 4: {
-        if (static_cast< ::google::protobuf::uint8>(tag) ==
-            static_cast< ::google::protobuf::uint8>(34u /* 34 & 0xFF */)) {
-          DO_(::google::protobuf::internal::WireFormatLite::ReadMessage(input, add_detaillist()));
-        } else {
-          goto handle_unusual;
-        }
-        break;
-      }
-
       default: {
       handle_unusual:
         if (tag == 0) {
@@ -11577,13 +5783,6 @@ void OrderBook::SerializeWithCachedSizes(
     ::google::protobuf::internal::WireFormatLite::WriteInt32(3, this->oredercount(), output);
   }
 
-  // repeated .Qot_Common.OrderBookDetail detailList = 4;
-  for (unsigned int i = 0,
-      n = static_cast<unsigned int>(this->detaillist_size()); i < n; i++) {
-    ::google::protobuf::internal::WireFormatLite::WriteMessageMaybeToArray(
-      4, this->detaillist(static_cast<int>(i)), output);
-  }
-
   if (_internal_metadata_.have_unknown_fields()) {
     ::google::protobuf::internal::WireFormat::SerializeUnknownFields(
         _internal_metadata_.unknown_fields(), output);
@@ -11612,14 +5811,6 @@ void OrderBook::SerializeWithCachedSizes(
   // required int32 orederCount = 3;
   if (cached_has_bits & 0x00000004u) {
     target = ::google::protobuf::internal::WireFormatLite::WriteInt32ToArray(3, this->oredercount(), target);
-  }
-
-  // repeated .Qot_Common.OrderBookDetail detailList = 4;
-  for (unsigned int i = 0,
-      n = static_cast<unsigned int>(this->detaillist_size()); i < n; i++) {
-    target = ::google::protobuf::internal::WireFormatLite::
-      InternalWriteMessageToArray(
-        4, this->detaillist(static_cast<int>(i)), deterministic, target);
   }
 
   if (_internal_metadata_.have_unknown_fields()) {
@@ -11681,17 +5872,6 @@ size_t OrderBook::ByteSizeLong() const {
   } else {
     total_size += RequiredFieldsByteSizeFallback();
   }
-  // repeated .Qot_Common.OrderBookDetail detailList = 4;
-  {
-    unsigned int count = static_cast<unsigned int>(this->detaillist_size());
-    total_size += 1UL * count;
-    for (unsigned int i = 0; i < count; i++) {
-      total_size +=
-        ::google::protobuf::internal::WireFormatLite::MessageSize(
-          this->detaillist(static_cast<int>(i)));
-    }
-  }
-
   int cached_size = ::google::protobuf::internal::ToCachedSize(total_size);
   GOOGLE_SAFE_CONCURRENT_WRITES_BEGIN();
   _cached_size_ = cached_size;
@@ -11721,7 +5901,6 @@ void OrderBook::MergeFrom(const OrderBook& from) {
   ::google::protobuf::uint32 cached_has_bits = 0;
   (void) cached_has_bits;
 
-  detaillist_.MergeFrom(from.detaillist_);
   cached_has_bits = from._has_bits_[0];
   if (cached_has_bits & 7u) {
     if (cached_has_bits & 0x00000001u) {
@@ -11753,7 +5932,6 @@ void OrderBook::CopyFrom(const OrderBook& from) {
 
 bool OrderBook::IsInitialized() const {
   if ((_has_bits_[0] & 0x00000007) != 0x00000007) return false;
-  if (!::google::protobuf::internal::AllAreInitialized(this->detaillist())) return false;
   return true;
 }
 
@@ -11763,7 +5941,6 @@ void OrderBook::Swap(OrderBook* other) {
 }
 void OrderBook::InternalSwap(OrderBook* other) {
   using std::swap;
-  detaillist_.InternalSwap(&other->detaillist_);
   swap(price_, other->price_);
   swap(volume_, other->volume_);
   swap(oredercount_, other->oredercount_);
@@ -11773,551 +5950,6 @@ void OrderBook::InternalSwap(OrderBook* other) {
 }
 
 ::google::protobuf::Metadata OrderBook::GetMetadata() const {
-  protobuf_Qot_5fCommon_2eproto::protobuf_AssignDescriptorsOnce();
-  return ::protobuf_Qot_5fCommon_2eproto::file_level_metadata[kIndexInFileMessages];
-}
-
-
-// ===================================================================
-
-void ShareHoldingChange::InitAsDefaultInstance() {
-}
-#if !defined(_MSC_VER) || _MSC_VER >= 1900
-const int ShareHoldingChange::kHolderNameFieldNumber;
-const int ShareHoldingChange::kHoldingQtyFieldNumber;
-const int ShareHoldingChange::kHoldingRatioFieldNumber;
-const int ShareHoldingChange::kChangeQtyFieldNumber;
-const int ShareHoldingChange::kChangeRatioFieldNumber;
-const int ShareHoldingChange::kTimeFieldNumber;
-const int ShareHoldingChange::kTimestampFieldNumber;
-#endif  // !defined(_MSC_VER) || _MSC_VER >= 1900
-
-ShareHoldingChange::ShareHoldingChange()
-  : ::google::protobuf::Message(), _internal_metadata_(NULL) {
-  if (GOOGLE_PREDICT_TRUE(this != internal_default_instance())) {
-    ::protobuf_Qot_5fCommon_2eproto::InitDefaultsShareHoldingChange();
-  }
-  SharedCtor();
-  // @@protoc_insertion_point(constructor:Qot_Common.ShareHoldingChange)
-}
-ShareHoldingChange::ShareHoldingChange(const ShareHoldingChange& from)
-  : ::google::protobuf::Message(),
-      _internal_metadata_(NULL),
-      _has_bits_(from._has_bits_),
-      _cached_size_(0) {
-  _internal_metadata_.MergeFrom(from._internal_metadata_);
-  holdername_.UnsafeSetDefault(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
-  if (from.has_holdername()) {
-    holdername_.AssignWithDefault(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), from.holdername_);
-  }
-  time_.UnsafeSetDefault(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
-  if (from.has_time()) {
-    time_.AssignWithDefault(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), from.time_);
-  }
-  ::memcpy(&holdingqty_, &from.holdingqty_,
-    static_cast<size_t>(reinterpret_cast<char*>(&timestamp_) -
-    reinterpret_cast<char*>(&holdingqty_)) + sizeof(timestamp_));
-  // @@protoc_insertion_point(copy_constructor:Qot_Common.ShareHoldingChange)
-}
-
-void ShareHoldingChange::SharedCtor() {
-  _cached_size_ = 0;
-  holdername_.UnsafeSetDefault(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
-  time_.UnsafeSetDefault(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
-  ::memset(&holdingqty_, 0, static_cast<size_t>(
-      reinterpret_cast<char*>(&timestamp_) -
-      reinterpret_cast<char*>(&holdingqty_)) + sizeof(timestamp_));
-}
-
-ShareHoldingChange::~ShareHoldingChange() {
-  // @@protoc_insertion_point(destructor:Qot_Common.ShareHoldingChange)
-  SharedDtor();
-}
-
-void ShareHoldingChange::SharedDtor() {
-  holdername_.DestroyNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
-  time_.DestroyNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
-}
-
-void ShareHoldingChange::SetCachedSize(int size) const {
-  GOOGLE_SAFE_CONCURRENT_WRITES_BEGIN();
-  _cached_size_ = size;
-  GOOGLE_SAFE_CONCURRENT_WRITES_END();
-}
-const ::google::protobuf::Descriptor* ShareHoldingChange::descriptor() {
-  ::protobuf_Qot_5fCommon_2eproto::protobuf_AssignDescriptorsOnce();
-  return ::protobuf_Qot_5fCommon_2eproto::file_level_metadata[kIndexInFileMessages].descriptor;
-}
-
-const ShareHoldingChange& ShareHoldingChange::default_instance() {
-  ::protobuf_Qot_5fCommon_2eproto::InitDefaultsShareHoldingChange();
-  return *internal_default_instance();
-}
-
-ShareHoldingChange* ShareHoldingChange::New(::google::protobuf::Arena* arena) const {
-  ShareHoldingChange* n = new ShareHoldingChange;
-  if (arena != NULL) {
-    arena->Own(n);
-  }
-  return n;
-}
-
-void ShareHoldingChange::Clear() {
-// @@protoc_insertion_point(message_clear_start:Qot_Common.ShareHoldingChange)
-  ::google::protobuf::uint32 cached_has_bits = 0;
-  // Prevent compiler warnings about cached_has_bits being unused
-  (void) cached_has_bits;
-
-  cached_has_bits = _has_bits_[0];
-  if (cached_has_bits & 3u) {
-    if (cached_has_bits & 0x00000001u) {
-      GOOGLE_DCHECK(!holdername_.IsDefault(&::google::protobuf::internal::GetEmptyStringAlreadyInited()));
-      (*holdername_.UnsafeRawStringPointer())->clear();
-    }
-    if (cached_has_bits & 0x00000002u) {
-      GOOGLE_DCHECK(!time_.IsDefault(&::google::protobuf::internal::GetEmptyStringAlreadyInited()));
-      (*time_.UnsafeRawStringPointer())->clear();
-    }
-  }
-  if (cached_has_bits & 124u) {
-    ::memset(&holdingqty_, 0, static_cast<size_t>(
-        reinterpret_cast<char*>(&timestamp_) -
-        reinterpret_cast<char*>(&holdingqty_)) + sizeof(timestamp_));
-  }
-  _has_bits_.Clear();
-  _internal_metadata_.Clear();
-}
-
-bool ShareHoldingChange::MergePartialFromCodedStream(
-    ::google::protobuf::io::CodedInputStream* input) {
-#define DO_(EXPRESSION) if (!GOOGLE_PREDICT_TRUE(EXPRESSION)) goto failure
-  ::google::protobuf::uint32 tag;
-  // @@protoc_insertion_point(parse_start:Qot_Common.ShareHoldingChange)
-  for (;;) {
-    ::std::pair< ::google::protobuf::uint32, bool> p = input->ReadTagWithCutoffNoLastTag(127u);
-    tag = p.first;
-    if (!p.second) goto handle_unusual;
-    switch (::google::protobuf::internal::WireFormatLite::GetTagFieldNumber(tag)) {
-      // required string holderName = 1;
-      case 1: {
-        if (static_cast< ::google::protobuf::uint8>(tag) ==
-            static_cast< ::google::protobuf::uint8>(10u /* 10 & 0xFF */)) {
-          DO_(::google::protobuf::internal::WireFormatLite::ReadString(
-                input, this->mutable_holdername()));
-          ::google::protobuf::internal::WireFormat::VerifyUTF8StringNamedField(
-            this->holdername().data(), static_cast<int>(this->holdername().length()),
-            ::google::protobuf::internal::WireFormat::PARSE,
-            "Qot_Common.ShareHoldingChange.holderName");
-        } else {
-          goto handle_unusual;
-        }
-        break;
-      }
-
-      // required double holdingQty = 2;
-      case 2: {
-        if (static_cast< ::google::protobuf::uint8>(tag) ==
-            static_cast< ::google::protobuf::uint8>(17u /* 17 & 0xFF */)) {
-          set_has_holdingqty();
-          DO_((::google::protobuf::internal::WireFormatLite::ReadPrimitive<
-                   double, ::google::protobuf::internal::WireFormatLite::TYPE_DOUBLE>(
-                 input, &holdingqty_)));
-        } else {
-          goto handle_unusual;
-        }
-        break;
-      }
-
-      // required double holdingRatio = 3;
-      case 3: {
-        if (static_cast< ::google::protobuf::uint8>(tag) ==
-            static_cast< ::google::protobuf::uint8>(25u /* 25 & 0xFF */)) {
-          set_has_holdingratio();
-          DO_((::google::protobuf::internal::WireFormatLite::ReadPrimitive<
-                   double, ::google::protobuf::internal::WireFormatLite::TYPE_DOUBLE>(
-                 input, &holdingratio_)));
-        } else {
-          goto handle_unusual;
-        }
-        break;
-      }
-
-      // required double changeQty = 4;
-      case 4: {
-        if (static_cast< ::google::protobuf::uint8>(tag) ==
-            static_cast< ::google::protobuf::uint8>(33u /* 33 & 0xFF */)) {
-          set_has_changeqty();
-          DO_((::google::protobuf::internal::WireFormatLite::ReadPrimitive<
-                   double, ::google::protobuf::internal::WireFormatLite::TYPE_DOUBLE>(
-                 input, &changeqty_)));
-        } else {
-          goto handle_unusual;
-        }
-        break;
-      }
-
-      // required double changeRatio = 5;
-      case 5: {
-        if (static_cast< ::google::protobuf::uint8>(tag) ==
-            static_cast< ::google::protobuf::uint8>(41u /* 41 & 0xFF */)) {
-          set_has_changeratio();
-          DO_((::google::protobuf::internal::WireFormatLite::ReadPrimitive<
-                   double, ::google::protobuf::internal::WireFormatLite::TYPE_DOUBLE>(
-                 input, &changeratio_)));
-        } else {
-          goto handle_unusual;
-        }
-        break;
-      }
-
-      // required string time = 6;
-      case 6: {
-        if (static_cast< ::google::protobuf::uint8>(tag) ==
-            static_cast< ::google::protobuf::uint8>(50u /* 50 & 0xFF */)) {
-          DO_(::google::protobuf::internal::WireFormatLite::ReadString(
-                input, this->mutable_time()));
-          ::google::protobuf::internal::WireFormat::VerifyUTF8StringNamedField(
-            this->time().data(), static_cast<int>(this->time().length()),
-            ::google::protobuf::internal::WireFormat::PARSE,
-            "Qot_Common.ShareHoldingChange.time");
-        } else {
-          goto handle_unusual;
-        }
-        break;
-      }
-
-      // optional double timestamp = 7;
-      case 7: {
-        if (static_cast< ::google::protobuf::uint8>(tag) ==
-            static_cast< ::google::protobuf::uint8>(57u /* 57 & 0xFF */)) {
-          set_has_timestamp();
-          DO_((::google::protobuf::internal::WireFormatLite::ReadPrimitive<
-                   double, ::google::protobuf::internal::WireFormatLite::TYPE_DOUBLE>(
-                 input, &timestamp_)));
-        } else {
-          goto handle_unusual;
-        }
-        break;
-      }
-
-      default: {
-      handle_unusual:
-        if (tag == 0) {
-          goto success;
-        }
-        DO_(::google::protobuf::internal::WireFormat::SkipField(
-              input, tag, _internal_metadata_.mutable_unknown_fields()));
-        break;
-      }
-    }
-  }
-success:
-  // @@protoc_insertion_point(parse_success:Qot_Common.ShareHoldingChange)
-  return true;
-failure:
-  // @@protoc_insertion_point(parse_failure:Qot_Common.ShareHoldingChange)
-  return false;
-#undef DO_
-}
-
-void ShareHoldingChange::SerializeWithCachedSizes(
-    ::google::protobuf::io::CodedOutputStream* output) const {
-  // @@protoc_insertion_point(serialize_start:Qot_Common.ShareHoldingChange)
-  ::google::protobuf::uint32 cached_has_bits = 0;
-  (void) cached_has_bits;
-
-  cached_has_bits = _has_bits_[0];
-  // required string holderName = 1;
-  if (cached_has_bits & 0x00000001u) {
-    ::google::protobuf::internal::WireFormat::VerifyUTF8StringNamedField(
-      this->holdername().data(), static_cast<int>(this->holdername().length()),
-      ::google::protobuf::internal::WireFormat::SERIALIZE,
-      "Qot_Common.ShareHoldingChange.holderName");
-    ::google::protobuf::internal::WireFormatLite::WriteStringMaybeAliased(
-      1, this->holdername(), output);
-  }
-
-  // required double holdingQty = 2;
-  if (cached_has_bits & 0x00000004u) {
-    ::google::protobuf::internal::WireFormatLite::WriteDouble(2, this->holdingqty(), output);
-  }
-
-  // required double holdingRatio = 3;
-  if (cached_has_bits & 0x00000008u) {
-    ::google::protobuf::internal::WireFormatLite::WriteDouble(3, this->holdingratio(), output);
-  }
-
-  // required double changeQty = 4;
-  if (cached_has_bits & 0x00000010u) {
-    ::google::protobuf::internal::WireFormatLite::WriteDouble(4, this->changeqty(), output);
-  }
-
-  // required double changeRatio = 5;
-  if (cached_has_bits & 0x00000020u) {
-    ::google::protobuf::internal::WireFormatLite::WriteDouble(5, this->changeratio(), output);
-  }
-
-  // required string time = 6;
-  if (cached_has_bits & 0x00000002u) {
-    ::google::protobuf::internal::WireFormat::VerifyUTF8StringNamedField(
-      this->time().data(), static_cast<int>(this->time().length()),
-      ::google::protobuf::internal::WireFormat::SERIALIZE,
-      "Qot_Common.ShareHoldingChange.time");
-    ::google::protobuf::internal::WireFormatLite::WriteStringMaybeAliased(
-      6, this->time(), output);
-  }
-
-  // optional double timestamp = 7;
-  if (cached_has_bits & 0x00000040u) {
-    ::google::protobuf::internal::WireFormatLite::WriteDouble(7, this->timestamp(), output);
-  }
-
-  if (_internal_metadata_.have_unknown_fields()) {
-    ::google::protobuf::internal::WireFormat::SerializeUnknownFields(
-        _internal_metadata_.unknown_fields(), output);
-  }
-  // @@protoc_insertion_point(serialize_end:Qot_Common.ShareHoldingChange)
-}
-
-::google::protobuf::uint8* ShareHoldingChange::InternalSerializeWithCachedSizesToArray(
-    bool deterministic, ::google::protobuf::uint8* target) const {
-  (void)deterministic; // Unused
-  // @@protoc_insertion_point(serialize_to_array_start:Qot_Common.ShareHoldingChange)
-  ::google::protobuf::uint32 cached_has_bits = 0;
-  (void) cached_has_bits;
-
-  cached_has_bits = _has_bits_[0];
-  // required string holderName = 1;
-  if (cached_has_bits & 0x00000001u) {
-    ::google::protobuf::internal::WireFormat::VerifyUTF8StringNamedField(
-      this->holdername().data(), static_cast<int>(this->holdername().length()),
-      ::google::protobuf::internal::WireFormat::SERIALIZE,
-      "Qot_Common.ShareHoldingChange.holderName");
-    target =
-      ::google::protobuf::internal::WireFormatLite::WriteStringToArray(
-        1, this->holdername(), target);
-  }
-
-  // required double holdingQty = 2;
-  if (cached_has_bits & 0x00000004u) {
-    target = ::google::protobuf::internal::WireFormatLite::WriteDoubleToArray(2, this->holdingqty(), target);
-  }
-
-  // required double holdingRatio = 3;
-  if (cached_has_bits & 0x00000008u) {
-    target = ::google::protobuf::internal::WireFormatLite::WriteDoubleToArray(3, this->holdingratio(), target);
-  }
-
-  // required double changeQty = 4;
-  if (cached_has_bits & 0x00000010u) {
-    target = ::google::protobuf::internal::WireFormatLite::WriteDoubleToArray(4, this->changeqty(), target);
-  }
-
-  // required double changeRatio = 5;
-  if (cached_has_bits & 0x00000020u) {
-    target = ::google::protobuf::internal::WireFormatLite::WriteDoubleToArray(5, this->changeratio(), target);
-  }
-
-  // required string time = 6;
-  if (cached_has_bits & 0x00000002u) {
-    ::google::protobuf::internal::WireFormat::VerifyUTF8StringNamedField(
-      this->time().data(), static_cast<int>(this->time().length()),
-      ::google::protobuf::internal::WireFormat::SERIALIZE,
-      "Qot_Common.ShareHoldingChange.time");
-    target =
-      ::google::protobuf::internal::WireFormatLite::WriteStringToArray(
-        6, this->time(), target);
-  }
-
-  // optional double timestamp = 7;
-  if (cached_has_bits & 0x00000040u) {
-    target = ::google::protobuf::internal::WireFormatLite::WriteDoubleToArray(7, this->timestamp(), target);
-  }
-
-  if (_internal_metadata_.have_unknown_fields()) {
-    target = ::google::protobuf::internal::WireFormat::SerializeUnknownFieldsToArray(
-        _internal_metadata_.unknown_fields(), target);
-  }
-  // @@protoc_insertion_point(serialize_to_array_end:Qot_Common.ShareHoldingChange)
-  return target;
-}
-
-size_t ShareHoldingChange::RequiredFieldsByteSizeFallback() const {
-// @@protoc_insertion_point(required_fields_byte_size_fallback_start:Qot_Common.ShareHoldingChange)
-  size_t total_size = 0;
-
-  if (has_holdername()) {
-    // required string holderName = 1;
-    total_size += 1 +
-      ::google::protobuf::internal::WireFormatLite::StringSize(
-        this->holdername());
-  }
-
-  if (has_time()) {
-    // required string time = 6;
-    total_size += 1 +
-      ::google::protobuf::internal::WireFormatLite::StringSize(
-        this->time());
-  }
-
-  if (has_holdingqty()) {
-    // required double holdingQty = 2;
-    total_size += 1 + 8;
-  }
-
-  if (has_holdingratio()) {
-    // required double holdingRatio = 3;
-    total_size += 1 + 8;
-  }
-
-  if (has_changeqty()) {
-    // required double changeQty = 4;
-    total_size += 1 + 8;
-  }
-
-  if (has_changeratio()) {
-    // required double changeRatio = 5;
-    total_size += 1 + 8;
-  }
-
-  return total_size;
-}
-size_t ShareHoldingChange::ByteSizeLong() const {
-// @@protoc_insertion_point(message_byte_size_start:Qot_Common.ShareHoldingChange)
-  size_t total_size = 0;
-
-  if (_internal_metadata_.have_unknown_fields()) {
-    total_size +=
-      ::google::protobuf::internal::WireFormat::ComputeUnknownFieldsSize(
-        _internal_metadata_.unknown_fields());
-  }
-  if (((_has_bits_[0] & 0x0000003f) ^ 0x0000003f) == 0) {  // All required fields are present.
-    // required string holderName = 1;
-    total_size += 1 +
-      ::google::protobuf::internal::WireFormatLite::StringSize(
-        this->holdername());
-
-    // required string time = 6;
-    total_size += 1 +
-      ::google::protobuf::internal::WireFormatLite::StringSize(
-        this->time());
-
-    // required double holdingQty = 2;
-    total_size += 1 + 8;
-
-    // required double holdingRatio = 3;
-    total_size += 1 + 8;
-
-    // required double changeQty = 4;
-    total_size += 1 + 8;
-
-    // required double changeRatio = 5;
-    total_size += 1 + 8;
-
-  } else {
-    total_size += RequiredFieldsByteSizeFallback();
-  }
-  // optional double timestamp = 7;
-  if (has_timestamp()) {
-    total_size += 1 + 8;
-  }
-
-  int cached_size = ::google::protobuf::internal::ToCachedSize(total_size);
-  GOOGLE_SAFE_CONCURRENT_WRITES_BEGIN();
-  _cached_size_ = cached_size;
-  GOOGLE_SAFE_CONCURRENT_WRITES_END();
-  return total_size;
-}
-
-void ShareHoldingChange::MergeFrom(const ::google::protobuf::Message& from) {
-// @@protoc_insertion_point(generalized_merge_from_start:Qot_Common.ShareHoldingChange)
-  GOOGLE_DCHECK_NE(&from, this);
-  const ShareHoldingChange* source =
-      ::google::protobuf::internal::DynamicCastToGenerated<const ShareHoldingChange>(
-          &from);
-  if (source == NULL) {
-  // @@protoc_insertion_point(generalized_merge_from_cast_fail:Qot_Common.ShareHoldingChange)
-    ::google::protobuf::internal::ReflectionOps::Merge(from, this);
-  } else {
-  // @@protoc_insertion_point(generalized_merge_from_cast_success:Qot_Common.ShareHoldingChange)
-    MergeFrom(*source);
-  }
-}
-
-void ShareHoldingChange::MergeFrom(const ShareHoldingChange& from) {
-// @@protoc_insertion_point(class_specific_merge_from_start:Qot_Common.ShareHoldingChange)
-  GOOGLE_DCHECK_NE(&from, this);
-  _internal_metadata_.MergeFrom(from._internal_metadata_);
-  ::google::protobuf::uint32 cached_has_bits = 0;
-  (void) cached_has_bits;
-
-  cached_has_bits = from._has_bits_[0];
-  if (cached_has_bits & 127u) {
-    if (cached_has_bits & 0x00000001u) {
-      set_has_holdername();
-      holdername_.AssignWithDefault(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), from.holdername_);
-    }
-    if (cached_has_bits & 0x00000002u) {
-      set_has_time();
-      time_.AssignWithDefault(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), from.time_);
-    }
-    if (cached_has_bits & 0x00000004u) {
-      holdingqty_ = from.holdingqty_;
-    }
-    if (cached_has_bits & 0x00000008u) {
-      holdingratio_ = from.holdingratio_;
-    }
-    if (cached_has_bits & 0x00000010u) {
-      changeqty_ = from.changeqty_;
-    }
-    if (cached_has_bits & 0x00000020u) {
-      changeratio_ = from.changeratio_;
-    }
-    if (cached_has_bits & 0x00000040u) {
-      timestamp_ = from.timestamp_;
-    }
-    _has_bits_[0] |= cached_has_bits;
-  }
-}
-
-void ShareHoldingChange::CopyFrom(const ::google::protobuf::Message& from) {
-// @@protoc_insertion_point(generalized_copy_from_start:Qot_Common.ShareHoldingChange)
-  if (&from == this) return;
-  Clear();
-  MergeFrom(from);
-}
-
-void ShareHoldingChange::CopyFrom(const ShareHoldingChange& from) {
-// @@protoc_insertion_point(class_specific_copy_from_start:Qot_Common.ShareHoldingChange)
-  if (&from == this) return;
-  Clear();
-  MergeFrom(from);
-}
-
-bool ShareHoldingChange::IsInitialized() const {
-  if ((_has_bits_[0] & 0x0000003f) != 0x0000003f) return false;
-  return true;
-}
-
-void ShareHoldingChange::Swap(ShareHoldingChange* other) {
-  if (other == this) return;
-  InternalSwap(other);
-}
-void ShareHoldingChange::InternalSwap(ShareHoldingChange* other) {
-  using std::swap;
-  holdername_.Swap(&other->holdername_);
-  time_.Swap(&other->time_);
-  swap(holdingqty_, other->holdingqty_);
-  swap(holdingratio_, other->holdingratio_);
-  swap(changeqty_, other->changeqty_);
-  swap(changeratio_, other->changeratio_);
-  swap(timestamp_, other->timestamp_);
-  swap(_has_bits_[0], other->_has_bits_[0]);
-  _internal_metadata_.Swap(&other->_internal_metadata_);
-  swap(_cached_size_, other->_cached_size_);
-}
-
-::google::protobuf::Metadata ShareHoldingChange::GetMetadata() const {
   protobuf_Qot_5fCommon_2eproto::protobuf_AssignDescriptorsOnce();
   return ::protobuf_Qot_5fCommon_2eproto::file_level_metadata[kIndexInFileMessages];
 }
@@ -12956,1500 +6588,6 @@ void ConnSubInfo::InternalSwap(ConnSubInfo* other) {
 }
 
 ::google::protobuf::Metadata ConnSubInfo::GetMetadata() const {
-  protobuf_Qot_5fCommon_2eproto::protobuf_AssignDescriptorsOnce();
-  return ::protobuf_Qot_5fCommon_2eproto::file_level_metadata[kIndexInFileMessages];
-}
-
-
-// ===================================================================
-
-void PlateInfo::InitAsDefaultInstance() {
-  ::Qot_Common::_PlateInfo_default_instance_._instance.get_mutable()->plate_ = const_cast< ::Qot_Common::Security*>(
-      ::Qot_Common::Security::internal_default_instance());
-}
-#if !defined(_MSC_VER) || _MSC_VER >= 1900
-const int PlateInfo::kPlateFieldNumber;
-const int PlateInfo::kNameFieldNumber;
-const int PlateInfo::kPlateTypeFieldNumber;
-#endif  // !defined(_MSC_VER) || _MSC_VER >= 1900
-
-PlateInfo::PlateInfo()
-  : ::google::protobuf::Message(), _internal_metadata_(NULL) {
-  if (GOOGLE_PREDICT_TRUE(this != internal_default_instance())) {
-    ::protobuf_Qot_5fCommon_2eproto::InitDefaultsPlateInfo();
-  }
-  SharedCtor();
-  // @@protoc_insertion_point(constructor:Qot_Common.PlateInfo)
-}
-PlateInfo::PlateInfo(const PlateInfo& from)
-  : ::google::protobuf::Message(),
-      _internal_metadata_(NULL),
-      _has_bits_(from._has_bits_),
-      _cached_size_(0) {
-  _internal_metadata_.MergeFrom(from._internal_metadata_);
-  name_.UnsafeSetDefault(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
-  if (from.has_name()) {
-    name_.AssignWithDefault(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), from.name_);
-  }
-  if (from.has_plate()) {
-    plate_ = new ::Qot_Common::Security(*from.plate_);
-  } else {
-    plate_ = NULL;
-  }
-  platetype_ = from.platetype_;
-  // @@protoc_insertion_point(copy_constructor:Qot_Common.PlateInfo)
-}
-
-void PlateInfo::SharedCtor() {
-  _cached_size_ = 0;
-  name_.UnsafeSetDefault(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
-  ::memset(&plate_, 0, static_cast<size_t>(
-      reinterpret_cast<char*>(&platetype_) -
-      reinterpret_cast<char*>(&plate_)) + sizeof(platetype_));
-}
-
-PlateInfo::~PlateInfo() {
-  // @@protoc_insertion_point(destructor:Qot_Common.PlateInfo)
-  SharedDtor();
-}
-
-void PlateInfo::SharedDtor() {
-  name_.DestroyNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
-  if (this != internal_default_instance()) delete plate_;
-}
-
-void PlateInfo::SetCachedSize(int size) const {
-  GOOGLE_SAFE_CONCURRENT_WRITES_BEGIN();
-  _cached_size_ = size;
-  GOOGLE_SAFE_CONCURRENT_WRITES_END();
-}
-const ::google::protobuf::Descriptor* PlateInfo::descriptor() {
-  ::protobuf_Qot_5fCommon_2eproto::protobuf_AssignDescriptorsOnce();
-  return ::protobuf_Qot_5fCommon_2eproto::file_level_metadata[kIndexInFileMessages].descriptor;
-}
-
-const PlateInfo& PlateInfo::default_instance() {
-  ::protobuf_Qot_5fCommon_2eproto::InitDefaultsPlateInfo();
-  return *internal_default_instance();
-}
-
-PlateInfo* PlateInfo::New(::google::protobuf::Arena* arena) const {
-  PlateInfo* n = new PlateInfo;
-  if (arena != NULL) {
-    arena->Own(n);
-  }
-  return n;
-}
-
-void PlateInfo::Clear() {
-// @@protoc_insertion_point(message_clear_start:Qot_Common.PlateInfo)
-  ::google::protobuf::uint32 cached_has_bits = 0;
-  // Prevent compiler warnings about cached_has_bits being unused
-  (void) cached_has_bits;
-
-  cached_has_bits = _has_bits_[0];
-  if (cached_has_bits & 3u) {
-    if (cached_has_bits & 0x00000001u) {
-      GOOGLE_DCHECK(!name_.IsDefault(&::google::protobuf::internal::GetEmptyStringAlreadyInited()));
-      (*name_.UnsafeRawStringPointer())->clear();
-    }
-    if (cached_has_bits & 0x00000002u) {
-      GOOGLE_DCHECK(plate_ != NULL);
-      plate_->Clear();
-    }
-  }
-  platetype_ = 0;
-  _has_bits_.Clear();
-  _internal_metadata_.Clear();
-}
-
-bool PlateInfo::MergePartialFromCodedStream(
-    ::google::protobuf::io::CodedInputStream* input) {
-#define DO_(EXPRESSION) if (!GOOGLE_PREDICT_TRUE(EXPRESSION)) goto failure
-  ::google::protobuf::uint32 tag;
-  // @@protoc_insertion_point(parse_start:Qot_Common.PlateInfo)
-  for (;;) {
-    ::std::pair< ::google::protobuf::uint32, bool> p = input->ReadTagWithCutoffNoLastTag(127u);
-    tag = p.first;
-    if (!p.second) goto handle_unusual;
-    switch (::google::protobuf::internal::WireFormatLite::GetTagFieldNumber(tag)) {
-      // required .Qot_Common.Security plate = 1;
-      case 1: {
-        if (static_cast< ::google::protobuf::uint8>(tag) ==
-            static_cast< ::google::protobuf::uint8>(10u /* 10 & 0xFF */)) {
-          DO_(::google::protobuf::internal::WireFormatLite::ReadMessage(
-               input, mutable_plate()));
-        } else {
-          goto handle_unusual;
-        }
-        break;
-      }
-
-      // required string name = 2;
-      case 2: {
-        if (static_cast< ::google::protobuf::uint8>(tag) ==
-            static_cast< ::google::protobuf::uint8>(18u /* 18 & 0xFF */)) {
-          DO_(::google::protobuf::internal::WireFormatLite::ReadString(
-                input, this->mutable_name()));
-          ::google::protobuf::internal::WireFormat::VerifyUTF8StringNamedField(
-            this->name().data(), static_cast<int>(this->name().length()),
-            ::google::protobuf::internal::WireFormat::PARSE,
-            "Qot_Common.PlateInfo.name");
-        } else {
-          goto handle_unusual;
-        }
-        break;
-      }
-
-      // optional int32 plateType = 3;
-      case 3: {
-        if (static_cast< ::google::protobuf::uint8>(tag) ==
-            static_cast< ::google::protobuf::uint8>(24u /* 24 & 0xFF */)) {
-          set_has_platetype();
-          DO_((::google::protobuf::internal::WireFormatLite::ReadPrimitive<
-                   ::google::protobuf::int32, ::google::protobuf::internal::WireFormatLite::TYPE_INT32>(
-                 input, &platetype_)));
-        } else {
-          goto handle_unusual;
-        }
-        break;
-      }
-
-      default: {
-      handle_unusual:
-        if (tag == 0) {
-          goto success;
-        }
-        DO_(::google::protobuf::internal::WireFormat::SkipField(
-              input, tag, _internal_metadata_.mutable_unknown_fields()));
-        break;
-      }
-    }
-  }
-success:
-  // @@protoc_insertion_point(parse_success:Qot_Common.PlateInfo)
-  return true;
-failure:
-  // @@protoc_insertion_point(parse_failure:Qot_Common.PlateInfo)
-  return false;
-#undef DO_
-}
-
-void PlateInfo::SerializeWithCachedSizes(
-    ::google::protobuf::io::CodedOutputStream* output) const {
-  // @@protoc_insertion_point(serialize_start:Qot_Common.PlateInfo)
-  ::google::protobuf::uint32 cached_has_bits = 0;
-  (void) cached_has_bits;
-
-  cached_has_bits = _has_bits_[0];
-  // required .Qot_Common.Security plate = 1;
-  if (cached_has_bits & 0x00000002u) {
-    ::google::protobuf::internal::WireFormatLite::WriteMessageMaybeToArray(
-      1, *this->plate_, output);
-  }
-
-  // required string name = 2;
-  if (cached_has_bits & 0x00000001u) {
-    ::google::protobuf::internal::WireFormat::VerifyUTF8StringNamedField(
-      this->name().data(), static_cast<int>(this->name().length()),
-      ::google::protobuf::internal::WireFormat::SERIALIZE,
-      "Qot_Common.PlateInfo.name");
-    ::google::protobuf::internal::WireFormatLite::WriteStringMaybeAliased(
-      2, this->name(), output);
-  }
-
-  // optional int32 plateType = 3;
-  if (cached_has_bits & 0x00000004u) {
-    ::google::protobuf::internal::WireFormatLite::WriteInt32(3, this->platetype(), output);
-  }
-
-  if (_internal_metadata_.have_unknown_fields()) {
-    ::google::protobuf::internal::WireFormat::SerializeUnknownFields(
-        _internal_metadata_.unknown_fields(), output);
-  }
-  // @@protoc_insertion_point(serialize_end:Qot_Common.PlateInfo)
-}
-
-::google::protobuf::uint8* PlateInfo::InternalSerializeWithCachedSizesToArray(
-    bool deterministic, ::google::protobuf::uint8* target) const {
-  (void)deterministic; // Unused
-  // @@protoc_insertion_point(serialize_to_array_start:Qot_Common.PlateInfo)
-  ::google::protobuf::uint32 cached_has_bits = 0;
-  (void) cached_has_bits;
-
-  cached_has_bits = _has_bits_[0];
-  // required .Qot_Common.Security plate = 1;
-  if (cached_has_bits & 0x00000002u) {
-    target = ::google::protobuf::internal::WireFormatLite::
-      InternalWriteMessageToArray(
-        1, *this->plate_, deterministic, target);
-  }
-
-  // required string name = 2;
-  if (cached_has_bits & 0x00000001u) {
-    ::google::protobuf::internal::WireFormat::VerifyUTF8StringNamedField(
-      this->name().data(), static_cast<int>(this->name().length()),
-      ::google::protobuf::internal::WireFormat::SERIALIZE,
-      "Qot_Common.PlateInfo.name");
-    target =
-      ::google::protobuf::internal::WireFormatLite::WriteStringToArray(
-        2, this->name(), target);
-  }
-
-  // optional int32 plateType = 3;
-  if (cached_has_bits & 0x00000004u) {
-    target = ::google::protobuf::internal::WireFormatLite::WriteInt32ToArray(3, this->platetype(), target);
-  }
-
-  if (_internal_metadata_.have_unknown_fields()) {
-    target = ::google::protobuf::internal::WireFormat::SerializeUnknownFieldsToArray(
-        _internal_metadata_.unknown_fields(), target);
-  }
-  // @@protoc_insertion_point(serialize_to_array_end:Qot_Common.PlateInfo)
-  return target;
-}
-
-size_t PlateInfo::RequiredFieldsByteSizeFallback() const {
-// @@protoc_insertion_point(required_fields_byte_size_fallback_start:Qot_Common.PlateInfo)
-  size_t total_size = 0;
-
-  if (has_name()) {
-    // required string name = 2;
-    total_size += 1 +
-      ::google::protobuf::internal::WireFormatLite::StringSize(
-        this->name());
-  }
-
-  if (has_plate()) {
-    // required .Qot_Common.Security plate = 1;
-    total_size += 1 +
-      ::google::protobuf::internal::WireFormatLite::MessageSize(
-        *this->plate_);
-  }
-
-  return total_size;
-}
-size_t PlateInfo::ByteSizeLong() const {
-// @@protoc_insertion_point(message_byte_size_start:Qot_Common.PlateInfo)
-  size_t total_size = 0;
-
-  if (_internal_metadata_.have_unknown_fields()) {
-    total_size +=
-      ::google::protobuf::internal::WireFormat::ComputeUnknownFieldsSize(
-        _internal_metadata_.unknown_fields());
-  }
-  if (((_has_bits_[0] & 0x00000003) ^ 0x00000003) == 0) {  // All required fields are present.
-    // required string name = 2;
-    total_size += 1 +
-      ::google::protobuf::internal::WireFormatLite::StringSize(
-        this->name());
-
-    // required .Qot_Common.Security plate = 1;
-    total_size += 1 +
-      ::google::protobuf::internal::WireFormatLite::MessageSize(
-        *this->plate_);
-
-  } else {
-    total_size += RequiredFieldsByteSizeFallback();
-  }
-  // optional int32 plateType = 3;
-  if (has_platetype()) {
-    total_size += 1 +
-      ::google::protobuf::internal::WireFormatLite::Int32Size(
-        this->platetype());
-  }
-
-  int cached_size = ::google::protobuf::internal::ToCachedSize(total_size);
-  GOOGLE_SAFE_CONCURRENT_WRITES_BEGIN();
-  _cached_size_ = cached_size;
-  GOOGLE_SAFE_CONCURRENT_WRITES_END();
-  return total_size;
-}
-
-void PlateInfo::MergeFrom(const ::google::protobuf::Message& from) {
-// @@protoc_insertion_point(generalized_merge_from_start:Qot_Common.PlateInfo)
-  GOOGLE_DCHECK_NE(&from, this);
-  const PlateInfo* source =
-      ::google::protobuf::internal::DynamicCastToGenerated<const PlateInfo>(
-          &from);
-  if (source == NULL) {
-  // @@protoc_insertion_point(generalized_merge_from_cast_fail:Qot_Common.PlateInfo)
-    ::google::protobuf::internal::ReflectionOps::Merge(from, this);
-  } else {
-  // @@protoc_insertion_point(generalized_merge_from_cast_success:Qot_Common.PlateInfo)
-    MergeFrom(*source);
-  }
-}
-
-void PlateInfo::MergeFrom(const PlateInfo& from) {
-// @@protoc_insertion_point(class_specific_merge_from_start:Qot_Common.PlateInfo)
-  GOOGLE_DCHECK_NE(&from, this);
-  _internal_metadata_.MergeFrom(from._internal_metadata_);
-  ::google::protobuf::uint32 cached_has_bits = 0;
-  (void) cached_has_bits;
-
-  cached_has_bits = from._has_bits_[0];
-  if (cached_has_bits & 7u) {
-    if (cached_has_bits & 0x00000001u) {
-      set_has_name();
-      name_.AssignWithDefault(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), from.name_);
-    }
-    if (cached_has_bits & 0x00000002u) {
-      mutable_plate()->::Qot_Common::Security::MergeFrom(from.plate());
-    }
-    if (cached_has_bits & 0x00000004u) {
-      platetype_ = from.platetype_;
-    }
-    _has_bits_[0] |= cached_has_bits;
-  }
-}
-
-void PlateInfo::CopyFrom(const ::google::protobuf::Message& from) {
-// @@protoc_insertion_point(generalized_copy_from_start:Qot_Common.PlateInfo)
-  if (&from == this) return;
-  Clear();
-  MergeFrom(from);
-}
-
-void PlateInfo::CopyFrom(const PlateInfo& from) {
-// @@protoc_insertion_point(class_specific_copy_from_start:Qot_Common.PlateInfo)
-  if (&from == this) return;
-  Clear();
-  MergeFrom(from);
-}
-
-bool PlateInfo::IsInitialized() const {
-  if ((_has_bits_[0] & 0x00000003) != 0x00000003) return false;
-  if (has_plate()) {
-    if (!this->plate_->IsInitialized()) return false;
-  }
-  return true;
-}
-
-void PlateInfo::Swap(PlateInfo* other) {
-  if (other == this) return;
-  InternalSwap(other);
-}
-void PlateInfo::InternalSwap(PlateInfo* other) {
-  using std::swap;
-  name_.Swap(&other->name_);
-  swap(plate_, other->plate_);
-  swap(platetype_, other->platetype_);
-  swap(_has_bits_[0], other->_has_bits_[0]);
-  _internal_metadata_.Swap(&other->_internal_metadata_);
-  swap(_cached_size_, other->_cached_size_);
-}
-
-::google::protobuf::Metadata PlateInfo::GetMetadata() const {
-  protobuf_Qot_5fCommon_2eproto::protobuf_AssignDescriptorsOnce();
-  return ::protobuf_Qot_5fCommon_2eproto::file_level_metadata[kIndexInFileMessages];
-}
-
-
-// ===================================================================
-
-void Rehab::InitAsDefaultInstance() {
-}
-#if !defined(_MSC_VER) || _MSC_VER >= 1900
-const int Rehab::kTimeFieldNumber;
-const int Rehab::kCompanyActFlagFieldNumber;
-const int Rehab::kFwdFactorAFieldNumber;
-const int Rehab::kFwdFactorBFieldNumber;
-const int Rehab::kBwdFactorAFieldNumber;
-const int Rehab::kBwdFactorBFieldNumber;
-const int Rehab::kSplitBaseFieldNumber;
-const int Rehab::kSplitErtFieldNumber;
-const int Rehab::kJoinBaseFieldNumber;
-const int Rehab::kJoinErtFieldNumber;
-const int Rehab::kBonusBaseFieldNumber;
-const int Rehab::kBonusErtFieldNumber;
-const int Rehab::kTransferBaseFieldNumber;
-const int Rehab::kTransferErtFieldNumber;
-const int Rehab::kAllotBaseFieldNumber;
-const int Rehab::kAllotErtFieldNumber;
-const int Rehab::kAllotPriceFieldNumber;
-const int Rehab::kAddBaseFieldNumber;
-const int Rehab::kAddErtFieldNumber;
-const int Rehab::kAddPriceFieldNumber;
-const int Rehab::kDividendFieldNumber;
-const int Rehab::kSpDividendFieldNumber;
-const int Rehab::kTimestampFieldNumber;
-#endif  // !defined(_MSC_VER) || _MSC_VER >= 1900
-
-Rehab::Rehab()
-  : ::google::protobuf::Message(), _internal_metadata_(NULL) {
-  if (GOOGLE_PREDICT_TRUE(this != internal_default_instance())) {
-    ::protobuf_Qot_5fCommon_2eproto::InitDefaultsRehab();
-  }
-  SharedCtor();
-  // @@protoc_insertion_point(constructor:Qot_Common.Rehab)
-}
-Rehab::Rehab(const Rehab& from)
-  : ::google::protobuf::Message(),
-      _internal_metadata_(NULL),
-      _has_bits_(from._has_bits_),
-      _cached_size_(0) {
-  _internal_metadata_.MergeFrom(from._internal_metadata_);
-  time_.UnsafeSetDefault(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
-  if (from.has_time()) {
-    time_.AssignWithDefault(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), from.time_);
-  }
-  ::memcpy(&companyactflag_, &from.companyactflag_,
-    static_cast<size_t>(reinterpret_cast<char*>(&timestamp_) -
-    reinterpret_cast<char*>(&companyactflag_)) + sizeof(timestamp_));
-  // @@protoc_insertion_point(copy_constructor:Qot_Common.Rehab)
-}
-
-void Rehab::SharedCtor() {
-  _cached_size_ = 0;
-  time_.UnsafeSetDefault(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
-  ::memset(&companyactflag_, 0, static_cast<size_t>(
-      reinterpret_cast<char*>(&timestamp_) -
-      reinterpret_cast<char*>(&companyactflag_)) + sizeof(timestamp_));
-}
-
-Rehab::~Rehab() {
-  // @@protoc_insertion_point(destructor:Qot_Common.Rehab)
-  SharedDtor();
-}
-
-void Rehab::SharedDtor() {
-  time_.DestroyNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
-}
-
-void Rehab::SetCachedSize(int size) const {
-  GOOGLE_SAFE_CONCURRENT_WRITES_BEGIN();
-  _cached_size_ = size;
-  GOOGLE_SAFE_CONCURRENT_WRITES_END();
-}
-const ::google::protobuf::Descriptor* Rehab::descriptor() {
-  ::protobuf_Qot_5fCommon_2eproto::protobuf_AssignDescriptorsOnce();
-  return ::protobuf_Qot_5fCommon_2eproto::file_level_metadata[kIndexInFileMessages].descriptor;
-}
-
-const Rehab& Rehab::default_instance() {
-  ::protobuf_Qot_5fCommon_2eproto::InitDefaultsRehab();
-  return *internal_default_instance();
-}
-
-Rehab* Rehab::New(::google::protobuf::Arena* arena) const {
-  Rehab* n = new Rehab;
-  if (arena != NULL) {
-    arena->Own(n);
-  }
-  return n;
-}
-
-void Rehab::Clear() {
-// @@protoc_insertion_point(message_clear_start:Qot_Common.Rehab)
-  ::google::protobuf::uint32 cached_has_bits = 0;
-  // Prevent compiler warnings about cached_has_bits being unused
-  (void) cached_has_bits;
-
-  cached_has_bits = _has_bits_[0];
-  if (cached_has_bits & 0x00000001u) {
-    GOOGLE_DCHECK(!time_.IsDefault(&::google::protobuf::internal::GetEmptyStringAlreadyInited()));
-    (*time_.UnsafeRawStringPointer())->clear();
-  }
-  if (cached_has_bits & 254u) {
-    ::memset(&companyactflag_, 0, static_cast<size_t>(
-        reinterpret_cast<char*>(&splitert_) -
-        reinterpret_cast<char*>(&companyactflag_)) + sizeof(splitert_));
-  }
-  if (cached_has_bits & 65280u) {
-    ::memset(&joinbase_, 0, static_cast<size_t>(
-        reinterpret_cast<char*>(&allotert_) -
-        reinterpret_cast<char*>(&joinbase_)) + sizeof(allotert_));
-  }
-  if (cached_has_bits & 8323072u) {
-    ::memset(&allotprice_, 0, static_cast<size_t>(
-        reinterpret_cast<char*>(&timestamp_) -
-        reinterpret_cast<char*>(&allotprice_)) + sizeof(timestamp_));
-  }
-  _has_bits_.Clear();
-  _internal_metadata_.Clear();
-}
-
-bool Rehab::MergePartialFromCodedStream(
-    ::google::protobuf::io::CodedInputStream* input) {
-#define DO_(EXPRESSION) if (!GOOGLE_PREDICT_TRUE(EXPRESSION)) goto failure
-  ::google::protobuf::uint32 tag;
-  // @@protoc_insertion_point(parse_start:Qot_Common.Rehab)
-  for (;;) {
-    ::std::pair< ::google::protobuf::uint32, bool> p = input->ReadTagWithCutoffNoLastTag(16383u);
-    tag = p.first;
-    if (!p.second) goto handle_unusual;
-    switch (::google::protobuf::internal::WireFormatLite::GetTagFieldNumber(tag)) {
-      // required string time = 1;
-      case 1: {
-        if (static_cast< ::google::protobuf::uint8>(tag) ==
-            static_cast< ::google::protobuf::uint8>(10u /* 10 & 0xFF */)) {
-          DO_(::google::protobuf::internal::WireFormatLite::ReadString(
-                input, this->mutable_time()));
-          ::google::protobuf::internal::WireFormat::VerifyUTF8StringNamedField(
-            this->time().data(), static_cast<int>(this->time().length()),
-            ::google::protobuf::internal::WireFormat::PARSE,
-            "Qot_Common.Rehab.time");
-        } else {
-          goto handle_unusual;
-        }
-        break;
-      }
-
-      // required int64 companyActFlag = 2;
-      case 2: {
-        if (static_cast< ::google::protobuf::uint8>(tag) ==
-            static_cast< ::google::protobuf::uint8>(16u /* 16 & 0xFF */)) {
-          set_has_companyactflag();
-          DO_((::google::protobuf::internal::WireFormatLite::ReadPrimitive<
-                   ::google::protobuf::int64, ::google::protobuf::internal::WireFormatLite::TYPE_INT64>(
-                 input, &companyactflag_)));
-        } else {
-          goto handle_unusual;
-        }
-        break;
-      }
-
-      // required double fwdFactorA = 3;
-      case 3: {
-        if (static_cast< ::google::protobuf::uint8>(tag) ==
-            static_cast< ::google::protobuf::uint8>(25u /* 25 & 0xFF */)) {
-          set_has_fwdfactora();
-          DO_((::google::protobuf::internal::WireFormatLite::ReadPrimitive<
-                   double, ::google::protobuf::internal::WireFormatLite::TYPE_DOUBLE>(
-                 input, &fwdfactora_)));
-        } else {
-          goto handle_unusual;
-        }
-        break;
-      }
-
-      // required double fwdFactorB = 4;
-      case 4: {
-        if (static_cast< ::google::protobuf::uint8>(tag) ==
-            static_cast< ::google::protobuf::uint8>(33u /* 33 & 0xFF */)) {
-          set_has_fwdfactorb();
-          DO_((::google::protobuf::internal::WireFormatLite::ReadPrimitive<
-                   double, ::google::protobuf::internal::WireFormatLite::TYPE_DOUBLE>(
-                 input, &fwdfactorb_)));
-        } else {
-          goto handle_unusual;
-        }
-        break;
-      }
-
-      // required double bwdFactorA = 5;
-      case 5: {
-        if (static_cast< ::google::protobuf::uint8>(tag) ==
-            static_cast< ::google::protobuf::uint8>(41u /* 41 & 0xFF */)) {
-          set_has_bwdfactora();
-          DO_((::google::protobuf::internal::WireFormatLite::ReadPrimitive<
-                   double, ::google::protobuf::internal::WireFormatLite::TYPE_DOUBLE>(
-                 input, &bwdfactora_)));
-        } else {
-          goto handle_unusual;
-        }
-        break;
-      }
-
-      // required double bwdFactorB = 6;
-      case 6: {
-        if (static_cast< ::google::protobuf::uint8>(tag) ==
-            static_cast< ::google::protobuf::uint8>(49u /* 49 & 0xFF */)) {
-          set_has_bwdfactorb();
-          DO_((::google::protobuf::internal::WireFormatLite::ReadPrimitive<
-                   double, ::google::protobuf::internal::WireFormatLite::TYPE_DOUBLE>(
-                 input, &bwdfactorb_)));
-        } else {
-          goto handle_unusual;
-        }
-        break;
-      }
-
-      // optional int32 splitBase = 7;
-      case 7: {
-        if (static_cast< ::google::protobuf::uint8>(tag) ==
-            static_cast< ::google::protobuf::uint8>(56u /* 56 & 0xFF */)) {
-          set_has_splitbase();
-          DO_((::google::protobuf::internal::WireFormatLite::ReadPrimitive<
-                   ::google::protobuf::int32, ::google::protobuf::internal::WireFormatLite::TYPE_INT32>(
-                 input, &splitbase_)));
-        } else {
-          goto handle_unusual;
-        }
-        break;
-      }
-
-      // optional int32 splitErt = 8;
-      case 8: {
-        if (static_cast< ::google::protobuf::uint8>(tag) ==
-            static_cast< ::google::protobuf::uint8>(64u /* 64 & 0xFF */)) {
-          set_has_splitert();
-          DO_((::google::protobuf::internal::WireFormatLite::ReadPrimitive<
-                   ::google::protobuf::int32, ::google::protobuf::internal::WireFormatLite::TYPE_INT32>(
-                 input, &splitert_)));
-        } else {
-          goto handle_unusual;
-        }
-        break;
-      }
-
-      // optional int32 joinBase = 9;
-      case 9: {
-        if (static_cast< ::google::protobuf::uint8>(tag) ==
-            static_cast< ::google::protobuf::uint8>(72u /* 72 & 0xFF */)) {
-          set_has_joinbase();
-          DO_((::google::protobuf::internal::WireFormatLite::ReadPrimitive<
-                   ::google::protobuf::int32, ::google::protobuf::internal::WireFormatLite::TYPE_INT32>(
-                 input, &joinbase_)));
-        } else {
-          goto handle_unusual;
-        }
-        break;
-      }
-
-      // optional int32 joinErt = 10;
-      case 10: {
-        if (static_cast< ::google::protobuf::uint8>(tag) ==
-            static_cast< ::google::protobuf::uint8>(80u /* 80 & 0xFF */)) {
-          set_has_joinert();
-          DO_((::google::protobuf::internal::WireFormatLite::ReadPrimitive<
-                   ::google::protobuf::int32, ::google::protobuf::internal::WireFormatLite::TYPE_INT32>(
-                 input, &joinert_)));
-        } else {
-          goto handle_unusual;
-        }
-        break;
-      }
-
-      // optional int32 bonusBase = 11;
-      case 11: {
-        if (static_cast< ::google::protobuf::uint8>(tag) ==
-            static_cast< ::google::protobuf::uint8>(88u /* 88 & 0xFF */)) {
-          set_has_bonusbase();
-          DO_((::google::protobuf::internal::WireFormatLite::ReadPrimitive<
-                   ::google::protobuf::int32, ::google::protobuf::internal::WireFormatLite::TYPE_INT32>(
-                 input, &bonusbase_)));
-        } else {
-          goto handle_unusual;
-        }
-        break;
-      }
-
-      // optional int32 bonusErt = 12;
-      case 12: {
-        if (static_cast< ::google::protobuf::uint8>(tag) ==
-            static_cast< ::google::protobuf::uint8>(96u /* 96 & 0xFF */)) {
-          set_has_bonusert();
-          DO_((::google::protobuf::internal::WireFormatLite::ReadPrimitive<
-                   ::google::protobuf::int32, ::google::protobuf::internal::WireFormatLite::TYPE_INT32>(
-                 input, &bonusert_)));
-        } else {
-          goto handle_unusual;
-        }
-        break;
-      }
-
-      // optional int32 transferBase = 13;
-      case 13: {
-        if (static_cast< ::google::protobuf::uint8>(tag) ==
-            static_cast< ::google::protobuf::uint8>(104u /* 104 & 0xFF */)) {
-          set_has_transferbase();
-          DO_((::google::protobuf::internal::WireFormatLite::ReadPrimitive<
-                   ::google::protobuf::int32, ::google::protobuf::internal::WireFormatLite::TYPE_INT32>(
-                 input, &transferbase_)));
-        } else {
-          goto handle_unusual;
-        }
-        break;
-      }
-
-      // optional int32 transferErt = 14;
-      case 14: {
-        if (static_cast< ::google::protobuf::uint8>(tag) ==
-            static_cast< ::google::protobuf::uint8>(112u /* 112 & 0xFF */)) {
-          set_has_transferert();
-          DO_((::google::protobuf::internal::WireFormatLite::ReadPrimitive<
-                   ::google::protobuf::int32, ::google::protobuf::internal::WireFormatLite::TYPE_INT32>(
-                 input, &transferert_)));
-        } else {
-          goto handle_unusual;
-        }
-        break;
-      }
-
-      // optional int32 allotBase = 15;
-      case 15: {
-        if (static_cast< ::google::protobuf::uint8>(tag) ==
-            static_cast< ::google::protobuf::uint8>(120u /* 120 & 0xFF */)) {
-          set_has_allotbase();
-          DO_((::google::protobuf::internal::WireFormatLite::ReadPrimitive<
-                   ::google::protobuf::int32, ::google::protobuf::internal::WireFormatLite::TYPE_INT32>(
-                 input, &allotbase_)));
-        } else {
-          goto handle_unusual;
-        }
-        break;
-      }
-
-      // optional int32 allotErt = 16;
-      case 16: {
-        if (static_cast< ::google::protobuf::uint8>(tag) ==
-            static_cast< ::google::protobuf::uint8>(128u /* 128 & 0xFF */)) {
-          set_has_allotert();
-          DO_((::google::protobuf::internal::WireFormatLite::ReadPrimitive<
-                   ::google::protobuf::int32, ::google::protobuf::internal::WireFormatLite::TYPE_INT32>(
-                 input, &allotert_)));
-        } else {
-          goto handle_unusual;
-        }
-        break;
-      }
-
-      // optional double allotPrice = 17;
-      case 17: {
-        if (static_cast< ::google::protobuf::uint8>(tag) ==
-            static_cast< ::google::protobuf::uint8>(137u /* 137 & 0xFF */)) {
-          set_has_allotprice();
-          DO_((::google::protobuf::internal::WireFormatLite::ReadPrimitive<
-                   double, ::google::protobuf::internal::WireFormatLite::TYPE_DOUBLE>(
-                 input, &allotprice_)));
-        } else {
-          goto handle_unusual;
-        }
-        break;
-      }
-
-      // optional int32 addBase = 18;
-      case 18: {
-        if (static_cast< ::google::protobuf::uint8>(tag) ==
-            static_cast< ::google::protobuf::uint8>(144u /* 144 & 0xFF */)) {
-          set_has_addbase();
-          DO_((::google::protobuf::internal::WireFormatLite::ReadPrimitive<
-                   ::google::protobuf::int32, ::google::protobuf::internal::WireFormatLite::TYPE_INT32>(
-                 input, &addbase_)));
-        } else {
-          goto handle_unusual;
-        }
-        break;
-      }
-
-      // optional int32 addErt = 19;
-      case 19: {
-        if (static_cast< ::google::protobuf::uint8>(tag) ==
-            static_cast< ::google::protobuf::uint8>(152u /* 152 & 0xFF */)) {
-          set_has_addert();
-          DO_((::google::protobuf::internal::WireFormatLite::ReadPrimitive<
-                   ::google::protobuf::int32, ::google::protobuf::internal::WireFormatLite::TYPE_INT32>(
-                 input, &addert_)));
-        } else {
-          goto handle_unusual;
-        }
-        break;
-      }
-
-      // optional double addPrice = 20;
-      case 20: {
-        if (static_cast< ::google::protobuf::uint8>(tag) ==
-            static_cast< ::google::protobuf::uint8>(161u /* 161 & 0xFF */)) {
-          set_has_addprice();
-          DO_((::google::protobuf::internal::WireFormatLite::ReadPrimitive<
-                   double, ::google::protobuf::internal::WireFormatLite::TYPE_DOUBLE>(
-                 input, &addprice_)));
-        } else {
-          goto handle_unusual;
-        }
-        break;
-      }
-
-      // optional double dividend = 21;
-      case 21: {
-        if (static_cast< ::google::protobuf::uint8>(tag) ==
-            static_cast< ::google::protobuf::uint8>(169u /* 169 & 0xFF */)) {
-          set_has_dividend();
-          DO_((::google::protobuf::internal::WireFormatLite::ReadPrimitive<
-                   double, ::google::protobuf::internal::WireFormatLite::TYPE_DOUBLE>(
-                 input, &dividend_)));
-        } else {
-          goto handle_unusual;
-        }
-        break;
-      }
-
-      // optional double spDividend = 22;
-      case 22: {
-        if (static_cast< ::google::protobuf::uint8>(tag) ==
-            static_cast< ::google::protobuf::uint8>(177u /* 177 & 0xFF */)) {
-          set_has_spdividend();
-          DO_((::google::protobuf::internal::WireFormatLite::ReadPrimitive<
-                   double, ::google::protobuf::internal::WireFormatLite::TYPE_DOUBLE>(
-                 input, &spdividend_)));
-        } else {
-          goto handle_unusual;
-        }
-        break;
-      }
-
-      // optional double timestamp = 23;
-      case 23: {
-        if (static_cast< ::google::protobuf::uint8>(tag) ==
-            static_cast< ::google::protobuf::uint8>(185u /* 185 & 0xFF */)) {
-          set_has_timestamp();
-          DO_((::google::protobuf::internal::WireFormatLite::ReadPrimitive<
-                   double, ::google::protobuf::internal::WireFormatLite::TYPE_DOUBLE>(
-                 input, &timestamp_)));
-        } else {
-          goto handle_unusual;
-        }
-        break;
-      }
-
-      default: {
-      handle_unusual:
-        if (tag == 0) {
-          goto success;
-        }
-        DO_(::google::protobuf::internal::WireFormat::SkipField(
-              input, tag, _internal_metadata_.mutable_unknown_fields()));
-        break;
-      }
-    }
-  }
-success:
-  // @@protoc_insertion_point(parse_success:Qot_Common.Rehab)
-  return true;
-failure:
-  // @@protoc_insertion_point(parse_failure:Qot_Common.Rehab)
-  return false;
-#undef DO_
-}
-
-void Rehab::SerializeWithCachedSizes(
-    ::google::protobuf::io::CodedOutputStream* output) const {
-  // @@protoc_insertion_point(serialize_start:Qot_Common.Rehab)
-  ::google::protobuf::uint32 cached_has_bits = 0;
-  (void) cached_has_bits;
-
-  cached_has_bits = _has_bits_[0];
-  // required string time = 1;
-  if (cached_has_bits & 0x00000001u) {
-    ::google::protobuf::internal::WireFormat::VerifyUTF8StringNamedField(
-      this->time().data(), static_cast<int>(this->time().length()),
-      ::google::protobuf::internal::WireFormat::SERIALIZE,
-      "Qot_Common.Rehab.time");
-    ::google::protobuf::internal::WireFormatLite::WriteStringMaybeAliased(
-      1, this->time(), output);
-  }
-
-  // required int64 companyActFlag = 2;
-  if (cached_has_bits & 0x00000002u) {
-    ::google::protobuf::internal::WireFormatLite::WriteInt64(2, this->companyactflag(), output);
-  }
-
-  // required double fwdFactorA = 3;
-  if (cached_has_bits & 0x00000004u) {
-    ::google::protobuf::internal::WireFormatLite::WriteDouble(3, this->fwdfactora(), output);
-  }
-
-  // required double fwdFactorB = 4;
-  if (cached_has_bits & 0x00000008u) {
-    ::google::protobuf::internal::WireFormatLite::WriteDouble(4, this->fwdfactorb(), output);
-  }
-
-  // required double bwdFactorA = 5;
-  if (cached_has_bits & 0x00000010u) {
-    ::google::protobuf::internal::WireFormatLite::WriteDouble(5, this->bwdfactora(), output);
-  }
-
-  // required double bwdFactorB = 6;
-  if (cached_has_bits & 0x00000020u) {
-    ::google::protobuf::internal::WireFormatLite::WriteDouble(6, this->bwdfactorb(), output);
-  }
-
-  // optional int32 splitBase = 7;
-  if (cached_has_bits & 0x00000040u) {
-    ::google::protobuf::internal::WireFormatLite::WriteInt32(7, this->splitbase(), output);
-  }
-
-  // optional int32 splitErt = 8;
-  if (cached_has_bits & 0x00000080u) {
-    ::google::protobuf::internal::WireFormatLite::WriteInt32(8, this->splitert(), output);
-  }
-
-  // optional int32 joinBase = 9;
-  if (cached_has_bits & 0x00000100u) {
-    ::google::protobuf::internal::WireFormatLite::WriteInt32(9, this->joinbase(), output);
-  }
-
-  // optional int32 joinErt = 10;
-  if (cached_has_bits & 0x00000200u) {
-    ::google::protobuf::internal::WireFormatLite::WriteInt32(10, this->joinert(), output);
-  }
-
-  // optional int32 bonusBase = 11;
-  if (cached_has_bits & 0x00000400u) {
-    ::google::protobuf::internal::WireFormatLite::WriteInt32(11, this->bonusbase(), output);
-  }
-
-  // optional int32 bonusErt = 12;
-  if (cached_has_bits & 0x00000800u) {
-    ::google::protobuf::internal::WireFormatLite::WriteInt32(12, this->bonusert(), output);
-  }
-
-  // optional int32 transferBase = 13;
-  if (cached_has_bits & 0x00001000u) {
-    ::google::protobuf::internal::WireFormatLite::WriteInt32(13, this->transferbase(), output);
-  }
-
-  // optional int32 transferErt = 14;
-  if (cached_has_bits & 0x00002000u) {
-    ::google::protobuf::internal::WireFormatLite::WriteInt32(14, this->transferert(), output);
-  }
-
-  // optional int32 allotBase = 15;
-  if (cached_has_bits & 0x00004000u) {
-    ::google::protobuf::internal::WireFormatLite::WriteInt32(15, this->allotbase(), output);
-  }
-
-  // optional int32 allotErt = 16;
-  if (cached_has_bits & 0x00008000u) {
-    ::google::protobuf::internal::WireFormatLite::WriteInt32(16, this->allotert(), output);
-  }
-
-  // optional double allotPrice = 17;
-  if (cached_has_bits & 0x00010000u) {
-    ::google::protobuf::internal::WireFormatLite::WriteDouble(17, this->allotprice(), output);
-  }
-
-  // optional int32 addBase = 18;
-  if (cached_has_bits & 0x00020000u) {
-    ::google::protobuf::internal::WireFormatLite::WriteInt32(18, this->addbase(), output);
-  }
-
-  // optional int32 addErt = 19;
-  if (cached_has_bits & 0x00040000u) {
-    ::google::protobuf::internal::WireFormatLite::WriteInt32(19, this->addert(), output);
-  }
-
-  // optional double addPrice = 20;
-  if (cached_has_bits & 0x00080000u) {
-    ::google::protobuf::internal::WireFormatLite::WriteDouble(20, this->addprice(), output);
-  }
-
-  // optional double dividend = 21;
-  if (cached_has_bits & 0x00100000u) {
-    ::google::protobuf::internal::WireFormatLite::WriteDouble(21, this->dividend(), output);
-  }
-
-  // optional double spDividend = 22;
-  if (cached_has_bits & 0x00200000u) {
-    ::google::protobuf::internal::WireFormatLite::WriteDouble(22, this->spdividend(), output);
-  }
-
-  // optional double timestamp = 23;
-  if (cached_has_bits & 0x00400000u) {
-    ::google::protobuf::internal::WireFormatLite::WriteDouble(23, this->timestamp(), output);
-  }
-
-  if (_internal_metadata_.have_unknown_fields()) {
-    ::google::protobuf::internal::WireFormat::SerializeUnknownFields(
-        _internal_metadata_.unknown_fields(), output);
-  }
-  // @@protoc_insertion_point(serialize_end:Qot_Common.Rehab)
-}
-
-::google::protobuf::uint8* Rehab::InternalSerializeWithCachedSizesToArray(
-    bool deterministic, ::google::protobuf::uint8* target) const {
-  (void)deterministic; // Unused
-  // @@protoc_insertion_point(serialize_to_array_start:Qot_Common.Rehab)
-  ::google::protobuf::uint32 cached_has_bits = 0;
-  (void) cached_has_bits;
-
-  cached_has_bits = _has_bits_[0];
-  // required string time = 1;
-  if (cached_has_bits & 0x00000001u) {
-    ::google::protobuf::internal::WireFormat::VerifyUTF8StringNamedField(
-      this->time().data(), static_cast<int>(this->time().length()),
-      ::google::protobuf::internal::WireFormat::SERIALIZE,
-      "Qot_Common.Rehab.time");
-    target =
-      ::google::protobuf::internal::WireFormatLite::WriteStringToArray(
-        1, this->time(), target);
-  }
-
-  // required int64 companyActFlag = 2;
-  if (cached_has_bits & 0x00000002u) {
-    target = ::google::protobuf::internal::WireFormatLite::WriteInt64ToArray(2, this->companyactflag(), target);
-  }
-
-  // required double fwdFactorA = 3;
-  if (cached_has_bits & 0x00000004u) {
-    target = ::google::protobuf::internal::WireFormatLite::WriteDoubleToArray(3, this->fwdfactora(), target);
-  }
-
-  // required double fwdFactorB = 4;
-  if (cached_has_bits & 0x00000008u) {
-    target = ::google::protobuf::internal::WireFormatLite::WriteDoubleToArray(4, this->fwdfactorb(), target);
-  }
-
-  // required double bwdFactorA = 5;
-  if (cached_has_bits & 0x00000010u) {
-    target = ::google::protobuf::internal::WireFormatLite::WriteDoubleToArray(5, this->bwdfactora(), target);
-  }
-
-  // required double bwdFactorB = 6;
-  if (cached_has_bits & 0x00000020u) {
-    target = ::google::protobuf::internal::WireFormatLite::WriteDoubleToArray(6, this->bwdfactorb(), target);
-  }
-
-  // optional int32 splitBase = 7;
-  if (cached_has_bits & 0x00000040u) {
-    target = ::google::protobuf::internal::WireFormatLite::WriteInt32ToArray(7, this->splitbase(), target);
-  }
-
-  // optional int32 splitErt = 8;
-  if (cached_has_bits & 0x00000080u) {
-    target = ::google::protobuf::internal::WireFormatLite::WriteInt32ToArray(8, this->splitert(), target);
-  }
-
-  // optional int32 joinBase = 9;
-  if (cached_has_bits & 0x00000100u) {
-    target = ::google::protobuf::internal::WireFormatLite::WriteInt32ToArray(9, this->joinbase(), target);
-  }
-
-  // optional int32 joinErt = 10;
-  if (cached_has_bits & 0x00000200u) {
-    target = ::google::protobuf::internal::WireFormatLite::WriteInt32ToArray(10, this->joinert(), target);
-  }
-
-  // optional int32 bonusBase = 11;
-  if (cached_has_bits & 0x00000400u) {
-    target = ::google::protobuf::internal::WireFormatLite::WriteInt32ToArray(11, this->bonusbase(), target);
-  }
-
-  // optional int32 bonusErt = 12;
-  if (cached_has_bits & 0x00000800u) {
-    target = ::google::protobuf::internal::WireFormatLite::WriteInt32ToArray(12, this->bonusert(), target);
-  }
-
-  // optional int32 transferBase = 13;
-  if (cached_has_bits & 0x00001000u) {
-    target = ::google::protobuf::internal::WireFormatLite::WriteInt32ToArray(13, this->transferbase(), target);
-  }
-
-  // optional int32 transferErt = 14;
-  if (cached_has_bits & 0x00002000u) {
-    target = ::google::protobuf::internal::WireFormatLite::WriteInt32ToArray(14, this->transferert(), target);
-  }
-
-  // optional int32 allotBase = 15;
-  if (cached_has_bits & 0x00004000u) {
-    target = ::google::protobuf::internal::WireFormatLite::WriteInt32ToArray(15, this->allotbase(), target);
-  }
-
-  // optional int32 allotErt = 16;
-  if (cached_has_bits & 0x00008000u) {
-    target = ::google::protobuf::internal::WireFormatLite::WriteInt32ToArray(16, this->allotert(), target);
-  }
-
-  // optional double allotPrice = 17;
-  if (cached_has_bits & 0x00010000u) {
-    target = ::google::protobuf::internal::WireFormatLite::WriteDoubleToArray(17, this->allotprice(), target);
-  }
-
-  // optional int32 addBase = 18;
-  if (cached_has_bits & 0x00020000u) {
-    target = ::google::protobuf::internal::WireFormatLite::WriteInt32ToArray(18, this->addbase(), target);
-  }
-
-  // optional int32 addErt = 19;
-  if (cached_has_bits & 0x00040000u) {
-    target = ::google::protobuf::internal::WireFormatLite::WriteInt32ToArray(19, this->addert(), target);
-  }
-
-  // optional double addPrice = 20;
-  if (cached_has_bits & 0x00080000u) {
-    target = ::google::protobuf::internal::WireFormatLite::WriteDoubleToArray(20, this->addprice(), target);
-  }
-
-  // optional double dividend = 21;
-  if (cached_has_bits & 0x00100000u) {
-    target = ::google::protobuf::internal::WireFormatLite::WriteDoubleToArray(21, this->dividend(), target);
-  }
-
-  // optional double spDividend = 22;
-  if (cached_has_bits & 0x00200000u) {
-    target = ::google::protobuf::internal::WireFormatLite::WriteDoubleToArray(22, this->spdividend(), target);
-  }
-
-  // optional double timestamp = 23;
-  if (cached_has_bits & 0x00400000u) {
-    target = ::google::protobuf::internal::WireFormatLite::WriteDoubleToArray(23, this->timestamp(), target);
-  }
-
-  if (_internal_metadata_.have_unknown_fields()) {
-    target = ::google::protobuf::internal::WireFormat::SerializeUnknownFieldsToArray(
-        _internal_metadata_.unknown_fields(), target);
-  }
-  // @@protoc_insertion_point(serialize_to_array_end:Qot_Common.Rehab)
-  return target;
-}
-
-size_t Rehab::RequiredFieldsByteSizeFallback() const {
-// @@protoc_insertion_point(required_fields_byte_size_fallback_start:Qot_Common.Rehab)
-  size_t total_size = 0;
-
-  if (has_time()) {
-    // required string time = 1;
-    total_size += 1 +
-      ::google::protobuf::internal::WireFormatLite::StringSize(
-        this->time());
-  }
-
-  if (has_companyactflag()) {
-    // required int64 companyActFlag = 2;
-    total_size += 1 +
-      ::google::protobuf::internal::WireFormatLite::Int64Size(
-        this->companyactflag());
-  }
-
-  if (has_fwdfactora()) {
-    // required double fwdFactorA = 3;
-    total_size += 1 + 8;
-  }
-
-  if (has_fwdfactorb()) {
-    // required double fwdFactorB = 4;
-    total_size += 1 + 8;
-  }
-
-  if (has_bwdfactora()) {
-    // required double bwdFactorA = 5;
-    total_size += 1 + 8;
-  }
-
-  if (has_bwdfactorb()) {
-    // required double bwdFactorB = 6;
-    total_size += 1 + 8;
-  }
-
-  return total_size;
-}
-size_t Rehab::ByteSizeLong() const {
-// @@protoc_insertion_point(message_byte_size_start:Qot_Common.Rehab)
-  size_t total_size = 0;
-
-  if (_internal_metadata_.have_unknown_fields()) {
-    total_size +=
-      ::google::protobuf::internal::WireFormat::ComputeUnknownFieldsSize(
-        _internal_metadata_.unknown_fields());
-  }
-  if (((_has_bits_[0] & 0x0000003f) ^ 0x0000003f) == 0) {  // All required fields are present.
-    // required string time = 1;
-    total_size += 1 +
-      ::google::protobuf::internal::WireFormatLite::StringSize(
-        this->time());
-
-    // required int64 companyActFlag = 2;
-    total_size += 1 +
-      ::google::protobuf::internal::WireFormatLite::Int64Size(
-        this->companyactflag());
-
-    // required double fwdFactorA = 3;
-    total_size += 1 + 8;
-
-    // required double fwdFactorB = 4;
-    total_size += 1 + 8;
-
-    // required double bwdFactorA = 5;
-    total_size += 1 + 8;
-
-    // required double bwdFactorB = 6;
-    total_size += 1 + 8;
-
-  } else {
-    total_size += RequiredFieldsByteSizeFallback();
-  }
-  if (_has_bits_[0 / 32] & 192u) {
-    // optional int32 splitBase = 7;
-    if (has_splitbase()) {
-      total_size += 1 +
-        ::google::protobuf::internal::WireFormatLite::Int32Size(
-          this->splitbase());
-    }
-
-    // optional int32 splitErt = 8;
-    if (has_splitert()) {
-      total_size += 1 +
-        ::google::protobuf::internal::WireFormatLite::Int32Size(
-          this->splitert());
-    }
-
-  }
-  if (_has_bits_[8 / 32] & 65280u) {
-    // optional int32 joinBase = 9;
-    if (has_joinbase()) {
-      total_size += 1 +
-        ::google::protobuf::internal::WireFormatLite::Int32Size(
-          this->joinbase());
-    }
-
-    // optional int32 joinErt = 10;
-    if (has_joinert()) {
-      total_size += 1 +
-        ::google::protobuf::internal::WireFormatLite::Int32Size(
-          this->joinert());
-    }
-
-    // optional int32 bonusBase = 11;
-    if (has_bonusbase()) {
-      total_size += 1 +
-        ::google::protobuf::internal::WireFormatLite::Int32Size(
-          this->bonusbase());
-    }
-
-    // optional int32 bonusErt = 12;
-    if (has_bonusert()) {
-      total_size += 1 +
-        ::google::protobuf::internal::WireFormatLite::Int32Size(
-          this->bonusert());
-    }
-
-    // optional int32 transferBase = 13;
-    if (has_transferbase()) {
-      total_size += 1 +
-        ::google::protobuf::internal::WireFormatLite::Int32Size(
-          this->transferbase());
-    }
-
-    // optional int32 transferErt = 14;
-    if (has_transferert()) {
-      total_size += 1 +
-        ::google::protobuf::internal::WireFormatLite::Int32Size(
-          this->transferert());
-    }
-
-    // optional int32 allotBase = 15;
-    if (has_allotbase()) {
-      total_size += 1 +
-        ::google::protobuf::internal::WireFormatLite::Int32Size(
-          this->allotbase());
-    }
-
-    // optional int32 allotErt = 16;
-    if (has_allotert()) {
-      total_size += 2 +
-        ::google::protobuf::internal::WireFormatLite::Int32Size(
-          this->allotert());
-    }
-
-  }
-  if (_has_bits_[16 / 32] & 8323072u) {
-    // optional double allotPrice = 17;
-    if (has_allotprice()) {
-      total_size += 2 + 8;
-    }
-
-    // optional int32 addBase = 18;
-    if (has_addbase()) {
-      total_size += 2 +
-        ::google::protobuf::internal::WireFormatLite::Int32Size(
-          this->addbase());
-    }
-
-    // optional int32 addErt = 19;
-    if (has_addert()) {
-      total_size += 2 +
-        ::google::protobuf::internal::WireFormatLite::Int32Size(
-          this->addert());
-    }
-
-    // optional double addPrice = 20;
-    if (has_addprice()) {
-      total_size += 2 + 8;
-    }
-
-    // optional double dividend = 21;
-    if (has_dividend()) {
-      total_size += 2 + 8;
-    }
-
-    // optional double spDividend = 22;
-    if (has_spdividend()) {
-      total_size += 2 + 8;
-    }
-
-    // optional double timestamp = 23;
-    if (has_timestamp()) {
-      total_size += 2 + 8;
-    }
-
-  }
-  int cached_size = ::google::protobuf::internal::ToCachedSize(total_size);
-  GOOGLE_SAFE_CONCURRENT_WRITES_BEGIN();
-  _cached_size_ = cached_size;
-  GOOGLE_SAFE_CONCURRENT_WRITES_END();
-  return total_size;
-}
-
-void Rehab::MergeFrom(const ::google::protobuf::Message& from) {
-// @@protoc_insertion_point(generalized_merge_from_start:Qot_Common.Rehab)
-  GOOGLE_DCHECK_NE(&from, this);
-  const Rehab* source =
-      ::google::protobuf::internal::DynamicCastToGenerated<const Rehab>(
-          &from);
-  if (source == NULL) {
-  // @@protoc_insertion_point(generalized_merge_from_cast_fail:Qot_Common.Rehab)
-    ::google::protobuf::internal::ReflectionOps::Merge(from, this);
-  } else {
-  // @@protoc_insertion_point(generalized_merge_from_cast_success:Qot_Common.Rehab)
-    MergeFrom(*source);
-  }
-}
-
-void Rehab::MergeFrom(const Rehab& from) {
-// @@protoc_insertion_point(class_specific_merge_from_start:Qot_Common.Rehab)
-  GOOGLE_DCHECK_NE(&from, this);
-  _internal_metadata_.MergeFrom(from._internal_metadata_);
-  ::google::protobuf::uint32 cached_has_bits = 0;
-  (void) cached_has_bits;
-
-  cached_has_bits = from._has_bits_[0];
-  if (cached_has_bits & 255u) {
-    if (cached_has_bits & 0x00000001u) {
-      set_has_time();
-      time_.AssignWithDefault(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), from.time_);
-    }
-    if (cached_has_bits & 0x00000002u) {
-      companyactflag_ = from.companyactflag_;
-    }
-    if (cached_has_bits & 0x00000004u) {
-      fwdfactora_ = from.fwdfactora_;
-    }
-    if (cached_has_bits & 0x00000008u) {
-      fwdfactorb_ = from.fwdfactorb_;
-    }
-    if (cached_has_bits & 0x00000010u) {
-      bwdfactora_ = from.bwdfactora_;
-    }
-    if (cached_has_bits & 0x00000020u) {
-      bwdfactorb_ = from.bwdfactorb_;
-    }
-    if (cached_has_bits & 0x00000040u) {
-      splitbase_ = from.splitbase_;
-    }
-    if (cached_has_bits & 0x00000080u) {
-      splitert_ = from.splitert_;
-    }
-    _has_bits_[0] |= cached_has_bits;
-  }
-  if (cached_has_bits & 65280u) {
-    if (cached_has_bits & 0x00000100u) {
-      joinbase_ = from.joinbase_;
-    }
-    if (cached_has_bits & 0x00000200u) {
-      joinert_ = from.joinert_;
-    }
-    if (cached_has_bits & 0x00000400u) {
-      bonusbase_ = from.bonusbase_;
-    }
-    if (cached_has_bits & 0x00000800u) {
-      bonusert_ = from.bonusert_;
-    }
-    if (cached_has_bits & 0x00001000u) {
-      transferbase_ = from.transferbase_;
-    }
-    if (cached_has_bits & 0x00002000u) {
-      transferert_ = from.transferert_;
-    }
-    if (cached_has_bits & 0x00004000u) {
-      allotbase_ = from.allotbase_;
-    }
-    if (cached_has_bits & 0x00008000u) {
-      allotert_ = from.allotert_;
-    }
-    _has_bits_[0] |= cached_has_bits;
-  }
-  if (cached_has_bits & 8323072u) {
-    if (cached_has_bits & 0x00010000u) {
-      allotprice_ = from.allotprice_;
-    }
-    if (cached_has_bits & 0x00020000u) {
-      addbase_ = from.addbase_;
-    }
-    if (cached_has_bits & 0x00040000u) {
-      addert_ = from.addert_;
-    }
-    if (cached_has_bits & 0x00080000u) {
-      addprice_ = from.addprice_;
-    }
-    if (cached_has_bits & 0x00100000u) {
-      dividend_ = from.dividend_;
-    }
-    if (cached_has_bits & 0x00200000u) {
-      spdividend_ = from.spdividend_;
-    }
-    if (cached_has_bits & 0x00400000u) {
-      timestamp_ = from.timestamp_;
-    }
-    _has_bits_[0] |= cached_has_bits;
-  }
-}
-
-void Rehab::CopyFrom(const ::google::protobuf::Message& from) {
-// @@protoc_insertion_point(generalized_copy_from_start:Qot_Common.Rehab)
-  if (&from == this) return;
-  Clear();
-  MergeFrom(from);
-}
-
-void Rehab::CopyFrom(const Rehab& from) {
-// @@protoc_insertion_point(class_specific_copy_from_start:Qot_Common.Rehab)
-  if (&from == this) return;
-  Clear();
-  MergeFrom(from);
-}
-
-bool Rehab::IsInitialized() const {
-  if ((_has_bits_[0] & 0x0000003f) != 0x0000003f) return false;
-  return true;
-}
-
-void Rehab::Swap(Rehab* other) {
-  if (other == this) return;
-  InternalSwap(other);
-}
-void Rehab::InternalSwap(Rehab* other) {
-  using std::swap;
-  time_.Swap(&other->time_);
-  swap(companyactflag_, other->companyactflag_);
-  swap(fwdfactora_, other->fwdfactora_);
-  swap(fwdfactorb_, other->fwdfactorb_);
-  swap(bwdfactora_, other->bwdfactora_);
-  swap(bwdfactorb_, other->bwdfactorb_);
-  swap(splitbase_, other->splitbase_);
-  swap(splitert_, other->splitert_);
-  swap(joinbase_, other->joinbase_);
-  swap(joinert_, other->joinert_);
-  swap(bonusbase_, other->bonusbase_);
-  swap(bonusert_, other->bonusert_);
-  swap(transferbase_, other->transferbase_);
-  swap(transferert_, other->transferert_);
-  swap(allotbase_, other->allotbase_);
-  swap(allotert_, other->allotert_);
-  swap(allotprice_, other->allotprice_);
-  swap(addbase_, other->addbase_);
-  swap(addert_, other->addert_);
-  swap(addprice_, other->addprice_);
-  swap(dividend_, other->dividend_);
-  swap(spdividend_, other->spdividend_);
-  swap(timestamp_, other->timestamp_);
-  swap(_has_bits_[0], other->_has_bits_[0]);
-  _internal_metadata_.Swap(&other->_internal_metadata_);
-  swap(_cached_size_, other->_cached_size_);
-}
-
-::google::protobuf::Metadata Rehab::GetMetadata() const {
   protobuf_Qot_5fCommon_2eproto::protobuf_AssignDescriptorsOnce();
   return ::protobuf_Qot_5fCommon_2eproto::file_level_metadata[kIndexInFileMessages];
 }

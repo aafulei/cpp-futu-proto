@@ -217,12 +217,10 @@ void AddDescriptorsImpl() {
       "s\030\001 \002(\0132\026.Qot_GetStaticInfo.C2S\"g\n\010Respo"
       "nse\022\025\n\007retType\030\001 \002(\005:\004-400\022\016\n\006retMsg\030\002 \001"
       "(\t\022\017\n\007errCode\030\003 \001(\005\022#\n\003s2c\030\004 \001(\0132\026.Qot_G"
-      "etStaticInfo.S2CBG\n\023com.futu.openapi.pbZ"
-      "0github.com/futuopen/ftapi4go/pb/qotgets"
-      "taticinfo"
+      "etStaticInfo.S2C"
   };
   ::google::protobuf::DescriptorPool::InternalAddGeneratedFile(
-      descriptor, 449);
+      descriptor, 376);
   ::google::protobuf::MessageFactory::InternalRegisterGeneratedFile(
     "Qot_GetStaticInfo.proto", &protobuf_RegisterTypes);
   ::protobuf_Common_2eproto::AddDescriptors();

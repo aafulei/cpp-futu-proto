@@ -215,15 +215,12 @@ void AddDescriptorsImpl() {
       "ticInfo\"-\n\007Request\022\"\n\003c2s\030\001 \002(\0132\025.Qot_Ge"
       "tReference.C2S\"f\n\010Response\022\025\n\007retType\030\001 "
       "\002(\005:\004-400\022\016\n\006retMsg\030\002 \001(\t\022\017\n\007errCode\030\003 \001"
-      "(\005\022\"\n\003s2c\030\004 \001(\0132\025.Qot_GetReference.S2C*^"
+      "(\005\022\"\n\003s2c\030\004 \001(\0132\025.Qot_GetReference.S2C*D"
       "\n\rReferenceType\022\030\n\024ReferenceType_Unknow\020"
-      "\000\022\031\n\025ReferenceType_Warrant\020\001\022\030\n\024Referenc"
-      "eType_Future\020\002BF\n\023com.futu.openapi.pbZ/g"
-      "ithub.com/futuopen/ftapi4go/pb/qotgetref"
-      "erence"
+      "\000\022\031\n\025ReferenceType_Warrant\020\001"
   };
   ::google::protobuf::DescriptorPool::InternalAddGeneratedFile(
-      descriptor, 526);
+      descriptor, 428);
   ::google::protobuf::MessageFactory::InternalRegisterGeneratedFile(
     "Qot_GetReference.proto", &protobuf_RegisterTypes);
   ::protobuf_Common_2eproto::AddDescriptors();
@@ -250,7 +247,6 @@ bool ReferenceType_IsValid(int value) {
   switch (value) {
     case 0:
     case 1:
-    case 2:
       return true;
     default:
       return false;

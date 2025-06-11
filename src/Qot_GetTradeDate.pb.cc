@@ -175,11 +175,7 @@ const ::google::protobuf::uint32 TableStruct::offsets[] GOOGLE_PROTOBUF_ATTRIBUT
   ~0u,  // no _oneof_case_
   ~0u,  // no _weak_field_map_
   GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(::Qot_GetTradeDate::TradeDate, time_),
-  GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(::Qot_GetTradeDate::TradeDate, timestamp_),
-  GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(::Qot_GetTradeDate::TradeDate, tradedatetype_),
   0,
-  1,
-  2,
   GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(::Qot_GetTradeDate::S2C, _has_bits_),
   GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(::Qot_GetTradeDate::S2C, _internal_metadata_),
   ~0u,  // no _extensions_
@@ -210,10 +206,10 @@ const ::google::protobuf::uint32 TableStruct::offsets[] GOOGLE_PROTOBUF_ATTRIBUT
 };
 static const ::google::protobuf::internal::MigrationSchema schemas[] GOOGLE_PROTOBUF_ATTRIBUTE_SECTION_VARIABLE(protodesc_cold) = {
   { 0, 8, sizeof(::Qot_GetTradeDate::C2S)},
-  { 11, 19, sizeof(::Qot_GetTradeDate::TradeDate)},
-  { 22, 28, sizeof(::Qot_GetTradeDate::S2C)},
-  { 29, 35, sizeof(::Qot_GetTradeDate::Request)},
-  { 36, 45, sizeof(::Qot_GetTradeDate::Response)},
+  { 11, 17, sizeof(::Qot_GetTradeDate::TradeDate)},
+  { 18, 24, sizeof(::Qot_GetTradeDate::S2C)},
+  { 25, 31, sizeof(::Qot_GetTradeDate::Request)},
+  { 32, 41, sizeof(::Qot_GetTradeDate::Response)},
 };
 
 static ::google::protobuf::Message const * const file_default_instances[] = {
@@ -249,19 +245,16 @@ void AddDescriptorsImpl() {
       "\n\026Qot_GetTradeDate.proto\022\020Qot_GetTradeDa"
       "te\032\014Common.proto\032\020Qot_Common.proto\"9\n\003C2"
       "S\022\016\n\006market\030\001 \002(\005\022\021\n\tbeginTime\030\002 \002(\t\022\017\n\007"
-      "endTime\030\003 \002(\t\"C\n\tTradeDate\022\014\n\004time\030\001 \002(\t"
-      "\022\021\n\ttimestamp\030\002 \001(\001\022\025\n\rtradeDateType\030\003 \001"
-      "(\005\"9\n\003S2C\0222\n\rtradeDateList\030\001 \003(\0132\033.Qot_G"
-      "etTradeDate.TradeDate\"-\n\007Request\022\"\n\003c2s\030"
-      "\001 \002(\0132\025.Qot_GetTradeDate.C2S\"f\n\010Response"
-      "\022\025\n\007retType\030\001 \002(\005:\004-400\022\016\n\006retMsg\030\002 \001(\t\022"
-      "\017\n\007errCode\030\003 \001(\005\022\"\n\003s2c\030\004 \001(\0132\025.Qot_GetT"
-      "radeDate.S2CBF\n\023com.futu.openapi.pbZ/git"
-      "hub.com/futuopen/ftapi4go/pb/qotgettrade"
-      "date"
+      "endTime\030\003 \002(\t\"\031\n\tTradeDate\022\014\n\004time\030\001 \002(\t"
+      "\"9\n\003S2C\0222\n\rtradeDateList\030\001 \003(\0132\033.Qot_Get"
+      "TradeDate.TradeDate\"-\n\007Request\022\"\n\003c2s\030\001 "
+      "\002(\0132\025.Qot_GetTradeDate.C2S\"f\n\010Response\022\025"
+      "\n\007retType\030\001 \002(\005:\004-400\022\016\n\006retMsg\030\002 \001(\t\022\017\n"
+      "\007errCode\030\003 \001(\005\022\"\n\003s2c\030\004 \001(\0132\025.Qot_GetTra"
+      "deDate.S2C"
   };
   ::google::protobuf::DescriptorPool::InternalAddGeneratedFile(
-      descriptor, 484);
+      descriptor, 370);
   ::google::protobuf::MessageFactory::InternalRegisterGeneratedFile(
     "Qot_GetTradeDate.proto", &protobuf_RegisterTypes);
   ::protobuf_Common_2eproto::AddDescriptors();
@@ -683,8 +676,6 @@ void TradeDate::InitAsDefaultInstance() {
 }
 #if !defined(_MSC_VER) || _MSC_VER >= 1900
 const int TradeDate::kTimeFieldNumber;
-const int TradeDate::kTimestampFieldNumber;
-const int TradeDate::kTradeDateTypeFieldNumber;
 #endif  // !defined(_MSC_VER) || _MSC_VER >= 1900
 
 TradeDate::TradeDate()
@@ -705,18 +696,12 @@ TradeDate::TradeDate(const TradeDate& from)
   if (from.has_time()) {
     time_.AssignWithDefault(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), from.time_);
   }
-  ::memcpy(&timestamp_, &from.timestamp_,
-    static_cast<size_t>(reinterpret_cast<char*>(&tradedatetype_) -
-    reinterpret_cast<char*>(&timestamp_)) + sizeof(tradedatetype_));
   // @@protoc_insertion_point(copy_constructor:Qot_GetTradeDate.TradeDate)
 }
 
 void TradeDate::SharedCtor() {
   _cached_size_ = 0;
   time_.UnsafeSetDefault(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
-  ::memset(&timestamp_, 0, static_cast<size_t>(
-      reinterpret_cast<char*>(&tradedatetype_) -
-      reinterpret_cast<char*>(&timestamp_)) + sizeof(tradedatetype_));
 }
 
 TradeDate::~TradeDate() {
@@ -762,11 +747,6 @@ void TradeDate::Clear() {
     GOOGLE_DCHECK(!time_.IsDefault(&::google::protobuf::internal::GetEmptyStringAlreadyInited()));
     (*time_.UnsafeRawStringPointer())->clear();
   }
-  if (cached_has_bits & 6u) {
-    ::memset(&timestamp_, 0, static_cast<size_t>(
-        reinterpret_cast<char*>(&tradedatetype_) -
-        reinterpret_cast<char*>(&timestamp_)) + sizeof(tradedatetype_));
-  }
   _has_bits_.Clear();
   _internal_metadata_.Clear();
 }
@@ -791,34 +771,6 @@ bool TradeDate::MergePartialFromCodedStream(
             this->time().data(), static_cast<int>(this->time().length()),
             ::google::protobuf::internal::WireFormat::PARSE,
             "Qot_GetTradeDate.TradeDate.time");
-        } else {
-          goto handle_unusual;
-        }
-        break;
-      }
-
-      // optional double timestamp = 2;
-      case 2: {
-        if (static_cast< ::google::protobuf::uint8>(tag) ==
-            static_cast< ::google::protobuf::uint8>(17u /* 17 & 0xFF */)) {
-          set_has_timestamp();
-          DO_((::google::protobuf::internal::WireFormatLite::ReadPrimitive<
-                   double, ::google::protobuf::internal::WireFormatLite::TYPE_DOUBLE>(
-                 input, &timestamp_)));
-        } else {
-          goto handle_unusual;
-        }
-        break;
-      }
-
-      // optional int32 tradeDateType = 3;
-      case 3: {
-        if (static_cast< ::google::protobuf::uint8>(tag) ==
-            static_cast< ::google::protobuf::uint8>(24u /* 24 & 0xFF */)) {
-          set_has_tradedatetype();
-          DO_((::google::protobuf::internal::WireFormatLite::ReadPrimitive<
-                   ::google::protobuf::int32, ::google::protobuf::internal::WireFormatLite::TYPE_INT32>(
-                 input, &tradedatetype_)));
         } else {
           goto handle_unusual;
         }
@@ -862,16 +814,6 @@ void TradeDate::SerializeWithCachedSizes(
       1, this->time(), output);
   }
 
-  // optional double timestamp = 2;
-  if (cached_has_bits & 0x00000002u) {
-    ::google::protobuf::internal::WireFormatLite::WriteDouble(2, this->timestamp(), output);
-  }
-
-  // optional int32 tradeDateType = 3;
-  if (cached_has_bits & 0x00000004u) {
-    ::google::protobuf::internal::WireFormatLite::WriteInt32(3, this->tradedatetype(), output);
-  }
-
   if (_internal_metadata_.have_unknown_fields()) {
     ::google::protobuf::internal::WireFormat::SerializeUnknownFields(
         _internal_metadata_.unknown_fields(), output);
@@ -898,16 +840,6 @@ void TradeDate::SerializeWithCachedSizes(
         1, this->time(), target);
   }
 
-  // optional double timestamp = 2;
-  if (cached_has_bits & 0x00000002u) {
-    target = ::google::protobuf::internal::WireFormatLite::WriteDoubleToArray(2, this->timestamp(), target);
-  }
-
-  // optional int32 tradeDateType = 3;
-  if (cached_has_bits & 0x00000004u) {
-    target = ::google::protobuf::internal::WireFormatLite::WriteInt32ToArray(3, this->tradedatetype(), target);
-  }
-
   if (_internal_metadata_.have_unknown_fields()) {
     target = ::google::protobuf::internal::WireFormat::SerializeUnknownFieldsToArray(
         _internal_metadata_.unknown_fields(), target);
@@ -930,20 +862,6 @@ size_t TradeDate::ByteSizeLong() const {
     total_size += 1 +
       ::google::protobuf::internal::WireFormatLite::StringSize(
         this->time());
-  }
-  if (_has_bits_[0 / 32] & 6u) {
-    // optional double timestamp = 2;
-    if (has_timestamp()) {
-      total_size += 1 + 8;
-    }
-
-    // optional int32 tradeDateType = 3;
-    if (has_tradedatetype()) {
-      total_size += 1 +
-        ::google::protobuf::internal::WireFormatLite::Int32Size(
-          this->tradedatetype());
-    }
-
   }
   int cached_size = ::google::protobuf::internal::ToCachedSize(total_size);
   GOOGLE_SAFE_CONCURRENT_WRITES_BEGIN();
@@ -974,19 +892,9 @@ void TradeDate::MergeFrom(const TradeDate& from) {
   ::google::protobuf::uint32 cached_has_bits = 0;
   (void) cached_has_bits;
 
-  cached_has_bits = from._has_bits_[0];
-  if (cached_has_bits & 7u) {
-    if (cached_has_bits & 0x00000001u) {
-      set_has_time();
-      time_.AssignWithDefault(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), from.time_);
-    }
-    if (cached_has_bits & 0x00000002u) {
-      timestamp_ = from.timestamp_;
-    }
-    if (cached_has_bits & 0x00000004u) {
-      tradedatetype_ = from.tradedatetype_;
-    }
-    _has_bits_[0] |= cached_has_bits;
+  if (from.has_time()) {
+    set_has_time();
+    time_.AssignWithDefault(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), from.time_);
   }
 }
 
@@ -1016,8 +924,6 @@ void TradeDate::Swap(TradeDate* other) {
 void TradeDate::InternalSwap(TradeDate* other) {
   using std::swap;
   time_.Swap(&other->time_);
-  swap(timestamp_, other->timestamp_);
-  swap(tradedatetype_, other->tradedatetype_);
   swap(_has_bits_[0], other->_has_bits_[0]);
   _internal_metadata_.Swap(&other->_internal_metadata_);
   swap(_cached_size_, other->_cached_size_);

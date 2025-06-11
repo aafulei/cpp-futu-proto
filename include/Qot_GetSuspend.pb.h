@@ -345,25 +345,15 @@ class Suspend : public ::google::protobuf::Message /* @@protoc_insertion_point(c
   ::std::string* release_time();
   void set_allocated_time(::std::string* time);
 
-  // optional double timestamp = 2;
-  bool has_timestamp() const;
-  void clear_timestamp();
-  static const int kTimestampFieldNumber = 2;
-  double timestamp() const;
-  void set_timestamp(double value);
-
   // @@protoc_insertion_point(class_scope:Qot_GetSuspend.Suspend)
  private:
   void set_has_time();
   void clear_has_time();
-  void set_has_timestamp();
-  void clear_has_timestamp();
 
   ::google::protobuf::internal::InternalMetadataWithArena _internal_metadata_;
   ::google::protobuf::internal::HasBits<1> _has_bits_;
   mutable int _cached_size_;
   ::google::protobuf::internal::ArenaStringPtr time_;
-  double timestamp_;
   friend struct ::protobuf_Qot_5fGetSuspend_2eproto::TableStruct;
   friend void ::protobuf_Qot_5fGetSuspend_2eproto::InitDefaultsSuspendImpl();
 };
@@ -1096,30 +1086,6 @@ inline void Suspend::set_allocated_time(::std::string* time) {
   }
   time_.SetAllocatedNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), time);
   // @@protoc_insertion_point(field_set_allocated:Qot_GetSuspend.Suspend.time)
-}
-
-// optional double timestamp = 2;
-inline bool Suspend::has_timestamp() const {
-  return (_has_bits_[0] & 0x00000002u) != 0;
-}
-inline void Suspend::set_has_timestamp() {
-  _has_bits_[0] |= 0x00000002u;
-}
-inline void Suspend::clear_has_timestamp() {
-  _has_bits_[0] &= ~0x00000002u;
-}
-inline void Suspend::clear_timestamp() {
-  timestamp_ = 0;
-  clear_has_timestamp();
-}
-inline double Suspend::timestamp() const {
-  // @@protoc_insertion_point(field_get:Qot_GetSuspend.Suspend.timestamp)
-  return timestamp_;
-}
-inline void Suspend::set_timestamp(double value) {
-  set_has_timestamp();
-  timestamp_ = value;
-  // @@protoc_insertion_point(field_set:Qot_GetSuspend.Suspend.timestamp)
 }
 
 // -------------------------------------------------------------------

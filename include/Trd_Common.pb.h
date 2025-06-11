@@ -38,16 +38,12 @@ namespace protobuf_Trd_5fCommon_2eproto {
 struct TableStruct {
   static const ::google::protobuf::internal::ParseTableField entries[];
   static const ::google::protobuf::internal::AuxillaryParseTableField aux[];
-  static const ::google::protobuf::internal::ParseTable schema[12];
+  static const ::google::protobuf::internal::ParseTable schema[8];
   static const ::google::protobuf::internal::FieldMetadata field_metadata[];
   static const ::google::protobuf::internal::SerializationTable serialization_table[];
   static const ::google::protobuf::uint32 offsets[];
 };
 void AddDescriptors();
-void InitDefaultsAccCashInfoImpl();
-void InitDefaultsAccCashInfo();
-void InitDefaultsAccMarketInfoImpl();
-void InitDefaultsAccMarketInfo();
 void InitDefaultsTrdHeaderImpl();
 void InitDefaultsTrdHeader();
 void InitDefaultsTrdAccImpl();
@@ -58,10 +54,6 @@ void InitDefaultsPositionImpl();
 void InitDefaultsPosition();
 void InitDefaultsOrderImpl();
 void InitDefaultsOrder();
-void InitDefaultsOrderFeeItemImpl();
-void InitDefaultsOrderFeeItem();
-void InitDefaultsOrderFeeImpl();
-void InitDefaultsOrderFee();
 void InitDefaultsOrderFillImpl();
 void InitDefaultsOrderFill();
 void InitDefaultsMaxTrdQtysImpl();
@@ -69,27 +61,17 @@ void InitDefaultsMaxTrdQtys();
 void InitDefaultsTrdFilterConditionsImpl();
 void InitDefaultsTrdFilterConditions();
 inline void InitDefaults() {
-  InitDefaultsAccCashInfo();
-  InitDefaultsAccMarketInfo();
   InitDefaultsTrdHeader();
   InitDefaultsTrdAcc();
   InitDefaultsFunds();
   InitDefaultsPosition();
   InitDefaultsOrder();
-  InitDefaultsOrderFeeItem();
-  InitDefaultsOrderFee();
   InitDefaultsOrderFill();
   InitDefaultsMaxTrdQtys();
   InitDefaultsTrdFilterConditions();
 }
 }  // namespace protobuf_Trd_5fCommon_2eproto
 namespace Trd_Common {
-class AccCashInfo;
-class AccCashInfoDefaultTypeInternal;
-extern AccCashInfoDefaultTypeInternal _AccCashInfo_default_instance_;
-class AccMarketInfo;
-class AccMarketInfoDefaultTypeInternal;
-extern AccMarketInfoDefaultTypeInternal _AccMarketInfo_default_instance_;
 class Funds;
 class FundsDefaultTypeInternal;
 extern FundsDefaultTypeInternal _Funds_default_instance_;
@@ -99,12 +81,6 @@ extern MaxTrdQtysDefaultTypeInternal _MaxTrdQtys_default_instance_;
 class Order;
 class OrderDefaultTypeInternal;
 extern OrderDefaultTypeInternal _Order_default_instance_;
-class OrderFee;
-class OrderFeeDefaultTypeInternal;
-extern OrderFeeDefaultTypeInternal _OrderFee_default_instance_;
-class OrderFeeItem;
-class OrderFeeItemDefaultTypeInternal;
-extern OrderFeeItemDefaultTypeInternal _OrderFeeItem_default_instance_;
 class OrderFill;
 class OrderFillDefaultTypeInternal;
 extern OrderFillDefaultTypeInternal _OrderFill_default_instance_;
@@ -142,48 +118,16 @@ inline bool TrdEnv_Parse(
   return ::google::protobuf::internal::ParseNamedEnum<TrdEnv>(
     TrdEnv_descriptor(), name, value);
 }
-enum TrdCategory {
-  TrdCategory_Unknown = 0,
-  TrdCategory_Security = 1,
-  TrdCategory_Future = 2
-};
-bool TrdCategory_IsValid(int value);
-const TrdCategory TrdCategory_MIN = TrdCategory_Unknown;
-const TrdCategory TrdCategory_MAX = TrdCategory_Future;
-const int TrdCategory_ARRAYSIZE = TrdCategory_MAX + 1;
-
-const ::google::protobuf::EnumDescriptor* TrdCategory_descriptor();
-inline const ::std::string& TrdCategory_Name(TrdCategory value) {
-  return ::google::protobuf::internal::NameOfEnum(
-    TrdCategory_descriptor(), value);
-}
-inline bool TrdCategory_Parse(
-    const ::std::string& name, TrdCategory* value) {
-  return ::google::protobuf::internal::ParseNamedEnum<TrdCategory>(
-    TrdCategory_descriptor(), name, value);
-}
 enum TrdMarket {
   TrdMarket_Unknown = 0,
   TrdMarket_HK = 1,
   TrdMarket_US = 2,
   TrdMarket_CN = 3,
-  TrdMarket_HKCC = 4,
-  TrdMarket_Futures = 5,
-  TrdMarket_SG = 6,
-  TrdMarket_AU = 8,
-  TrdMarket_Futures_Simulate_HK = 10,
-  TrdMarket_Futures_Simulate_US = 11,
-  TrdMarket_Futures_Simulate_SG = 12,
-  TrdMarket_Futures_Simulate_JP = 13,
-  TrdMarket_JP = 15,
-  TrdMarket_MY = 111,
-  TrdMarket_CA = 112,
-  TrdMarket_HK_Fund = 113,
-  TrdMarket_US_Fund = 123
+  TrdMarket_HKCC = 4
 };
 bool TrdMarket_IsValid(int value);
 const TrdMarket TrdMarket_MIN = TrdMarket_Unknown;
-const TrdMarket TrdMarket_MAX = TrdMarket_US_Fund;
+const TrdMarket TrdMarket_MAX = TrdMarket_HKCC;
 const int TrdMarket_ARRAYSIZE = TrdMarket_MAX + 1;
 
 const ::google::protobuf::EnumDescriptor* TrdMarket_descriptor();
@@ -201,17 +145,11 @@ enum TrdSecMarket {
   TrdSecMarket_HK = 1,
   TrdSecMarket_US = 2,
   TrdSecMarket_CN_SH = 31,
-  TrdSecMarket_CN_SZ = 32,
-  TrdSecMarket_SG = 41,
-  TrdSecMarket_JP = 51,
-  TrdSecMarket_AU = 61,
-  TrdSecMarket_MY = 71,
-  TrdSecMarket_CA = 81,
-  TrdSecMarket_FX = 91
+  TrdSecMarket_CN_SZ = 32
 };
 bool TrdSecMarket_IsValid(int value);
 const TrdSecMarket TrdSecMarket_MIN = TrdSecMarket_Unknown;
-const TrdSecMarket TrdSecMarket_MAX = TrdSecMarket_FX;
+const TrdSecMarket TrdSecMarket_MAX = TrdSecMarket_CN_SZ;
 const int TrdSecMarket_ARRAYSIZE = TrdSecMarket_MAX + 1;
 
 const ::google::protobuf::EnumDescriptor* TrdSecMarket_descriptor();
@@ -253,22 +191,11 @@ enum OrderType {
   OrderType_AbsoluteLimit = 5,
   OrderType_Auction = 6,
   OrderType_AuctionLimit = 7,
-  OrderType_SpecialLimit = 8,
-  OrderType_SpecialLimit_All = 9,
-  OrderType_Stop = 10,
-  OrderType_StopLimit = 11,
-  OrderType_MarketifTouched = 12,
-  OrderType_LimitifTouched = 13,
-  OrderType_TrailingStop = 14,
-  OrderType_TrailingStopLimit = 15,
-  OrderType_TWAP_MARKET = 16,
-  OrderType_TWAP_LIMIT = 17,
-  OrderType_VWAP_MARKET = 18,
-  OrderType_VWAP_LIMIT = 19
+  OrderType_SpecialLimit = 8
 };
 bool OrderType_IsValid(int value);
 const OrderType OrderType_MIN = OrderType_Unknown;
-const OrderType OrderType_MAX = OrderType_VWAP_LIMIT;
+const OrderType OrderType_MAX = OrderType_SpecialLimit;
 const int OrderType_ARRAYSIZE = OrderType_MAX + 1;
 
 const ::google::protobuf::EnumDescriptor* OrderType_descriptor();
@@ -280,26 +207,6 @@ inline bool OrderType_Parse(
     const ::std::string& name, OrderType* value) {
   return ::google::protobuf::internal::ParseNamedEnum<OrderType>(
     OrderType_descriptor(), name, value);
-}
-enum TrailType {
-  TrailType_Unknown = 0,
-  TrailType_Ratio = 1,
-  TrailType_Amount = 2
-};
-bool TrailType_IsValid(int value);
-const TrailType TrailType_MIN = TrailType_Unknown;
-const TrailType TrailType_MAX = TrailType_Amount;
-const int TrailType_ARRAYSIZE = TrailType_MAX + 1;
-
-const ::google::protobuf::EnumDescriptor* TrailType_descriptor();
-inline const ::std::string& TrailType_Name(TrailType value) {
-  return ::google::protobuf::internal::NameOfEnum(
-    TrailType_descriptor(), value);
-}
-inline bool TrailType_Parse(
-    const ::std::string& name, TrailType* value) {
-  return ::google::protobuf::internal::ParseNamedEnum<TrailType>(
-    TrailType_descriptor(), name, value);
 }
 enum OrderStatus {
   OrderStatus_Unsubmitted = 0,
@@ -317,12 +224,11 @@ enum OrderStatus {
   OrderStatus_Cancelled_All = 15,
   OrderStatus_Failed = 21,
   OrderStatus_Disabled = 22,
-  OrderStatus_Deleted = 23,
-  OrderStatus_FillCancelled = 24
+  OrderStatus_Deleted = 23
 };
 bool OrderStatus_IsValid(int value);
 const OrderStatus OrderStatus_MIN = OrderStatus_Unknown;
-const OrderStatus OrderStatus_MAX = OrderStatus_FillCancelled;
+const OrderStatus OrderStatus_MAX = OrderStatus_Deleted;
 const int OrderStatus_ARRAYSIZE = OrderStatus_MAX + 1;
 
 const ::google::protobuf::EnumDescriptor* OrderStatus_descriptor();
@@ -334,26 +240,6 @@ inline bool OrderStatus_Parse(
     const ::std::string& name, OrderStatus* value) {
   return ::google::protobuf::internal::ParseNamedEnum<OrderStatus>(
     OrderStatus_descriptor(), name, value);
-}
-enum OrderFillStatus {
-  OrderFillStatus_OK = 0,
-  OrderFillStatus_Cancelled = 1,
-  OrderFillStatus_Changed = 2
-};
-bool OrderFillStatus_IsValid(int value);
-const OrderFillStatus OrderFillStatus_MIN = OrderFillStatus_OK;
-const OrderFillStatus OrderFillStatus_MAX = OrderFillStatus_Changed;
-const int OrderFillStatus_ARRAYSIZE = OrderFillStatus_MAX + 1;
-
-const ::google::protobuf::EnumDescriptor* OrderFillStatus_descriptor();
-inline const ::std::string& OrderFillStatus_Name(OrderFillStatus value) {
-  return ::google::protobuf::internal::NameOfEnum(
-    OrderFillStatus_descriptor(), value);
-}
-inline bool OrderFillStatus_Parse(
-    const ::std::string& name, OrderFillStatus* value) {
-  return ::google::protobuf::internal::ParseNamedEnum<OrderFillStatus>(
-    OrderFillStatus_descriptor(), name, value);
 }
 enum PositionSide {
   PositionSide_Long = 0,
@@ -398,465 +284,27 @@ inline bool ModifyOrderOp_Parse(
   return ::google::protobuf::internal::ParseNamedEnum<ModifyOrderOp>(
     ModifyOrderOp_descriptor(), name, value);
 }
-enum TrdAccType {
-  TrdAccType_Unknown = 0,
-  TrdAccType_Cash = 1,
-  TrdAccType_Margin = 2
+enum ReconfirmOrderReason {
+  ReconfirmOrderReason_Unknown = 0,
+  ReconfirmOrderReason_QtyTooLarge = 1,
+  ReconfirmOrderReason_PriceAbnormal = 2
 };
-bool TrdAccType_IsValid(int value);
-const TrdAccType TrdAccType_MIN = TrdAccType_Unknown;
-const TrdAccType TrdAccType_MAX = TrdAccType_Margin;
-const int TrdAccType_ARRAYSIZE = TrdAccType_MAX + 1;
+bool ReconfirmOrderReason_IsValid(int value);
+const ReconfirmOrderReason ReconfirmOrderReason_MIN = ReconfirmOrderReason_Unknown;
+const ReconfirmOrderReason ReconfirmOrderReason_MAX = ReconfirmOrderReason_PriceAbnormal;
+const int ReconfirmOrderReason_ARRAYSIZE = ReconfirmOrderReason_MAX + 1;
 
-const ::google::protobuf::EnumDescriptor* TrdAccType_descriptor();
-inline const ::std::string& TrdAccType_Name(TrdAccType value) {
+const ::google::protobuf::EnumDescriptor* ReconfirmOrderReason_descriptor();
+inline const ::std::string& ReconfirmOrderReason_Name(ReconfirmOrderReason value) {
   return ::google::protobuf::internal::NameOfEnum(
-    TrdAccType_descriptor(), value);
+    ReconfirmOrderReason_descriptor(), value);
 }
-inline bool TrdAccType_Parse(
-    const ::std::string& name, TrdAccType* value) {
-  return ::google::protobuf::internal::ParseNamedEnum<TrdAccType>(
-    TrdAccType_descriptor(), name, value);
-}
-enum TrdAccStatus {
-  TrdAccStatus_Active = 0,
-  TrdAccStatus_Disabled = 1
-};
-bool TrdAccStatus_IsValid(int value);
-const TrdAccStatus TrdAccStatus_MIN = TrdAccStatus_Active;
-const TrdAccStatus TrdAccStatus_MAX = TrdAccStatus_Disabled;
-const int TrdAccStatus_ARRAYSIZE = TrdAccStatus_MAX + 1;
-
-const ::google::protobuf::EnumDescriptor* TrdAccStatus_descriptor();
-inline const ::std::string& TrdAccStatus_Name(TrdAccStatus value) {
-  return ::google::protobuf::internal::NameOfEnum(
-    TrdAccStatus_descriptor(), value);
-}
-inline bool TrdAccStatus_Parse(
-    const ::std::string& name, TrdAccStatus* value) {
-  return ::google::protobuf::internal::ParseNamedEnum<TrdAccStatus>(
-    TrdAccStatus_descriptor(), name, value);
-}
-enum Currency {
-  Currency_Unknown = 0,
-  Currency_HKD = 1,
-  Currency_USD = 2,
-  Currency_CNH = 3,
-  Currency_JPY = 4,
-  Currency_SGD = 5,
-  Currency_AUD = 6,
-  Currency_CAD = 7,
-  Currency_MYR = 8
-};
-bool Currency_IsValid(int value);
-const Currency Currency_MIN = Currency_Unknown;
-const Currency Currency_MAX = Currency_MYR;
-const int Currency_ARRAYSIZE = Currency_MAX + 1;
-
-const ::google::protobuf::EnumDescriptor* Currency_descriptor();
-inline const ::std::string& Currency_Name(Currency value) {
-  return ::google::protobuf::internal::NameOfEnum(
-    Currency_descriptor(), value);
-}
-inline bool Currency_Parse(
-    const ::std::string& name, Currency* value) {
-  return ::google::protobuf::internal::ParseNamedEnum<Currency>(
-    Currency_descriptor(), name, value);
-}
-enum CltRiskLevel {
-  CltRiskLevel_Unknown = -1,
-  CltRiskLevel_Safe = 0,
-  CltRiskLevel_Warning = 1,
-  CltRiskLevel_Danger = 2,
-  CltRiskLevel_AbsoluteSafe = 3,
-  CltRiskLevel_OptDanger = 4
-};
-bool CltRiskLevel_IsValid(int value);
-const CltRiskLevel CltRiskLevel_MIN = CltRiskLevel_Unknown;
-const CltRiskLevel CltRiskLevel_MAX = CltRiskLevel_OptDanger;
-const int CltRiskLevel_ARRAYSIZE = CltRiskLevel_MAX + 1;
-
-const ::google::protobuf::EnumDescriptor* CltRiskLevel_descriptor();
-inline const ::std::string& CltRiskLevel_Name(CltRiskLevel value) {
-  return ::google::protobuf::internal::NameOfEnum(
-    CltRiskLevel_descriptor(), value);
-}
-inline bool CltRiskLevel_Parse(
-    const ::std::string& name, CltRiskLevel* value) {
-  return ::google::protobuf::internal::ParseNamedEnum<CltRiskLevel>(
-    CltRiskLevel_descriptor(), name, value);
-}
-enum TimeInForce {
-  TimeInForce_DAY = 0,
-  TimeInForce_GTC = 1
-};
-bool TimeInForce_IsValid(int value);
-const TimeInForce TimeInForce_MIN = TimeInForce_DAY;
-const TimeInForce TimeInForce_MAX = TimeInForce_GTC;
-const int TimeInForce_ARRAYSIZE = TimeInForce_MAX + 1;
-
-const ::google::protobuf::EnumDescriptor* TimeInForce_descriptor();
-inline const ::std::string& TimeInForce_Name(TimeInForce value) {
-  return ::google::protobuf::internal::NameOfEnum(
-    TimeInForce_descriptor(), value);
-}
-inline bool TimeInForce_Parse(
-    const ::std::string& name, TimeInForce* value) {
-  return ::google::protobuf::internal::ParseNamedEnum<TimeInForce>(
-    TimeInForce_descriptor(), name, value);
-}
-enum SecurityFirm {
-  SecurityFirm_Unknown = 0,
-  SecurityFirm_FutuSecurities = 1,
-  SecurityFirm_FutuInc = 2,
-  SecurityFirm_FutuSG = 3,
-  SecurityFirm_FutuAU = 4
-};
-bool SecurityFirm_IsValid(int value);
-const SecurityFirm SecurityFirm_MIN = SecurityFirm_Unknown;
-const SecurityFirm SecurityFirm_MAX = SecurityFirm_FutuAU;
-const int SecurityFirm_ARRAYSIZE = SecurityFirm_MAX + 1;
-
-const ::google::protobuf::EnumDescriptor* SecurityFirm_descriptor();
-inline const ::std::string& SecurityFirm_Name(SecurityFirm value) {
-  return ::google::protobuf::internal::NameOfEnum(
-    SecurityFirm_descriptor(), value);
-}
-inline bool SecurityFirm_Parse(
-    const ::std::string& name, SecurityFirm* value) {
-  return ::google::protobuf::internal::ParseNamedEnum<SecurityFirm>(
-    SecurityFirm_descriptor(), name, value);
-}
-enum SimAccType {
-  SimAccType_Unknown = 0,
-  SimAccType_Stock = 1,
-  SimAccType_Option = 2,
-  SimAccType_Futures = 3
-};
-bool SimAccType_IsValid(int value);
-const SimAccType SimAccType_MIN = SimAccType_Unknown;
-const SimAccType SimAccType_MAX = SimAccType_Futures;
-const int SimAccType_ARRAYSIZE = SimAccType_MAX + 1;
-
-const ::google::protobuf::EnumDescriptor* SimAccType_descriptor();
-inline const ::std::string& SimAccType_Name(SimAccType value) {
-  return ::google::protobuf::internal::NameOfEnum(
-    SimAccType_descriptor(), value);
-}
-inline bool SimAccType_Parse(
-    const ::std::string& name, SimAccType* value) {
-  return ::google::protobuf::internal::ParseNamedEnum<SimAccType>(
-    SimAccType_descriptor(), name, value);
-}
-enum CltRiskStatus {
-  CltRiskStatus_Unknown = 0,
-  CltRiskStatus_Level1 = 1,
-  CltRiskStatus_Level2 = 2,
-  CltRiskStatus_Level3 = 3,
-  CltRiskStatus_Level4 = 4,
-  CltRiskStatus_Level5 = 5,
-  CltRiskStatus_Level6 = 6,
-  CltRiskStatus_Level7 = 7,
-  CltRiskStatus_Level8 = 8,
-  CltRiskStatus_Level9 = 9
-};
-bool CltRiskStatus_IsValid(int value);
-const CltRiskStatus CltRiskStatus_MIN = CltRiskStatus_Unknown;
-const CltRiskStatus CltRiskStatus_MAX = CltRiskStatus_Level9;
-const int CltRiskStatus_ARRAYSIZE = CltRiskStatus_MAX + 1;
-
-const ::google::protobuf::EnumDescriptor* CltRiskStatus_descriptor();
-inline const ::std::string& CltRiskStatus_Name(CltRiskStatus value) {
-  return ::google::protobuf::internal::NameOfEnum(
-    CltRiskStatus_descriptor(), value);
-}
-inline bool CltRiskStatus_Parse(
-    const ::std::string& name, CltRiskStatus* value) {
-  return ::google::protobuf::internal::ParseNamedEnum<CltRiskStatus>(
-    CltRiskStatus_descriptor(), name, value);
-}
-enum DTStatus {
-  DTStatus_Unknown = 0,
-  DTStatus_Unlimited = 1,
-  DTStatus_EMCall = 2,
-  DTStatus_DTCall = 3
-};
-bool DTStatus_IsValid(int value);
-const DTStatus DTStatus_MIN = DTStatus_Unknown;
-const DTStatus DTStatus_MAX = DTStatus_DTCall;
-const int DTStatus_ARRAYSIZE = DTStatus_MAX + 1;
-
-const ::google::protobuf::EnumDescriptor* DTStatus_descriptor();
-inline const ::std::string& DTStatus_Name(DTStatus value) {
-  return ::google::protobuf::internal::NameOfEnum(
-    DTStatus_descriptor(), value);
-}
-inline bool DTStatus_Parse(
-    const ::std::string& name, DTStatus* value) {
-  return ::google::protobuf::internal::ParseNamedEnum<DTStatus>(
-    DTStatus_descriptor(), name, value);
+inline bool ReconfirmOrderReason_Parse(
+    const ::std::string& name, ReconfirmOrderReason* value) {
+  return ::google::protobuf::internal::ParseNamedEnum<ReconfirmOrderReason>(
+    ReconfirmOrderReason_descriptor(), name, value);
 }
 // ===================================================================
-
-class AccCashInfo : public ::google::protobuf::Message /* @@protoc_insertion_point(class_definition:Trd_Common.AccCashInfo) */ {
- public:
-  AccCashInfo();
-  virtual ~AccCashInfo();
-
-  AccCashInfo(const AccCashInfo& from);
-
-  inline AccCashInfo& operator=(const AccCashInfo& from) {
-    CopyFrom(from);
-    return *this;
-  }
-  #if LANG_CXX11
-  AccCashInfo(AccCashInfo&& from) noexcept
-    : AccCashInfo() {
-    *this = ::std::move(from);
-  }
-
-  inline AccCashInfo& operator=(AccCashInfo&& from) noexcept {
-    if (GetArenaNoVirtual() == from.GetArenaNoVirtual()) {
-      if (this != &from) InternalSwap(&from);
-    } else {
-      CopyFrom(from);
-    }
-    return *this;
-  }
-  #endif
-  inline const ::google::protobuf::UnknownFieldSet& unknown_fields() const {
-    return _internal_metadata_.unknown_fields();
-  }
-  inline ::google::protobuf::UnknownFieldSet* mutable_unknown_fields() {
-    return _internal_metadata_.mutable_unknown_fields();
-  }
-
-  static const ::google::protobuf::Descriptor* descriptor();
-  static const AccCashInfo& default_instance();
-
-  static void InitAsDefaultInstance();  // FOR INTERNAL USE ONLY
-  static inline const AccCashInfo* internal_default_instance() {
-    return reinterpret_cast<const AccCashInfo*>(
-               &_AccCashInfo_default_instance_);
-  }
-  static PROTOBUF_CONSTEXPR int const kIndexInFileMessages =
-    0;
-
-  void Swap(AccCashInfo* other);
-  friend void swap(AccCashInfo& a, AccCashInfo& b) {
-    a.Swap(&b);
-  }
-
-  // implements Message ----------------------------------------------
-
-  inline AccCashInfo* New() const PROTOBUF_FINAL { return New(NULL); }
-
-  AccCashInfo* New(::google::protobuf::Arena* arena) const PROTOBUF_FINAL;
-  void CopyFrom(const ::google::protobuf::Message& from) PROTOBUF_FINAL;
-  void MergeFrom(const ::google::protobuf::Message& from) PROTOBUF_FINAL;
-  void CopyFrom(const AccCashInfo& from);
-  void MergeFrom(const AccCashInfo& from);
-  void Clear() PROTOBUF_FINAL;
-  bool IsInitialized() const PROTOBUF_FINAL;
-
-  size_t ByteSizeLong() const PROTOBUF_FINAL;
-  bool MergePartialFromCodedStream(
-      ::google::protobuf::io::CodedInputStream* input) PROTOBUF_FINAL;
-  void SerializeWithCachedSizes(
-      ::google::protobuf::io::CodedOutputStream* output) const PROTOBUF_FINAL;
-  ::google::protobuf::uint8* InternalSerializeWithCachedSizesToArray(
-      bool deterministic, ::google::protobuf::uint8* target) const PROTOBUF_FINAL;
-  int GetCachedSize() const PROTOBUF_FINAL { return _cached_size_; }
-  private:
-  void SharedCtor();
-  void SharedDtor();
-  void SetCachedSize(int size) const PROTOBUF_FINAL;
-  void InternalSwap(AccCashInfo* other);
-  private:
-  inline ::google::protobuf::Arena* GetArenaNoVirtual() const {
-    return NULL;
-  }
-  inline void* MaybeArenaPtr() const {
-    return NULL;
-  }
-  public:
-
-  ::google::protobuf::Metadata GetMetadata() const PROTOBUF_FINAL;
-
-  // nested types ----------------------------------------------------
-
-  // accessors -------------------------------------------------------
-
-  // optional double cash = 2;
-  bool has_cash() const;
-  void clear_cash();
-  static const int kCashFieldNumber = 2;
-  double cash() const;
-  void set_cash(double value);
-
-  // optional double availableBalance = 3;
-  bool has_availablebalance() const;
-  void clear_availablebalance();
-  static const int kAvailableBalanceFieldNumber = 3;
-  double availablebalance() const;
-  void set_availablebalance(double value);
-
-  // optional double netCashPower = 4;
-  bool has_netcashpower() const;
-  void clear_netcashpower();
-  static const int kNetCashPowerFieldNumber = 4;
-  double netcashpower() const;
-  void set_netcashpower(double value);
-
-  // optional int32 currency = 1;
-  bool has_currency() const;
-  void clear_currency();
-  static const int kCurrencyFieldNumber = 1;
-  ::google::protobuf::int32 currency() const;
-  void set_currency(::google::protobuf::int32 value);
-
-  // @@protoc_insertion_point(class_scope:Trd_Common.AccCashInfo)
- private:
-  void set_has_currency();
-  void clear_has_currency();
-  void set_has_cash();
-  void clear_has_cash();
-  void set_has_availablebalance();
-  void clear_has_availablebalance();
-  void set_has_netcashpower();
-  void clear_has_netcashpower();
-
-  ::google::protobuf::internal::InternalMetadataWithArena _internal_metadata_;
-  ::google::protobuf::internal::HasBits<1> _has_bits_;
-  mutable int _cached_size_;
-  double cash_;
-  double availablebalance_;
-  double netcashpower_;
-  ::google::protobuf::int32 currency_;
-  friend struct ::protobuf_Trd_5fCommon_2eproto::TableStruct;
-  friend void ::protobuf_Trd_5fCommon_2eproto::InitDefaultsAccCashInfoImpl();
-};
-// -------------------------------------------------------------------
-
-class AccMarketInfo : public ::google::protobuf::Message /* @@protoc_insertion_point(class_definition:Trd_Common.AccMarketInfo) */ {
- public:
-  AccMarketInfo();
-  virtual ~AccMarketInfo();
-
-  AccMarketInfo(const AccMarketInfo& from);
-
-  inline AccMarketInfo& operator=(const AccMarketInfo& from) {
-    CopyFrom(from);
-    return *this;
-  }
-  #if LANG_CXX11
-  AccMarketInfo(AccMarketInfo&& from) noexcept
-    : AccMarketInfo() {
-    *this = ::std::move(from);
-  }
-
-  inline AccMarketInfo& operator=(AccMarketInfo&& from) noexcept {
-    if (GetArenaNoVirtual() == from.GetArenaNoVirtual()) {
-      if (this != &from) InternalSwap(&from);
-    } else {
-      CopyFrom(from);
-    }
-    return *this;
-  }
-  #endif
-  inline const ::google::protobuf::UnknownFieldSet& unknown_fields() const {
-    return _internal_metadata_.unknown_fields();
-  }
-  inline ::google::protobuf::UnknownFieldSet* mutable_unknown_fields() {
-    return _internal_metadata_.mutable_unknown_fields();
-  }
-
-  static const ::google::protobuf::Descriptor* descriptor();
-  static const AccMarketInfo& default_instance();
-
-  static void InitAsDefaultInstance();  // FOR INTERNAL USE ONLY
-  static inline const AccMarketInfo* internal_default_instance() {
-    return reinterpret_cast<const AccMarketInfo*>(
-               &_AccMarketInfo_default_instance_);
-  }
-  static PROTOBUF_CONSTEXPR int const kIndexInFileMessages =
-    1;
-
-  void Swap(AccMarketInfo* other);
-  friend void swap(AccMarketInfo& a, AccMarketInfo& b) {
-    a.Swap(&b);
-  }
-
-  // implements Message ----------------------------------------------
-
-  inline AccMarketInfo* New() const PROTOBUF_FINAL { return New(NULL); }
-
-  AccMarketInfo* New(::google::protobuf::Arena* arena) const PROTOBUF_FINAL;
-  void CopyFrom(const ::google::protobuf::Message& from) PROTOBUF_FINAL;
-  void MergeFrom(const ::google::protobuf::Message& from) PROTOBUF_FINAL;
-  void CopyFrom(const AccMarketInfo& from);
-  void MergeFrom(const AccMarketInfo& from);
-  void Clear() PROTOBUF_FINAL;
-  bool IsInitialized() const PROTOBUF_FINAL;
-
-  size_t ByteSizeLong() const PROTOBUF_FINAL;
-  bool MergePartialFromCodedStream(
-      ::google::protobuf::io::CodedInputStream* input) PROTOBUF_FINAL;
-  void SerializeWithCachedSizes(
-      ::google::protobuf::io::CodedOutputStream* output) const PROTOBUF_FINAL;
-  ::google::protobuf::uint8* InternalSerializeWithCachedSizesToArray(
-      bool deterministic, ::google::protobuf::uint8* target) const PROTOBUF_FINAL;
-  int GetCachedSize() const PROTOBUF_FINAL { return _cached_size_; }
-  private:
-  void SharedCtor();
-  void SharedDtor();
-  void SetCachedSize(int size) const PROTOBUF_FINAL;
-  void InternalSwap(AccMarketInfo* other);
-  private:
-  inline ::google::protobuf::Arena* GetArenaNoVirtual() const {
-    return NULL;
-  }
-  inline void* MaybeArenaPtr() const {
-    return NULL;
-  }
-  public:
-
-  ::google::protobuf::Metadata GetMetadata() const PROTOBUF_FINAL;
-
-  // nested types ----------------------------------------------------
-
-  // accessors -------------------------------------------------------
-
-  // optional double assets = 2;
-  bool has_assets() const;
-  void clear_assets();
-  static const int kAssetsFieldNumber = 2;
-  double assets() const;
-  void set_assets(double value);
-
-  // optional int32 trdMarket = 1;
-  bool has_trdmarket() const;
-  void clear_trdmarket();
-  static const int kTrdMarketFieldNumber = 1;
-  ::google::protobuf::int32 trdmarket() const;
-  void set_trdmarket(::google::protobuf::int32 value);
-
-  // @@protoc_insertion_point(class_scope:Trd_Common.AccMarketInfo)
- private:
-  void set_has_trdmarket();
-  void clear_has_trdmarket();
-  void set_has_assets();
-  void clear_has_assets();
-
-  ::google::protobuf::internal::InternalMetadataWithArena _internal_metadata_;
-  ::google::protobuf::internal::HasBits<1> _has_bits_;
-  mutable int _cached_size_;
-  double assets_;
-  ::google::protobuf::int32 trdmarket_;
-  friend struct ::protobuf_Trd_5fCommon_2eproto::TableStruct;
-  friend void ::protobuf_Trd_5fCommon_2eproto::InitDefaultsAccMarketInfoImpl();
-};
-// -------------------------------------------------------------------
 
 class TrdHeader : public ::google::protobuf::Message /* @@protoc_insertion_point(class_definition:Trd_Common.TrdHeader) */ {
  public:
@@ -900,7 +348,7 @@ class TrdHeader : public ::google::protobuf::Message /* @@protoc_insertion_point
                &_TrdHeader_default_instance_);
   }
   static PROTOBUF_CONSTEXPR int const kIndexInFileMessages =
-    2;
+    0;
 
   void Swap(TrdHeader* other);
   friend void swap(TrdHeader& a, TrdHeader& b) {
@@ -1033,7 +481,7 @@ class TrdAcc : public ::google::protobuf::Message /* @@protoc_insertion_point(cl
                &_TrdAcc_default_instance_);
   }
   static PROTOBUF_CONSTEXPR int const kIndexInFileMessages =
-    3;
+    1;
 
   void Swap(TrdAcc* other);
   friend void swap(TrdAcc& a, TrdAcc& b) {
@@ -1092,36 +540,6 @@ class TrdAcc : public ::google::protobuf::Message /* @@protoc_insertion_point(cl
   ::google::protobuf::RepeatedField< ::google::protobuf::int32 >*
       mutable_trdmarketauthlist();
 
-  // optional string cardNum = 5;
-  bool has_cardnum() const;
-  void clear_cardnum();
-  static const int kCardNumFieldNumber = 5;
-  const ::std::string& cardnum() const;
-  void set_cardnum(const ::std::string& value);
-  #if LANG_CXX11
-  void set_cardnum(::std::string&& value);
-  #endif
-  void set_cardnum(const char* value);
-  void set_cardnum(const char* value, size_t size);
-  ::std::string* mutable_cardnum();
-  ::std::string* release_cardnum();
-  void set_allocated_cardnum(::std::string* cardnum);
-
-  // optional string uniCardNum = 8;
-  bool has_unicardnum() const;
-  void clear_unicardnum();
-  static const int kUniCardNumFieldNumber = 8;
-  const ::std::string& unicardnum() const;
-  void set_unicardnum(const ::std::string& value);
-  #if LANG_CXX11
-  void set_unicardnum(::std::string&& value);
-  #endif
-  void set_unicardnum(const char* value);
-  void set_unicardnum(const char* value, size_t size);
-  ::std::string* mutable_unicardnum();
-  ::std::string* release_unicardnum();
-  void set_allocated_unicardnum(::std::string* unicardnum);
-
   // required uint64 accID = 2;
   bool has_accid() const;
   void clear_accid();
@@ -1136,52 +554,12 @@ class TrdAcc : public ::google::protobuf::Message /* @@protoc_insertion_point(cl
   ::google::protobuf::int32 trdenv() const;
   void set_trdenv(::google::protobuf::int32 value);
 
-  // optional int32 accType = 4;
-  bool has_acctype() const;
-  void clear_acctype();
-  static const int kAccTypeFieldNumber = 4;
-  ::google::protobuf::int32 acctype() const;
-  void set_acctype(::google::protobuf::int32 value);
-
-  // optional int32 securityFirm = 6;
-  bool has_securityfirm() const;
-  void clear_securityfirm();
-  static const int kSecurityFirmFieldNumber = 6;
-  ::google::protobuf::int32 securityfirm() const;
-  void set_securityfirm(::google::protobuf::int32 value);
-
-  // optional int32 simAccType = 7;
-  bool has_simacctype() const;
-  void clear_simacctype();
-  static const int kSimAccTypeFieldNumber = 7;
-  ::google::protobuf::int32 simacctype() const;
-  void set_simacctype(::google::protobuf::int32 value);
-
-  // optional int32 accStatus = 9;
-  bool has_accstatus() const;
-  void clear_accstatus();
-  static const int kAccStatusFieldNumber = 9;
-  ::google::protobuf::int32 accstatus() const;
-  void set_accstatus(::google::protobuf::int32 value);
-
   // @@protoc_insertion_point(class_scope:Trd_Common.TrdAcc)
  private:
   void set_has_trdenv();
   void clear_has_trdenv();
   void set_has_accid();
   void clear_has_accid();
-  void set_has_acctype();
-  void clear_has_acctype();
-  void set_has_cardnum();
-  void clear_has_cardnum();
-  void set_has_securityfirm();
-  void clear_has_securityfirm();
-  void set_has_simacctype();
-  void clear_has_simacctype();
-  void set_has_unicardnum();
-  void clear_has_unicardnum();
-  void set_has_accstatus();
-  void clear_has_accstatus();
 
   // helper for ByteSizeLong()
   size_t RequiredFieldsByteSizeFallback() const;
@@ -1190,14 +568,8 @@ class TrdAcc : public ::google::protobuf::Message /* @@protoc_insertion_point(cl
   ::google::protobuf::internal::HasBits<1> _has_bits_;
   mutable int _cached_size_;
   ::google::protobuf::RepeatedField< ::google::protobuf::int32 > trdmarketauthlist_;
-  ::google::protobuf::internal::ArenaStringPtr cardnum_;
-  ::google::protobuf::internal::ArenaStringPtr unicardnum_;
   ::google::protobuf::uint64 accid_;
   ::google::protobuf::int32 trdenv_;
-  ::google::protobuf::int32 acctype_;
-  ::google::protobuf::int32 securityfirm_;
-  ::google::protobuf::int32 simacctype_;
-  ::google::protobuf::int32 accstatus_;
   friend struct ::protobuf_Trd_5fCommon_2eproto::TableStruct;
   friend void ::protobuf_Trd_5fCommon_2eproto::InitDefaultsTrdAccImpl();
 };
@@ -1245,7 +617,7 @@ class Funds : public ::google::protobuf::Message /* @@protoc_insertion_point(cla
                &_Funds_default_instance_);
   }
   static PROTOBUF_CONSTEXPR int const kIndexInFileMessages =
-    4;
+    2;
 
   void Swap(Funds* other);
   friend void swap(Funds& a, Funds& b) {
@@ -1291,45 +663,6 @@ class Funds : public ::google::protobuf::Message /* @@protoc_insertion_point(cla
   // nested types ----------------------------------------------------
 
   // accessors -------------------------------------------------------
-
-  // repeated .Trd_Common.AccCashInfo cashInfoList = 15;
-  int cashinfolist_size() const;
-  void clear_cashinfolist();
-  static const int kCashInfoListFieldNumber = 15;
-  const ::Trd_Common::AccCashInfo& cashinfolist(int index) const;
-  ::Trd_Common::AccCashInfo* mutable_cashinfolist(int index);
-  ::Trd_Common::AccCashInfo* add_cashinfolist();
-  ::google::protobuf::RepeatedPtrField< ::Trd_Common::AccCashInfo >*
-      mutable_cashinfolist();
-  const ::google::protobuf::RepeatedPtrField< ::Trd_Common::AccCashInfo >&
-      cashinfolist() const;
-
-  // repeated .Trd_Common.AccMarketInfo marketInfoList = 33;
-  int marketinfolist_size() const;
-  void clear_marketinfolist();
-  static const int kMarketInfoListFieldNumber = 33;
-  const ::Trd_Common::AccMarketInfo& marketinfolist(int index) const;
-  ::Trd_Common::AccMarketInfo* mutable_marketinfolist(int index);
-  ::Trd_Common::AccMarketInfo* add_marketinfolist();
-  ::google::protobuf::RepeatedPtrField< ::Trd_Common::AccMarketInfo >*
-      mutable_marketinfolist();
-  const ::google::protobuf::RepeatedPtrField< ::Trd_Common::AccMarketInfo >&
-      marketinfolist() const;
-
-  // optional string pdtSeq = 25;
-  bool has_pdtseq() const;
-  void clear_pdtseq();
-  static const int kPdtSeqFieldNumber = 25;
-  const ::std::string& pdtseq() const;
-  void set_pdtseq(const ::std::string& value);
-  #if LANG_CXX11
-  void set_pdtseq(::std::string&& value);
-  #endif
-  void set_pdtseq(const char* value);
-  void set_pdtseq(const char* value, size_t size);
-  ::std::string* mutable_pdtseq();
-  ::std::string* release_pdtseq();
-  void set_allocated_pdtseq(::std::string* pdtseq);
 
   // required double power = 1;
   bool has_power() const;
@@ -1380,167 +713,6 @@ class Funds : public ::google::protobuf::Message /* @@protoc_insertion_point(cla
   double avlwithdrawalcash() const;
   void set_avlwithdrawalcash(double value);
 
-  // optional double availableFunds = 9;
-  bool has_availablefunds() const;
-  void clear_availablefunds();
-  static const int kAvailableFundsFieldNumber = 9;
-  double availablefunds() const;
-  void set_availablefunds(double value);
-
-  // optional double unrealizedPL = 10;
-  bool has_unrealizedpl() const;
-  void clear_unrealizedpl();
-  static const int kUnrealizedPLFieldNumber = 10;
-  double unrealizedpl() const;
-  void set_unrealizedpl(double value);
-
-  // optional int32 currency = 8;
-  bool has_currency() const;
-  void clear_currency();
-  static const int kCurrencyFieldNumber = 8;
-  ::google::protobuf::int32 currency() const;
-  void set_currency(::google::protobuf::int32 value);
-
-  // optional int32 riskLevel = 12;
-  bool has_risklevel() const;
-  void clear_risklevel();
-  static const int kRiskLevelFieldNumber = 12;
-  ::google::protobuf::int32 risklevel() const;
-  void set_risklevel(::google::protobuf::int32 value);
-
-  // optional double realizedPL = 11;
-  bool has_realizedpl() const;
-  void clear_realizedpl();
-  static const int kRealizedPLFieldNumber = 11;
-  double realizedpl() const;
-  void set_realizedpl(double value);
-
-  // optional double initialMargin = 13;
-  bool has_initialmargin() const;
-  void clear_initialmargin();
-  static const int kInitialMarginFieldNumber = 13;
-  double initialmargin() const;
-  void set_initialmargin(double value);
-
-  // optional double maintenanceMargin = 14;
-  bool has_maintenancemargin() const;
-  void clear_maintenancemargin();
-  static const int kMaintenanceMarginFieldNumber = 14;
-  double maintenancemargin() const;
-  void set_maintenancemargin(double value);
-
-  // optional double maxPowerShort = 16;
-  bool has_maxpowershort() const;
-  void clear_maxpowershort();
-  static const int kMaxPowerShortFieldNumber = 16;
-  double maxpowershort() const;
-  void set_maxpowershort(double value);
-
-  // optional double netCashPower = 17;
-  bool has_netcashpower() const;
-  void clear_netcashpower();
-  static const int kNetCashPowerFieldNumber = 17;
-  double netcashpower() const;
-  void set_netcashpower(double value);
-
-  // optional double longMv = 18;
-  bool has_longmv() const;
-  void clear_longmv();
-  static const int kLongMvFieldNumber = 18;
-  double longmv() const;
-  void set_longmv(double value);
-
-  // optional double shortMv = 19;
-  bool has_shortmv() const;
-  void clear_shortmv();
-  static const int kShortMvFieldNumber = 19;
-  double shortmv() const;
-  void set_shortmv(double value);
-
-  // optional double pendingAsset = 20;
-  bool has_pendingasset() const;
-  void clear_pendingasset();
-  static const int kPendingAssetFieldNumber = 20;
-  double pendingasset() const;
-  void set_pendingasset(double value);
-
-  // optional double maxWithdrawal = 21;
-  bool has_maxwithdrawal() const;
-  void clear_maxwithdrawal();
-  static const int kMaxWithdrawalFieldNumber = 21;
-  double maxwithdrawal() const;
-  void set_maxwithdrawal(double value);
-
-  // optional double marginCallMargin = 23;
-  bool has_margincallmargin() const;
-  void clear_margincallmargin();
-  static const int kMarginCallMarginFieldNumber = 23;
-  double margincallmargin() const;
-  void set_margincallmargin(double value);
-
-  // optional int32 riskStatus = 22;
-  bool has_riskstatus() const;
-  void clear_riskstatus();
-  static const int kRiskStatusFieldNumber = 22;
-  ::google::protobuf::int32 riskstatus() const;
-  void set_riskstatus(::google::protobuf::int32 value);
-
-  // optional bool isPdt = 24;
-  bool has_ispdt() const;
-  void clear_ispdt();
-  static const int kIsPdtFieldNumber = 24;
-  bool ispdt() const;
-  void set_ispdt(bool value);
-
-  // optional double beginningDTBP = 26;
-  bool has_beginningdtbp() const;
-  void clear_beginningdtbp();
-  static const int kBeginningDTBPFieldNumber = 26;
-  double beginningdtbp() const;
-  void set_beginningdtbp(double value);
-
-  // optional double remainingDTBP = 27;
-  bool has_remainingdtbp() const;
-  void clear_remainingdtbp();
-  static const int kRemainingDTBPFieldNumber = 27;
-  double remainingdtbp() const;
-  void set_remainingdtbp(double value);
-
-  // optional double dtCallAmount = 28;
-  bool has_dtcallamount() const;
-  void clear_dtcallamount();
-  static const int kDtCallAmountFieldNumber = 28;
-  double dtcallamount() const;
-  void set_dtcallamount(double value);
-
-  // optional double securitiesAssets = 30;
-  bool has_securitiesassets() const;
-  void clear_securitiesassets();
-  static const int kSecuritiesAssetsFieldNumber = 30;
-  double securitiesassets() const;
-  void set_securitiesassets(double value);
-
-  // optional double fundAssets = 31;
-  bool has_fundassets() const;
-  void clear_fundassets();
-  static const int kFundAssetsFieldNumber = 31;
-  double fundassets() const;
-  void set_fundassets(double value);
-
-  // optional double bondAssets = 32;
-  bool has_bondassets() const;
-  void clear_bondassets();
-  static const int kBondAssetsFieldNumber = 32;
-  double bondassets() const;
-  void set_bondassets(double value);
-
-  // optional int32 dtStatus = 29;
-  bool has_dtstatus() const;
-  void clear_dtstatus();
-  static const int kDtStatusFieldNumber = 29;
-  ::google::protobuf::int32 dtstatus() const;
-  void set_dtstatus(::google::protobuf::int32 value);
-
   // @@protoc_insertion_point(class_scope:Trd_Common.Funds)
  private:
   void set_has_power();
@@ -1557,54 +729,6 @@ class Funds : public ::google::protobuf::Message /* @@protoc_insertion_point(cla
   void clear_has_debtcash();
   void set_has_avlwithdrawalcash();
   void clear_has_avlwithdrawalcash();
-  void set_has_currency();
-  void clear_has_currency();
-  void set_has_availablefunds();
-  void clear_has_availablefunds();
-  void set_has_unrealizedpl();
-  void clear_has_unrealizedpl();
-  void set_has_realizedpl();
-  void clear_has_realizedpl();
-  void set_has_risklevel();
-  void clear_has_risklevel();
-  void set_has_initialmargin();
-  void clear_has_initialmargin();
-  void set_has_maintenancemargin();
-  void clear_has_maintenancemargin();
-  void set_has_maxpowershort();
-  void clear_has_maxpowershort();
-  void set_has_netcashpower();
-  void clear_has_netcashpower();
-  void set_has_longmv();
-  void clear_has_longmv();
-  void set_has_shortmv();
-  void clear_has_shortmv();
-  void set_has_pendingasset();
-  void clear_has_pendingasset();
-  void set_has_maxwithdrawal();
-  void clear_has_maxwithdrawal();
-  void set_has_riskstatus();
-  void clear_has_riskstatus();
-  void set_has_margincallmargin();
-  void clear_has_margincallmargin();
-  void set_has_ispdt();
-  void clear_has_ispdt();
-  void set_has_pdtseq();
-  void clear_has_pdtseq();
-  void set_has_beginningdtbp();
-  void clear_has_beginningdtbp();
-  void set_has_remainingdtbp();
-  void clear_has_remainingdtbp();
-  void set_has_dtcallamount();
-  void clear_has_dtcallamount();
-  void set_has_dtstatus();
-  void clear_has_dtstatus();
-  void set_has_securitiesassets();
-  void clear_has_securitiesassets();
-  void set_has_fundassets();
-  void clear_has_fundassets();
-  void set_has_bondassets();
-  void clear_has_bondassets();
 
   // helper for ByteSizeLong()
   size_t RequiredFieldsByteSizeFallback() const;
@@ -1612,9 +736,6 @@ class Funds : public ::google::protobuf::Message /* @@protoc_insertion_point(cla
   ::google::protobuf::internal::InternalMetadataWithArena _internal_metadata_;
   ::google::protobuf::internal::HasBits<1> _has_bits_;
   mutable int _cached_size_;
-  ::google::protobuf::RepeatedPtrField< ::Trd_Common::AccCashInfo > cashinfolist_;
-  ::google::protobuf::RepeatedPtrField< ::Trd_Common::AccMarketInfo > marketinfolist_;
-  ::google::protobuf::internal::ArenaStringPtr pdtseq_;
   double power_;
   double totalassets_;
   double cash_;
@@ -1622,29 +743,6 @@ class Funds : public ::google::protobuf::Message /* @@protoc_insertion_point(cla
   double frozencash_;
   double debtcash_;
   double avlwithdrawalcash_;
-  double availablefunds_;
-  double unrealizedpl_;
-  ::google::protobuf::int32 currency_;
-  ::google::protobuf::int32 risklevel_;
-  double realizedpl_;
-  double initialmargin_;
-  double maintenancemargin_;
-  double maxpowershort_;
-  double netcashpower_;
-  double longmv_;
-  double shortmv_;
-  double pendingasset_;
-  double maxwithdrawal_;
-  double margincallmargin_;
-  ::google::protobuf::int32 riskstatus_;
-  bool ispdt_;
-  double beginningdtbp_;
-  double remainingdtbp_;
-  double dtcallamount_;
-  double securitiesassets_;
-  double fundassets_;
-  double bondassets_;
-  ::google::protobuf::int32 dtstatus_;
   friend struct ::protobuf_Trd_5fCommon_2eproto::TableStruct;
   friend void ::protobuf_Trd_5fCommon_2eproto::InitDefaultsFundsImpl();
 };
@@ -1692,7 +790,7 @@ class Position : public ::google::protobuf::Message /* @@protoc_insertion_point(
                &_Position_default_instance_);
   }
   static PROTOBUF_CONSTEXPR int const kIndexInFileMessages =
-    5;
+    3;
 
   void Swap(Position* other);
   friend void swap(Position& a, Position& b) {
@@ -1881,55 +979,6 @@ class Position : public ::google::protobuf::Message /* @@protoc_insertion_point(
   double td_sellqty() const;
   void set_td_sellqty(double value);
 
-  // optional double unrealizedPL = 28;
-  bool has_unrealizedpl() const;
-  void clear_unrealizedpl();
-  static const int kUnrealizedPLFieldNumber = 28;
-  double unrealizedpl() const;
-  void set_unrealizedpl(double value);
-
-  // optional double realizedPL = 29;
-  bool has_realizedpl() const;
-  void clear_realizedpl();
-  static const int kRealizedPLFieldNumber = 29;
-  double realizedpl() const;
-  void set_realizedpl(double value);
-
-  // optional int32 currency = 30;
-  bool has_currency() const;
-  void clear_currency();
-  static const int kCurrencyFieldNumber = 30;
-  ::google::protobuf::int32 currency() const;
-  void set_currency(::google::protobuf::int32 value);
-
-  // optional int32 trdMarket = 31;
-  bool has_trdmarket() const;
-  void clear_trdmarket();
-  static const int kTrdMarketFieldNumber = 31;
-  ::google::protobuf::int32 trdmarket() const;
-  void set_trdmarket(::google::protobuf::int32 value);
-
-  // optional double dilutedCostPrice = 32;
-  bool has_dilutedcostprice() const;
-  void clear_dilutedcostprice();
-  static const int kDilutedCostPriceFieldNumber = 32;
-  double dilutedcostprice() const;
-  void set_dilutedcostprice(double value);
-
-  // optional double averageCostPrice = 33;
-  bool has_averagecostprice() const;
-  void clear_averagecostprice();
-  static const int kAverageCostPriceFieldNumber = 33;
-  double averagecostprice() const;
-  void set_averagecostprice(double value);
-
-  // optional double averagePlRatio = 34;
-  bool has_averageplratio() const;
-  void clear_averageplratio();
-  static const int kAveragePlRatioFieldNumber = 34;
-  double averageplratio() const;
-  void set_averageplratio(double value);
-
   // @@protoc_insertion_point(class_scope:Trd_Common.Position)
  private:
   void set_has_positionid();
@@ -1968,20 +1017,6 @@ class Position : public ::google::protobuf::Message /* @@protoc_insertion_point(
   void clear_has_td_sellval();
   void set_has_td_sellqty();
   void clear_has_td_sellqty();
-  void set_has_unrealizedpl();
-  void clear_has_unrealizedpl();
-  void set_has_realizedpl();
-  void clear_has_realizedpl();
-  void set_has_currency();
-  void clear_has_currency();
-  void set_has_trdmarket();
-  void clear_has_trdmarket();
-  void set_has_dilutedcostprice();
-  void clear_has_dilutedcostprice();
-  void set_has_averagecostprice();
-  void clear_has_averagecostprice();
-  void set_has_averageplratio();
-  void clear_has_averageplratio();
 
   // helper for ByteSizeLong()
   size_t RequiredFieldsByteSizeFallback() const;
@@ -2007,13 +1042,6 @@ class Position : public ::google::protobuf::Message /* @@protoc_insertion_point(
   double td_buyqty_;
   double td_sellval_;
   double td_sellqty_;
-  double unrealizedpl_;
-  double realizedpl_;
-  ::google::protobuf::int32 currency_;
-  ::google::protobuf::int32 trdmarket_;
-  double dilutedcostprice_;
-  double averagecostprice_;
-  double averageplratio_;
   friend struct ::protobuf_Trd_5fCommon_2eproto::TableStruct;
   friend void ::protobuf_Trd_5fCommon_2eproto::InitDefaultsPositionImpl();
 };
@@ -2061,7 +1089,7 @@ class Order : public ::google::protobuf::Message /* @@protoc_insertion_point(cla
                &_Order_default_instance_);
   }
   static PROTOBUF_CONSTEXPR int const kIndexInFileMessages =
-    6;
+    4;
 
   void Swap(Order* other);
   friend void swap(Order& a, Order& b) {
@@ -2198,21 +1226,6 @@ class Order : public ::google::protobuf::Message /* @@protoc_insertion_point(cla
   ::std::string* release_lasterrmsg();
   void set_allocated_lasterrmsg(::std::string* lasterrmsg);
 
-  // optional string remark = 18;
-  bool has_remark() const;
-  void clear_remark();
-  static const int kRemarkFieldNumber = 18;
-  const ::std::string& remark() const;
-  void set_remark(const ::std::string& value);
-  #if LANG_CXX11
-  void set_remark(::std::string&& value);
-  #endif
-  void set_remark(const char* value);
-  void set_remark(const char* value, size_t size);
-  ::std::string* mutable_remark();
-  ::std::string* release_remark();
-  void set_allocated_remark(::std::string* remark);
-
   // required int32 trdSide = 1;
   bool has_trdside() const;
   void clear_trdside();
@@ -2276,83 +1289,6 @@ class Order : public ::google::protobuf::Message /* @@protoc_insertion_point(cla
   double fillavgprice() const;
   void set_fillavgprice(double value);
 
-  // optional double createTimestamp = 16;
-  bool has_createtimestamp() const;
-  void clear_createtimestamp();
-  static const int kCreateTimestampFieldNumber = 16;
-  double createtimestamp() const;
-  void set_createtimestamp(double value);
-
-  // optional double updateTimestamp = 17;
-  bool has_updatetimestamp() const;
-  void clear_updatetimestamp();
-  static const int kUpdateTimestampFieldNumber = 17;
-  double updatetimestamp() const;
-  void set_updatetimestamp(double value);
-
-  // optional int32 timeInForce = 19;
-  bool has_timeinforce() const;
-  void clear_timeinforce();
-  static const int kTimeInForceFieldNumber = 19;
-  ::google::protobuf::int32 timeinforce() const;
-  void set_timeinforce(::google::protobuf::int32 value);
-
-  // optional bool fillOutsideRTH = 20;
-  bool has_filloutsiderth() const;
-  void clear_filloutsiderth();
-  static const int kFillOutsideRTHFieldNumber = 20;
-  bool filloutsiderth() const;
-  void set_filloutsiderth(bool value);
-
-  // optional double auxPrice = 21;
-  bool has_auxprice() const;
-  void clear_auxprice();
-  static const int kAuxPriceFieldNumber = 21;
-  double auxprice() const;
-  void set_auxprice(double value);
-
-  // optional double trailValue = 23;
-  bool has_trailvalue() const;
-  void clear_trailvalue();
-  static const int kTrailValueFieldNumber = 23;
-  double trailvalue() const;
-  void set_trailvalue(double value);
-
-  // optional int32 trailType = 22;
-  bool has_trailtype() const;
-  void clear_trailtype();
-  static const int kTrailTypeFieldNumber = 22;
-  ::google::protobuf::int32 trailtype() const;
-  void set_trailtype(::google::protobuf::int32 value);
-
-  // optional int32 currency = 25;
-  bool has_currency() const;
-  void clear_currency();
-  static const int kCurrencyFieldNumber = 25;
-  ::google::protobuf::int32 currency() const;
-  void set_currency(::google::protobuf::int32 value);
-
-  // optional double trailSpread = 24;
-  bool has_trailspread() const;
-  void clear_trailspread();
-  static const int kTrailSpreadFieldNumber = 24;
-  double trailspread() const;
-  void set_trailspread(double value);
-
-  // optional int32 trdMarket = 26;
-  bool has_trdmarket() const;
-  void clear_trdmarket();
-  static const int kTrdMarketFieldNumber = 26;
-  ::google::protobuf::int32 trdmarket() const;
-  void set_trdmarket(::google::protobuf::int32 value);
-
-  // optional int32 session = 27;
-  bool has_session() const;
-  void clear_session();
-  static const int kSessionFieldNumber = 27;
-  ::google::protobuf::int32 session() const;
-  void set_session(::google::protobuf::int32 value);
-
   // @@protoc_insertion_point(class_scope:Trd_Common.Order)
  private:
   void set_has_trdside();
@@ -2385,30 +1321,6 @@ class Order : public ::google::protobuf::Message /* @@protoc_insertion_point(cla
   void clear_has_lasterrmsg();
   void set_has_secmarket();
   void clear_has_secmarket();
-  void set_has_createtimestamp();
-  void clear_has_createtimestamp();
-  void set_has_updatetimestamp();
-  void clear_has_updatetimestamp();
-  void set_has_remark();
-  void clear_has_remark();
-  void set_has_timeinforce();
-  void clear_has_timeinforce();
-  void set_has_filloutsiderth();
-  void clear_has_filloutsiderth();
-  void set_has_auxprice();
-  void clear_has_auxprice();
-  void set_has_trailtype();
-  void clear_has_trailtype();
-  void set_has_trailvalue();
-  void clear_has_trailvalue();
-  void set_has_trailspread();
-  void clear_has_trailspread();
-  void set_has_currency();
-  void clear_has_currency();
-  void set_has_trdmarket();
-  void clear_has_trdmarket();
-  void set_has_session();
-  void clear_has_session();
 
   // helper for ByteSizeLong()
   size_t RequiredFieldsByteSizeFallback() const;
@@ -2422,7 +1334,6 @@ class Order : public ::google::protobuf::Message /* @@protoc_insertion_point(cla
   ::google::protobuf::internal::ArenaStringPtr createtime_;
   ::google::protobuf::internal::ArenaStringPtr updatetime_;
   ::google::protobuf::internal::ArenaStringPtr lasterrmsg_;
-  ::google::protobuf::internal::ArenaStringPtr remark_;
   ::google::protobuf::int32 trdside_;
   ::google::protobuf::int32 ordertype_;
   ::google::protobuf::uint64 orderid_;
@@ -2432,288 +1343,8 @@ class Order : public ::google::protobuf::Message /* @@protoc_insertion_point(cla
   ::google::protobuf::int32 secmarket_;
   double fillqty_;
   double fillavgprice_;
-  double createtimestamp_;
-  double updatetimestamp_;
-  ::google::protobuf::int32 timeinforce_;
-  bool filloutsiderth_;
-  double auxprice_;
-  double trailvalue_;
-  ::google::protobuf::int32 trailtype_;
-  ::google::protobuf::int32 currency_;
-  double trailspread_;
-  ::google::protobuf::int32 trdmarket_;
-  ::google::protobuf::int32 session_;
   friend struct ::protobuf_Trd_5fCommon_2eproto::TableStruct;
   friend void ::protobuf_Trd_5fCommon_2eproto::InitDefaultsOrderImpl();
-};
-// -------------------------------------------------------------------
-
-class OrderFeeItem : public ::google::protobuf::Message /* @@protoc_insertion_point(class_definition:Trd_Common.OrderFeeItem) */ {
- public:
-  OrderFeeItem();
-  virtual ~OrderFeeItem();
-
-  OrderFeeItem(const OrderFeeItem& from);
-
-  inline OrderFeeItem& operator=(const OrderFeeItem& from) {
-    CopyFrom(from);
-    return *this;
-  }
-  #if LANG_CXX11
-  OrderFeeItem(OrderFeeItem&& from) noexcept
-    : OrderFeeItem() {
-    *this = ::std::move(from);
-  }
-
-  inline OrderFeeItem& operator=(OrderFeeItem&& from) noexcept {
-    if (GetArenaNoVirtual() == from.GetArenaNoVirtual()) {
-      if (this != &from) InternalSwap(&from);
-    } else {
-      CopyFrom(from);
-    }
-    return *this;
-  }
-  #endif
-  inline const ::google::protobuf::UnknownFieldSet& unknown_fields() const {
-    return _internal_metadata_.unknown_fields();
-  }
-  inline ::google::protobuf::UnknownFieldSet* mutable_unknown_fields() {
-    return _internal_metadata_.mutable_unknown_fields();
-  }
-
-  static const ::google::protobuf::Descriptor* descriptor();
-  static const OrderFeeItem& default_instance();
-
-  static void InitAsDefaultInstance();  // FOR INTERNAL USE ONLY
-  static inline const OrderFeeItem* internal_default_instance() {
-    return reinterpret_cast<const OrderFeeItem*>(
-               &_OrderFeeItem_default_instance_);
-  }
-  static PROTOBUF_CONSTEXPR int const kIndexInFileMessages =
-    7;
-
-  void Swap(OrderFeeItem* other);
-  friend void swap(OrderFeeItem& a, OrderFeeItem& b) {
-    a.Swap(&b);
-  }
-
-  // implements Message ----------------------------------------------
-
-  inline OrderFeeItem* New() const PROTOBUF_FINAL { return New(NULL); }
-
-  OrderFeeItem* New(::google::protobuf::Arena* arena) const PROTOBUF_FINAL;
-  void CopyFrom(const ::google::protobuf::Message& from) PROTOBUF_FINAL;
-  void MergeFrom(const ::google::protobuf::Message& from) PROTOBUF_FINAL;
-  void CopyFrom(const OrderFeeItem& from);
-  void MergeFrom(const OrderFeeItem& from);
-  void Clear() PROTOBUF_FINAL;
-  bool IsInitialized() const PROTOBUF_FINAL;
-
-  size_t ByteSizeLong() const PROTOBUF_FINAL;
-  bool MergePartialFromCodedStream(
-      ::google::protobuf::io::CodedInputStream* input) PROTOBUF_FINAL;
-  void SerializeWithCachedSizes(
-      ::google::protobuf::io::CodedOutputStream* output) const PROTOBUF_FINAL;
-  ::google::protobuf::uint8* InternalSerializeWithCachedSizesToArray(
-      bool deterministic, ::google::protobuf::uint8* target) const PROTOBUF_FINAL;
-  int GetCachedSize() const PROTOBUF_FINAL { return _cached_size_; }
-  private:
-  void SharedCtor();
-  void SharedDtor();
-  void SetCachedSize(int size) const PROTOBUF_FINAL;
-  void InternalSwap(OrderFeeItem* other);
-  private:
-  inline ::google::protobuf::Arena* GetArenaNoVirtual() const {
-    return NULL;
-  }
-  inline void* MaybeArenaPtr() const {
-    return NULL;
-  }
-  public:
-
-  ::google::protobuf::Metadata GetMetadata() const PROTOBUF_FINAL;
-
-  // nested types ----------------------------------------------------
-
-  // accessors -------------------------------------------------------
-
-  // optional string title = 1;
-  bool has_title() const;
-  void clear_title();
-  static const int kTitleFieldNumber = 1;
-  const ::std::string& title() const;
-  void set_title(const ::std::string& value);
-  #if LANG_CXX11
-  void set_title(::std::string&& value);
-  #endif
-  void set_title(const char* value);
-  void set_title(const char* value, size_t size);
-  ::std::string* mutable_title();
-  ::std::string* release_title();
-  void set_allocated_title(::std::string* title);
-
-  // optional double value = 2;
-  bool has_value() const;
-  void clear_value();
-  static const int kValueFieldNumber = 2;
-  double value() const;
-  void set_value(double value);
-
-  // @@protoc_insertion_point(class_scope:Trd_Common.OrderFeeItem)
- private:
-  void set_has_title();
-  void clear_has_title();
-  void set_has_value();
-  void clear_has_value();
-
-  ::google::protobuf::internal::InternalMetadataWithArena _internal_metadata_;
-  ::google::protobuf::internal::HasBits<1> _has_bits_;
-  mutable int _cached_size_;
-  ::google::protobuf::internal::ArenaStringPtr title_;
-  double value_;
-  friend struct ::protobuf_Trd_5fCommon_2eproto::TableStruct;
-  friend void ::protobuf_Trd_5fCommon_2eproto::InitDefaultsOrderFeeItemImpl();
-};
-// -------------------------------------------------------------------
-
-class OrderFee : public ::google::protobuf::Message /* @@protoc_insertion_point(class_definition:Trd_Common.OrderFee) */ {
- public:
-  OrderFee();
-  virtual ~OrderFee();
-
-  OrderFee(const OrderFee& from);
-
-  inline OrderFee& operator=(const OrderFee& from) {
-    CopyFrom(from);
-    return *this;
-  }
-  #if LANG_CXX11
-  OrderFee(OrderFee&& from) noexcept
-    : OrderFee() {
-    *this = ::std::move(from);
-  }
-
-  inline OrderFee& operator=(OrderFee&& from) noexcept {
-    if (GetArenaNoVirtual() == from.GetArenaNoVirtual()) {
-      if (this != &from) InternalSwap(&from);
-    } else {
-      CopyFrom(from);
-    }
-    return *this;
-  }
-  #endif
-  inline const ::google::protobuf::UnknownFieldSet& unknown_fields() const {
-    return _internal_metadata_.unknown_fields();
-  }
-  inline ::google::protobuf::UnknownFieldSet* mutable_unknown_fields() {
-    return _internal_metadata_.mutable_unknown_fields();
-  }
-
-  static const ::google::protobuf::Descriptor* descriptor();
-  static const OrderFee& default_instance();
-
-  static void InitAsDefaultInstance();  // FOR INTERNAL USE ONLY
-  static inline const OrderFee* internal_default_instance() {
-    return reinterpret_cast<const OrderFee*>(
-               &_OrderFee_default_instance_);
-  }
-  static PROTOBUF_CONSTEXPR int const kIndexInFileMessages =
-    8;
-
-  void Swap(OrderFee* other);
-  friend void swap(OrderFee& a, OrderFee& b) {
-    a.Swap(&b);
-  }
-
-  // implements Message ----------------------------------------------
-
-  inline OrderFee* New() const PROTOBUF_FINAL { return New(NULL); }
-
-  OrderFee* New(::google::protobuf::Arena* arena) const PROTOBUF_FINAL;
-  void CopyFrom(const ::google::protobuf::Message& from) PROTOBUF_FINAL;
-  void MergeFrom(const ::google::protobuf::Message& from) PROTOBUF_FINAL;
-  void CopyFrom(const OrderFee& from);
-  void MergeFrom(const OrderFee& from);
-  void Clear() PROTOBUF_FINAL;
-  bool IsInitialized() const PROTOBUF_FINAL;
-
-  size_t ByteSizeLong() const PROTOBUF_FINAL;
-  bool MergePartialFromCodedStream(
-      ::google::protobuf::io::CodedInputStream* input) PROTOBUF_FINAL;
-  void SerializeWithCachedSizes(
-      ::google::protobuf::io::CodedOutputStream* output) const PROTOBUF_FINAL;
-  ::google::protobuf::uint8* InternalSerializeWithCachedSizesToArray(
-      bool deterministic, ::google::protobuf::uint8* target) const PROTOBUF_FINAL;
-  int GetCachedSize() const PROTOBUF_FINAL { return _cached_size_; }
-  private:
-  void SharedCtor();
-  void SharedDtor();
-  void SetCachedSize(int size) const PROTOBUF_FINAL;
-  void InternalSwap(OrderFee* other);
-  private:
-  inline ::google::protobuf::Arena* GetArenaNoVirtual() const {
-    return NULL;
-  }
-  inline void* MaybeArenaPtr() const {
-    return NULL;
-  }
-  public:
-
-  ::google::protobuf::Metadata GetMetadata() const PROTOBUF_FINAL;
-
-  // nested types ----------------------------------------------------
-
-  // accessors -------------------------------------------------------
-
-  // repeated .Trd_Common.OrderFeeItem feeList = 3;
-  int feelist_size() const;
-  void clear_feelist();
-  static const int kFeeListFieldNumber = 3;
-  const ::Trd_Common::OrderFeeItem& feelist(int index) const;
-  ::Trd_Common::OrderFeeItem* mutable_feelist(int index);
-  ::Trd_Common::OrderFeeItem* add_feelist();
-  ::google::protobuf::RepeatedPtrField< ::Trd_Common::OrderFeeItem >*
-      mutable_feelist();
-  const ::google::protobuf::RepeatedPtrField< ::Trd_Common::OrderFeeItem >&
-      feelist() const;
-
-  // required string orderIDEx = 1;
-  bool has_orderidex() const;
-  void clear_orderidex();
-  static const int kOrderIDExFieldNumber = 1;
-  const ::std::string& orderidex() const;
-  void set_orderidex(const ::std::string& value);
-  #if LANG_CXX11
-  void set_orderidex(::std::string&& value);
-  #endif
-  void set_orderidex(const char* value);
-  void set_orderidex(const char* value, size_t size);
-  ::std::string* mutable_orderidex();
-  ::std::string* release_orderidex();
-  void set_allocated_orderidex(::std::string* orderidex);
-
-  // optional double feeAmount = 2;
-  bool has_feeamount() const;
-  void clear_feeamount();
-  static const int kFeeAmountFieldNumber = 2;
-  double feeamount() const;
-  void set_feeamount(double value);
-
-  // @@protoc_insertion_point(class_scope:Trd_Common.OrderFee)
- private:
-  void set_has_orderidex();
-  void clear_has_orderidex();
-  void set_has_feeamount();
-  void clear_has_feeamount();
-
-  ::google::protobuf::internal::InternalMetadataWithArena _internal_metadata_;
-  ::google::protobuf::internal::HasBits<1> _has_bits_;
-  mutable int _cached_size_;
-  ::google::protobuf::RepeatedPtrField< ::Trd_Common::OrderFeeItem > feelist_;
-  ::google::protobuf::internal::ArenaStringPtr orderidex_;
-  double feeamount_;
-  friend struct ::protobuf_Trd_5fCommon_2eproto::TableStruct;
-  friend void ::protobuf_Trd_5fCommon_2eproto::InitDefaultsOrderFeeImpl();
 };
 // -------------------------------------------------------------------
 
@@ -2759,7 +1390,7 @@ class OrderFill : public ::google::protobuf::Message /* @@protoc_insertion_point
                &_OrderFill_default_instance_);
   }
   static PROTOBUF_CONSTEXPR int const kIndexInFileMessages =
-    9;
+    5;
 
   void Swap(OrderFill* other);
   friend void swap(OrderFill& a, OrderFill& b) {
@@ -2938,40 +1569,12 @@ class OrderFill : public ::google::protobuf::Message /* @@protoc_insertion_point
   double price() const;
   void set_price(double value);
 
-  // optional double createTimestamp = 14;
-  bool has_createtimestamp() const;
-  void clear_createtimestamp();
-  static const int kCreateTimestampFieldNumber = 14;
-  double createtimestamp() const;
-  void set_createtimestamp(double value);
-
   // optional int32 secMarket = 13;
   bool has_secmarket() const;
   void clear_secmarket();
   static const int kSecMarketFieldNumber = 13;
   ::google::protobuf::int32 secmarket() const;
   void set_secmarket(::google::protobuf::int32 value);
-
-  // optional int32 status = 16;
-  bool has_status() const;
-  void clear_status();
-  static const int kStatusFieldNumber = 16;
-  ::google::protobuf::int32 status() const;
-  void set_status(::google::protobuf::int32 value);
-
-  // optional double updateTimestamp = 15;
-  bool has_updatetimestamp() const;
-  void clear_updatetimestamp();
-  static const int kUpdateTimestampFieldNumber = 15;
-  double updatetimestamp() const;
-  void set_updatetimestamp(double value);
-
-  // optional int32 trdMarket = 17;
-  bool has_trdmarket() const;
-  void clear_trdmarket();
-  static const int kTrdMarketFieldNumber = 17;
-  ::google::protobuf::int32 trdmarket() const;
-  void set_trdmarket(::google::protobuf::int32 value);
 
   // @@protoc_insertion_point(class_scope:Trd_Common.OrderFill)
  private:
@@ -3001,14 +1604,6 @@ class OrderFill : public ::google::protobuf::Message /* @@protoc_insertion_point
   void clear_has_counterbrokername();
   void set_has_secmarket();
   void clear_has_secmarket();
-  void set_has_createtimestamp();
-  void clear_has_createtimestamp();
-  void set_has_updatetimestamp();
-  void clear_has_updatetimestamp();
-  void set_has_status();
-  void clear_has_status();
-  void set_has_trdmarket();
-  void clear_has_trdmarket();
 
   // helper for ByteSizeLong()
   size_t RequiredFieldsByteSizeFallback() const;
@@ -3028,11 +1623,7 @@ class OrderFill : public ::google::protobuf::Message /* @@protoc_insertion_point
   ::google::protobuf::int32 counterbrokerid_;
   double qty_;
   double price_;
-  double createtimestamp_;
   ::google::protobuf::int32 secmarket_;
-  ::google::protobuf::int32 status_;
-  double updatetimestamp_;
-  ::google::protobuf::int32 trdmarket_;
   friend struct ::protobuf_Trd_5fCommon_2eproto::TableStruct;
   friend void ::protobuf_Trd_5fCommon_2eproto::InitDefaultsOrderFillImpl();
 };
@@ -3080,7 +1671,7 @@ class MaxTrdQtys : public ::google::protobuf::Message /* @@protoc_insertion_poin
                &_MaxTrdQtys_default_instance_);
   }
   static PROTOBUF_CONSTEXPR int const kIndexInFileMessages =
-    10;
+    6;
 
   void Swap(MaxTrdQtys* other);
   friend void swap(MaxTrdQtys& a, MaxTrdQtys& b) {
@@ -3162,20 +1753,6 @@ class MaxTrdQtys : public ::google::protobuf::Message /* @@protoc_insertion_poin
   double maxbuyback() const;
   void set_maxbuyback(double value);
 
-  // optional double longRequiredIM = 6;
-  bool has_longrequiredim() const;
-  void clear_longrequiredim();
-  static const int kLongRequiredIMFieldNumber = 6;
-  double longrequiredim() const;
-  void set_longrequiredim(double value);
-
-  // optional double shortRequiredIM = 7;
-  bool has_shortrequiredim() const;
-  void clear_shortrequiredim();
-  static const int kShortRequiredIMFieldNumber = 7;
-  double shortrequiredim() const;
-  void set_shortrequiredim(double value);
-
   // @@protoc_insertion_point(class_scope:Trd_Common.MaxTrdQtys)
  private:
   void set_has_maxcashbuy();
@@ -3188,10 +1765,6 @@ class MaxTrdQtys : public ::google::protobuf::Message /* @@protoc_insertion_poin
   void clear_has_maxsellshort();
   void set_has_maxbuyback();
   void clear_has_maxbuyback();
-  void set_has_longrequiredim();
-  void clear_has_longrequiredim();
-  void set_has_shortrequiredim();
-  void clear_has_shortrequiredim();
 
   // helper for ByteSizeLong()
   size_t RequiredFieldsByteSizeFallback() const;
@@ -3204,8 +1777,6 @@ class MaxTrdQtys : public ::google::protobuf::Message /* @@protoc_insertion_poin
   double maxpositionsell_;
   double maxsellshort_;
   double maxbuyback_;
-  double longrequiredim_;
-  double shortrequiredim_;
   friend struct ::protobuf_Trd_5fCommon_2eproto::TableStruct;
   friend void ::protobuf_Trd_5fCommon_2eproto::InitDefaultsMaxTrdQtysImpl();
 };
@@ -3253,7 +1824,7 @@ class TrdFilterConditions : public ::google::protobuf::Message /* @@protoc_inser
                &_TrdFilterConditions_default_instance_);
   }
   static PROTOBUF_CONSTEXPR int const kIndexInFileMessages =
-    11;
+    7;
 
   void Swap(TrdFilterConditions* other);
   friend void swap(TrdFilterConditions& a, TrdFilterConditions& b) {
@@ -3334,28 +1905,6 @@ class TrdFilterConditions : public ::google::protobuf::Message /* @@protoc_inser
   ::google::protobuf::RepeatedField< ::google::protobuf::uint64 >*
       mutable_idlist();
 
-  // repeated string orderIDExList = 5;
-  int orderidexlist_size() const;
-  void clear_orderidexlist();
-  static const int kOrderIDExListFieldNumber = 5;
-  const ::std::string& orderidexlist(int index) const;
-  ::std::string* mutable_orderidexlist(int index);
-  void set_orderidexlist(int index, const ::std::string& value);
-  #if LANG_CXX11
-  void set_orderidexlist(int index, ::std::string&& value);
-  #endif
-  void set_orderidexlist(int index, const char* value);
-  void set_orderidexlist(int index, const char* value, size_t size);
-  ::std::string* add_orderidexlist();
-  void add_orderidexlist(const ::std::string& value);
-  #if LANG_CXX11
-  void add_orderidexlist(::std::string&& value);
-  #endif
-  void add_orderidexlist(const char* value);
-  void add_orderidexlist(const char* value, size_t size);
-  const ::google::protobuf::RepeatedPtrField< ::std::string>& orderidexlist() const;
-  ::google::protobuf::RepeatedPtrField< ::std::string>* mutable_orderidexlist();
-
   // optional string beginTime = 3;
   bool has_begintime() const;
   void clear_begintime();
@@ -3386,31 +1935,20 @@ class TrdFilterConditions : public ::google::protobuf::Message /* @@protoc_inser
   ::std::string* release_endtime();
   void set_allocated_endtime(::std::string* endtime);
 
-  // optional int32 filterMarket = 6;
-  bool has_filtermarket() const;
-  void clear_filtermarket();
-  static const int kFilterMarketFieldNumber = 6;
-  ::google::protobuf::int32 filtermarket() const;
-  void set_filtermarket(::google::protobuf::int32 value);
-
   // @@protoc_insertion_point(class_scope:Trd_Common.TrdFilterConditions)
  private:
   void set_has_begintime();
   void clear_has_begintime();
   void set_has_endtime();
   void clear_has_endtime();
-  void set_has_filtermarket();
-  void clear_has_filtermarket();
 
   ::google::protobuf::internal::InternalMetadataWithArena _internal_metadata_;
   ::google::protobuf::internal::HasBits<1> _has_bits_;
   mutable int _cached_size_;
   ::google::protobuf::RepeatedPtrField< ::std::string> codelist_;
   ::google::protobuf::RepeatedField< ::google::protobuf::uint64 > idlist_;
-  ::google::protobuf::RepeatedPtrField< ::std::string> orderidexlist_;
   ::google::protobuf::internal::ArenaStringPtr begintime_;
   ::google::protobuf::internal::ArenaStringPtr endtime_;
-  ::google::protobuf::int32 filtermarket_;
   friend struct ::protobuf_Trd_5fCommon_2eproto::TableStruct;
   friend void ::protobuf_Trd_5fCommon_2eproto::InitDefaultsTrdFilterConditionsImpl();
 };
@@ -3423,158 +1961,6 @@ class TrdFilterConditions : public ::google::protobuf::Message /* @@protoc_inser
   #pragma GCC diagnostic push
   #pragma GCC diagnostic ignored "-Wstrict-aliasing"
 #endif  // __GNUC__
-// AccCashInfo
-
-// optional int32 currency = 1;
-inline bool AccCashInfo::has_currency() const {
-  return (_has_bits_[0] & 0x00000008u) != 0;
-}
-inline void AccCashInfo::set_has_currency() {
-  _has_bits_[0] |= 0x00000008u;
-}
-inline void AccCashInfo::clear_has_currency() {
-  _has_bits_[0] &= ~0x00000008u;
-}
-inline void AccCashInfo::clear_currency() {
-  currency_ = 0;
-  clear_has_currency();
-}
-inline ::google::protobuf::int32 AccCashInfo::currency() const {
-  // @@protoc_insertion_point(field_get:Trd_Common.AccCashInfo.currency)
-  return currency_;
-}
-inline void AccCashInfo::set_currency(::google::protobuf::int32 value) {
-  set_has_currency();
-  currency_ = value;
-  // @@protoc_insertion_point(field_set:Trd_Common.AccCashInfo.currency)
-}
-
-// optional double cash = 2;
-inline bool AccCashInfo::has_cash() const {
-  return (_has_bits_[0] & 0x00000001u) != 0;
-}
-inline void AccCashInfo::set_has_cash() {
-  _has_bits_[0] |= 0x00000001u;
-}
-inline void AccCashInfo::clear_has_cash() {
-  _has_bits_[0] &= ~0x00000001u;
-}
-inline void AccCashInfo::clear_cash() {
-  cash_ = 0;
-  clear_has_cash();
-}
-inline double AccCashInfo::cash() const {
-  // @@protoc_insertion_point(field_get:Trd_Common.AccCashInfo.cash)
-  return cash_;
-}
-inline void AccCashInfo::set_cash(double value) {
-  set_has_cash();
-  cash_ = value;
-  // @@protoc_insertion_point(field_set:Trd_Common.AccCashInfo.cash)
-}
-
-// optional double availableBalance = 3;
-inline bool AccCashInfo::has_availablebalance() const {
-  return (_has_bits_[0] & 0x00000002u) != 0;
-}
-inline void AccCashInfo::set_has_availablebalance() {
-  _has_bits_[0] |= 0x00000002u;
-}
-inline void AccCashInfo::clear_has_availablebalance() {
-  _has_bits_[0] &= ~0x00000002u;
-}
-inline void AccCashInfo::clear_availablebalance() {
-  availablebalance_ = 0;
-  clear_has_availablebalance();
-}
-inline double AccCashInfo::availablebalance() const {
-  // @@protoc_insertion_point(field_get:Trd_Common.AccCashInfo.availableBalance)
-  return availablebalance_;
-}
-inline void AccCashInfo::set_availablebalance(double value) {
-  set_has_availablebalance();
-  availablebalance_ = value;
-  // @@protoc_insertion_point(field_set:Trd_Common.AccCashInfo.availableBalance)
-}
-
-// optional double netCashPower = 4;
-inline bool AccCashInfo::has_netcashpower() const {
-  return (_has_bits_[0] & 0x00000004u) != 0;
-}
-inline void AccCashInfo::set_has_netcashpower() {
-  _has_bits_[0] |= 0x00000004u;
-}
-inline void AccCashInfo::clear_has_netcashpower() {
-  _has_bits_[0] &= ~0x00000004u;
-}
-inline void AccCashInfo::clear_netcashpower() {
-  netcashpower_ = 0;
-  clear_has_netcashpower();
-}
-inline double AccCashInfo::netcashpower() const {
-  // @@protoc_insertion_point(field_get:Trd_Common.AccCashInfo.netCashPower)
-  return netcashpower_;
-}
-inline void AccCashInfo::set_netcashpower(double value) {
-  set_has_netcashpower();
-  netcashpower_ = value;
-  // @@protoc_insertion_point(field_set:Trd_Common.AccCashInfo.netCashPower)
-}
-
-// -------------------------------------------------------------------
-
-// AccMarketInfo
-
-// optional int32 trdMarket = 1;
-inline bool AccMarketInfo::has_trdmarket() const {
-  return (_has_bits_[0] & 0x00000002u) != 0;
-}
-inline void AccMarketInfo::set_has_trdmarket() {
-  _has_bits_[0] |= 0x00000002u;
-}
-inline void AccMarketInfo::clear_has_trdmarket() {
-  _has_bits_[0] &= ~0x00000002u;
-}
-inline void AccMarketInfo::clear_trdmarket() {
-  trdmarket_ = 0;
-  clear_has_trdmarket();
-}
-inline ::google::protobuf::int32 AccMarketInfo::trdmarket() const {
-  // @@protoc_insertion_point(field_get:Trd_Common.AccMarketInfo.trdMarket)
-  return trdmarket_;
-}
-inline void AccMarketInfo::set_trdmarket(::google::protobuf::int32 value) {
-  set_has_trdmarket();
-  trdmarket_ = value;
-  // @@protoc_insertion_point(field_set:Trd_Common.AccMarketInfo.trdMarket)
-}
-
-// optional double assets = 2;
-inline bool AccMarketInfo::has_assets() const {
-  return (_has_bits_[0] & 0x00000001u) != 0;
-}
-inline void AccMarketInfo::set_has_assets() {
-  _has_bits_[0] |= 0x00000001u;
-}
-inline void AccMarketInfo::clear_has_assets() {
-  _has_bits_[0] &= ~0x00000001u;
-}
-inline void AccMarketInfo::clear_assets() {
-  assets_ = 0;
-  clear_has_assets();
-}
-inline double AccMarketInfo::assets() const {
-  // @@protoc_insertion_point(field_get:Trd_Common.AccMarketInfo.assets)
-  return assets_;
-}
-inline void AccMarketInfo::set_assets(double value) {
-  set_has_assets();
-  assets_ = value;
-  // @@protoc_insertion_point(field_set:Trd_Common.AccMarketInfo.assets)
-}
-
-// -------------------------------------------------------------------
-
 // TrdHeader
 
 // required int32 trdEnv = 1;
@@ -3655,13 +2041,13 @@ inline void TrdHeader::set_trdmarket(::google::protobuf::int32 value) {
 
 // required int32 trdEnv = 1;
 inline bool TrdAcc::has_trdenv() const {
-  return (_has_bits_[0] & 0x00000008u) != 0;
+  return (_has_bits_[0] & 0x00000002u) != 0;
 }
 inline void TrdAcc::set_has_trdenv() {
-  _has_bits_[0] |= 0x00000008u;
+  _has_bits_[0] |= 0x00000002u;
 }
 inline void TrdAcc::clear_has_trdenv() {
-  _has_bits_[0] &= ~0x00000008u;
+  _has_bits_[0] &= ~0x00000002u;
 }
 inline void TrdAcc::clear_trdenv() {
   trdenv_ = 0;
@@ -3679,13 +2065,13 @@ inline void TrdAcc::set_trdenv(::google::protobuf::int32 value) {
 
 // required uint64 accID = 2;
 inline bool TrdAcc::has_accid() const {
-  return (_has_bits_[0] & 0x00000004u) != 0;
+  return (_has_bits_[0] & 0x00000001u) != 0;
 }
 inline void TrdAcc::set_has_accid() {
-  _has_bits_[0] |= 0x00000004u;
+  _has_bits_[0] |= 0x00000001u;
 }
 inline void TrdAcc::clear_has_accid() {
-  _has_bits_[0] &= ~0x00000004u;
+  _has_bits_[0] &= ~0x00000001u;
 }
 inline void TrdAcc::clear_accid() {
   accid_ = GOOGLE_ULONGLONG(0);
@@ -3731,241 +2117,19 @@ TrdAcc::mutable_trdmarketauthlist() {
   return &trdmarketauthlist_;
 }
 
-// optional int32 accType = 4;
-inline bool TrdAcc::has_acctype() const {
-  return (_has_bits_[0] & 0x00000010u) != 0;
-}
-inline void TrdAcc::set_has_acctype() {
-  _has_bits_[0] |= 0x00000010u;
-}
-inline void TrdAcc::clear_has_acctype() {
-  _has_bits_[0] &= ~0x00000010u;
-}
-inline void TrdAcc::clear_acctype() {
-  acctype_ = 0;
-  clear_has_acctype();
-}
-inline ::google::protobuf::int32 TrdAcc::acctype() const {
-  // @@protoc_insertion_point(field_get:Trd_Common.TrdAcc.accType)
-  return acctype_;
-}
-inline void TrdAcc::set_acctype(::google::protobuf::int32 value) {
-  set_has_acctype();
-  acctype_ = value;
-  // @@protoc_insertion_point(field_set:Trd_Common.TrdAcc.accType)
-}
-
-// optional string cardNum = 5;
-inline bool TrdAcc::has_cardnum() const {
-  return (_has_bits_[0] & 0x00000001u) != 0;
-}
-inline void TrdAcc::set_has_cardnum() {
-  _has_bits_[0] |= 0x00000001u;
-}
-inline void TrdAcc::clear_has_cardnum() {
-  _has_bits_[0] &= ~0x00000001u;
-}
-inline void TrdAcc::clear_cardnum() {
-  cardnum_.ClearToEmptyNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
-  clear_has_cardnum();
-}
-inline const ::std::string& TrdAcc::cardnum() const {
-  // @@protoc_insertion_point(field_get:Trd_Common.TrdAcc.cardNum)
-  return cardnum_.GetNoArena();
-}
-inline void TrdAcc::set_cardnum(const ::std::string& value) {
-  set_has_cardnum();
-  cardnum_.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), value);
-  // @@protoc_insertion_point(field_set:Trd_Common.TrdAcc.cardNum)
-}
-#if LANG_CXX11
-inline void TrdAcc::set_cardnum(::std::string&& value) {
-  set_has_cardnum();
-  cardnum_.SetNoArena(
-    &::google::protobuf::internal::GetEmptyStringAlreadyInited(), ::std::move(value));
-  // @@protoc_insertion_point(field_set_rvalue:Trd_Common.TrdAcc.cardNum)
-}
-#endif
-inline void TrdAcc::set_cardnum(const char* value) {
-  GOOGLE_DCHECK(value != NULL);
-  set_has_cardnum();
-  cardnum_.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), ::std::string(value));
-  // @@protoc_insertion_point(field_set_char:Trd_Common.TrdAcc.cardNum)
-}
-inline void TrdAcc::set_cardnum(const char* value, size_t size) {
-  set_has_cardnum();
-  cardnum_.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(),
-      ::std::string(reinterpret_cast<const char*>(value), size));
-  // @@protoc_insertion_point(field_set_pointer:Trd_Common.TrdAcc.cardNum)
-}
-inline ::std::string* TrdAcc::mutable_cardnum() {
-  set_has_cardnum();
-  // @@protoc_insertion_point(field_mutable:Trd_Common.TrdAcc.cardNum)
-  return cardnum_.MutableNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
-}
-inline ::std::string* TrdAcc::release_cardnum() {
-  // @@protoc_insertion_point(field_release:Trd_Common.TrdAcc.cardNum)
-  clear_has_cardnum();
-  return cardnum_.ReleaseNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
-}
-inline void TrdAcc::set_allocated_cardnum(::std::string* cardnum) {
-  if (cardnum != NULL) {
-    set_has_cardnum();
-  } else {
-    clear_has_cardnum();
-  }
-  cardnum_.SetAllocatedNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), cardnum);
-  // @@protoc_insertion_point(field_set_allocated:Trd_Common.TrdAcc.cardNum)
-}
-
-// optional int32 securityFirm = 6;
-inline bool TrdAcc::has_securityfirm() const {
-  return (_has_bits_[0] & 0x00000020u) != 0;
-}
-inline void TrdAcc::set_has_securityfirm() {
-  _has_bits_[0] |= 0x00000020u;
-}
-inline void TrdAcc::clear_has_securityfirm() {
-  _has_bits_[0] &= ~0x00000020u;
-}
-inline void TrdAcc::clear_securityfirm() {
-  securityfirm_ = 0;
-  clear_has_securityfirm();
-}
-inline ::google::protobuf::int32 TrdAcc::securityfirm() const {
-  // @@protoc_insertion_point(field_get:Trd_Common.TrdAcc.securityFirm)
-  return securityfirm_;
-}
-inline void TrdAcc::set_securityfirm(::google::protobuf::int32 value) {
-  set_has_securityfirm();
-  securityfirm_ = value;
-  // @@protoc_insertion_point(field_set:Trd_Common.TrdAcc.securityFirm)
-}
-
-// optional int32 simAccType = 7;
-inline bool TrdAcc::has_simacctype() const {
-  return (_has_bits_[0] & 0x00000040u) != 0;
-}
-inline void TrdAcc::set_has_simacctype() {
-  _has_bits_[0] |= 0x00000040u;
-}
-inline void TrdAcc::clear_has_simacctype() {
-  _has_bits_[0] &= ~0x00000040u;
-}
-inline void TrdAcc::clear_simacctype() {
-  simacctype_ = 0;
-  clear_has_simacctype();
-}
-inline ::google::protobuf::int32 TrdAcc::simacctype() const {
-  // @@protoc_insertion_point(field_get:Trd_Common.TrdAcc.simAccType)
-  return simacctype_;
-}
-inline void TrdAcc::set_simacctype(::google::protobuf::int32 value) {
-  set_has_simacctype();
-  simacctype_ = value;
-  // @@protoc_insertion_point(field_set:Trd_Common.TrdAcc.simAccType)
-}
-
-// optional string uniCardNum = 8;
-inline bool TrdAcc::has_unicardnum() const {
-  return (_has_bits_[0] & 0x00000002u) != 0;
-}
-inline void TrdAcc::set_has_unicardnum() {
-  _has_bits_[0] |= 0x00000002u;
-}
-inline void TrdAcc::clear_has_unicardnum() {
-  _has_bits_[0] &= ~0x00000002u;
-}
-inline void TrdAcc::clear_unicardnum() {
-  unicardnum_.ClearToEmptyNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
-  clear_has_unicardnum();
-}
-inline const ::std::string& TrdAcc::unicardnum() const {
-  // @@protoc_insertion_point(field_get:Trd_Common.TrdAcc.uniCardNum)
-  return unicardnum_.GetNoArena();
-}
-inline void TrdAcc::set_unicardnum(const ::std::string& value) {
-  set_has_unicardnum();
-  unicardnum_.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), value);
-  // @@protoc_insertion_point(field_set:Trd_Common.TrdAcc.uniCardNum)
-}
-#if LANG_CXX11
-inline void TrdAcc::set_unicardnum(::std::string&& value) {
-  set_has_unicardnum();
-  unicardnum_.SetNoArena(
-    &::google::protobuf::internal::GetEmptyStringAlreadyInited(), ::std::move(value));
-  // @@protoc_insertion_point(field_set_rvalue:Trd_Common.TrdAcc.uniCardNum)
-}
-#endif
-inline void TrdAcc::set_unicardnum(const char* value) {
-  GOOGLE_DCHECK(value != NULL);
-  set_has_unicardnum();
-  unicardnum_.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), ::std::string(value));
-  // @@protoc_insertion_point(field_set_char:Trd_Common.TrdAcc.uniCardNum)
-}
-inline void TrdAcc::set_unicardnum(const char* value, size_t size) {
-  set_has_unicardnum();
-  unicardnum_.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(),
-      ::std::string(reinterpret_cast<const char*>(value), size));
-  // @@protoc_insertion_point(field_set_pointer:Trd_Common.TrdAcc.uniCardNum)
-}
-inline ::std::string* TrdAcc::mutable_unicardnum() {
-  set_has_unicardnum();
-  // @@protoc_insertion_point(field_mutable:Trd_Common.TrdAcc.uniCardNum)
-  return unicardnum_.MutableNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
-}
-inline ::std::string* TrdAcc::release_unicardnum() {
-  // @@protoc_insertion_point(field_release:Trd_Common.TrdAcc.uniCardNum)
-  clear_has_unicardnum();
-  return unicardnum_.ReleaseNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
-}
-inline void TrdAcc::set_allocated_unicardnum(::std::string* unicardnum) {
-  if (unicardnum != NULL) {
-    set_has_unicardnum();
-  } else {
-    clear_has_unicardnum();
-  }
-  unicardnum_.SetAllocatedNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), unicardnum);
-  // @@protoc_insertion_point(field_set_allocated:Trd_Common.TrdAcc.uniCardNum)
-}
-
-// optional int32 accStatus = 9;
-inline bool TrdAcc::has_accstatus() const {
-  return (_has_bits_[0] & 0x00000080u) != 0;
-}
-inline void TrdAcc::set_has_accstatus() {
-  _has_bits_[0] |= 0x00000080u;
-}
-inline void TrdAcc::clear_has_accstatus() {
-  _has_bits_[0] &= ~0x00000080u;
-}
-inline void TrdAcc::clear_accstatus() {
-  accstatus_ = 0;
-  clear_has_accstatus();
-}
-inline ::google::protobuf::int32 TrdAcc::accstatus() const {
-  // @@protoc_insertion_point(field_get:Trd_Common.TrdAcc.accStatus)
-  return accstatus_;
-}
-inline void TrdAcc::set_accstatus(::google::protobuf::int32 value) {
-  set_has_accstatus();
-  accstatus_ = value;
-  // @@protoc_insertion_point(field_set:Trd_Common.TrdAcc.accStatus)
-}
-
 // -------------------------------------------------------------------
 
 // Funds
 
 // required double power = 1;
 inline bool Funds::has_power() const {
-  return (_has_bits_[0] & 0x00000002u) != 0;
+  return (_has_bits_[0] & 0x00000001u) != 0;
 }
 inline void Funds::set_has_power() {
-  _has_bits_[0] |= 0x00000002u;
+  _has_bits_[0] |= 0x00000001u;
 }
 inline void Funds::clear_has_power() {
-  _has_bits_[0] &= ~0x00000002u;
+  _has_bits_[0] &= ~0x00000001u;
 }
 inline void Funds::clear_power() {
   power_ = 0;
@@ -3983,13 +2147,13 @@ inline void Funds::set_power(double value) {
 
 // required double totalAssets = 2;
 inline bool Funds::has_totalassets() const {
-  return (_has_bits_[0] & 0x00000004u) != 0;
+  return (_has_bits_[0] & 0x00000002u) != 0;
 }
 inline void Funds::set_has_totalassets() {
-  _has_bits_[0] |= 0x00000004u;
+  _has_bits_[0] |= 0x00000002u;
 }
 inline void Funds::clear_has_totalassets() {
-  _has_bits_[0] &= ~0x00000004u;
+  _has_bits_[0] &= ~0x00000002u;
 }
 inline void Funds::clear_totalassets() {
   totalassets_ = 0;
@@ -4007,13 +2171,13 @@ inline void Funds::set_totalassets(double value) {
 
 // required double cash = 3;
 inline bool Funds::has_cash() const {
-  return (_has_bits_[0] & 0x00000008u) != 0;
+  return (_has_bits_[0] & 0x00000004u) != 0;
 }
 inline void Funds::set_has_cash() {
-  _has_bits_[0] |= 0x00000008u;
+  _has_bits_[0] |= 0x00000004u;
 }
 inline void Funds::clear_has_cash() {
-  _has_bits_[0] &= ~0x00000008u;
+  _has_bits_[0] &= ~0x00000004u;
 }
 inline void Funds::clear_cash() {
   cash_ = 0;
@@ -4031,13 +2195,13 @@ inline void Funds::set_cash(double value) {
 
 // required double marketVal = 4;
 inline bool Funds::has_marketval() const {
-  return (_has_bits_[0] & 0x00000010u) != 0;
+  return (_has_bits_[0] & 0x00000008u) != 0;
 }
 inline void Funds::set_has_marketval() {
-  _has_bits_[0] |= 0x00000010u;
+  _has_bits_[0] |= 0x00000008u;
 }
 inline void Funds::clear_has_marketval() {
-  _has_bits_[0] &= ~0x00000010u;
+  _has_bits_[0] &= ~0x00000008u;
 }
 inline void Funds::clear_marketval() {
   marketval_ = 0;
@@ -4055,13 +2219,13 @@ inline void Funds::set_marketval(double value) {
 
 // required double frozenCash = 5;
 inline bool Funds::has_frozencash() const {
-  return (_has_bits_[0] & 0x00000020u) != 0;
+  return (_has_bits_[0] & 0x00000010u) != 0;
 }
 inline void Funds::set_has_frozencash() {
-  _has_bits_[0] |= 0x00000020u;
+  _has_bits_[0] |= 0x00000010u;
 }
 inline void Funds::clear_has_frozencash() {
-  _has_bits_[0] &= ~0x00000020u;
+  _has_bits_[0] &= ~0x00000010u;
 }
 inline void Funds::clear_frozencash() {
   frozencash_ = 0;
@@ -4079,13 +2243,13 @@ inline void Funds::set_frozencash(double value) {
 
 // required double debtCash = 6;
 inline bool Funds::has_debtcash() const {
-  return (_has_bits_[0] & 0x00000040u) != 0;
+  return (_has_bits_[0] & 0x00000020u) != 0;
 }
 inline void Funds::set_has_debtcash() {
-  _has_bits_[0] |= 0x00000040u;
+  _has_bits_[0] |= 0x00000020u;
 }
 inline void Funds::clear_has_debtcash() {
-  _has_bits_[0] &= ~0x00000040u;
+  _has_bits_[0] &= ~0x00000020u;
 }
 inline void Funds::clear_debtcash() {
   debtcash_ = 0;
@@ -4103,13 +2267,13 @@ inline void Funds::set_debtcash(double value) {
 
 // required double avlWithdrawalCash = 7;
 inline bool Funds::has_avlwithdrawalcash() const {
-  return (_has_bits_[0] & 0x00000080u) != 0;
+  return (_has_bits_[0] & 0x00000040u) != 0;
 }
 inline void Funds::set_has_avlwithdrawalcash() {
-  _has_bits_[0] |= 0x00000080u;
+  _has_bits_[0] |= 0x00000040u;
 }
 inline void Funds::clear_has_avlwithdrawalcash() {
-  _has_bits_[0] &= ~0x00000080u;
+  _has_bits_[0] &= ~0x00000040u;
 }
 inline void Funds::clear_avlwithdrawalcash() {
   avlwithdrawalcash_ = 0;
@@ -4123,681 +2287,6 @@ inline void Funds::set_avlwithdrawalcash(double value) {
   set_has_avlwithdrawalcash();
   avlwithdrawalcash_ = value;
   // @@protoc_insertion_point(field_set:Trd_Common.Funds.avlWithdrawalCash)
-}
-
-// optional int32 currency = 8;
-inline bool Funds::has_currency() const {
-  return (_has_bits_[0] & 0x00000400u) != 0;
-}
-inline void Funds::set_has_currency() {
-  _has_bits_[0] |= 0x00000400u;
-}
-inline void Funds::clear_has_currency() {
-  _has_bits_[0] &= ~0x00000400u;
-}
-inline void Funds::clear_currency() {
-  currency_ = 0;
-  clear_has_currency();
-}
-inline ::google::protobuf::int32 Funds::currency() const {
-  // @@protoc_insertion_point(field_get:Trd_Common.Funds.currency)
-  return currency_;
-}
-inline void Funds::set_currency(::google::protobuf::int32 value) {
-  set_has_currency();
-  currency_ = value;
-  // @@protoc_insertion_point(field_set:Trd_Common.Funds.currency)
-}
-
-// optional double availableFunds = 9;
-inline bool Funds::has_availablefunds() const {
-  return (_has_bits_[0] & 0x00000100u) != 0;
-}
-inline void Funds::set_has_availablefunds() {
-  _has_bits_[0] |= 0x00000100u;
-}
-inline void Funds::clear_has_availablefunds() {
-  _has_bits_[0] &= ~0x00000100u;
-}
-inline void Funds::clear_availablefunds() {
-  availablefunds_ = 0;
-  clear_has_availablefunds();
-}
-inline double Funds::availablefunds() const {
-  // @@protoc_insertion_point(field_get:Trd_Common.Funds.availableFunds)
-  return availablefunds_;
-}
-inline void Funds::set_availablefunds(double value) {
-  set_has_availablefunds();
-  availablefunds_ = value;
-  // @@protoc_insertion_point(field_set:Trd_Common.Funds.availableFunds)
-}
-
-// optional double unrealizedPL = 10;
-inline bool Funds::has_unrealizedpl() const {
-  return (_has_bits_[0] & 0x00000200u) != 0;
-}
-inline void Funds::set_has_unrealizedpl() {
-  _has_bits_[0] |= 0x00000200u;
-}
-inline void Funds::clear_has_unrealizedpl() {
-  _has_bits_[0] &= ~0x00000200u;
-}
-inline void Funds::clear_unrealizedpl() {
-  unrealizedpl_ = 0;
-  clear_has_unrealizedpl();
-}
-inline double Funds::unrealizedpl() const {
-  // @@protoc_insertion_point(field_get:Trd_Common.Funds.unrealizedPL)
-  return unrealizedpl_;
-}
-inline void Funds::set_unrealizedpl(double value) {
-  set_has_unrealizedpl();
-  unrealizedpl_ = value;
-  // @@protoc_insertion_point(field_set:Trd_Common.Funds.unrealizedPL)
-}
-
-// optional double realizedPL = 11;
-inline bool Funds::has_realizedpl() const {
-  return (_has_bits_[0] & 0x00001000u) != 0;
-}
-inline void Funds::set_has_realizedpl() {
-  _has_bits_[0] |= 0x00001000u;
-}
-inline void Funds::clear_has_realizedpl() {
-  _has_bits_[0] &= ~0x00001000u;
-}
-inline void Funds::clear_realizedpl() {
-  realizedpl_ = 0;
-  clear_has_realizedpl();
-}
-inline double Funds::realizedpl() const {
-  // @@protoc_insertion_point(field_get:Trd_Common.Funds.realizedPL)
-  return realizedpl_;
-}
-inline void Funds::set_realizedpl(double value) {
-  set_has_realizedpl();
-  realizedpl_ = value;
-  // @@protoc_insertion_point(field_set:Trd_Common.Funds.realizedPL)
-}
-
-// optional int32 riskLevel = 12;
-inline bool Funds::has_risklevel() const {
-  return (_has_bits_[0] & 0x00000800u) != 0;
-}
-inline void Funds::set_has_risklevel() {
-  _has_bits_[0] |= 0x00000800u;
-}
-inline void Funds::clear_has_risklevel() {
-  _has_bits_[0] &= ~0x00000800u;
-}
-inline void Funds::clear_risklevel() {
-  risklevel_ = 0;
-  clear_has_risklevel();
-}
-inline ::google::protobuf::int32 Funds::risklevel() const {
-  // @@protoc_insertion_point(field_get:Trd_Common.Funds.riskLevel)
-  return risklevel_;
-}
-inline void Funds::set_risklevel(::google::protobuf::int32 value) {
-  set_has_risklevel();
-  risklevel_ = value;
-  // @@protoc_insertion_point(field_set:Trd_Common.Funds.riskLevel)
-}
-
-// optional double initialMargin = 13;
-inline bool Funds::has_initialmargin() const {
-  return (_has_bits_[0] & 0x00002000u) != 0;
-}
-inline void Funds::set_has_initialmargin() {
-  _has_bits_[0] |= 0x00002000u;
-}
-inline void Funds::clear_has_initialmargin() {
-  _has_bits_[0] &= ~0x00002000u;
-}
-inline void Funds::clear_initialmargin() {
-  initialmargin_ = 0;
-  clear_has_initialmargin();
-}
-inline double Funds::initialmargin() const {
-  // @@protoc_insertion_point(field_get:Trd_Common.Funds.initialMargin)
-  return initialmargin_;
-}
-inline void Funds::set_initialmargin(double value) {
-  set_has_initialmargin();
-  initialmargin_ = value;
-  // @@protoc_insertion_point(field_set:Trd_Common.Funds.initialMargin)
-}
-
-// optional double maintenanceMargin = 14;
-inline bool Funds::has_maintenancemargin() const {
-  return (_has_bits_[0] & 0x00004000u) != 0;
-}
-inline void Funds::set_has_maintenancemargin() {
-  _has_bits_[0] |= 0x00004000u;
-}
-inline void Funds::clear_has_maintenancemargin() {
-  _has_bits_[0] &= ~0x00004000u;
-}
-inline void Funds::clear_maintenancemargin() {
-  maintenancemargin_ = 0;
-  clear_has_maintenancemargin();
-}
-inline double Funds::maintenancemargin() const {
-  // @@protoc_insertion_point(field_get:Trd_Common.Funds.maintenanceMargin)
-  return maintenancemargin_;
-}
-inline void Funds::set_maintenancemargin(double value) {
-  set_has_maintenancemargin();
-  maintenancemargin_ = value;
-  // @@protoc_insertion_point(field_set:Trd_Common.Funds.maintenanceMargin)
-}
-
-// repeated .Trd_Common.AccCashInfo cashInfoList = 15;
-inline int Funds::cashinfolist_size() const {
-  return cashinfolist_.size();
-}
-inline void Funds::clear_cashinfolist() {
-  cashinfolist_.Clear();
-}
-inline const ::Trd_Common::AccCashInfo& Funds::cashinfolist(int index) const {
-  // @@protoc_insertion_point(field_get:Trd_Common.Funds.cashInfoList)
-  return cashinfolist_.Get(index);
-}
-inline ::Trd_Common::AccCashInfo* Funds::mutable_cashinfolist(int index) {
-  // @@protoc_insertion_point(field_mutable:Trd_Common.Funds.cashInfoList)
-  return cashinfolist_.Mutable(index);
-}
-inline ::Trd_Common::AccCashInfo* Funds::add_cashinfolist() {
-  // @@protoc_insertion_point(field_add:Trd_Common.Funds.cashInfoList)
-  return cashinfolist_.Add();
-}
-inline ::google::protobuf::RepeatedPtrField< ::Trd_Common::AccCashInfo >*
-Funds::mutable_cashinfolist() {
-  // @@protoc_insertion_point(field_mutable_list:Trd_Common.Funds.cashInfoList)
-  return &cashinfolist_;
-}
-inline const ::google::protobuf::RepeatedPtrField< ::Trd_Common::AccCashInfo >&
-Funds::cashinfolist() const {
-  // @@protoc_insertion_point(field_list:Trd_Common.Funds.cashInfoList)
-  return cashinfolist_;
-}
-
-// optional double maxPowerShort = 16;
-inline bool Funds::has_maxpowershort() const {
-  return (_has_bits_[0] & 0x00008000u) != 0;
-}
-inline void Funds::set_has_maxpowershort() {
-  _has_bits_[0] |= 0x00008000u;
-}
-inline void Funds::clear_has_maxpowershort() {
-  _has_bits_[0] &= ~0x00008000u;
-}
-inline void Funds::clear_maxpowershort() {
-  maxpowershort_ = 0;
-  clear_has_maxpowershort();
-}
-inline double Funds::maxpowershort() const {
-  // @@protoc_insertion_point(field_get:Trd_Common.Funds.maxPowerShort)
-  return maxpowershort_;
-}
-inline void Funds::set_maxpowershort(double value) {
-  set_has_maxpowershort();
-  maxpowershort_ = value;
-  // @@protoc_insertion_point(field_set:Trd_Common.Funds.maxPowerShort)
-}
-
-// optional double netCashPower = 17;
-inline bool Funds::has_netcashpower() const {
-  return (_has_bits_[0] & 0x00010000u) != 0;
-}
-inline void Funds::set_has_netcashpower() {
-  _has_bits_[0] |= 0x00010000u;
-}
-inline void Funds::clear_has_netcashpower() {
-  _has_bits_[0] &= ~0x00010000u;
-}
-inline void Funds::clear_netcashpower() {
-  netcashpower_ = 0;
-  clear_has_netcashpower();
-}
-inline double Funds::netcashpower() const {
-  // @@protoc_insertion_point(field_get:Trd_Common.Funds.netCashPower)
-  return netcashpower_;
-}
-inline void Funds::set_netcashpower(double value) {
-  set_has_netcashpower();
-  netcashpower_ = value;
-  // @@protoc_insertion_point(field_set:Trd_Common.Funds.netCashPower)
-}
-
-// optional double longMv = 18;
-inline bool Funds::has_longmv() const {
-  return (_has_bits_[0] & 0x00020000u) != 0;
-}
-inline void Funds::set_has_longmv() {
-  _has_bits_[0] |= 0x00020000u;
-}
-inline void Funds::clear_has_longmv() {
-  _has_bits_[0] &= ~0x00020000u;
-}
-inline void Funds::clear_longmv() {
-  longmv_ = 0;
-  clear_has_longmv();
-}
-inline double Funds::longmv() const {
-  // @@protoc_insertion_point(field_get:Trd_Common.Funds.longMv)
-  return longmv_;
-}
-inline void Funds::set_longmv(double value) {
-  set_has_longmv();
-  longmv_ = value;
-  // @@protoc_insertion_point(field_set:Trd_Common.Funds.longMv)
-}
-
-// optional double shortMv = 19;
-inline bool Funds::has_shortmv() const {
-  return (_has_bits_[0] & 0x00040000u) != 0;
-}
-inline void Funds::set_has_shortmv() {
-  _has_bits_[0] |= 0x00040000u;
-}
-inline void Funds::clear_has_shortmv() {
-  _has_bits_[0] &= ~0x00040000u;
-}
-inline void Funds::clear_shortmv() {
-  shortmv_ = 0;
-  clear_has_shortmv();
-}
-inline double Funds::shortmv() const {
-  // @@protoc_insertion_point(field_get:Trd_Common.Funds.shortMv)
-  return shortmv_;
-}
-inline void Funds::set_shortmv(double value) {
-  set_has_shortmv();
-  shortmv_ = value;
-  // @@protoc_insertion_point(field_set:Trd_Common.Funds.shortMv)
-}
-
-// optional double pendingAsset = 20;
-inline bool Funds::has_pendingasset() const {
-  return (_has_bits_[0] & 0x00080000u) != 0;
-}
-inline void Funds::set_has_pendingasset() {
-  _has_bits_[0] |= 0x00080000u;
-}
-inline void Funds::clear_has_pendingasset() {
-  _has_bits_[0] &= ~0x00080000u;
-}
-inline void Funds::clear_pendingasset() {
-  pendingasset_ = 0;
-  clear_has_pendingasset();
-}
-inline double Funds::pendingasset() const {
-  // @@protoc_insertion_point(field_get:Trd_Common.Funds.pendingAsset)
-  return pendingasset_;
-}
-inline void Funds::set_pendingasset(double value) {
-  set_has_pendingasset();
-  pendingasset_ = value;
-  // @@protoc_insertion_point(field_set:Trd_Common.Funds.pendingAsset)
-}
-
-// optional double maxWithdrawal = 21;
-inline bool Funds::has_maxwithdrawal() const {
-  return (_has_bits_[0] & 0x00100000u) != 0;
-}
-inline void Funds::set_has_maxwithdrawal() {
-  _has_bits_[0] |= 0x00100000u;
-}
-inline void Funds::clear_has_maxwithdrawal() {
-  _has_bits_[0] &= ~0x00100000u;
-}
-inline void Funds::clear_maxwithdrawal() {
-  maxwithdrawal_ = 0;
-  clear_has_maxwithdrawal();
-}
-inline double Funds::maxwithdrawal() const {
-  // @@protoc_insertion_point(field_get:Trd_Common.Funds.maxWithdrawal)
-  return maxwithdrawal_;
-}
-inline void Funds::set_maxwithdrawal(double value) {
-  set_has_maxwithdrawal();
-  maxwithdrawal_ = value;
-  // @@protoc_insertion_point(field_set:Trd_Common.Funds.maxWithdrawal)
-}
-
-// optional int32 riskStatus = 22;
-inline bool Funds::has_riskstatus() const {
-  return (_has_bits_[0] & 0x00400000u) != 0;
-}
-inline void Funds::set_has_riskstatus() {
-  _has_bits_[0] |= 0x00400000u;
-}
-inline void Funds::clear_has_riskstatus() {
-  _has_bits_[0] &= ~0x00400000u;
-}
-inline void Funds::clear_riskstatus() {
-  riskstatus_ = 0;
-  clear_has_riskstatus();
-}
-inline ::google::protobuf::int32 Funds::riskstatus() const {
-  // @@protoc_insertion_point(field_get:Trd_Common.Funds.riskStatus)
-  return riskstatus_;
-}
-inline void Funds::set_riskstatus(::google::protobuf::int32 value) {
-  set_has_riskstatus();
-  riskstatus_ = value;
-  // @@protoc_insertion_point(field_set:Trd_Common.Funds.riskStatus)
-}
-
-// optional double marginCallMargin = 23;
-inline bool Funds::has_margincallmargin() const {
-  return (_has_bits_[0] & 0x00200000u) != 0;
-}
-inline void Funds::set_has_margincallmargin() {
-  _has_bits_[0] |= 0x00200000u;
-}
-inline void Funds::clear_has_margincallmargin() {
-  _has_bits_[0] &= ~0x00200000u;
-}
-inline void Funds::clear_margincallmargin() {
-  margincallmargin_ = 0;
-  clear_has_margincallmargin();
-}
-inline double Funds::margincallmargin() const {
-  // @@protoc_insertion_point(field_get:Trd_Common.Funds.marginCallMargin)
-  return margincallmargin_;
-}
-inline void Funds::set_margincallmargin(double value) {
-  set_has_margincallmargin();
-  margincallmargin_ = value;
-  // @@protoc_insertion_point(field_set:Trd_Common.Funds.marginCallMargin)
-}
-
-// optional bool isPdt = 24;
-inline bool Funds::has_ispdt() const {
-  return (_has_bits_[0] & 0x00800000u) != 0;
-}
-inline void Funds::set_has_ispdt() {
-  _has_bits_[0] |= 0x00800000u;
-}
-inline void Funds::clear_has_ispdt() {
-  _has_bits_[0] &= ~0x00800000u;
-}
-inline void Funds::clear_ispdt() {
-  ispdt_ = false;
-  clear_has_ispdt();
-}
-inline bool Funds::ispdt() const {
-  // @@protoc_insertion_point(field_get:Trd_Common.Funds.isPdt)
-  return ispdt_;
-}
-inline void Funds::set_ispdt(bool value) {
-  set_has_ispdt();
-  ispdt_ = value;
-  // @@protoc_insertion_point(field_set:Trd_Common.Funds.isPdt)
-}
-
-// optional string pdtSeq = 25;
-inline bool Funds::has_pdtseq() const {
-  return (_has_bits_[0] & 0x00000001u) != 0;
-}
-inline void Funds::set_has_pdtseq() {
-  _has_bits_[0] |= 0x00000001u;
-}
-inline void Funds::clear_has_pdtseq() {
-  _has_bits_[0] &= ~0x00000001u;
-}
-inline void Funds::clear_pdtseq() {
-  pdtseq_.ClearToEmptyNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
-  clear_has_pdtseq();
-}
-inline const ::std::string& Funds::pdtseq() const {
-  // @@protoc_insertion_point(field_get:Trd_Common.Funds.pdtSeq)
-  return pdtseq_.GetNoArena();
-}
-inline void Funds::set_pdtseq(const ::std::string& value) {
-  set_has_pdtseq();
-  pdtseq_.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), value);
-  // @@protoc_insertion_point(field_set:Trd_Common.Funds.pdtSeq)
-}
-#if LANG_CXX11
-inline void Funds::set_pdtseq(::std::string&& value) {
-  set_has_pdtseq();
-  pdtseq_.SetNoArena(
-    &::google::protobuf::internal::GetEmptyStringAlreadyInited(), ::std::move(value));
-  // @@protoc_insertion_point(field_set_rvalue:Trd_Common.Funds.pdtSeq)
-}
-#endif
-inline void Funds::set_pdtseq(const char* value) {
-  GOOGLE_DCHECK(value != NULL);
-  set_has_pdtseq();
-  pdtseq_.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), ::std::string(value));
-  // @@protoc_insertion_point(field_set_char:Trd_Common.Funds.pdtSeq)
-}
-inline void Funds::set_pdtseq(const char* value, size_t size) {
-  set_has_pdtseq();
-  pdtseq_.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(),
-      ::std::string(reinterpret_cast<const char*>(value), size));
-  // @@protoc_insertion_point(field_set_pointer:Trd_Common.Funds.pdtSeq)
-}
-inline ::std::string* Funds::mutable_pdtseq() {
-  set_has_pdtseq();
-  // @@protoc_insertion_point(field_mutable:Trd_Common.Funds.pdtSeq)
-  return pdtseq_.MutableNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
-}
-inline ::std::string* Funds::release_pdtseq() {
-  // @@protoc_insertion_point(field_release:Trd_Common.Funds.pdtSeq)
-  clear_has_pdtseq();
-  return pdtseq_.ReleaseNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
-}
-inline void Funds::set_allocated_pdtseq(::std::string* pdtseq) {
-  if (pdtseq != NULL) {
-    set_has_pdtseq();
-  } else {
-    clear_has_pdtseq();
-  }
-  pdtseq_.SetAllocatedNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), pdtseq);
-  // @@protoc_insertion_point(field_set_allocated:Trd_Common.Funds.pdtSeq)
-}
-
-// optional double beginningDTBP = 26;
-inline bool Funds::has_beginningdtbp() const {
-  return (_has_bits_[0] & 0x01000000u) != 0;
-}
-inline void Funds::set_has_beginningdtbp() {
-  _has_bits_[0] |= 0x01000000u;
-}
-inline void Funds::clear_has_beginningdtbp() {
-  _has_bits_[0] &= ~0x01000000u;
-}
-inline void Funds::clear_beginningdtbp() {
-  beginningdtbp_ = 0;
-  clear_has_beginningdtbp();
-}
-inline double Funds::beginningdtbp() const {
-  // @@protoc_insertion_point(field_get:Trd_Common.Funds.beginningDTBP)
-  return beginningdtbp_;
-}
-inline void Funds::set_beginningdtbp(double value) {
-  set_has_beginningdtbp();
-  beginningdtbp_ = value;
-  // @@protoc_insertion_point(field_set:Trd_Common.Funds.beginningDTBP)
-}
-
-// optional double remainingDTBP = 27;
-inline bool Funds::has_remainingdtbp() const {
-  return (_has_bits_[0] & 0x02000000u) != 0;
-}
-inline void Funds::set_has_remainingdtbp() {
-  _has_bits_[0] |= 0x02000000u;
-}
-inline void Funds::clear_has_remainingdtbp() {
-  _has_bits_[0] &= ~0x02000000u;
-}
-inline void Funds::clear_remainingdtbp() {
-  remainingdtbp_ = 0;
-  clear_has_remainingdtbp();
-}
-inline double Funds::remainingdtbp() const {
-  // @@protoc_insertion_point(field_get:Trd_Common.Funds.remainingDTBP)
-  return remainingdtbp_;
-}
-inline void Funds::set_remainingdtbp(double value) {
-  set_has_remainingdtbp();
-  remainingdtbp_ = value;
-  // @@protoc_insertion_point(field_set:Trd_Common.Funds.remainingDTBP)
-}
-
-// optional double dtCallAmount = 28;
-inline bool Funds::has_dtcallamount() const {
-  return (_has_bits_[0] & 0x04000000u) != 0;
-}
-inline void Funds::set_has_dtcallamount() {
-  _has_bits_[0] |= 0x04000000u;
-}
-inline void Funds::clear_has_dtcallamount() {
-  _has_bits_[0] &= ~0x04000000u;
-}
-inline void Funds::clear_dtcallamount() {
-  dtcallamount_ = 0;
-  clear_has_dtcallamount();
-}
-inline double Funds::dtcallamount() const {
-  // @@protoc_insertion_point(field_get:Trd_Common.Funds.dtCallAmount)
-  return dtcallamount_;
-}
-inline void Funds::set_dtcallamount(double value) {
-  set_has_dtcallamount();
-  dtcallamount_ = value;
-  // @@protoc_insertion_point(field_set:Trd_Common.Funds.dtCallAmount)
-}
-
-// optional int32 dtStatus = 29;
-inline bool Funds::has_dtstatus() const {
-  return (_has_bits_[0] & 0x40000000u) != 0;
-}
-inline void Funds::set_has_dtstatus() {
-  _has_bits_[0] |= 0x40000000u;
-}
-inline void Funds::clear_has_dtstatus() {
-  _has_bits_[0] &= ~0x40000000u;
-}
-inline void Funds::clear_dtstatus() {
-  dtstatus_ = 0;
-  clear_has_dtstatus();
-}
-inline ::google::protobuf::int32 Funds::dtstatus() const {
-  // @@protoc_insertion_point(field_get:Trd_Common.Funds.dtStatus)
-  return dtstatus_;
-}
-inline void Funds::set_dtstatus(::google::protobuf::int32 value) {
-  set_has_dtstatus();
-  dtstatus_ = value;
-  // @@protoc_insertion_point(field_set:Trd_Common.Funds.dtStatus)
-}
-
-// optional double securitiesAssets = 30;
-inline bool Funds::has_securitiesassets() const {
-  return (_has_bits_[0] & 0x08000000u) != 0;
-}
-inline void Funds::set_has_securitiesassets() {
-  _has_bits_[0] |= 0x08000000u;
-}
-inline void Funds::clear_has_securitiesassets() {
-  _has_bits_[0] &= ~0x08000000u;
-}
-inline void Funds::clear_securitiesassets() {
-  securitiesassets_ = 0;
-  clear_has_securitiesassets();
-}
-inline double Funds::securitiesassets() const {
-  // @@protoc_insertion_point(field_get:Trd_Common.Funds.securitiesAssets)
-  return securitiesassets_;
-}
-inline void Funds::set_securitiesassets(double value) {
-  set_has_securitiesassets();
-  securitiesassets_ = value;
-  // @@protoc_insertion_point(field_set:Trd_Common.Funds.securitiesAssets)
-}
-
-// optional double fundAssets = 31;
-inline bool Funds::has_fundassets() const {
-  return (_has_bits_[0] & 0x10000000u) != 0;
-}
-inline void Funds::set_has_fundassets() {
-  _has_bits_[0] |= 0x10000000u;
-}
-inline void Funds::clear_has_fundassets() {
-  _has_bits_[0] &= ~0x10000000u;
-}
-inline void Funds::clear_fundassets() {
-  fundassets_ = 0;
-  clear_has_fundassets();
-}
-inline double Funds::fundassets() const {
-  // @@protoc_insertion_point(field_get:Trd_Common.Funds.fundAssets)
-  return fundassets_;
-}
-inline void Funds::set_fundassets(double value) {
-  set_has_fundassets();
-  fundassets_ = value;
-  // @@protoc_insertion_point(field_set:Trd_Common.Funds.fundAssets)
-}
-
-// optional double bondAssets = 32;
-inline bool Funds::has_bondassets() const {
-  return (_has_bits_[0] & 0x20000000u) != 0;
-}
-inline void Funds::set_has_bondassets() {
-  _has_bits_[0] |= 0x20000000u;
-}
-inline void Funds::clear_has_bondassets() {
-  _has_bits_[0] &= ~0x20000000u;
-}
-inline void Funds::clear_bondassets() {
-  bondassets_ = 0;
-  clear_has_bondassets();
-}
-inline double Funds::bondassets() const {
-  // @@protoc_insertion_point(field_get:Trd_Common.Funds.bondAssets)
-  return bondassets_;
-}
-inline void Funds::set_bondassets(double value) {
-  set_has_bondassets();
-  bondassets_ = value;
-  // @@protoc_insertion_point(field_set:Trd_Common.Funds.bondAssets)
-}
-
-// repeated .Trd_Common.AccMarketInfo marketInfoList = 33;
-inline int Funds::marketinfolist_size() const {
-  return marketinfolist_.size();
-}
-inline void Funds::clear_marketinfolist() {
-  marketinfolist_.Clear();
-}
-inline const ::Trd_Common::AccMarketInfo& Funds::marketinfolist(int index) const {
-  // @@protoc_insertion_point(field_get:Trd_Common.Funds.marketInfoList)
-  return marketinfolist_.Get(index);
-}
-inline ::Trd_Common::AccMarketInfo* Funds::mutable_marketinfolist(int index) {
-  // @@protoc_insertion_point(field_mutable:Trd_Common.Funds.marketInfoList)
-  return marketinfolist_.Mutable(index);
-}
-inline ::Trd_Common::AccMarketInfo* Funds::add_marketinfolist() {
-  // @@protoc_insertion_point(field_add:Trd_Common.Funds.marketInfoList)
-  return marketinfolist_.Add();
-}
-inline ::google::protobuf::RepeatedPtrField< ::Trd_Common::AccMarketInfo >*
-Funds::mutable_marketinfolist() {
-  // @@protoc_insertion_point(field_mutable_list:Trd_Common.Funds.marketInfoList)
-  return &marketinfolist_;
-}
-inline const ::google::protobuf::RepeatedPtrField< ::Trd_Common::AccMarketInfo >&
-Funds::marketinfolist() const {
-  // @@protoc_insertion_point(field_list:Trd_Common.Funds.marketInfoList)
-  return marketinfolist_;
 }
 
 // -------------------------------------------------------------------
@@ -5314,187 +2803,19 @@ inline void Position::set_td_sellqty(double value) {
   // @@protoc_insertion_point(field_set:Trd_Common.Position.td_sellQty)
 }
 
-// optional double unrealizedPL = 28;
-inline bool Position::has_unrealizedpl() const {
-  return (_has_bits_[0] & 0x00040000u) != 0;
-}
-inline void Position::set_has_unrealizedpl() {
-  _has_bits_[0] |= 0x00040000u;
-}
-inline void Position::clear_has_unrealizedpl() {
-  _has_bits_[0] &= ~0x00040000u;
-}
-inline void Position::clear_unrealizedpl() {
-  unrealizedpl_ = 0;
-  clear_has_unrealizedpl();
-}
-inline double Position::unrealizedpl() const {
-  // @@protoc_insertion_point(field_get:Trd_Common.Position.unrealizedPL)
-  return unrealizedpl_;
-}
-inline void Position::set_unrealizedpl(double value) {
-  set_has_unrealizedpl();
-  unrealizedpl_ = value;
-  // @@protoc_insertion_point(field_set:Trd_Common.Position.unrealizedPL)
-}
-
-// optional double realizedPL = 29;
-inline bool Position::has_realizedpl() const {
-  return (_has_bits_[0] & 0x00080000u) != 0;
-}
-inline void Position::set_has_realizedpl() {
-  _has_bits_[0] |= 0x00080000u;
-}
-inline void Position::clear_has_realizedpl() {
-  _has_bits_[0] &= ~0x00080000u;
-}
-inline void Position::clear_realizedpl() {
-  realizedpl_ = 0;
-  clear_has_realizedpl();
-}
-inline double Position::realizedpl() const {
-  // @@protoc_insertion_point(field_get:Trd_Common.Position.realizedPL)
-  return realizedpl_;
-}
-inline void Position::set_realizedpl(double value) {
-  set_has_realizedpl();
-  realizedpl_ = value;
-  // @@protoc_insertion_point(field_set:Trd_Common.Position.realizedPL)
-}
-
-// optional int32 currency = 30;
-inline bool Position::has_currency() const {
-  return (_has_bits_[0] & 0x00100000u) != 0;
-}
-inline void Position::set_has_currency() {
-  _has_bits_[0] |= 0x00100000u;
-}
-inline void Position::clear_has_currency() {
-  _has_bits_[0] &= ~0x00100000u;
-}
-inline void Position::clear_currency() {
-  currency_ = 0;
-  clear_has_currency();
-}
-inline ::google::protobuf::int32 Position::currency() const {
-  // @@protoc_insertion_point(field_get:Trd_Common.Position.currency)
-  return currency_;
-}
-inline void Position::set_currency(::google::protobuf::int32 value) {
-  set_has_currency();
-  currency_ = value;
-  // @@protoc_insertion_point(field_set:Trd_Common.Position.currency)
-}
-
-// optional int32 trdMarket = 31;
-inline bool Position::has_trdmarket() const {
-  return (_has_bits_[0] & 0x00200000u) != 0;
-}
-inline void Position::set_has_trdmarket() {
-  _has_bits_[0] |= 0x00200000u;
-}
-inline void Position::clear_has_trdmarket() {
-  _has_bits_[0] &= ~0x00200000u;
-}
-inline void Position::clear_trdmarket() {
-  trdmarket_ = 0;
-  clear_has_trdmarket();
-}
-inline ::google::protobuf::int32 Position::trdmarket() const {
-  // @@protoc_insertion_point(field_get:Trd_Common.Position.trdMarket)
-  return trdmarket_;
-}
-inline void Position::set_trdmarket(::google::protobuf::int32 value) {
-  set_has_trdmarket();
-  trdmarket_ = value;
-  // @@protoc_insertion_point(field_set:Trd_Common.Position.trdMarket)
-}
-
-// optional double dilutedCostPrice = 32;
-inline bool Position::has_dilutedcostprice() const {
-  return (_has_bits_[0] & 0x00400000u) != 0;
-}
-inline void Position::set_has_dilutedcostprice() {
-  _has_bits_[0] |= 0x00400000u;
-}
-inline void Position::clear_has_dilutedcostprice() {
-  _has_bits_[0] &= ~0x00400000u;
-}
-inline void Position::clear_dilutedcostprice() {
-  dilutedcostprice_ = 0;
-  clear_has_dilutedcostprice();
-}
-inline double Position::dilutedcostprice() const {
-  // @@protoc_insertion_point(field_get:Trd_Common.Position.dilutedCostPrice)
-  return dilutedcostprice_;
-}
-inline void Position::set_dilutedcostprice(double value) {
-  set_has_dilutedcostprice();
-  dilutedcostprice_ = value;
-  // @@protoc_insertion_point(field_set:Trd_Common.Position.dilutedCostPrice)
-}
-
-// optional double averageCostPrice = 33;
-inline bool Position::has_averagecostprice() const {
-  return (_has_bits_[0] & 0x00800000u) != 0;
-}
-inline void Position::set_has_averagecostprice() {
-  _has_bits_[0] |= 0x00800000u;
-}
-inline void Position::clear_has_averagecostprice() {
-  _has_bits_[0] &= ~0x00800000u;
-}
-inline void Position::clear_averagecostprice() {
-  averagecostprice_ = 0;
-  clear_has_averagecostprice();
-}
-inline double Position::averagecostprice() const {
-  // @@protoc_insertion_point(field_get:Trd_Common.Position.averageCostPrice)
-  return averagecostprice_;
-}
-inline void Position::set_averagecostprice(double value) {
-  set_has_averagecostprice();
-  averagecostprice_ = value;
-  // @@protoc_insertion_point(field_set:Trd_Common.Position.averageCostPrice)
-}
-
-// optional double averagePlRatio = 34;
-inline bool Position::has_averageplratio() const {
-  return (_has_bits_[0] & 0x01000000u) != 0;
-}
-inline void Position::set_has_averageplratio() {
-  _has_bits_[0] |= 0x01000000u;
-}
-inline void Position::clear_has_averageplratio() {
-  _has_bits_[0] &= ~0x01000000u;
-}
-inline void Position::clear_averageplratio() {
-  averageplratio_ = 0;
-  clear_has_averageplratio();
-}
-inline double Position::averageplratio() const {
-  // @@protoc_insertion_point(field_get:Trd_Common.Position.averagePlRatio)
-  return averageplratio_;
-}
-inline void Position::set_averageplratio(double value) {
-  set_has_averageplratio();
-  averageplratio_ = value;
-  // @@protoc_insertion_point(field_set:Trd_Common.Position.averagePlRatio)
-}
-
 // -------------------------------------------------------------------
 
 // Order
 
 // required int32 trdSide = 1;
 inline bool Order::has_trdside() const {
-  return (_has_bits_[0] & 0x00000080u) != 0;
+  return (_has_bits_[0] & 0x00000040u) != 0;
 }
 inline void Order::set_has_trdside() {
-  _has_bits_[0] |= 0x00000080u;
+  _has_bits_[0] |= 0x00000040u;
 }
 inline void Order::clear_has_trdside() {
-  _has_bits_[0] &= ~0x00000080u;
+  _has_bits_[0] &= ~0x00000040u;
 }
 inline void Order::clear_trdside() {
   trdside_ = 0;
@@ -5512,13 +2833,13 @@ inline void Order::set_trdside(::google::protobuf::int32 value) {
 
 // required int32 orderType = 2;
 inline bool Order::has_ordertype() const {
-  return (_has_bits_[0] & 0x00000100u) != 0;
+  return (_has_bits_[0] & 0x00000080u) != 0;
 }
 inline void Order::set_has_ordertype() {
-  _has_bits_[0] |= 0x00000100u;
+  _has_bits_[0] |= 0x00000080u;
 }
 inline void Order::clear_has_ordertype() {
-  _has_bits_[0] &= ~0x00000100u;
+  _has_bits_[0] &= ~0x00000080u;
 }
 inline void Order::clear_ordertype() {
   ordertype_ = 0;
@@ -5536,13 +2857,13 @@ inline void Order::set_ordertype(::google::protobuf::int32 value) {
 
 // required int32 orderStatus = 3;
 inline bool Order::has_orderstatus() const {
-  return (_has_bits_[0] & 0x00001000u) != 0;
+  return (_has_bits_[0] & 0x00000800u) != 0;
 }
 inline void Order::set_has_orderstatus() {
-  _has_bits_[0] |= 0x00001000u;
+  _has_bits_[0] |= 0x00000800u;
 }
 inline void Order::clear_has_orderstatus() {
-  _has_bits_[0] &= ~0x00001000u;
+  _has_bits_[0] &= ~0x00000800u;
 }
 inline void Order::clear_orderstatus() {
   orderstatus_ = 0;
@@ -5560,13 +2881,13 @@ inline void Order::set_orderstatus(::google::protobuf::int32 value) {
 
 // required uint64 orderID = 4;
 inline bool Order::has_orderid() const {
-  return (_has_bits_[0] & 0x00000200u) != 0;
+  return (_has_bits_[0] & 0x00000100u) != 0;
 }
 inline void Order::set_has_orderid() {
-  _has_bits_[0] |= 0x00000200u;
+  _has_bits_[0] |= 0x00000100u;
 }
 inline void Order::clear_has_orderid() {
-  _has_bits_[0] &= ~0x00000200u;
+  _has_bits_[0] &= ~0x00000100u;
 }
 inline void Order::clear_orderid() {
   orderid_ = GOOGLE_ULONGLONG(0);
@@ -5773,13 +3094,13 @@ inline void Order::set_allocated_name(::std::string* name) {
 
 // required double qty = 8;
 inline bool Order::has_qty() const {
-  return (_has_bits_[0] & 0x00000400u) != 0;
+  return (_has_bits_[0] & 0x00000200u) != 0;
 }
 inline void Order::set_has_qty() {
-  _has_bits_[0] |= 0x00000400u;
+  _has_bits_[0] |= 0x00000200u;
 }
 inline void Order::clear_has_qty() {
-  _has_bits_[0] &= ~0x00000400u;
+  _has_bits_[0] &= ~0x00000200u;
 }
 inline void Order::clear_qty() {
   qty_ = 0;
@@ -5797,13 +3118,13 @@ inline void Order::set_qty(double value) {
 
 // optional double price = 9;
 inline bool Order::has_price() const {
-  return (_has_bits_[0] & 0x00000800u) != 0;
+  return (_has_bits_[0] & 0x00000400u) != 0;
 }
 inline void Order::set_has_price() {
-  _has_bits_[0] |= 0x00000800u;
+  _has_bits_[0] |= 0x00000400u;
 }
 inline void Order::clear_has_price() {
-  _has_bits_[0] &= ~0x00000800u;
+  _has_bits_[0] &= ~0x00000400u;
 }
 inline void Order::clear_price() {
   price_ = 0;
@@ -5947,13 +3268,13 @@ inline void Order::set_allocated_updatetime(::std::string* updatetime) {
 
 // optional double fillQty = 12;
 inline bool Order::has_fillqty() const {
-  return (_has_bits_[0] & 0x00004000u) != 0;
+  return (_has_bits_[0] & 0x00002000u) != 0;
 }
 inline void Order::set_has_fillqty() {
-  _has_bits_[0] |= 0x00004000u;
+  _has_bits_[0] |= 0x00002000u;
 }
 inline void Order::clear_has_fillqty() {
-  _has_bits_[0] &= ~0x00004000u;
+  _has_bits_[0] &= ~0x00002000u;
 }
 inline void Order::clear_fillqty() {
   fillqty_ = 0;
@@ -5971,13 +3292,13 @@ inline void Order::set_fillqty(double value) {
 
 // optional double fillAvgPrice = 13;
 inline bool Order::has_fillavgprice() const {
-  return (_has_bits_[0] & 0x00008000u) != 0;
+  return (_has_bits_[0] & 0x00004000u) != 0;
 }
 inline void Order::set_has_fillavgprice() {
-  _has_bits_[0] |= 0x00008000u;
+  _has_bits_[0] |= 0x00004000u;
 }
 inline void Order::clear_has_fillavgprice() {
-  _has_bits_[0] &= ~0x00008000u;
+  _has_bits_[0] &= ~0x00004000u;
 }
 inline void Order::clear_fillavgprice() {
   fillavgprice_ = 0;
@@ -6058,13 +3379,13 @@ inline void Order::set_allocated_lasterrmsg(::std::string* lasterrmsg) {
 
 // optional int32 secMarket = 15;
 inline bool Order::has_secmarket() const {
-  return (_has_bits_[0] & 0x00002000u) != 0;
+  return (_has_bits_[0] & 0x00001000u) != 0;
 }
 inline void Order::set_has_secmarket() {
-  _has_bits_[0] |= 0x00002000u;
+  _has_bits_[0] |= 0x00001000u;
 }
 inline void Order::clear_has_secmarket() {
-  _has_bits_[0] &= ~0x00002000u;
+  _has_bits_[0] &= ~0x00001000u;
 }
 inline void Order::clear_secmarket() {
   secmarket_ = 0;
@@ -6078,545 +3399,6 @@ inline void Order::set_secmarket(::google::protobuf::int32 value) {
   set_has_secmarket();
   secmarket_ = value;
   // @@protoc_insertion_point(field_set:Trd_Common.Order.secMarket)
-}
-
-// optional double createTimestamp = 16;
-inline bool Order::has_createtimestamp() const {
-  return (_has_bits_[0] & 0x00010000u) != 0;
-}
-inline void Order::set_has_createtimestamp() {
-  _has_bits_[0] |= 0x00010000u;
-}
-inline void Order::clear_has_createtimestamp() {
-  _has_bits_[0] &= ~0x00010000u;
-}
-inline void Order::clear_createtimestamp() {
-  createtimestamp_ = 0;
-  clear_has_createtimestamp();
-}
-inline double Order::createtimestamp() const {
-  // @@protoc_insertion_point(field_get:Trd_Common.Order.createTimestamp)
-  return createtimestamp_;
-}
-inline void Order::set_createtimestamp(double value) {
-  set_has_createtimestamp();
-  createtimestamp_ = value;
-  // @@protoc_insertion_point(field_set:Trd_Common.Order.createTimestamp)
-}
-
-// optional double updateTimestamp = 17;
-inline bool Order::has_updatetimestamp() const {
-  return (_has_bits_[0] & 0x00020000u) != 0;
-}
-inline void Order::set_has_updatetimestamp() {
-  _has_bits_[0] |= 0x00020000u;
-}
-inline void Order::clear_has_updatetimestamp() {
-  _has_bits_[0] &= ~0x00020000u;
-}
-inline void Order::clear_updatetimestamp() {
-  updatetimestamp_ = 0;
-  clear_has_updatetimestamp();
-}
-inline double Order::updatetimestamp() const {
-  // @@protoc_insertion_point(field_get:Trd_Common.Order.updateTimestamp)
-  return updatetimestamp_;
-}
-inline void Order::set_updatetimestamp(double value) {
-  set_has_updatetimestamp();
-  updatetimestamp_ = value;
-  // @@protoc_insertion_point(field_set:Trd_Common.Order.updateTimestamp)
-}
-
-// optional string remark = 18;
-inline bool Order::has_remark() const {
-  return (_has_bits_[0] & 0x00000040u) != 0;
-}
-inline void Order::set_has_remark() {
-  _has_bits_[0] |= 0x00000040u;
-}
-inline void Order::clear_has_remark() {
-  _has_bits_[0] &= ~0x00000040u;
-}
-inline void Order::clear_remark() {
-  remark_.ClearToEmptyNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
-  clear_has_remark();
-}
-inline const ::std::string& Order::remark() const {
-  // @@protoc_insertion_point(field_get:Trd_Common.Order.remark)
-  return remark_.GetNoArena();
-}
-inline void Order::set_remark(const ::std::string& value) {
-  set_has_remark();
-  remark_.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), value);
-  // @@protoc_insertion_point(field_set:Trd_Common.Order.remark)
-}
-#if LANG_CXX11
-inline void Order::set_remark(::std::string&& value) {
-  set_has_remark();
-  remark_.SetNoArena(
-    &::google::protobuf::internal::GetEmptyStringAlreadyInited(), ::std::move(value));
-  // @@protoc_insertion_point(field_set_rvalue:Trd_Common.Order.remark)
-}
-#endif
-inline void Order::set_remark(const char* value) {
-  GOOGLE_DCHECK(value != NULL);
-  set_has_remark();
-  remark_.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), ::std::string(value));
-  // @@protoc_insertion_point(field_set_char:Trd_Common.Order.remark)
-}
-inline void Order::set_remark(const char* value, size_t size) {
-  set_has_remark();
-  remark_.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(),
-      ::std::string(reinterpret_cast<const char*>(value), size));
-  // @@protoc_insertion_point(field_set_pointer:Trd_Common.Order.remark)
-}
-inline ::std::string* Order::mutable_remark() {
-  set_has_remark();
-  // @@protoc_insertion_point(field_mutable:Trd_Common.Order.remark)
-  return remark_.MutableNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
-}
-inline ::std::string* Order::release_remark() {
-  // @@protoc_insertion_point(field_release:Trd_Common.Order.remark)
-  clear_has_remark();
-  return remark_.ReleaseNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
-}
-inline void Order::set_allocated_remark(::std::string* remark) {
-  if (remark != NULL) {
-    set_has_remark();
-  } else {
-    clear_has_remark();
-  }
-  remark_.SetAllocatedNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), remark);
-  // @@protoc_insertion_point(field_set_allocated:Trd_Common.Order.remark)
-}
-
-// optional int32 timeInForce = 19;
-inline bool Order::has_timeinforce() const {
-  return (_has_bits_[0] & 0x00040000u) != 0;
-}
-inline void Order::set_has_timeinforce() {
-  _has_bits_[0] |= 0x00040000u;
-}
-inline void Order::clear_has_timeinforce() {
-  _has_bits_[0] &= ~0x00040000u;
-}
-inline void Order::clear_timeinforce() {
-  timeinforce_ = 0;
-  clear_has_timeinforce();
-}
-inline ::google::protobuf::int32 Order::timeinforce() const {
-  // @@protoc_insertion_point(field_get:Trd_Common.Order.timeInForce)
-  return timeinforce_;
-}
-inline void Order::set_timeinforce(::google::protobuf::int32 value) {
-  set_has_timeinforce();
-  timeinforce_ = value;
-  // @@protoc_insertion_point(field_set:Trd_Common.Order.timeInForce)
-}
-
-// optional bool fillOutsideRTH = 20;
-inline bool Order::has_filloutsiderth() const {
-  return (_has_bits_[0] & 0x00080000u) != 0;
-}
-inline void Order::set_has_filloutsiderth() {
-  _has_bits_[0] |= 0x00080000u;
-}
-inline void Order::clear_has_filloutsiderth() {
-  _has_bits_[0] &= ~0x00080000u;
-}
-inline void Order::clear_filloutsiderth() {
-  filloutsiderth_ = false;
-  clear_has_filloutsiderth();
-}
-inline bool Order::filloutsiderth() const {
-  // @@protoc_insertion_point(field_get:Trd_Common.Order.fillOutsideRTH)
-  return filloutsiderth_;
-}
-inline void Order::set_filloutsiderth(bool value) {
-  set_has_filloutsiderth();
-  filloutsiderth_ = value;
-  // @@protoc_insertion_point(field_set:Trd_Common.Order.fillOutsideRTH)
-}
-
-// optional double auxPrice = 21;
-inline bool Order::has_auxprice() const {
-  return (_has_bits_[0] & 0x00100000u) != 0;
-}
-inline void Order::set_has_auxprice() {
-  _has_bits_[0] |= 0x00100000u;
-}
-inline void Order::clear_has_auxprice() {
-  _has_bits_[0] &= ~0x00100000u;
-}
-inline void Order::clear_auxprice() {
-  auxprice_ = 0;
-  clear_has_auxprice();
-}
-inline double Order::auxprice() const {
-  // @@protoc_insertion_point(field_get:Trd_Common.Order.auxPrice)
-  return auxprice_;
-}
-inline void Order::set_auxprice(double value) {
-  set_has_auxprice();
-  auxprice_ = value;
-  // @@protoc_insertion_point(field_set:Trd_Common.Order.auxPrice)
-}
-
-// optional int32 trailType = 22;
-inline bool Order::has_trailtype() const {
-  return (_has_bits_[0] & 0x00400000u) != 0;
-}
-inline void Order::set_has_trailtype() {
-  _has_bits_[0] |= 0x00400000u;
-}
-inline void Order::clear_has_trailtype() {
-  _has_bits_[0] &= ~0x00400000u;
-}
-inline void Order::clear_trailtype() {
-  trailtype_ = 0;
-  clear_has_trailtype();
-}
-inline ::google::protobuf::int32 Order::trailtype() const {
-  // @@protoc_insertion_point(field_get:Trd_Common.Order.trailType)
-  return trailtype_;
-}
-inline void Order::set_trailtype(::google::protobuf::int32 value) {
-  set_has_trailtype();
-  trailtype_ = value;
-  // @@protoc_insertion_point(field_set:Trd_Common.Order.trailType)
-}
-
-// optional double trailValue = 23;
-inline bool Order::has_trailvalue() const {
-  return (_has_bits_[0] & 0x00200000u) != 0;
-}
-inline void Order::set_has_trailvalue() {
-  _has_bits_[0] |= 0x00200000u;
-}
-inline void Order::clear_has_trailvalue() {
-  _has_bits_[0] &= ~0x00200000u;
-}
-inline void Order::clear_trailvalue() {
-  trailvalue_ = 0;
-  clear_has_trailvalue();
-}
-inline double Order::trailvalue() const {
-  // @@protoc_insertion_point(field_get:Trd_Common.Order.trailValue)
-  return trailvalue_;
-}
-inline void Order::set_trailvalue(double value) {
-  set_has_trailvalue();
-  trailvalue_ = value;
-  // @@protoc_insertion_point(field_set:Trd_Common.Order.trailValue)
-}
-
-// optional double trailSpread = 24;
-inline bool Order::has_trailspread() const {
-  return (_has_bits_[0] & 0x01000000u) != 0;
-}
-inline void Order::set_has_trailspread() {
-  _has_bits_[0] |= 0x01000000u;
-}
-inline void Order::clear_has_trailspread() {
-  _has_bits_[0] &= ~0x01000000u;
-}
-inline void Order::clear_trailspread() {
-  trailspread_ = 0;
-  clear_has_trailspread();
-}
-inline double Order::trailspread() const {
-  // @@protoc_insertion_point(field_get:Trd_Common.Order.trailSpread)
-  return trailspread_;
-}
-inline void Order::set_trailspread(double value) {
-  set_has_trailspread();
-  trailspread_ = value;
-  // @@protoc_insertion_point(field_set:Trd_Common.Order.trailSpread)
-}
-
-// optional int32 currency = 25;
-inline bool Order::has_currency() const {
-  return (_has_bits_[0] & 0x00800000u) != 0;
-}
-inline void Order::set_has_currency() {
-  _has_bits_[0] |= 0x00800000u;
-}
-inline void Order::clear_has_currency() {
-  _has_bits_[0] &= ~0x00800000u;
-}
-inline void Order::clear_currency() {
-  currency_ = 0;
-  clear_has_currency();
-}
-inline ::google::protobuf::int32 Order::currency() const {
-  // @@protoc_insertion_point(field_get:Trd_Common.Order.currency)
-  return currency_;
-}
-inline void Order::set_currency(::google::protobuf::int32 value) {
-  set_has_currency();
-  currency_ = value;
-  // @@protoc_insertion_point(field_set:Trd_Common.Order.currency)
-}
-
-// optional int32 trdMarket = 26;
-inline bool Order::has_trdmarket() const {
-  return (_has_bits_[0] & 0x02000000u) != 0;
-}
-inline void Order::set_has_trdmarket() {
-  _has_bits_[0] |= 0x02000000u;
-}
-inline void Order::clear_has_trdmarket() {
-  _has_bits_[0] &= ~0x02000000u;
-}
-inline void Order::clear_trdmarket() {
-  trdmarket_ = 0;
-  clear_has_trdmarket();
-}
-inline ::google::protobuf::int32 Order::trdmarket() const {
-  // @@protoc_insertion_point(field_get:Trd_Common.Order.trdMarket)
-  return trdmarket_;
-}
-inline void Order::set_trdmarket(::google::protobuf::int32 value) {
-  set_has_trdmarket();
-  trdmarket_ = value;
-  // @@protoc_insertion_point(field_set:Trd_Common.Order.trdMarket)
-}
-
-// optional int32 session = 27;
-inline bool Order::has_session() const {
-  return (_has_bits_[0] & 0x04000000u) != 0;
-}
-inline void Order::set_has_session() {
-  _has_bits_[0] |= 0x04000000u;
-}
-inline void Order::clear_has_session() {
-  _has_bits_[0] &= ~0x04000000u;
-}
-inline void Order::clear_session() {
-  session_ = 0;
-  clear_has_session();
-}
-inline ::google::protobuf::int32 Order::session() const {
-  // @@protoc_insertion_point(field_get:Trd_Common.Order.session)
-  return session_;
-}
-inline void Order::set_session(::google::protobuf::int32 value) {
-  set_has_session();
-  session_ = value;
-  // @@protoc_insertion_point(field_set:Trd_Common.Order.session)
-}
-
-// -------------------------------------------------------------------
-
-// OrderFeeItem
-
-// optional string title = 1;
-inline bool OrderFeeItem::has_title() const {
-  return (_has_bits_[0] & 0x00000001u) != 0;
-}
-inline void OrderFeeItem::set_has_title() {
-  _has_bits_[0] |= 0x00000001u;
-}
-inline void OrderFeeItem::clear_has_title() {
-  _has_bits_[0] &= ~0x00000001u;
-}
-inline void OrderFeeItem::clear_title() {
-  title_.ClearToEmptyNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
-  clear_has_title();
-}
-inline const ::std::string& OrderFeeItem::title() const {
-  // @@protoc_insertion_point(field_get:Trd_Common.OrderFeeItem.title)
-  return title_.GetNoArena();
-}
-inline void OrderFeeItem::set_title(const ::std::string& value) {
-  set_has_title();
-  title_.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), value);
-  // @@protoc_insertion_point(field_set:Trd_Common.OrderFeeItem.title)
-}
-#if LANG_CXX11
-inline void OrderFeeItem::set_title(::std::string&& value) {
-  set_has_title();
-  title_.SetNoArena(
-    &::google::protobuf::internal::GetEmptyStringAlreadyInited(), ::std::move(value));
-  // @@protoc_insertion_point(field_set_rvalue:Trd_Common.OrderFeeItem.title)
-}
-#endif
-inline void OrderFeeItem::set_title(const char* value) {
-  GOOGLE_DCHECK(value != NULL);
-  set_has_title();
-  title_.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), ::std::string(value));
-  // @@protoc_insertion_point(field_set_char:Trd_Common.OrderFeeItem.title)
-}
-inline void OrderFeeItem::set_title(const char* value, size_t size) {
-  set_has_title();
-  title_.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(),
-      ::std::string(reinterpret_cast<const char*>(value), size));
-  // @@protoc_insertion_point(field_set_pointer:Trd_Common.OrderFeeItem.title)
-}
-inline ::std::string* OrderFeeItem::mutable_title() {
-  set_has_title();
-  // @@protoc_insertion_point(field_mutable:Trd_Common.OrderFeeItem.title)
-  return title_.MutableNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
-}
-inline ::std::string* OrderFeeItem::release_title() {
-  // @@protoc_insertion_point(field_release:Trd_Common.OrderFeeItem.title)
-  clear_has_title();
-  return title_.ReleaseNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
-}
-inline void OrderFeeItem::set_allocated_title(::std::string* title) {
-  if (title != NULL) {
-    set_has_title();
-  } else {
-    clear_has_title();
-  }
-  title_.SetAllocatedNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), title);
-  // @@protoc_insertion_point(field_set_allocated:Trd_Common.OrderFeeItem.title)
-}
-
-// optional double value = 2;
-inline bool OrderFeeItem::has_value() const {
-  return (_has_bits_[0] & 0x00000002u) != 0;
-}
-inline void OrderFeeItem::set_has_value() {
-  _has_bits_[0] |= 0x00000002u;
-}
-inline void OrderFeeItem::clear_has_value() {
-  _has_bits_[0] &= ~0x00000002u;
-}
-inline void OrderFeeItem::clear_value() {
-  value_ = 0;
-  clear_has_value();
-}
-inline double OrderFeeItem::value() const {
-  // @@protoc_insertion_point(field_get:Trd_Common.OrderFeeItem.value)
-  return value_;
-}
-inline void OrderFeeItem::set_value(double value) {
-  set_has_value();
-  value_ = value;
-  // @@protoc_insertion_point(field_set:Trd_Common.OrderFeeItem.value)
-}
-
-// -------------------------------------------------------------------
-
-// OrderFee
-
-// required string orderIDEx = 1;
-inline bool OrderFee::has_orderidex() const {
-  return (_has_bits_[0] & 0x00000001u) != 0;
-}
-inline void OrderFee::set_has_orderidex() {
-  _has_bits_[0] |= 0x00000001u;
-}
-inline void OrderFee::clear_has_orderidex() {
-  _has_bits_[0] &= ~0x00000001u;
-}
-inline void OrderFee::clear_orderidex() {
-  orderidex_.ClearToEmptyNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
-  clear_has_orderidex();
-}
-inline const ::std::string& OrderFee::orderidex() const {
-  // @@protoc_insertion_point(field_get:Trd_Common.OrderFee.orderIDEx)
-  return orderidex_.GetNoArena();
-}
-inline void OrderFee::set_orderidex(const ::std::string& value) {
-  set_has_orderidex();
-  orderidex_.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), value);
-  // @@protoc_insertion_point(field_set:Trd_Common.OrderFee.orderIDEx)
-}
-#if LANG_CXX11
-inline void OrderFee::set_orderidex(::std::string&& value) {
-  set_has_orderidex();
-  orderidex_.SetNoArena(
-    &::google::protobuf::internal::GetEmptyStringAlreadyInited(), ::std::move(value));
-  // @@protoc_insertion_point(field_set_rvalue:Trd_Common.OrderFee.orderIDEx)
-}
-#endif
-inline void OrderFee::set_orderidex(const char* value) {
-  GOOGLE_DCHECK(value != NULL);
-  set_has_orderidex();
-  orderidex_.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), ::std::string(value));
-  // @@protoc_insertion_point(field_set_char:Trd_Common.OrderFee.orderIDEx)
-}
-inline void OrderFee::set_orderidex(const char* value, size_t size) {
-  set_has_orderidex();
-  orderidex_.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(),
-      ::std::string(reinterpret_cast<const char*>(value), size));
-  // @@protoc_insertion_point(field_set_pointer:Trd_Common.OrderFee.orderIDEx)
-}
-inline ::std::string* OrderFee::mutable_orderidex() {
-  set_has_orderidex();
-  // @@protoc_insertion_point(field_mutable:Trd_Common.OrderFee.orderIDEx)
-  return orderidex_.MutableNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
-}
-inline ::std::string* OrderFee::release_orderidex() {
-  // @@protoc_insertion_point(field_release:Trd_Common.OrderFee.orderIDEx)
-  clear_has_orderidex();
-  return orderidex_.ReleaseNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
-}
-inline void OrderFee::set_allocated_orderidex(::std::string* orderidex) {
-  if (orderidex != NULL) {
-    set_has_orderidex();
-  } else {
-    clear_has_orderidex();
-  }
-  orderidex_.SetAllocatedNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), orderidex);
-  // @@protoc_insertion_point(field_set_allocated:Trd_Common.OrderFee.orderIDEx)
-}
-
-// optional double feeAmount = 2;
-inline bool OrderFee::has_feeamount() const {
-  return (_has_bits_[0] & 0x00000002u) != 0;
-}
-inline void OrderFee::set_has_feeamount() {
-  _has_bits_[0] |= 0x00000002u;
-}
-inline void OrderFee::clear_has_feeamount() {
-  _has_bits_[0] &= ~0x00000002u;
-}
-inline void OrderFee::clear_feeamount() {
-  feeamount_ = 0;
-  clear_has_feeamount();
-}
-inline double OrderFee::feeamount() const {
-  // @@protoc_insertion_point(field_get:Trd_Common.OrderFee.feeAmount)
-  return feeamount_;
-}
-inline void OrderFee::set_feeamount(double value) {
-  set_has_feeamount();
-  feeamount_ = value;
-  // @@protoc_insertion_point(field_set:Trd_Common.OrderFee.feeAmount)
-}
-
-// repeated .Trd_Common.OrderFeeItem feeList = 3;
-inline int OrderFee::feelist_size() const {
-  return feelist_.size();
-}
-inline void OrderFee::clear_feelist() {
-  feelist_.Clear();
-}
-inline const ::Trd_Common::OrderFeeItem& OrderFee::feelist(int index) const {
-  // @@protoc_insertion_point(field_get:Trd_Common.OrderFee.feeList)
-  return feelist_.Get(index);
-}
-inline ::Trd_Common::OrderFeeItem* OrderFee::mutable_feelist(int index) {
-  // @@protoc_insertion_point(field_mutable:Trd_Common.OrderFee.feeList)
-  return feelist_.Mutable(index);
-}
-inline ::Trd_Common::OrderFeeItem* OrderFee::add_feelist() {
-  // @@protoc_insertion_point(field_add:Trd_Common.OrderFee.feeList)
-  return feelist_.Add();
-}
-inline ::google::protobuf::RepeatedPtrField< ::Trd_Common::OrderFeeItem >*
-OrderFee::mutable_feelist() {
-  // @@protoc_insertion_point(field_mutable_list:Trd_Common.OrderFee.feeList)
-  return &feelist_;
-}
-inline const ::google::protobuf::RepeatedPtrField< ::Trd_Common::OrderFeeItem >&
-OrderFee::feelist() const {
-  // @@protoc_insertion_point(field_list:Trd_Common.OrderFee.feeList)
-  return feelist_;
 }
 
 // -------------------------------------------------------------------
@@ -7147,13 +3929,13 @@ inline void OrderFill::set_allocated_counterbrokername(::std::string* counterbro
 
 // optional int32 secMarket = 13;
 inline bool OrderFill::has_secmarket() const {
-  return (_has_bits_[0] & 0x00002000u) != 0;
+  return (_has_bits_[0] & 0x00001000u) != 0;
 }
 inline void OrderFill::set_has_secmarket() {
-  _has_bits_[0] |= 0x00002000u;
+  _has_bits_[0] |= 0x00001000u;
 }
 inline void OrderFill::clear_has_secmarket() {
-  _has_bits_[0] &= ~0x00002000u;
+  _has_bits_[0] &= ~0x00001000u;
 }
 inline void OrderFill::clear_secmarket() {
   secmarket_ = 0;
@@ -7167,102 +3949,6 @@ inline void OrderFill::set_secmarket(::google::protobuf::int32 value) {
   set_has_secmarket();
   secmarket_ = value;
   // @@protoc_insertion_point(field_set:Trd_Common.OrderFill.secMarket)
-}
-
-// optional double createTimestamp = 14;
-inline bool OrderFill::has_createtimestamp() const {
-  return (_has_bits_[0] & 0x00001000u) != 0;
-}
-inline void OrderFill::set_has_createtimestamp() {
-  _has_bits_[0] |= 0x00001000u;
-}
-inline void OrderFill::clear_has_createtimestamp() {
-  _has_bits_[0] &= ~0x00001000u;
-}
-inline void OrderFill::clear_createtimestamp() {
-  createtimestamp_ = 0;
-  clear_has_createtimestamp();
-}
-inline double OrderFill::createtimestamp() const {
-  // @@protoc_insertion_point(field_get:Trd_Common.OrderFill.createTimestamp)
-  return createtimestamp_;
-}
-inline void OrderFill::set_createtimestamp(double value) {
-  set_has_createtimestamp();
-  createtimestamp_ = value;
-  // @@protoc_insertion_point(field_set:Trd_Common.OrderFill.createTimestamp)
-}
-
-// optional double updateTimestamp = 15;
-inline bool OrderFill::has_updatetimestamp() const {
-  return (_has_bits_[0] & 0x00008000u) != 0;
-}
-inline void OrderFill::set_has_updatetimestamp() {
-  _has_bits_[0] |= 0x00008000u;
-}
-inline void OrderFill::clear_has_updatetimestamp() {
-  _has_bits_[0] &= ~0x00008000u;
-}
-inline void OrderFill::clear_updatetimestamp() {
-  updatetimestamp_ = 0;
-  clear_has_updatetimestamp();
-}
-inline double OrderFill::updatetimestamp() const {
-  // @@protoc_insertion_point(field_get:Trd_Common.OrderFill.updateTimestamp)
-  return updatetimestamp_;
-}
-inline void OrderFill::set_updatetimestamp(double value) {
-  set_has_updatetimestamp();
-  updatetimestamp_ = value;
-  // @@protoc_insertion_point(field_set:Trd_Common.OrderFill.updateTimestamp)
-}
-
-// optional int32 status = 16;
-inline bool OrderFill::has_status() const {
-  return (_has_bits_[0] & 0x00004000u) != 0;
-}
-inline void OrderFill::set_has_status() {
-  _has_bits_[0] |= 0x00004000u;
-}
-inline void OrderFill::clear_has_status() {
-  _has_bits_[0] &= ~0x00004000u;
-}
-inline void OrderFill::clear_status() {
-  status_ = 0;
-  clear_has_status();
-}
-inline ::google::protobuf::int32 OrderFill::status() const {
-  // @@protoc_insertion_point(field_get:Trd_Common.OrderFill.status)
-  return status_;
-}
-inline void OrderFill::set_status(::google::protobuf::int32 value) {
-  set_has_status();
-  status_ = value;
-  // @@protoc_insertion_point(field_set:Trd_Common.OrderFill.status)
-}
-
-// optional int32 trdMarket = 17;
-inline bool OrderFill::has_trdmarket() const {
-  return (_has_bits_[0] & 0x00010000u) != 0;
-}
-inline void OrderFill::set_has_trdmarket() {
-  _has_bits_[0] |= 0x00010000u;
-}
-inline void OrderFill::clear_has_trdmarket() {
-  _has_bits_[0] &= ~0x00010000u;
-}
-inline void OrderFill::clear_trdmarket() {
-  trdmarket_ = 0;
-  clear_has_trdmarket();
-}
-inline ::google::protobuf::int32 OrderFill::trdmarket() const {
-  // @@protoc_insertion_point(field_get:Trd_Common.OrderFill.trdMarket)
-  return trdmarket_;
-}
-inline void OrderFill::set_trdmarket(::google::protobuf::int32 value) {
-  set_has_trdmarket();
-  trdmarket_ = value;
-  // @@protoc_insertion_point(field_set:Trd_Common.OrderFill.trdMarket)
 }
 
 // -------------------------------------------------------------------
@@ -7387,54 +4073,6 @@ inline void MaxTrdQtys::set_maxbuyback(double value) {
   set_has_maxbuyback();
   maxbuyback_ = value;
   // @@protoc_insertion_point(field_set:Trd_Common.MaxTrdQtys.maxBuyBack)
-}
-
-// optional double longRequiredIM = 6;
-inline bool MaxTrdQtys::has_longrequiredim() const {
-  return (_has_bits_[0] & 0x00000020u) != 0;
-}
-inline void MaxTrdQtys::set_has_longrequiredim() {
-  _has_bits_[0] |= 0x00000020u;
-}
-inline void MaxTrdQtys::clear_has_longrequiredim() {
-  _has_bits_[0] &= ~0x00000020u;
-}
-inline void MaxTrdQtys::clear_longrequiredim() {
-  longrequiredim_ = 0;
-  clear_has_longrequiredim();
-}
-inline double MaxTrdQtys::longrequiredim() const {
-  // @@protoc_insertion_point(field_get:Trd_Common.MaxTrdQtys.longRequiredIM)
-  return longrequiredim_;
-}
-inline void MaxTrdQtys::set_longrequiredim(double value) {
-  set_has_longrequiredim();
-  longrequiredim_ = value;
-  // @@protoc_insertion_point(field_set:Trd_Common.MaxTrdQtys.longRequiredIM)
-}
-
-// optional double shortRequiredIM = 7;
-inline bool MaxTrdQtys::has_shortrequiredim() const {
-  return (_has_bits_[0] & 0x00000040u) != 0;
-}
-inline void MaxTrdQtys::set_has_shortrequiredim() {
-  _has_bits_[0] |= 0x00000040u;
-}
-inline void MaxTrdQtys::clear_has_shortrequiredim() {
-  _has_bits_[0] &= ~0x00000040u;
-}
-inline void MaxTrdQtys::clear_shortrequiredim() {
-  shortrequiredim_ = 0;
-  clear_has_shortrequiredim();
-}
-inline double MaxTrdQtys::shortrequiredim() const {
-  // @@protoc_insertion_point(field_get:Trd_Common.MaxTrdQtys.shortRequiredIM)
-  return shortrequiredim_;
-}
-inline void MaxTrdQtys::set_shortrequiredim(double value) {
-  set_has_shortrequiredim();
-  shortrequiredim_ = value;
-  // @@protoc_insertion_point(field_set:Trd_Common.MaxTrdQtys.shortRequiredIM)
 }
 
 // -------------------------------------------------------------------
@@ -7666,110 +4304,9 @@ inline void TrdFilterConditions::set_allocated_endtime(::std::string* endtime) {
   // @@protoc_insertion_point(field_set_allocated:Trd_Common.TrdFilterConditions.endTime)
 }
 
-// repeated string orderIDExList = 5;
-inline int TrdFilterConditions::orderidexlist_size() const {
-  return orderidexlist_.size();
-}
-inline void TrdFilterConditions::clear_orderidexlist() {
-  orderidexlist_.Clear();
-}
-inline const ::std::string& TrdFilterConditions::orderidexlist(int index) const {
-  // @@protoc_insertion_point(field_get:Trd_Common.TrdFilterConditions.orderIDExList)
-  return orderidexlist_.Get(index);
-}
-inline ::std::string* TrdFilterConditions::mutable_orderidexlist(int index) {
-  // @@protoc_insertion_point(field_mutable:Trd_Common.TrdFilterConditions.orderIDExList)
-  return orderidexlist_.Mutable(index);
-}
-inline void TrdFilterConditions::set_orderidexlist(int index, const ::std::string& value) {
-  // @@protoc_insertion_point(field_set:Trd_Common.TrdFilterConditions.orderIDExList)
-  orderidexlist_.Mutable(index)->assign(value);
-}
-#if LANG_CXX11
-inline void TrdFilterConditions::set_orderidexlist(int index, ::std::string&& value) {
-  // @@protoc_insertion_point(field_set:Trd_Common.TrdFilterConditions.orderIDExList)
-  orderidexlist_.Mutable(index)->assign(std::move(value));
-}
-#endif
-inline void TrdFilterConditions::set_orderidexlist(int index, const char* value) {
-  GOOGLE_DCHECK(value != NULL);
-  orderidexlist_.Mutable(index)->assign(value);
-  // @@protoc_insertion_point(field_set_char:Trd_Common.TrdFilterConditions.orderIDExList)
-}
-inline void TrdFilterConditions::set_orderidexlist(int index, const char* value, size_t size) {
-  orderidexlist_.Mutable(index)->assign(
-    reinterpret_cast<const char*>(value), size);
-  // @@protoc_insertion_point(field_set_pointer:Trd_Common.TrdFilterConditions.orderIDExList)
-}
-inline ::std::string* TrdFilterConditions::add_orderidexlist() {
-  // @@protoc_insertion_point(field_add_mutable:Trd_Common.TrdFilterConditions.orderIDExList)
-  return orderidexlist_.Add();
-}
-inline void TrdFilterConditions::add_orderidexlist(const ::std::string& value) {
-  orderidexlist_.Add()->assign(value);
-  // @@protoc_insertion_point(field_add:Trd_Common.TrdFilterConditions.orderIDExList)
-}
-#if LANG_CXX11
-inline void TrdFilterConditions::add_orderidexlist(::std::string&& value) {
-  orderidexlist_.Add(std::move(value));
-  // @@protoc_insertion_point(field_add:Trd_Common.TrdFilterConditions.orderIDExList)
-}
-#endif
-inline void TrdFilterConditions::add_orderidexlist(const char* value) {
-  GOOGLE_DCHECK(value != NULL);
-  orderidexlist_.Add()->assign(value);
-  // @@protoc_insertion_point(field_add_char:Trd_Common.TrdFilterConditions.orderIDExList)
-}
-inline void TrdFilterConditions::add_orderidexlist(const char* value, size_t size) {
-  orderidexlist_.Add()->assign(reinterpret_cast<const char*>(value), size);
-  // @@protoc_insertion_point(field_add_pointer:Trd_Common.TrdFilterConditions.orderIDExList)
-}
-inline const ::google::protobuf::RepeatedPtrField< ::std::string>&
-TrdFilterConditions::orderidexlist() const {
-  // @@protoc_insertion_point(field_list:Trd_Common.TrdFilterConditions.orderIDExList)
-  return orderidexlist_;
-}
-inline ::google::protobuf::RepeatedPtrField< ::std::string>*
-TrdFilterConditions::mutable_orderidexlist() {
-  // @@protoc_insertion_point(field_mutable_list:Trd_Common.TrdFilterConditions.orderIDExList)
-  return &orderidexlist_;
-}
-
-// optional int32 filterMarket = 6;
-inline bool TrdFilterConditions::has_filtermarket() const {
-  return (_has_bits_[0] & 0x00000004u) != 0;
-}
-inline void TrdFilterConditions::set_has_filtermarket() {
-  _has_bits_[0] |= 0x00000004u;
-}
-inline void TrdFilterConditions::clear_has_filtermarket() {
-  _has_bits_[0] &= ~0x00000004u;
-}
-inline void TrdFilterConditions::clear_filtermarket() {
-  filtermarket_ = 0;
-  clear_has_filtermarket();
-}
-inline ::google::protobuf::int32 TrdFilterConditions::filtermarket() const {
-  // @@protoc_insertion_point(field_get:Trd_Common.TrdFilterConditions.filterMarket)
-  return filtermarket_;
-}
-inline void TrdFilterConditions::set_filtermarket(::google::protobuf::int32 value) {
-  set_has_filtermarket();
-  filtermarket_ = value;
-  // @@protoc_insertion_point(field_set:Trd_Common.TrdFilterConditions.filterMarket)
-}
-
 #ifdef __GNUC__
   #pragma GCC diagnostic pop
 #endif  // __GNUC__
-// -------------------------------------------------------------------
-
-// -------------------------------------------------------------------
-
-// -------------------------------------------------------------------
-
-// -------------------------------------------------------------------
-
 // -------------------------------------------------------------------
 
 // -------------------------------------------------------------------
@@ -7797,11 +4334,6 @@ template <>
 inline const EnumDescriptor* GetEnumDescriptor< ::Trd_Common::TrdEnv>() {
   return ::Trd_Common::TrdEnv_descriptor();
 }
-template <> struct is_proto_enum< ::Trd_Common::TrdCategory> : ::google::protobuf::internal::true_type {};
-template <>
-inline const EnumDescriptor* GetEnumDescriptor< ::Trd_Common::TrdCategory>() {
-  return ::Trd_Common::TrdCategory_descriptor();
-}
 template <> struct is_proto_enum< ::Trd_Common::TrdMarket> : ::google::protobuf::internal::true_type {};
 template <>
 inline const EnumDescriptor* GetEnumDescriptor< ::Trd_Common::TrdMarket>() {
@@ -7822,20 +4354,10 @@ template <>
 inline const EnumDescriptor* GetEnumDescriptor< ::Trd_Common::OrderType>() {
   return ::Trd_Common::OrderType_descriptor();
 }
-template <> struct is_proto_enum< ::Trd_Common::TrailType> : ::google::protobuf::internal::true_type {};
-template <>
-inline const EnumDescriptor* GetEnumDescriptor< ::Trd_Common::TrailType>() {
-  return ::Trd_Common::TrailType_descriptor();
-}
 template <> struct is_proto_enum< ::Trd_Common::OrderStatus> : ::google::protobuf::internal::true_type {};
 template <>
 inline const EnumDescriptor* GetEnumDescriptor< ::Trd_Common::OrderStatus>() {
   return ::Trd_Common::OrderStatus_descriptor();
-}
-template <> struct is_proto_enum< ::Trd_Common::OrderFillStatus> : ::google::protobuf::internal::true_type {};
-template <>
-inline const EnumDescriptor* GetEnumDescriptor< ::Trd_Common::OrderFillStatus>() {
-  return ::Trd_Common::OrderFillStatus_descriptor();
 }
 template <> struct is_proto_enum< ::Trd_Common::PositionSide> : ::google::protobuf::internal::true_type {};
 template <>
@@ -7847,50 +4369,10 @@ template <>
 inline const EnumDescriptor* GetEnumDescriptor< ::Trd_Common::ModifyOrderOp>() {
   return ::Trd_Common::ModifyOrderOp_descriptor();
 }
-template <> struct is_proto_enum< ::Trd_Common::TrdAccType> : ::google::protobuf::internal::true_type {};
+template <> struct is_proto_enum< ::Trd_Common::ReconfirmOrderReason> : ::google::protobuf::internal::true_type {};
 template <>
-inline const EnumDescriptor* GetEnumDescriptor< ::Trd_Common::TrdAccType>() {
-  return ::Trd_Common::TrdAccType_descriptor();
-}
-template <> struct is_proto_enum< ::Trd_Common::TrdAccStatus> : ::google::protobuf::internal::true_type {};
-template <>
-inline const EnumDescriptor* GetEnumDescriptor< ::Trd_Common::TrdAccStatus>() {
-  return ::Trd_Common::TrdAccStatus_descriptor();
-}
-template <> struct is_proto_enum< ::Trd_Common::Currency> : ::google::protobuf::internal::true_type {};
-template <>
-inline const EnumDescriptor* GetEnumDescriptor< ::Trd_Common::Currency>() {
-  return ::Trd_Common::Currency_descriptor();
-}
-template <> struct is_proto_enum< ::Trd_Common::CltRiskLevel> : ::google::protobuf::internal::true_type {};
-template <>
-inline const EnumDescriptor* GetEnumDescriptor< ::Trd_Common::CltRiskLevel>() {
-  return ::Trd_Common::CltRiskLevel_descriptor();
-}
-template <> struct is_proto_enum< ::Trd_Common::TimeInForce> : ::google::protobuf::internal::true_type {};
-template <>
-inline const EnumDescriptor* GetEnumDescriptor< ::Trd_Common::TimeInForce>() {
-  return ::Trd_Common::TimeInForce_descriptor();
-}
-template <> struct is_proto_enum< ::Trd_Common::SecurityFirm> : ::google::protobuf::internal::true_type {};
-template <>
-inline const EnumDescriptor* GetEnumDescriptor< ::Trd_Common::SecurityFirm>() {
-  return ::Trd_Common::SecurityFirm_descriptor();
-}
-template <> struct is_proto_enum< ::Trd_Common::SimAccType> : ::google::protobuf::internal::true_type {};
-template <>
-inline const EnumDescriptor* GetEnumDescriptor< ::Trd_Common::SimAccType>() {
-  return ::Trd_Common::SimAccType_descriptor();
-}
-template <> struct is_proto_enum< ::Trd_Common::CltRiskStatus> : ::google::protobuf::internal::true_type {};
-template <>
-inline const EnumDescriptor* GetEnumDescriptor< ::Trd_Common::CltRiskStatus>() {
-  return ::Trd_Common::CltRiskStatus_descriptor();
-}
-template <> struct is_proto_enum< ::Trd_Common::DTStatus> : ::google::protobuf::internal::true_type {};
-template <>
-inline const EnumDescriptor* GetEnumDescriptor< ::Trd_Common::DTStatus>() {
-  return ::Trd_Common::DTStatus_descriptor();
+inline const EnumDescriptor* GetEnumDescriptor< ::Trd_Common::ReconfirmOrderReason>() {
+  return ::Trd_Common::ReconfirmOrderReason_descriptor();
 }
 
 }  // namespace protobuf

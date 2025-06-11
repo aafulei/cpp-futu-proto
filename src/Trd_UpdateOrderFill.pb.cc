@@ -141,12 +141,10 @@ void AddDescriptorsImpl() {
       "Header\022(\n\torderFill\030\002 \002(\0132\025.Trd_Common.O"
       "rderFill\"i\n\010Response\022\025\n\007retType\030\001 \002(\005:\004-"
       "400\022\016\n\006retMsg\030\002 \001(\t\022\017\n\007errCode\030\003 \001(\005\022%\n\003"
-      "s2c\030\004 \001(\0132\030.Trd_UpdateOrderFill.S2CBI\n\023c"
-      "om.futu.openapi.pbZ2github.com/futuopen/"
-      "ftapi4go/pb/trdupdateorderfill"
+      "s2c\030\004 \001(\0132\030.Trd_UpdateOrderFill.S2C"
   };
   ::google::protobuf::DescriptorPool::InternalAddGeneratedFile(
-      descriptor, 350);
+      descriptor, 275);
   ::google::protobuf::MessageFactory::InternalRegisterGeneratedFile(
     "Trd_UpdateOrderFill.proto", &protobuf_RegisterTypes);
   ::protobuf_Common_2eproto::AddDescriptors();

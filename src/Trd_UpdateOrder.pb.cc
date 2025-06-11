@@ -141,12 +141,10 @@ void AddDescriptorsImpl() {
       "\n\005order\030\002 \002(\0132\021.Trd_Common.Order\"e\n\010Resp"
       "onse\022\025\n\007retType\030\001 \002(\005:\004-400\022\016\n\006retMsg\030\002 "
       "\001(\t\022\017\n\007errCode\030\003 \001(\005\022!\n\003s2c\030\004 \001(\0132\024.Trd_"
-      "UpdateOrder.S2CBE\n\023com.futu.openapi.pbZ."
-      "github.com/futuopen/ftapi4go/pb/trdupdat"
-      "eorder"
+      "UpdateOrder.S2C"
   };
   ::google::protobuf::DescriptorPool::InternalAddGeneratedFile(
-      descriptor, 326);
+      descriptor, 255);
   ::google::protobuf::MessageFactory::InternalRegisterGeneratedFile(
     "Trd_UpdateOrder.proto", &protobuf_RegisterTypes);
   ::protobuf_Common_2eproto::AddDescriptors();

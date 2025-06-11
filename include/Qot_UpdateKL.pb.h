@@ -166,21 +166,6 @@ class S2C : public ::google::protobuf::Message /* @@protoc_insertion_point(class
   const ::google::protobuf::RepeatedPtrField< ::Qot_Common::KLine >&
       kllist() const;
 
-  // optional string name = 5;
-  bool has_name() const;
-  void clear_name();
-  static const int kNameFieldNumber = 5;
-  const ::std::string& name() const;
-  void set_name(const ::std::string& value);
-  #if LANG_CXX11
-  void set_name(::std::string&& value);
-  #endif
-  void set_name(const char* value);
-  void set_name(const char* value, size_t size);
-  ::std::string* mutable_name();
-  ::std::string* release_name();
-  void set_allocated_name(::std::string* name);
-
   // required .Qot_Common.Security security = 3;
   bool has_security() const;
   void clear_security();
@@ -212,8 +197,6 @@ class S2C : public ::google::protobuf::Message /* @@protoc_insertion_point(class
   void clear_has_kltype();
   void set_has_security();
   void clear_has_security();
-  void set_has_name();
-  void clear_has_name();
 
   // helper for ByteSizeLong()
   size_t RequiredFieldsByteSizeFallback() const;
@@ -222,7 +205,6 @@ class S2C : public ::google::protobuf::Message /* @@protoc_insertion_point(class
   ::google::protobuf::internal::HasBits<1> _has_bits_;
   mutable int _cached_size_;
   ::google::protobuf::RepeatedPtrField< ::Qot_Common::KLine > kllist_;
-  ::google::protobuf::internal::ArenaStringPtr name_;
   ::Qot_Common::Security* security_;
   ::google::protobuf::int32 rehabtype_;
   ::google::protobuf::int32 kltype_;
@@ -392,13 +374,13 @@ class Response : public ::google::protobuf::Message /* @@protoc_insertion_point(
 
 // required int32 rehabType = 1;
 inline bool S2C::has_rehabtype() const {
-  return (_has_bits_[0] & 0x00000004u) != 0;
+  return (_has_bits_[0] & 0x00000002u) != 0;
 }
 inline void S2C::set_has_rehabtype() {
-  _has_bits_[0] |= 0x00000004u;
+  _has_bits_[0] |= 0x00000002u;
 }
 inline void S2C::clear_has_rehabtype() {
-  _has_bits_[0] &= ~0x00000004u;
+  _has_bits_[0] &= ~0x00000002u;
 }
 inline void S2C::clear_rehabtype() {
   rehabtype_ = 0;
@@ -416,13 +398,13 @@ inline void S2C::set_rehabtype(::google::protobuf::int32 value) {
 
 // required int32 klType = 2;
 inline bool S2C::has_kltype() const {
-  return (_has_bits_[0] & 0x00000008u) != 0;
+  return (_has_bits_[0] & 0x00000004u) != 0;
 }
 inline void S2C::set_has_kltype() {
-  _has_bits_[0] |= 0x00000008u;
+  _has_bits_[0] |= 0x00000004u;
 }
 inline void S2C::clear_has_kltype() {
-  _has_bits_[0] &= ~0x00000008u;
+  _has_bits_[0] &= ~0x00000004u;
 }
 inline void S2C::clear_kltype() {
   kltype_ = 0;
@@ -440,13 +422,13 @@ inline void S2C::set_kltype(::google::protobuf::int32 value) {
 
 // required .Qot_Common.Security security = 3;
 inline bool S2C::has_security() const {
-  return (_has_bits_[0] & 0x00000002u) != 0;
+  return (_has_bits_[0] & 0x00000001u) != 0;
 }
 inline void S2C::set_has_security() {
-  _has_bits_[0] |= 0x00000002u;
+  _has_bits_[0] |= 0x00000001u;
 }
 inline void S2C::clear_has_security() {
-  _has_bits_[0] &= ~0x00000002u;
+  _has_bits_[0] &= ~0x00000001u;
 }
 inline const ::Qot_Common::Security& S2C::security() const {
   const ::Qot_Common::Security* p = security_;
@@ -486,69 +468,6 @@ inline void S2C::set_allocated_security(::Qot_Common::Security* security) {
   }
   security_ = security;
   // @@protoc_insertion_point(field_set_allocated:Qot_UpdateKL.S2C.security)
-}
-
-// optional string name = 5;
-inline bool S2C::has_name() const {
-  return (_has_bits_[0] & 0x00000001u) != 0;
-}
-inline void S2C::set_has_name() {
-  _has_bits_[0] |= 0x00000001u;
-}
-inline void S2C::clear_has_name() {
-  _has_bits_[0] &= ~0x00000001u;
-}
-inline void S2C::clear_name() {
-  name_.ClearToEmptyNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
-  clear_has_name();
-}
-inline const ::std::string& S2C::name() const {
-  // @@protoc_insertion_point(field_get:Qot_UpdateKL.S2C.name)
-  return name_.GetNoArena();
-}
-inline void S2C::set_name(const ::std::string& value) {
-  set_has_name();
-  name_.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), value);
-  // @@protoc_insertion_point(field_set:Qot_UpdateKL.S2C.name)
-}
-#if LANG_CXX11
-inline void S2C::set_name(::std::string&& value) {
-  set_has_name();
-  name_.SetNoArena(
-    &::google::protobuf::internal::GetEmptyStringAlreadyInited(), ::std::move(value));
-  // @@protoc_insertion_point(field_set_rvalue:Qot_UpdateKL.S2C.name)
-}
-#endif
-inline void S2C::set_name(const char* value) {
-  GOOGLE_DCHECK(value != NULL);
-  set_has_name();
-  name_.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), ::std::string(value));
-  // @@protoc_insertion_point(field_set_char:Qot_UpdateKL.S2C.name)
-}
-inline void S2C::set_name(const char* value, size_t size) {
-  set_has_name();
-  name_.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(),
-      ::std::string(reinterpret_cast<const char*>(value), size));
-  // @@protoc_insertion_point(field_set_pointer:Qot_UpdateKL.S2C.name)
-}
-inline ::std::string* S2C::mutable_name() {
-  set_has_name();
-  // @@protoc_insertion_point(field_mutable:Qot_UpdateKL.S2C.name)
-  return name_.MutableNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
-}
-inline ::std::string* S2C::release_name() {
-  // @@protoc_insertion_point(field_release:Qot_UpdateKL.S2C.name)
-  clear_has_name();
-  return name_.ReleaseNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
-}
-inline void S2C::set_allocated_name(::std::string* name) {
-  if (name != NULL) {
-    set_has_name();
-  } else {
-    clear_has_name();
-  }
-  name_.SetAllocatedNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), name);
-  // @@protoc_insertion_point(field_set_allocated:Qot_UpdateKL.S2C.name)
 }
 
 // repeated .Qot_Common.KLine klList = 4;

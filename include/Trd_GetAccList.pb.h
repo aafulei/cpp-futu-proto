@@ -173,35 +173,15 @@ class C2S : public ::google::protobuf::Message /* @@protoc_insertion_point(class
   ::google::protobuf::uint64 userid() const;
   void set_userid(::google::protobuf::uint64 value);
 
-  // optional int32 trdCategory = 2;
-  bool has_trdcategory() const;
-  void clear_trdcategory();
-  static const int kTrdCategoryFieldNumber = 2;
-  ::google::protobuf::int32 trdcategory() const;
-  void set_trdcategory(::google::protobuf::int32 value);
-
-  // optional bool needGeneralSecAccount = 3;
-  bool has_needgeneralsecaccount() const;
-  void clear_needgeneralsecaccount();
-  static const int kNeedGeneralSecAccountFieldNumber = 3;
-  bool needgeneralsecaccount() const;
-  void set_needgeneralsecaccount(bool value);
-
   // @@protoc_insertion_point(class_scope:Trd_GetAccList.C2S)
  private:
   void set_has_userid();
   void clear_has_userid();
-  void set_has_trdcategory();
-  void clear_has_trdcategory();
-  void set_has_needgeneralsecaccount();
-  void clear_has_needgeneralsecaccount();
 
   ::google::protobuf::internal::InternalMetadataWithArena _internal_metadata_;
   ::google::protobuf::internal::HasBits<1> _has_bits_;
   mutable int _cached_size_;
   ::google::protobuf::uint64 userid_;
-  ::google::protobuf::int32 trdcategory_;
-  bool needgeneralsecaccount_;
   friend struct ::protobuf_Trd_5fGetAccList_2eproto::TableStruct;
   friend void ::protobuf_Trd_5fGetAccList_2eproto::InitDefaultsC2SImpl();
 };
@@ -613,54 +593,6 @@ inline void C2S::set_userid(::google::protobuf::uint64 value) {
   set_has_userid();
   userid_ = value;
   // @@protoc_insertion_point(field_set:Trd_GetAccList.C2S.userID)
-}
-
-// optional int32 trdCategory = 2;
-inline bool C2S::has_trdcategory() const {
-  return (_has_bits_[0] & 0x00000002u) != 0;
-}
-inline void C2S::set_has_trdcategory() {
-  _has_bits_[0] |= 0x00000002u;
-}
-inline void C2S::clear_has_trdcategory() {
-  _has_bits_[0] &= ~0x00000002u;
-}
-inline void C2S::clear_trdcategory() {
-  trdcategory_ = 0;
-  clear_has_trdcategory();
-}
-inline ::google::protobuf::int32 C2S::trdcategory() const {
-  // @@protoc_insertion_point(field_get:Trd_GetAccList.C2S.trdCategory)
-  return trdcategory_;
-}
-inline void C2S::set_trdcategory(::google::protobuf::int32 value) {
-  set_has_trdcategory();
-  trdcategory_ = value;
-  // @@protoc_insertion_point(field_set:Trd_GetAccList.C2S.trdCategory)
-}
-
-// optional bool needGeneralSecAccount = 3;
-inline bool C2S::has_needgeneralsecaccount() const {
-  return (_has_bits_[0] & 0x00000004u) != 0;
-}
-inline void C2S::set_has_needgeneralsecaccount() {
-  _has_bits_[0] |= 0x00000004u;
-}
-inline void C2S::clear_has_needgeneralsecaccount() {
-  _has_bits_[0] &= ~0x00000004u;
-}
-inline void C2S::clear_needgeneralsecaccount() {
-  needgeneralsecaccount_ = false;
-  clear_has_needgeneralsecaccount();
-}
-inline bool C2S::needgeneralsecaccount() const {
-  // @@protoc_insertion_point(field_get:Trd_GetAccList.C2S.needGeneralSecAccount)
-  return needgeneralsecaccount_;
-}
-inline void C2S::set_needgeneralsecaccount(bool value) {
-  set_has_needgeneralsecaccount();
-  needgeneralsecaccount_ = value;
-  // @@protoc_insertion_point(field_set:Trd_GetAccList.C2S.needGeneralSecAccount)
 }
 
 // -------------------------------------------------------------------

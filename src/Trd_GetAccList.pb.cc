@@ -138,11 +138,7 @@ const ::google::protobuf::uint32 TableStruct::offsets[] GOOGLE_PROTOBUF_ATTRIBUT
   ~0u,  // no _oneof_case_
   ~0u,  // no _weak_field_map_
   GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(::Trd_GetAccList::C2S, userid_),
-  GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(::Trd_GetAccList::C2S, trdcategory_),
-  GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(::Trd_GetAccList::C2S, needgeneralsecaccount_),
   0,
-  1,
-  2,
   GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(::Trd_GetAccList::S2C, _has_bits_),
   GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(::Trd_GetAccList::S2C, _internal_metadata_),
   ~0u,  // no _extensions_
@@ -172,10 +168,10 @@ const ::google::protobuf::uint32 TableStruct::offsets[] GOOGLE_PROTOBUF_ATTRIBUT
   1,
 };
 static const ::google::protobuf::internal::MigrationSchema schemas[] GOOGLE_PROTOBUF_ATTRIBUTE_SECTION_VARIABLE(protodesc_cold) = {
-  { 0, 8, sizeof(::Trd_GetAccList::C2S)},
-  { 11, 17, sizeof(::Trd_GetAccList::S2C)},
-  { 18, 24, sizeof(::Trd_GetAccList::Request)},
-  { 25, 34, sizeof(::Trd_GetAccList::Response)},
+  { 0, 6, sizeof(::Trd_GetAccList::C2S)},
+  { 7, 13, sizeof(::Trd_GetAccList::S2C)},
+  { 14, 20, sizeof(::Trd_GetAccList::Request)},
+  { 21, 30, sizeof(::Trd_GetAccList::Response)},
 };
 
 static ::google::protobuf::Message const * const file_default_instances[] = {
@@ -208,19 +204,16 @@ void AddDescriptorsImpl() {
   InitDefaults();
   static const char descriptor[] GOOGLE_PROTOBUF_ATTRIBUTE_SECTION_VARIABLE(protodesc_cold) = {
       "\n\024Trd_GetAccList.proto\022\016Trd_GetAccList\032\014"
-      "Common.proto\032\020Trd_Common.proto\"I\n\003C2S\022\016\n"
-      "\006userID\030\001 \002(\004\022\023\n\013trdCategory\030\002 \001(\005\022\035\n\025ne"
-      "edGeneralSecAccount\030\003 \001(\010\"*\n\003S2C\022#\n\007accL"
-      "ist\030\001 \003(\0132\022.Trd_Common.TrdAcc\"+\n\007Request"
-      "\022 \n\003c2s\030\001 \002(\0132\023.Trd_GetAccList.C2S\"d\n\010Re"
-      "sponse\022\025\n\007retType\030\001 \002(\005:\004-400\022\016\n\006retMsg\030"
-      "\002 \001(\t\022\017\n\007errCode\030\003 \001(\005\022 \n\003s2c\030\004 \001(\0132\023.Tr"
-      "d_GetAccList.S2CBD\n\023com.futu.openapi.pbZ"
-      "-github.com/futuopen/ftapi4go/pb/trdgeta"
-      "cclist"
+      "Common.proto\032\020Trd_Common.proto\"\025\n\003C2S\022\016\n"
+      "\006userID\030\001 \002(\004\"*\n\003S2C\022#\n\007accList\030\001 \003(\0132\022."
+      "Trd_Common.TrdAcc\"+\n\007Request\022 \n\003c2s\030\001 \002("
+      "\0132\023.Trd_GetAccList.C2S\"d\n\010Response\022\025\n\007re"
+      "tType\030\001 \002(\005:\004-400\022\016\n\006retMsg\030\002 \001(\t\022\017\n\007err"
+      "Code\030\003 \001(\005\022 \n\003s2c\030\004 \001(\0132\023.Trd_GetAccList"
+      ".S2C"
   };
   ::google::protobuf::DescriptorPool::InternalAddGeneratedFile(
-      descriptor, 406);
+      descriptor, 284);
   ::google::protobuf::MessageFactory::InternalRegisterGeneratedFile(
     "Trd_GetAccList.proto", &protobuf_RegisterTypes);
   ::protobuf_Common_2eproto::AddDescriptors();
@@ -246,8 +239,6 @@ void C2S::InitAsDefaultInstance() {
 }
 #if !defined(_MSC_VER) || _MSC_VER >= 1900
 const int C2S::kUserIDFieldNumber;
-const int C2S::kTrdCategoryFieldNumber;
-const int C2S::kNeedGeneralSecAccountFieldNumber;
 #endif  // !defined(_MSC_VER) || _MSC_VER >= 1900
 
 C2S::C2S()
@@ -264,17 +255,13 @@ C2S::C2S(const C2S& from)
       _has_bits_(from._has_bits_),
       _cached_size_(0) {
   _internal_metadata_.MergeFrom(from._internal_metadata_);
-  ::memcpy(&userid_, &from.userid_,
-    static_cast<size_t>(reinterpret_cast<char*>(&needgeneralsecaccount_) -
-    reinterpret_cast<char*>(&userid_)) + sizeof(needgeneralsecaccount_));
+  userid_ = from.userid_;
   // @@protoc_insertion_point(copy_constructor:Trd_GetAccList.C2S)
 }
 
 void C2S::SharedCtor() {
   _cached_size_ = 0;
-  ::memset(&userid_, 0, static_cast<size_t>(
-      reinterpret_cast<char*>(&needgeneralsecaccount_) -
-      reinterpret_cast<char*>(&userid_)) + sizeof(needgeneralsecaccount_));
+  userid_ = GOOGLE_ULONGLONG(0);
 }
 
 C2S::~C2S() {
@@ -314,12 +301,7 @@ void C2S::Clear() {
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
 
-  cached_has_bits = _has_bits_[0];
-  if (cached_has_bits & 7u) {
-    ::memset(&userid_, 0, static_cast<size_t>(
-        reinterpret_cast<char*>(&needgeneralsecaccount_) -
-        reinterpret_cast<char*>(&userid_)) + sizeof(needgeneralsecaccount_));
-  }
+  userid_ = GOOGLE_ULONGLONG(0);
   _has_bits_.Clear();
   _internal_metadata_.Clear();
 }
@@ -342,34 +324,6 @@ bool C2S::MergePartialFromCodedStream(
           DO_((::google::protobuf::internal::WireFormatLite::ReadPrimitive<
                    ::google::protobuf::uint64, ::google::protobuf::internal::WireFormatLite::TYPE_UINT64>(
                  input, &userid_)));
-        } else {
-          goto handle_unusual;
-        }
-        break;
-      }
-
-      // optional int32 trdCategory = 2;
-      case 2: {
-        if (static_cast< ::google::protobuf::uint8>(tag) ==
-            static_cast< ::google::protobuf::uint8>(16u /* 16 & 0xFF */)) {
-          set_has_trdcategory();
-          DO_((::google::protobuf::internal::WireFormatLite::ReadPrimitive<
-                   ::google::protobuf::int32, ::google::protobuf::internal::WireFormatLite::TYPE_INT32>(
-                 input, &trdcategory_)));
-        } else {
-          goto handle_unusual;
-        }
-        break;
-      }
-
-      // optional bool needGeneralSecAccount = 3;
-      case 3: {
-        if (static_cast< ::google::protobuf::uint8>(tag) ==
-            static_cast< ::google::protobuf::uint8>(24u /* 24 & 0xFF */)) {
-          set_has_needgeneralsecaccount();
-          DO_((::google::protobuf::internal::WireFormatLite::ReadPrimitive<
-                   bool, ::google::protobuf::internal::WireFormatLite::TYPE_BOOL>(
-                 input, &needgeneralsecaccount_)));
         } else {
           goto handle_unusual;
         }
@@ -408,16 +362,6 @@ void C2S::SerializeWithCachedSizes(
     ::google::protobuf::internal::WireFormatLite::WriteUInt64(1, this->userid(), output);
   }
 
-  // optional int32 trdCategory = 2;
-  if (cached_has_bits & 0x00000002u) {
-    ::google::protobuf::internal::WireFormatLite::WriteInt32(2, this->trdcategory(), output);
-  }
-
-  // optional bool needGeneralSecAccount = 3;
-  if (cached_has_bits & 0x00000004u) {
-    ::google::protobuf::internal::WireFormatLite::WriteBool(3, this->needgeneralsecaccount(), output);
-  }
-
   if (_internal_metadata_.have_unknown_fields()) {
     ::google::protobuf::internal::WireFormat::SerializeUnknownFields(
         _internal_metadata_.unknown_fields(), output);
@@ -436,16 +380,6 @@ void C2S::SerializeWithCachedSizes(
   // required uint64 userID = 1;
   if (cached_has_bits & 0x00000001u) {
     target = ::google::protobuf::internal::WireFormatLite::WriteUInt64ToArray(1, this->userid(), target);
-  }
-
-  // optional int32 trdCategory = 2;
-  if (cached_has_bits & 0x00000002u) {
-    target = ::google::protobuf::internal::WireFormatLite::WriteInt32ToArray(2, this->trdcategory(), target);
-  }
-
-  // optional bool needGeneralSecAccount = 3;
-  if (cached_has_bits & 0x00000004u) {
-    target = ::google::protobuf::internal::WireFormatLite::WriteBoolToArray(3, this->needgeneralsecaccount(), target);
   }
 
   if (_internal_metadata_.have_unknown_fields()) {
@@ -470,20 +404,6 @@ size_t C2S::ByteSizeLong() const {
     total_size += 1 +
       ::google::protobuf::internal::WireFormatLite::UInt64Size(
         this->userid());
-  }
-  if (_has_bits_[0 / 32] & 6u) {
-    // optional int32 trdCategory = 2;
-    if (has_trdcategory()) {
-      total_size += 1 +
-        ::google::protobuf::internal::WireFormatLite::Int32Size(
-          this->trdcategory());
-    }
-
-    // optional bool needGeneralSecAccount = 3;
-    if (has_needgeneralsecaccount()) {
-      total_size += 1 + 1;
-    }
-
   }
   int cached_size = ::google::protobuf::internal::ToCachedSize(total_size);
   GOOGLE_SAFE_CONCURRENT_WRITES_BEGIN();
@@ -514,18 +434,8 @@ void C2S::MergeFrom(const C2S& from) {
   ::google::protobuf::uint32 cached_has_bits = 0;
   (void) cached_has_bits;
 
-  cached_has_bits = from._has_bits_[0];
-  if (cached_has_bits & 7u) {
-    if (cached_has_bits & 0x00000001u) {
-      userid_ = from.userid_;
-    }
-    if (cached_has_bits & 0x00000002u) {
-      trdcategory_ = from.trdcategory_;
-    }
-    if (cached_has_bits & 0x00000004u) {
-      needgeneralsecaccount_ = from.needgeneralsecaccount_;
-    }
-    _has_bits_[0] |= cached_has_bits;
+  if (from.has_userid()) {
+    set_userid(from.userid());
   }
 }
 
@@ -555,8 +465,6 @@ void C2S::Swap(C2S* other) {
 void C2S::InternalSwap(C2S* other) {
   using std::swap;
   swap(userid_, other->userid_);
-  swap(trdcategory_, other->trdcategory_);
-  swap(needgeneralsecaccount_, other->needgeneralsecaccount_);
   swap(_has_bits_[0], other->_has_bits_[0]);
   _internal_metadata_.Swap(&other->_internal_metadata_);
   swap(_cached_size_, other->_cached_size_);

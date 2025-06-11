@@ -138,10 +138,8 @@ const ::google::protobuf::uint32 TableStruct::offsets[] GOOGLE_PROTOBUF_ATTRIBUT
   ~0u,  // no _weak_field_map_
   GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(::Trd_UnlockTrade::C2S, unlock_),
   GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(::Trd_UnlockTrade::C2S, pwdmd5_),
-  GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(::Trd_UnlockTrade::C2S, securityfirm_),
   1,
   0,
-  2,
   GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(::Trd_UnlockTrade::S2C, _has_bits_),
   GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(::Trd_UnlockTrade::S2C, _internal_metadata_),
   ~0u,  // no _extensions_
@@ -169,10 +167,10 @@ const ::google::protobuf::uint32 TableStruct::offsets[] GOOGLE_PROTOBUF_ATTRIBUT
   1,
 };
 static const ::google::protobuf::internal::MigrationSchema schemas[] GOOGLE_PROTOBUF_ATTRIBUTE_SECTION_VARIABLE(protodesc_cold) = {
-  { 0, 8, sizeof(::Trd_UnlockTrade::C2S)},
-  { 11, 16, sizeof(::Trd_UnlockTrade::S2C)},
-  { 16, 22, sizeof(::Trd_UnlockTrade::Request)},
-  { 23, 32, sizeof(::Trd_UnlockTrade::Response)},
+  { 0, 7, sizeof(::Trd_UnlockTrade::C2S)},
+  { 9, 14, sizeof(::Trd_UnlockTrade::S2C)},
+  { 14, 20, sizeof(::Trd_UnlockTrade::Request)},
+  { 21, 30, sizeof(::Trd_UnlockTrade::Response)},
 };
 
 static ::google::protobuf::Message const * const file_default_instances[] = {
@@ -205,17 +203,15 @@ void AddDescriptorsImpl() {
   InitDefaults();
   static const char descriptor[] GOOGLE_PROTOBUF_ATTRIBUTE_SECTION_VARIABLE(protodesc_cold) = {
       "\n\025Trd_UnlockTrade.proto\022\017Trd_UnlockTrade"
-      "\032\014Common.proto\";\n\003C2S\022\016\n\006unlock\030\001 \002(\010\022\016\n"
-      "\006pwdMD5\030\002 \001(\t\022\024\n\014securityFirm\030\003 \001(\005\"\005\n\003S"
-      "2C\",\n\007Request\022!\n\003c2s\030\001 \002(\0132\024.Trd_UnlockT"
-      "rade.C2S\"e\n\010Response\022\025\n\007retType\030\001 \002(\005:\004-"
-      "400\022\016\n\006retMsg\030\002 \001(\t\022\017\n\007errCode\030\003 \001(\005\022!\n\003"
-      "s2c\030\004 \001(\0132\024.Trd_UnlockTrade.S2CBE\n\023com.f"
-      "utu.openapi.pbZ.github.com/futuopen/ftap"
-      "i4go/pb/trdunlocktrade"
+      "\032\014Common.proto\"%\n\003C2S\022\016\n\006unlock\030\001 \002(\010\022\016\n"
+      "\006pwdMD5\030\002 \001(\t\"\005\n\003S2C\",\n\007Request\022!\n\003c2s\030\001"
+      " \002(\0132\024.Trd_UnlockTrade.C2S\"e\n\010Response\022\025"
+      "\n\007retType\030\001 \002(\005:\004-400\022\016\n\006retMsg\030\002 \001(\t\022\017\n"
+      "\007errCode\030\003 \001(\005\022!\n\003s2c\030\004 \001(\0132\024.Trd_Unlock"
+      "Trade.S2C"
   };
   ::google::protobuf::DescriptorPool::InternalAddGeneratedFile(
-      descriptor, 342);
+      descriptor, 249);
   ::google::protobuf::MessageFactory::InternalRegisterGeneratedFile(
     "Trd_UnlockTrade.proto", &protobuf_RegisterTypes);
   ::protobuf_Common_2eproto::AddDescriptors();
@@ -241,7 +237,6 @@ void C2S::InitAsDefaultInstance() {
 #if !defined(_MSC_VER) || _MSC_VER >= 1900
 const int C2S::kUnlockFieldNumber;
 const int C2S::kPwdMD5FieldNumber;
-const int C2S::kSecurityFirmFieldNumber;
 #endif  // !defined(_MSC_VER) || _MSC_VER >= 1900
 
 C2S::C2S()
@@ -262,18 +257,14 @@ C2S::C2S(const C2S& from)
   if (from.has_pwdmd5()) {
     pwdmd5_.AssignWithDefault(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), from.pwdmd5_);
   }
-  ::memcpy(&unlock_, &from.unlock_,
-    static_cast<size_t>(reinterpret_cast<char*>(&securityfirm_) -
-    reinterpret_cast<char*>(&unlock_)) + sizeof(securityfirm_));
+  unlock_ = from.unlock_;
   // @@protoc_insertion_point(copy_constructor:Trd_UnlockTrade.C2S)
 }
 
 void C2S::SharedCtor() {
   _cached_size_ = 0;
   pwdmd5_.UnsafeSetDefault(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
-  ::memset(&unlock_, 0, static_cast<size_t>(
-      reinterpret_cast<char*>(&securityfirm_) -
-      reinterpret_cast<char*>(&unlock_)) + sizeof(securityfirm_));
+  unlock_ = false;
 }
 
 C2S::~C2S() {
@@ -319,11 +310,7 @@ void C2S::Clear() {
     GOOGLE_DCHECK(!pwdmd5_.IsDefault(&::google::protobuf::internal::GetEmptyStringAlreadyInited()));
     (*pwdmd5_.UnsafeRawStringPointer())->clear();
   }
-  if (cached_has_bits & 6u) {
-    ::memset(&unlock_, 0, static_cast<size_t>(
-        reinterpret_cast<char*>(&securityfirm_) -
-        reinterpret_cast<char*>(&unlock_)) + sizeof(securityfirm_));
-  }
+  unlock_ = false;
   _has_bits_.Clear();
   _internal_metadata_.Clear();
 }
@@ -362,20 +349,6 @@ bool C2S::MergePartialFromCodedStream(
             this->pwdmd5().data(), static_cast<int>(this->pwdmd5().length()),
             ::google::protobuf::internal::WireFormat::PARSE,
             "Trd_UnlockTrade.C2S.pwdMD5");
-        } else {
-          goto handle_unusual;
-        }
-        break;
-      }
-
-      // optional int32 securityFirm = 3;
-      case 3: {
-        if (static_cast< ::google::protobuf::uint8>(tag) ==
-            static_cast< ::google::protobuf::uint8>(24u /* 24 & 0xFF */)) {
-          set_has_securityfirm();
-          DO_((::google::protobuf::internal::WireFormatLite::ReadPrimitive<
-                   ::google::protobuf::int32, ::google::protobuf::internal::WireFormatLite::TYPE_INT32>(
-                 input, &securityfirm_)));
         } else {
           goto handle_unusual;
         }
@@ -424,11 +397,6 @@ void C2S::SerializeWithCachedSizes(
       2, this->pwdmd5(), output);
   }
 
-  // optional int32 securityFirm = 3;
-  if (cached_has_bits & 0x00000004u) {
-    ::google::protobuf::internal::WireFormatLite::WriteInt32(3, this->securityfirm(), output);
-  }
-
   if (_internal_metadata_.have_unknown_fields()) {
     ::google::protobuf::internal::WireFormat::SerializeUnknownFields(
         _internal_metadata_.unknown_fields(), output);
@@ -460,11 +428,6 @@ void C2S::SerializeWithCachedSizes(
         2, this->pwdmd5(), target);
   }
 
-  // optional int32 securityFirm = 3;
-  if (cached_has_bits & 0x00000004u) {
-    target = ::google::protobuf::internal::WireFormatLite::WriteInt32ToArray(3, this->securityfirm(), target);
-  }
-
   if (_internal_metadata_.have_unknown_fields()) {
     target = ::google::protobuf::internal::WireFormat::SerializeUnknownFieldsToArray(
         _internal_metadata_.unknown_fields(), target);
@@ -491,13 +454,6 @@ size_t C2S::ByteSizeLong() const {
     total_size += 1 +
       ::google::protobuf::internal::WireFormatLite::StringSize(
         this->pwdmd5());
-  }
-
-  // optional int32 securityFirm = 3;
-  if (has_securityfirm()) {
-    total_size += 1 +
-      ::google::protobuf::internal::WireFormatLite::Int32Size(
-        this->securityfirm());
   }
 
   int cached_size = ::google::protobuf::internal::ToCachedSize(total_size);
@@ -530,16 +486,13 @@ void C2S::MergeFrom(const C2S& from) {
   (void) cached_has_bits;
 
   cached_has_bits = from._has_bits_[0];
-  if (cached_has_bits & 7u) {
+  if (cached_has_bits & 3u) {
     if (cached_has_bits & 0x00000001u) {
       set_has_pwdmd5();
       pwdmd5_.AssignWithDefault(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), from.pwdmd5_);
     }
     if (cached_has_bits & 0x00000002u) {
       unlock_ = from.unlock_;
-    }
-    if (cached_has_bits & 0x00000004u) {
-      securityfirm_ = from.securityfirm_;
     }
     _has_bits_[0] |= cached_has_bits;
   }
@@ -572,7 +525,6 @@ void C2S::InternalSwap(C2S* other) {
   using std::swap;
   pwdmd5_.Swap(&other->pwdmd5_);
   swap(unlock_, other->unlock_);
-  swap(securityfirm_, other->securityfirm_);
   swap(_has_bits_[0], other->_has_bits_[0]);
   _internal_metadata_.Swap(&other->_internal_metadata_);
   swap(_cached_size_, other->_cached_size_);

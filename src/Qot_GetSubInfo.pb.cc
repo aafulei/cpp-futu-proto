@@ -215,12 +215,10 @@ void AddDescriptorsImpl() {
       "\005\"+\n\007Request\022 \n\003c2s\030\001 \002(\0132\023.Qot_GetSubIn"
       "fo.C2S\"d\n\010Response\022\025\n\007retType\030\001 \002(\005:\004-40"
       "0\022\016\n\006retMsg\030\002 \001(\t\022\017\n\007errCode\030\003 \001(\005\022 \n\003s2"
-      "c\030\004 \001(\0132\023.Qot_GetSubInfo.S2CBD\n\023com.futu"
-      ".openapi.pbZ-github.com/futuopen/ftapi4g"
-      "o/pb/qotgetsubinfo"
+      "c\030\004 \001(\0132\023.Qot_GetSubInfo.S2C"
   };
   ::google::protobuf::DescriptorPool::InternalAddGeneratedFile(
-      descriptor, 418);
+      descriptor, 348);
   ::google::protobuf::MessageFactory::InternalRegisterGeneratedFile(
     "Qot_GetSubInfo.proto", &protobuf_RegisterTypes);
   ::protobuf_Common_2eproto::AddDescriptors();

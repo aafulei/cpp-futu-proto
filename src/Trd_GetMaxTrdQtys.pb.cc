@@ -147,16 +147,14 @@ const ::google::protobuf::uint32 TableStruct::offsets[] GOOGLE_PROTOBUF_ATTRIBUT
   GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(::Trd_GetMaxTrdQtys::C2S, adjustprice_),
   GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(::Trd_GetMaxTrdQtys::C2S, adjustsideandlimit_),
   GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(::Trd_GetMaxTrdQtys::C2S, secmarket_),
-  GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(::Trd_GetMaxTrdQtys::C2S, orderidex_),
-  2,
-  4,
-  0,
-  3,
-  6,
-  5,
-  7,
-  8,
   1,
+  3,
+  0,
+  2,
+  5,
+  4,
+  6,
+  7,
   GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(::Trd_GetMaxTrdQtys::S2C, _has_bits_),
   GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(::Trd_GetMaxTrdQtys::S2C, _internal_metadata_),
   ~0u,  // no _extensions_
@@ -188,10 +186,10 @@ const ::google::protobuf::uint32 TableStruct::offsets[] GOOGLE_PROTOBUF_ATTRIBUT
   1,
 };
 static const ::google::protobuf::internal::MigrationSchema schemas[] GOOGLE_PROTOBUF_ATTRIBUTE_SECTION_VARIABLE(protodesc_cold) = {
-  { 0, 14, sizeof(::Trd_GetMaxTrdQtys::C2S)},
-  { 23, 30, sizeof(::Trd_GetMaxTrdQtys::S2C)},
-  { 32, 38, sizeof(::Trd_GetMaxTrdQtys::Request)},
-  { 39, 48, sizeof(::Trd_GetMaxTrdQtys::Response)},
+  { 0, 13, sizeof(::Trd_GetMaxTrdQtys::C2S)},
+  { 21, 28, sizeof(::Trd_GetMaxTrdQtys::S2C)},
+  { 30, 36, sizeof(::Trd_GetMaxTrdQtys::Request)},
+  { 37, 46, sizeof(::Trd_GetMaxTrdQtys::Response)},
 };
 
 static ::google::protobuf::Message const * const file_default_instances[] = {
@@ -224,23 +222,21 @@ void AddDescriptorsImpl() {
   InitDefaults();
   static const char descriptor[] GOOGLE_PROTOBUF_ATTRIBUTE_SECTION_VARIABLE(protodesc_cold) = {
       "\n\027Trd_GetMaxTrdQtys.proto\022\021Trd_GetMaxTrd"
-      "Qtys\032\014Common.proto\032\020Trd_Common.proto\"\304\001\n"
+      "Qtys\032\014Common.proto\032\020Trd_Common.proto\"\261\001\n"
       "\003C2S\022%\n\006header\030\001 \002(\0132\025.Trd_Common.TrdHea"
       "der\022\021\n\torderType\030\002 \002(\005\022\014\n\004code\030\003 \002(\t\022\r\n\005"
       "price\030\004 \002(\001\022\017\n\007orderID\030\005 \001(\004\022\023\n\013adjustPr"
       "ice\030\006 \001(\010\022\032\n\022adjustSideAndLimit\030\007 \001(\001\022\021\n"
-      "\tsecMarket\030\010 \001(\005\022\021\n\torderIDEx\030\t \001(\t\"X\n\003S"
-      "2C\022%\n\006header\030\001 \002(\0132\025.Trd_Common.TrdHeade"
-      "r\022*\n\nmaxTrdQtys\030\002 \001(\0132\026.Trd_Common.MaxTr"
-      "dQtys\".\n\007Request\022#\n\003c2s\030\001 \002(\0132\026.Trd_GetM"
-      "axTrdQtys.C2S\"g\n\010Response\022\025\n\007retType\030\001 \002"
-      "(\005:\004-400\022\016\n\006retMsg\030\002 \001(\t\022\017\n\007errCode\030\003 \001("
-      "\005\022#\n\003s2c\030\004 \001(\0132\026.Trd_GetMaxTrdQtys.S2CBG"
-      "\n\023com.futu.openapi.pbZ0github.com/futuop"
-      "en/ftapi4go/pb/trdgetmaxtrdqtys"
+      "\tsecMarket\030\010 \001(\005\"X\n\003S2C\022%\n\006header\030\001 \002(\0132"
+      "\025.Trd_Common.TrdHeader\022*\n\nmaxTrdQtys\030\002 \001"
+      "(\0132\026.Trd_Common.MaxTrdQtys\".\n\007Request\022#\n"
+      "\003c2s\030\001 \002(\0132\026.Trd_GetMaxTrdQtys.C2S\"g\n\010Re"
+      "sponse\022\025\n\007retType\030\001 \002(\005:\004-400\022\016\n\006retMsg\030"
+      "\002 \001(\t\022\017\n\007errCode\030\003 \001(\005\022#\n\003s2c\030\004 \001(\0132\026.Tr"
+      "d_GetMaxTrdQtys.S2C"
   };
   ::google::protobuf::DescriptorPool::InternalAddGeneratedFile(
-      descriptor, 591);
+      descriptor, 499);
   ::google::protobuf::MessageFactory::InternalRegisterGeneratedFile(
     "Trd_GetMaxTrdQtys.proto", &protobuf_RegisterTypes);
   ::protobuf_Common_2eproto::AddDescriptors();
@@ -279,7 +275,6 @@ const int C2S::kOrderIDFieldNumber;
 const int C2S::kAdjustPriceFieldNumber;
 const int C2S::kAdjustSideAndLimitFieldNumber;
 const int C2S::kSecMarketFieldNumber;
-const int C2S::kOrderIDExFieldNumber;
 #endif  // !defined(_MSC_VER) || _MSC_VER >= 1900
 
 C2S::C2S()
@@ -300,10 +295,6 @@ C2S::C2S(const C2S& from)
   if (from.has_code()) {
     code_.AssignWithDefault(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), from.code_);
   }
-  orderidex_.UnsafeSetDefault(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
-  if (from.has_orderidex()) {
-    orderidex_.AssignWithDefault(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), from.orderidex_);
-  }
   if (from.has_header()) {
     header_ = new ::Trd_Common::TrdHeader(*from.header_);
   } else {
@@ -318,7 +309,6 @@ C2S::C2S(const C2S& from)
 void C2S::SharedCtor() {
   _cached_size_ = 0;
   code_.UnsafeSetDefault(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
-  orderidex_.UnsafeSetDefault(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
   ::memset(&header_, 0, static_cast<size_t>(
       reinterpret_cast<char*>(&secmarket_) -
       reinterpret_cast<char*>(&header_)) + sizeof(secmarket_));
@@ -331,7 +321,6 @@ C2S::~C2S() {
 
 void C2S::SharedDtor() {
   code_.DestroyNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
-  orderidex_.DestroyNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
   if (this != internal_default_instance()) delete header_;
 }
 
@@ -365,26 +354,21 @@ void C2S::Clear() {
   (void) cached_has_bits;
 
   cached_has_bits = _has_bits_[0];
-  if (cached_has_bits & 7u) {
+  if (cached_has_bits & 3u) {
     if (cached_has_bits & 0x00000001u) {
       GOOGLE_DCHECK(!code_.IsDefault(&::google::protobuf::internal::GetEmptyStringAlreadyInited()));
       (*code_.UnsafeRawStringPointer())->clear();
     }
     if (cached_has_bits & 0x00000002u) {
-      GOOGLE_DCHECK(!orderidex_.IsDefault(&::google::protobuf::internal::GetEmptyStringAlreadyInited()));
-      (*orderidex_.UnsafeRawStringPointer())->clear();
-    }
-    if (cached_has_bits & 0x00000004u) {
       GOOGLE_DCHECK(header_ != NULL);
       header_->Clear();
     }
   }
-  if (cached_has_bits & 248u) {
+  if (cached_has_bits & 252u) {
     ::memset(&price_, 0, static_cast<size_t>(
-        reinterpret_cast<char*>(&adjustsideandlimit_) -
-        reinterpret_cast<char*>(&price_)) + sizeof(adjustsideandlimit_));
+        reinterpret_cast<char*>(&secmarket_) -
+        reinterpret_cast<char*>(&price_)) + sizeof(secmarket_));
   }
-  secmarket_ = 0;
   _has_bits_.Clear();
   _internal_metadata_.Clear();
 }
@@ -511,22 +495,6 @@ bool C2S::MergePartialFromCodedStream(
         break;
       }
 
-      // optional string orderIDEx = 9;
-      case 9: {
-        if (static_cast< ::google::protobuf::uint8>(tag) ==
-            static_cast< ::google::protobuf::uint8>(74u /* 74 & 0xFF */)) {
-          DO_(::google::protobuf::internal::WireFormatLite::ReadString(
-                input, this->mutable_orderidex()));
-          ::google::protobuf::internal::WireFormat::VerifyUTF8StringNamedField(
-            this->orderidex().data(), static_cast<int>(this->orderidex().length()),
-            ::google::protobuf::internal::WireFormat::PARSE,
-            "Trd_GetMaxTrdQtys.C2S.orderIDEx");
-        } else {
-          goto handle_unusual;
-        }
-        break;
-      }
-
       default: {
       handle_unusual:
         if (tag == 0) {
@@ -555,13 +523,13 @@ void C2S::SerializeWithCachedSizes(
 
   cached_has_bits = _has_bits_[0];
   // required .Trd_Common.TrdHeader header = 1;
-  if (cached_has_bits & 0x00000004u) {
+  if (cached_has_bits & 0x00000002u) {
     ::google::protobuf::internal::WireFormatLite::WriteMessageMaybeToArray(
       1, *this->header_, output);
   }
 
   // required int32 orderType = 2;
-  if (cached_has_bits & 0x00000010u) {
+  if (cached_has_bits & 0x00000008u) {
     ::google::protobuf::internal::WireFormatLite::WriteInt32(2, this->ordertype(), output);
   }
 
@@ -576,38 +544,28 @@ void C2S::SerializeWithCachedSizes(
   }
 
   // required double price = 4;
-  if (cached_has_bits & 0x00000008u) {
+  if (cached_has_bits & 0x00000004u) {
     ::google::protobuf::internal::WireFormatLite::WriteDouble(4, this->price(), output);
   }
 
   // optional uint64 orderID = 5;
-  if (cached_has_bits & 0x00000040u) {
+  if (cached_has_bits & 0x00000020u) {
     ::google::protobuf::internal::WireFormatLite::WriteUInt64(5, this->orderid(), output);
   }
 
   // optional bool adjustPrice = 6;
-  if (cached_has_bits & 0x00000020u) {
+  if (cached_has_bits & 0x00000010u) {
     ::google::protobuf::internal::WireFormatLite::WriteBool(6, this->adjustprice(), output);
   }
 
   // optional double adjustSideAndLimit = 7;
-  if (cached_has_bits & 0x00000080u) {
+  if (cached_has_bits & 0x00000040u) {
     ::google::protobuf::internal::WireFormatLite::WriteDouble(7, this->adjustsideandlimit(), output);
   }
 
   // optional int32 secMarket = 8;
-  if (cached_has_bits & 0x00000100u) {
+  if (cached_has_bits & 0x00000080u) {
     ::google::protobuf::internal::WireFormatLite::WriteInt32(8, this->secmarket(), output);
-  }
-
-  // optional string orderIDEx = 9;
-  if (cached_has_bits & 0x00000002u) {
-    ::google::protobuf::internal::WireFormat::VerifyUTF8StringNamedField(
-      this->orderidex().data(), static_cast<int>(this->orderidex().length()),
-      ::google::protobuf::internal::WireFormat::SERIALIZE,
-      "Trd_GetMaxTrdQtys.C2S.orderIDEx");
-    ::google::protobuf::internal::WireFormatLite::WriteStringMaybeAliased(
-      9, this->orderidex(), output);
   }
 
   if (_internal_metadata_.have_unknown_fields()) {
@@ -626,14 +584,14 @@ void C2S::SerializeWithCachedSizes(
 
   cached_has_bits = _has_bits_[0];
   // required .Trd_Common.TrdHeader header = 1;
-  if (cached_has_bits & 0x00000004u) {
+  if (cached_has_bits & 0x00000002u) {
     target = ::google::protobuf::internal::WireFormatLite::
       InternalWriteMessageToArray(
         1, *this->header_, deterministic, target);
   }
 
   // required int32 orderType = 2;
-  if (cached_has_bits & 0x00000010u) {
+  if (cached_has_bits & 0x00000008u) {
     target = ::google::protobuf::internal::WireFormatLite::WriteInt32ToArray(2, this->ordertype(), target);
   }
 
@@ -649,39 +607,28 @@ void C2S::SerializeWithCachedSizes(
   }
 
   // required double price = 4;
-  if (cached_has_bits & 0x00000008u) {
+  if (cached_has_bits & 0x00000004u) {
     target = ::google::protobuf::internal::WireFormatLite::WriteDoubleToArray(4, this->price(), target);
   }
 
   // optional uint64 orderID = 5;
-  if (cached_has_bits & 0x00000040u) {
+  if (cached_has_bits & 0x00000020u) {
     target = ::google::protobuf::internal::WireFormatLite::WriteUInt64ToArray(5, this->orderid(), target);
   }
 
   // optional bool adjustPrice = 6;
-  if (cached_has_bits & 0x00000020u) {
+  if (cached_has_bits & 0x00000010u) {
     target = ::google::protobuf::internal::WireFormatLite::WriteBoolToArray(6, this->adjustprice(), target);
   }
 
   // optional double adjustSideAndLimit = 7;
-  if (cached_has_bits & 0x00000080u) {
+  if (cached_has_bits & 0x00000040u) {
     target = ::google::protobuf::internal::WireFormatLite::WriteDoubleToArray(7, this->adjustsideandlimit(), target);
   }
 
   // optional int32 secMarket = 8;
-  if (cached_has_bits & 0x00000100u) {
+  if (cached_has_bits & 0x00000080u) {
     target = ::google::protobuf::internal::WireFormatLite::WriteInt32ToArray(8, this->secmarket(), target);
-  }
-
-  // optional string orderIDEx = 9;
-  if (cached_has_bits & 0x00000002u) {
-    ::google::protobuf::internal::WireFormat::VerifyUTF8StringNamedField(
-      this->orderidex().data(), static_cast<int>(this->orderidex().length()),
-      ::google::protobuf::internal::WireFormat::SERIALIZE,
-      "Trd_GetMaxTrdQtys.C2S.orderIDEx");
-    target =
-      ::google::protobuf::internal::WireFormatLite::WriteStringToArray(
-        9, this->orderidex(), target);
   }
 
   if (_internal_metadata_.have_unknown_fields()) {
@@ -733,7 +680,7 @@ size_t C2S::ByteSizeLong() const {
       ::google::protobuf::internal::WireFormat::ComputeUnknownFieldsSize(
         _internal_metadata_.unknown_fields());
   }
-  if (((_has_bits_[0] & 0x0000001d) ^ 0x0000001d) == 0) {  // All required fields are present.
+  if (((_has_bits_[0] & 0x0000000f) ^ 0x0000000f) == 0) {  // All required fields are present.
     // required string code = 3;
     total_size += 1 +
       ::google::protobuf::internal::WireFormatLite::StringSize(
@@ -755,14 +702,7 @@ size_t C2S::ByteSizeLong() const {
   } else {
     total_size += RequiredFieldsByteSizeFallback();
   }
-  // optional string orderIDEx = 9;
-  if (has_orderidex()) {
-    total_size += 1 +
-      ::google::protobuf::internal::WireFormatLite::StringSize(
-        this->orderidex());
-  }
-
-  if (_has_bits_[0 / 32] & 224u) {
+  if (_has_bits_[0 / 32] & 240u) {
     // optional bool adjustPrice = 6;
     if (has_adjustprice()) {
       total_size += 1 + 1;
@@ -780,14 +720,14 @@ size_t C2S::ByteSizeLong() const {
       total_size += 1 + 8;
     }
 
-  }
-  // optional int32 secMarket = 8;
-  if (has_secmarket()) {
-    total_size += 1 +
-      ::google::protobuf::internal::WireFormatLite::Int32Size(
-        this->secmarket());
-  }
+    // optional int32 secMarket = 8;
+    if (has_secmarket()) {
+      total_size += 1 +
+        ::google::protobuf::internal::WireFormatLite::Int32Size(
+          this->secmarket());
+    }
 
+  }
   int cached_size = ::google::protobuf::internal::ToCachedSize(total_size);
   GOOGLE_SAFE_CONCURRENT_WRITES_BEGIN();
   _cached_size_ = cached_size;
@@ -824,31 +764,27 @@ void C2S::MergeFrom(const C2S& from) {
       code_.AssignWithDefault(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), from.code_);
     }
     if (cached_has_bits & 0x00000002u) {
-      set_has_orderidex();
-      orderidex_.AssignWithDefault(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), from.orderidex_);
-    }
-    if (cached_has_bits & 0x00000004u) {
       mutable_header()->::Trd_Common::TrdHeader::MergeFrom(from.header());
     }
-    if (cached_has_bits & 0x00000008u) {
+    if (cached_has_bits & 0x00000004u) {
       price_ = from.price_;
     }
-    if (cached_has_bits & 0x00000010u) {
+    if (cached_has_bits & 0x00000008u) {
       ordertype_ = from.ordertype_;
     }
-    if (cached_has_bits & 0x00000020u) {
+    if (cached_has_bits & 0x00000010u) {
       adjustprice_ = from.adjustprice_;
     }
-    if (cached_has_bits & 0x00000040u) {
+    if (cached_has_bits & 0x00000020u) {
       orderid_ = from.orderid_;
     }
-    if (cached_has_bits & 0x00000080u) {
+    if (cached_has_bits & 0x00000040u) {
       adjustsideandlimit_ = from.adjustsideandlimit_;
     }
+    if (cached_has_bits & 0x00000080u) {
+      secmarket_ = from.secmarket_;
+    }
     _has_bits_[0] |= cached_has_bits;
-  }
-  if (cached_has_bits & 0x00000100u) {
-    set_secmarket(from.secmarket());
   }
 }
 
@@ -867,7 +803,7 @@ void C2S::CopyFrom(const C2S& from) {
 }
 
 bool C2S::IsInitialized() const {
-  if ((_has_bits_[0] & 0x0000001d) != 0x0000001d) return false;
+  if ((_has_bits_[0] & 0x0000000f) != 0x0000000f) return false;
   if (has_header()) {
     if (!this->header_->IsInitialized()) return false;
   }
@@ -881,7 +817,6 @@ void C2S::Swap(C2S* other) {
 void C2S::InternalSwap(C2S* other) {
   using std::swap;
   code_.Swap(&other->code_);
-  orderidex_.Swap(&other->orderidex_);
   swap(header_, other->header_);
   swap(price_, other->price_);
   swap(ordertype_, other->ordertype_);

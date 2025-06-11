@@ -25,11 +25,6 @@ class PacketIDDefaultTypeInternal {
   ::google::protobuf::internal::ExplicitlyConstructed<PacketID>
       _instance;
 } _PacketID_default_instance_;
-class ProgramStatusDefaultTypeInternal {
- public:
-  ::google::protobuf::internal::ExplicitlyConstructed<ProgramStatus>
-      _instance;
-} _ProgramStatus_default_instance_;
 }  // namespace Common
 namespace protobuf_Common_2eproto {
 void InitDefaultsPacketIDImpl() {
@@ -53,29 +48,8 @@ void InitDefaultsPacketID() {
   ::google::protobuf::GoogleOnceInit(&once, &InitDefaultsPacketIDImpl);
 }
 
-void InitDefaultsProgramStatusImpl() {
-  GOOGLE_PROTOBUF_VERIFY_VERSION;
-
-#ifdef GOOGLE_PROTOBUF_ENFORCE_UNIQUENESS
-  ::google::protobuf::internal::InitProtobufDefaultsForceUnique();
-#else
-  ::google::protobuf::internal::InitProtobufDefaults();
-#endif  // GOOGLE_PROTOBUF_ENFORCE_UNIQUENESS
-  {
-    void* ptr = &::Common::_ProgramStatus_default_instance_;
-    new (ptr) ::Common::ProgramStatus();
-    ::google::protobuf::internal::OnShutdownDestroyMessage(ptr);
-  }
-  ::Common::ProgramStatus::InitAsDefaultInstance();
-}
-
-void InitDefaultsProgramStatus() {
-  static GOOGLE_PROTOBUF_DECLARE_ONCE(once);
-  ::google::protobuf::GoogleOnceInit(&once, &InitDefaultsProgramStatusImpl);
-}
-
-::google::protobuf::Metadata file_level_metadata[2];
-const ::google::protobuf::EnumDescriptor* file_level_enum_descriptors[6];
+::google::protobuf::Metadata file_level_metadata[1];
+const ::google::protobuf::EnumDescriptor* file_level_enum_descriptors[1];
 
 const ::google::protobuf::uint32 TableStruct::offsets[] GOOGLE_PROTOBUF_ATTRIBUTE_SECTION_VARIABLE(protodesc_cold) = {
   GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(::Common::PacketID, _has_bits_),
@@ -87,24 +61,13 @@ const ::google::protobuf::uint32 TableStruct::offsets[] GOOGLE_PROTOBUF_ATTRIBUT
   GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(::Common::PacketID, serialno_),
   0,
   1,
-  GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(::Common::ProgramStatus, _has_bits_),
-  GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(::Common::ProgramStatus, _internal_metadata_),
-  ~0u,  // no _extensions_
-  ~0u,  // no _oneof_case_
-  ~0u,  // no _weak_field_map_
-  GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(::Common::ProgramStatus, type_),
-  GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(::Common::ProgramStatus, strextdesc_),
-  1,
-  0,
 };
 static const ::google::protobuf::internal::MigrationSchema schemas[] GOOGLE_PROTOBUF_ATTRIBUTE_SECTION_VARIABLE(protodesc_cold) = {
   { 0, 7, sizeof(::Common::PacketID)},
-  { 9, 16, sizeof(::Common::ProgramStatus)},
 };
 
 static ::google::protobuf::Message const * const file_default_instances[] = {
   reinterpret_cast<const ::google::protobuf::Message*>(&::Common::_PacketID_default_instance_),
-  reinterpret_cast<const ::google::protobuf::Message*>(&::Common::_ProgramStatus_default_instance_),
 };
 
 void protobuf_AssignDescriptors() {
@@ -123,50 +86,20 @@ void protobuf_AssignDescriptorsOnce() {
 void protobuf_RegisterTypes(const ::std::string&) GOOGLE_PROTOBUF_ATTRIBUTE_COLD;
 void protobuf_RegisterTypes(const ::std::string&) {
   protobuf_AssignDescriptorsOnce();
-  ::google::protobuf::internal::RegisterAllTypes(file_level_metadata, 2);
+  ::google::protobuf::internal::RegisterAllTypes(file_level_metadata, 1);
 }
 
 void AddDescriptorsImpl() {
   InitDefaults();
   static const char descriptor[] GOOGLE_PROTOBUF_ATTRIBUTE_SECTION_VARIABLE(protodesc_cold) = {
       "\n\014Common.proto\022\006Common\",\n\010PacketID\022\016\n\006co"
-      "nnID\030\001 \002(\004\022\020\n\010serialNo\030\002 \002(\r\"L\n\rProgramS"
-      "tatus\022\'\n\004type\030\001 \002(\0162\031.Common.ProgramStat"
-      "usType\022\022\n\nstrExtDesc\030\002 \001(\t*\266\001\n\007RetType\022\023"
-      "\n\017RetType_Succeed\020\000\022\033\n\016RetType_Failed\020\377\377"
-      "\377\377\377\377\377\377\377\001\022\034\n\017RetType_TimeOut\020\234\377\377\377\377\377\377\377\377\001\022\037"
-      "\n\022RetType_DisConnect\020\270\376\377\377\377\377\377\377\377\001\022\034\n\017RetTy"
-      "pe_Unknown\020\360\374\377\377\377\377\377\377\377\001\022\034\n\017RetType_Invalid"
-      "\020\214\374\377\377\377\377\377\377\377\001*\203\001\n\rPacketEncAlgo\022\033\n\027PacketE"
-      "ncAlgo_FTAES_ECB\020\000\022\037\n\022PacketEncAlgo_None"
-      "\020\377\377\377\377\377\377\377\377\377\001\022\031\n\025PacketEncAlgo_AES_ECB\020\001\022\031"
-      "\n\025PacketEncAlgo_AES_CBC\020\002*4\n\010ProtoFmt\022\025\n"
-      "\021ProtoFmt_Protobuf\020\000\022\021\n\rProtoFmt_Json\020\001*"
-      "\276\001\n\017UserAttribution\022\033\n\027UserAttribution_U"
-      "nknown\020\000\022\026\n\022UserAttribution_NN\020\001\022\026\n\022User"
-      "Attribution_MM\020\002\022\026\n\022UserAttribution_SG\020\003"
-      "\022\026\n\022UserAttribution_AU\020\004\022\026\n\022UserAttribut"
-      "ion_JP\020\005\022\026\n\022UserAttribution_HK\020\006*\360\003\n\021Pro"
-      "gramStatusType\022\032\n\026ProgramStatusType_None"
-      "\020\000\022\034\n\030ProgramStatusType_Loaded\020\001\022\034\n\030Prog"
-      "ramStatusType_Loging\020\002\022\'\n#ProgramStatusT"
-      "ype_NeedPicVerifyCode\020\003\022)\n%ProgramStatus"
-      "Type_NeedPhoneVerifyCode\020\004\022!\n\035ProgramSta"
-      "tusType_LoginFailed\020\005\022!\n\035ProgramStatusTy"
-      "pe_ForceUpdate\020\006\022*\n&ProgramStatusType_Ne"
-      "ssaryDataPreparing\020\007\022(\n$ProgramStatusTyp"
-      "e_NessaryDataMissing\020\010\022\'\n#ProgramStatusT"
-      "ype_UnAgreeDisclaimer\020\t\022\033\n\027ProgramStatus"
-      "Type_Ready\020\n\022!\n\035ProgramStatusType_ForceL"
-      "ogout\020\013\022*\n&ProgramStatusType_DisclaimerP"
-      "ullFailed\020\014*e\n\007Session\022\020\n\014Session_NONE\020\000"
-      "\022\017\n\013Session_RTH\020\001\022\017\n\013Session_ETH\020\002\022\017\n\013Se"
-      "ssion_ALL\020\003\022\025\n\021Session_OVERNIGHT\020\004B=\n\023co"
-      "m.futu.openapi.pbZ&github.com/futuopen/f"
-      "tapi4go/pb/common"
+      "nnID\030\001 \002(\004\022\020\n\010serialNo\030\002 \002(\r*w\n\007RetType\022"
+      "\023\n\017RetType_Succeed\020\000\022\033\n\016RetType_Failed\020\377"
+      "\377\377\377\377\377\377\377\377\001\022\034\n\017RetType_TimeOut\020\234\377\377\377\377\377\377\377\377\001\022"
+      "\034\n\017RetType_Unknown\020\360\374\377\377\377\377\377\377\377\001"
   };
   ::google::protobuf::DescriptorPool::InternalAddGeneratedFile(
-      descriptor, 1377);
+      descriptor, 189);
   ::google::protobuf::MessageFactory::InternalRegisterGeneratedFile(
     "Common.proto", &protobuf_RegisterTypes);
 }
@@ -189,103 +122,10 @@ const ::google::protobuf::EnumDescriptor* RetType_descriptor() {
 }
 bool RetType_IsValid(int value) {
   switch (value) {
-    case -500:
     case -400:
-    case -200:
     case -100:
     case -1:
     case 0:
-      return true;
-    default:
-      return false;
-  }
-}
-
-const ::google::protobuf::EnumDescriptor* PacketEncAlgo_descriptor() {
-  protobuf_Common_2eproto::protobuf_AssignDescriptorsOnce();
-  return protobuf_Common_2eproto::file_level_enum_descriptors[1];
-}
-bool PacketEncAlgo_IsValid(int value) {
-  switch (value) {
-    case -1:
-    case 0:
-    case 1:
-    case 2:
-      return true;
-    default:
-      return false;
-  }
-}
-
-const ::google::protobuf::EnumDescriptor* ProtoFmt_descriptor() {
-  protobuf_Common_2eproto::protobuf_AssignDescriptorsOnce();
-  return protobuf_Common_2eproto::file_level_enum_descriptors[2];
-}
-bool ProtoFmt_IsValid(int value) {
-  switch (value) {
-    case 0:
-    case 1:
-      return true;
-    default:
-      return false;
-  }
-}
-
-const ::google::protobuf::EnumDescriptor* UserAttribution_descriptor() {
-  protobuf_Common_2eproto::protobuf_AssignDescriptorsOnce();
-  return protobuf_Common_2eproto::file_level_enum_descriptors[3];
-}
-bool UserAttribution_IsValid(int value) {
-  switch (value) {
-    case 0:
-    case 1:
-    case 2:
-    case 3:
-    case 4:
-    case 5:
-    case 6:
-      return true;
-    default:
-      return false;
-  }
-}
-
-const ::google::protobuf::EnumDescriptor* ProgramStatusType_descriptor() {
-  protobuf_Common_2eproto::protobuf_AssignDescriptorsOnce();
-  return protobuf_Common_2eproto::file_level_enum_descriptors[4];
-}
-bool ProgramStatusType_IsValid(int value) {
-  switch (value) {
-    case 0:
-    case 1:
-    case 2:
-    case 3:
-    case 4:
-    case 5:
-    case 6:
-    case 7:
-    case 8:
-    case 9:
-    case 10:
-    case 11:
-    case 12:
-      return true;
-    default:
-      return false;
-  }
-}
-
-const ::google::protobuf::EnumDescriptor* Session_descriptor() {
-  protobuf_Common_2eproto::protobuf_AssignDescriptorsOnce();
-  return protobuf_Common_2eproto::file_level_enum_descriptors[5];
-}
-bool Session_IsValid(int value) {
-  switch (value) {
-    case 0:
-    case 1:
-    case 2:
-    case 3:
-    case 4:
       return true;
     default:
       return false;
@@ -601,321 +441,6 @@ void PacketID::InternalSwap(PacketID* other) {
 }
 
 ::google::protobuf::Metadata PacketID::GetMetadata() const {
-  protobuf_Common_2eproto::protobuf_AssignDescriptorsOnce();
-  return ::protobuf_Common_2eproto::file_level_metadata[kIndexInFileMessages];
-}
-
-
-// ===================================================================
-
-void ProgramStatus::InitAsDefaultInstance() {
-}
-#if !defined(_MSC_VER) || _MSC_VER >= 1900
-const int ProgramStatus::kTypeFieldNumber;
-const int ProgramStatus::kStrExtDescFieldNumber;
-#endif  // !defined(_MSC_VER) || _MSC_VER >= 1900
-
-ProgramStatus::ProgramStatus()
-  : ::google::protobuf::Message(), _internal_metadata_(NULL) {
-  if (GOOGLE_PREDICT_TRUE(this != internal_default_instance())) {
-    ::protobuf_Common_2eproto::InitDefaultsProgramStatus();
-  }
-  SharedCtor();
-  // @@protoc_insertion_point(constructor:Common.ProgramStatus)
-}
-ProgramStatus::ProgramStatus(const ProgramStatus& from)
-  : ::google::protobuf::Message(),
-      _internal_metadata_(NULL),
-      _has_bits_(from._has_bits_),
-      _cached_size_(0) {
-  _internal_metadata_.MergeFrom(from._internal_metadata_);
-  strextdesc_.UnsafeSetDefault(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
-  if (from.has_strextdesc()) {
-    strextdesc_.AssignWithDefault(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), from.strextdesc_);
-  }
-  type_ = from.type_;
-  // @@protoc_insertion_point(copy_constructor:Common.ProgramStatus)
-}
-
-void ProgramStatus::SharedCtor() {
-  _cached_size_ = 0;
-  strextdesc_.UnsafeSetDefault(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
-  type_ = 0;
-}
-
-ProgramStatus::~ProgramStatus() {
-  // @@protoc_insertion_point(destructor:Common.ProgramStatus)
-  SharedDtor();
-}
-
-void ProgramStatus::SharedDtor() {
-  strextdesc_.DestroyNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
-}
-
-void ProgramStatus::SetCachedSize(int size) const {
-  GOOGLE_SAFE_CONCURRENT_WRITES_BEGIN();
-  _cached_size_ = size;
-  GOOGLE_SAFE_CONCURRENT_WRITES_END();
-}
-const ::google::protobuf::Descriptor* ProgramStatus::descriptor() {
-  ::protobuf_Common_2eproto::protobuf_AssignDescriptorsOnce();
-  return ::protobuf_Common_2eproto::file_level_metadata[kIndexInFileMessages].descriptor;
-}
-
-const ProgramStatus& ProgramStatus::default_instance() {
-  ::protobuf_Common_2eproto::InitDefaultsProgramStatus();
-  return *internal_default_instance();
-}
-
-ProgramStatus* ProgramStatus::New(::google::protobuf::Arena* arena) const {
-  ProgramStatus* n = new ProgramStatus;
-  if (arena != NULL) {
-    arena->Own(n);
-  }
-  return n;
-}
-
-void ProgramStatus::Clear() {
-// @@protoc_insertion_point(message_clear_start:Common.ProgramStatus)
-  ::google::protobuf::uint32 cached_has_bits = 0;
-  // Prevent compiler warnings about cached_has_bits being unused
-  (void) cached_has_bits;
-
-  cached_has_bits = _has_bits_[0];
-  if (cached_has_bits & 0x00000001u) {
-    GOOGLE_DCHECK(!strextdesc_.IsDefault(&::google::protobuf::internal::GetEmptyStringAlreadyInited()));
-    (*strextdesc_.UnsafeRawStringPointer())->clear();
-  }
-  type_ = 0;
-  _has_bits_.Clear();
-  _internal_metadata_.Clear();
-}
-
-bool ProgramStatus::MergePartialFromCodedStream(
-    ::google::protobuf::io::CodedInputStream* input) {
-#define DO_(EXPRESSION) if (!GOOGLE_PREDICT_TRUE(EXPRESSION)) goto failure
-  ::google::protobuf::uint32 tag;
-  // @@protoc_insertion_point(parse_start:Common.ProgramStatus)
-  for (;;) {
-    ::std::pair< ::google::protobuf::uint32, bool> p = input->ReadTagWithCutoffNoLastTag(127u);
-    tag = p.first;
-    if (!p.second) goto handle_unusual;
-    switch (::google::protobuf::internal::WireFormatLite::GetTagFieldNumber(tag)) {
-      // required .Common.ProgramStatusType type = 1;
-      case 1: {
-        if (static_cast< ::google::protobuf::uint8>(tag) ==
-            static_cast< ::google::protobuf::uint8>(8u /* 8 & 0xFF */)) {
-          int value;
-          DO_((::google::protobuf::internal::WireFormatLite::ReadPrimitive<
-                   int, ::google::protobuf::internal::WireFormatLite::TYPE_ENUM>(
-                 input, &value)));
-          if (::Common::ProgramStatusType_IsValid(value)) {
-            set_type(static_cast< ::Common::ProgramStatusType >(value));
-          } else {
-            mutable_unknown_fields()->AddVarint(
-                1, static_cast< ::google::protobuf::uint64>(value));
-          }
-        } else {
-          goto handle_unusual;
-        }
-        break;
-      }
-
-      // optional string strExtDesc = 2;
-      case 2: {
-        if (static_cast< ::google::protobuf::uint8>(tag) ==
-            static_cast< ::google::protobuf::uint8>(18u /* 18 & 0xFF */)) {
-          DO_(::google::protobuf::internal::WireFormatLite::ReadString(
-                input, this->mutable_strextdesc()));
-          ::google::protobuf::internal::WireFormat::VerifyUTF8StringNamedField(
-            this->strextdesc().data(), static_cast<int>(this->strextdesc().length()),
-            ::google::protobuf::internal::WireFormat::PARSE,
-            "Common.ProgramStatus.strExtDesc");
-        } else {
-          goto handle_unusual;
-        }
-        break;
-      }
-
-      default: {
-      handle_unusual:
-        if (tag == 0) {
-          goto success;
-        }
-        DO_(::google::protobuf::internal::WireFormat::SkipField(
-              input, tag, _internal_metadata_.mutable_unknown_fields()));
-        break;
-      }
-    }
-  }
-success:
-  // @@protoc_insertion_point(parse_success:Common.ProgramStatus)
-  return true;
-failure:
-  // @@protoc_insertion_point(parse_failure:Common.ProgramStatus)
-  return false;
-#undef DO_
-}
-
-void ProgramStatus::SerializeWithCachedSizes(
-    ::google::protobuf::io::CodedOutputStream* output) const {
-  // @@protoc_insertion_point(serialize_start:Common.ProgramStatus)
-  ::google::protobuf::uint32 cached_has_bits = 0;
-  (void) cached_has_bits;
-
-  cached_has_bits = _has_bits_[0];
-  // required .Common.ProgramStatusType type = 1;
-  if (cached_has_bits & 0x00000002u) {
-    ::google::protobuf::internal::WireFormatLite::WriteEnum(
-      1, this->type(), output);
-  }
-
-  // optional string strExtDesc = 2;
-  if (cached_has_bits & 0x00000001u) {
-    ::google::protobuf::internal::WireFormat::VerifyUTF8StringNamedField(
-      this->strextdesc().data(), static_cast<int>(this->strextdesc().length()),
-      ::google::protobuf::internal::WireFormat::SERIALIZE,
-      "Common.ProgramStatus.strExtDesc");
-    ::google::protobuf::internal::WireFormatLite::WriteStringMaybeAliased(
-      2, this->strextdesc(), output);
-  }
-
-  if (_internal_metadata_.have_unknown_fields()) {
-    ::google::protobuf::internal::WireFormat::SerializeUnknownFields(
-        _internal_metadata_.unknown_fields(), output);
-  }
-  // @@protoc_insertion_point(serialize_end:Common.ProgramStatus)
-}
-
-::google::protobuf::uint8* ProgramStatus::InternalSerializeWithCachedSizesToArray(
-    bool deterministic, ::google::protobuf::uint8* target) const {
-  (void)deterministic; // Unused
-  // @@protoc_insertion_point(serialize_to_array_start:Common.ProgramStatus)
-  ::google::protobuf::uint32 cached_has_bits = 0;
-  (void) cached_has_bits;
-
-  cached_has_bits = _has_bits_[0];
-  // required .Common.ProgramStatusType type = 1;
-  if (cached_has_bits & 0x00000002u) {
-    target = ::google::protobuf::internal::WireFormatLite::WriteEnumToArray(
-      1, this->type(), target);
-  }
-
-  // optional string strExtDesc = 2;
-  if (cached_has_bits & 0x00000001u) {
-    ::google::protobuf::internal::WireFormat::VerifyUTF8StringNamedField(
-      this->strextdesc().data(), static_cast<int>(this->strextdesc().length()),
-      ::google::protobuf::internal::WireFormat::SERIALIZE,
-      "Common.ProgramStatus.strExtDesc");
-    target =
-      ::google::protobuf::internal::WireFormatLite::WriteStringToArray(
-        2, this->strextdesc(), target);
-  }
-
-  if (_internal_metadata_.have_unknown_fields()) {
-    target = ::google::protobuf::internal::WireFormat::SerializeUnknownFieldsToArray(
-        _internal_metadata_.unknown_fields(), target);
-  }
-  // @@protoc_insertion_point(serialize_to_array_end:Common.ProgramStatus)
-  return target;
-}
-
-size_t ProgramStatus::ByteSizeLong() const {
-// @@protoc_insertion_point(message_byte_size_start:Common.ProgramStatus)
-  size_t total_size = 0;
-
-  if (_internal_metadata_.have_unknown_fields()) {
-    total_size +=
-      ::google::protobuf::internal::WireFormat::ComputeUnknownFieldsSize(
-        _internal_metadata_.unknown_fields());
-  }
-  // required .Common.ProgramStatusType type = 1;
-  if (has_type()) {
-    total_size += 1 +
-      ::google::protobuf::internal::WireFormatLite::EnumSize(this->type());
-  }
-  // optional string strExtDesc = 2;
-  if (has_strextdesc()) {
-    total_size += 1 +
-      ::google::protobuf::internal::WireFormatLite::StringSize(
-        this->strextdesc());
-  }
-
-  int cached_size = ::google::protobuf::internal::ToCachedSize(total_size);
-  GOOGLE_SAFE_CONCURRENT_WRITES_BEGIN();
-  _cached_size_ = cached_size;
-  GOOGLE_SAFE_CONCURRENT_WRITES_END();
-  return total_size;
-}
-
-void ProgramStatus::MergeFrom(const ::google::protobuf::Message& from) {
-// @@protoc_insertion_point(generalized_merge_from_start:Common.ProgramStatus)
-  GOOGLE_DCHECK_NE(&from, this);
-  const ProgramStatus* source =
-      ::google::protobuf::internal::DynamicCastToGenerated<const ProgramStatus>(
-          &from);
-  if (source == NULL) {
-  // @@protoc_insertion_point(generalized_merge_from_cast_fail:Common.ProgramStatus)
-    ::google::protobuf::internal::ReflectionOps::Merge(from, this);
-  } else {
-  // @@protoc_insertion_point(generalized_merge_from_cast_success:Common.ProgramStatus)
-    MergeFrom(*source);
-  }
-}
-
-void ProgramStatus::MergeFrom(const ProgramStatus& from) {
-// @@protoc_insertion_point(class_specific_merge_from_start:Common.ProgramStatus)
-  GOOGLE_DCHECK_NE(&from, this);
-  _internal_metadata_.MergeFrom(from._internal_metadata_);
-  ::google::protobuf::uint32 cached_has_bits = 0;
-  (void) cached_has_bits;
-
-  cached_has_bits = from._has_bits_[0];
-  if (cached_has_bits & 3u) {
-    if (cached_has_bits & 0x00000001u) {
-      set_has_strextdesc();
-      strextdesc_.AssignWithDefault(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), from.strextdesc_);
-    }
-    if (cached_has_bits & 0x00000002u) {
-      type_ = from.type_;
-    }
-    _has_bits_[0] |= cached_has_bits;
-  }
-}
-
-void ProgramStatus::CopyFrom(const ::google::protobuf::Message& from) {
-// @@protoc_insertion_point(generalized_copy_from_start:Common.ProgramStatus)
-  if (&from == this) return;
-  Clear();
-  MergeFrom(from);
-}
-
-void ProgramStatus::CopyFrom(const ProgramStatus& from) {
-// @@protoc_insertion_point(class_specific_copy_from_start:Common.ProgramStatus)
-  if (&from == this) return;
-  Clear();
-  MergeFrom(from);
-}
-
-bool ProgramStatus::IsInitialized() const {
-  if ((_has_bits_[0] & 0x00000002) != 0x00000002) return false;
-  return true;
-}
-
-void ProgramStatus::Swap(ProgramStatus* other) {
-  if (other == this) return;
-  InternalSwap(other);
-}
-void ProgramStatus::InternalSwap(ProgramStatus* other) {
-  using std::swap;
-  strextdesc_.Swap(&other->strextdesc_);
-  swap(type_, other->type_);
-  swap(_has_bits_[0], other->_has_bits_[0]);
-  _internal_metadata_.Swap(&other->_internal_metadata_);
-  swap(_cached_size_, other->_cached_size_);
-}
-
-::google::protobuf::Metadata ProgramStatus::GetMetadata() const {
   protobuf_Common_2eproto::protobuf_AssignDescriptorsOnce();
   return ::protobuf_Common_2eproto::file_level_metadata[kIndexInFileMessages];
 }

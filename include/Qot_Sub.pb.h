@@ -223,34 +223,6 @@ class C2S : public ::google::protobuf::Message /* @@protoc_insertion_point(class
   bool isfirstpush() const;
   void set_isfirstpush(bool value);
 
-  // optional bool isUnsubAll = 7;
-  bool has_isunsuball() const;
-  void clear_isunsuball();
-  static const int kIsUnsubAllFieldNumber = 7;
-  bool isunsuball() const;
-  void set_isunsuball(bool value);
-
-  // optional bool isSubOrderBookDetail = 8;
-  bool has_issuborderbookdetail() const;
-  void clear_issuborderbookdetail();
-  static const int kIsSubOrderBookDetailFieldNumber = 8;
-  bool issuborderbookdetail() const;
-  void set_issuborderbookdetail(bool value);
-
-  // optional bool extendedTime = 9;
-  bool has_extendedtime() const;
-  void clear_extendedtime();
-  static const int kExtendedTimeFieldNumber = 9;
-  bool extendedtime() const;
-  void set_extendedtime(bool value);
-
-  // optional int32 session = 10;
-  bool has_session() const;
-  void clear_session();
-  static const int kSessionFieldNumber = 10;
-  ::google::protobuf::int32 session() const;
-  void set_session(::google::protobuf::int32 value);
-
   // @@protoc_insertion_point(class_scope:Qot_Sub.C2S)
  private:
   void set_has_issuborunsub();
@@ -259,14 +231,6 @@ class C2S : public ::google::protobuf::Message /* @@protoc_insertion_point(class
   void clear_has_isregorunregpush();
   void set_has_isfirstpush();
   void clear_has_isfirstpush();
-  void set_has_isunsuball();
-  void clear_has_isunsuball();
-  void set_has_issuborderbookdetail();
-  void clear_has_issuborderbookdetail();
-  void set_has_extendedtime();
-  void clear_has_extendedtime();
-  void set_has_session();
-  void clear_has_session();
 
   ::google::protobuf::internal::InternalMetadataWithArena _internal_metadata_;
   ::google::protobuf::internal::HasBits<1> _has_bits_;
@@ -277,10 +241,6 @@ class C2S : public ::google::protobuf::Message /* @@protoc_insertion_point(class
   bool issuborunsub_;
   bool isregorunregpush_;
   bool isfirstpush_;
-  bool isunsuball_;
-  bool issuborderbookdetail_;
-  bool extendedtime_;
-  ::google::protobuf::int32 session_;
   friend struct ::protobuf_Qot_5fSub_2eproto::TableStruct;
   friend void ::protobuf_Qot_5fSub_2eproto::InitDefaultsC2SImpl();
 };
@@ -814,102 +774,6 @@ inline void C2S::set_isfirstpush(bool value) {
   set_has_isfirstpush();
   isfirstpush_ = value;
   // @@protoc_insertion_point(field_set:Qot_Sub.C2S.isFirstPush)
-}
-
-// optional bool isUnsubAll = 7;
-inline bool C2S::has_isunsuball() const {
-  return (_has_bits_[0] & 0x00000008u) != 0;
-}
-inline void C2S::set_has_isunsuball() {
-  _has_bits_[0] |= 0x00000008u;
-}
-inline void C2S::clear_has_isunsuball() {
-  _has_bits_[0] &= ~0x00000008u;
-}
-inline void C2S::clear_isunsuball() {
-  isunsuball_ = false;
-  clear_has_isunsuball();
-}
-inline bool C2S::isunsuball() const {
-  // @@protoc_insertion_point(field_get:Qot_Sub.C2S.isUnsubAll)
-  return isunsuball_;
-}
-inline void C2S::set_isunsuball(bool value) {
-  set_has_isunsuball();
-  isunsuball_ = value;
-  // @@protoc_insertion_point(field_set:Qot_Sub.C2S.isUnsubAll)
-}
-
-// optional bool isSubOrderBookDetail = 8;
-inline bool C2S::has_issuborderbookdetail() const {
-  return (_has_bits_[0] & 0x00000010u) != 0;
-}
-inline void C2S::set_has_issuborderbookdetail() {
-  _has_bits_[0] |= 0x00000010u;
-}
-inline void C2S::clear_has_issuborderbookdetail() {
-  _has_bits_[0] &= ~0x00000010u;
-}
-inline void C2S::clear_issuborderbookdetail() {
-  issuborderbookdetail_ = false;
-  clear_has_issuborderbookdetail();
-}
-inline bool C2S::issuborderbookdetail() const {
-  // @@protoc_insertion_point(field_get:Qot_Sub.C2S.isSubOrderBookDetail)
-  return issuborderbookdetail_;
-}
-inline void C2S::set_issuborderbookdetail(bool value) {
-  set_has_issuborderbookdetail();
-  issuborderbookdetail_ = value;
-  // @@protoc_insertion_point(field_set:Qot_Sub.C2S.isSubOrderBookDetail)
-}
-
-// optional bool extendedTime = 9;
-inline bool C2S::has_extendedtime() const {
-  return (_has_bits_[0] & 0x00000020u) != 0;
-}
-inline void C2S::set_has_extendedtime() {
-  _has_bits_[0] |= 0x00000020u;
-}
-inline void C2S::clear_has_extendedtime() {
-  _has_bits_[0] &= ~0x00000020u;
-}
-inline void C2S::clear_extendedtime() {
-  extendedtime_ = false;
-  clear_has_extendedtime();
-}
-inline bool C2S::extendedtime() const {
-  // @@protoc_insertion_point(field_get:Qot_Sub.C2S.extendedTime)
-  return extendedtime_;
-}
-inline void C2S::set_extendedtime(bool value) {
-  set_has_extendedtime();
-  extendedtime_ = value;
-  // @@protoc_insertion_point(field_set:Qot_Sub.C2S.extendedTime)
-}
-
-// optional int32 session = 10;
-inline bool C2S::has_session() const {
-  return (_has_bits_[0] & 0x00000040u) != 0;
-}
-inline void C2S::set_has_session() {
-  _has_bits_[0] |= 0x00000040u;
-}
-inline void C2S::clear_has_session() {
-  _has_bits_[0] &= ~0x00000040u;
-}
-inline void C2S::clear_session() {
-  session_ = 0;
-  clear_has_session();
-}
-inline ::google::protobuf::int32 C2S::session() const {
-  // @@protoc_insertion_point(field_get:Qot_Sub.C2S.session)
-  return session_;
-}
-inline void C2S::set_session(::google::protobuf::int32 value) {
-  set_has_session();
-  session_ = value;
-  // @@protoc_insertion_point(field_set:Qot_Sub.C2S.session)
 }
 
 // -------------------------------------------------------------------

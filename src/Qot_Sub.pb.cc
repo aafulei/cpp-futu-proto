@@ -143,20 +143,12 @@ const ::google::protobuf::uint32 TableStruct::offsets[] GOOGLE_PROTOBUF_ATTRIBUT
   GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(::Qot_Sub::C2S, isregorunregpush_),
   GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(::Qot_Sub::C2S, regpushrehabtypelist_),
   GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(::Qot_Sub::C2S, isfirstpush_),
-  GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(::Qot_Sub::C2S, isunsuball_),
-  GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(::Qot_Sub::C2S, issuborderbookdetail_),
-  GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(::Qot_Sub::C2S, extendedtime_),
-  GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(::Qot_Sub::C2S, session_),
   ~0u,
   ~0u,
   0,
   1,
   ~0u,
   2,
-  3,
-  4,
-  5,
-  6,
   GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(::Qot_Sub::S2C, _has_bits_),
   GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(::Qot_Sub::S2C, _internal_metadata_),
   ~0u,  // no _extensions_
@@ -184,10 +176,10 @@ const ::google::protobuf::uint32 TableStruct::offsets[] GOOGLE_PROTOBUF_ATTRIBUT
   1,
 };
 static const ::google::protobuf::internal::MigrationSchema schemas[] GOOGLE_PROTOBUF_ATTRIBUTE_SECTION_VARIABLE(protodesc_cold) = {
-  { 0, 15, sizeof(::Qot_Sub::C2S)},
-  { 25, 30, sizeof(::Qot_Sub::S2C)},
-  { 30, 36, sizeof(::Qot_Sub::Request)},
-  { 37, 46, sizeof(::Qot_Sub::Response)},
+  { 0, 11, sizeof(::Qot_Sub::C2S)},
+  { 17, 22, sizeof(::Qot_Sub::S2C)},
+  { 22, 28, sizeof(::Qot_Sub::Request)},
+  { 29, 38, sizeof(::Qot_Sub::Response)},
 };
 
 static ::google::protobuf::Message const * const file_default_instances[] = {
@@ -220,21 +212,18 @@ void AddDescriptorsImpl() {
   InitDefaults();
   static const char descriptor[] GOOGLE_PROTOBUF_ATTRIBUTE_SECTION_VARIABLE(protodesc_cold) = {
       "\n\rQot_Sub.proto\022\007Qot_Sub\032\014Common.proto\032\020"
-      "Qot_Common.proto\"\202\002\n\003C2S\022*\n\014securityList"
+      "Qot_Common.proto\"\251\001\n\003C2S\022*\n\014securityList"
       "\030\001 \003(\0132\024.Qot_Common.Security\022\023\n\013subTypeL"
       "ist\030\002 \003(\005\022\024\n\014isSubOrUnSub\030\003 \002(\010\022\030\n\020isReg"
       "OrUnRegPush\030\004 \001(\010\022\034\n\024regPushRehabTypeLis"
-      "t\030\005 \003(\005\022\023\n\013isFirstPush\030\006 \001(\010\022\022\n\nisUnsubA"
-      "ll\030\007 \001(\010\022\034\n\024isSubOrderBookDetail\030\010 \001(\010\022\024"
-      "\n\014extendedTime\030\t \001(\010\022\017\n\007session\030\n \001(\005\"\005\n"
-      "\003S2C\"$\n\007Request\022\031\n\003c2s\030\001 \002(\0132\014.Qot_Sub.C"
-      "2S\"]\n\010Response\022\025\n\007retType\030\001 \002(\005:\004-400\022\016\n"
-      "\006retMsg\030\002 \001(\t\022\017\n\007errCode\030\003 \001(\005\022\031\n\003s2c\030\004 "
-      "\001(\0132\014.Qot_Sub.S2CB=\n\023com.futu.openapi.pb"
-      "Z&github.com/futuopen/ftapi4go/pb/qotsub"
+      "t\030\005 \003(\005\022\023\n\013isFirstPush\030\006 \001(\010\"\005\n\003S2C\"$\n\007R"
+      "equest\022\031\n\003c2s\030\001 \002(\0132\014.Qot_Sub.C2S\"]\n\010Res"
+      "ponse\022\025\n\007retType\030\001 \002(\005:\004-400\022\016\n\006retMsg\030\002"
+      " \001(\t\022\017\n\007errCode\030\003 \001(\005\022\031\n\003s2c\030\004 \001(\0132\014.Qot"
+      "_Sub.S2C"
   };
   ::google::protobuf::DescriptorPool::InternalAddGeneratedFile(
-      descriptor, 520);
+      descriptor, 368);
   ::google::protobuf::MessageFactory::InternalRegisterGeneratedFile(
     "Qot_Sub.proto", &protobuf_RegisterTypes);
   ::protobuf_Common_2eproto::AddDescriptors();
@@ -268,10 +257,6 @@ const int C2S::kIsSubOrUnSubFieldNumber;
 const int C2S::kIsRegOrUnRegPushFieldNumber;
 const int C2S::kRegPushRehabTypeListFieldNumber;
 const int C2S::kIsFirstPushFieldNumber;
-const int C2S::kIsUnsubAllFieldNumber;
-const int C2S::kIsSubOrderBookDetailFieldNumber;
-const int C2S::kExtendedTimeFieldNumber;
-const int C2S::kSessionFieldNumber;
 #endif  // !defined(_MSC_VER) || _MSC_VER >= 1900
 
 C2S::C2S()
@@ -292,16 +277,16 @@ C2S::C2S(const C2S& from)
       regpushrehabtypelist_(from.regpushrehabtypelist_) {
   _internal_metadata_.MergeFrom(from._internal_metadata_);
   ::memcpy(&issuborunsub_, &from.issuborunsub_,
-    static_cast<size_t>(reinterpret_cast<char*>(&session_) -
-    reinterpret_cast<char*>(&issuborunsub_)) + sizeof(session_));
+    static_cast<size_t>(reinterpret_cast<char*>(&isfirstpush_) -
+    reinterpret_cast<char*>(&issuborunsub_)) + sizeof(isfirstpush_));
   // @@protoc_insertion_point(copy_constructor:Qot_Sub.C2S)
 }
 
 void C2S::SharedCtor() {
   _cached_size_ = 0;
   ::memset(&issuborunsub_, 0, static_cast<size_t>(
-      reinterpret_cast<char*>(&session_) -
-      reinterpret_cast<char*>(&issuborunsub_)) + sizeof(session_));
+      reinterpret_cast<char*>(&isfirstpush_) -
+      reinterpret_cast<char*>(&issuborunsub_)) + sizeof(isfirstpush_));
 }
 
 C2S::~C2S() {
@@ -344,12 +329,9 @@ void C2S::Clear() {
   securitylist_.Clear();
   subtypelist_.Clear();
   regpushrehabtypelist_.Clear();
-  cached_has_bits = _has_bits_[0];
-  if (cached_has_bits & 127u) {
-    ::memset(&issuborunsub_, 0, static_cast<size_t>(
-        reinterpret_cast<char*>(&session_) -
-        reinterpret_cast<char*>(&issuborunsub_)) + sizeof(session_));
-  }
+  ::memset(&issuborunsub_, 0, static_cast<size_t>(
+      reinterpret_cast<char*>(&isfirstpush_) -
+      reinterpret_cast<char*>(&issuborunsub_)) + sizeof(isfirstpush_));
   _has_bits_.Clear();
   _internal_metadata_.Clear();
 }
@@ -455,62 +437,6 @@ bool C2S::MergePartialFromCodedStream(
         break;
       }
 
-      // optional bool isUnsubAll = 7;
-      case 7: {
-        if (static_cast< ::google::protobuf::uint8>(tag) ==
-            static_cast< ::google::protobuf::uint8>(56u /* 56 & 0xFF */)) {
-          set_has_isunsuball();
-          DO_((::google::protobuf::internal::WireFormatLite::ReadPrimitive<
-                   bool, ::google::protobuf::internal::WireFormatLite::TYPE_BOOL>(
-                 input, &isunsuball_)));
-        } else {
-          goto handle_unusual;
-        }
-        break;
-      }
-
-      // optional bool isSubOrderBookDetail = 8;
-      case 8: {
-        if (static_cast< ::google::protobuf::uint8>(tag) ==
-            static_cast< ::google::protobuf::uint8>(64u /* 64 & 0xFF */)) {
-          set_has_issuborderbookdetail();
-          DO_((::google::protobuf::internal::WireFormatLite::ReadPrimitive<
-                   bool, ::google::protobuf::internal::WireFormatLite::TYPE_BOOL>(
-                 input, &issuborderbookdetail_)));
-        } else {
-          goto handle_unusual;
-        }
-        break;
-      }
-
-      // optional bool extendedTime = 9;
-      case 9: {
-        if (static_cast< ::google::protobuf::uint8>(tag) ==
-            static_cast< ::google::protobuf::uint8>(72u /* 72 & 0xFF */)) {
-          set_has_extendedtime();
-          DO_((::google::protobuf::internal::WireFormatLite::ReadPrimitive<
-                   bool, ::google::protobuf::internal::WireFormatLite::TYPE_BOOL>(
-                 input, &extendedtime_)));
-        } else {
-          goto handle_unusual;
-        }
-        break;
-      }
-
-      // optional int32 session = 10;
-      case 10: {
-        if (static_cast< ::google::protobuf::uint8>(tag) ==
-            static_cast< ::google::protobuf::uint8>(80u /* 80 & 0xFF */)) {
-          set_has_session();
-          DO_((::google::protobuf::internal::WireFormatLite::ReadPrimitive<
-                   ::google::protobuf::int32, ::google::protobuf::internal::WireFormatLite::TYPE_INT32>(
-                 input, &session_)));
-        } else {
-          goto handle_unusual;
-        }
-        break;
-      }
-
       default: {
       handle_unusual:
         if (tag == 0) {
@@ -572,26 +498,6 @@ void C2S::SerializeWithCachedSizes(
     ::google::protobuf::internal::WireFormatLite::WriteBool(6, this->isfirstpush(), output);
   }
 
-  // optional bool isUnsubAll = 7;
-  if (cached_has_bits & 0x00000008u) {
-    ::google::protobuf::internal::WireFormatLite::WriteBool(7, this->isunsuball(), output);
-  }
-
-  // optional bool isSubOrderBookDetail = 8;
-  if (cached_has_bits & 0x00000010u) {
-    ::google::protobuf::internal::WireFormatLite::WriteBool(8, this->issuborderbookdetail(), output);
-  }
-
-  // optional bool extendedTime = 9;
-  if (cached_has_bits & 0x00000020u) {
-    ::google::protobuf::internal::WireFormatLite::WriteBool(9, this->extendedtime(), output);
-  }
-
-  // optional int32 session = 10;
-  if (cached_has_bits & 0x00000040u) {
-    ::google::protobuf::internal::WireFormatLite::WriteInt32(10, this->session(), output);
-  }
-
   if (_internal_metadata_.have_unknown_fields()) {
     ::google::protobuf::internal::WireFormat::SerializeUnknownFields(
         _internal_metadata_.unknown_fields(), output);
@@ -636,26 +542,6 @@ void C2S::SerializeWithCachedSizes(
   // optional bool isFirstPush = 6;
   if (cached_has_bits & 0x00000004u) {
     target = ::google::protobuf::internal::WireFormatLite::WriteBoolToArray(6, this->isfirstpush(), target);
-  }
-
-  // optional bool isUnsubAll = 7;
-  if (cached_has_bits & 0x00000008u) {
-    target = ::google::protobuf::internal::WireFormatLite::WriteBoolToArray(7, this->isunsuball(), target);
-  }
-
-  // optional bool isSubOrderBookDetail = 8;
-  if (cached_has_bits & 0x00000010u) {
-    target = ::google::protobuf::internal::WireFormatLite::WriteBoolToArray(8, this->issuborderbookdetail(), target);
-  }
-
-  // optional bool extendedTime = 9;
-  if (cached_has_bits & 0x00000020u) {
-    target = ::google::protobuf::internal::WireFormatLite::WriteBoolToArray(9, this->extendedtime(), target);
-  }
-
-  // optional int32 session = 10;
-  if (cached_has_bits & 0x00000040u) {
-    target = ::google::protobuf::internal::WireFormatLite::WriteInt32ToArray(10, this->session(), target);
   }
 
   if (_internal_metadata_.have_unknown_fields()) {
@@ -708,7 +594,7 @@ size_t C2S::ByteSizeLong() const {
     total_size += data_size;
   }
 
-  if (_has_bits_[0 / 32] & 126u) {
+  if (_has_bits_[0 / 32] & 6u) {
     // optional bool isRegOrUnRegPush = 4;
     if (has_isregorunregpush()) {
       total_size += 1 + 1;
@@ -717,28 +603,6 @@ size_t C2S::ByteSizeLong() const {
     // optional bool isFirstPush = 6;
     if (has_isfirstpush()) {
       total_size += 1 + 1;
-    }
-
-    // optional bool isUnsubAll = 7;
-    if (has_isunsuball()) {
-      total_size += 1 + 1;
-    }
-
-    // optional bool isSubOrderBookDetail = 8;
-    if (has_issuborderbookdetail()) {
-      total_size += 1 + 1;
-    }
-
-    // optional bool extendedTime = 9;
-    if (has_extendedtime()) {
-      total_size += 1 + 1;
-    }
-
-    // optional int32 session = 10;
-    if (has_session()) {
-      total_size += 1 +
-        ::google::protobuf::internal::WireFormatLite::Int32Size(
-          this->session());
     }
 
   }
@@ -775,7 +639,7 @@ void C2S::MergeFrom(const C2S& from) {
   subtypelist_.MergeFrom(from.subtypelist_);
   regpushrehabtypelist_.MergeFrom(from.regpushrehabtypelist_);
   cached_has_bits = from._has_bits_[0];
-  if (cached_has_bits & 127u) {
+  if (cached_has_bits & 7u) {
     if (cached_has_bits & 0x00000001u) {
       issuborunsub_ = from.issuborunsub_;
     }
@@ -784,18 +648,6 @@ void C2S::MergeFrom(const C2S& from) {
     }
     if (cached_has_bits & 0x00000004u) {
       isfirstpush_ = from.isfirstpush_;
-    }
-    if (cached_has_bits & 0x00000008u) {
-      isunsuball_ = from.isunsuball_;
-    }
-    if (cached_has_bits & 0x00000010u) {
-      issuborderbookdetail_ = from.issuborderbookdetail_;
-    }
-    if (cached_has_bits & 0x00000020u) {
-      extendedtime_ = from.extendedtime_;
-    }
-    if (cached_has_bits & 0x00000040u) {
-      session_ = from.session_;
     }
     _has_bits_[0] |= cached_has_bits;
   }
@@ -833,10 +685,6 @@ void C2S::InternalSwap(C2S* other) {
   swap(issuborunsub_, other->issuborunsub_);
   swap(isregorunregpush_, other->isregorunregpush_);
   swap(isfirstpush_, other->isfirstpush_);
-  swap(isunsuball_, other->isunsuball_);
-  swap(issuborderbookdetail_, other->issuborderbookdetail_);
-  swap(extendedtime_, other->extendedtime_);
-  swap(session_, other->session_);
   swap(_has_bits_[0], other->_has_bits_[0]);
   _internal_metadata_.Swap(&other->_internal_metadata_);
   swap(_cached_size_, other->_cached_size_);

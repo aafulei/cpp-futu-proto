@@ -137,12 +137,10 @@ void AddDescriptorsImpl() {
       "\n\003S2C\022*\n\014basicQotList\030\001 \003(\0132\024.Qot_Common"
       ".BasicQot\"h\n\010Response\022\025\n\007retType\030\001 \002(\005:\004"
       "-400\022\016\n\006retMsg\030\002 \001(\t\022\017\n\007errCode\030\003 \001(\005\022$\n"
-      "\003s2c\030\004 \001(\0132\027.Qot_UpdateBasicQot.S2CBH\n\023c"
-      "om.futu.openapi.pbZ1github.com/futuopen/"
-      "ftapi4go/pb/qotupdatebasicqot"
+      "\003s2c\030\004 \001(\0132\027.Qot_UpdateBasicQot.S2C"
   };
   ::google::protobuf::DescriptorPool::InternalAddGeneratedFile(
-      descriptor, 309);
+      descriptor, 235);
   ::google::protobuf::MessageFactory::InternalRegisterGeneratedFile(
     "Qot_UpdateBasicQot.proto", &protobuf_RegisterTypes);
   ::protobuf_Common_2eproto::AddDescriptors();

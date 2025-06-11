@@ -71,7 +71,6 @@ void InitDefaultsS2CImpl() {
 #else
   ::google::protobuf::internal::InitProtobufDefaults();
 #endif  // GOOGLE_PROTOBUF_ENFORCE_UNIQUENESS
-  protobuf_Common_2eproto::InitDefaultsProgramStatus();
   {
     void* ptr = &::GetGlobalState::_S2C_default_instance_;
     new (ptr) ::GetGlobalState::S2C();
@@ -149,37 +148,23 @@ const ::google::protobuf::uint32 TableStruct::offsets[] GOOGLE_PROTOBUF_ATTRIBUT
   GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(::GetGlobalState::S2C, marketsh_),
   GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(::GetGlobalState::S2C, marketsz_),
   GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(::GetGlobalState::S2C, markethkfuture_),
-  GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(::GetGlobalState::S2C, marketusfuture_),
-  GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(::GetGlobalState::S2C, marketsgfuture_),
-  GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(::GetGlobalState::S2C, marketjpfuture_),
   GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(::GetGlobalState::S2C, qotlogined_),
   GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(::GetGlobalState::S2C, trdlogined_),
   GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(::GetGlobalState::S2C, serverver_),
   GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(::GetGlobalState::S2C, serverbuildno_),
   GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(::GetGlobalState::S2C, time_),
   GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(::GetGlobalState::S2C, localtime_),
-  GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(::GetGlobalState::S2C, programstatus_),
-  GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(::GetGlobalState::S2C, qotsvripaddr_),
-  GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(::GetGlobalState::S2C, trdsvripaddr_),
-  GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(::GetGlobalState::S2C, connid_),
+  0,
+  1,
+  2,
   3,
   4,
   5,
   6,
   7,
-  15,
-  16,
-  17,
   8,
   9,
   10,
-  11,
-  12,
-  13,
-  2,
-  0,
-  1,
-  14,
   GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(::GetGlobalState::Request, _has_bits_),
   GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(::GetGlobalState::Request, _internal_metadata_),
   ~0u,  // no _extensions_
@@ -203,9 +188,9 @@ const ::google::protobuf::uint32 TableStruct::offsets[] GOOGLE_PROTOBUF_ATTRIBUT
 };
 static const ::google::protobuf::internal::MigrationSchema schemas[] GOOGLE_PROTOBUF_ATTRIBUTE_SECTION_VARIABLE(protodesc_cold) = {
   { 0, 6, sizeof(::GetGlobalState::C2S)},
-  { 7, 30, sizeof(::GetGlobalState::S2C)},
-  { 48, 54, sizeof(::GetGlobalState::Request)},
-  { 55, 64, sizeof(::GetGlobalState::Response)},
+  { 7, 23, sizeof(::GetGlobalState::S2C)},
+  { 34, 40, sizeof(::GetGlobalState::Request)},
+  { 41, 50, sizeof(::GetGlobalState::Response)},
 };
 
 static ::google::protobuf::Message const * const file_default_instances[] = {
@@ -239,25 +224,19 @@ void AddDescriptorsImpl() {
   static const char descriptor[] GOOGLE_PROTOBUF_ATTRIBUTE_SECTION_VARIABLE(protodesc_cold) = {
       "\n\024GetGlobalState.proto\022\016GetGlobalState\032\014"
       "Common.proto\032\020Qot_Common.proto\"\025\n\003C2S\022\016\n"
-      "\006userID\030\001 \002(\004\"\212\003\n\003S2C\022\020\n\010marketHK\030\001 \002(\005\022"
+      "\006userID\030\001 \002(\004\"\330\001\n\003S2C\022\020\n\010marketHK\030\001 \002(\005\022"
       "\020\n\010marketUS\030\002 \002(\005\022\020\n\010marketSH\030\003 \002(\005\022\020\n\010m"
-      "arketSZ\030\004 \002(\005\022\026\n\016marketHKFuture\030\005 \002(\005\022\026\n"
-      "\016marketUSFuture\030\017 \001(\005\022\026\n\016marketSGFuture\030"
-      "\021 \001(\005\022\026\n\016marketJPFuture\030\022 \001(\005\022\022\n\nqotLogi"
-      "ned\030\006 \002(\010\022\022\n\ntrdLogined\030\007 \002(\010\022\021\n\tserverV"
-      "er\030\010 \002(\005\022\025\n\rserverBuildNo\030\t \002(\005\022\014\n\004time\030"
-      "\n \002(\003\022\021\n\tlocalTime\030\013 \001(\001\022,\n\rprogramStatu"
-      "s\030\014 \001(\0132\025.Common.ProgramStatus\022\024\n\014qotSvr"
-      "IpAddr\030\r \001(\t\022\024\n\014trdSvrIpAddr\030\016 \001(\t\022\016\n\006co"
-      "nnID\030\020 \001(\004\"+\n\007Request\022 \n\003c2s\030\001 \002(\0132\023.Get"
-      "GlobalState.C2S\"d\n\010Response\022\025\n\007retType\030\001"
-      " \002(\005:\004-400\022\016\n\006retMsg\030\002 \001(\t\022\017\n\007errCode\030\003 "
-      "\001(\005\022 \n\003s2c\030\004 \001(\0132\023.GetGlobalState.S2CBE\n"
-      "\023com.futu.openapi.pbZ.github.com/futuope"
-      "n/ftapi4go/pb/getglobalstate"
+      "arketSZ\030\004 \002(\005\022\026\n\016marketHKFuture\030\005 \002(\005\022\022\n"
+      "\nqotLogined\030\006 \002(\010\022\022\n\ntrdLogined\030\007 \002(\010\022\021\n"
+      "\tserverVer\030\010 \002(\005\022\025\n\rserverBuildNo\030\t \002(\005\022"
+      "\014\n\004time\030\n \002(\003\022\021\n\tlocalTime\030\013 \001(\001\"+\n\007Requ"
+      "est\022 \n\003c2s\030\001 \002(\0132\023.GetGlobalState.C2S\"d\n"
+      "\010Response\022\025\n\007retType\030\001 \002(\005:\004-400\022\016\n\006retM"
+      "sg\030\002 \001(\t\022\017\n\007errCode\030\003 \001(\005\022 \n\003s2c\030\004 \001(\0132\023"
+      ".GetGlobalState.S2C"
   };
   ::google::protobuf::DescriptorPool::InternalAddGeneratedFile(
-      descriptor, 708);
+      descriptor, 459);
   ::google::protobuf::MessageFactory::InternalRegisterGeneratedFile(
     "GetGlobalState.proto", &protobuf_RegisterTypes);
   ::protobuf_Common_2eproto::AddDescriptors();
@@ -523,12 +502,6 @@ void C2S::InternalSwap(C2S* other) {
 // ===================================================================
 
 void S2C::InitAsDefaultInstance() {
-  ::GetGlobalState::_S2C_default_instance_._instance.get_mutable()->programstatus_ = const_cast< ::Common::ProgramStatus*>(
-      ::Common::ProgramStatus::internal_default_instance());
-}
-void S2C::clear_programstatus() {
-  if (programstatus_ != NULL) programstatus_->Clear();
-  clear_has_programstatus();
 }
 #if !defined(_MSC_VER) || _MSC_VER >= 1900
 const int S2C::kMarketHKFieldNumber;
@@ -536,19 +509,12 @@ const int S2C::kMarketUSFieldNumber;
 const int S2C::kMarketSHFieldNumber;
 const int S2C::kMarketSZFieldNumber;
 const int S2C::kMarketHKFutureFieldNumber;
-const int S2C::kMarketUSFutureFieldNumber;
-const int S2C::kMarketSGFutureFieldNumber;
-const int S2C::kMarketJPFutureFieldNumber;
 const int S2C::kQotLoginedFieldNumber;
 const int S2C::kTrdLoginedFieldNumber;
 const int S2C::kServerVerFieldNumber;
 const int S2C::kServerBuildNoFieldNumber;
 const int S2C::kTimeFieldNumber;
 const int S2C::kLocalTimeFieldNumber;
-const int S2C::kProgramStatusFieldNumber;
-const int S2C::kQotSvrIpAddrFieldNumber;
-const int S2C::kTrdSvrIpAddrFieldNumber;
-const int S2C::kConnIDFieldNumber;
 #endif  // !defined(_MSC_VER) || _MSC_VER >= 1900
 
 S2C::S2C()
@@ -565,32 +531,17 @@ S2C::S2C(const S2C& from)
       _has_bits_(from._has_bits_),
       _cached_size_(0) {
   _internal_metadata_.MergeFrom(from._internal_metadata_);
-  qotsvripaddr_.UnsafeSetDefault(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
-  if (from.has_qotsvripaddr()) {
-    qotsvripaddr_.AssignWithDefault(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), from.qotsvripaddr_);
-  }
-  trdsvripaddr_.UnsafeSetDefault(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
-  if (from.has_trdsvripaddr()) {
-    trdsvripaddr_.AssignWithDefault(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), from.trdsvripaddr_);
-  }
-  if (from.has_programstatus()) {
-    programstatus_ = new ::Common::ProgramStatus(*from.programstatus_);
-  } else {
-    programstatus_ = NULL;
-  }
   ::memcpy(&markethk_, &from.markethk_,
-    static_cast<size_t>(reinterpret_cast<char*>(&marketjpfuture_) -
-    reinterpret_cast<char*>(&markethk_)) + sizeof(marketjpfuture_));
+    static_cast<size_t>(reinterpret_cast<char*>(&localtime_) -
+    reinterpret_cast<char*>(&markethk_)) + sizeof(localtime_));
   // @@protoc_insertion_point(copy_constructor:GetGlobalState.S2C)
 }
 
 void S2C::SharedCtor() {
   _cached_size_ = 0;
-  qotsvripaddr_.UnsafeSetDefault(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
-  trdsvripaddr_.UnsafeSetDefault(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
-  ::memset(&programstatus_, 0, static_cast<size_t>(
-      reinterpret_cast<char*>(&marketjpfuture_) -
-      reinterpret_cast<char*>(&programstatus_)) + sizeof(marketjpfuture_));
+  ::memset(&markethk_, 0, static_cast<size_t>(
+      reinterpret_cast<char*>(&localtime_) -
+      reinterpret_cast<char*>(&markethk_)) + sizeof(localtime_));
 }
 
 S2C::~S2C() {
@@ -599,9 +550,6 @@ S2C::~S2C() {
 }
 
 void S2C::SharedDtor() {
-  qotsvripaddr_.DestroyNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
-  trdsvripaddr_.DestroyNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
-  if (this != internal_default_instance()) delete programstatus_;
 }
 
 void S2C::SetCachedSize(int size) const {
@@ -634,34 +582,15 @@ void S2C::Clear() {
   (void) cached_has_bits;
 
   cached_has_bits = _has_bits_[0];
-  if (cached_has_bits & 7u) {
-    if (cached_has_bits & 0x00000001u) {
-      GOOGLE_DCHECK(!qotsvripaddr_.IsDefault(&::google::protobuf::internal::GetEmptyStringAlreadyInited()));
-      (*qotsvripaddr_.UnsafeRawStringPointer())->clear();
-    }
-    if (cached_has_bits & 0x00000002u) {
-      GOOGLE_DCHECK(!trdsvripaddr_.IsDefault(&::google::protobuf::internal::GetEmptyStringAlreadyInited()));
-      (*trdsvripaddr_.UnsafeRawStringPointer())->clear();
-    }
-    if (cached_has_bits & 0x00000004u) {
-      GOOGLE_DCHECK(programstatus_ != NULL);
-      programstatus_->Clear();
-    }
-  }
-  if (cached_has_bits & 248u) {
+  if (cached_has_bits & 255u) {
     ::memset(&markethk_, 0, static_cast<size_t>(
-        reinterpret_cast<char*>(&markethkfuture_) -
-        reinterpret_cast<char*>(&markethk_)) + sizeof(markethkfuture_));
+        reinterpret_cast<char*>(&serverver_) -
+        reinterpret_cast<char*>(&markethk_)) + sizeof(serverver_));
   }
-  if (cached_has_bits & 65280u) {
-    ::memset(&qotlogined_, 0, static_cast<size_t>(
-        reinterpret_cast<char*>(&marketusfuture_) -
-        reinterpret_cast<char*>(&qotlogined_)) + sizeof(marketusfuture_));
-  }
-  if (cached_has_bits & 196608u) {
-    ::memset(&marketsgfuture_, 0, static_cast<size_t>(
-        reinterpret_cast<char*>(&marketjpfuture_) -
-        reinterpret_cast<char*>(&marketsgfuture_)) + sizeof(marketjpfuture_));
+  if (cached_has_bits & 1792u) {
+    ::memset(&serverbuildno_, 0, static_cast<size_t>(
+        reinterpret_cast<char*>(&localtime_) -
+        reinterpret_cast<char*>(&serverbuildno_)) + sizeof(localtime_));
   }
   _has_bits_.Clear();
   _internal_metadata_.Clear();
@@ -673,7 +602,7 @@ bool S2C::MergePartialFromCodedStream(
   ::google::protobuf::uint32 tag;
   // @@protoc_insertion_point(parse_start:GetGlobalState.S2C)
   for (;;) {
-    ::std::pair< ::google::protobuf::uint32, bool> p = input->ReadTagWithCutoffNoLastTag(16383u);
+    ::std::pair< ::google::protobuf::uint32, bool> p = input->ReadTagWithCutoffNoLastTag(127u);
     tag = p.first;
     if (!p.second) goto handle_unusual;
     switch (::google::protobuf::internal::WireFormatLite::GetTagFieldNumber(tag)) {
@@ -831,106 +760,6 @@ bool S2C::MergePartialFromCodedStream(
         break;
       }
 
-      // optional .Common.ProgramStatus programStatus = 12;
-      case 12: {
-        if (static_cast< ::google::protobuf::uint8>(tag) ==
-            static_cast< ::google::protobuf::uint8>(98u /* 98 & 0xFF */)) {
-          DO_(::google::protobuf::internal::WireFormatLite::ReadMessage(
-               input, mutable_programstatus()));
-        } else {
-          goto handle_unusual;
-        }
-        break;
-      }
-
-      // optional string qotSvrIpAddr = 13;
-      case 13: {
-        if (static_cast< ::google::protobuf::uint8>(tag) ==
-            static_cast< ::google::protobuf::uint8>(106u /* 106 & 0xFF */)) {
-          DO_(::google::protobuf::internal::WireFormatLite::ReadString(
-                input, this->mutable_qotsvripaddr()));
-          ::google::protobuf::internal::WireFormat::VerifyUTF8StringNamedField(
-            this->qotsvripaddr().data(), static_cast<int>(this->qotsvripaddr().length()),
-            ::google::protobuf::internal::WireFormat::PARSE,
-            "GetGlobalState.S2C.qotSvrIpAddr");
-        } else {
-          goto handle_unusual;
-        }
-        break;
-      }
-
-      // optional string trdSvrIpAddr = 14;
-      case 14: {
-        if (static_cast< ::google::protobuf::uint8>(tag) ==
-            static_cast< ::google::protobuf::uint8>(114u /* 114 & 0xFF */)) {
-          DO_(::google::protobuf::internal::WireFormatLite::ReadString(
-                input, this->mutable_trdsvripaddr()));
-          ::google::protobuf::internal::WireFormat::VerifyUTF8StringNamedField(
-            this->trdsvripaddr().data(), static_cast<int>(this->trdsvripaddr().length()),
-            ::google::protobuf::internal::WireFormat::PARSE,
-            "GetGlobalState.S2C.trdSvrIpAddr");
-        } else {
-          goto handle_unusual;
-        }
-        break;
-      }
-
-      // optional int32 marketUSFuture = 15;
-      case 15: {
-        if (static_cast< ::google::protobuf::uint8>(tag) ==
-            static_cast< ::google::protobuf::uint8>(120u /* 120 & 0xFF */)) {
-          set_has_marketusfuture();
-          DO_((::google::protobuf::internal::WireFormatLite::ReadPrimitive<
-                   ::google::protobuf::int32, ::google::protobuf::internal::WireFormatLite::TYPE_INT32>(
-                 input, &marketusfuture_)));
-        } else {
-          goto handle_unusual;
-        }
-        break;
-      }
-
-      // optional uint64 connID = 16;
-      case 16: {
-        if (static_cast< ::google::protobuf::uint8>(tag) ==
-            static_cast< ::google::protobuf::uint8>(128u /* 128 & 0xFF */)) {
-          set_has_connid();
-          DO_((::google::protobuf::internal::WireFormatLite::ReadPrimitive<
-                   ::google::protobuf::uint64, ::google::protobuf::internal::WireFormatLite::TYPE_UINT64>(
-                 input, &connid_)));
-        } else {
-          goto handle_unusual;
-        }
-        break;
-      }
-
-      // optional int32 marketSGFuture = 17;
-      case 17: {
-        if (static_cast< ::google::protobuf::uint8>(tag) ==
-            static_cast< ::google::protobuf::uint8>(136u /* 136 & 0xFF */)) {
-          set_has_marketsgfuture();
-          DO_((::google::protobuf::internal::WireFormatLite::ReadPrimitive<
-                   ::google::protobuf::int32, ::google::protobuf::internal::WireFormatLite::TYPE_INT32>(
-                 input, &marketsgfuture_)));
-        } else {
-          goto handle_unusual;
-        }
-        break;
-      }
-
-      // optional int32 marketJPFuture = 18;
-      case 18: {
-        if (static_cast< ::google::protobuf::uint8>(tag) ==
-            static_cast< ::google::protobuf::uint8>(144u /* 144 & 0xFF */)) {
-          set_has_marketjpfuture();
-          DO_((::google::protobuf::internal::WireFormatLite::ReadPrimitive<
-                   ::google::protobuf::int32, ::google::protobuf::internal::WireFormatLite::TYPE_INT32>(
-                 input, &marketjpfuture_)));
-        } else {
-          goto handle_unusual;
-        }
-        break;
-      }
-
       default: {
       handle_unusual:
         if (tag == 0) {
@@ -959,104 +788,58 @@ void S2C::SerializeWithCachedSizes(
 
   cached_has_bits = _has_bits_[0];
   // required int32 marketHK = 1;
-  if (cached_has_bits & 0x00000008u) {
+  if (cached_has_bits & 0x00000001u) {
     ::google::protobuf::internal::WireFormatLite::WriteInt32(1, this->markethk(), output);
   }
 
   // required int32 marketUS = 2;
-  if (cached_has_bits & 0x00000010u) {
+  if (cached_has_bits & 0x00000002u) {
     ::google::protobuf::internal::WireFormatLite::WriteInt32(2, this->marketus(), output);
   }
 
   // required int32 marketSH = 3;
-  if (cached_has_bits & 0x00000020u) {
+  if (cached_has_bits & 0x00000004u) {
     ::google::protobuf::internal::WireFormatLite::WriteInt32(3, this->marketsh(), output);
   }
 
   // required int32 marketSZ = 4;
-  if (cached_has_bits & 0x00000040u) {
+  if (cached_has_bits & 0x00000008u) {
     ::google::protobuf::internal::WireFormatLite::WriteInt32(4, this->marketsz(), output);
   }
 
   // required int32 marketHKFuture = 5;
-  if (cached_has_bits & 0x00000080u) {
+  if (cached_has_bits & 0x00000010u) {
     ::google::protobuf::internal::WireFormatLite::WriteInt32(5, this->markethkfuture(), output);
   }
 
   // required bool qotLogined = 6;
-  if (cached_has_bits & 0x00000100u) {
+  if (cached_has_bits & 0x00000020u) {
     ::google::protobuf::internal::WireFormatLite::WriteBool(6, this->qotlogined(), output);
   }
 
   // required bool trdLogined = 7;
-  if (cached_has_bits & 0x00000200u) {
+  if (cached_has_bits & 0x00000040u) {
     ::google::protobuf::internal::WireFormatLite::WriteBool(7, this->trdlogined(), output);
   }
 
   // required int32 serverVer = 8;
-  if (cached_has_bits & 0x00000400u) {
+  if (cached_has_bits & 0x00000080u) {
     ::google::protobuf::internal::WireFormatLite::WriteInt32(8, this->serverver(), output);
   }
 
   // required int32 serverBuildNo = 9;
-  if (cached_has_bits & 0x00000800u) {
+  if (cached_has_bits & 0x00000100u) {
     ::google::protobuf::internal::WireFormatLite::WriteInt32(9, this->serverbuildno(), output);
   }
 
   // required int64 time = 10;
-  if (cached_has_bits & 0x00001000u) {
+  if (cached_has_bits & 0x00000200u) {
     ::google::protobuf::internal::WireFormatLite::WriteInt64(10, this->time(), output);
   }
 
   // optional double localTime = 11;
-  if (cached_has_bits & 0x00002000u) {
+  if (cached_has_bits & 0x00000400u) {
     ::google::protobuf::internal::WireFormatLite::WriteDouble(11, this->localtime(), output);
-  }
-
-  // optional .Common.ProgramStatus programStatus = 12;
-  if (cached_has_bits & 0x00000004u) {
-    ::google::protobuf::internal::WireFormatLite::WriteMessageMaybeToArray(
-      12, *this->programstatus_, output);
-  }
-
-  // optional string qotSvrIpAddr = 13;
-  if (cached_has_bits & 0x00000001u) {
-    ::google::protobuf::internal::WireFormat::VerifyUTF8StringNamedField(
-      this->qotsvripaddr().data(), static_cast<int>(this->qotsvripaddr().length()),
-      ::google::protobuf::internal::WireFormat::SERIALIZE,
-      "GetGlobalState.S2C.qotSvrIpAddr");
-    ::google::protobuf::internal::WireFormatLite::WriteStringMaybeAliased(
-      13, this->qotsvripaddr(), output);
-  }
-
-  // optional string trdSvrIpAddr = 14;
-  if (cached_has_bits & 0x00000002u) {
-    ::google::protobuf::internal::WireFormat::VerifyUTF8StringNamedField(
-      this->trdsvripaddr().data(), static_cast<int>(this->trdsvripaddr().length()),
-      ::google::protobuf::internal::WireFormat::SERIALIZE,
-      "GetGlobalState.S2C.trdSvrIpAddr");
-    ::google::protobuf::internal::WireFormatLite::WriteStringMaybeAliased(
-      14, this->trdsvripaddr(), output);
-  }
-
-  // optional int32 marketUSFuture = 15;
-  if (cached_has_bits & 0x00008000u) {
-    ::google::protobuf::internal::WireFormatLite::WriteInt32(15, this->marketusfuture(), output);
-  }
-
-  // optional uint64 connID = 16;
-  if (cached_has_bits & 0x00004000u) {
-    ::google::protobuf::internal::WireFormatLite::WriteUInt64(16, this->connid(), output);
-  }
-
-  // optional int32 marketSGFuture = 17;
-  if (cached_has_bits & 0x00010000u) {
-    ::google::protobuf::internal::WireFormatLite::WriteInt32(17, this->marketsgfuture(), output);
-  }
-
-  // optional int32 marketJPFuture = 18;
-  if (cached_has_bits & 0x00020000u) {
-    ::google::protobuf::internal::WireFormatLite::WriteInt32(18, this->marketjpfuture(), output);
   }
 
   if (_internal_metadata_.have_unknown_fields()) {
@@ -1075,107 +858,58 @@ void S2C::SerializeWithCachedSizes(
 
   cached_has_bits = _has_bits_[0];
   // required int32 marketHK = 1;
-  if (cached_has_bits & 0x00000008u) {
+  if (cached_has_bits & 0x00000001u) {
     target = ::google::protobuf::internal::WireFormatLite::WriteInt32ToArray(1, this->markethk(), target);
   }
 
   // required int32 marketUS = 2;
-  if (cached_has_bits & 0x00000010u) {
+  if (cached_has_bits & 0x00000002u) {
     target = ::google::protobuf::internal::WireFormatLite::WriteInt32ToArray(2, this->marketus(), target);
   }
 
   // required int32 marketSH = 3;
-  if (cached_has_bits & 0x00000020u) {
+  if (cached_has_bits & 0x00000004u) {
     target = ::google::protobuf::internal::WireFormatLite::WriteInt32ToArray(3, this->marketsh(), target);
   }
 
   // required int32 marketSZ = 4;
-  if (cached_has_bits & 0x00000040u) {
+  if (cached_has_bits & 0x00000008u) {
     target = ::google::protobuf::internal::WireFormatLite::WriteInt32ToArray(4, this->marketsz(), target);
   }
 
   // required int32 marketHKFuture = 5;
-  if (cached_has_bits & 0x00000080u) {
+  if (cached_has_bits & 0x00000010u) {
     target = ::google::protobuf::internal::WireFormatLite::WriteInt32ToArray(5, this->markethkfuture(), target);
   }
 
   // required bool qotLogined = 6;
-  if (cached_has_bits & 0x00000100u) {
+  if (cached_has_bits & 0x00000020u) {
     target = ::google::protobuf::internal::WireFormatLite::WriteBoolToArray(6, this->qotlogined(), target);
   }
 
   // required bool trdLogined = 7;
-  if (cached_has_bits & 0x00000200u) {
+  if (cached_has_bits & 0x00000040u) {
     target = ::google::protobuf::internal::WireFormatLite::WriteBoolToArray(7, this->trdlogined(), target);
   }
 
   // required int32 serverVer = 8;
-  if (cached_has_bits & 0x00000400u) {
+  if (cached_has_bits & 0x00000080u) {
     target = ::google::protobuf::internal::WireFormatLite::WriteInt32ToArray(8, this->serverver(), target);
   }
 
   // required int32 serverBuildNo = 9;
-  if (cached_has_bits & 0x00000800u) {
+  if (cached_has_bits & 0x00000100u) {
     target = ::google::protobuf::internal::WireFormatLite::WriteInt32ToArray(9, this->serverbuildno(), target);
   }
 
   // required int64 time = 10;
-  if (cached_has_bits & 0x00001000u) {
+  if (cached_has_bits & 0x00000200u) {
     target = ::google::protobuf::internal::WireFormatLite::WriteInt64ToArray(10, this->time(), target);
   }
 
   // optional double localTime = 11;
-  if (cached_has_bits & 0x00002000u) {
+  if (cached_has_bits & 0x00000400u) {
     target = ::google::protobuf::internal::WireFormatLite::WriteDoubleToArray(11, this->localtime(), target);
-  }
-
-  // optional .Common.ProgramStatus programStatus = 12;
-  if (cached_has_bits & 0x00000004u) {
-    target = ::google::protobuf::internal::WireFormatLite::
-      InternalWriteMessageToArray(
-        12, *this->programstatus_, deterministic, target);
-  }
-
-  // optional string qotSvrIpAddr = 13;
-  if (cached_has_bits & 0x00000001u) {
-    ::google::protobuf::internal::WireFormat::VerifyUTF8StringNamedField(
-      this->qotsvripaddr().data(), static_cast<int>(this->qotsvripaddr().length()),
-      ::google::protobuf::internal::WireFormat::SERIALIZE,
-      "GetGlobalState.S2C.qotSvrIpAddr");
-    target =
-      ::google::protobuf::internal::WireFormatLite::WriteStringToArray(
-        13, this->qotsvripaddr(), target);
-  }
-
-  // optional string trdSvrIpAddr = 14;
-  if (cached_has_bits & 0x00000002u) {
-    ::google::protobuf::internal::WireFormat::VerifyUTF8StringNamedField(
-      this->trdsvripaddr().data(), static_cast<int>(this->trdsvripaddr().length()),
-      ::google::protobuf::internal::WireFormat::SERIALIZE,
-      "GetGlobalState.S2C.trdSvrIpAddr");
-    target =
-      ::google::protobuf::internal::WireFormatLite::WriteStringToArray(
-        14, this->trdsvripaddr(), target);
-  }
-
-  // optional int32 marketUSFuture = 15;
-  if (cached_has_bits & 0x00008000u) {
-    target = ::google::protobuf::internal::WireFormatLite::WriteInt32ToArray(15, this->marketusfuture(), target);
-  }
-
-  // optional uint64 connID = 16;
-  if (cached_has_bits & 0x00004000u) {
-    target = ::google::protobuf::internal::WireFormatLite::WriteUInt64ToArray(16, this->connid(), target);
-  }
-
-  // optional int32 marketSGFuture = 17;
-  if (cached_has_bits & 0x00010000u) {
-    target = ::google::protobuf::internal::WireFormatLite::WriteInt32ToArray(17, this->marketsgfuture(), target);
-  }
-
-  // optional int32 marketJPFuture = 18;
-  if (cached_has_bits & 0x00020000u) {
-    target = ::google::protobuf::internal::WireFormatLite::WriteInt32ToArray(18, this->marketjpfuture(), target);
   }
 
   if (_internal_metadata_.have_unknown_fields()) {
@@ -1267,7 +1001,7 @@ size_t S2C::ByteSizeLong() const {
       ::google::protobuf::internal::WireFormat::ComputeUnknownFieldsSize(
         _internal_metadata_.unknown_fields());
   }
-  if (((_has_bits_[0] & 0x00001ff8) ^ 0x00001ff8) == 0) {  // All required fields are present.
+  if (((_has_bits_[0] & 0x000003ff) ^ 0x000003ff) == 0) {  // All required fields are present.
     // required int32 marketHK = 1;
     total_size += 1 +
       ::google::protobuf::internal::WireFormatLite::Int32Size(
@@ -1317,66 +1051,11 @@ size_t S2C::ByteSizeLong() const {
   } else {
     total_size += RequiredFieldsByteSizeFallback();
   }
-  if (_has_bits_[0 / 32] & 7u) {
-    // optional string qotSvrIpAddr = 13;
-    if (has_qotsvripaddr()) {
-      total_size += 1 +
-        ::google::protobuf::internal::WireFormatLite::StringSize(
-          this->qotsvripaddr());
-    }
-
-    // optional string trdSvrIpAddr = 14;
-    if (has_trdsvripaddr()) {
-      total_size += 1 +
-        ::google::protobuf::internal::WireFormatLite::StringSize(
-          this->trdsvripaddr());
-    }
-
-    // optional .Common.ProgramStatus programStatus = 12;
-    if (has_programstatus()) {
-      total_size += 1 +
-        ::google::protobuf::internal::WireFormatLite::MessageSize(
-          *this->programstatus_);
-    }
-
+  // optional double localTime = 11;
+  if (has_localtime()) {
+    total_size += 1 + 8;
   }
-  if (_has_bits_[8 / 32] & 57344u) {
-    // optional double localTime = 11;
-    if (has_localtime()) {
-      total_size += 1 + 8;
-    }
 
-    // optional uint64 connID = 16;
-    if (has_connid()) {
-      total_size += 2 +
-        ::google::protobuf::internal::WireFormatLite::UInt64Size(
-          this->connid());
-    }
-
-    // optional int32 marketUSFuture = 15;
-    if (has_marketusfuture()) {
-      total_size += 1 +
-        ::google::protobuf::internal::WireFormatLite::Int32Size(
-          this->marketusfuture());
-    }
-
-  }
-  if (_has_bits_[16 / 32] & 196608u) {
-    // optional int32 marketSGFuture = 17;
-    if (has_marketsgfuture()) {
-      total_size += 2 +
-        ::google::protobuf::internal::WireFormatLite::Int32Size(
-          this->marketsgfuture());
-    }
-
-    // optional int32 marketJPFuture = 18;
-    if (has_marketjpfuture()) {
-      total_size += 2 +
-        ::google::protobuf::internal::WireFormatLite::Int32Size(
-          this->marketjpfuture());
-    }
-
-  }
   int cached_size = ::google::protobuf::internal::ToCachedSize(total_size);
   GOOGLE_SAFE_CONCURRENT_WRITES_BEGIN();
   _cached_size_ = cached_size;
@@ -1409,66 +1088,40 @@ void S2C::MergeFrom(const S2C& from) {
   cached_has_bits = from._has_bits_[0];
   if (cached_has_bits & 255u) {
     if (cached_has_bits & 0x00000001u) {
-      set_has_qotsvripaddr();
-      qotsvripaddr_.AssignWithDefault(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), from.qotsvripaddr_);
-    }
-    if (cached_has_bits & 0x00000002u) {
-      set_has_trdsvripaddr();
-      trdsvripaddr_.AssignWithDefault(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), from.trdsvripaddr_);
-    }
-    if (cached_has_bits & 0x00000004u) {
-      mutable_programstatus()->::Common::ProgramStatus::MergeFrom(from.programstatus());
-    }
-    if (cached_has_bits & 0x00000008u) {
       markethk_ = from.markethk_;
     }
-    if (cached_has_bits & 0x00000010u) {
+    if (cached_has_bits & 0x00000002u) {
       marketus_ = from.marketus_;
     }
-    if (cached_has_bits & 0x00000020u) {
+    if (cached_has_bits & 0x00000004u) {
       marketsh_ = from.marketsh_;
     }
-    if (cached_has_bits & 0x00000040u) {
+    if (cached_has_bits & 0x00000008u) {
       marketsz_ = from.marketsz_;
     }
-    if (cached_has_bits & 0x00000080u) {
+    if (cached_has_bits & 0x00000010u) {
       markethkfuture_ = from.markethkfuture_;
     }
-    _has_bits_[0] |= cached_has_bits;
-  }
-  if (cached_has_bits & 65280u) {
-    if (cached_has_bits & 0x00000100u) {
+    if (cached_has_bits & 0x00000020u) {
       qotlogined_ = from.qotlogined_;
     }
-    if (cached_has_bits & 0x00000200u) {
+    if (cached_has_bits & 0x00000040u) {
       trdlogined_ = from.trdlogined_;
     }
-    if (cached_has_bits & 0x00000400u) {
+    if (cached_has_bits & 0x00000080u) {
       serverver_ = from.serverver_;
-    }
-    if (cached_has_bits & 0x00000800u) {
-      serverbuildno_ = from.serverbuildno_;
-    }
-    if (cached_has_bits & 0x00001000u) {
-      time_ = from.time_;
-    }
-    if (cached_has_bits & 0x00002000u) {
-      localtime_ = from.localtime_;
-    }
-    if (cached_has_bits & 0x00004000u) {
-      connid_ = from.connid_;
-    }
-    if (cached_has_bits & 0x00008000u) {
-      marketusfuture_ = from.marketusfuture_;
     }
     _has_bits_[0] |= cached_has_bits;
   }
-  if (cached_has_bits & 196608u) {
-    if (cached_has_bits & 0x00010000u) {
-      marketsgfuture_ = from.marketsgfuture_;
+  if (cached_has_bits & 1792u) {
+    if (cached_has_bits & 0x00000100u) {
+      serverbuildno_ = from.serverbuildno_;
     }
-    if (cached_has_bits & 0x00020000u) {
-      marketjpfuture_ = from.marketjpfuture_;
+    if (cached_has_bits & 0x00000200u) {
+      time_ = from.time_;
+    }
+    if (cached_has_bits & 0x00000400u) {
+      localtime_ = from.localtime_;
     }
     _has_bits_[0] |= cached_has_bits;
   }
@@ -1489,10 +1142,7 @@ void S2C::CopyFrom(const S2C& from) {
 }
 
 bool S2C::IsInitialized() const {
-  if ((_has_bits_[0] & 0x00001ff8) != 0x00001ff8) return false;
-  if (has_programstatus()) {
-    if (!this->programstatus_->IsInitialized()) return false;
-  }
+  if ((_has_bits_[0] & 0x000003ff) != 0x000003ff) return false;
   return true;
 }
 
@@ -1502,9 +1152,6 @@ void S2C::Swap(S2C* other) {
 }
 void S2C::InternalSwap(S2C* other) {
   using std::swap;
-  qotsvripaddr_.Swap(&other->qotsvripaddr_);
-  trdsvripaddr_.Swap(&other->trdsvripaddr_);
-  swap(programstatus_, other->programstatus_);
   swap(markethk_, other->markethk_);
   swap(marketus_, other->marketus_);
   swap(marketsh_, other->marketsh_);
@@ -1516,10 +1163,6 @@ void S2C::InternalSwap(S2C* other) {
   swap(serverbuildno_, other->serverbuildno_);
   swap(time_, other->time_);
   swap(localtime_, other->localtime_);
-  swap(connid_, other->connid_);
-  swap(marketusfuture_, other->marketusfuture_);
-  swap(marketsgfuture_, other->marketsgfuture_);
-  swap(marketjpfuture_, other->marketjpfuture_);
   swap(_has_bits_[0], other->_has_bits_[0]);
   _internal_metadata_.Swap(&other->_internal_metadata_);
   swap(_cached_size_, other->_cached_size_);

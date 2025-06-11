@@ -78,12 +78,11 @@ namespace Qot_GetReference {
 
 enum ReferenceType {
   ReferenceType_Unknow = 0,
-  ReferenceType_Warrant = 1,
-  ReferenceType_Future = 2
+  ReferenceType_Warrant = 1
 };
 bool ReferenceType_IsValid(int value);
 const ReferenceType ReferenceType_MIN = ReferenceType_Unknow;
-const ReferenceType ReferenceType_MAX = ReferenceType_Future;
+const ReferenceType ReferenceType_MAX = ReferenceType_Warrant;
 const int ReferenceType_ARRAYSIZE = ReferenceType_MAX + 1;
 
 const ::google::protobuf::EnumDescriptor* ReferenceType_descriptor();

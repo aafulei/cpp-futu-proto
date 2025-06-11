@@ -149,21 +149,11 @@ const ::google::protobuf::uint32 TableStruct::offsets[] GOOGLE_PROTOBUF_ATTRIBUT
   ~0u,  // no _oneof_case_
   ~0u,  // no _weak_field_map_
   GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(::Qot_GetOrderBook::S2C, security_),
-  GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(::Qot_GetOrderBook::S2C, name_),
   GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(::Qot_GetOrderBook::S2C, orderbookasklist_),
   GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(::Qot_GetOrderBook::S2C, orderbookbidlist_),
-  GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(::Qot_GetOrderBook::S2C, svrrecvtimebid_),
-  GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(::Qot_GetOrderBook::S2C, svrrecvtimebidtimestamp_),
-  GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(::Qot_GetOrderBook::S2C, svrrecvtimeask_),
-  GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(::Qot_GetOrderBook::S2C, svrrecvtimeasktimestamp_),
-  3,
-  2,
-  ~0u,
-  ~0u,
   0,
-  4,
-  1,
-  5,
+  ~0u,
+  ~0u,
   GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(::Qot_GetOrderBook::Request, _has_bits_),
   GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(::Qot_GetOrderBook::Request, _internal_metadata_),
   ~0u,  // no _extensions_
@@ -187,9 +177,9 @@ const ::google::protobuf::uint32 TableStruct::offsets[] GOOGLE_PROTOBUF_ATTRIBUT
 };
 static const ::google::protobuf::internal::MigrationSchema schemas[] GOOGLE_PROTOBUF_ATTRIBUTE_SECTION_VARIABLE(protodesc_cold) = {
   { 0, 7, sizeof(::Qot_GetOrderBook::C2S)},
-  { 9, 22, sizeof(::Qot_GetOrderBook::S2C)},
-  { 30, 36, sizeof(::Qot_GetOrderBook::Request)},
-  { 37, 46, sizeof(::Qot_GetOrderBook::Response)},
+  { 9, 17, sizeof(::Qot_GetOrderBook::S2C)},
+  { 20, 26, sizeof(::Qot_GetOrderBook::Request)},
+  { 27, 36, sizeof(::Qot_GetOrderBook::Response)},
 };
 
 static ::google::protobuf::Message const * const file_default_instances[] = {
@@ -224,22 +214,17 @@ void AddDescriptorsImpl() {
       "\n\026Qot_GetOrderBook.proto\022\020Qot_GetOrderBo"
       "ok\032\014Common.proto\032\020Qot_Common.proto\":\n\003C2"
       "S\022&\n\010security\030\001 \002(\0132\024.Qot_Common.Securit"
-      "y\022\013\n\003num\030\002 \002(\005\"\217\002\n\003S2C\022&\n\010security\030\001 \002(\013"
-      "2\024.Qot_Common.Security\022\014\n\004name\030\010 \001(\t\022/\n\020"
-      "orderBookAskList\030\002 \003(\0132\025.Qot_Common.Orde"
-      "rBook\022/\n\020orderBookBidList\030\003 \003(\0132\025.Qot_Co"
-      "mmon.OrderBook\022\026\n\016svrRecvTimeBid\030\004 \001(\t\022\037"
-      "\n\027svrRecvTimeBidTimestamp\030\005 \001(\001\022\026\n\016svrRe"
-      "cvTimeAsk\030\006 \001(\t\022\037\n\027svrRecvTimeAskTimesta"
-      "mp\030\007 \001(\001\"-\n\007Request\022\"\n\003c2s\030\001 \002(\0132\025.Qot_G"
-      "etOrderBook.C2S\"f\n\010Response\022\025\n\007retType\030\001"
-      " \002(\005:\004-400\022\016\n\006retMsg\030\002 \001(\t\022\017\n\007errCode\030\003 "
-      "\001(\005\022\"\n\003s2c\030\004 \001(\0132\025.Qot_GetOrderBook.S2CB"
-      "F\n\023com.futu.openapi.pbZ/github.com/futuo"
-      "pen/ftapi4go/pb/qotgetorderbook"
+      "y\022\013\n\003num\030\002 \002(\005\"\217\001\n\003S2C\022&\n\010security\030\001 \002(\013"
+      "2\024.Qot_Common.Security\022/\n\020orderBookAskLi"
+      "st\030\002 \003(\0132\025.Qot_Common.OrderBook\022/\n\020order"
+      "BookBidList\030\003 \003(\0132\025.Qot_Common.OrderBook"
+      "\"-\n\007Request\022\"\n\003c2s\030\001 \002(\0132\025.Qot_GetOrderB"
+      "ook.C2S\"f\n\010Response\022\025\n\007retType\030\001 \002(\005:\004-4"
+      "00\022\016\n\006retMsg\030\002 \001(\t\022\017\n\007errCode\030\003 \001(\005\022\"\n\003s"
+      "2c\030\004 \001(\0132\025.Qot_GetOrderBook.S2C"
   };
   ::google::protobuf::DescriptorPool::InternalAddGeneratedFile(
-      descriptor, 631);
+      descriptor, 431);
   ::google::protobuf::MessageFactory::InternalRegisterGeneratedFile(
     "Qot_GetOrderBook.proto", &protobuf_RegisterTypes);
   ::protobuf_Common_2eproto::AddDescriptors();
@@ -604,13 +589,8 @@ void S2C::clear_orderbookbidlist() {
 }
 #if !defined(_MSC_VER) || _MSC_VER >= 1900
 const int S2C::kSecurityFieldNumber;
-const int S2C::kNameFieldNumber;
 const int S2C::kOrderBookAskListFieldNumber;
 const int S2C::kOrderBookBidListFieldNumber;
-const int S2C::kSvrRecvTimeBidFieldNumber;
-const int S2C::kSvrRecvTimeBidTimestampFieldNumber;
-const int S2C::kSvrRecvTimeAskFieldNumber;
-const int S2C::kSvrRecvTimeAskTimestampFieldNumber;
 #endif  // !defined(_MSC_VER) || _MSC_VER >= 1900
 
 S2C::S2C()
@@ -629,37 +609,17 @@ S2C::S2C(const S2C& from)
       orderbookasklist_(from.orderbookasklist_),
       orderbookbidlist_(from.orderbookbidlist_) {
   _internal_metadata_.MergeFrom(from._internal_metadata_);
-  svrrecvtimebid_.UnsafeSetDefault(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
-  if (from.has_svrrecvtimebid()) {
-    svrrecvtimebid_.AssignWithDefault(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), from.svrrecvtimebid_);
-  }
-  svrrecvtimeask_.UnsafeSetDefault(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
-  if (from.has_svrrecvtimeask()) {
-    svrrecvtimeask_.AssignWithDefault(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), from.svrrecvtimeask_);
-  }
-  name_.UnsafeSetDefault(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
-  if (from.has_name()) {
-    name_.AssignWithDefault(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), from.name_);
-  }
   if (from.has_security()) {
     security_ = new ::Qot_Common::Security(*from.security_);
   } else {
     security_ = NULL;
   }
-  ::memcpy(&svrrecvtimebidtimestamp_, &from.svrrecvtimebidtimestamp_,
-    static_cast<size_t>(reinterpret_cast<char*>(&svrrecvtimeasktimestamp_) -
-    reinterpret_cast<char*>(&svrrecvtimebidtimestamp_)) + sizeof(svrrecvtimeasktimestamp_));
   // @@protoc_insertion_point(copy_constructor:Qot_GetOrderBook.S2C)
 }
 
 void S2C::SharedCtor() {
   _cached_size_ = 0;
-  svrrecvtimebid_.UnsafeSetDefault(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
-  svrrecvtimeask_.UnsafeSetDefault(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
-  name_.UnsafeSetDefault(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
-  ::memset(&security_, 0, static_cast<size_t>(
-      reinterpret_cast<char*>(&svrrecvtimeasktimestamp_) -
-      reinterpret_cast<char*>(&security_)) + sizeof(svrrecvtimeasktimestamp_));
+  security_ = NULL;
 }
 
 S2C::~S2C() {
@@ -668,9 +628,6 @@ S2C::~S2C() {
 }
 
 void S2C::SharedDtor() {
-  svrrecvtimebid_.DestroyNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
-  svrrecvtimeask_.DestroyNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
-  name_.DestroyNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
   if (this != internal_default_instance()) delete security_;
 }
 
@@ -706,28 +663,9 @@ void S2C::Clear() {
   orderbookasklist_.Clear();
   orderbookbidlist_.Clear();
   cached_has_bits = _has_bits_[0];
-  if (cached_has_bits & 15u) {
-    if (cached_has_bits & 0x00000001u) {
-      GOOGLE_DCHECK(!svrrecvtimebid_.IsDefault(&::google::protobuf::internal::GetEmptyStringAlreadyInited()));
-      (*svrrecvtimebid_.UnsafeRawStringPointer())->clear();
-    }
-    if (cached_has_bits & 0x00000002u) {
-      GOOGLE_DCHECK(!svrrecvtimeask_.IsDefault(&::google::protobuf::internal::GetEmptyStringAlreadyInited()));
-      (*svrrecvtimeask_.UnsafeRawStringPointer())->clear();
-    }
-    if (cached_has_bits & 0x00000004u) {
-      GOOGLE_DCHECK(!name_.IsDefault(&::google::protobuf::internal::GetEmptyStringAlreadyInited()));
-      (*name_.UnsafeRawStringPointer())->clear();
-    }
-    if (cached_has_bits & 0x00000008u) {
-      GOOGLE_DCHECK(security_ != NULL);
-      security_->Clear();
-    }
-  }
-  if (cached_has_bits & 48u) {
-    ::memset(&svrrecvtimebidtimestamp_, 0, static_cast<size_t>(
-        reinterpret_cast<char*>(&svrrecvtimeasktimestamp_) -
-        reinterpret_cast<char*>(&svrrecvtimebidtimestamp_)) + sizeof(svrrecvtimeasktimestamp_));
+  if (cached_has_bits & 0x00000001u) {
+    GOOGLE_DCHECK(security_ != NULL);
+    security_->Clear();
   }
   _has_bits_.Clear();
   _internal_metadata_.Clear();
@@ -777,82 +715,6 @@ bool S2C::MergePartialFromCodedStream(
         break;
       }
 
-      // optional string svrRecvTimeBid = 4;
-      case 4: {
-        if (static_cast< ::google::protobuf::uint8>(tag) ==
-            static_cast< ::google::protobuf::uint8>(34u /* 34 & 0xFF */)) {
-          DO_(::google::protobuf::internal::WireFormatLite::ReadString(
-                input, this->mutable_svrrecvtimebid()));
-          ::google::protobuf::internal::WireFormat::VerifyUTF8StringNamedField(
-            this->svrrecvtimebid().data(), static_cast<int>(this->svrrecvtimebid().length()),
-            ::google::protobuf::internal::WireFormat::PARSE,
-            "Qot_GetOrderBook.S2C.svrRecvTimeBid");
-        } else {
-          goto handle_unusual;
-        }
-        break;
-      }
-
-      // optional double svrRecvTimeBidTimestamp = 5;
-      case 5: {
-        if (static_cast< ::google::protobuf::uint8>(tag) ==
-            static_cast< ::google::protobuf::uint8>(41u /* 41 & 0xFF */)) {
-          set_has_svrrecvtimebidtimestamp();
-          DO_((::google::protobuf::internal::WireFormatLite::ReadPrimitive<
-                   double, ::google::protobuf::internal::WireFormatLite::TYPE_DOUBLE>(
-                 input, &svrrecvtimebidtimestamp_)));
-        } else {
-          goto handle_unusual;
-        }
-        break;
-      }
-
-      // optional string svrRecvTimeAsk = 6;
-      case 6: {
-        if (static_cast< ::google::protobuf::uint8>(tag) ==
-            static_cast< ::google::protobuf::uint8>(50u /* 50 & 0xFF */)) {
-          DO_(::google::protobuf::internal::WireFormatLite::ReadString(
-                input, this->mutable_svrrecvtimeask()));
-          ::google::protobuf::internal::WireFormat::VerifyUTF8StringNamedField(
-            this->svrrecvtimeask().data(), static_cast<int>(this->svrrecvtimeask().length()),
-            ::google::protobuf::internal::WireFormat::PARSE,
-            "Qot_GetOrderBook.S2C.svrRecvTimeAsk");
-        } else {
-          goto handle_unusual;
-        }
-        break;
-      }
-
-      // optional double svrRecvTimeAskTimestamp = 7;
-      case 7: {
-        if (static_cast< ::google::protobuf::uint8>(tag) ==
-            static_cast< ::google::protobuf::uint8>(57u /* 57 & 0xFF */)) {
-          set_has_svrrecvtimeasktimestamp();
-          DO_((::google::protobuf::internal::WireFormatLite::ReadPrimitive<
-                   double, ::google::protobuf::internal::WireFormatLite::TYPE_DOUBLE>(
-                 input, &svrrecvtimeasktimestamp_)));
-        } else {
-          goto handle_unusual;
-        }
-        break;
-      }
-
-      // optional string name = 8;
-      case 8: {
-        if (static_cast< ::google::protobuf::uint8>(tag) ==
-            static_cast< ::google::protobuf::uint8>(66u /* 66 & 0xFF */)) {
-          DO_(::google::protobuf::internal::WireFormatLite::ReadString(
-                input, this->mutable_name()));
-          ::google::protobuf::internal::WireFormat::VerifyUTF8StringNamedField(
-            this->name().data(), static_cast<int>(this->name().length()),
-            ::google::protobuf::internal::WireFormat::PARSE,
-            "Qot_GetOrderBook.S2C.name");
-        } else {
-          goto handle_unusual;
-        }
-        break;
-      }
-
       default: {
       handle_unusual:
         if (tag == 0) {
@@ -881,7 +743,7 @@ void S2C::SerializeWithCachedSizes(
 
   cached_has_bits = _has_bits_[0];
   // required .Qot_Common.Security security = 1;
-  if (cached_has_bits & 0x00000008u) {
+  if (cached_has_bits & 0x00000001u) {
     ::google::protobuf::internal::WireFormatLite::WriteMessageMaybeToArray(
       1, *this->security_, output);
   }
@@ -900,46 +762,6 @@ void S2C::SerializeWithCachedSizes(
       3, this->orderbookbidlist(static_cast<int>(i)), output);
   }
 
-  // optional string svrRecvTimeBid = 4;
-  if (cached_has_bits & 0x00000001u) {
-    ::google::protobuf::internal::WireFormat::VerifyUTF8StringNamedField(
-      this->svrrecvtimebid().data(), static_cast<int>(this->svrrecvtimebid().length()),
-      ::google::protobuf::internal::WireFormat::SERIALIZE,
-      "Qot_GetOrderBook.S2C.svrRecvTimeBid");
-    ::google::protobuf::internal::WireFormatLite::WriteStringMaybeAliased(
-      4, this->svrrecvtimebid(), output);
-  }
-
-  // optional double svrRecvTimeBidTimestamp = 5;
-  if (cached_has_bits & 0x00000010u) {
-    ::google::protobuf::internal::WireFormatLite::WriteDouble(5, this->svrrecvtimebidtimestamp(), output);
-  }
-
-  // optional string svrRecvTimeAsk = 6;
-  if (cached_has_bits & 0x00000002u) {
-    ::google::protobuf::internal::WireFormat::VerifyUTF8StringNamedField(
-      this->svrrecvtimeask().data(), static_cast<int>(this->svrrecvtimeask().length()),
-      ::google::protobuf::internal::WireFormat::SERIALIZE,
-      "Qot_GetOrderBook.S2C.svrRecvTimeAsk");
-    ::google::protobuf::internal::WireFormatLite::WriteStringMaybeAliased(
-      6, this->svrrecvtimeask(), output);
-  }
-
-  // optional double svrRecvTimeAskTimestamp = 7;
-  if (cached_has_bits & 0x00000020u) {
-    ::google::protobuf::internal::WireFormatLite::WriteDouble(7, this->svrrecvtimeasktimestamp(), output);
-  }
-
-  // optional string name = 8;
-  if (cached_has_bits & 0x00000004u) {
-    ::google::protobuf::internal::WireFormat::VerifyUTF8StringNamedField(
-      this->name().data(), static_cast<int>(this->name().length()),
-      ::google::protobuf::internal::WireFormat::SERIALIZE,
-      "Qot_GetOrderBook.S2C.name");
-    ::google::protobuf::internal::WireFormatLite::WriteStringMaybeAliased(
-      8, this->name(), output);
-  }
-
   if (_internal_metadata_.have_unknown_fields()) {
     ::google::protobuf::internal::WireFormat::SerializeUnknownFields(
         _internal_metadata_.unknown_fields(), output);
@@ -956,7 +778,7 @@ void S2C::SerializeWithCachedSizes(
 
   cached_has_bits = _has_bits_[0];
   // required .Qot_Common.Security security = 1;
-  if (cached_has_bits & 0x00000008u) {
+  if (cached_has_bits & 0x00000001u) {
     target = ::google::protobuf::internal::WireFormatLite::
       InternalWriteMessageToArray(
         1, *this->security_, deterministic, target);
@@ -976,49 +798,6 @@ void S2C::SerializeWithCachedSizes(
     target = ::google::protobuf::internal::WireFormatLite::
       InternalWriteMessageToArray(
         3, this->orderbookbidlist(static_cast<int>(i)), deterministic, target);
-  }
-
-  // optional string svrRecvTimeBid = 4;
-  if (cached_has_bits & 0x00000001u) {
-    ::google::protobuf::internal::WireFormat::VerifyUTF8StringNamedField(
-      this->svrrecvtimebid().data(), static_cast<int>(this->svrrecvtimebid().length()),
-      ::google::protobuf::internal::WireFormat::SERIALIZE,
-      "Qot_GetOrderBook.S2C.svrRecvTimeBid");
-    target =
-      ::google::protobuf::internal::WireFormatLite::WriteStringToArray(
-        4, this->svrrecvtimebid(), target);
-  }
-
-  // optional double svrRecvTimeBidTimestamp = 5;
-  if (cached_has_bits & 0x00000010u) {
-    target = ::google::protobuf::internal::WireFormatLite::WriteDoubleToArray(5, this->svrrecvtimebidtimestamp(), target);
-  }
-
-  // optional string svrRecvTimeAsk = 6;
-  if (cached_has_bits & 0x00000002u) {
-    ::google::protobuf::internal::WireFormat::VerifyUTF8StringNamedField(
-      this->svrrecvtimeask().data(), static_cast<int>(this->svrrecvtimeask().length()),
-      ::google::protobuf::internal::WireFormat::SERIALIZE,
-      "Qot_GetOrderBook.S2C.svrRecvTimeAsk");
-    target =
-      ::google::protobuf::internal::WireFormatLite::WriteStringToArray(
-        6, this->svrrecvtimeask(), target);
-  }
-
-  // optional double svrRecvTimeAskTimestamp = 7;
-  if (cached_has_bits & 0x00000020u) {
-    target = ::google::protobuf::internal::WireFormatLite::WriteDoubleToArray(7, this->svrrecvtimeasktimestamp(), target);
-  }
-
-  // optional string name = 8;
-  if (cached_has_bits & 0x00000004u) {
-    ::google::protobuf::internal::WireFormat::VerifyUTF8StringNamedField(
-      this->name().data(), static_cast<int>(this->name().length()),
-      ::google::protobuf::internal::WireFormat::SERIALIZE,
-      "Qot_GetOrderBook.S2C.name");
-    target =
-      ::google::protobuf::internal::WireFormatLite::WriteStringToArray(
-        8, this->name(), target);
   }
 
   if (_internal_metadata_.have_unknown_fields()) {
@@ -1066,41 +845,6 @@ size_t S2C::ByteSizeLong() const {
     }
   }
 
-  if (_has_bits_[0 / 32] & 7u) {
-    // optional string svrRecvTimeBid = 4;
-    if (has_svrrecvtimebid()) {
-      total_size += 1 +
-        ::google::protobuf::internal::WireFormatLite::StringSize(
-          this->svrrecvtimebid());
-    }
-
-    // optional string svrRecvTimeAsk = 6;
-    if (has_svrrecvtimeask()) {
-      total_size += 1 +
-        ::google::protobuf::internal::WireFormatLite::StringSize(
-          this->svrrecvtimeask());
-    }
-
-    // optional string name = 8;
-    if (has_name()) {
-      total_size += 1 +
-        ::google::protobuf::internal::WireFormatLite::StringSize(
-          this->name());
-    }
-
-  }
-  if (_has_bits_[0 / 32] & 48u) {
-    // optional double svrRecvTimeBidTimestamp = 5;
-    if (has_svrrecvtimebidtimestamp()) {
-      total_size += 1 + 8;
-    }
-
-    // optional double svrRecvTimeAskTimestamp = 7;
-    if (has_svrrecvtimeasktimestamp()) {
-      total_size += 1 + 8;
-    }
-
-  }
   int cached_size = ::google::protobuf::internal::ToCachedSize(total_size);
   GOOGLE_SAFE_CONCURRENT_WRITES_BEGIN();
   _cached_size_ = cached_size;
@@ -1132,30 +876,8 @@ void S2C::MergeFrom(const S2C& from) {
 
   orderbookasklist_.MergeFrom(from.orderbookasklist_);
   orderbookbidlist_.MergeFrom(from.orderbookbidlist_);
-  cached_has_bits = from._has_bits_[0];
-  if (cached_has_bits & 63u) {
-    if (cached_has_bits & 0x00000001u) {
-      set_has_svrrecvtimebid();
-      svrrecvtimebid_.AssignWithDefault(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), from.svrrecvtimebid_);
-    }
-    if (cached_has_bits & 0x00000002u) {
-      set_has_svrrecvtimeask();
-      svrrecvtimeask_.AssignWithDefault(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), from.svrrecvtimeask_);
-    }
-    if (cached_has_bits & 0x00000004u) {
-      set_has_name();
-      name_.AssignWithDefault(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), from.name_);
-    }
-    if (cached_has_bits & 0x00000008u) {
-      mutable_security()->::Qot_Common::Security::MergeFrom(from.security());
-    }
-    if (cached_has_bits & 0x00000010u) {
-      svrrecvtimebidtimestamp_ = from.svrrecvtimebidtimestamp_;
-    }
-    if (cached_has_bits & 0x00000020u) {
-      svrrecvtimeasktimestamp_ = from.svrrecvtimeasktimestamp_;
-    }
-    _has_bits_[0] |= cached_has_bits;
+  if (from.has_security()) {
+    mutable_security()->::Qot_Common::Security::MergeFrom(from.security());
   }
 }
 
@@ -1174,7 +896,7 @@ void S2C::CopyFrom(const S2C& from) {
 }
 
 bool S2C::IsInitialized() const {
-  if ((_has_bits_[0] & 0x00000008) != 0x00000008) return false;
+  if ((_has_bits_[0] & 0x00000001) != 0x00000001) return false;
   if (!::google::protobuf::internal::AllAreInitialized(this->orderbookasklist())) return false;
   if (!::google::protobuf::internal::AllAreInitialized(this->orderbookbidlist())) return false;
   if (has_security()) {
@@ -1191,12 +913,7 @@ void S2C::InternalSwap(S2C* other) {
   using std::swap;
   orderbookasklist_.InternalSwap(&other->orderbookasklist_);
   orderbookbidlist_.InternalSwap(&other->orderbookbidlist_);
-  svrrecvtimebid_.Swap(&other->svrrecvtimebid_);
-  svrrecvtimeask_.Swap(&other->svrrecvtimeask_);
-  name_.Swap(&other->name_);
   swap(security_, other->security_);
-  swap(svrrecvtimebidtimestamp_, other->svrrecvtimebidtimestamp_);
-  swap(svrrecvtimeasktimestamp_, other->svrrecvtimeasktimestamp_);
   swap(_has_bits_[0], other->_has_bits_[0]);
   _internal_metadata_.Swap(&other->_internal_metadata_);
   swap(_cached_size_, other->_cached_size_);

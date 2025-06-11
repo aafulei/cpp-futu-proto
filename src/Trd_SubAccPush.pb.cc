@@ -205,12 +205,10 @@ void AddDescriptorsImpl() {
       "\n\003S2C\"+\n\007Request\022 \n\003c2s\030\001 \002(\0132\023.Trd_SubA"
       "ccPush.C2S\"d\n\010Response\022\025\n\007retType\030\001 \002(\005:"
       "\004-400\022\016\n\006retMsg\030\002 \001(\t\022\017\n\007errCode\030\003 \001(\005\022 "
-      "\n\003s2c\030\004 \001(\0132\023.Trd_SubAccPush.S2CBD\n\023com."
-      "futu.openapi.pbZ-github.com/futuopen/fta"
-      "pi4go/pb/trdsubaccpush"
+      "\n\003s2c\030\004 \001(\0132\023.Trd_SubAccPush.S2C"
   };
   ::google::protobuf::DescriptorPool::InternalAddGeneratedFile(
-      descriptor, 302);
+      descriptor, 232);
   ::google::protobuf::MessageFactory::InternalRegisterGeneratedFile(
     "Trd_SubAccPush.proto", &protobuf_RegisterTypes);
   ::protobuf_Common_2eproto::AddDescriptors();

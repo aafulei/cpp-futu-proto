@@ -315,51 +315,6 @@ class S2C : public ::google::protobuf::Message /* @@protoc_insertion_point(class
   const ::google::protobuf::RepeatedPtrField< ::Qot_Common::OrderBook >&
       orderbookbidlist() const;
 
-  // optional string svrRecvTimeBid = 4;
-  bool has_svrrecvtimebid() const;
-  void clear_svrrecvtimebid();
-  static const int kSvrRecvTimeBidFieldNumber = 4;
-  const ::std::string& svrrecvtimebid() const;
-  void set_svrrecvtimebid(const ::std::string& value);
-  #if LANG_CXX11
-  void set_svrrecvtimebid(::std::string&& value);
-  #endif
-  void set_svrrecvtimebid(const char* value);
-  void set_svrrecvtimebid(const char* value, size_t size);
-  ::std::string* mutable_svrrecvtimebid();
-  ::std::string* release_svrrecvtimebid();
-  void set_allocated_svrrecvtimebid(::std::string* svrrecvtimebid);
-
-  // optional string svrRecvTimeAsk = 6;
-  bool has_svrrecvtimeask() const;
-  void clear_svrrecvtimeask();
-  static const int kSvrRecvTimeAskFieldNumber = 6;
-  const ::std::string& svrrecvtimeask() const;
-  void set_svrrecvtimeask(const ::std::string& value);
-  #if LANG_CXX11
-  void set_svrrecvtimeask(::std::string&& value);
-  #endif
-  void set_svrrecvtimeask(const char* value);
-  void set_svrrecvtimeask(const char* value, size_t size);
-  ::std::string* mutable_svrrecvtimeask();
-  ::std::string* release_svrrecvtimeask();
-  void set_allocated_svrrecvtimeask(::std::string* svrrecvtimeask);
-
-  // optional string name = 8;
-  bool has_name() const;
-  void clear_name();
-  static const int kNameFieldNumber = 8;
-  const ::std::string& name() const;
-  void set_name(const ::std::string& value);
-  #if LANG_CXX11
-  void set_name(::std::string&& value);
-  #endif
-  void set_name(const char* value);
-  void set_name(const char* value, size_t size);
-  ::std::string* mutable_name();
-  ::std::string* release_name();
-  void set_allocated_name(::std::string* name);
-
   // required .Qot_Common.Security security = 1;
   bool has_security() const;
   void clear_security();
@@ -369,46 +324,17 @@ class S2C : public ::google::protobuf::Message /* @@protoc_insertion_point(class
   ::Qot_Common::Security* mutable_security();
   void set_allocated_security(::Qot_Common::Security* security);
 
-  // optional double svrRecvTimeBidTimestamp = 5;
-  bool has_svrrecvtimebidtimestamp() const;
-  void clear_svrrecvtimebidtimestamp();
-  static const int kSvrRecvTimeBidTimestampFieldNumber = 5;
-  double svrrecvtimebidtimestamp() const;
-  void set_svrrecvtimebidtimestamp(double value);
-
-  // optional double svrRecvTimeAskTimestamp = 7;
-  bool has_svrrecvtimeasktimestamp() const;
-  void clear_svrrecvtimeasktimestamp();
-  static const int kSvrRecvTimeAskTimestampFieldNumber = 7;
-  double svrrecvtimeasktimestamp() const;
-  void set_svrrecvtimeasktimestamp(double value);
-
   // @@protoc_insertion_point(class_scope:Qot_GetOrderBook.S2C)
  private:
   void set_has_security();
   void clear_has_security();
-  void set_has_name();
-  void clear_has_name();
-  void set_has_svrrecvtimebid();
-  void clear_has_svrrecvtimebid();
-  void set_has_svrrecvtimebidtimestamp();
-  void clear_has_svrrecvtimebidtimestamp();
-  void set_has_svrrecvtimeask();
-  void clear_has_svrrecvtimeask();
-  void set_has_svrrecvtimeasktimestamp();
-  void clear_has_svrrecvtimeasktimestamp();
 
   ::google::protobuf::internal::InternalMetadataWithArena _internal_metadata_;
   ::google::protobuf::internal::HasBits<1> _has_bits_;
   mutable int _cached_size_;
   ::google::protobuf::RepeatedPtrField< ::Qot_Common::OrderBook > orderbookasklist_;
   ::google::protobuf::RepeatedPtrField< ::Qot_Common::OrderBook > orderbookbidlist_;
-  ::google::protobuf::internal::ArenaStringPtr svrrecvtimebid_;
-  ::google::protobuf::internal::ArenaStringPtr svrrecvtimeask_;
-  ::google::protobuf::internal::ArenaStringPtr name_;
   ::Qot_Common::Security* security_;
-  double svrrecvtimebidtimestamp_;
-  double svrrecvtimeasktimestamp_;
   friend struct ::protobuf_Qot_5fGetOrderBook_2eproto::TableStruct;
   friend void ::protobuf_Qot_5fGetOrderBook_2eproto::InitDefaultsS2CImpl();
 };
@@ -765,13 +691,13 @@ inline void C2S::set_num(::google::protobuf::int32 value) {
 
 // required .Qot_Common.Security security = 1;
 inline bool S2C::has_security() const {
-  return (_has_bits_[0] & 0x00000008u) != 0;
+  return (_has_bits_[0] & 0x00000001u) != 0;
 }
 inline void S2C::set_has_security() {
-  _has_bits_[0] |= 0x00000008u;
+  _has_bits_[0] |= 0x00000001u;
 }
 inline void S2C::clear_has_security() {
-  _has_bits_[0] &= ~0x00000008u;
+  _has_bits_[0] &= ~0x00000001u;
 }
 inline const ::Qot_Common::Security& S2C::security() const {
   const ::Qot_Common::Security* p = security_;
@@ -811,69 +737,6 @@ inline void S2C::set_allocated_security(::Qot_Common::Security* security) {
   }
   security_ = security;
   // @@protoc_insertion_point(field_set_allocated:Qot_GetOrderBook.S2C.security)
-}
-
-// optional string name = 8;
-inline bool S2C::has_name() const {
-  return (_has_bits_[0] & 0x00000004u) != 0;
-}
-inline void S2C::set_has_name() {
-  _has_bits_[0] |= 0x00000004u;
-}
-inline void S2C::clear_has_name() {
-  _has_bits_[0] &= ~0x00000004u;
-}
-inline void S2C::clear_name() {
-  name_.ClearToEmptyNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
-  clear_has_name();
-}
-inline const ::std::string& S2C::name() const {
-  // @@protoc_insertion_point(field_get:Qot_GetOrderBook.S2C.name)
-  return name_.GetNoArena();
-}
-inline void S2C::set_name(const ::std::string& value) {
-  set_has_name();
-  name_.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), value);
-  // @@protoc_insertion_point(field_set:Qot_GetOrderBook.S2C.name)
-}
-#if LANG_CXX11
-inline void S2C::set_name(::std::string&& value) {
-  set_has_name();
-  name_.SetNoArena(
-    &::google::protobuf::internal::GetEmptyStringAlreadyInited(), ::std::move(value));
-  // @@protoc_insertion_point(field_set_rvalue:Qot_GetOrderBook.S2C.name)
-}
-#endif
-inline void S2C::set_name(const char* value) {
-  GOOGLE_DCHECK(value != NULL);
-  set_has_name();
-  name_.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), ::std::string(value));
-  // @@protoc_insertion_point(field_set_char:Qot_GetOrderBook.S2C.name)
-}
-inline void S2C::set_name(const char* value, size_t size) {
-  set_has_name();
-  name_.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(),
-      ::std::string(reinterpret_cast<const char*>(value), size));
-  // @@protoc_insertion_point(field_set_pointer:Qot_GetOrderBook.S2C.name)
-}
-inline ::std::string* S2C::mutable_name() {
-  set_has_name();
-  // @@protoc_insertion_point(field_mutable:Qot_GetOrderBook.S2C.name)
-  return name_.MutableNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
-}
-inline ::std::string* S2C::release_name() {
-  // @@protoc_insertion_point(field_release:Qot_GetOrderBook.S2C.name)
-  clear_has_name();
-  return name_.ReleaseNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
-}
-inline void S2C::set_allocated_name(::std::string* name) {
-  if (name != NULL) {
-    set_has_name();
-  } else {
-    clear_has_name();
-  }
-  name_.SetAllocatedNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), name);
-  // @@protoc_insertion_point(field_set_allocated:Qot_GetOrderBook.S2C.name)
 }
 
 // repeated .Qot_Common.OrderBook orderBookAskList = 2;
@@ -928,180 +791,6 @@ inline const ::google::protobuf::RepeatedPtrField< ::Qot_Common::OrderBook >&
 S2C::orderbookbidlist() const {
   // @@protoc_insertion_point(field_list:Qot_GetOrderBook.S2C.orderBookBidList)
   return orderbookbidlist_;
-}
-
-// optional string svrRecvTimeBid = 4;
-inline bool S2C::has_svrrecvtimebid() const {
-  return (_has_bits_[0] & 0x00000001u) != 0;
-}
-inline void S2C::set_has_svrrecvtimebid() {
-  _has_bits_[0] |= 0x00000001u;
-}
-inline void S2C::clear_has_svrrecvtimebid() {
-  _has_bits_[0] &= ~0x00000001u;
-}
-inline void S2C::clear_svrrecvtimebid() {
-  svrrecvtimebid_.ClearToEmptyNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
-  clear_has_svrrecvtimebid();
-}
-inline const ::std::string& S2C::svrrecvtimebid() const {
-  // @@protoc_insertion_point(field_get:Qot_GetOrderBook.S2C.svrRecvTimeBid)
-  return svrrecvtimebid_.GetNoArena();
-}
-inline void S2C::set_svrrecvtimebid(const ::std::string& value) {
-  set_has_svrrecvtimebid();
-  svrrecvtimebid_.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), value);
-  // @@protoc_insertion_point(field_set:Qot_GetOrderBook.S2C.svrRecvTimeBid)
-}
-#if LANG_CXX11
-inline void S2C::set_svrrecvtimebid(::std::string&& value) {
-  set_has_svrrecvtimebid();
-  svrrecvtimebid_.SetNoArena(
-    &::google::protobuf::internal::GetEmptyStringAlreadyInited(), ::std::move(value));
-  // @@protoc_insertion_point(field_set_rvalue:Qot_GetOrderBook.S2C.svrRecvTimeBid)
-}
-#endif
-inline void S2C::set_svrrecvtimebid(const char* value) {
-  GOOGLE_DCHECK(value != NULL);
-  set_has_svrrecvtimebid();
-  svrrecvtimebid_.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), ::std::string(value));
-  // @@protoc_insertion_point(field_set_char:Qot_GetOrderBook.S2C.svrRecvTimeBid)
-}
-inline void S2C::set_svrrecvtimebid(const char* value, size_t size) {
-  set_has_svrrecvtimebid();
-  svrrecvtimebid_.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(),
-      ::std::string(reinterpret_cast<const char*>(value), size));
-  // @@protoc_insertion_point(field_set_pointer:Qot_GetOrderBook.S2C.svrRecvTimeBid)
-}
-inline ::std::string* S2C::mutable_svrrecvtimebid() {
-  set_has_svrrecvtimebid();
-  // @@protoc_insertion_point(field_mutable:Qot_GetOrderBook.S2C.svrRecvTimeBid)
-  return svrrecvtimebid_.MutableNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
-}
-inline ::std::string* S2C::release_svrrecvtimebid() {
-  // @@protoc_insertion_point(field_release:Qot_GetOrderBook.S2C.svrRecvTimeBid)
-  clear_has_svrrecvtimebid();
-  return svrrecvtimebid_.ReleaseNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
-}
-inline void S2C::set_allocated_svrrecvtimebid(::std::string* svrrecvtimebid) {
-  if (svrrecvtimebid != NULL) {
-    set_has_svrrecvtimebid();
-  } else {
-    clear_has_svrrecvtimebid();
-  }
-  svrrecvtimebid_.SetAllocatedNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), svrrecvtimebid);
-  // @@protoc_insertion_point(field_set_allocated:Qot_GetOrderBook.S2C.svrRecvTimeBid)
-}
-
-// optional double svrRecvTimeBidTimestamp = 5;
-inline bool S2C::has_svrrecvtimebidtimestamp() const {
-  return (_has_bits_[0] & 0x00000010u) != 0;
-}
-inline void S2C::set_has_svrrecvtimebidtimestamp() {
-  _has_bits_[0] |= 0x00000010u;
-}
-inline void S2C::clear_has_svrrecvtimebidtimestamp() {
-  _has_bits_[0] &= ~0x00000010u;
-}
-inline void S2C::clear_svrrecvtimebidtimestamp() {
-  svrrecvtimebidtimestamp_ = 0;
-  clear_has_svrrecvtimebidtimestamp();
-}
-inline double S2C::svrrecvtimebidtimestamp() const {
-  // @@protoc_insertion_point(field_get:Qot_GetOrderBook.S2C.svrRecvTimeBidTimestamp)
-  return svrrecvtimebidtimestamp_;
-}
-inline void S2C::set_svrrecvtimebidtimestamp(double value) {
-  set_has_svrrecvtimebidtimestamp();
-  svrrecvtimebidtimestamp_ = value;
-  // @@protoc_insertion_point(field_set:Qot_GetOrderBook.S2C.svrRecvTimeBidTimestamp)
-}
-
-// optional string svrRecvTimeAsk = 6;
-inline bool S2C::has_svrrecvtimeask() const {
-  return (_has_bits_[0] & 0x00000002u) != 0;
-}
-inline void S2C::set_has_svrrecvtimeask() {
-  _has_bits_[0] |= 0x00000002u;
-}
-inline void S2C::clear_has_svrrecvtimeask() {
-  _has_bits_[0] &= ~0x00000002u;
-}
-inline void S2C::clear_svrrecvtimeask() {
-  svrrecvtimeask_.ClearToEmptyNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
-  clear_has_svrrecvtimeask();
-}
-inline const ::std::string& S2C::svrrecvtimeask() const {
-  // @@protoc_insertion_point(field_get:Qot_GetOrderBook.S2C.svrRecvTimeAsk)
-  return svrrecvtimeask_.GetNoArena();
-}
-inline void S2C::set_svrrecvtimeask(const ::std::string& value) {
-  set_has_svrrecvtimeask();
-  svrrecvtimeask_.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), value);
-  // @@protoc_insertion_point(field_set:Qot_GetOrderBook.S2C.svrRecvTimeAsk)
-}
-#if LANG_CXX11
-inline void S2C::set_svrrecvtimeask(::std::string&& value) {
-  set_has_svrrecvtimeask();
-  svrrecvtimeask_.SetNoArena(
-    &::google::protobuf::internal::GetEmptyStringAlreadyInited(), ::std::move(value));
-  // @@protoc_insertion_point(field_set_rvalue:Qot_GetOrderBook.S2C.svrRecvTimeAsk)
-}
-#endif
-inline void S2C::set_svrrecvtimeask(const char* value) {
-  GOOGLE_DCHECK(value != NULL);
-  set_has_svrrecvtimeask();
-  svrrecvtimeask_.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), ::std::string(value));
-  // @@protoc_insertion_point(field_set_char:Qot_GetOrderBook.S2C.svrRecvTimeAsk)
-}
-inline void S2C::set_svrrecvtimeask(const char* value, size_t size) {
-  set_has_svrrecvtimeask();
-  svrrecvtimeask_.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(),
-      ::std::string(reinterpret_cast<const char*>(value), size));
-  // @@protoc_insertion_point(field_set_pointer:Qot_GetOrderBook.S2C.svrRecvTimeAsk)
-}
-inline ::std::string* S2C::mutable_svrrecvtimeask() {
-  set_has_svrrecvtimeask();
-  // @@protoc_insertion_point(field_mutable:Qot_GetOrderBook.S2C.svrRecvTimeAsk)
-  return svrrecvtimeask_.MutableNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
-}
-inline ::std::string* S2C::release_svrrecvtimeask() {
-  // @@protoc_insertion_point(field_release:Qot_GetOrderBook.S2C.svrRecvTimeAsk)
-  clear_has_svrrecvtimeask();
-  return svrrecvtimeask_.ReleaseNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
-}
-inline void S2C::set_allocated_svrrecvtimeask(::std::string* svrrecvtimeask) {
-  if (svrrecvtimeask != NULL) {
-    set_has_svrrecvtimeask();
-  } else {
-    clear_has_svrrecvtimeask();
-  }
-  svrrecvtimeask_.SetAllocatedNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), svrrecvtimeask);
-  // @@protoc_insertion_point(field_set_allocated:Qot_GetOrderBook.S2C.svrRecvTimeAsk)
-}
-
-// optional double svrRecvTimeAskTimestamp = 7;
-inline bool S2C::has_svrrecvtimeasktimestamp() const {
-  return (_has_bits_[0] & 0x00000020u) != 0;
-}
-inline void S2C::set_has_svrrecvtimeasktimestamp() {
-  _has_bits_[0] |= 0x00000020u;
-}
-inline void S2C::clear_has_svrrecvtimeasktimestamp() {
-  _has_bits_[0] &= ~0x00000020u;
-}
-inline void S2C::clear_svrrecvtimeasktimestamp() {
-  svrrecvtimeasktimestamp_ = 0;
-  clear_has_svrrecvtimeasktimestamp();
-}
-inline double S2C::svrrecvtimeasktimestamp() const {
-  // @@protoc_insertion_point(field_get:Qot_GetOrderBook.S2C.svrRecvTimeAskTimestamp)
-  return svrrecvtimeasktimestamp_;
-}
-inline void S2C::set_svrrecvtimeasktimestamp(double value) {
-  set_has_svrrecvtimeasktimestamp();
-  svrrecvtimeasktimestamp_ = value;
-  // @@protoc_insertion_point(field_set:Qot_GetOrderBook.S2C.svrRecvTimeAskTimestamp)
 }
 
 // -------------------------------------------------------------------

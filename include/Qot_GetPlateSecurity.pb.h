@@ -175,35 +175,15 @@ class C2S : public ::google::protobuf::Message /* @@protoc_insertion_point(class
   ::Qot_Common::Security* mutable_plate();
   void set_allocated_plate(::Qot_Common::Security* plate);
 
-  // optional int32 sortField = 2;
-  bool has_sortfield() const;
-  void clear_sortfield();
-  static const int kSortFieldFieldNumber = 2;
-  ::google::protobuf::int32 sortfield() const;
-  void set_sortfield(::google::protobuf::int32 value);
-
-  // optional bool ascend = 3;
-  bool has_ascend() const;
-  void clear_ascend();
-  static const int kAscendFieldNumber = 3;
-  bool ascend() const;
-  void set_ascend(bool value);
-
   // @@protoc_insertion_point(class_scope:Qot_GetPlateSecurity.C2S)
  private:
   void set_has_plate();
   void clear_has_plate();
-  void set_has_sortfield();
-  void clear_has_sortfield();
-  void set_has_ascend();
-  void clear_has_ascend();
 
   ::google::protobuf::internal::InternalMetadataWithArena _internal_metadata_;
   ::google::protobuf::internal::HasBits<1> _has_bits_;
   mutable int _cached_size_;
   ::Qot_Common::Security* plate_;
-  ::google::protobuf::int32 sortfield_;
-  bool ascend_;
   friend struct ::protobuf_Qot_5fGetPlateSecurity_2eproto::TableStruct;
   friend void ::protobuf_Qot_5fGetPlateSecurity_2eproto::InitDefaultsC2SImpl();
 };
@@ -641,54 +621,6 @@ inline void C2S::set_allocated_plate(::Qot_Common::Security* plate) {
   }
   plate_ = plate;
   // @@protoc_insertion_point(field_set_allocated:Qot_GetPlateSecurity.C2S.plate)
-}
-
-// optional int32 sortField = 2;
-inline bool C2S::has_sortfield() const {
-  return (_has_bits_[0] & 0x00000002u) != 0;
-}
-inline void C2S::set_has_sortfield() {
-  _has_bits_[0] |= 0x00000002u;
-}
-inline void C2S::clear_has_sortfield() {
-  _has_bits_[0] &= ~0x00000002u;
-}
-inline void C2S::clear_sortfield() {
-  sortfield_ = 0;
-  clear_has_sortfield();
-}
-inline ::google::protobuf::int32 C2S::sortfield() const {
-  // @@protoc_insertion_point(field_get:Qot_GetPlateSecurity.C2S.sortField)
-  return sortfield_;
-}
-inline void C2S::set_sortfield(::google::protobuf::int32 value) {
-  set_has_sortfield();
-  sortfield_ = value;
-  // @@protoc_insertion_point(field_set:Qot_GetPlateSecurity.C2S.sortField)
-}
-
-// optional bool ascend = 3;
-inline bool C2S::has_ascend() const {
-  return (_has_bits_[0] & 0x00000004u) != 0;
-}
-inline void C2S::set_has_ascend() {
-  _has_bits_[0] |= 0x00000004u;
-}
-inline void C2S::clear_has_ascend() {
-  _has_bits_[0] &= ~0x00000004u;
-}
-inline void C2S::clear_ascend() {
-  ascend_ = false;
-  clear_has_ascend();
-}
-inline bool C2S::ascend() const {
-  // @@protoc_insertion_point(field_get:Qot_GetPlateSecurity.C2S.ascend)
-  return ascend_;
-}
-inline void C2S::set_ascend(bool value) {
-  set_has_ascend();
-  ascend_ = value;
-  // @@protoc_insertion_point(field_set:Qot_GetPlateSecurity.C2S.ascend)
 }
 
 // -------------------------------------------------------------------
