@@ -33,9 +33,9 @@ target_compile_options(FutuProto PRIVATE -Wpedantic -Wall -Wextra)
 target_link_libraries(FutuProto PUBLIC protobuf)
 target_sources(FutuProto PRIVATE ${SRC_FILES})
 
-find_program(PROTOC protoc HINTS "${CMAKE_SOURCE_DIR}/protobuf/src")
-if(NOT PROTOC)
-    message(FATAL_ERROR "protoc compiler not found in protobuf/src")
+set(PROTOC "${CMAKE_SOURCE_DIR}/protobuf/src/protoc")
+if(NOT EXISTS "${PROTOC}")
+    message(FATAL_ERROR "protoc compiler not found at ${PROTOC}")
 endif()
 add_custom_command(
     OUTPUT ${SRC_FILES}
