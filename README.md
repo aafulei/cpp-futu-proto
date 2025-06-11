@@ -61,8 +61,24 @@ shipped with the source code or can be found in the
 wish to build from `.proto` source files, here are the steps:
 
 ```shell
+# clone this repository
 git clone https://github.com/aafulei/cpp-futu-proto.git
+
+# fetch protobuf submodule
 git submodule update --init --recursive
+
+# build protoc v3.5.1 from source
+cd protobuf
+./autogen.sh
+./configure
+make -j
+make check  # optional
+cd ..
+
+# if you wish to regenerate .pb.h and .pb.cc from .proto files
+rm -rf include src
+
+# build libfutuproto.a, regenerating .pb.h and .pb.cc files if needed
 mkdir build && cd build
 cmake ..
 make -j
